@@ -1,0 +1,21 @@
+name: Release
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  # Creates a semver tag and release
+  Release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: go-semantic-release/action@v1
+        with:
+          allow-initial-development-versions: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
