@@ -56,7 +56,15 @@ func (c *jsiiProxy_CassandraKeyspace) validateInterpolationForAttributeParameter
 	return nil
 }
 
+func (c *jsiiProxy_CassandraKeyspace) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CassandraKeyspace) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_CassandraKeyspace) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

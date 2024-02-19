@@ -56,7 +56,15 @@ func (l *jsiiProxy_LogsQueryDefinition) validateInterpolationForAttributeParamet
 	return nil
 }
 
+func (l *jsiiProxy_LogsQueryDefinition) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LogsQueryDefinition) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (l *jsiiProxy_LogsQueryDefinition) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

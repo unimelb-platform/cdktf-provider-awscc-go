@@ -56,7 +56,15 @@ func (s *jsiiProxy_S3ExpressDirectoryBucket) validateInterpolationForAttributePa
 	return nil
 }
 
+func (s *jsiiProxy_S3ExpressDirectoryBucket) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_S3ExpressDirectoryBucket) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (s *jsiiProxy_S3ExpressDirectoryBucket) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

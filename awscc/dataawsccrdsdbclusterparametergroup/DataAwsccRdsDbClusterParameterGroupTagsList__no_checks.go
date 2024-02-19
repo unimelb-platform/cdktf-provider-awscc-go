@@ -4,6 +4,10 @@ package dataawsccrdsdbclusterparametergroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccRdsDbClusterParameterGroupTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccRdsDbClusterParameterGroupTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

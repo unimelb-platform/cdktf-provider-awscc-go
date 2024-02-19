@@ -4,6 +4,10 @@ package dataawsccconnectprompt
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccConnectPromptTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccConnectPromptTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

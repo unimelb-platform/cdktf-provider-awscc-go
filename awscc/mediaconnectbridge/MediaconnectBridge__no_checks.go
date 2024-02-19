@@ -56,7 +56,15 @@ func (m *jsiiProxy_MediaconnectBridge) validateInterpolationForAttributeParamete
 	return nil
 }
 
+func (m *jsiiProxy_MediaconnectBridge) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_MediaconnectBridge) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (m *jsiiProxy_MediaconnectBridge) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

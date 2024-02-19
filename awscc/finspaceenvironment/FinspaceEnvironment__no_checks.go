@@ -56,7 +56,15 @@ func (f *jsiiProxy_FinspaceEnvironment) validateInterpolationForAttributeParamet
 	return nil
 }
 
+func (f *jsiiProxy_FinspaceEnvironment) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (f *jsiiProxy_FinspaceEnvironment) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (f *jsiiProxy_FinspaceEnvironment) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

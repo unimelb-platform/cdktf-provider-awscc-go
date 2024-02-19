@@ -4,6 +4,10 @@ package frauddetectoreventtype
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (f *jsiiProxy_FrauddetectorEventTypeEventVariablesTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (f *jsiiProxy_FrauddetectorEventTypeEventVariablesTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

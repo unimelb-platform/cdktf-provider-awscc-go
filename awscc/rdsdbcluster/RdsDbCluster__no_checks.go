@@ -56,7 +56,15 @@ func (r *jsiiProxy_RdsDbCluster) validateInterpolationForAttributeParameters(ter
 	return nil
 }
 
+func (r *jsiiProxy_RdsDbCluster) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RdsDbCluster) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (r *jsiiProxy_RdsDbCluster) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

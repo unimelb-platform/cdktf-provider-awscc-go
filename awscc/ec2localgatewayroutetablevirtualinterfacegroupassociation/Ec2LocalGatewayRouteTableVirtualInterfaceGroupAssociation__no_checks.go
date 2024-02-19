@@ -56,7 +56,15 @@ func (e *jsiiProxy_Ec2LocalGatewayRouteTableVirtualInterfaceGroupAssociation) va
 	return nil
 }
 
+func (e *jsiiProxy_Ec2LocalGatewayRouteTableVirtualInterfaceGroupAssociation) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2LocalGatewayRouteTableVirtualInterfaceGroupAssociation) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2LocalGatewayRouteTableVirtualInterfaceGroupAssociation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

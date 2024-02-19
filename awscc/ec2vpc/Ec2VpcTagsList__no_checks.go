@@ -4,6 +4,10 @@ package ec2vpc
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (e *jsiiProxy_Ec2VpcTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VpcTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

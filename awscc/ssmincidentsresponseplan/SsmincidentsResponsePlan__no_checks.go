@@ -56,7 +56,15 @@ func (s *jsiiProxy_SsmincidentsResponsePlan) validateInterpolationForAttributePa
 	return nil
 }
 
+func (s *jsiiProxy_SsmincidentsResponsePlan) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_SsmincidentsResponsePlan) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (s *jsiiProxy_SsmincidentsResponsePlan) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

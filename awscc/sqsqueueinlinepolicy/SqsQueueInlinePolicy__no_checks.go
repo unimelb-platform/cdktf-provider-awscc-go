@@ -56,7 +56,15 @@ func (s *jsiiProxy_SqsQueueInlinePolicy) validateInterpolationForAttributeParame
 	return nil
 }
 
+func (s *jsiiProxy_SqsQueueInlinePolicy) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_SqsQueueInlinePolicy) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (s *jsiiProxy_SqsQueueInlinePolicy) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

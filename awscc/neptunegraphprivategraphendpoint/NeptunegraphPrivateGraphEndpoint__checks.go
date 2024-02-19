@@ -119,6 +119,14 @@ func (n *jsiiProxy_NeptunegraphPrivateGraphEndpoint) validateInterpolationForAtt
 	return nil
 }
 
+func (n *jsiiProxy_NeptunegraphPrivateGraphEndpoint) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (n *jsiiProxy_NeptunegraphPrivateGraphEndpoint) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (n *jsiiProxy_NeptunegraphPrivateGraphEndpoint) validateMoveToParameters(mo
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (n *jsiiProxy_NeptunegraphPrivateGraphEndpoint) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil

@@ -56,7 +56,15 @@ func (d *jsiiProxy_DirectoryserviceSimpleAd) validateInterpolationForAttributePa
 	return nil
 }
 
+func (d *jsiiProxy_DirectoryserviceSimpleAd) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DirectoryserviceSimpleAd) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DirectoryserviceSimpleAd) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -56,7 +56,15 @@ func (e *jsiiProxy_ElasticacheServerlessCache) validateInterpolationForAttribute
 	return nil
 }
 
+func (e *jsiiProxy_ElasticacheServerlessCache) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_ElasticacheServerlessCache) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_ElasticacheServerlessCache) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -56,7 +56,15 @@ func (e *jsiiProxy_Ec2Volume) validateInterpolationForAttributeParameters(terraf
 	return nil
 }
 
+func (e *jsiiProxy_Ec2Volume) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2Volume) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2Volume) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

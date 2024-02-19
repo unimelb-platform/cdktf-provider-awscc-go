@@ -4,6 +4,10 @@ package dataawscccloudtrailtrail
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccCloudtrailTrailAdvancedEventSelectorsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccCloudtrailTrailAdvancedEventSelectorsList) validateGetParameters(index *float64) error {
 	return nil
 }

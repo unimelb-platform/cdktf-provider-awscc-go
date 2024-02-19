@@ -56,7 +56,15 @@ func (c *jsiiProxy_CustomerprofilesObjectType) validateInterpolationForAttribute
 	return nil
 }
 
+func (c *jsiiProxy_CustomerprofilesObjectType) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CustomerprofilesObjectType) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_CustomerprofilesObjectType) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

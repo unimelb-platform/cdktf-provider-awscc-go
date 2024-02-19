@@ -56,7 +56,15 @@ func (d *jsiiProxy_DevopsguruLogAnomalyDetectionIntegration) validateInterpolati
 	return nil
 }
 
+func (d *jsiiProxy_DevopsguruLogAnomalyDetectionIntegration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DevopsguruLogAnomalyDetectionIntegration) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DevopsguruLogAnomalyDetectionIntegration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

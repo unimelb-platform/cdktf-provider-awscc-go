@@ -56,7 +56,15 @@ func (n *jsiiProxy_NeptunegraphGraph) validateInterpolationForAttributeParameter
 	return nil
 }
 
+func (n *jsiiProxy_NeptunegraphGraph) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (n *jsiiProxy_NeptunegraphGraph) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (n *jsiiProxy_NeptunegraphGraph) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

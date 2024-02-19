@@ -4,6 +4,10 @@ package lightsailcontainer
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (l *jsiiProxy_LightsailContainerContainerServiceDeploymentContainersPortsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LightsailContainerContainerServiceDeploymentContainersPortsList) validateGetParameters(index *float64) error {
 	return nil
 }

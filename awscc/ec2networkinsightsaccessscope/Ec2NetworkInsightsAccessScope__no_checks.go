@@ -56,7 +56,15 @@ func (e *jsiiProxy_Ec2NetworkInsightsAccessScope) validateInterpolationForAttrib
 	return nil
 }
 
+func (e *jsiiProxy_Ec2NetworkInsightsAccessScope) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2NetworkInsightsAccessScope) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2NetworkInsightsAccessScope) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

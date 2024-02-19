@@ -56,7 +56,15 @@ func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) validateInterpolat
 	return nil
 }
 
+func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

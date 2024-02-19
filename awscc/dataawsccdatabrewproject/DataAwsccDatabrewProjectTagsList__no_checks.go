@@ -4,6 +4,10 @@ package dataawsccdatabrewproject
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccDatabrewProjectTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccDatabrewProjectTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

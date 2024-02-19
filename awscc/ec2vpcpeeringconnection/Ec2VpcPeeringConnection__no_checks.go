@@ -56,7 +56,15 @@ func (e *jsiiProxy_Ec2VpcPeeringConnection) validateInterpolationForAttributePar
 	return nil
 }
 
+func (e *jsiiProxy_Ec2VpcPeeringConnection) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VpcPeeringConnection) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VpcPeeringConnection) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -56,7 +56,15 @@ func (e *jsiiProxy_Ec2SubnetRouteTableAssociation) validateInterpolationForAttri
 	return nil
 }
 
+func (e *jsiiProxy_Ec2SubnetRouteTableAssociation) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2SubnetRouteTableAssociation) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2SubnetRouteTableAssociation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

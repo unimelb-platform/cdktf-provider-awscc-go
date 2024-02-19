@@ -4,6 +4,10 @@ package quicksighttopic
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (q *jsiiProxy_QuicksightTopicDataSetsCalculatedFieldsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (q *jsiiProxy_QuicksightTopicDataSetsCalculatedFieldsList) validateGetParameters(index *float64) error {
 	return nil
 }

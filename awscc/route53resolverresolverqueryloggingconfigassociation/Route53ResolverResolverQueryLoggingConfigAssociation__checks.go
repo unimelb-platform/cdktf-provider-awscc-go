@@ -119,6 +119,14 @@ func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) validat
 	return nil
 }
 
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) validat
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil

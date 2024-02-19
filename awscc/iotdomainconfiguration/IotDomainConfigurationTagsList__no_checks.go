@@ -4,6 +4,10 @@ package iotdomainconfiguration
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (i *jsiiProxy_IotDomainConfigurationTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotDomainConfigurationTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

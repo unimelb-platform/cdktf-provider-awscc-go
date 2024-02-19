@@ -4,6 +4,10 @@ package dataawsccec2localgatewayroutetable
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccEc2LocalGatewayRouteTableTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccEc2LocalGatewayRouteTableTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

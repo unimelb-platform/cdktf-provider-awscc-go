@@ -56,7 +56,15 @@ func (a *jsiiProxy_AmplifyDomain) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
+func (a *jsiiProxy_AmplifyDomain) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_AmplifyDomain) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (a *jsiiProxy_AmplifyDomain) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

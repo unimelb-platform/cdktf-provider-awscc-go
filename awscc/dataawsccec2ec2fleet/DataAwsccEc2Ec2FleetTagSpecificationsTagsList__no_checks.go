@@ -4,6 +4,10 @@ package dataawsccec2ec2fleet
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccEc2Ec2FleetTagSpecificationsTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccEc2Ec2FleetTagSpecificationsTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

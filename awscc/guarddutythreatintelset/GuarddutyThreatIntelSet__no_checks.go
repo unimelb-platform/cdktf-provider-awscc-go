@@ -56,7 +56,15 @@ func (g *jsiiProxy_GuarddutyThreatIntelSet) validateInterpolationForAttributePar
 	return nil
 }
 
+func (g *jsiiProxy_GuarddutyThreatIntelSet) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (g *jsiiProxy_GuarddutyThreatIntelSet) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (g *jsiiProxy_GuarddutyThreatIntelSet) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

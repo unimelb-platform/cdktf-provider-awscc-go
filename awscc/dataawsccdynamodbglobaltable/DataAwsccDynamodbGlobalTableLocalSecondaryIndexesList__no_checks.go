@@ -4,6 +4,10 @@ package dataawsccdynamodbglobaltable
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccDynamodbGlobalTableLocalSecondaryIndexesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccDynamodbGlobalTableLocalSecondaryIndexesList) validateGetParameters(index *float64) error {
 	return nil
 }

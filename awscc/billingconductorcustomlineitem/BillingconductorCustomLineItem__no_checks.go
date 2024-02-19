@@ -56,7 +56,15 @@ func (b *jsiiProxy_BillingconductorCustomLineItem) validateInterpolationForAttri
 	return nil
 }
 
+func (b *jsiiProxy_BillingconductorCustomLineItem) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (b *jsiiProxy_BillingconductorCustomLineItem) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (b *jsiiProxy_BillingconductorCustomLineItem) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

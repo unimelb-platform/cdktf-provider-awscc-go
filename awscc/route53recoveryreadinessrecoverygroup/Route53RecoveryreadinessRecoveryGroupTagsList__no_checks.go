@@ -4,6 +4,10 @@ package route53recoveryreadinessrecoverygroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (r *jsiiProxy_Route53RecoveryreadinessRecoveryGroupTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_Route53RecoveryreadinessRecoveryGroupTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

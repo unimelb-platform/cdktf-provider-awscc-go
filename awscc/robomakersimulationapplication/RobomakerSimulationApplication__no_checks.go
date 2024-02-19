@@ -56,7 +56,15 @@ func (r *jsiiProxy_RobomakerSimulationApplication) validateInterpolationForAttri
 	return nil
 }
 
+func (r *jsiiProxy_RobomakerSimulationApplication) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RobomakerSimulationApplication) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (r *jsiiProxy_RobomakerSimulationApplication) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -56,7 +56,15 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validateInterpolationForAttrib
 	return nil
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

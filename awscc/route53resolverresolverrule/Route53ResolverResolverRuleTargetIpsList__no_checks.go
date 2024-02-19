@@ -4,6 +4,10 @@ package route53resolverresolverrule
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (r *jsiiProxy_Route53ResolverResolverRuleTargetIpsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_Route53ResolverResolverRuleTargetIpsList) validateGetParameters(index *float64) error {
 	return nil
 }

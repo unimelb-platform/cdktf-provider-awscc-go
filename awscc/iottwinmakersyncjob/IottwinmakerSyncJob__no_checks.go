@@ -56,7 +56,15 @@ func (i *jsiiProxy_IottwinmakerSyncJob) validateInterpolationForAttributeParamet
 	return nil
 }
 
+func (i *jsiiProxy_IottwinmakerSyncJob) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IottwinmakerSyncJob) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_IottwinmakerSyncJob) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

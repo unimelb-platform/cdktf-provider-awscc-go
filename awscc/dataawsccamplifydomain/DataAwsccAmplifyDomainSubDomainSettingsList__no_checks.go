@@ -4,6 +4,10 @@ package dataawsccamplifydomain
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccAmplifyDomainSubDomainSettingsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccAmplifyDomainSubDomainSettingsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -4,6 +4,10 @@ package dataawsccwafv2ipset
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccWafv2IpSetTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccWafv2IpSetTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

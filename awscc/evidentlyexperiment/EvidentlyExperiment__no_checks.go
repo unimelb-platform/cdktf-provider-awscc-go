@@ -56,7 +56,15 @@ func (e *jsiiProxy_EvidentlyExperiment) validateInterpolationForAttributeParamet
 	return nil
 }
 
+func (e *jsiiProxy_EvidentlyExperiment) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_EvidentlyExperiment) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_EvidentlyExperiment) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -4,6 +4,10 @@ package dataawsccdatasyncstoragesystem
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccDatasyncStorageSystemTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccDatasyncStorageSystemTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

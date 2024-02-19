@@ -56,7 +56,15 @@ func (c *jsiiProxy_ComprehendFlywheel) validateInterpolationForAttributeParamete
 	return nil
 }
 
+func (c *jsiiProxy_ComprehendFlywheel) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_ComprehendFlywheel) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_ComprehendFlywheel) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

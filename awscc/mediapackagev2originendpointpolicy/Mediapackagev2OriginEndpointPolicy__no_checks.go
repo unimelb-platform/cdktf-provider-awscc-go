@@ -56,7 +56,15 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpointPolicy) validateInterpolationForA
 	return nil
 }
 
+func (m *jsiiProxy_Mediapackagev2OriginEndpointPolicy) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_Mediapackagev2OriginEndpointPolicy) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpointPolicy) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

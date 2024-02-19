@@ -4,6 +4,10 @@ package dataawsccb2biprofile
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccB2BiProfileTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccB2BiProfileTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

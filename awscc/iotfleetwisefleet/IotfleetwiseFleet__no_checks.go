@@ -56,7 +56,15 @@ func (i *jsiiProxy_IotfleetwiseFleet) validateInterpolationForAttributeParameter
 	return nil
 }
 
+func (i *jsiiProxy_IotfleetwiseFleet) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotfleetwiseFleet) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotfleetwiseFleet) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

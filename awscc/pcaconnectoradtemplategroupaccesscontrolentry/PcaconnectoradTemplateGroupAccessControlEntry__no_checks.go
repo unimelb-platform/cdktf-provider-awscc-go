@@ -56,7 +56,15 @@ func (p *jsiiProxy_PcaconnectoradTemplateGroupAccessControlEntry) validateInterp
 	return nil
 }
 
+func (p *jsiiProxy_PcaconnectoradTemplateGroupAccessControlEntry) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (p *jsiiProxy_PcaconnectoradTemplateGroupAccessControlEntry) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (p *jsiiProxy_PcaconnectoradTemplateGroupAccessControlEntry) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

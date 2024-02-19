@@ -56,7 +56,15 @@ func (i *jsiiProxy_IotCertificate) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
+func (i *jsiiProxy_IotCertificate) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotCertificate) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotCertificate) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

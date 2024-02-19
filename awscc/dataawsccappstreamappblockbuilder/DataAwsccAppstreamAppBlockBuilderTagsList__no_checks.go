@@ -4,6 +4,10 @@ package dataawsccappstreamappblockbuilder
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccAppstreamAppBlockBuilderTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccAppstreamAppBlockBuilderTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

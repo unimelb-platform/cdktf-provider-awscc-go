@@ -56,7 +56,15 @@ func (a *jsiiProxy_AppsyncSourceApiAssociation) validateInterpolationForAttribut
 	return nil
 }
 
+func (a *jsiiProxy_AppsyncSourceApiAssociation) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_AppsyncSourceApiAssociation) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (a *jsiiProxy_AppsyncSourceApiAssociation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

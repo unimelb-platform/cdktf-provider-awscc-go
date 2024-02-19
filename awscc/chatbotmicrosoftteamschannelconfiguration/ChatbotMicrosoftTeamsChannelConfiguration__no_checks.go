@@ -56,7 +56,15 @@ func (c *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateInterpolat
 	return nil
 }
 
+func (c *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -56,7 +56,15 @@ func (o *jsiiProxy_OmicsSequenceStore) validateInterpolationForAttributeParamete
 	return nil
 }
 
+func (o *jsiiProxy_OmicsSequenceStore) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (o *jsiiProxy_OmicsSequenceStore) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (o *jsiiProxy_OmicsSequenceStore) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

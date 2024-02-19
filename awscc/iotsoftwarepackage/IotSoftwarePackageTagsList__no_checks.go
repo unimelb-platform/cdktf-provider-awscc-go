@@ -4,6 +4,10 @@ package iotsoftwarepackage
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (i *jsiiProxy_IotSoftwarePackageTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotSoftwarePackageTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

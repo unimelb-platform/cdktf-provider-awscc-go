@@ -56,7 +56,15 @@ func (c *jsiiProxy_ChatbotSlackChannelConfiguration) validateInterpolationForAtt
 	return nil
 }
 
+func (c *jsiiProxy_ChatbotSlackChannelConfiguration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_ChatbotSlackChannelConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_ChatbotSlackChannelConfiguration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

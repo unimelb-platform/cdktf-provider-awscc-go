@@ -56,7 +56,15 @@ func (t *jsiiProxy_TimestreamScheduledQuery) validateInterpolationForAttributePa
 	return nil
 }
 
+func (t *jsiiProxy_TimestreamScheduledQuery) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (t *jsiiProxy_TimestreamScheduledQuery) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (t *jsiiProxy_TimestreamScheduledQuery) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

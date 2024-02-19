@@ -4,6 +4,10 @@ package dmsinstanceprofile
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DmsInstanceProfileTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DmsInstanceProfileTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -56,7 +56,15 @@ func (p *jsiiProxy_PersonalizeSchema) validateInterpolationForAttributeParameter
 	return nil
 }
 
+func (p *jsiiProxy_PersonalizeSchema) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (p *jsiiProxy_PersonalizeSchema) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (p *jsiiProxy_PersonalizeSchema) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

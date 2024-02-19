@@ -56,7 +56,15 @@ func (w *jsiiProxy_WisdomKnowledgeBase) validateInterpolationForAttributeParamet
 	return nil
 }
 
+func (w *jsiiProxy_WisdomKnowledgeBase) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (w *jsiiProxy_WisdomKnowledgeBase) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (w *jsiiProxy_WisdomKnowledgeBase) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

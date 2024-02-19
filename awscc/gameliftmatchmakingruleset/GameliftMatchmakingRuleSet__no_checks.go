@@ -56,7 +56,15 @@ func (g *jsiiProxy_GameliftMatchmakingRuleSet) validateInterpolationForAttribute
 	return nil
 }
 
+func (g *jsiiProxy_GameliftMatchmakingRuleSet) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (g *jsiiProxy_GameliftMatchmakingRuleSet) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (g *jsiiProxy_GameliftMatchmakingRuleSet) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

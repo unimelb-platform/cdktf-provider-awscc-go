@@ -4,6 +4,10 @@ package dataawsccresourcegroupsgroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccResourcegroupsGroupConfigurationList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccResourcegroupsGroupConfigurationList) validateGetParameters(index *float64) error {
 	return nil
 }

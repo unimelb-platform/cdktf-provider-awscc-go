@@ -4,6 +4,10 @@ package systemsmanagersapapplication
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (s *jsiiProxy_SystemsmanagersapApplicationCredentialsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_SystemsmanagersapApplicationCredentialsList) validateGetParameters(index *float64) error {
 	return nil
 }

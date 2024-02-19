@@ -4,6 +4,10 @@ package eventschemasdiscoverer
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (e *jsiiProxy_EventschemasDiscovererTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_EventschemasDiscovererTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

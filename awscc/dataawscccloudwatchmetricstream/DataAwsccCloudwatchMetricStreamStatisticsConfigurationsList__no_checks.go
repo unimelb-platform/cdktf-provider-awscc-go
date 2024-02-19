@@ -4,6 +4,10 @@ package dataawscccloudwatchmetricstream
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccCloudwatchMetricStreamStatisticsConfigurationsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccCloudwatchMetricStreamStatisticsConfigurationsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -56,7 +56,15 @@ func (e *jsiiProxy_Ec2SubnetCidrBlock) validateInterpolationForAttributeParamete
 	return nil
 }
 
+func (e *jsiiProxy_Ec2SubnetCidrBlock) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2SubnetCidrBlock) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2SubnetCidrBlock) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

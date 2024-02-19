@@ -56,7 +56,15 @@ func (b *jsiiProxy_BackupBackupVault) validateInterpolationForAttributeParameter
 	return nil
 }
 
+func (b *jsiiProxy_BackupBackupVault) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (b *jsiiProxy_BackupBackupVault) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (b *jsiiProxy_BackupBackupVault) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

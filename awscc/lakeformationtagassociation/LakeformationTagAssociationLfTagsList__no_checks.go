@@ -4,6 +4,10 @@ package lakeformationtagassociation
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (l *jsiiProxy_LakeformationTagAssociationLfTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LakeformationTagAssociationLfTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

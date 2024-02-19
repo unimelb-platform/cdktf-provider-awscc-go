@@ -56,7 +56,15 @@ func (l *jsiiProxy_LookoutequipmentInferenceScheduler) validateInterpolationForA
 	return nil
 }
 
+func (l *jsiiProxy_LookoutequipmentInferenceScheduler) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LookoutequipmentInferenceScheduler) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (l *jsiiProxy_LookoutequipmentInferenceScheduler) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -56,7 +56,15 @@ func (r *jsiiProxy_RdsDbProxyTargetGroup) validateInterpolationForAttributeParam
 	return nil
 }
 
+func (r *jsiiProxy_RdsDbProxyTargetGroup) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RdsDbProxyTargetGroup) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (r *jsiiProxy_RdsDbProxyTargetGroup) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

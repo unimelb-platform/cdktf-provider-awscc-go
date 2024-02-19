@@ -4,6 +4,10 @@ package dataawsccefsfilesystem
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccEfsFileSystemFileSystemTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccEfsFileSystemFileSystemTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

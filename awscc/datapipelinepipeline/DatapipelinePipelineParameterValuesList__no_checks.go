@@ -4,6 +4,10 @@ package datapipelinepipeline
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DatapipelinePipelineParameterValuesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DatapipelinePipelineParameterValuesList) validateGetParameters(index *float64) error {
 	return nil
 }

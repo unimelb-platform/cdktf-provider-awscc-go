@@ -4,6 +4,10 @@ package appconfigconfigurationprofile
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (a *jsiiProxy_AppconfigConfigurationProfileTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_AppconfigConfigurationProfileTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -4,6 +4,10 @@ package dataawsccs3objectlambdaaccesspoint
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccS3ObjectlambdaAccessPointObjectLambdaConfigurationTransformationConfigurationsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccS3ObjectlambdaAccessPointObjectLambdaConfigurationTransformationConfigurationsList) validateGetParameters(index *float64) error {
 	return nil
 }

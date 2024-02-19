@@ -56,7 +56,15 @@ func (n *jsiiProxy_NimblestudioStudio) validateInterpolationForAttributeParamete
 	return nil
 }
 
+func (n *jsiiProxy_NimblestudioStudio) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (n *jsiiProxy_NimblestudioStudio) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (n *jsiiProxy_NimblestudioStudio) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

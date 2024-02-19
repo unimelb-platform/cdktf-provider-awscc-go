@@ -4,6 +4,10 @@ package dataawsccstepfunctionsstatemachinealias
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccStepfunctionsStateMachineAliasRoutingConfigurationList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccStepfunctionsStateMachineAliasRoutingConfigurationList) validateGetParameters(index *float64) error {
 	return nil
 }

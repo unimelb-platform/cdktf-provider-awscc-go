@@ -4,6 +4,10 @@ package medialivemultiplexprogram
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (m *jsiiProxy_MedialiveMultiplexprogramPipelineDetailsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_MedialiveMultiplexprogramPipelineDetailsList) validateGetParameters(index *float64) error {
 	return nil
 }

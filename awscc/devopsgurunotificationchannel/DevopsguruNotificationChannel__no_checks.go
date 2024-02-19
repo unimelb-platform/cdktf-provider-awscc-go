@@ -56,7 +56,15 @@ func (d *jsiiProxy_DevopsguruNotificationChannel) validateInterpolationForAttrib
 	return nil
 }
 
+func (d *jsiiProxy_DevopsguruNotificationChannel) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DevopsguruNotificationChannel) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DevopsguruNotificationChannel) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -4,6 +4,10 @@ package dataawsccec2ipampool
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccEc2IpamPoolAllocationResourceTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccEc2IpamPoolAllocationResourceTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

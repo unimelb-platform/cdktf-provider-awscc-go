@@ -97,12 +97,22 @@ type HealthimagingDatastore interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -113,6 +123,9 @@ type HealthimagingDatastore interface {
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -807,6 +820,19 @@ func (h *jsiiProxy_HealthimagingDatastore) GetStringMapAttribute(terraformAttrib
 	return returns
 }
 
+func (h *jsiiProxy_HealthimagingDatastore) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		h,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (h *jsiiProxy_HealthimagingDatastore) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := h.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -834,6 +860,17 @@ func (h *jsiiProxy_HealthimagingDatastore) InterpolationForAttribute(terraformAt
 	return returns
 }
 
+func (h *jsiiProxy_HealthimagingDatastore) MoveFromId(id *string) {
+	if err := h.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		h,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (h *jsiiProxy_HealthimagingDatastore) MoveTo(moveTarget *string, index interface{}) {
 	if err := h.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -842,6 +879,17 @@ func (h *jsiiProxy_HealthimagingDatastore) MoveTo(moveTarget *string, index inte
 		h,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (h *jsiiProxy_HealthimagingDatastore) MoveToId(id *string) {
+	if err := h.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		h,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -894,6 +942,32 @@ func (h *jsiiProxy_HealthimagingDatastore) SynthesizeAttributes() *map[string]in
 	_jsii_.Invoke(
 		h,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (h *jsiiProxy_HealthimagingDatastore) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		h,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (h *jsiiProxy_HealthimagingDatastore) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		h,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

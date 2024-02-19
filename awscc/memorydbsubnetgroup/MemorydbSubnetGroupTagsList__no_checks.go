@@ -4,6 +4,10 @@ package memorydbsubnetgroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (m *jsiiProxy_MemorydbSubnetGroupTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_MemorydbSubnetGroupTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

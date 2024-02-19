@@ -4,6 +4,10 @@ package dataawscccustomerprofilesdomain
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccCustomerprofilesDomainTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccCustomerprofilesDomainTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

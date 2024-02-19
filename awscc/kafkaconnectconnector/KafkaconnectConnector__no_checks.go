@@ -56,7 +56,15 @@ func (k *jsiiProxy_KafkaconnectConnector) validateInterpolationForAttributeParam
 	return nil
 }
 
+func (k *jsiiProxy_KafkaconnectConnector) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (k *jsiiProxy_KafkaconnectConnector) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (k *jsiiProxy_KafkaconnectConnector) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

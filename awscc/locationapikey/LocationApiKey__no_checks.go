@@ -56,7 +56,15 @@ func (l *jsiiProxy_LocationApiKey) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
+func (l *jsiiProxy_LocationApiKey) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LocationApiKey) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (l *jsiiProxy_LocationApiKey) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

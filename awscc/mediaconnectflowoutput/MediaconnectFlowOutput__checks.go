@@ -119,6 +119,14 @@ func (m *jsiiProxy_MediaconnectFlowOutput) validateInterpolationForAttributePara
 	return nil
 }
 
+func (m *jsiiProxy_MediaconnectFlowOutput) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (m *jsiiProxy_MediaconnectFlowOutput) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (m *jsiiProxy_MediaconnectFlowOutput) validateMoveToParameters(moveTarget *
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (m *jsiiProxy_MediaconnectFlowOutput) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil

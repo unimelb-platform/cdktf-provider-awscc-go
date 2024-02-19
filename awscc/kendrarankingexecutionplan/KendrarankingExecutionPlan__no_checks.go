@@ -56,7 +56,15 @@ func (k *jsiiProxy_KendrarankingExecutionPlan) validateInterpolationForAttribute
 	return nil
 }
 
+func (k *jsiiProxy_KendrarankingExecutionPlan) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (k *jsiiProxy_KendrarankingExecutionPlan) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (k *jsiiProxy_KendrarankingExecutionPlan) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

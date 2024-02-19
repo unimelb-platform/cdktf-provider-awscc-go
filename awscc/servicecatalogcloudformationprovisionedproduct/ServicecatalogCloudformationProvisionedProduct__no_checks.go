@@ -56,7 +56,15 @@ func (s *jsiiProxy_ServicecatalogCloudformationProvisionedProduct) validateInter
 	return nil
 }
 
+func (s *jsiiProxy_ServicecatalogCloudformationProvisionedProduct) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_ServicecatalogCloudformationProvisionedProduct) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (s *jsiiProxy_ServicecatalogCloudformationProvisionedProduct) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

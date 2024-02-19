@@ -56,7 +56,15 @@ func (f *jsiiProxy_ForecastDataset) validateInterpolationForAttributeParameters(
 	return nil
 }
 
+func (f *jsiiProxy_ForecastDataset) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (f *jsiiProxy_ForecastDataset) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (f *jsiiProxy_ForecastDataset) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

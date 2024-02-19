@@ -4,6 +4,10 @@ package imagebuilderdistributionconfiguration
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (i *jsiiProxy_ImagebuilderDistributionConfigurationDistributionsFastLaunchConfigurationsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_ImagebuilderDistributionConfigurationDistributionsFastLaunchConfigurationsList) validateGetParameters(index *float64) error {
 	return nil
 }

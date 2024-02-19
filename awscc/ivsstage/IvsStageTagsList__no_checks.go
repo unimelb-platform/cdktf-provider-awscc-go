@@ -4,6 +4,10 @@ package ivsstage
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (i *jsiiProxy_IvsStageTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IvsStageTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

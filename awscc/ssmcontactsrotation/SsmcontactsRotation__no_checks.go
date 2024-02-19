@@ -56,7 +56,15 @@ func (s *jsiiProxy_SsmcontactsRotation) validateInterpolationForAttributeParamet
 	return nil
 }
 
+func (s *jsiiProxy_SsmcontactsRotation) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_SsmcontactsRotation) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (s *jsiiProxy_SsmcontactsRotation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

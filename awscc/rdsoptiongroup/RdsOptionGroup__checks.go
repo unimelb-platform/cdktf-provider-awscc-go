@@ -119,6 +119,14 @@ func (r *jsiiProxy_RdsOptionGroup) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
+func (r *jsiiProxy_RdsOptionGroup) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (r *jsiiProxy_RdsOptionGroup) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (r *jsiiProxy_RdsOptionGroup) validateMoveToParameters(moveTarget *string, 
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (r *jsiiProxy_RdsOptionGroup) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil

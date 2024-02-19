@@ -56,7 +56,15 @@ func (p *jsiiProxy_PersonalizeDatasetGroup) validateInterpolationForAttributePar
 	return nil
 }
 
+func (p *jsiiProxy_PersonalizeDatasetGroup) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (p *jsiiProxy_PersonalizeDatasetGroup) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (p *jsiiProxy_PersonalizeDatasetGroup) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

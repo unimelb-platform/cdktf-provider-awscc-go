@@ -4,6 +4,10 @@ package dataawscclexbotversion
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccLexBotVersionBotVersionLocaleSpecificationList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccLexBotVersionBotVersionLocaleSpecificationList) validateGetParameters(index *float64) error {
 	return nil
 }

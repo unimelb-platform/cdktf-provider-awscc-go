@@ -56,7 +56,15 @@ func (f *jsiiProxy_FisTargetAccountConfiguration) validateInterpolationForAttrib
 	return nil
 }
 
+func (f *jsiiProxy_FisTargetAccountConfiguration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (f *jsiiProxy_FisTargetAccountConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (f *jsiiProxy_FisTargetAccountConfiguration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

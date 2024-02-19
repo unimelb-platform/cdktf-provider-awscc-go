@@ -4,6 +4,10 @@ package sagemakermodelqualityjobdefinition
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (s *jsiiProxy_SagemakerModelQualityJobDefinitionTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_SagemakerModelQualityJobDefinitionTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -56,7 +56,15 @@ func (r *jsiiProxy_RobomakerRobotApplication) validateInterpolationForAttributeP
 	return nil
 }
 
+func (r *jsiiProxy_RobomakerRobotApplication) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RobomakerRobotApplication) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (r *jsiiProxy_RobomakerRobotApplication) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -4,6 +4,10 @@ package dataawsccm2environment
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccM2EnvironmentStorageConfigurationsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccM2EnvironmentStorageConfigurationsList) validateGetParameters(index *float64) error {
 	return nil
 }

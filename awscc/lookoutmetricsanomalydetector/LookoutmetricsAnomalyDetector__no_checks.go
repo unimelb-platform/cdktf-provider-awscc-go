@@ -56,7 +56,15 @@ func (l *jsiiProxy_LookoutmetricsAnomalyDetector) validateInterpolationForAttrib
 	return nil
 }
 
+func (l *jsiiProxy_LookoutmetricsAnomalyDetector) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LookoutmetricsAnomalyDetector) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (l *jsiiProxy_LookoutmetricsAnomalyDetector) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

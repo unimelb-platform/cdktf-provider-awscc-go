@@ -56,7 +56,15 @@ func (e *jsiiProxy_EmrWalWorkspace) validateInterpolationForAttributeParameters(
 	return nil
 }
 
+func (e *jsiiProxy_EmrWalWorkspace) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_EmrWalWorkspace) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_EmrWalWorkspace) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

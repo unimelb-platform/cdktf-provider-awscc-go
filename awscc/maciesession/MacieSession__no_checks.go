@@ -56,7 +56,15 @@ func (m *jsiiProxy_MacieSession) validateInterpolationForAttributeParameters(ter
 	return nil
 }
 
+func (m *jsiiProxy_MacieSession) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_MacieSession) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (m *jsiiProxy_MacieSession) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

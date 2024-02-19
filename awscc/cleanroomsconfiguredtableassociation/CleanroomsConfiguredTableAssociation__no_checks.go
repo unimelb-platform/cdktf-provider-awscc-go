@@ -56,7 +56,15 @@ func (c *jsiiProxy_CleanroomsConfiguredTableAssociation) validateInterpolationFo
 	return nil
 }
 
+func (c *jsiiProxy_CleanroomsConfiguredTableAssociation) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CleanroomsConfiguredTableAssociation) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAssociation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

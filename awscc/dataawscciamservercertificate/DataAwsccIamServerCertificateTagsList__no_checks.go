@@ -4,6 +4,10 @@ package dataawscciamservercertificate
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccIamServerCertificateTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccIamServerCertificateTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -4,6 +4,10 @@ package dataawsccrefactorspacesenvironment
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccRefactorspacesEnvironmentTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccRefactorspacesEnvironmentTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

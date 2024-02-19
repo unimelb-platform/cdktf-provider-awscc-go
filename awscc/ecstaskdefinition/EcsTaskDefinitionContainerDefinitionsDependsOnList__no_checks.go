@@ -4,6 +4,10 @@ package ecstaskdefinition
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsDependsOnList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsDependsOnList) validateGetParameters(index *float64) error {
 	return nil
 }

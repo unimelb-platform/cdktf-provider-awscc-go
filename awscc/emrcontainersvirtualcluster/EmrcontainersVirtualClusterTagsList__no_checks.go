@@ -4,6 +4,10 @@ package emrcontainersvirtualcluster
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (e *jsiiProxy_EmrcontainersVirtualClusterTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_EmrcontainersVirtualClusterTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

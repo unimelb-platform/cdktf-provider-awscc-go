@@ -4,6 +4,10 @@ package timestreamscheduledquery
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationMixedMeasureMappingsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationMixedMeasureMappingsList) validateGetParameters(index *float64) error {
 	return nil
 }
