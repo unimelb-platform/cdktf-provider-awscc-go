@@ -1,0 +1,6 @@
+package dataawscciotsitewiseassetmodel
+
+
+type DataAwsccIotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesType struct {
+}
+

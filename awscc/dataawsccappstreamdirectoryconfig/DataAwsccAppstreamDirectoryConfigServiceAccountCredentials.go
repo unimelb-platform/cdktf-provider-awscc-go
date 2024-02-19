@@ -1,0 +1,6 @@
+package dataawsccappstreamdirectoryconfig
+
+
+type DataAwsccAppstreamDirectoryConfigServiceAccountCredentials struct {
+}
+

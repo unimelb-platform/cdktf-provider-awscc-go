@@ -1,0 +1,6 @@
+package dataawsccredshiftendpointaccess
+
+
+type DataAwsccRedshiftEndpointAccessVpcEndpointNetworkInterfaces struct {
+}
+

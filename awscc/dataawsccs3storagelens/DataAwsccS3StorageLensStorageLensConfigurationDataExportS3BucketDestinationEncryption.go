@@ -1,0 +1,6 @@
+package dataawsccs3storagelens
+
+
+type DataAwsccS3StorageLensStorageLensConfigurationDataExportS3BucketDestinationEncryption struct {
+}
+

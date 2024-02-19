@@ -1,0 +1,6 @@
+package dataawscccustomerprofilesintegration
+
+
+type DataAwsccCustomerprofilesIntegrationFlowDefinitionTasksTaskProperties struct {
+}
+

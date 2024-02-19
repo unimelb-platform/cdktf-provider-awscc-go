@@ -1,0 +1,6 @@
+package dataawscccloudfrontoriginaccesscontrol
+
+
+type DataAwsccCloudfrontOriginAccessControlOriginAccessControlConfig struct {
+}
+

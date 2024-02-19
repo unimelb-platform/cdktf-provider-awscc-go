@@ -1,0 +1,6 @@
+package dataawsccecsservice
+
+
+type DataAwsccEcsServiceVolumeConfigurationsManagedEbsVolumeTagSpecificationsTags struct {
+}
+

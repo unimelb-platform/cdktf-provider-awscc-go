@@ -1,0 +1,6 @@
+package dataawsccapigatewaydeployment
+
+
+type DataAwsccApigatewayDeploymentStageDescriptionAccessLogSetting struct {
+}
+

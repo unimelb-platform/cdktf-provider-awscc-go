@@ -1,0 +1,6 @@
+package dataawsccsagemakeruserprofile
+
+
+type DataAwsccSagemakerUserProfileUserSettingsJupyterLabAppSettingsDefaultResourceSpec struct {
+}
+

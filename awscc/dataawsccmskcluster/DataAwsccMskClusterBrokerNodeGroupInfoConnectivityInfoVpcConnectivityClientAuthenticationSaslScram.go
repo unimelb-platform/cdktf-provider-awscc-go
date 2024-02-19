@@ -1,0 +1,6 @@
+package dataawsccmskcluster
+
+
+type DataAwsccMskClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSaslScram struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccsagemakerproject
+
+
+type DataAwsccSagemakerProjectServiceCatalogProvisioningDetailsProvisioningParameters struct {
+}
+

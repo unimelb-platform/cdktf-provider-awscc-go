@@ -1,0 +1,6 @@
+package dataawsccsagemakerdataqualityjobdefinition
+
+
+type DataAwsccSagemakerDataQualityJobDefinitionJobResourcesClusterConfig struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawscciotmitigationaction
+
+
+type DataAwsccIotMitigationActionActionParamsUpdateCaCertificateParams struct {
+}
+

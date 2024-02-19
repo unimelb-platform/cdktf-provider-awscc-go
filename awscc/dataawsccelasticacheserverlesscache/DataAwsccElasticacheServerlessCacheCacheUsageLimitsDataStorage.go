@@ -1,0 +1,6 @@
+package dataawsccelasticacheserverlesscache
+
+
+type DataAwsccElasticacheServerlessCacheCacheUsageLimitsDataStorage struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccpcaconnectoradtemplate
+
+
+type DataAwsccPcaconnectoradTemplateDefinitionTemplateV4SubjectNameFlags struct {
+}
+

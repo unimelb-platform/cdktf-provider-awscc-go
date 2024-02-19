@@ -1,0 +1,6 @@
+package dataawscciotcoredeviceadvisorsuitedefinition
+
+
+type DataAwsccIotcoredeviceadvisorSuiteDefinitionSuiteDefinitionConfigurationDevices struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccimagebuilderlifecyclepolicy
+
+
+type DataAwsccImagebuilderLifecyclePolicyPolicyDetailsActionIncludeResources struct {
+}
+

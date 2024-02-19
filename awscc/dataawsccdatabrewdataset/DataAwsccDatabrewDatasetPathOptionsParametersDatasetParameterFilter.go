@@ -1,0 +1,6 @@
+package dataawsccdatabrewdataset
+
+
+type DataAwsccDatabrewDatasetPathOptionsParametersDatasetParameterFilter struct {
+}
+

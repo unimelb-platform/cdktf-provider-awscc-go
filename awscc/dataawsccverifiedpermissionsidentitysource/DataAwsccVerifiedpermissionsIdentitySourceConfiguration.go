@@ -1,0 +1,6 @@
+package dataawsccverifiedpermissionsidentitysource
+
+
+type DataAwsccVerifiedpermissionsIdentitySourceConfiguration struct {
+}
+

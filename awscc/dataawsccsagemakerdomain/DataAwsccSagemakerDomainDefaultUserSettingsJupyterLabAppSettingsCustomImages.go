@@ -1,0 +1,6 @@
+package dataawsccsagemakerdomain
+
+
+type DataAwsccSagemakerDomainDefaultUserSettingsJupyterLabAppSettingsCustomImages struct {
+}
+

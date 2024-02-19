@@ -1,0 +1,6 @@
+package dataawsccmediapackageoriginendpoint
+
+
+type DataAwsccMediapackageOriginEndpointCmafPackageEncryptionSpekeKeyProviderEncryptionContractConfiguration struct {
+}
+

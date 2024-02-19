@@ -1,0 +1,6 @@
+package dataawsccglobalacceleratorendpointgroup
+
+
+type DataAwsccGlobalacceleratorEndpointGroupEndpointConfigurations struct {
+}
+

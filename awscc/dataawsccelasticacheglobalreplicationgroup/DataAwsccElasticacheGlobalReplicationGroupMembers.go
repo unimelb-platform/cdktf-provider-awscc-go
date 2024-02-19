@@ -1,0 +1,6 @@
+package dataawsccelasticacheglobalreplicationgroup
+
+
+type DataAwsccElasticacheGlobalReplicationGroupMembers struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccnetworkmanagersitetositevpnattachment
+
+
+type DataAwsccNetworkmanagerSiteToSiteVpnAttachmentTags struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawscclicensemanagerlicense
+
+
+type DataAwsccLicensemanagerLicenseConsumptionConfigurationProvisionalConfiguration struct {
+}
+

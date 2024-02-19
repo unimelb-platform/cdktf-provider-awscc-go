@@ -1,0 +1,6 @@
+package dataawsccdatabrewjob
+
+
+type DataAwsccDatabrewJobProfileConfigurationDatasetStatisticsConfigurationOverrides struct {
+}
+

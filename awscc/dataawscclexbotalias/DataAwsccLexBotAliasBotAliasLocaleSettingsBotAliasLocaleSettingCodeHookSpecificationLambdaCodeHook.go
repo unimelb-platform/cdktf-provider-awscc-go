@@ -1,0 +1,6 @@
+package dataawscclexbotalias
+
+
+type DataAwsccLexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHook struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccroute53recoverycontrolcluster
+
+
+type DataAwsccRoute53RecoverycontrolClusterClusterEndpoints struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccsagemakermodelqualityjobdefinition
+
+
+type DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3Input struct {
+}
+

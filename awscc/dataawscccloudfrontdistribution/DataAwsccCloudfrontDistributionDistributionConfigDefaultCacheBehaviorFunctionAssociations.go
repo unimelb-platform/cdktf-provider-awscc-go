@@ -1,0 +1,6 @@
+package dataawscccloudfrontdistribution
+
+
+type DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorFunctionAssociations struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccquicksightdataset
+
+
+type DataAwsccQuicksightDataSetLogicalTableMapDataTransformsProjectOperation struct {
+}
+

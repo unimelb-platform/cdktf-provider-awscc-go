@@ -1,0 +1,6 @@
+package dataawsccsagemakerspace
+
+
+type DataAwsccSagemakerSpaceSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec struct {
+}
+

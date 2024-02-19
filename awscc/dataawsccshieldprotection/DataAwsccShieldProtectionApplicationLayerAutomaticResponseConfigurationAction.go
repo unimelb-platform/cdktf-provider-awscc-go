@@ -1,0 +1,6 @@
+package dataawsccshieldprotection
+
+
+type DataAwsccShieldProtectionApplicationLayerAutomaticResponseConfigurationAction struct {
+}
+

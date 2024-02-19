@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawsccpipespipe
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) validateSetInternalValueParameters(val *DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirements) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
+	return nil
+}
+

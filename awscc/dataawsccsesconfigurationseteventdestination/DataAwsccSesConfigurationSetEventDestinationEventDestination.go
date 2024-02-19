@@ -1,0 +1,6 @@
+package dataawsccsesconfigurationseteventdestination
+
+
+type DataAwsccSesConfigurationSetEventDestinationEventDestination struct {
+}
+

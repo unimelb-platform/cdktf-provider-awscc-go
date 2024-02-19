@@ -1,0 +1,6 @@
+package dataawsccgroundstationdataflowendpointgroup
+
+
+type DataAwsccGroundstationDataflowEndpointGroupEndpointDetailsAwsGroundStationAgentEndpoint struct {
+}
+

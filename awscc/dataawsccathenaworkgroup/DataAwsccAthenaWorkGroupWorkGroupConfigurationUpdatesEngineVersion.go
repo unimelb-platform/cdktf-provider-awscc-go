@@ -1,0 +1,6 @@
+package dataawsccathenaworkgroup
+
+
+type DataAwsccAthenaWorkGroupWorkGroupConfigurationUpdatesEngineVersion struct {
+}
+

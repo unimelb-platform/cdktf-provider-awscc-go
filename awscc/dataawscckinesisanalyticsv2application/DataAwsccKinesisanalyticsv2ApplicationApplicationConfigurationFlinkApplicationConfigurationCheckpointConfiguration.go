@@ -1,0 +1,6 @@
+package dataawscckinesisanalyticsv2application
+
+
+type DataAwsccKinesisanalyticsv2ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration struct {
+}
+

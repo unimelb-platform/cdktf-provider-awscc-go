@@ -1,0 +1,6 @@
+package dataawsccec2networkinsightsanalysis
+
+
+type DataAwsccEc2NetworkInsightsAnalysisReturnPathComponentsInboundHeader struct {
+}
+

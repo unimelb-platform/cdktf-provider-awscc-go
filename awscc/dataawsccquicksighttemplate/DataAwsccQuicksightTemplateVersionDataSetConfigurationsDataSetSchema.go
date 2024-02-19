@@ -1,0 +1,6 @@
+package dataawsccquicksighttemplate
+
+
+type DataAwsccQuicksightTemplateVersionDataSetConfigurationsDataSetSchema struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccappstreamappblock
+
+
+type DataAwsccAppstreamAppBlockPostSetupScriptDetailsScriptS3Location struct {
+}
+

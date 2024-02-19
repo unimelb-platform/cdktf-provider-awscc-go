@@ -1,0 +1,6 @@
+package dataawsccnetworkfirewallfirewallpolicy
+
+
+type DataAwsccNetworkfirewallFirewallPolicyFirewallPolicyPolicyVariables struct {
+}
+

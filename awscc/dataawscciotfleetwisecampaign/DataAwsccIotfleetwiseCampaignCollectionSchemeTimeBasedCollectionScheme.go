@@ -1,0 +1,6 @@
+package dataawscciotfleetwisecampaign
+
+
+type DataAwsccIotfleetwiseCampaignCollectionSchemeTimeBasedCollectionScheme struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccauditmanagerassessment
+
+
+type DataAwsccAuditmanagerAssessmentAssessmentReportsDestination struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccecrreplicationconfiguration
+
+
+type DataAwsccEcrReplicationConfigurationReplicationConfigurationRulesDestinations struct {
+}
+

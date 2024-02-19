@@ -1,0 +1,6 @@
+package dataawsccquicksightdataset
+
+
+type DataAwsccQuicksightDataSetPhysicalTableMapS3SourceUploadSettings struct {
+}
+

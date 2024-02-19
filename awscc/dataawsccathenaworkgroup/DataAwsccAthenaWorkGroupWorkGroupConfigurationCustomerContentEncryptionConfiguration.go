@@ -1,0 +1,6 @@
+package dataawsccathenaworkgroup
+
+
+type DataAwsccAthenaWorkGroupWorkGroupConfigurationCustomerContentEncryptionConfiguration struct {
+}
+

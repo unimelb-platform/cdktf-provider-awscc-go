@@ -1,0 +1,6 @@
+package dataawsccmediapackagepackagingconfiguration
+
+
+type DataAwsccMediapackagePackagingConfigurationCmafPackageHlsManifests struct {
+}
+

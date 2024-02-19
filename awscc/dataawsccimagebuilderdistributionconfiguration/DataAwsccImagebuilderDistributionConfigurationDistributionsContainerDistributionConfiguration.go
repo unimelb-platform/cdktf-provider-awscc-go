@@ -1,0 +1,6 @@
+package dataawsccimagebuilderdistributionconfiguration
+
+
+type DataAwsccImagebuilderDistributionConfigurationDistributionsContainerDistributionConfiguration struct {
+}
+

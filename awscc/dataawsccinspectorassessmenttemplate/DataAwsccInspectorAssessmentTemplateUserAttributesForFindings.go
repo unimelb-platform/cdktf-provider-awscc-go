@@ -1,0 +1,6 @@
+package dataawsccinspectorassessmenttemplate
+
+
+type DataAwsccInspectorAssessmentTemplateUserAttributesForFindings struct {
+}
+

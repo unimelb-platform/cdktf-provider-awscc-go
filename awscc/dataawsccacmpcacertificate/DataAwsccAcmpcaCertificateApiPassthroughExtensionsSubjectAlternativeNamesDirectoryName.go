@@ -1,0 +1,6 @@
+package dataawsccacmpcacertificate
+
+
+type DataAwsccAcmpcaCertificateApiPassthroughExtensionsSubjectAlternativeNamesDirectoryName struct {
+}
+

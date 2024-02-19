@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawsccpcaconnectoradtemplate
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccPcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPoliciesOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPoliciesOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPoliciesOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPoliciesOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPoliciesOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPoliciesOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPoliciesOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPoliciesOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPoliciesOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPoliciesOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccPcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPoliciesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccPcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPoliciesOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccPcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPoliciesOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccPcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPoliciesOutputReference) validateSetInternalValueParameters(val *DataAwsccPcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPolicies) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccPcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPoliciesOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccPcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPoliciesOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccPcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPoliciesOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

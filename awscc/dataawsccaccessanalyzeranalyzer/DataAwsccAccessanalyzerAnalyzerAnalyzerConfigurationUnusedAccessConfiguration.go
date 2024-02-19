@@ -1,0 +1,6 @@
+package dataawsccaccessanalyzeranalyzer
+
+
+type DataAwsccAccessanalyzerAnalyzerAnalyzerConfigurationUnusedAccessConfiguration struct {
+}
+

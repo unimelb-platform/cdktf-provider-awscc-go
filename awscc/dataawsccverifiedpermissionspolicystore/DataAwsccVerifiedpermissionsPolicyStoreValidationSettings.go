@@ -1,0 +1,6 @@
+package dataawsccverifiedpermissionspolicystore
+
+
+type DataAwsccVerifiedpermissionsPolicyStoreValidationSettings struct {
+}
+

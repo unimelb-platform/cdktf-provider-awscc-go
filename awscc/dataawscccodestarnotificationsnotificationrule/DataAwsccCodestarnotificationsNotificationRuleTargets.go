@@ -1,0 +1,6 @@
+package dataawscccodestarnotificationsnotificationrule
+
+
+type DataAwsccCodestarnotificationsNotificationRuleTargets struct {
+}
+

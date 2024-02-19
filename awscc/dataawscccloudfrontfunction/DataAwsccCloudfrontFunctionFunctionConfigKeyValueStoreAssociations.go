@@ -1,0 +1,6 @@
+package dataawscccloudfrontfunction
+
+
+type DataAwsccCloudfrontFunctionFunctionConfigKeyValueStoreAssociations struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawscclambdaeventinvokeconfig
+
+
+type DataAwsccLambdaEventInvokeConfigDestinationConfigOnSuccess struct {
+}
+

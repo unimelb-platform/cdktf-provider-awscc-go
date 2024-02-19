@@ -1,0 +1,6 @@
+package dataawsccconfigconformancepack
+
+
+type DataAwsccConfigConformancePackConformancePackInputParameters struct {
+}
+

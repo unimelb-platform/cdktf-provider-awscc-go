@@ -1,0 +1,6 @@
+package dataawsccmedialivemultiplex
+
+
+type DataAwsccMedialiveMultiplexDestinationsMultiplexMediaConnectOutputDestinationSettings struct {
+}
+

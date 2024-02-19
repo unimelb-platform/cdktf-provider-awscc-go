@@ -1,0 +1,6 @@
+package dataawsccsagemakermodelpackage
+
+
+type DataAwsccSagemakerModelPackageModelPackageStatusDetailsValidationStatuses struct {
+}
+

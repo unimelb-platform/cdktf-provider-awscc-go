@@ -1,0 +1,6 @@
+package dataawscckafkaconnectconnector
+
+
+type DataAwsccKafkaconnectConnectorLogDeliveryWorkerLogDeliveryS3 struct {
+}
+

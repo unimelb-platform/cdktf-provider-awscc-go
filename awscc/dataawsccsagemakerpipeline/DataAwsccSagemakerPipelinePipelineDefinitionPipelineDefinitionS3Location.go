@@ -1,0 +1,6 @@
+package dataawsccsagemakerpipeline
+
+
+type DataAwsccSagemakerPipelinePipelineDefinitionPipelineDefinitionS3Location struct {
+}
+

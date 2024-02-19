@@ -1,0 +1,6 @@
+package dataawsccdmsmigrationproject
+
+
+type DataAwsccDmsMigrationProjectSchemaConversionApplicationAttributes struct {
+}
+

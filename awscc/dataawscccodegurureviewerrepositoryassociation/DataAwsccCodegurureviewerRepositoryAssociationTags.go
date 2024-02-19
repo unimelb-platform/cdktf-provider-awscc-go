@@ -1,0 +1,6 @@
+package dataawscccodegurureviewerrepositoryassociation
+
+
+type DataAwsccCodegurureviewerRepositoryAssociationTags struct {
+}
+

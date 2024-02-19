@@ -1,0 +1,6 @@
+package dataawscccloudformationstackset
+
+
+type DataAwsccCloudformationStackSetStackInstancesGroupParameterOverrides struct {
+}
+

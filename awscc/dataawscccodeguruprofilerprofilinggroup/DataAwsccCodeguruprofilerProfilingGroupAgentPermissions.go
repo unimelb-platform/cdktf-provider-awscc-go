@@ -1,0 +1,6 @@
+package dataawscccodeguruprofilerprofilinggroup
+
+
+type DataAwsccCodeguruprofilerProfilingGroupAgentPermissions struct {
+}
+

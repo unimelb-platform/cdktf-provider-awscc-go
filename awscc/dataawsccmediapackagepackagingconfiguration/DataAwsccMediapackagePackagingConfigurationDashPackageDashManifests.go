@@ -1,0 +1,6 @@
+package dataawsccmediapackagepackagingconfiguration
+
+
+type DataAwsccMediapackagePackagingConfigurationDashPackageDashManifests struct {
+}
+

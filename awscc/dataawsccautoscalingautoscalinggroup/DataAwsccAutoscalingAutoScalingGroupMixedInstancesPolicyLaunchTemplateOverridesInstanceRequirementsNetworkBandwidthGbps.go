@@ -1,0 +1,6 @@
+package dataawsccautoscalingautoscalinggroup
+
+
+type DataAwsccAutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsNetworkBandwidthGbps struct {
+}
+

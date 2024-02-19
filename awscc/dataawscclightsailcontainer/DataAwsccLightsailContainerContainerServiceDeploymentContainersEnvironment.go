@@ -1,0 +1,6 @@
+package dataawscclightsailcontainer
+
+
+type DataAwsccLightsailContainerContainerServiceDeploymentContainersEnvironment struct {
+}
+

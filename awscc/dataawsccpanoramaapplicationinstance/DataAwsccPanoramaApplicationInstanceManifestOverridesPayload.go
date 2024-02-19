@@ -1,0 +1,6 @@
+package dataawsccpanoramaapplicationinstance
+
+
+type DataAwsccPanoramaApplicationInstanceManifestOverridesPayload struct {
+}
+

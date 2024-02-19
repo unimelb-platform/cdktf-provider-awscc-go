@@ -1,0 +1,6 @@
+package dataawsccnimblestudiostreamingimage
+
+
+type DataAwsccNimblestudioStreamingImageEncryptionConfiguration struct {
+}
+

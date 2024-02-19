@@ -1,0 +1,3 @@
+# `awscc_eks_nodegroup`
+
+Refer to the Terraform Registory for docs: [`awscc_eks_nodegroup`](https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/eks_nodegroup).

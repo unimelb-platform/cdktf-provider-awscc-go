@@ -1,0 +1,6 @@
+package dataawsccathenacapacityreservation
+
+
+type DataAwsccAthenaCapacityReservationCapacityAssignmentConfiguration struct {
+}
+

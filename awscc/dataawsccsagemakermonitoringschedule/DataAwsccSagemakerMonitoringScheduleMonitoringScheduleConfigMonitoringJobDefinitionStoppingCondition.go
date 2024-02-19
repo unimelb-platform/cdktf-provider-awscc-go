@@ -1,0 +1,6 @@
+package dataawsccsagemakermonitoringschedule
+
+
+type DataAwsccSagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionStoppingCondition struct {
+}
+

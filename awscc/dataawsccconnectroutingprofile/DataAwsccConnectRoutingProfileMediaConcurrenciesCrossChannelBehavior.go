@@ -1,0 +1,6 @@
+package dataawsccconnectroutingprofile
+
+
+type DataAwsccConnectRoutingProfileMediaConcurrenciesCrossChannelBehavior struct {
+}
+

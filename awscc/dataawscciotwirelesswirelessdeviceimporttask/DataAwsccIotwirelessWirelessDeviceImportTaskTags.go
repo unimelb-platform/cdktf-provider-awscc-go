@@ -1,0 +1,6 @@
+package dataawscciotwirelesswirelessdeviceimporttask
+
+
+type DataAwsccIotwirelessWirelessDeviceImportTaskTags struct {
+}
+

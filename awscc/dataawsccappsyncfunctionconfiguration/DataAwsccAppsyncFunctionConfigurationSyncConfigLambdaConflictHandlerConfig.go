@@ -1,0 +1,6 @@
+package dataawsccappsyncfunctionconfiguration
+
+
+type DataAwsccAppsyncFunctionConfigurationSyncConfigLambdaConflictHandlerConfig struct {
+}
+

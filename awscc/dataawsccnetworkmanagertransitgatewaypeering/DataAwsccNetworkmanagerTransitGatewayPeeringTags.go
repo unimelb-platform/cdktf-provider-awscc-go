@@ -1,0 +1,6 @@
+package dataawsccnetworkmanagertransitgatewaypeering
+
+
+type DataAwsccNetworkmanagerTransitGatewayPeeringTags struct {
+}
+

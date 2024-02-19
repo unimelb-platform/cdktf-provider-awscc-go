@@ -1,0 +1,6 @@
+package dataawsccsagemakermodelexplainabilityjobdefinition
+
+
+type DataAwsccSagemakerModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigConstraintsResource struct {
+}
+

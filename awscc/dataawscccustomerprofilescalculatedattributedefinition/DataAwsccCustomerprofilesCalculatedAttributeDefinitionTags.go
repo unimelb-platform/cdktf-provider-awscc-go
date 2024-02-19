@@ -1,0 +1,6 @@
+package dataawscccustomerprofilescalculatedattributedefinition
+
+
+type DataAwsccCustomerprofilesCalculatedAttributeDefinitionTags struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccapprunnervpcingressconnection
+
+
+type DataAwsccApprunnerVpcIngressConnectionIngressVpcConfiguration struct {
+}
+

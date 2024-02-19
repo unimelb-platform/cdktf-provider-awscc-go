@@ -1,0 +1,6 @@
+package dataawsccarczonalshiftzonalautoshiftconfiguration
+
+
+type DataAwsccArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutcomeAlarms struct {
+}
+

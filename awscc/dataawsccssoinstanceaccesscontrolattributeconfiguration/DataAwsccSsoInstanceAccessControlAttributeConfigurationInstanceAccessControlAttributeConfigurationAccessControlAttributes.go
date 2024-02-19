@@ -1,0 +1,6 @@
+package dataawsccssoinstanceaccesscontrolattributeconfiguration
+
+
+type DataAwsccSsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationAccessControlAttributes struct {
+}
+

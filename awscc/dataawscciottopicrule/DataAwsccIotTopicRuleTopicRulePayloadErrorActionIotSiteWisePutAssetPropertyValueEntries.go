@@ -1,0 +1,6 @@
+package dataawscciottopicrule
+
+
+type DataAwsccIotTopicRuleTopicRulePayloadErrorActionIotSiteWisePutAssetPropertyValueEntries struct {
+}
+

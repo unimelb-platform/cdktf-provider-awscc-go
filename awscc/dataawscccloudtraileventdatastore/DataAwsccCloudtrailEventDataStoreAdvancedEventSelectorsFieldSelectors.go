@@ -1,0 +1,6 @@
+package dataawscccloudtraileventdatastore
+
+
+type DataAwsccCloudtrailEventDataStoreAdvancedEventSelectorsFieldSelectors struct {
+}
+

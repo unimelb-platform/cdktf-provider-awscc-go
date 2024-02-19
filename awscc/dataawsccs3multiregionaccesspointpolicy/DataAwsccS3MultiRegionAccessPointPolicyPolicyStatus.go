@@ -1,0 +1,6 @@
+package dataawsccs3multiregionaccesspointpolicy
+
+
+type DataAwsccS3MultiRegionAccessPointPolicyPolicyStatus struct {
+}
+

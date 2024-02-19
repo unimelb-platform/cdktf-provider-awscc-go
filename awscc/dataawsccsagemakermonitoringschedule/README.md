@@ -1,0 +1,3 @@
+# `data_awscc_sagemaker_monitoring_schedule`
+
+Refer to the Terraform Registory for docs: [`data_awscc_sagemaker_monitoring_schedule`](https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_monitoring_schedule).

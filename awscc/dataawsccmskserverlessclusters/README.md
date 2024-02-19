@@ -1,0 +1,3 @@
+# `data_awscc_msk_serverless_clusters`
+
+Refer to the Terraform Registory for docs: [`data_awscc_msk_serverless_clusters`](https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/msk_serverless_clusters).

@@ -1,0 +1,6 @@
+package dataawsccec2networkinsightsaccessscopeanalysis
+
+
+type DataAwsccEc2NetworkInsightsAccessScopeAnalysisTags struct {
+}
+

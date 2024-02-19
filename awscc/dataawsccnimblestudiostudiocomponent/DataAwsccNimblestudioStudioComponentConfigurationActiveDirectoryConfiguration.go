@@ -1,0 +1,6 @@
+package dataawsccnimblestudiostudiocomponent
+
+
+type DataAwsccNimblestudioStudioComponentConfigurationActiveDirectoryConfiguration struct {
+}
+
