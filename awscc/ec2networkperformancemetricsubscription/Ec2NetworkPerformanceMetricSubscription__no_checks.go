@@ -56,15 +56,7 @@ func (e *jsiiProxy_Ec2NetworkPerformanceMetricSubscription) validateInterpolatio
 	return nil
 }
 
-func (e *jsiiProxy_Ec2NetworkPerformanceMetricSubscription) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2NetworkPerformanceMetricSubscription) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_Ec2NetworkPerformanceMetricSubscription) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

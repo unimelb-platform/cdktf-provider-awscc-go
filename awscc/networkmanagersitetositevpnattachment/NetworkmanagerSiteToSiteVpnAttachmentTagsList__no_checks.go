@@ -4,10 +4,6 @@ package networkmanagersitetositevpnattachment
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (n *jsiiProxy_NetworkmanagerSiteToSiteVpnAttachmentTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (n *jsiiProxy_NetworkmanagerSiteToSiteVpnAttachmentTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

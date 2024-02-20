@@ -4,10 +4,6 @@ package mediapackagev2originendpoint
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (m *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (m *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsList) validateGetParameters(index *float64) error {
 	return nil
 }

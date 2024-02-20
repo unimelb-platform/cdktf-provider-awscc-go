@@ -56,15 +56,7 @@ func (c *jsiiProxy_CognitoIdentityPoolPrincipalTag) validateInterpolationForAttr
 	return nil
 }
 
-func (c *jsiiProxy_CognitoIdentityPoolPrincipalTag) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_CognitoIdentityPoolPrincipalTag) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (c *jsiiProxy_CognitoIdentityPoolPrincipalTag) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

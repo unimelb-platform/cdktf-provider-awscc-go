@@ -56,15 +56,7 @@ func (s *jsiiProxy_ServicecatalogappregistryAttributeGroup) validateInterpolatio
 	return nil
 }
 
-func (s *jsiiProxy_ServicecatalogappregistryAttributeGroup) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_ServicecatalogappregistryAttributeGroup) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (s *jsiiProxy_ServicecatalogappregistryAttributeGroup) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

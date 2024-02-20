@@ -56,15 +56,7 @@ func (k *jsiiProxy_KendraFaq) validateInterpolationForAttributeParameters(terraf
 	return nil
 }
 
-func (k *jsiiProxy_KendraFaq) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (k *jsiiProxy_KendraFaq) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (k *jsiiProxy_KendraFaq) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

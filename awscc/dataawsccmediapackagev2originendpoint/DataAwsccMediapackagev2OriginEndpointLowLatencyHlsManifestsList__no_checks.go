@@ -4,10 +4,6 @@ package dataawsccmediapackagev2originendpoint
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsList) validateGetParameters(index *float64) error {
 	return nil
 }

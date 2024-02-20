@@ -4,10 +4,6 @@ package dataawscceventsrule
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccEventsRuleTargetsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccEventsRuleTargetsList) validateGetParameters(index *float64) error {
 	return nil
 }

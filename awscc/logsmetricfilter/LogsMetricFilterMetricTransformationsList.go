@@ -28,11 +28,6 @@ type LogsMetricFilterMetricTransformationsList interface {
 	// whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
 	WrapsSet() *bool
 	SetWrapsSet(val *bool)
-	// Creating an iterator for this complex list.
-	//
-	// The list will be converted into a map with the mapKeyAttributeName as the key.
-	// Experimental.
-	AllWithMapKey(mapKeyAttributeName *string) cdktf.DynamicListTerraformIterator
 	// Experimental.
 	ComputeFqn() *string
 	Get(index *float64) LogsMetricFilterMetricTransformationsOutputReference
@@ -181,22 +176,6 @@ func (j *jsiiProxy_LogsMetricFilterMetricTransformationsList)SetWrapsSet(val *bo
 		"wrapsSet",
 		val,
 	)
-}
-
-func (l *jsiiProxy_LogsMetricFilterMetricTransformationsList) AllWithMapKey(mapKeyAttributeName *string) cdktf.DynamicListTerraformIterator {
-	if err := l.validateAllWithMapKeyParameters(mapKeyAttributeName); err != nil {
-		panic(err)
-	}
-	var returns cdktf.DynamicListTerraformIterator
-
-	_jsii_.Invoke(
-		l,
-		"allWithMapKey",
-		[]interface{}{mapKeyAttributeName},
-		&returns,
-	)
-
-	return returns
 }
 
 func (l *jsiiProxy_LogsMetricFilterMetricTransformationsList) ComputeFqn() *string {

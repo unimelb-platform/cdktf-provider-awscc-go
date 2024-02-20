@@ -4,10 +4,6 @@ package dataawsccdatasynclocationfsxlustre
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccDatasyncLocationFsxLustreTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccDatasyncLocationFsxLustreTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

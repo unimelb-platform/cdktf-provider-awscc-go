@@ -56,15 +56,7 @@ func (m *jsiiProxy_MediatailorChannel) validateInterpolationForAttributeParamete
 	return nil
 }
 
-func (m *jsiiProxy_MediatailorChannel) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (m *jsiiProxy_MediatailorChannel) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (m *jsiiProxy_MediatailorChannel) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

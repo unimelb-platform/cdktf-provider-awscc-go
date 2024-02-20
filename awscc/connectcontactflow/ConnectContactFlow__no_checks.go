@@ -56,15 +56,7 @@ func (c *jsiiProxy_ConnectContactFlow) validateInterpolationForAttributeParamete
 	return nil
 }
 
-func (c *jsiiProxy_ConnectContactFlow) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_ConnectContactFlow) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (c *jsiiProxy_ConnectContactFlow) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

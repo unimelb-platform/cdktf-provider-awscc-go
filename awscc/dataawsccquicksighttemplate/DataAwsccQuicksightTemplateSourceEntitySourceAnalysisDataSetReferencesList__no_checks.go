@@ -4,10 +4,6 @@ package dataawsccquicksighttemplate
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccQuicksightTemplateSourceEntitySourceAnalysisDataSetReferencesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccQuicksightTemplateSourceEntitySourceAnalysisDataSetReferencesList) validateGetParameters(index *float64) error {
 	return nil
 }

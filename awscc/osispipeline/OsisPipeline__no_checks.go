@@ -56,15 +56,7 @@ func (o *jsiiProxy_OsisPipeline) validateInterpolationForAttributeParameters(ter
 	return nil
 }
 
-func (o *jsiiProxy_OsisPipeline) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (o *jsiiProxy_OsisPipeline) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (o *jsiiProxy_OsisPipeline) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

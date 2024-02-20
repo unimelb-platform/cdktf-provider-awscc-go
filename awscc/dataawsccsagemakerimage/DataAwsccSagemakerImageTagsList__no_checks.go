@@ -4,10 +4,6 @@ package dataawsccsagemakerimage
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccSagemakerImageTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccSagemakerImageTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

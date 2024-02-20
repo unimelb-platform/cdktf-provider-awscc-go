@@ -4,10 +4,6 @@ package dataawsccamplifybranch
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccAmplifyBranchTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccAmplifyBranchTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

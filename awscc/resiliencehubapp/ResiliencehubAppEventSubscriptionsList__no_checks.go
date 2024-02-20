@@ -4,10 +4,6 @@ package resiliencehubapp
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (r *jsiiProxy_ResiliencehubAppEventSubscriptionsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (r *jsiiProxy_ResiliencehubAppEventSubscriptionsList) validateGetParameters(index *float64) error {
 	return nil
 }

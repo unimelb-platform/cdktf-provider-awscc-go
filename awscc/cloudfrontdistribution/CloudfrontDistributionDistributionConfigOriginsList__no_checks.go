@@ -4,10 +4,6 @@ package cloudfrontdistribution
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (c *jsiiProxy_CloudfrontDistributionDistributionConfigOriginsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_CloudfrontDistributionDistributionConfigOriginsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -4,10 +4,6 @@ package databrewjob
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DatabrewJobValidationConfigurationsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DatabrewJobValidationConfigurationsList) validateGetParameters(index *float64) error {
 	return nil
 }

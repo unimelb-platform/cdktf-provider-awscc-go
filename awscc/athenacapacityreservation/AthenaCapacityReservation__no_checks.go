@@ -56,15 +56,7 @@ func (a *jsiiProxy_AthenaCapacityReservation) validateInterpolationForAttributeP
 	return nil
 }
 
-func (a *jsiiProxy_AthenaCapacityReservation) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (a *jsiiProxy_AthenaCapacityReservation) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (a *jsiiProxy_AthenaCapacityReservation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

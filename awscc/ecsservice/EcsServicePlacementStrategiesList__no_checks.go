@@ -4,10 +4,6 @@ package ecsservice
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (e *jsiiProxy_EcsServicePlacementStrategiesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_EcsServicePlacementStrategiesList) validateGetParameters(index *float64) error {
 	return nil
 }

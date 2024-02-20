@@ -4,10 +4,6 @@ package dataawsccroute53cidrcollection
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccRoute53CidrCollectionLocationsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccRoute53CidrCollectionLocationsList) validateGetParameters(index *float64) error {
 	return nil
 }

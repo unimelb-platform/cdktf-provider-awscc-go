@@ -4,10 +4,6 @@ package accessanalyzeranalyzer
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (a *jsiiProxy_AccessanalyzerAnalyzerTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (a *jsiiProxy_AccessanalyzerAnalyzerTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

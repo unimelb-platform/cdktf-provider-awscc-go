@@ -4,10 +4,6 @@ package dataawsccappflowflow
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccAppflowFlowDestinationFlowConfigListStructList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccAppflowFlowDestinationFlowConfigListStructList) validateGetParameters(index *float64) error {
 	return nil
 }

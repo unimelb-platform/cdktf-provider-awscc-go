@@ -56,15 +56,7 @@ func (p *jsiiProxy_PanoramaPackage) validateInterpolationForAttributeParameters(
 	return nil
 }
 
-func (p *jsiiProxy_PanoramaPackage) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (p *jsiiProxy_PanoramaPackage) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (p *jsiiProxy_PanoramaPackage) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

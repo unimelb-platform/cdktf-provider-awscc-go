@@ -4,10 +4,6 @@ package secretsmanagersecret
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (s *jsiiProxy_SecretsmanagerSecretReplicaRegionsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_SecretsmanagerSecretReplicaRegionsList) validateGetParameters(index *float64) error {
 	return nil
 }

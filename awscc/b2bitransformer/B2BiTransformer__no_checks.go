@@ -56,15 +56,7 @@ func (b *jsiiProxy_B2BiTransformer) validateInterpolationForAttributeParameters(
 	return nil
 }
 
-func (b *jsiiProxy_B2BiTransformer) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (b *jsiiProxy_B2BiTransformer) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (b *jsiiProxy_B2BiTransformer) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

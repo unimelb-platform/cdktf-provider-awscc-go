@@ -4,10 +4,6 @@ package dataawsccbackuprestoretestingselection
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccBackupRestoreTestingSelectionProtectedResourceConditionsStringEqualsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccBackupRestoreTestingSelectionProtectedResourceConditionsStringEqualsList) validateGetParameters(index *float64) error {
 	return nil
 }

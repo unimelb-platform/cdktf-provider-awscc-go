@@ -56,15 +56,7 @@ func (e *jsiiProxy_Elasticloadbalancingv2TrustStoreRevocation) validateInterpola
 	return nil
 }
 
-func (e *jsiiProxy_Elasticloadbalancingv2TrustStoreRevocation) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Elasticloadbalancingv2TrustStoreRevocation) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_Elasticloadbalancingv2TrustStoreRevocation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

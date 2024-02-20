@@ -4,10 +4,6 @@ package eksaccessentry
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (e *jsiiProxy_EksAccessEntryTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_EksAccessEntryTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

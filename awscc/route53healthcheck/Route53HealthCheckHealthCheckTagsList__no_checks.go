@@ -4,10 +4,6 @@ package route53healthcheck
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (r *jsiiProxy_Route53HealthCheckHealthCheckTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (r *jsiiProxy_Route53HealthCheckHealthCheckTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

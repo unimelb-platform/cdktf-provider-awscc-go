@@ -4,10 +4,6 @@ package mskreplicator
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (m *jsiiProxy_MskReplicatorReplicationInfoListStructList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (m *jsiiProxy_MskReplicatorReplicationInfoListStructList) validateGetParameters(index *float64) error {
 	return nil
 }

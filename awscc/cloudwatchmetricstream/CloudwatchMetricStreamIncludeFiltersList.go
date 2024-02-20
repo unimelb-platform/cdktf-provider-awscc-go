@@ -28,11 +28,6 @@ type CloudwatchMetricStreamIncludeFiltersList interface {
 	// whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
 	WrapsSet() *bool
 	SetWrapsSet(val *bool)
-	// Creating an iterator for this complex list.
-	//
-	// The list will be converted into a map with the mapKeyAttributeName as the key.
-	// Experimental.
-	AllWithMapKey(mapKeyAttributeName *string) cdktf.DynamicListTerraformIterator
 	// Experimental.
 	ComputeFqn() *string
 	Get(index *float64) CloudwatchMetricStreamIncludeFiltersOutputReference
@@ -181,22 +176,6 @@ func (j *jsiiProxy_CloudwatchMetricStreamIncludeFiltersList)SetWrapsSet(val *boo
 		"wrapsSet",
 		val,
 	)
-}
-
-func (c *jsiiProxy_CloudwatchMetricStreamIncludeFiltersList) AllWithMapKey(mapKeyAttributeName *string) cdktf.DynamicListTerraformIterator {
-	if err := c.validateAllWithMapKeyParameters(mapKeyAttributeName); err != nil {
-		panic(err)
-	}
-	var returns cdktf.DynamicListTerraformIterator
-
-	_jsii_.Invoke(
-		c,
-		"allWithMapKey",
-		[]interface{}{mapKeyAttributeName},
-		&returns,
-	)
-
-	return returns
 }
 
 func (c *jsiiProxy_CloudwatchMetricStreamIncludeFiltersList) ComputeFqn() *string {

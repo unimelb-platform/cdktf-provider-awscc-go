@@ -4,10 +4,6 @@ package dataawsccnimblestudiostudiocomponent
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccNimblestudioStudioComponentInitializationScriptsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccNimblestudioStudioComponentInitializationScriptsList) validateGetParameters(index *float64) error {
 	return nil
 }

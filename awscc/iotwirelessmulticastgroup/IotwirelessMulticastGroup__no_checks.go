@@ -56,15 +56,7 @@ func (i *jsiiProxy_IotwirelessMulticastGroup) validateInterpolationForAttributeP
 	return nil
 }
 
-func (i *jsiiProxy_IotwirelessMulticastGroup) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IotwirelessMulticastGroup) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (i *jsiiProxy_IotwirelessMulticastGroup) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

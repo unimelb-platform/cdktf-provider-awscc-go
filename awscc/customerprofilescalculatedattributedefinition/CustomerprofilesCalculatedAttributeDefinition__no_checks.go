@@ -56,15 +56,7 @@ func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinition) validateInterp
 	return nil
 }
 
-func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinition) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinition) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinition) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

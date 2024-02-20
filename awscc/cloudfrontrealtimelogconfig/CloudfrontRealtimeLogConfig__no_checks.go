@@ -56,15 +56,7 @@ func (c *jsiiProxy_CloudfrontRealtimeLogConfig) validateInterpolationForAttribut
 	return nil
 }
 
-func (c *jsiiProxy_CloudfrontRealtimeLogConfig) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_CloudfrontRealtimeLogConfig) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (c *jsiiProxy_CloudfrontRealtimeLogConfig) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

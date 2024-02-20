@@ -56,15 +56,7 @@ func (l *jsiiProxy_LambdaLayerVersionPermission) validateInterpolationForAttribu
 	return nil
 }
 
-func (l *jsiiProxy_LambdaLayerVersionPermission) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (l *jsiiProxy_LambdaLayerVersionPermission) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (l *jsiiProxy_LambdaLayerVersionPermission) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

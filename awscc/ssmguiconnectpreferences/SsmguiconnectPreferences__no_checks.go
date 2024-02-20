@@ -56,15 +56,7 @@ func (s *jsiiProxy_SsmguiconnectPreferences) validateInterpolationForAttributePa
 	return nil
 }
 
-func (s *jsiiProxy_SsmguiconnectPreferences) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_SsmguiconnectPreferences) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (s *jsiiProxy_SsmguiconnectPreferences) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

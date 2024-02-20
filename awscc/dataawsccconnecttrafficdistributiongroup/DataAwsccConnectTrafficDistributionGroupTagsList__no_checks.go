@@ -4,10 +4,6 @@ package dataawsccconnecttrafficdistributiongroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccConnectTrafficDistributionGroupTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccConnectTrafficDistributionGroupTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

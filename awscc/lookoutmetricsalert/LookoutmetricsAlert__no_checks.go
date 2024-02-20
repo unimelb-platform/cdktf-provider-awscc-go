@@ -56,15 +56,7 @@ func (l *jsiiProxy_LookoutmetricsAlert) validateInterpolationForAttributeParamet
 	return nil
 }
 
-func (l *jsiiProxy_LookoutmetricsAlert) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (l *jsiiProxy_LookoutmetricsAlert) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (l *jsiiProxy_LookoutmetricsAlert) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

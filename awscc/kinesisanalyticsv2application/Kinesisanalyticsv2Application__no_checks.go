@@ -56,15 +56,7 @@ func (k *jsiiProxy_Kinesisanalyticsv2Application) validateInterpolationForAttrib
 	return nil
 }
 
-func (k *jsiiProxy_Kinesisanalyticsv2Application) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (k *jsiiProxy_Kinesisanalyticsv2Application) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (k *jsiiProxy_Kinesisanalyticsv2Application) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

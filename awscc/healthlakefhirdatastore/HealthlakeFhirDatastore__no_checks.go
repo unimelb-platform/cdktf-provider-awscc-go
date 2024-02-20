@@ -56,15 +56,7 @@ func (h *jsiiProxy_HealthlakeFhirDatastore) validateInterpolationForAttributePar
 	return nil
 }
 
-func (h *jsiiProxy_HealthlakeFhirDatastore) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (h *jsiiProxy_HealthlakeFhirDatastore) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (h *jsiiProxy_HealthlakeFhirDatastore) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

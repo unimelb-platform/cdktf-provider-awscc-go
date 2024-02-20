@@ -4,10 +4,6 @@ package iotwirelessserviceprofile
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (i *jsiiProxy_IotwirelessServiceProfileTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IotwirelessServiceProfileTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

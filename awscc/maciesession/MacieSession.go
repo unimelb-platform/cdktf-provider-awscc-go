@@ -91,22 +91,12 @@ type MacieSession interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
-	HasResourceMove() interface{}
-	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
-	// Move the resource corresponding to "id" to this resource.
-	//
-	// Note that the resource being moved from must be marked as moved using it's instance function.
-	// Experimental.
-	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
-	// Moves this resource to the resource corresponding to "id".
-	// Experimental.
-	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -116,9 +106,6 @@ type MacieSession interface {
 	ResetOverrideLogicalId()
 	ResetStatus()
 	SynthesizeAttributes() *map[string]interface{}
-	SynthesizeHclAttributes() *map[string]interface{}
-	// Experimental.
-	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -752,19 +739,6 @@ func (m *jsiiProxy_MacieSession) GetStringMapAttribute(terraformAttribute *strin
 	return returns
 }
 
-func (m *jsiiProxy_MacieSession) HasResourceMove() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		m,
-		"hasResourceMove",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
 func (m *jsiiProxy_MacieSession) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -792,17 +766,6 @@ func (m *jsiiProxy_MacieSession) InterpolationForAttribute(terraformAttribute *s
 	return returns
 }
 
-func (m *jsiiProxy_MacieSession) MoveFromId(id *string) {
-	if err := m.validateMoveFromIdParameters(id); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		m,
-		"moveFromId",
-		[]interface{}{id},
-	)
-}
-
 func (m *jsiiProxy_MacieSession) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -811,17 +774,6 @@ func (m *jsiiProxy_MacieSession) MoveTo(moveTarget *string, index interface{}) {
 		m,
 		"moveTo",
 		[]interface{}{moveTarget, index},
-	)
-}
-
-func (m *jsiiProxy_MacieSession) MoveToId(id *string) {
-	if err := m.validateMoveToIdParameters(id); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		m,
-		"moveToId",
-		[]interface{}{id},
 	)
 }
 
@@ -866,32 +818,6 @@ func (m *jsiiProxy_MacieSession) SynthesizeAttributes() *map[string]interface{} 
 	_jsii_.Invoke(
 		m,
 		"synthesizeAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (m *jsiiProxy_MacieSession) SynthesizeHclAttributes() *map[string]interface{} {
-	var returns *map[string]interface{}
-
-	_jsii_.Invoke(
-		m,
-		"synthesizeHclAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (m *jsiiProxy_MacieSession) ToHclTerraform() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		m,
-		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

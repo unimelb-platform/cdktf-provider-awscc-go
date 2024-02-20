@@ -56,15 +56,7 @@ func (i *jsiiProxy_IotfleetwiseCampaign) validateInterpolationForAttributeParame
 	return nil
 }
 
-func (i *jsiiProxy_IotfleetwiseCampaign) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IotfleetwiseCampaign) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (i *jsiiProxy_IotfleetwiseCampaign) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -56,15 +56,7 @@ func (c *jsiiProxy_CleanroomsAnalysisTemplate) validateInterpolationForAttribute
 	return nil
 }
 
-func (c *jsiiProxy_CleanroomsAnalysisTemplate) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_CleanroomsAnalysisTemplate) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (c *jsiiProxy_CleanroomsAnalysisTemplate) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

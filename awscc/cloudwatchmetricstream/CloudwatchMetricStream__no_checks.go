@@ -56,15 +56,7 @@ func (c *jsiiProxy_CloudwatchMetricStream) validateInterpolationForAttributePara
 	return nil
 }
 
-func (c *jsiiProxy_CloudwatchMetricStream) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_CloudwatchMetricStream) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (c *jsiiProxy_CloudwatchMetricStream) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

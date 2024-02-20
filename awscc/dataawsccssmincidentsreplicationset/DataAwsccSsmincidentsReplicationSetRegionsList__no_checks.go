@@ -4,10 +4,6 @@ package dataawsccssmincidentsreplicationset
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccSsmincidentsReplicationSetRegionsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccSsmincidentsReplicationSetRegionsList) validateGetParameters(index *float64) error {
 	return nil
 }

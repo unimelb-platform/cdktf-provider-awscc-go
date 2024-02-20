@@ -4,10 +4,6 @@ package appstreamappblockbuilder
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (a *jsiiProxy_AppstreamAppBlockBuilderTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (a *jsiiProxy_AppstreamAppBlockBuilderTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

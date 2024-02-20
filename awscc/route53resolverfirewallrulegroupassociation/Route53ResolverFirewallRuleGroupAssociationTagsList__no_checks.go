@@ -4,10 +4,6 @@ package route53resolverfirewallrulegroupassociation
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (r *jsiiProxy_Route53ResolverFirewallRuleGroupAssociationTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (r *jsiiProxy_Route53ResolverFirewallRuleGroupAssociationTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

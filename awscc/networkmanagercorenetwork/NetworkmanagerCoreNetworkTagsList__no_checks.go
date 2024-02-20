@@ -4,10 +4,6 @@ package networkmanagercorenetwork
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (n *jsiiProxy_NetworkmanagerCoreNetworkTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (n *jsiiProxy_NetworkmanagerCoreNetworkTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

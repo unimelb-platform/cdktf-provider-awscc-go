@@ -56,15 +56,7 @@ func (x *jsiiProxy_XrayResourcePolicy) validateInterpolationForAttributeParamete
 	return nil
 }
 
-func (x *jsiiProxy_XrayResourcePolicy) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (x *jsiiProxy_XrayResourcePolicy) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (x *jsiiProxy_XrayResourcePolicy) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

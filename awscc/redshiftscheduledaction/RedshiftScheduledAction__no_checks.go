@@ -56,15 +56,7 @@ func (r *jsiiProxy_RedshiftScheduledAction) validateInterpolationForAttributePar
 	return nil
 }
 
-func (r *jsiiProxy_RedshiftScheduledAction) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (r *jsiiProxy_RedshiftScheduledAction) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (r *jsiiProxy_RedshiftScheduledAction) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

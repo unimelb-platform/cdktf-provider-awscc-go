@@ -4,10 +4,6 @@ package dataawscciotcustommetric
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccIotCustomMetricTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccIotCustomMetricTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

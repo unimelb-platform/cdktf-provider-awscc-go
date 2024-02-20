@@ -56,15 +56,7 @@ func (e *jsiiProxy_Ec2Route) validateInterpolationForAttributeParameters(terrafo
 	return nil
 }
 
-func (e *jsiiProxy_Ec2Route) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2Route) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_Ec2Route) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

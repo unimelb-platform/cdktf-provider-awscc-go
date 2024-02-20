@@ -4,10 +4,6 @@ package ssmpatchbaseline
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (s *jsiiProxy_SsmPatchBaselineApprovalRulesPatchRulesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_SsmPatchBaselineApprovalRulesPatchRulesList) validateGetParameters(index *float64) error {
 	return nil
 }

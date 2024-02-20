@@ -4,10 +4,6 @@ package dataawsccssmdocument
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccSsmDocumentAttachmentsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccSsmDocumentAttachmentsList) validateGetParameters(index *float64) error {
 	return nil
 }

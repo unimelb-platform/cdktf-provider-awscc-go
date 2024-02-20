@@ -4,10 +4,6 @@ package neptunedbcluster
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (n *jsiiProxy_NeptuneDbClusterAssociatedRolesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (n *jsiiProxy_NeptuneDbClusterAssociatedRolesList) validateGetParameters(index *float64) error {
 	return nil
 }

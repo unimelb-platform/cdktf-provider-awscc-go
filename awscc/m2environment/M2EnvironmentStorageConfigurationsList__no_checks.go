@@ -4,10 +4,6 @@ package m2environment
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (m *jsiiProxy_M2EnvironmentStorageConfigurationsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (m *jsiiProxy_M2EnvironmentStorageConfigurationsList) validateGetParameters(index *float64) error {
 	return nil
 }

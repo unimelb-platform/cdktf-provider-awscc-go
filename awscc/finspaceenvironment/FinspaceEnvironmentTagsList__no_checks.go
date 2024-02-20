@@ -4,10 +4,6 @@ package finspaceenvironment
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (f *jsiiProxy_FinspaceEnvironmentTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (f *jsiiProxy_FinspaceEnvironmentTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

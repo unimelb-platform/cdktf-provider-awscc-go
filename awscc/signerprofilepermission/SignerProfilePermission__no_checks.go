@@ -56,15 +56,7 @@ func (s *jsiiProxy_SignerProfilePermission) validateInterpolationForAttributePar
 	return nil
 }
 
-func (s *jsiiProxy_SignerProfilePermission) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_SignerProfilePermission) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (s *jsiiProxy_SignerProfilePermission) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

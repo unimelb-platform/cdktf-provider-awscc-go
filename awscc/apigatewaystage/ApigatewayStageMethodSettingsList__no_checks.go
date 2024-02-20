@@ -4,10 +4,6 @@ package apigatewaystage
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (a *jsiiProxy_ApigatewayStageMethodSettingsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (a *jsiiProxy_ApigatewayStageMethodSettingsList) validateGetParameters(index *float64) error {
 	return nil
 }

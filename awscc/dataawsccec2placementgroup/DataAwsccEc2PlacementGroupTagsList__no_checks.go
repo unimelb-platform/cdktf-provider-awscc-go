@@ -4,10 +4,6 @@ package dataawsccec2placementgroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccEc2PlacementGroupTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccEc2PlacementGroupTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

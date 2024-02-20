@@ -4,10 +4,6 @@ package billingconductorcustomlineitem
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (b *jsiiProxy_BillingconductorCustomLineItemTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (b *jsiiProxy_BillingconductorCustomLineItemTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

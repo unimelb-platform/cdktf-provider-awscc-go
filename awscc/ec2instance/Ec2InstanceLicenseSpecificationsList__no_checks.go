@@ -4,10 +4,6 @@ package ec2instance
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (e *jsiiProxy_Ec2InstanceLicenseSpecificationsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2InstanceLicenseSpecificationsList) validateGetParameters(index *float64) error {
 	return nil
 }

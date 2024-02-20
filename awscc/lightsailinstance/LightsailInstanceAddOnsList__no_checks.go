@@ -4,10 +4,6 @@ package lightsailinstance
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (l *jsiiProxy_LightsailInstanceAddOnsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (l *jsiiProxy_LightsailInstanceAddOnsList) validateGetParameters(index *float64) error {
 	return nil
 }

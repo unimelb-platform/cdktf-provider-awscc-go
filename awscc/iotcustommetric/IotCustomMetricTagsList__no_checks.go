@@ -4,10 +4,6 @@ package iotcustommetric
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (i *jsiiProxy_IotCustomMetricTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IotCustomMetricTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

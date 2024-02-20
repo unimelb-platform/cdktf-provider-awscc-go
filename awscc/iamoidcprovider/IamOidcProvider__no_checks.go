@@ -56,15 +56,7 @@ func (i *jsiiProxy_IamOidcProvider) validateInterpolationForAttributeParameters(
 	return nil
 }
 
-func (i *jsiiProxy_IamOidcProvider) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IamOidcProvider) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (i *jsiiProxy_IamOidcProvider) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

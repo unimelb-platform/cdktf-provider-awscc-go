@@ -56,15 +56,7 @@ func (e *jsiiProxy_Ec2RouteTable) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
-func (e *jsiiProxy_Ec2RouteTable) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2RouteTable) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_Ec2RouteTable) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

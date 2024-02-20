@@ -4,10 +4,6 @@ package dataawsccinspectorv2filter
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaEc2InstanceImageIdList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaEc2InstanceImageIdList) validateGetParameters(index *float64) error {
 	return nil
 }

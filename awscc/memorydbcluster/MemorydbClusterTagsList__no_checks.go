@@ -4,10 +4,6 @@ package memorydbcluster
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (m *jsiiProxy_MemorydbClusterTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (m *jsiiProxy_MemorydbClusterTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

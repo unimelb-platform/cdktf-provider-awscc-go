@@ -4,10 +4,6 @@ package sagemakerdomain
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsList) validateGetParameters(index *float64) error {
 	return nil
 }

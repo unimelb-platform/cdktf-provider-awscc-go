@@ -4,10 +4,6 @@ package b2biprofile
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (b *jsiiProxy_B2BiProfileTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (b *jsiiProxy_B2BiProfileTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

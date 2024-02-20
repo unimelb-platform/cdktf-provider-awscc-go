@@ -4,10 +4,6 @@ package ecrpublicrepository
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (e *jsiiProxy_EcrPublicRepositoryTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_EcrPublicRepositoryTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

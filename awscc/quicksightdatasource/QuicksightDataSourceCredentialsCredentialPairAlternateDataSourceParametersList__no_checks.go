@@ -4,10 +4,6 @@ package quicksightdatasource
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersList) validateGetParameters(index *float64) error {
 	return nil
 }

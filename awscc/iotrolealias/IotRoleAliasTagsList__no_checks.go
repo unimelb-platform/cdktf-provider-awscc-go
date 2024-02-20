@@ -4,10 +4,6 @@ package iotrolealias
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (i *jsiiProxy_IotRoleAliasTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IotRoleAliasTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

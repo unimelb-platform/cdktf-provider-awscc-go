@@ -56,15 +56,7 @@ func (i *jsiiProxy_IotJobTemplate) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
-func (i *jsiiProxy_IotJobTemplate) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IotJobTemplate) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (i *jsiiProxy_IotJobTemplate) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

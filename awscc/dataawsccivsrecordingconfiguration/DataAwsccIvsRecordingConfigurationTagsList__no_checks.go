@@ -4,10 +4,6 @@ package dataawsccivsrecordingconfiguration
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccIvsRecordingConfigurationTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccIvsRecordingConfigurationTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

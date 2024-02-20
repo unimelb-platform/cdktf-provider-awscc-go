@@ -4,10 +4,6 @@ package dataawsccbatchjobqueue
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccBatchJobQueueComputeEnvironmentOrderList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccBatchJobQueueComputeEnvironmentOrderList) validateGetParameters(index *float64) error {
 	return nil
 }

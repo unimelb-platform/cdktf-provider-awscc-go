@@ -4,10 +4,6 @@ package dataawscciotfleetwisevehicle
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccIotfleetwiseVehicleTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccIotfleetwiseVehicleTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

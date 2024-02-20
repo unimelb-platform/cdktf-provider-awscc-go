@@ -56,15 +56,7 @@ func (e *jsiiProxy_Ec2TransitGatewayRouteTable) validateInterpolationForAttribut
 	return nil
 }
 
-func (e *jsiiProxy_Ec2TransitGatewayRouteTable) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2TransitGatewayRouteTable) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_Ec2TransitGatewayRouteTable) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

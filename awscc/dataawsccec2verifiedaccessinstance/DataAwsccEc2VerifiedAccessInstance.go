@@ -91,10 +91,6 @@ type DataAwsccEc2VerifiedAccessInstance interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
-	SynthesizeHclAttributes() *map[string]interface{}
-	// Adds this resource to the terraform JSON output.
-	// Experimental.
-	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -745,32 +741,6 @@ func (d *jsiiProxy_DataAwsccEc2VerifiedAccessInstance) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (d *jsiiProxy_DataAwsccEc2VerifiedAccessInstance) SynthesizeHclAttributes() *map[string]interface{} {
-	var returns *map[string]interface{}
-
-	_jsii_.Invoke(
-		d,
-		"synthesizeHclAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (d *jsiiProxy_DataAwsccEc2VerifiedAccessInstance) ToHclTerraform() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		d,
-		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

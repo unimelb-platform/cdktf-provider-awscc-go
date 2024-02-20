@@ -4,10 +4,6 @@ package sagemakeruserprofile
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (s *jsiiProxy_SagemakerUserProfileUserSettingsJupyterLabAppSettingsCodeRepositoriesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_SagemakerUserProfileUserSettingsJupyterLabAppSettingsCodeRepositoriesList) validateGetParameters(index *float64) error {
 	return nil
 }

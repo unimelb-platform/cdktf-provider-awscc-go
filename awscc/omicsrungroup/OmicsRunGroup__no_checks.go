@@ -56,15 +56,7 @@ func (o *jsiiProxy_OmicsRunGroup) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
-func (o *jsiiProxy_OmicsRunGroup) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (o *jsiiProxy_OmicsRunGroup) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (o *jsiiProxy_OmicsRunGroup) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

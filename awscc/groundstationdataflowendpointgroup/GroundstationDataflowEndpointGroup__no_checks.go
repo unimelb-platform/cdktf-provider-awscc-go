@@ -56,15 +56,7 @@ func (g *jsiiProxy_GroundstationDataflowEndpointGroup) validateInterpolationForA
 	return nil
 }
 
-func (g *jsiiProxy_GroundstationDataflowEndpointGroup) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (g *jsiiProxy_GroundstationDataflowEndpointGroup) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (g *jsiiProxy_GroundstationDataflowEndpointGroup) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

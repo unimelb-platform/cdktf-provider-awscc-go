@@ -4,10 +4,6 @@ package dataawsccfinspaceenvironment
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccFinspaceEnvironmentFederationParametersAttributeMapList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccFinspaceEnvironmentFederationParametersAttributeMapList) validateGetParameters(index *float64) error {
 	return nil
 }

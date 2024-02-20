@@ -56,15 +56,7 @@ func (b *jsiiProxy_BatchComputeEnvironment) validateInterpolationForAttributePar
 	return nil
 }
 
-func (b *jsiiProxy_BatchComputeEnvironment) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (b *jsiiProxy_BatchComputeEnvironment) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (b *jsiiProxy_BatchComputeEnvironment) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -4,10 +4,6 @@ package guarddutyipset
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (g *jsiiProxy_GuarddutyIpSetTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (g *jsiiProxy_GuarddutyIpSetTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

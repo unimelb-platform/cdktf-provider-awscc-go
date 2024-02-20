@@ -56,15 +56,7 @@ func (l *jsiiProxy_LambdaEventInvokeConfig) validateInterpolationForAttributePar
 	return nil
 }
 
-func (l *jsiiProxy_LambdaEventInvokeConfig) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (l *jsiiProxy_LambdaEventInvokeConfig) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (l *jsiiProxy_LambdaEventInvokeConfig) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

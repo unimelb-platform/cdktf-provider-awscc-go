@@ -4,10 +4,6 @@ package dataawsccmskserverlesscluster
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccMskServerlessClusterVpcConfigsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccMskServerlessClusterVpcConfigsList) validateGetParameters(index *float64) error {
 	return nil
 }

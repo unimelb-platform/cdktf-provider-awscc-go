@@ -4,10 +4,6 @@ package dataawscckmsreplicakey
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccKmsReplicaKeyTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccKmsReplicaKeyTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

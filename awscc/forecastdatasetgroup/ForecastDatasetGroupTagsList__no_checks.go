@@ -4,10 +4,6 @@ package forecastdatasetgroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (f *jsiiProxy_ForecastDatasetGroupTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (f *jsiiProxy_ForecastDatasetGroupTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

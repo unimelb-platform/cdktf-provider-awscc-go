@@ -56,15 +56,7 @@ func (r *jsiiProxy_RamPermission) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
-func (r *jsiiProxy_RamPermission) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (r *jsiiProxy_RamPermission) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (r *jsiiProxy_RamPermission) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

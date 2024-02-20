@@ -56,15 +56,7 @@ func (e *jsiiProxy_Ec2IpamPool) validateInterpolationForAttributeParameters(terr
 	return nil
 }
 
-func (e *jsiiProxy_Ec2IpamPool) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2IpamPool) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_Ec2IpamPool) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

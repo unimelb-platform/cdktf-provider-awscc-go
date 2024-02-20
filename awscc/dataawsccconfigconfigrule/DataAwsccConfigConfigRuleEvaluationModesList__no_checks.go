@@ -4,10 +4,6 @@ package dataawsccconfigconfigrule
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccConfigConfigRuleEvaluationModesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccConfigConfigRuleEvaluationModesList) validateGetParameters(index *float64) error {
 	return nil
 }

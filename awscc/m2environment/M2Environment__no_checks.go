@@ -56,15 +56,7 @@ func (m *jsiiProxy_M2Environment) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
-func (m *jsiiProxy_M2Environment) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (m *jsiiProxy_M2Environment) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (m *jsiiProxy_M2Environment) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -4,10 +4,6 @@ package iotsitewisegateway
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (i *jsiiProxy_IotsitewiseGatewayTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IotsitewiseGatewayTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

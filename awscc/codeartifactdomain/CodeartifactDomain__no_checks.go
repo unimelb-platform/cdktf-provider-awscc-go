@@ -56,15 +56,7 @@ func (c *jsiiProxy_CodeartifactDomain) validateInterpolationForAttributeParamete
 	return nil
 }
 
-func (c *jsiiProxy_CodeartifactDomain) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_CodeartifactDomain) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (c *jsiiProxy_CodeartifactDomain) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -4,10 +4,6 @@ package ec2networkacl
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (e *jsiiProxy_Ec2NetworkAclTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2NetworkAclTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

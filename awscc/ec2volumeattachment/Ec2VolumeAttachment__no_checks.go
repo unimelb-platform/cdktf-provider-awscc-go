@@ -56,15 +56,7 @@ func (e *jsiiProxy_Ec2VolumeAttachment) validateInterpolationForAttributeParamet
 	return nil
 }
 
-func (e *jsiiProxy_Ec2VolumeAttachment) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2VolumeAttachment) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_Ec2VolumeAttachment) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

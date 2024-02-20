@@ -56,15 +56,7 @@ func (e *jsiiProxy_EventsEndpoint) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
-func (e *jsiiProxy_EventsEndpoint) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_EventsEndpoint) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_EventsEndpoint) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

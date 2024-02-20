@@ -56,15 +56,7 @@ func (c *jsiiProxy_CloudwatchAlarm) validateInterpolationForAttributeParameters(
 	return nil
 }
 
-func (c *jsiiProxy_CloudwatchAlarm) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_CloudwatchAlarm) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (c *jsiiProxy_CloudwatchAlarm) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

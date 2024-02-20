@@ -4,10 +4,6 @@ package dataawsccec2networkinterface
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccEc2NetworkInterfaceTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccEc2NetworkInterfaceTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

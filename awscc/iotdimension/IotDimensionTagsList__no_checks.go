@@ -4,10 +4,6 @@ package iotdimension
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (i *jsiiProxy_IotDimensionTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IotDimensionTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

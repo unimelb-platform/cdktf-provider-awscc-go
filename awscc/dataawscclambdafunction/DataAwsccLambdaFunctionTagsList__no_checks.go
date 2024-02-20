@@ -4,10 +4,6 @@ package dataawscclambdafunction
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccLambdaFunctionTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccLambdaFunctionTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

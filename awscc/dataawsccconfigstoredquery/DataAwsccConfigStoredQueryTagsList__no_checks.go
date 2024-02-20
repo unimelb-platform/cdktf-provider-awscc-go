@@ -4,10 +4,6 @@ package dataawsccconfigstoredquery
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccConfigStoredQueryTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccConfigStoredQueryTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

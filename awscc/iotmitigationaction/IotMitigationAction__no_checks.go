@@ -56,15 +56,7 @@ func (i *jsiiProxy_IotMitigationAction) validateInterpolationForAttributeParamet
 	return nil
 }
 
-func (i *jsiiProxy_IotMitigationAction) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IotMitigationAction) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (i *jsiiProxy_IotMitigationAction) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -56,15 +56,7 @@ func (c *jsiiProxy_CertificatemanagerAccount) validateInterpolationForAttributeP
 	return nil
 }
 
-func (c *jsiiProxy_CertificatemanagerAccount) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_CertificatemanagerAccount) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (c *jsiiProxy_CertificatemanagerAccount) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

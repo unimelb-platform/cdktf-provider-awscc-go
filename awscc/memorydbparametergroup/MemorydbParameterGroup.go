@@ -98,22 +98,12 @@ type MemorydbParameterGroup interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
-	HasResourceMove() interface{}
-	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
-	// Move the resource corresponding to "id" to this resource.
-	//
-	// Note that the resource being moved from must be marked as moved using it's instance function.
-	// Experimental.
-	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
-	// Moves this resource to the resource corresponding to "id".
-	// Experimental.
-	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -125,9 +115,6 @@ type MemorydbParameterGroup interface {
 	ResetParameters()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
-	SynthesizeHclAttributes() *map[string]interface{}
-	// Experimental.
-	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -833,19 +820,6 @@ func (m *jsiiProxy_MemorydbParameterGroup) GetStringMapAttribute(terraformAttrib
 	return returns
 }
 
-func (m *jsiiProxy_MemorydbParameterGroup) HasResourceMove() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		m,
-		"hasResourceMove",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
 func (m *jsiiProxy_MemorydbParameterGroup) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -873,17 +847,6 @@ func (m *jsiiProxy_MemorydbParameterGroup) InterpolationForAttribute(terraformAt
 	return returns
 }
 
-func (m *jsiiProxy_MemorydbParameterGroup) MoveFromId(id *string) {
-	if err := m.validateMoveFromIdParameters(id); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		m,
-		"moveFromId",
-		[]interface{}{id},
-	)
-}
-
 func (m *jsiiProxy_MemorydbParameterGroup) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -892,17 +855,6 @@ func (m *jsiiProxy_MemorydbParameterGroup) MoveTo(moveTarget *string, index inte
 		m,
 		"moveTo",
 		[]interface{}{moveTarget, index},
-	)
-}
-
-func (m *jsiiProxy_MemorydbParameterGroup) MoveToId(id *string) {
-	if err := m.validateMoveToIdParameters(id); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		m,
-		"moveToId",
-		[]interface{}{id},
 	)
 }
 
@@ -966,32 +918,6 @@ func (m *jsiiProxy_MemorydbParameterGroup) SynthesizeAttributes() *map[string]in
 	_jsii_.Invoke(
 		m,
 		"synthesizeAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (m *jsiiProxy_MemorydbParameterGroup) SynthesizeHclAttributes() *map[string]interface{} {
-	var returns *map[string]interface{}
-
-	_jsii_.Invoke(
-		m,
-		"synthesizeHclAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (m *jsiiProxy_MemorydbParameterGroup) ToHclTerraform() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		m,
-		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

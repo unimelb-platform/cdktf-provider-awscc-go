@@ -4,10 +4,6 @@ package lightsaildistribution
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (l *jsiiProxy_LightsailDistributionCacheBehaviorsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (l *jsiiProxy_LightsailDistributionCacheBehaviorsList) validateGetParameters(index *float64) error {
 	return nil
 }

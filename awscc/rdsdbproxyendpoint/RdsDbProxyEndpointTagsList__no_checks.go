@@ -4,10 +4,6 @@ package rdsdbproxyendpoint
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (r *jsiiProxy_RdsDbProxyEndpointTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (r *jsiiProxy_RdsDbProxyEndpointTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -4,10 +4,6 @@ package redshifteventsubscription
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (r *jsiiProxy_RedshiftEventSubscriptionTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (r *jsiiProxy_RedshiftEventSubscriptionTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

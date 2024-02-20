@@ -4,10 +4,6 @@ package dataawsccgameliftlocation
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccGameliftLocationTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccGameliftLocationTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

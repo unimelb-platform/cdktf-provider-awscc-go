@@ -4,10 +4,6 @@ package codeartifactdomain
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (c *jsiiProxy_CodeartifactDomainTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_CodeartifactDomainTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -4,10 +4,6 @@ package iottopicrule
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionIotSiteWisePutAssetPropertyValueEntriesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionIotSiteWisePutAssetPropertyValueEntriesList) validateGetParameters(index *float64) error {
 	return nil
 }

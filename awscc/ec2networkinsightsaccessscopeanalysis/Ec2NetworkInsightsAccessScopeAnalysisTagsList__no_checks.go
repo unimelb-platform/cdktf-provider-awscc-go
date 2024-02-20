@@ -4,10 +4,6 @@ package ec2networkinsightsaccessscopeanalysis
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (e *jsiiProxy_Ec2NetworkInsightsAccessScopeAnalysisTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2NetworkInsightsAccessScopeAnalysisTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

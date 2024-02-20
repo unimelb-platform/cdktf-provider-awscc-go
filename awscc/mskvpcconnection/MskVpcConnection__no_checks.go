@@ -56,15 +56,7 @@ func (m *jsiiProxy_MskVpcConnection) validateInterpolationForAttributeParameters
 	return nil
 }
 
-func (m *jsiiProxy_MskVpcConnection) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (m *jsiiProxy_MskVpcConnection) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (m *jsiiProxy_MskVpcConnection) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

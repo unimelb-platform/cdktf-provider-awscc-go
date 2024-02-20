@@ -56,15 +56,7 @@ func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) validateInterpolationFo
 	return nil
 }
 
-func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

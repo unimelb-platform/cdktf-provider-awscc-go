@@ -4,10 +4,6 @@ package refactorspacesenvironment
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (r *jsiiProxy_RefactorspacesEnvironmentTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (r *jsiiProxy_RefactorspacesEnvironmentTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

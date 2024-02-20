@@ -4,10 +4,6 @@ package dataawsccimagebuilderimagerecipe
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccImagebuilderImageRecipeBlockDeviceMappingsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccImagebuilderImageRecipeBlockDeviceMappingsList) validateGetParameters(index *float64) error {
 	return nil
 }

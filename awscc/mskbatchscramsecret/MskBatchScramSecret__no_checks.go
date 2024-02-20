@@ -56,15 +56,7 @@ func (m *jsiiProxy_MskBatchScramSecret) validateInterpolationForAttributeParamet
 	return nil
 }
 
-func (m *jsiiProxy_MskBatchScramSecret) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (m *jsiiProxy_MskBatchScramSecret) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (m *jsiiProxy_MskBatchScramSecret) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

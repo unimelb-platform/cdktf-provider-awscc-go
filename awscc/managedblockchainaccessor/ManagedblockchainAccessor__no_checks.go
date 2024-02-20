@@ -56,15 +56,7 @@ func (m *jsiiProxy_ManagedblockchainAccessor) validateInterpolationForAttributeP
 	return nil
 }
 
-func (m *jsiiProxy_ManagedblockchainAccessor) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (m *jsiiProxy_ManagedblockchainAccessor) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (m *jsiiProxy_ManagedblockchainAccessor) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

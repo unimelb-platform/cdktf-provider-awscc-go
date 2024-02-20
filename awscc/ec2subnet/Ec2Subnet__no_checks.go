@@ -56,15 +56,7 @@ func (e *jsiiProxy_Ec2Subnet) validateInterpolationForAttributeParameters(terraf
 	return nil
 }
 
-func (e *jsiiProxy_Ec2Subnet) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2Subnet) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_Ec2Subnet) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

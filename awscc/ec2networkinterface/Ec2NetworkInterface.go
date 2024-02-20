@@ -131,22 +131,12 @@ type Ec2NetworkInterface interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
-	HasResourceMove() interface{}
-	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
-	// Move the resource corresponding to "id" to this resource.
-	//
-	// Note that the resource being moved from must be marked as moved using it's instance function.
-	// Experimental.
-	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
-	// Moves this resource to the resource corresponding to "id".
-	// Experimental.
-	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -176,9 +166,6 @@ type Ec2NetworkInterface interface {
 	ResetSourceDestCheck()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
-	SynthesizeHclAttributes() *map[string]interface{}
-	// Experimental.
-	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -1221,19 +1208,6 @@ func (e *jsiiProxy_Ec2NetworkInterface) GetStringMapAttribute(terraformAttribute
 	return returns
 }
 
-func (e *jsiiProxy_Ec2NetworkInterface) HasResourceMove() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		e,
-		"hasResourceMove",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
 func (e *jsiiProxy_Ec2NetworkInterface) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1261,17 +1235,6 @@ func (e *jsiiProxy_Ec2NetworkInterface) InterpolationForAttribute(terraformAttri
 	return returns
 }
 
-func (e *jsiiProxy_Ec2NetworkInterface) MoveFromId(id *string) {
-	if err := e.validateMoveFromIdParameters(id); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		e,
-		"moveFromId",
-		[]interface{}{id},
-	)
-}
-
 func (e *jsiiProxy_Ec2NetworkInterface) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1280,17 +1243,6 @@ func (e *jsiiProxy_Ec2NetworkInterface) MoveTo(moveTarget *string, index interfa
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
-	)
-}
-
-func (e *jsiiProxy_Ec2NetworkInterface) MoveToId(id *string) {
-	if err := e.validateMoveToIdParameters(id); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		e,
-		"moveToId",
-		[]interface{}{id},
 	)
 }
 
@@ -1513,32 +1465,6 @@ func (e *jsiiProxy_Ec2NetworkInterface) SynthesizeAttributes() *map[string]inter
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (e *jsiiProxy_Ec2NetworkInterface) SynthesizeHclAttributes() *map[string]interface{} {
-	var returns *map[string]interface{}
-
-	_jsii_.Invoke(
-		e,
-		"synthesizeHclAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (e *jsiiProxy_Ec2NetworkInterface) ToHclTerraform() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		e,
-		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

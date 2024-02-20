@@ -8,14 +8,6 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-func (d *jsiiProxy_DataAwsccKendraDataSourceDataSourceConfigurationSalesforceConfigurationChatterFeedConfigurationFieldMappingsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	if mapKeyAttributeName == nil {
-		return fmt.Errorf("parameter mapKeyAttributeName is required, but nil was provided")
-	}
-
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccKendraDataSourceDataSourceConfigurationSalesforceConfigurationChatterFeedConfigurationFieldMappingsList) validateGetParameters(index *float64) error {
 	if index == nil {
 		return fmt.Errorf("parameter index is required, but nil was provided")

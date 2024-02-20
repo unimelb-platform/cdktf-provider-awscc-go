@@ -56,15 +56,7 @@ func (e *jsiiProxy_Ec2SecurityGroupEgress) validateInterpolationForAttributePara
 	return nil
 }
 
-func (e *jsiiProxy_Ec2SecurityGroupEgress) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2SecurityGroupEgress) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_Ec2SecurityGroupEgress) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

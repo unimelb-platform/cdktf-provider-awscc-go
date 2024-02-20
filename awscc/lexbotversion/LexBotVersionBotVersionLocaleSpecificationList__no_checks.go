@@ -4,10 +4,6 @@ package lexbotversion
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (l *jsiiProxy_LexBotVersionBotVersionLocaleSpecificationList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (l *jsiiProxy_LexBotVersionBotVersionLocaleSpecificationList) validateGetParameters(index *float64) error {
 	return nil
 }

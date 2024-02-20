@@ -4,10 +4,6 @@ package dataawsccorganizationspolicy
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccOrganizationsPolicyTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccOrganizationsPolicyTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

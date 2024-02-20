@@ -4,10 +4,6 @@ package datasynclocationsmb
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DatasyncLocationSmbTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DatasyncLocationSmbTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -56,15 +56,7 @@ func (p *jsiiProxy_PcaconnectoradTemplate) validateInterpolationForAttributePara
 	return nil
 }
 
-func (p *jsiiProxy_PcaconnectoradTemplate) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (p *jsiiProxy_PcaconnectoradTemplate) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (p *jsiiProxy_PcaconnectoradTemplate) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

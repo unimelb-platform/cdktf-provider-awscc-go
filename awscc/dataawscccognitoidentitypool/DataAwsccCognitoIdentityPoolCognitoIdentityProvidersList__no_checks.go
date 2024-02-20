@@ -4,10 +4,6 @@ package dataawscccognitoidentitypool
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccCognitoIdentityPoolCognitoIdentityProvidersList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccCognitoIdentityPoolCognitoIdentityProvidersList) validateGetParameters(index *float64) error {
 	return nil
 }

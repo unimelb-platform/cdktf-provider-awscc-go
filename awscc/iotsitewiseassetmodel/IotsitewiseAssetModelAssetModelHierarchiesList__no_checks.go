@@ -4,10 +4,6 @@ package iotsitewiseassetmodel
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (i *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesList) validateGetParameters(index *float64) error {
 	return nil
 }

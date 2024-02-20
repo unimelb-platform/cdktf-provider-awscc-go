@@ -56,15 +56,7 @@ func (r *jsiiProxy_RobomakerRobotApplicationVersion) validateInterpolationForAtt
 	return nil
 }
 
-func (r *jsiiProxy_RobomakerRobotApplicationVersion) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (r *jsiiProxy_RobomakerRobotApplicationVersion) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (r *jsiiProxy_RobomakerRobotApplicationVersion) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

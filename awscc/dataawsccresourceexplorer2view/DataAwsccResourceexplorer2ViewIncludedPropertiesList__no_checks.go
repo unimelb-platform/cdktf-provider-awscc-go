@@ -4,10 +4,6 @@ package dataawsccresourceexplorer2view
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccResourceexplorer2ViewIncludedPropertiesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccResourceexplorer2ViewIncludedPropertiesList) validateGetParameters(index *float64) error {
 	return nil
 }

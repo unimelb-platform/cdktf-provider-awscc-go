@@ -4,10 +4,6 @@ package dataawscccodeguruprofilerprofilinggroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccCodeguruprofilerProfilingGroupTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccCodeguruprofilerProfilingGroupTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

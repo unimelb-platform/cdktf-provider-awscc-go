@@ -4,10 +4,6 @@ package dataawsccquicksighttopic
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccQuicksightTopicDataSetsColumnsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccQuicksightTopicDataSetsColumnsList) validateGetParameters(index *float64) error {
 	return nil
 }

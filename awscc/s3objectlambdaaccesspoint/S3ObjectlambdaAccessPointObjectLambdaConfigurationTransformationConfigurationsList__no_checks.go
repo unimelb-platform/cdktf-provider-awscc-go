@@ -4,10 +4,6 @@ package s3objectlambdaaccesspoint
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (s *jsiiProxy_S3ObjectlambdaAccessPointObjectLambdaConfigurationTransformationConfigurationsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_S3ObjectlambdaAccessPointObjectLambdaConfigurationTransformationConfigurationsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -4,10 +4,6 @@ package dataawsccbackupgatewayhypervisor
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccBackupgatewayHypervisorTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccBackupgatewayHypervisorTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

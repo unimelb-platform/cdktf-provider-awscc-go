@@ -56,15 +56,7 @@ func (n *jsiiProxy_NetworkmanagerTransitGatewayRouteTableAttachment) validateInt
 	return nil
 }
 
-func (n *jsiiProxy_NetworkmanagerTransitGatewayRouteTableAttachment) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (n *jsiiProxy_NetworkmanagerTransitGatewayRouteTableAttachment) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (n *jsiiProxy_NetworkmanagerTransitGatewayRouteTableAttachment) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -4,10 +4,6 @@ package dataawsccglueschema
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccGlueSchemaTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccGlueSchemaTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

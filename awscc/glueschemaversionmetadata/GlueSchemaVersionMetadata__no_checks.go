@@ -56,15 +56,7 @@ func (g *jsiiProxy_GlueSchemaVersionMetadata) validateInterpolationForAttributeP
 	return nil
 }
 
-func (g *jsiiProxy_GlueSchemaVersionMetadata) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (g *jsiiProxy_GlueSchemaVersionMetadata) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (g *jsiiProxy_GlueSchemaVersionMetadata) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

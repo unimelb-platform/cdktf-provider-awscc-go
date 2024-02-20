@@ -4,10 +4,6 @@ package dataawsccrumappmonitor
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccRumAppMonitorAppMonitorConfigurationMetricDestinationsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccRumAppMonitorAppMonitorConfigurationMetricDestinationsList) validateGetParameters(index *float64) error {
 	return nil
 }

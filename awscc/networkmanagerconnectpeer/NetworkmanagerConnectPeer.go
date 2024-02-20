@@ -108,22 +108,12 @@ type NetworkmanagerConnectPeer interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
-	HasResourceMove() interface{}
-	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
-	// Move the resource corresponding to "id" to this resource.
-	//
-	// Note that the resource being moved from must be marked as moved using it's instance function.
-	// Experimental.
-	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
-	// Moves this resource to the resource corresponding to "id".
-	// Experimental.
-	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -138,9 +128,6 @@ type NetworkmanagerConnectPeer interface {
 	ResetSubnetArn()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
-	SynthesizeHclAttributes() *map[string]interface{}
-	// Experimental.
-	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -947,19 +934,6 @@ func (n *jsiiProxy_NetworkmanagerConnectPeer) GetStringMapAttribute(terraformAtt
 	return returns
 }
 
-func (n *jsiiProxy_NetworkmanagerConnectPeer) HasResourceMove() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		n,
-		"hasResourceMove",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
 func (n *jsiiProxy_NetworkmanagerConnectPeer) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := n.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -987,17 +961,6 @@ func (n *jsiiProxy_NetworkmanagerConnectPeer) InterpolationForAttribute(terrafor
 	return returns
 }
 
-func (n *jsiiProxy_NetworkmanagerConnectPeer) MoveFromId(id *string) {
-	if err := n.validateMoveFromIdParameters(id); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		n,
-		"moveFromId",
-		[]interface{}{id},
-	)
-}
-
 func (n *jsiiProxy_NetworkmanagerConnectPeer) MoveTo(moveTarget *string, index interface{}) {
 	if err := n.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1006,17 +969,6 @@ func (n *jsiiProxy_NetworkmanagerConnectPeer) MoveTo(moveTarget *string, index i
 		n,
 		"moveTo",
 		[]interface{}{moveTarget, index},
-	)
-}
-
-func (n *jsiiProxy_NetworkmanagerConnectPeer) MoveToId(id *string) {
-	if err := n.validateMoveToIdParameters(id); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		n,
-		"moveToId",
-		[]interface{}{id},
 	)
 }
 
@@ -1107,32 +1059,6 @@ func (n *jsiiProxy_NetworkmanagerConnectPeer) SynthesizeAttributes() *map[string
 	_jsii_.Invoke(
 		n,
 		"synthesizeAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (n *jsiiProxy_NetworkmanagerConnectPeer) SynthesizeHclAttributes() *map[string]interface{} {
-	var returns *map[string]interface{}
-
-	_jsii_.Invoke(
-		n,
-		"synthesizeHclAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (n *jsiiProxy_NetworkmanagerConnectPeer) ToHclTerraform() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		n,
-		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -56,15 +56,7 @@ func (e *jsiiProxy_Ec2SubnetNetworkAclAssociation) validateInterpolationForAttri
 	return nil
 }
 
-func (e *jsiiProxy_Ec2SubnetNetworkAclAssociation) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2SubnetNetworkAclAssociation) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_Ec2SubnetNetworkAclAssociation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

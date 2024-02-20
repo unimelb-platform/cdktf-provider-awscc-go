@@ -4,10 +4,6 @@ package dataawsccrolesanywheretrustanchor
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccRolesanywhereTrustAnchorNotificationSettingsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccRolesanywhereTrustAnchorNotificationSettingsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -4,10 +4,6 @@ package batchschedulingpolicy
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (b *jsiiProxy_BatchSchedulingPolicyFairsharePolicyShareDistributionList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (b *jsiiProxy_BatchSchedulingPolicyFairsharePolicyShareDistributionList) validateGetParameters(index *float64) error {
 	return nil
 }

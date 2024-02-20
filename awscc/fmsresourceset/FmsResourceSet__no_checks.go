@@ -56,15 +56,7 @@ func (f *jsiiProxy_FmsResourceSet) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
-func (f *jsiiProxy_FmsResourceSet) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (f *jsiiProxy_FmsResourceSet) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (f *jsiiProxy_FmsResourceSet) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

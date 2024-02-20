@@ -56,15 +56,7 @@ func (l *jsiiProxy_LocationGeofenceCollection) validateInterpolationForAttribute
 	return nil
 }
 
-func (l *jsiiProxy_LocationGeofenceCollection) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (l *jsiiProxy_LocationGeofenceCollection) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (l *jsiiProxy_LocationGeofenceCollection) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

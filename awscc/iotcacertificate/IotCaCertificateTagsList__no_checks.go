@@ -4,10 +4,6 @@ package iotcacertificate
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (i *jsiiProxy_IotCaCertificateTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IotCaCertificateTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

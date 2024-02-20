@@ -4,10 +4,6 @@ package dataawscchealthlakefhirdatastore
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccHealthlakeFhirDatastoreTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccHealthlakeFhirDatastoreTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

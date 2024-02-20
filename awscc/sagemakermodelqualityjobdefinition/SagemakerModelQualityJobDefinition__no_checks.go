@@ -56,15 +56,7 @@ func (s *jsiiProxy_SagemakerModelQualityJobDefinition) validateInterpolationForA
 	return nil
 }
 
-func (s *jsiiProxy_SagemakerModelQualityJobDefinition) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_SagemakerModelQualityJobDefinition) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (s *jsiiProxy_SagemakerModelQualityJobDefinition) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

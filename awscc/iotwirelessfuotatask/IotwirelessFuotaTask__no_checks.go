@@ -56,15 +56,7 @@ func (i *jsiiProxy_IotwirelessFuotaTask) validateInterpolationForAttributeParame
 	return nil
 }
 
-func (i *jsiiProxy_IotwirelessFuotaTask) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IotwirelessFuotaTask) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (i *jsiiProxy_IotwirelessFuotaTask) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

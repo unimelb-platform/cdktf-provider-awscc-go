@@ -4,10 +4,6 @@ package apprunnerobservabilityconfiguration
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (a *jsiiProxy_ApprunnerObservabilityConfigurationTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (a *jsiiProxy_ApprunnerObservabilityConfigurationTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

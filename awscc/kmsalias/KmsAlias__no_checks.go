@@ -56,15 +56,7 @@ func (k *jsiiProxy_KmsAlias) validateInterpolationForAttributeParameters(terrafo
 	return nil
 }
 
-func (k *jsiiProxy_KmsAlias) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (k *jsiiProxy_KmsAlias) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (k *jsiiProxy_KmsAlias) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

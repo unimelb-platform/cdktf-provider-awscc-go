@@ -4,10 +4,6 @@ package mediapackageasset
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (m *jsiiProxy_MediapackageAssetEgressEndpointsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (m *jsiiProxy_MediapackageAssetEgressEndpointsList) validateGetParameters(index *float64) error {
 	return nil
 }

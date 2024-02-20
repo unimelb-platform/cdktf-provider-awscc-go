@@ -56,15 +56,7 @@ func (d *jsiiProxy_DatabrewSchedule) validateInterpolationForAttributeParameters
 	return nil
 }
 
-func (d *jsiiProxy_DatabrewSchedule) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DatabrewSchedule) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (d *jsiiProxy_DatabrewSchedule) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

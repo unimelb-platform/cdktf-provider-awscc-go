@@ -56,15 +56,7 @@ func (p *jsiiProxy_ProtonServiceTemplate) validateInterpolationForAttributeParam
 	return nil
 }
 
-func (p *jsiiProxy_ProtonServiceTemplate) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (p *jsiiProxy_ProtonServiceTemplate) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (p *jsiiProxy_ProtonServiceTemplate) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

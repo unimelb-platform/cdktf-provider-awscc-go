@@ -4,10 +4,6 @@ package dataawsccdatazoneenvironmentblueprintconfiguration
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccDatazoneEnvironmentBlueprintConfigurationRegionalParametersList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccDatazoneEnvironmentBlueprintConfigurationRegionalParametersList) validateGetParameters(index *float64) error {
 	return nil
 }

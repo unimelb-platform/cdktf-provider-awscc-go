@@ -56,15 +56,7 @@ func (d *jsiiProxy_DevopsguruResourceCollection) validateInterpolationForAttribu
 	return nil
 }
 
-func (d *jsiiProxy_DevopsguruResourceCollection) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DevopsguruResourceCollection) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (d *jsiiProxy_DevopsguruResourceCollection) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

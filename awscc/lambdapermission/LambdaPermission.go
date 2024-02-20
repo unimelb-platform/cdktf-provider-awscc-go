@@ -107,22 +107,12 @@ type LambdaPermission interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
-	HasResourceMove() interface{}
-	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
-	// Move the resource corresponding to "id" to this resource.
-	//
-	// Note that the resource being moved from must be marked as moved using it's instance function.
-	// Experimental.
-	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
-	// Moves this resource to the resource corresponding to "id".
-	// Experimental.
-	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -135,9 +125,6 @@ type LambdaPermission interface {
 	ResetSourceAccount()
 	ResetSourceArn()
 	SynthesizeAttributes() *map[string]interface{}
-	SynthesizeHclAttributes() *map[string]interface{}
-	// Experimental.
-	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -937,19 +924,6 @@ func (l *jsiiProxy_LambdaPermission) GetStringMapAttribute(terraformAttribute *s
 	return returns
 }
 
-func (l *jsiiProxy_LambdaPermission) HasResourceMove() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		l,
-		"hasResourceMove",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
 func (l *jsiiProxy_LambdaPermission) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := l.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -977,17 +951,6 @@ func (l *jsiiProxy_LambdaPermission) InterpolationForAttribute(terraformAttribut
 	return returns
 }
 
-func (l *jsiiProxy_LambdaPermission) MoveFromId(id *string) {
-	if err := l.validateMoveFromIdParameters(id); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		l,
-		"moveFromId",
-		[]interface{}{id},
-	)
-}
-
 func (l *jsiiProxy_LambdaPermission) MoveTo(moveTarget *string, index interface{}) {
 	if err := l.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -996,17 +959,6 @@ func (l *jsiiProxy_LambdaPermission) MoveTo(moveTarget *string, index interface{
 		l,
 		"moveTo",
 		[]interface{}{moveTarget, index},
-	)
-}
-
-func (l *jsiiProxy_LambdaPermission) MoveToId(id *string) {
-	if err := l.validateMoveToIdParameters(id); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		l,
-		"moveToId",
-		[]interface{}{id},
 	)
 }
 
@@ -1075,32 +1027,6 @@ func (l *jsiiProxy_LambdaPermission) SynthesizeAttributes() *map[string]interfac
 	_jsii_.Invoke(
 		l,
 		"synthesizeAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (l *jsiiProxy_LambdaPermission) SynthesizeHclAttributes() *map[string]interface{} {
-	var returns *map[string]interface{}
-
-	_jsii_.Invoke(
-		l,
-		"synthesizeHclAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (l *jsiiProxy_LambdaPermission) ToHclTerraform() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		l,
-		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

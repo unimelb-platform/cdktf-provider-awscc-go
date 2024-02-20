@@ -4,10 +4,6 @@ package dataawsccec2subnet
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccEc2SubnetTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccEc2SubnetTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

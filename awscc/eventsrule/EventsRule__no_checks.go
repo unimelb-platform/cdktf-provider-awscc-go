@@ -56,15 +56,7 @@ func (e *jsiiProxy_EventsRule) validateInterpolationForAttributeParameters(terra
 	return nil
 }
 
-func (e *jsiiProxy_EventsRule) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_EventsRule) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_EventsRule) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -4,10 +4,6 @@ package ec2vpnconnection
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (e *jsiiProxy_Ec2VpnConnectionTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2VpnConnectionTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

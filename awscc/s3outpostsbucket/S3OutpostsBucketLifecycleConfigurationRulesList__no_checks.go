@@ -4,10 +4,6 @@ package s3outpostsbucket
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (s *jsiiProxy_S3OutpostsBucketLifecycleConfigurationRulesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_S3OutpostsBucketLifecycleConfigurationRulesList) validateGetParameters(index *float64) error {
 	return nil
 }

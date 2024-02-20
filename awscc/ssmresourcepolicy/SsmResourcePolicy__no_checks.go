@@ -56,15 +56,7 @@ func (s *jsiiProxy_SsmResourcePolicy) validateInterpolationForAttributeParameter
 	return nil
 }
 
-func (s *jsiiProxy_SsmResourcePolicy) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_SsmResourcePolicy) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (s *jsiiProxy_SsmResourcePolicy) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

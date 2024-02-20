@@ -56,15 +56,7 @@ func (i *jsiiProxy_IottwinmakerScene) validateInterpolationForAttributeParameter
 	return nil
 }
 
-func (i *jsiiProxy_IottwinmakerScene) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IottwinmakerScene) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (i *jsiiProxy_IottwinmakerScene) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -4,10 +4,6 @@ package dataawsccgroundstationdataflowendpointgroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccGroundstationDataflowEndpointGroupTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccGroundstationDataflowEndpointGroupTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

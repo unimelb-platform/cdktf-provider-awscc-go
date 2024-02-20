@@ -56,15 +56,7 @@ func (e *jsiiProxy_EcrPullThroughCacheRule) validateInterpolationForAttributePar
 	return nil
 }
 
-func (e *jsiiProxy_EcrPullThroughCacheRule) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_EcrPullThroughCacheRule) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_EcrPullThroughCacheRule) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

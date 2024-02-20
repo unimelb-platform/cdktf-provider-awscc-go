@@ -4,10 +4,6 @@ package dataawsccevidentlyexperiment
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccEvidentlyExperimentOnlineAbConfigTreatmentWeightsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccEvidentlyExperimentOnlineAbConfigTreatmentWeightsList) validateGetParameters(index *float64) error {
 	return nil
 }

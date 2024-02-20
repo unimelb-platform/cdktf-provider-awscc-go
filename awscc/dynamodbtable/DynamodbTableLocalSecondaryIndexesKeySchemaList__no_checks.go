@@ -4,10 +4,6 @@ package dynamodbtable
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DynamodbTableLocalSecondaryIndexesKeySchemaList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DynamodbTableLocalSecondaryIndexesKeySchemaList) validateGetParameters(index *float64) error {
 	return nil
 }

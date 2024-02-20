@@ -56,15 +56,7 @@ func (e *jsiiProxy_Ec2IpamResourceDiscoveryAssociation) validateInterpolationFor
 	return nil
 }
 
-func (e *jsiiProxy_Ec2IpamResourceDiscoveryAssociation) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2IpamResourceDiscoveryAssociation) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_Ec2IpamResourceDiscoveryAssociation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -119,14 +119,6 @@ func (d *jsiiProxy_DatabrewRuleset) validateInterpolationForAttributeParameters(
 	return nil
 }
 
-func (d *jsiiProxy_DatabrewRuleset) validateMoveFromIdParameters(id *string) error {
-	if id == nil {
-		return fmt.Errorf("parameter id is required, but nil was provided")
-	}
-
-	return nil
-}
-
 func (d *jsiiProxy_DatabrewRuleset) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -183,14 +175,6 @@ func (d *jsiiProxy_DatabrewRuleset) validateMoveToParameters(moveTarget *string,
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
-	}
-
-	return nil
-}
-
-func (d *jsiiProxy_DatabrewRuleset) validateMoveToIdParameters(id *string) error {
-	if id == nil {
-		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil

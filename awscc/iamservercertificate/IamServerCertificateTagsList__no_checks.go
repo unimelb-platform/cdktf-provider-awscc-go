@@ -4,10 +4,6 @@ package iamservercertificate
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (i *jsiiProxy_IamServerCertificateTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IamServerCertificateTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

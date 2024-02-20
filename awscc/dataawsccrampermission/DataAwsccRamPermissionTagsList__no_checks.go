@@ -4,10 +4,6 @@ package dataawsccrampermission
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccRamPermissionTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccRamPermissionTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

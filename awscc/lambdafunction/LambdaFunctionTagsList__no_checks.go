@@ -4,10 +4,6 @@ package lambdafunction
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (l *jsiiProxy_LambdaFunctionTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (l *jsiiProxy_LambdaFunctionTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

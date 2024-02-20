@@ -56,15 +56,7 @@ func (c *jsiiProxy_CustomerprofilesDomain) validateInterpolationForAttributePara
 	return nil
 }
 
-func (c *jsiiProxy_CustomerprofilesDomain) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_CustomerprofilesDomain) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (c *jsiiProxy_CustomerprofilesDomain) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

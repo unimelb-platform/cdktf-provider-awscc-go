@@ -56,15 +56,7 @@ func (e *jsiiProxy_Ec2EnclaveCertificateIamRoleAssociation) validateInterpolatio
 	return nil
 }
 
-func (e *jsiiProxy_Ec2EnclaveCertificateIamRoleAssociation) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2EnclaveCertificateIamRoleAssociation) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_Ec2EnclaveCertificateIamRoleAssociation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

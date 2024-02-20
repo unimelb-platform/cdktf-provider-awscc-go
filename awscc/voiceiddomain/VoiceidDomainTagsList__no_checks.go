@@ -4,10 +4,6 @@ package voiceiddomain
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (v *jsiiProxy_VoiceidDomainTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (v *jsiiProxy_VoiceidDomainTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

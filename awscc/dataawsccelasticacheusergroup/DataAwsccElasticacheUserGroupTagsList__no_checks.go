@@ -4,10 +4,6 @@ package dataawsccelasticacheusergroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccElasticacheUserGroupTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccElasticacheUserGroupTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

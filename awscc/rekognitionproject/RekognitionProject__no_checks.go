@@ -56,15 +56,7 @@ func (r *jsiiProxy_RekognitionProject) validateInterpolationForAttributeParamete
 	return nil
 }
 
-func (r *jsiiProxy_RekognitionProject) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (r *jsiiProxy_RekognitionProject) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (r *jsiiProxy_RekognitionProject) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

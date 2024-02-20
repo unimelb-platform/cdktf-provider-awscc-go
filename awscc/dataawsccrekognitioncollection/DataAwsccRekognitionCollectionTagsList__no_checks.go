@@ -4,10 +4,6 @@ package dataawsccrekognitioncollection
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccRekognitionCollectionTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccRekognitionCollectionTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -4,10 +4,6 @@ package dataawsccglobalacceleratorendpointgroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccGlobalacceleratorEndpointGroupPortOverridesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccGlobalacceleratorEndpointGroupPortOverridesList) validateGetParameters(index *float64) error {
 	return nil
 }

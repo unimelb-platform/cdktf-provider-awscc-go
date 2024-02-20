@@ -4,10 +4,6 @@ package dataawsccmemorydbsubnetgroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccMemorydbSubnetGroupTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccMemorydbSubnetGroupTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

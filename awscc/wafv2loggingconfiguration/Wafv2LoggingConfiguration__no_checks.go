@@ -56,15 +56,7 @@ func (w *jsiiProxy_Wafv2LoggingConfiguration) validateInterpolationForAttributeP
 	return nil
 }
 
-func (w *jsiiProxy_Wafv2LoggingConfiguration) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (w *jsiiProxy_Wafv2LoggingConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (w *jsiiProxy_Wafv2LoggingConfiguration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -4,10 +4,6 @@ package eventsrule
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (e *jsiiProxy_EventsRuleTargetsEcsParametersCapacityProviderStrategyList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_EventsRuleTargetsEcsParametersCapacityProviderStrategyList) validateGetParameters(index *float64) error {
 	return nil
 }

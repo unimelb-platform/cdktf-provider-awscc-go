@@ -4,10 +4,6 @@ package dataawsccs3storagelensgroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccS3StorageLensGroupFilterOrMatchAnyTagList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccS3StorageLensGroupFilterOrMatchAnyTagList) validateGetParameters(index *float64) error {
 	return nil
 }

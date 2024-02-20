@@ -4,10 +4,6 @@ package dataawsccs3bucket
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccS3BucketNotificationConfigurationQueueConfigurationsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccS3BucketNotificationConfigurationQueueConfigurationsList) validateGetParameters(index *float64) error {
 	return nil
 }

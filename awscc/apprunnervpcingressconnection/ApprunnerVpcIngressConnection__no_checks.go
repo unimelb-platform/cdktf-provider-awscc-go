@@ -56,15 +56,7 @@ func (a *jsiiProxy_ApprunnerVpcIngressConnection) validateInterpolationForAttrib
 	return nil
 }
 
-func (a *jsiiProxy_ApprunnerVpcIngressConnection) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (a *jsiiProxy_ApprunnerVpcIngressConnection) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (a *jsiiProxy_ApprunnerVpcIngressConnection) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

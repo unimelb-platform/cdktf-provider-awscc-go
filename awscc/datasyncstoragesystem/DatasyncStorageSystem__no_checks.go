@@ -56,15 +56,7 @@ func (d *jsiiProxy_DatasyncStorageSystem) validateInterpolationForAttributeParam
 	return nil
 }
 
-func (d *jsiiProxy_DatasyncStorageSystem) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DatasyncStorageSystem) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (d *jsiiProxy_DatasyncStorageSystem) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

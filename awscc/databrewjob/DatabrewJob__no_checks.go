@@ -56,15 +56,7 @@ func (d *jsiiProxy_DatabrewJob) validateInterpolationForAttributeParameters(terr
 	return nil
 }
 
-func (d *jsiiProxy_DatabrewJob) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DatabrewJob) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (d *jsiiProxy_DatabrewJob) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

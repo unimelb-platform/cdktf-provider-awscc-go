@@ -4,10 +4,6 @@ package quicksighttemplate
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (q *jsiiProxy_QuicksightTemplateSourceEntitySourceAnalysisDataSetReferencesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (q *jsiiProxy_QuicksightTemplateSourceEntitySourceAnalysisDataSetReferencesList) validateGetParameters(index *float64) error {
 	return nil
 }

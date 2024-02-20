@@ -4,10 +4,6 @@ package dataawscclicensemanagerlicense
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccLicensemanagerLicenseLicenseMetadataList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccLicensemanagerLicenseLicenseMetadataList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -4,10 +4,6 @@ package networkfirewalltlsinspectionconfiguration
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (n *jsiiProxy_NetworkfirewallTlsInspectionConfigurationTlsInspectionConfigurationServerCertificateConfigurationsScopesDestinationsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (n *jsiiProxy_NetworkfirewallTlsInspectionConfigurationTlsInspectionConfigurationServerCertificateConfigurationsScopesDestinationsList) validateGetParameters(index *float64) error {
 	return nil
 }

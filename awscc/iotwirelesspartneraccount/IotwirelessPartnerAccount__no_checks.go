@@ -56,15 +56,7 @@ func (i *jsiiProxy_IotwirelessPartnerAccount) validateInterpolationForAttributeP
 	return nil
 }
 
-func (i *jsiiProxy_IotwirelessPartnerAccount) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IotwirelessPartnerAccount) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (i *jsiiProxy_IotwirelessPartnerAccount) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

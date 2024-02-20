@@ -4,10 +4,6 @@ package osispipeline
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (o *jsiiProxy_OsisPipelineTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (o *jsiiProxy_OsisPipelineTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

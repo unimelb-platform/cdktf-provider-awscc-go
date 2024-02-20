@@ -1,3 +1,3 @@
 # `data_awscc_lightsail_disks`
 
-Refer to the Terraform Registry for docs: [`data_awscc_lightsail_disks`](https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lightsail_disks).
+Refer to the Terraform Registory for docs: [`data_awscc_lightsail_disks`](https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lightsail_disks).

@@ -43,11 +43,9 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
 			_jsii_.MemberMethod{JsiiMethod: "synthesizeAttributes", GoMethod: "SynthesizeAttributes"},
-			_jsii_.MemberMethod{JsiiMethod: "synthesizeHclAttributes", GoMethod: "SynthesizeHclAttributes"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformGeneratorMetadata", GoGetter: "TerraformGeneratorMetadata"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformMetaArguments", GoGetter: "TerraformMetaArguments"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResourceType", GoGetter: "TerraformResourceType"},
-			_jsii_.MemberMethod{JsiiMethod: "toHclTerraform", GoMethod: "ToHclTerraform"},
 			_jsii_.MemberMethod{JsiiMethod: "toMetadata", GoMethod: "ToMetadata"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 			_jsii_.MemberMethod{JsiiMethod: "toTerraform", GoMethod: "ToTerraform"},
@@ -74,7 +72,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaAwsAccountIdList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaAwsAccountIdList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -133,7 +130,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaComponentIdList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaComponentIdList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -192,7 +188,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaComponentTypeList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaComponentTypeList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -251,7 +246,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaEc2InstanceImageIdList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaEc2InstanceImageIdList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -310,7 +304,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaEc2InstanceSubnetIdList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaEc2InstanceSubnetIdList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -369,7 +362,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaEc2InstanceVpcIdList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaEc2InstanceVpcIdList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -428,7 +420,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaEcrImageArchitectureList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaEcrImageArchitectureList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -487,7 +478,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaEcrImageHashList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaEcrImageHashList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -546,7 +536,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaEcrImagePushedAtList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaEcrImagePushedAtList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -605,7 +594,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaEcrImageRegistryList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaEcrImageRegistryList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -664,7 +652,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaEcrImageRepositoryNameList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaEcrImageRepositoryNameList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -723,7 +710,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaEcrImageTagsList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaEcrImageTagsList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -782,7 +768,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaFindingArnList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaFindingArnList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -841,7 +826,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaFindingStatusList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaFindingStatusList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -900,7 +884,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaFindingTypeList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaFindingTypeList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -959,7 +942,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaFirstObservedAtList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaFirstObservedAtList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1018,7 +1000,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaInspectorScoreList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaInspectorScoreList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1077,7 +1058,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaLastObservedAtList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaLastObservedAtList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1136,7 +1116,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaNetworkProtocolList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaNetworkProtocolList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1258,7 +1237,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaPortRangeList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaPortRangeList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1317,7 +1295,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaRelatedVulnerabilitiesList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaRelatedVulnerabilitiesList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1376,7 +1353,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaResourceIdList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaResourceIdList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1435,7 +1411,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaResourceTagsList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaResourceTagsList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1495,7 +1470,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaResourceTypeList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaResourceTypeList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1554,7 +1528,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaSeverityList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaSeverityList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1613,7 +1586,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaTitleList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaTitleList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1672,7 +1644,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaUpdatedAtList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaUpdatedAtList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1731,7 +1702,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaVendorSeverityList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaVendorSeverityList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1790,7 +1760,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaVulnerabilityIdList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaVulnerabilityIdList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1849,7 +1818,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaVulnerabilitySourceList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaVulnerabilitySourceList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1984,7 +1952,6 @@ func init() {
 		"awscc.dataAwsccInspectorv2Filter.DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackagesList",
 		reflect.TypeOf((*DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackagesList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},

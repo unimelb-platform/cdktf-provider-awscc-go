@@ -56,15 +56,7 @@ func (o *jsiiProxy_OrganizationsResourcePolicy) validateInterpolationForAttribut
 	return nil
 }
 
-func (o *jsiiProxy_OrganizationsResourcePolicy) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (o *jsiiProxy_OrganizationsResourcePolicy) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (o *jsiiProxy_OrganizationsResourcePolicy) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

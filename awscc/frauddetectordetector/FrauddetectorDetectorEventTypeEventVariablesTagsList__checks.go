@@ -10,14 +10,6 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-func (f *jsiiProxy_FrauddetectorDetectorEventTypeEventVariablesTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	if mapKeyAttributeName == nil {
-		return fmt.Errorf("parameter mapKeyAttributeName is required, but nil was provided")
-	}
-
-	return nil
-}
-
 func (f *jsiiProxy_FrauddetectorDetectorEventTypeEventVariablesTagsList) validateGetParameters(index *float64) error {
 	if index == nil {
 		return fmt.Errorf("parameter index is required, but nil was provided")

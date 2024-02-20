@@ -4,10 +4,6 @@ package locationgeofencecollection
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (l *jsiiProxy_LocationGeofenceCollectionTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (l *jsiiProxy_LocationGeofenceCollectionTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

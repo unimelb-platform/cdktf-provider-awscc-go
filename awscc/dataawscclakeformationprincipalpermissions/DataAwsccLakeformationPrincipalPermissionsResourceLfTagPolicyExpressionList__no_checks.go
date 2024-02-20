@@ -4,10 +4,6 @@ package dataawscclakeformationprincipalpermissions
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccLakeformationPrincipalPermissionsResourceLfTagPolicyExpressionList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccLakeformationPrincipalPermissionsResourceLfTagPolicyExpressionList) validateGetParameters(index *float64) error {
 	return nil
 }

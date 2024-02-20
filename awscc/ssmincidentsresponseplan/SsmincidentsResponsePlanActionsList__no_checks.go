@@ -4,10 +4,6 @@ package ssmincidentsresponseplan
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (s *jsiiProxy_SsmincidentsResponsePlanActionsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_SsmincidentsResponsePlanActionsList) validateGetParameters(index *float64) error {
 	return nil
 }

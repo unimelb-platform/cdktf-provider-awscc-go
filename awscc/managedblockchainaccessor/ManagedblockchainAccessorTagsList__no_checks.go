@@ -4,10 +4,6 @@ package managedblockchainaccessor
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (m *jsiiProxy_ManagedblockchainAccessorTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (m *jsiiProxy_ManagedblockchainAccessorTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

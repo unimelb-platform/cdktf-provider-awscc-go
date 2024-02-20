@@ -52,14 +52,12 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "sourceParameters", GoGetter: "SourceParameters"},
 			_jsii_.MemberProperty{JsiiProperty: "stateReason", GoGetter: "StateReason"},
 			_jsii_.MemberMethod{JsiiMethod: "synthesizeAttributes", GoMethod: "SynthesizeAttributes"},
-			_jsii_.MemberMethod{JsiiMethod: "synthesizeHclAttributes", GoMethod: "SynthesizeHclAttributes"},
 			_jsii_.MemberProperty{JsiiProperty: "tags", GoGetter: "Tags"},
 			_jsii_.MemberProperty{JsiiProperty: "target", GoGetter: "Target"},
 			_jsii_.MemberProperty{JsiiProperty: "targetParameters", GoGetter: "TargetParameters"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformGeneratorMetadata", GoGetter: "TerraformGeneratorMetadata"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformMetaArguments", GoGetter: "TerraformMetaArguments"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResourceType", GoGetter: "TerraformResourceType"},
-			_jsii_.MemberMethod{JsiiMethod: "toHclTerraform", GoMethod: "ToHclTerraform"},
 			_jsii_.MemberMethod{JsiiMethod: "toMetadata", GoMethod: "ToMetadata"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 			_jsii_.MemberMethod{JsiiMethod: "toTerraform", GoMethod: "ToTerraform"},
@@ -480,7 +478,6 @@ func init() {
 		"awscc.dataAwsccPipesPipe.DataAwsccPipesPipeSourceParametersFilterCriteriaFiltersList",
 		reflect.TypeOf((*DataAwsccPipesPipeSourceParametersFilterCriteriaFiltersList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1061,7 +1058,6 @@ func init() {
 		"awscc.dataAwsccPipesPipe.DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesEnvironmentList",
 		reflect.TypeOf((*DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesEnvironmentList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1156,7 +1152,6 @@ func init() {
 		"awscc.dataAwsccPipesPipe.DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsList",
 		reflect.TypeOf((*DataAwsccPipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1215,7 +1210,6 @@ func init() {
 		"awscc.dataAwsccPipesPipe.DataAwsccPipesPipeTargetParametersBatchJobParametersDependsOnList",
 		reflect.TypeOf((*DataAwsccPipesPipeTargetParametersBatchJobParametersDependsOnList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1392,7 +1386,6 @@ func init() {
 		"awscc.dataAwsccPipesPipe.DataAwsccPipesPipeTargetParametersEcsTaskParametersCapacityProviderStrategyList",
 		reflect.TypeOf((*DataAwsccPipesPipeTargetParametersEcsTaskParametersCapacityProviderStrategyList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1587,7 +1580,6 @@ func init() {
 		"awscc.dataAwsccPipesPipe.DataAwsccPipesPipeTargetParametersEcsTaskParametersOverridesContainerOverridesEnvironmentFilesList",
 		reflect.TypeOf((*DataAwsccPipesPipeTargetParametersEcsTaskParametersOverridesContainerOverridesEnvironmentFilesList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1642,7 +1634,6 @@ func init() {
 		"awscc.dataAwsccPipesPipe.DataAwsccPipesPipeTargetParametersEcsTaskParametersOverridesContainerOverridesEnvironmentList",
 		reflect.TypeOf((*DataAwsccPipesPipeTargetParametersEcsTaskParametersOverridesContainerOverridesEnvironmentList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1697,7 +1688,6 @@ func init() {
 		"awscc.dataAwsccPipesPipe.DataAwsccPipesPipeTargetParametersEcsTaskParametersOverridesContainerOverridesList",
 		reflect.TypeOf((*DataAwsccPipesPipeTargetParametersEcsTaskParametersOverridesContainerOverridesList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1762,7 +1752,6 @@ func init() {
 		"awscc.dataAwsccPipesPipe.DataAwsccPipesPipeTargetParametersEcsTaskParametersOverridesContainerOverridesResourceRequirementsList",
 		reflect.TypeOf((*DataAwsccPipesPipeTargetParametersEcsTaskParametersOverridesContainerOverridesResourceRequirementsList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1858,7 +1847,6 @@ func init() {
 		"awscc.dataAwsccPipesPipe.DataAwsccPipesPipeTargetParametersEcsTaskParametersOverridesInferenceAcceleratorOverridesList",
 		reflect.TypeOf((*DataAwsccPipesPipeTargetParametersEcsTaskParametersOverridesInferenceAcceleratorOverridesList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1956,7 +1944,6 @@ func init() {
 		"awscc.dataAwsccPipesPipe.DataAwsccPipesPipeTargetParametersEcsTaskParametersPlacementConstraintsList",
 		reflect.TypeOf((*DataAwsccPipesPipeTargetParametersEcsTaskParametersPlacementConstraintsList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -2015,7 +2002,6 @@ func init() {
 		"awscc.dataAwsccPipesPipe.DataAwsccPipesPipeTargetParametersEcsTaskParametersPlacementStrategyList",
 		reflect.TypeOf((*DataAwsccPipesPipeTargetParametersEcsTaskParametersPlacementStrategyList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -2074,7 +2060,6 @@ func init() {
 		"awscc.dataAwsccPipesPipe.DataAwsccPipesPipeTargetParametersEcsTaskParametersTagsList",
 		reflect.TypeOf((*DataAwsccPipesPipeTargetParametersEcsTaskParametersTagsList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -2410,7 +2395,6 @@ func init() {
 		"awscc.dataAwsccPipesPipe.DataAwsccPipesPipeTargetParametersSageMakerPipelineParametersPipelineParameterListStructList",
 		reflect.TypeOf((*DataAwsccPipesPipeTargetParametersSageMakerPipelineParametersPipelineParameterListStructList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},

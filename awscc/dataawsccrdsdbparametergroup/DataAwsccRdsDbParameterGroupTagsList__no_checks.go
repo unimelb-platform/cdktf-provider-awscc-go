@@ -4,10 +4,6 @@ package dataawsccrdsdbparametergroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccRdsDbParameterGroupTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccRdsDbParameterGroupTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

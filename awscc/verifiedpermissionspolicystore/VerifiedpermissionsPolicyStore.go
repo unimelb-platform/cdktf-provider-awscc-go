@@ -92,22 +92,12 @@ type VerifiedpermissionsPolicyStore interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
-	HasResourceMove() interface{}
-	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
-	// Move the resource corresponding to "id" to this resource.
-	//
-	// Note that the resource being moved from must be marked as moved using it's instance function.
-	// Experimental.
-	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
-	// Moves this resource to the resource corresponding to "id".
-	// Experimental.
-	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -119,9 +109,6 @@ type VerifiedpermissionsPolicyStore interface {
 	ResetOverrideLogicalId()
 	ResetSchema()
 	SynthesizeAttributes() *map[string]interface{}
-	SynthesizeHclAttributes() *map[string]interface{}
-	// Experimental.
-	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -764,19 +751,6 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyStore) GetStringMapAttribute(terrafo
 	return returns
 }
 
-func (v *jsiiProxy_VerifiedpermissionsPolicyStore) HasResourceMove() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		v,
-		"hasResourceMove",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
 func (v *jsiiProxy_VerifiedpermissionsPolicyStore) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := v.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -804,17 +778,6 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyStore) InterpolationForAttribute(ter
 	return returns
 }
 
-func (v *jsiiProxy_VerifiedpermissionsPolicyStore) MoveFromId(id *string) {
-	if err := v.validateMoveFromIdParameters(id); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		v,
-		"moveFromId",
-		[]interface{}{id},
-	)
-}
-
 func (v *jsiiProxy_VerifiedpermissionsPolicyStore) MoveTo(moveTarget *string, index interface{}) {
 	if err := v.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -823,17 +786,6 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyStore) MoveTo(moveTarget *string, in
 		v,
 		"moveTo",
 		[]interface{}{moveTarget, index},
-	)
-}
-
-func (v *jsiiProxy_VerifiedpermissionsPolicyStore) MoveToId(id *string) {
-	if err := v.validateMoveToIdParameters(id); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		v,
-		"moveToId",
-		[]interface{}{id},
 	)
 }
 
@@ -900,32 +852,6 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyStore) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		v,
 		"synthesizeAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (v *jsiiProxy_VerifiedpermissionsPolicyStore) SynthesizeHclAttributes() *map[string]interface{} {
-	var returns *map[string]interface{}
-
-	_jsii_.Invoke(
-		v,
-		"synthesizeHclAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (v *jsiiProxy_VerifiedpermissionsPolicyStore) ToHclTerraform() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		v,
-		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

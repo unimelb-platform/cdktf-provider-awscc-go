@@ -4,10 +4,6 @@ package datasynclocationhdfs
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DatasyncLocationHdfsNameNodesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DatasyncLocationHdfsNameNodesList) validateGetParameters(index *float64) error {
 	return nil
 }

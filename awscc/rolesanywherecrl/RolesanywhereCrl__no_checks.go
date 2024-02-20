@@ -56,15 +56,7 @@ func (r *jsiiProxy_RolesanywhereCrl) validateInterpolationForAttributeParameters
 	return nil
 }
 
-func (r *jsiiProxy_RolesanywhereCrl) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (r *jsiiProxy_RolesanywhereCrl) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (r *jsiiProxy_RolesanywhereCrl) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

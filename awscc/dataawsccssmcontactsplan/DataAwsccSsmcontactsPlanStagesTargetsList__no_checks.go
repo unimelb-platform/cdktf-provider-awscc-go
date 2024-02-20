@@ -4,10 +4,6 @@ package dataawsccssmcontactsplan
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccSsmcontactsPlanStagesTargetsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccSsmcontactsPlanStagesTargetsList) validateGetParameters(index *float64) error {
 	return nil
 }

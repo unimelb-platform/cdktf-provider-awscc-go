@@ -56,15 +56,7 @@ func (s *jsiiProxy_SsoInstanceAccessControlAttributeConfiguration) validateInter
 	return nil
 }
 
-func (s *jsiiProxy_SsoInstanceAccessControlAttributeConfiguration) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_SsoInstanceAccessControlAttributeConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (s *jsiiProxy_SsoInstanceAccessControlAttributeConfiguration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

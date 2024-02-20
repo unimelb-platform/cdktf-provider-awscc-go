@@ -56,15 +56,7 @@ func (e *jsiiProxy_Ec2LocalGatewayRouteTableVpcAssociation) validateInterpolatio
 	return nil
 }
 
-func (e *jsiiProxy_Ec2LocalGatewayRouteTableVpcAssociation) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2LocalGatewayRouteTableVpcAssociation) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_Ec2LocalGatewayRouteTableVpcAssociation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

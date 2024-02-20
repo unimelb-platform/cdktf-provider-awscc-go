@@ -4,10 +4,6 @@ package appflowflow
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListStructList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListStructList) validateGetParameters(index *float64) error {
 	return nil
 }

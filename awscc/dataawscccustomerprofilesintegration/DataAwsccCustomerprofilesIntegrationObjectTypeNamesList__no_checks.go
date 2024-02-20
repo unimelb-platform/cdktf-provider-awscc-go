@@ -4,10 +4,6 @@ package dataawscccustomerprofilesintegration
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccCustomerprofilesIntegrationObjectTypeNamesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccCustomerprofilesIntegrationObjectTypeNamesList) validateGetParameters(index *float64) error {
 	return nil
 }

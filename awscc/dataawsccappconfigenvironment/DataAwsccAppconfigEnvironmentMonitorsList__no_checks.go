@@ -4,10 +4,6 @@ package dataawsccappconfigenvironment
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccAppconfigEnvironmentMonitorsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccAppconfigEnvironmentMonitorsList) validateGetParameters(index *float64) error {
 	return nil
 }

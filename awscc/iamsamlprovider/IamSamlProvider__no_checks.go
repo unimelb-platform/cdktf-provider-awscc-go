@@ -56,15 +56,7 @@ func (i *jsiiProxy_IamSamlProvider) validateInterpolationForAttributeParameters(
 	return nil
 }
 
-func (i *jsiiProxy_IamSamlProvider) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IamSamlProvider) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (i *jsiiProxy_IamSamlProvider) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

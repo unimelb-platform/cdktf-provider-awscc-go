@@ -56,15 +56,7 @@ func (e *jsiiProxy_Ec2NetworkAcl) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
-func (e *jsiiProxy_Ec2NetworkAcl) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2NetworkAcl) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_Ec2NetworkAcl) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

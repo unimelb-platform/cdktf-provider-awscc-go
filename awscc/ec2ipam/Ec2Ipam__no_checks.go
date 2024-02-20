@@ -56,15 +56,7 @@ func (e *jsiiProxy_Ec2Ipam) validateInterpolationForAttributeParameters(terrafor
 	return nil
 }
 
-func (e *jsiiProxy_Ec2Ipam) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2Ipam) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_Ec2Ipam) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

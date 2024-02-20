@@ -56,15 +56,7 @@ func (h *jsiiProxy_HealthimagingDatastore) validateInterpolationForAttributePara
 	return nil
 }
 
-func (h *jsiiProxy_HealthimagingDatastore) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (h *jsiiProxy_HealthimagingDatastore) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (h *jsiiProxy_HealthimagingDatastore) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -4,10 +4,6 @@ package codestarconnectionsrepositorylink
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (c *jsiiProxy_CodestarconnectionsRepositoryLinkTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_CodestarconnectionsRepositoryLinkTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

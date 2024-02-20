@@ -56,15 +56,7 @@ func (g *jsiiProxy_GameliftBuild) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
-func (g *jsiiProxy_GameliftBuild) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (g *jsiiProxy_GameliftBuild) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (g *jsiiProxy_GameliftBuild) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

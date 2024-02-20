@@ -4,10 +4,6 @@ package mediatailorlivesource
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (m *jsiiProxy_MediatailorLiveSourceTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (m *jsiiProxy_MediatailorLiveSourceTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

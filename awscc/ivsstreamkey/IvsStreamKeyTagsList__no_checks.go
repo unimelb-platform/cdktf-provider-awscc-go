@@ -4,10 +4,6 @@ package ivsstreamkey
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (i *jsiiProxy_IvsStreamKeyTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IvsStreamKeyTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

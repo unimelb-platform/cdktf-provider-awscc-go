@@ -56,15 +56,7 @@ func (f *jsiiProxy_FrauddetectorVariable) validateInterpolationForAttributeParam
 	return nil
 }
 
-func (f *jsiiProxy_FrauddetectorVariable) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (f *jsiiProxy_FrauddetectorVariable) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (f *jsiiProxy_FrauddetectorVariable) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -4,10 +4,6 @@ package elasticacheglobalreplicationgroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (e *jsiiProxy_ElasticacheGlobalReplicationGroupRegionalConfigurationsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_ElasticacheGlobalReplicationGroupRegionalConfigurationsList) validateGetParameters(index *float64) error {
 	return nil
 }

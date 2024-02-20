@@ -56,15 +56,7 @@ func (o *jsiiProxy_OpensearchserverlessSecurityPolicy) validateInterpolationForA
 	return nil
 }
 
-func (o *jsiiProxy_OpensearchserverlessSecurityPolicy) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (o *jsiiProxy_OpensearchserverlessSecurityPolicy) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (o *jsiiProxy_OpensearchserverlessSecurityPolicy) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

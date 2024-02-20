@@ -4,10 +4,6 @@ package dataawscclightsailinstance
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccLightsailInstanceTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccLightsailInstanceTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

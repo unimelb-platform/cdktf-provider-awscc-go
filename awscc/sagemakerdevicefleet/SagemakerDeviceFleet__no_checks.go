@@ -56,15 +56,7 @@ func (s *jsiiProxy_SagemakerDeviceFleet) validateInterpolationForAttributeParame
 	return nil
 }
 
-func (s *jsiiProxy_SagemakerDeviceFleet) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_SagemakerDeviceFleet) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (s *jsiiProxy_SagemakerDeviceFleet) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

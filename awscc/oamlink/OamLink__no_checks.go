@@ -56,15 +56,7 @@ func (o *jsiiProxy_OamLink) validateInterpolationForAttributeParameters(terrafor
 	return nil
 }
 
-func (o *jsiiProxy_OamLink) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (o *jsiiProxy_OamLink) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (o *jsiiProxy_OamLink) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

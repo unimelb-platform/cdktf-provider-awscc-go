@@ -56,15 +56,7 @@ func (i *jsiiProxy_Inspectorv2Filter) validateInterpolationForAttributeParameter
 	return nil
 }
 
-func (i *jsiiProxy_Inspectorv2Filter) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_Inspectorv2Filter) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (i *jsiiProxy_Inspectorv2Filter) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

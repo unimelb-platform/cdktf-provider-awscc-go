@@ -4,10 +4,6 @@ package mediatailorvodsource
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (m *jsiiProxy_MediatailorVodSourceTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (m *jsiiProxy_MediatailorVodSourceTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

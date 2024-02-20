@@ -56,15 +56,7 @@ func (b *jsiiProxy_BillingconductorPricingPlan) validateInterpolationForAttribut
 	return nil
 }
 
-func (b *jsiiProxy_BillingconductorPricingPlan) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (b *jsiiProxy_BillingconductorPricingPlan) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (b *jsiiProxy_BillingconductorPricingPlan) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

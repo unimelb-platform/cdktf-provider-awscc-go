@@ -4,10 +4,6 @@ package sagemakerinferenceexperiment
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (s *jsiiProxy_SagemakerInferenceExperimentTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_SagemakerInferenceExperimentTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

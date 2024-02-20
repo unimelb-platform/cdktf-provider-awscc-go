@@ -4,10 +4,6 @@ package dataawsccconfigaggregationauthorization
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccConfigAggregationAuthorizationTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccConfigAggregationAuthorizationTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

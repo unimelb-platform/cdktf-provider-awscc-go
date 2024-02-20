@@ -4,10 +4,6 @@ package dataawsccfrauddetectorlist
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccFrauddetectorListTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccFrauddetectorListTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

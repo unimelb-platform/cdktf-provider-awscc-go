@@ -4,10 +4,6 @@ package kinesisvideostream
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (k *jsiiProxy_KinesisvideoStreamTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (k *jsiiProxy_KinesisvideoStreamTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

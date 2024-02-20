@@ -4,10 +4,6 @@ package elasticacheuser
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (e *jsiiProxy_ElasticacheUserTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_ElasticacheUserTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

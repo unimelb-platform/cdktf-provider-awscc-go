@@ -56,15 +56,7 @@ func (i *jsiiProxy_IotResourceSpecificLogging) validateInterpolationForAttribute
 	return nil
 }
 
-func (i *jsiiProxy_IotResourceSpecificLogging) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IotResourceSpecificLogging) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (i *jsiiProxy_IotResourceSpecificLogging) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

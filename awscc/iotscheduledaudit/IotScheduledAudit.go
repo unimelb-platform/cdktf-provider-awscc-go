@@ -101,22 +101,12 @@ type IotScheduledAudit interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
-	HasResourceMove() interface{}
-	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
-	// Move the resource corresponding to "id" to this resource.
-	//
-	// Note that the resource being moved from must be marked as moved using it's instance function.
-	// Experimental.
-	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
-	// Moves this resource to the resource corresponding to "id".
-	// Experimental.
-	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -129,9 +119,6 @@ type IotScheduledAudit interface {
 	ResetScheduledAuditName()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
-	SynthesizeHclAttributes() *map[string]interface{}
-	// Experimental.
-	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -868,19 +855,6 @@ func (i *jsiiProxy_IotScheduledAudit) GetStringMapAttribute(terraformAttribute *
 	return returns
 }
 
-func (i *jsiiProxy_IotScheduledAudit) HasResourceMove() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		i,
-		"hasResourceMove",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
 func (i *jsiiProxy_IotScheduledAudit) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := i.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -908,17 +882,6 @@ func (i *jsiiProxy_IotScheduledAudit) InterpolationForAttribute(terraformAttribu
 	return returns
 }
 
-func (i *jsiiProxy_IotScheduledAudit) MoveFromId(id *string) {
-	if err := i.validateMoveFromIdParameters(id); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		i,
-		"moveFromId",
-		[]interface{}{id},
-	)
-}
-
 func (i *jsiiProxy_IotScheduledAudit) MoveTo(moveTarget *string, index interface{}) {
 	if err := i.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -927,17 +890,6 @@ func (i *jsiiProxy_IotScheduledAudit) MoveTo(moveTarget *string, index interface
 		i,
 		"moveTo",
 		[]interface{}{moveTarget, index},
-	)
-}
-
-func (i *jsiiProxy_IotScheduledAudit) MoveToId(id *string) {
-	if err := i.validateMoveToIdParameters(id); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		i,
-		"moveToId",
-		[]interface{}{id},
 	)
 }
 
@@ -1009,32 +961,6 @@ func (i *jsiiProxy_IotScheduledAudit) SynthesizeAttributes() *map[string]interfa
 	_jsii_.Invoke(
 		i,
 		"synthesizeAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (i *jsiiProxy_IotScheduledAudit) SynthesizeHclAttributes() *map[string]interface{} {
-	var returns *map[string]interface{}
-
-	_jsii_.Invoke(
-		i,
-		"synthesizeHclAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (i *jsiiProxy_IotScheduledAudit) ToHclTerraform() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		i,
-		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

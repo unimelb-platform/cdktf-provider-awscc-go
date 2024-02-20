@@ -4,10 +4,6 @@ package ec2localgatewayroutetable
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (e *jsiiProxy_Ec2LocalGatewayRouteTableTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_Ec2LocalGatewayRouteTableTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

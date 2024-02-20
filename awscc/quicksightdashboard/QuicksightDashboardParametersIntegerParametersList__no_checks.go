@@ -4,10 +4,6 @@ package quicksightdashboard
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (q *jsiiProxy_QuicksightDashboardParametersIntegerParametersList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (q *jsiiProxy_QuicksightDashboardParametersIntegerParametersList) validateGetParameters(index *float64) error {
 	return nil
 }

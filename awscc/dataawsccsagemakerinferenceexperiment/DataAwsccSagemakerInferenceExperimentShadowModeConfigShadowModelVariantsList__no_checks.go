@@ -4,10 +4,6 @@ package dataawsccsagemakerinferenceexperiment
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccSagemakerInferenceExperimentShadowModeConfigShadowModelVariantsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccSagemakerInferenceExperimentShadowModeConfigShadowModelVariantsList) validateGetParameters(index *float64) error {
 	return nil
 }

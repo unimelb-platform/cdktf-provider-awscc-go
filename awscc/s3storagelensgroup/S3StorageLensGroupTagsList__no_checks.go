@@ -4,10 +4,6 @@ package s3storagelensgroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (s *jsiiProxy_S3StorageLensGroupTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_S3StorageLensGroupTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

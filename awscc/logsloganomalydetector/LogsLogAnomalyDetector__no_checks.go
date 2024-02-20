@@ -56,15 +56,7 @@ func (l *jsiiProxy_LogsLogAnomalyDetector) validateInterpolationForAttributePara
 	return nil
 }
 
-func (l *jsiiProxy_LogsLogAnomalyDetector) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (l *jsiiProxy_LogsLogAnomalyDetector) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (l *jsiiProxy_LogsLogAnomalyDetector) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

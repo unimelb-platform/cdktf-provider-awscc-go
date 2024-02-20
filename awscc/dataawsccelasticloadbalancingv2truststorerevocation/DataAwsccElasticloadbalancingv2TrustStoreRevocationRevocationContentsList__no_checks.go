@@ -4,10 +4,6 @@ package dataawsccelasticloadbalancingv2truststorerevocation
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccElasticloadbalancingv2TrustStoreRevocationRevocationContentsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccElasticloadbalancingv2TrustStoreRevocationRevocationContentsList) validateGetParameters(index *float64) error {
 	return nil
 }

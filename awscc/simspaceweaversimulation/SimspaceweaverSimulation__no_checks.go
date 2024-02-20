@@ -56,15 +56,7 @@ func (s *jsiiProxy_SimspaceweaverSimulation) validateInterpolationForAttributePa
 	return nil
 }
 
-func (s *jsiiProxy_SimspaceweaverSimulation) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_SimspaceweaverSimulation) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (s *jsiiProxy_SimspaceweaverSimulation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

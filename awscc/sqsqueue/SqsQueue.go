@@ -132,22 +132,12 @@ type SqsQueue interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
-	HasResourceMove() interface{}
-	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
-	// Move the resource corresponding to "id" to this resource.
-	//
-	// Note that the resource being moved from must be marked as moved using it's instance function.
-	// Experimental.
-	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
-	// Moves this resource to the resource corresponding to "id".
-	// Experimental.
-	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -172,9 +162,6 @@ type SqsQueue interface {
 	ResetTags()
 	ResetVisibilityTimeout()
 	SynthesizeAttributes() *map[string]interface{}
-	SynthesizeHclAttributes() *map[string]interface{}
-	// Experimental.
-	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -1231,19 +1218,6 @@ func (s *jsiiProxy_SqsQueue) GetStringMapAttribute(terraformAttribute *string) *
 	return returns
 }
 
-func (s *jsiiProxy_SqsQueue) HasResourceMove() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		s,
-		"hasResourceMove",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
 func (s *jsiiProxy_SqsQueue) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := s.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1271,17 +1245,6 @@ func (s *jsiiProxy_SqsQueue) InterpolationForAttribute(terraformAttribute *strin
 	return returns
 }
 
-func (s *jsiiProxy_SqsQueue) MoveFromId(id *string) {
-	if err := s.validateMoveFromIdParameters(id); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		s,
-		"moveFromId",
-		[]interface{}{id},
-	)
-}
-
 func (s *jsiiProxy_SqsQueue) MoveTo(moveTarget *string, index interface{}) {
 	if err := s.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1290,17 +1253,6 @@ func (s *jsiiProxy_SqsQueue) MoveTo(moveTarget *string, index interface{}) {
 		s,
 		"moveTo",
 		[]interface{}{moveTarget, index},
-	)
-}
-
-func (s *jsiiProxy_SqsQueue) MoveToId(id *string) {
-	if err := s.validateMoveToIdParameters(id); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		s,
-		"moveToId",
-		[]interface{}{id},
 	)
 }
 
@@ -1468,32 +1420,6 @@ func (s *jsiiProxy_SqsQueue) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		s,
 		"synthesizeAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (s *jsiiProxy_SqsQueue) SynthesizeHclAttributes() *map[string]interface{} {
-	var returns *map[string]interface{}
-
-	_jsii_.Invoke(
-		s,
-		"synthesizeHclAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (s *jsiiProxy_SqsQueue) ToHclTerraform() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		s,
-		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

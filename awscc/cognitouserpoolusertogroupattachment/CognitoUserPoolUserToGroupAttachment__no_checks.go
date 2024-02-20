@@ -56,15 +56,7 @@ func (c *jsiiProxy_CognitoUserPoolUserToGroupAttachment) validateInterpolationFo
 	return nil
 }
 
-func (c *jsiiProxy_CognitoUserPoolUserToGroupAttachment) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_CognitoUserPoolUserToGroupAttachment) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (c *jsiiProxy_CognitoUserPoolUserToGroupAttachment) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

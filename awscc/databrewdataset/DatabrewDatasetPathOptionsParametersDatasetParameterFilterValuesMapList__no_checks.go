@@ -4,10 +4,6 @@ package databrewdataset
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterFilterValuesMapList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterFilterValuesMapList) validateGetParameters(index *float64) error {
 	return nil
 }

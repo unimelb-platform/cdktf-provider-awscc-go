@@ -59,12 +59,10 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "replicationConfiguration", GoGetter: "ReplicationConfiguration"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
 			_jsii_.MemberMethod{JsiiMethod: "synthesizeAttributes", GoMethod: "SynthesizeAttributes"},
-			_jsii_.MemberMethod{JsiiMethod: "synthesizeHclAttributes", GoMethod: "SynthesizeHclAttributes"},
 			_jsii_.MemberProperty{JsiiProperty: "tags", GoGetter: "Tags"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformGeneratorMetadata", GoGetter: "TerraformGeneratorMetadata"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformMetaArguments", GoGetter: "TerraformMetaArguments"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResourceType", GoGetter: "TerraformResourceType"},
-			_jsii_.MemberMethod{JsiiMethod: "toHclTerraform", GoMethod: "ToHclTerraform"},
 			_jsii_.MemberMethod{JsiiMethod: "toMetadata", GoMethod: "ToMetadata"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 			_jsii_.MemberMethod{JsiiMethod: "toTerraform", GoMethod: "ToTerraform"},
@@ -123,7 +121,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketAnalyticsConfigurationsList",
 		reflect.TypeOf((*DataAwsccS3BucketAnalyticsConfigurationsList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -299,7 +296,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketAnalyticsConfigurationsTagFiltersList",
 		reflect.TypeOf((*DataAwsccS3BucketAnalyticsConfigurationsTagFiltersList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -395,7 +391,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketBucketEncryptionServerSideEncryptionConfigurationList",
 		reflect.TypeOf((*DataAwsccS3BucketBucketEncryptionServerSideEncryptionConfigurationList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -500,7 +495,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketCorsConfigurationCorsRulesList",
 		reflect.TypeOf((*DataAwsccS3BucketCorsConfigurationCorsRulesList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -596,7 +590,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketIntelligentTieringConfigurationsList",
 		reflect.TypeOf((*DataAwsccS3BucketIntelligentTieringConfigurationsList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -658,7 +651,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketIntelligentTieringConfigurationsTagFiltersList",
 		reflect.TypeOf((*DataAwsccS3BucketIntelligentTieringConfigurationsTagFiltersList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -717,7 +709,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketIntelligentTieringConfigurationsTieringsList",
 		reflect.TypeOf((*DataAwsccS3BucketIntelligentTieringConfigurationsTieringsList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -816,7 +807,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketInventoryConfigurationsList",
 		reflect.TypeOf((*DataAwsccS3BucketInventoryConfigurationsList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -954,7 +944,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketLifecycleConfigurationRulesList",
 		reflect.TypeOf((*DataAwsccS3BucketLifecycleConfigurationRulesList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1056,7 +1045,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketLifecycleConfigurationRulesNoncurrentVersionTransitionsList",
 		reflect.TypeOf((*DataAwsccS3BucketLifecycleConfigurationRulesNoncurrentVersionTransitionsList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1164,7 +1152,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketLifecycleConfigurationRulesTagFiltersList",
 		reflect.TypeOf((*DataAwsccS3BucketLifecycleConfigurationRulesTagFiltersList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1262,7 +1249,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketLifecycleConfigurationRulesTransitionsList",
 		reflect.TypeOf((*DataAwsccS3BucketLifecycleConfigurationRulesTransitionsList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1436,7 +1422,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketMetricsConfigurationsList",
 		reflect.TypeOf((*DataAwsccS3BucketMetricsConfigurationsList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1497,7 +1482,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketMetricsConfigurationsTagFiltersList",
 		reflect.TypeOf((*DataAwsccS3BucketMetricsConfigurationsTagFiltersList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1675,7 +1659,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketNotificationConfigurationLambdaConfigurationsFilterS3KeyRulesList",
 		reflect.TypeOf((*DataAwsccS3BucketNotificationConfigurationLambdaConfigurationsFilterS3KeyRulesList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1730,7 +1713,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketNotificationConfigurationLambdaConfigurationsList",
 		reflect.TypeOf((*DataAwsccS3BucketNotificationConfigurationLambdaConfigurationsList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1904,7 +1886,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketNotificationConfigurationQueueConfigurationsFilterS3KeyRulesList",
 		reflect.TypeOf((*DataAwsccS3BucketNotificationConfigurationQueueConfigurationsFilterS3KeyRulesList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1959,7 +1940,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketNotificationConfigurationQueueConfigurationsList",
 		reflect.TypeOf((*DataAwsccS3BucketNotificationConfigurationQueueConfigurationsList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -2097,7 +2077,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketNotificationConfigurationTopicConfigurationsFilterS3KeyRulesList",
 		reflect.TypeOf((*DataAwsccS3BucketNotificationConfigurationTopicConfigurationsFilterS3KeyRulesList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -2152,7 +2131,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketNotificationConfigurationTopicConfigurationsList",
 		reflect.TypeOf((*DataAwsccS3BucketNotificationConfigurationTopicConfigurationsList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -2363,7 +2341,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketOwnershipControlsRulesList",
 		reflect.TypeOf((*DataAwsccS3BucketOwnershipControlsRulesList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -2849,7 +2826,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketReplicationConfigurationRulesFilterAndTagFiltersList",
 		reflect.TypeOf((*DataAwsccS3BucketReplicationConfigurationRulesFilterAndTagFiltersList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -2977,7 +2953,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketReplicationConfigurationRulesList",
 		reflect.TypeOf((*DataAwsccS3BucketReplicationConfigurationRulesList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -3154,7 +3129,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketTagsList",
 		reflect.TypeOf((*DataAwsccS3BucketTagsList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -3328,7 +3302,6 @@ func init() {
 		"awscc.dataAwsccS3Bucket.DataAwsccS3BucketWebsiteConfigurationRoutingRulesList",
 		reflect.TypeOf((*DataAwsccS3BucketWebsiteConfigurationRoutingRulesList)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},

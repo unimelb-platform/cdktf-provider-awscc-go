@@ -56,15 +56,7 @@ func (c *jsiiProxy_ConnectApprovedOrigin) validateInterpolationForAttributeParam
 	return nil
 }
 
-func (c *jsiiProxy_ConnectApprovedOrigin) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_ConnectApprovedOrigin) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (c *jsiiProxy_ConnectApprovedOrigin) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

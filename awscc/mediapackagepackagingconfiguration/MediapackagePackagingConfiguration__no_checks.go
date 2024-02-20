@@ -56,15 +56,7 @@ func (m *jsiiProxy_MediapackagePackagingConfiguration) validateInterpolationForA
 	return nil
 }
 
-func (m *jsiiProxy_MediapackagePackagingConfiguration) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (m *jsiiProxy_MediapackagePackagingConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (m *jsiiProxy_MediapackagePackagingConfiguration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

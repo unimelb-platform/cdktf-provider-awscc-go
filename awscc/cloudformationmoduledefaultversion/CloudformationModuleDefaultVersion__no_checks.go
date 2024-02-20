@@ -56,15 +56,7 @@ func (c *jsiiProxy_CloudformationModuleDefaultVersion) validateInterpolationForA
 	return nil
 }
 
-func (c *jsiiProxy_CloudformationModuleDefaultVersion) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_CloudformationModuleDefaultVersion) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (c *jsiiProxy_CloudformationModuleDefaultVersion) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

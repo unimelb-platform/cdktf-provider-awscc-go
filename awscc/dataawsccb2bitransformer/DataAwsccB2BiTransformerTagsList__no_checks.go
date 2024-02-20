@@ -4,10 +4,6 @@ package dataawsccb2bitransformer
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccB2BiTransformerTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccB2BiTransformerTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

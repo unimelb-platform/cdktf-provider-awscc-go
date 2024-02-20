@@ -56,15 +56,7 @@ func (d *jsiiProxy_DatasyncLocationFsxLustre) validateInterpolationForAttributeP
 	return nil
 }
 
-func (d *jsiiProxy_DatasyncLocationFsxLustre) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DatasyncLocationFsxLustre) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (d *jsiiProxy_DatasyncLocationFsxLustre) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -56,15 +56,7 @@ func (p *jsiiProxy_PinpointInAppTemplate) validateInterpolationForAttributeParam
 	return nil
 }
 
-func (p *jsiiProxy_PinpointInAppTemplate) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (p *jsiiProxy_PinpointInAppTemplate) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (p *jsiiProxy_PinpointInAppTemplate) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

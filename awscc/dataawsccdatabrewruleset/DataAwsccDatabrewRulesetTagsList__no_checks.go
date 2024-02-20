@@ -4,10 +4,6 @@ package dataawsccdatabrewruleset
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccDatabrewRulesetTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccDatabrewRulesetTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -56,15 +56,7 @@ func (e *jsiiProxy_ElasticacheGlobalReplicationGroup) validateInterpolationForAt
 	return nil
 }
 
-func (e *jsiiProxy_ElasticacheGlobalReplicationGroup) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_ElasticacheGlobalReplicationGroup) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_ElasticacheGlobalReplicationGroup) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

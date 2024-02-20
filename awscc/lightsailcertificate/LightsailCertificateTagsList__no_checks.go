@@ -4,10 +4,6 @@ package lightsailcertificate
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (l *jsiiProxy_LightsailCertificateTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (l *jsiiProxy_LightsailCertificateTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -102,22 +102,12 @@ type DatasyncAgent interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
-	HasResourceMove() interface{}
-	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
-	// Move the resource corresponding to "id" to this resource.
-	//
-	// Note that the resource being moved from must be marked as moved using it's instance function.
-	// Experimental.
-	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
-	// Moves this resource to the resource corresponding to "id".
-	// Experimental.
-	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -132,9 +122,6 @@ type DatasyncAgent interface {
 	ResetTags()
 	ResetVpcEndpointId()
 	SynthesizeAttributes() *map[string]interface{}
-	SynthesizeHclAttributes() *map[string]interface{}
-	// Experimental.
-	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -881,19 +868,6 @@ func (d *jsiiProxy_DatasyncAgent) GetStringMapAttribute(terraformAttribute *stri
 	return returns
 }
 
-func (d *jsiiProxy_DatasyncAgent) HasResourceMove() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		d,
-		"hasResourceMove",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
 func (d *jsiiProxy_DatasyncAgent) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := d.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -921,17 +895,6 @@ func (d *jsiiProxy_DatasyncAgent) InterpolationForAttribute(terraformAttribute *
 	return returns
 }
 
-func (d *jsiiProxy_DatasyncAgent) MoveFromId(id *string) {
-	if err := d.validateMoveFromIdParameters(id); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		d,
-		"moveFromId",
-		[]interface{}{id},
-	)
-}
-
 func (d *jsiiProxy_DatasyncAgent) MoveTo(moveTarget *string, index interface{}) {
 	if err := d.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -940,17 +903,6 @@ func (d *jsiiProxy_DatasyncAgent) MoveTo(moveTarget *string, index interface{}) 
 		d,
 		"moveTo",
 		[]interface{}{moveTarget, index},
-	)
-}
-
-func (d *jsiiProxy_DatasyncAgent) MoveToId(id *string) {
-	if err := d.validateMoveToIdParameters(id); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		d,
-		"moveToId",
-		[]interface{}{id},
 	)
 }
 
@@ -1038,32 +990,6 @@ func (d *jsiiProxy_DatasyncAgent) SynthesizeAttributes() *map[string]interface{}
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (d *jsiiProxy_DatasyncAgent) SynthesizeHclAttributes() *map[string]interface{} {
-	var returns *map[string]interface{}
-
-	_jsii_.Invoke(
-		d,
-		"synthesizeHclAttributes",
-		nil, // no parameters
-		&returns,
-	)
-
-	return returns
-}
-
-func (d *jsiiProxy_DatasyncAgent) ToHclTerraform() interface{} {
-	var returns interface{}
-
-	_jsii_.Invoke(
-		d,
-		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

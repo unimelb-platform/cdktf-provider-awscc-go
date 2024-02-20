@@ -4,10 +4,6 @@ package dataawscceksfargateprofile
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccEksFargateProfileSelectorsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccEksFargateProfileSelectorsList) validateGetParameters(index *float64) error {
 	return nil
 }

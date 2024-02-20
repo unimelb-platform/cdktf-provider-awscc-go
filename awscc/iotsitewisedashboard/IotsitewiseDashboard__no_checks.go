@@ -56,15 +56,7 @@ func (i *jsiiProxy_IotsitewiseDashboard) validateInterpolationForAttributeParame
 	return nil
 }
 
-func (i *jsiiProxy_IotsitewiseDashboard) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IotsitewiseDashboard) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (i *jsiiProxy_IotsitewiseDashboard) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

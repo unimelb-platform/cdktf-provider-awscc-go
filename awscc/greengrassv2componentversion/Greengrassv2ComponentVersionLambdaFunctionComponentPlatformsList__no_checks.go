@@ -4,10 +4,6 @@ package greengrassv2componentversion
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (g *jsiiProxy_Greengrassv2ComponentVersionLambdaFunctionComponentPlatformsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (g *jsiiProxy_Greengrassv2ComponentVersionLambdaFunctionComponentPlatformsList) validateGetParameters(index *float64) error {
 	return nil
 }

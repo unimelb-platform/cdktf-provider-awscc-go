@@ -4,10 +4,6 @@ package dataawsccnetworkfirewallloggingconfiguration
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccNetworkfirewallLoggingConfigurationLoggingConfigurationLogDestinationConfigsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccNetworkfirewallLoggingConfigurationLoggingConfigurationLogDestinationConfigsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -56,15 +56,7 @@ func (g *jsiiProxy_GroundstationMissionProfile) validateInterpolationForAttribut
 	return nil
 }
 
-func (g *jsiiProxy_GroundstationMissionProfile) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (g *jsiiProxy_GroundstationMissionProfile) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (g *jsiiProxy_GroundstationMissionProfile) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

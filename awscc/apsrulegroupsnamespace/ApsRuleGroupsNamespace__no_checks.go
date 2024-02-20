@@ -56,15 +56,7 @@ func (a *jsiiProxy_ApsRuleGroupsNamespace) validateInterpolationForAttributePara
 	return nil
 }
 
-func (a *jsiiProxy_ApsRuleGroupsNamespace) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (a *jsiiProxy_ApsRuleGroupsNamespace) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (a *jsiiProxy_ApsRuleGroupsNamespace) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

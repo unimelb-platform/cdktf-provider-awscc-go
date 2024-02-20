@@ -119,14 +119,6 @@ func (a *jsiiProxy_AutoscalingWarmPool) validateInterpolationForAttributeParamet
 	return nil
 }
 
-func (a *jsiiProxy_AutoscalingWarmPool) validateMoveFromIdParameters(id *string) error {
-	if id == nil {
-		return fmt.Errorf("parameter id is required, but nil was provided")
-	}
-
-	return nil
-}
-
 func (a *jsiiProxy_AutoscalingWarmPool) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -183,14 +175,6 @@ func (a *jsiiProxy_AutoscalingWarmPool) validateMoveToParameters(moveTarget *str
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
-	}
-
-	return nil
-}
-
-func (a *jsiiProxy_AutoscalingWarmPool) validateMoveToIdParameters(id *string) error {
-	if id == nil {
-		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil

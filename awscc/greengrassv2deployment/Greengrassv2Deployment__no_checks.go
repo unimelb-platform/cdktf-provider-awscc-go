@@ -56,15 +56,7 @@ func (g *jsiiProxy_Greengrassv2Deployment) validateInterpolationForAttributePara
 	return nil
 }
 
-func (g *jsiiProxy_Greengrassv2Deployment) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (g *jsiiProxy_Greengrassv2Deployment) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (g *jsiiProxy_Greengrassv2Deployment) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

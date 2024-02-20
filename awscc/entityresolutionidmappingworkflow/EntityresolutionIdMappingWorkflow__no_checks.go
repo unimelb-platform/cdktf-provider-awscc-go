@@ -56,15 +56,7 @@ func (e *jsiiProxy_EntityresolutionIdMappingWorkflow) validateInterpolationForAt
 	return nil
 }
 
-func (e *jsiiProxy_EntityresolutionIdMappingWorkflow) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_EntityresolutionIdMappingWorkflow) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (e *jsiiProxy_EntityresolutionIdMappingWorkflow) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

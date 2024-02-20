@@ -4,10 +4,6 @@ package efsfilesystem
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (e *jsiiProxy_EfsFileSystemLifecyclePoliciesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_EfsFileSystemLifecyclePoliciesList) validateGetParameters(index *float64) error {
 	return nil
 }

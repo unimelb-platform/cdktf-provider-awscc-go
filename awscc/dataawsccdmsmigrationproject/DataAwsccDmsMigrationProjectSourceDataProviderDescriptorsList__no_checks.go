@@ -4,10 +4,6 @@ package dataawsccdmsmigrationproject
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccDmsMigrationProjectSourceDataProviderDescriptorsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccDmsMigrationProjectSourceDataProviderDescriptorsList) validateGetParameters(index *float64) error {
 	return nil
 }

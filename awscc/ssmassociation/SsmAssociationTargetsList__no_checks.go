@@ -4,10 +4,6 @@ package ssmassociation
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (s *jsiiProxy_SsmAssociationTargetsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_SsmAssociationTargetsList) validateGetParameters(index *float64) error {
 	return nil
 }

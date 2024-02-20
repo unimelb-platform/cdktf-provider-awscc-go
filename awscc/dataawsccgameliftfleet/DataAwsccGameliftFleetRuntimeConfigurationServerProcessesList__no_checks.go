@@ -4,10 +4,6 @@ package dataawsccgameliftfleet
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccGameliftFleetRuntimeConfigurationServerProcessesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccGameliftFleetRuntimeConfigurationServerProcessesList) validateGetParameters(index *float64) error {
 	return nil
 }

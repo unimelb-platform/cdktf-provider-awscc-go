@@ -56,15 +56,7 @@ func (c *jsiiProxy_CodeguruprofilerProfilingGroup) validateInterpolationForAttri
 	return nil
 }
 
-func (c *jsiiProxy_CodeguruprofilerProfilingGroup) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_CodeguruprofilerProfilingGroup) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (c *jsiiProxy_CodeguruprofilerProfilingGroup) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -4,10 +4,6 @@ package robomakerrobotapplication
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (r *jsiiProxy_RobomakerRobotApplicationSourcesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (r *jsiiProxy_RobomakerRobotApplicationSourcesList) validateGetParameters(index *float64) error {
 	return nil
 }

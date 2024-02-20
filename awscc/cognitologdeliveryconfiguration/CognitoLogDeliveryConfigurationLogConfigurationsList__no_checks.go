@@ -4,10 +4,6 @@ package cognitologdeliveryconfiguration
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (c *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsList) validateGetParameters(index *float64) error {
 	return nil
 }

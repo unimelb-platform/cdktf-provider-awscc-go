@@ -56,15 +56,7 @@ func (c *jsiiProxy_CodegurureviewerRepositoryAssociation) validateInterpolationF
 	return nil
 }
 
-func (c *jsiiProxy_CodegurureviewerRepositoryAssociation) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (c *jsiiProxy_CodegurureviewerRepositoryAssociation) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (c *jsiiProxy_CodegurureviewerRepositoryAssociation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

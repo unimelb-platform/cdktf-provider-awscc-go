@@ -4,10 +4,6 @@ package globalacceleratoraccelerator
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (g *jsiiProxy_GlobalacceleratorAcceleratorTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (g *jsiiProxy_GlobalacceleratorAcceleratorTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

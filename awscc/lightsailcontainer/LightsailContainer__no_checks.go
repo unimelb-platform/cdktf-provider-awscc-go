@@ -56,15 +56,7 @@ func (l *jsiiProxy_LightsailContainer) validateInterpolationForAttributeParamete
 	return nil
 }
 
-func (l *jsiiProxy_LightsailContainer) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (l *jsiiProxy_LightsailContainer) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (l *jsiiProxy_LightsailContainer) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

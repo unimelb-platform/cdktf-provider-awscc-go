@@ -56,15 +56,7 @@ func (n *jsiiProxy_NimblestudioLaunchProfile) validateInterpolationForAttributeP
 	return nil
 }
 
-func (n *jsiiProxy_NimblestudioLaunchProfile) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (n *jsiiProxy_NimblestudioLaunchProfile) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (n *jsiiProxy_NimblestudioLaunchProfile) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -56,15 +56,7 @@ func (r *jsiiProxy_RedshiftClusterParameterGroup) validateInterpolationForAttrib
 	return nil
 }
 
-func (r *jsiiProxy_RedshiftClusterParameterGroup) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (r *jsiiProxy_RedshiftClusterParameterGroup) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (r *jsiiProxy_RedshiftClusterParameterGroup) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

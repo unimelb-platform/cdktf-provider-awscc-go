@@ -56,15 +56,7 @@ func (s *jsiiProxy_SagemakerModelBiasJobDefinition) validateInterpolationForAttr
 	return nil
 }
 
-func (s *jsiiProxy_SagemakerModelBiasJobDefinition) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_SagemakerModelBiasJobDefinition) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (s *jsiiProxy_SagemakerModelBiasJobDefinition) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

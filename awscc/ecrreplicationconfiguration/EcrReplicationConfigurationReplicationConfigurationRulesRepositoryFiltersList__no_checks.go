@@ -4,10 +4,6 @@ package ecrreplicationconfiguration
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (e *jsiiProxy_EcrReplicationConfigurationReplicationConfigurationRulesRepositoryFiltersList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (e *jsiiProxy_EcrReplicationConfigurationReplicationConfigurationRulesRepositoryFiltersList) validateGetParameters(index *float64) error {
 	return nil
 }

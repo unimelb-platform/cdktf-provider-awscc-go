@@ -4,10 +4,6 @@ package dataawsccnetworkmanagersitetositevpnattachment
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccNetworkmanagerSiteToSiteVpnAttachmentProposedSegmentChangeTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccNetworkmanagerSiteToSiteVpnAttachmentProposedSegmentChangeTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

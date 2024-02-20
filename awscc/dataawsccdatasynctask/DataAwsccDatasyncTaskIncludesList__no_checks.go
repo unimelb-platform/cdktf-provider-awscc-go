@@ -4,10 +4,6 @@ package dataawsccdatasynctask
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DataAwsccDatasyncTaskIncludesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataAwsccDatasyncTaskIncludesList) validateGetParameters(index *float64) error {
 	return nil
 }

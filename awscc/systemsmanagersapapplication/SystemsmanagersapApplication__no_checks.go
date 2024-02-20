@@ -56,15 +56,7 @@ func (s *jsiiProxy_SystemsmanagersapApplication) validateInterpolationForAttribu
 	return nil
 }
 
-func (s *jsiiProxy_SystemsmanagersapApplication) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (s *jsiiProxy_SystemsmanagersapApplication) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (s *jsiiProxy_SystemsmanagersapApplication) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

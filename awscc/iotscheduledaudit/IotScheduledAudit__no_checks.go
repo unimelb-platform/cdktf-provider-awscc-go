@@ -56,15 +56,7 @@ func (i *jsiiProxy_IotScheduledAudit) validateInterpolationForAttributeParameter
 	return nil
 }
 
-func (i *jsiiProxy_IotScheduledAudit) validateMoveFromIdParameters(id *string) error {
-	return nil
-}
-
 func (i *jsiiProxy_IotScheduledAudit) validateMoveToParameters(moveTarget *string, index interface{}) error {
-	return nil
-}
-
-func (i *jsiiProxy_IotScheduledAudit) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
