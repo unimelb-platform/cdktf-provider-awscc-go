@@ -30,7 +30,9 @@ jobs:
         run: yarn install
 
       - name: Generate module and provider bindings
-        run: npx cdktf-cli get
+        env:
+          CDKTF_CLI_VER: 0.19.1
+        run: npx cdktf-cli@$CDKTF_CLI_VER get
 
       - name: go mod tidy
         run: go mod tidy
