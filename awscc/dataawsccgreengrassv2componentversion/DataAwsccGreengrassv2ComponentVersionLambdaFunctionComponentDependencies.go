@@ -1,0 +1,6 @@
+package dataawsccgreengrassv2componentversion
+
+
+type DataAwsccGreengrassv2ComponentVersionLambdaFunctionComponentDependencies struct {
+}
+

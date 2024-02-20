@@ -1,0 +1,6 @@
+package dataawsccacmpcacertificateauthority
+
+
+type DataAwsccAcmpcaCertificateAuthoritySubjectCustomAttributes struct {
+}
+

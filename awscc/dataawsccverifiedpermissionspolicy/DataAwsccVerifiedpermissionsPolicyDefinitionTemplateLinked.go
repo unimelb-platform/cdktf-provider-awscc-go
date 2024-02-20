@@ -1,0 +1,6 @@
+package dataawsccverifiedpermissionspolicy
+
+
+type DataAwsccVerifiedpermissionsPolicyDefinitionTemplateLinked struct {
+}
+

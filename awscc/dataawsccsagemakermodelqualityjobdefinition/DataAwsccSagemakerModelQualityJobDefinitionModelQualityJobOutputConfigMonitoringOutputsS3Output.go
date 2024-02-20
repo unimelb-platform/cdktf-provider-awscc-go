@@ -1,0 +1,6 @@
+package dataawsccsagemakermodelqualityjobdefinition
+
+
+type DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobOutputConfigMonitoringOutputsS3Output struct {
+}
+

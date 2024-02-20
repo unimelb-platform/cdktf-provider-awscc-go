@@ -1,0 +1,6 @@
+package dataawscciotwirelesstaskdefinition
+
+
+type DataAwsccIotwirelessTaskDefinitionLoRaWanUpdateGatewayTaskEntryCurrentVersion struct {
+}
+

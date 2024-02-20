@@ -1,0 +1,6 @@
+package dataawsccfisexperimenttemplate
+
+
+type DataAwsccFisExperimentTemplateLogConfigurationCloudwatchLogsConfiguration struct {
+}
+

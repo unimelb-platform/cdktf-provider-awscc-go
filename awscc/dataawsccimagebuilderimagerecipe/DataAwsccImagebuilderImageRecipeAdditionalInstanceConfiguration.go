@@ -1,0 +1,6 @@
+package dataawsccimagebuilderimagerecipe
+
+
+type DataAwsccImagebuilderImageRecipeAdditionalInstanceConfiguration struct {
+}
+

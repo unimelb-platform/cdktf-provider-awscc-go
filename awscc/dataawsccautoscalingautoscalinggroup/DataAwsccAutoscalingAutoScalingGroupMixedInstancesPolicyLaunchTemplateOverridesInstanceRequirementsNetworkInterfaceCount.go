@@ -1,0 +1,6 @@
+package dataawsccautoscalingautoscalinggroup
+
+
+type DataAwsccAutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsNetworkInterfaceCount struct {
+}
+

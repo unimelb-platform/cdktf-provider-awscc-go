@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawscccloudfrontdistribution
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValuesCookiesOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValuesCookiesOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValuesCookiesOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValuesCookiesOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValuesCookiesOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValuesCookiesOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValuesCookiesOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValuesCookiesOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValuesCookiesOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValuesCookiesOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValuesCookiesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValuesCookiesOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValuesCookiesOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValuesCookiesOutputReference) validateSetInternalValueParameters(val *DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValuesCookies) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValuesCookiesOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValuesCookiesOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValuesCookiesOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

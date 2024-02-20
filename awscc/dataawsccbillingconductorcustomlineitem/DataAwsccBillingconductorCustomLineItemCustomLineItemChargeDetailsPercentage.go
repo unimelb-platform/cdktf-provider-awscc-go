@@ -1,0 +1,6 @@
+package dataawsccbillingconductorcustomlineitem
+
+
+type DataAwsccBillingconductorCustomLineItemCustomLineItemChargeDetailsPercentage struct {
+}
+

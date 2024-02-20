@@ -1,0 +1,6 @@
+package dataawscclightsaildistribution
+
+
+type DataAwsccLightsailDistributionCacheBehaviorSettingsForwardedQueryStrings struct {
+}
+

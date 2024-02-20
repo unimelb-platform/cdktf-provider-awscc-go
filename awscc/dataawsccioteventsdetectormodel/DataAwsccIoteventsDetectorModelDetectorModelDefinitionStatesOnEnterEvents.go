@@ -1,0 +1,6 @@
+package dataawsccioteventsdetectormodel
+
+
+type DataAwsccIoteventsDetectorModelDetectorModelDefinitionStatesOnEnterEvents struct {
+}
+

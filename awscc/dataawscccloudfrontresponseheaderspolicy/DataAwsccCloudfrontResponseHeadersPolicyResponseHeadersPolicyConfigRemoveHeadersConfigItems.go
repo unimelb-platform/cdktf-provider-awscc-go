@@ -1,0 +1,6 @@
+package dataawscccloudfrontresponseheaderspolicy
+
+
+type DataAwsccCloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItems struct {
+}
+

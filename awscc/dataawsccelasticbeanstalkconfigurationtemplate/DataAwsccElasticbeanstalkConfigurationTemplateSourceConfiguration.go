@@ -1,0 +1,6 @@
+package dataawsccelasticbeanstalkconfigurationtemplate
+
+
+type DataAwsccElasticbeanstalkConfigurationTemplateSourceConfiguration struct {
+}
+

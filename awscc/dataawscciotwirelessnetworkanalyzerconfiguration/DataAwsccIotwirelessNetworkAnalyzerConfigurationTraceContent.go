@@ -1,0 +1,6 @@
+package dataawscciotwirelessnetworkanalyzerconfiguration
+
+
+type DataAwsccIotwirelessNetworkAnalyzerConfigurationTraceContent struct {
+}
+

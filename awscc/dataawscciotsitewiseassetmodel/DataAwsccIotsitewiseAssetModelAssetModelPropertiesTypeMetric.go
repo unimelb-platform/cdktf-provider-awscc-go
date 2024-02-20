@@ -1,0 +1,6 @@
+package dataawscciotsitewiseassetmodel
+
+
+type DataAwsccIotsitewiseAssetModelAssetModelPropertiesTypeMetric struct {
+}
+

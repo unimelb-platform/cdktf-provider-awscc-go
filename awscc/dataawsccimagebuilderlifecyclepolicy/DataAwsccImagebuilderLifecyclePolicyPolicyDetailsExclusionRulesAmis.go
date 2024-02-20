@@ -1,0 +1,6 @@
+package dataawsccimagebuilderlifecyclepolicy
+
+
+type DataAwsccImagebuilderLifecyclePolicyPolicyDetailsExclusionRulesAmis struct {
+}
+

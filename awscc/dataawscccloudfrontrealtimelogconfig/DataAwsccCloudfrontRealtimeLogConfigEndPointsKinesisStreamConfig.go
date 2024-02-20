@@ -1,0 +1,6 @@
+package dataawscccloudfrontrealtimelogconfig
+
+
+type DataAwsccCloudfrontRealtimeLogConfigEndPointsKinesisStreamConfig struct {
+}
+

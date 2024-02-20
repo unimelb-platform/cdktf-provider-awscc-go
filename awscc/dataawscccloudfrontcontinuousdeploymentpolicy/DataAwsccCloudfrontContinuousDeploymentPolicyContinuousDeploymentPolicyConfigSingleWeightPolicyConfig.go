@@ -1,0 +1,6 @@
+package dataawscccloudfrontcontinuousdeploymentpolicy
+
+
+type DataAwsccCloudfrontContinuousDeploymentPolicyContinuousDeploymentPolicyConfigSingleWeightPolicyConfig struct {
+}
+

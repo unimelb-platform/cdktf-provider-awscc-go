@@ -1,0 +1,6 @@
+package dataawsccsagemakerinferencecomponent
+
+
+type DataAwsccSagemakerInferenceComponentSpecificationComputeResourceRequirements struct {
+}
+

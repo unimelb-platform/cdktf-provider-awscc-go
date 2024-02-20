@@ -1,0 +1,6 @@
+package dataawsccimagebuildercontainerrecipe
+
+
+type DataAwsccImagebuilderContainerRecipeInstanceConfigurationBlockDeviceMappingsEbs struct {
+}
+

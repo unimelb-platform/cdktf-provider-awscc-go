@@ -1,0 +1,6 @@
+package dataawsccecscapacityprovider
+
+
+type DataAwsccEcsCapacityProviderAutoScalingGroupProviderManagedScaling struct {
+}
+

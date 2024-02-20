@@ -1,0 +1,6 @@
+package dataawscccloudfrontcachepolicy
+
+
+type DataAwsccCloudfrontCachePolicyCachePolicyConfigParametersInCacheKeyAndForwardedToOriginHeadersConfig struct {
+}
+

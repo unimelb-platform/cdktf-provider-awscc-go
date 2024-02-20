@@ -1,0 +1,6 @@
+package dataawsccappflowconnectorprofile
+
+
+type DataAwsccAppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsInforNexus struct {
+}
+

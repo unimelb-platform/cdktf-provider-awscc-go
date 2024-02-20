@@ -1,0 +1,6 @@
+package dataawsccimagebuilderimagepipeline
+
+
+type DataAwsccImagebuilderImagePipelineImageTestsConfiguration struct {
+}
+

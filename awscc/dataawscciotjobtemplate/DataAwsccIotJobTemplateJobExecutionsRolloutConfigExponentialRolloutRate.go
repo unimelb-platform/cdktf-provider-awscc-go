@@ -1,0 +1,6 @@
+package dataawscciotjobtemplate
+
+
+type DataAwsccIotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRate struct {
+}
+

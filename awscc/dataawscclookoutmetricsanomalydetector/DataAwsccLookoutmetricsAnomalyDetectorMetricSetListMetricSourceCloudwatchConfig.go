@@ -1,0 +1,6 @@
+package dataawscclookoutmetricsanomalydetector
+
+
+type DataAwsccLookoutmetricsAnomalyDetectorMetricSetListMetricSourceCloudwatchConfig struct {
+}
+

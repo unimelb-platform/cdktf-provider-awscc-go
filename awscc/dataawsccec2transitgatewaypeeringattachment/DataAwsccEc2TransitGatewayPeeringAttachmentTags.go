@@ -1,0 +1,6 @@
+package dataawsccec2transitgatewaypeeringattachment
+
+
+type DataAwsccEc2TransitGatewayPeeringAttachmentTags struct {
+}
+

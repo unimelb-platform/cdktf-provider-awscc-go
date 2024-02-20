@@ -1,0 +1,6 @@
+package dataawscciotsitewiseaccesspolicy
+
+
+type DataAwsccIotsitewiseAccessPolicyAccessPolicyResourcePortal struct {
+}
+

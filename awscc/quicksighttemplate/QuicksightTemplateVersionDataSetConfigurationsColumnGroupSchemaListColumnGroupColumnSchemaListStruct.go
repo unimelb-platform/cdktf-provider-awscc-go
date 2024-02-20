@@ -1,0 +1,6 @@
+package quicksighttemplate
+
+
+type QuicksightTemplateVersionDataSetConfigurationsColumnGroupSchemaListColumnGroupColumnSchemaListStruct struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawscctimestreamtable
+
+
+type DataAwsccTimestreamTableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3Configuration struct {
+}
+

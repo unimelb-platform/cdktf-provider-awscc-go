@@ -1,0 +1,6 @@
+package dataawscccustomerprofilesobjecttype
+
+
+type DataAwsccCustomerprofilesObjectTypeFieldsObjectTypeField struct {
+}
+

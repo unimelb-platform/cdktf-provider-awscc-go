@@ -1,0 +1,6 @@
+package dataawsccssmpatchbaseline
+
+
+type DataAwsccSsmPatchBaselineApprovalRulesPatchRulesPatchFilterGroupPatchFilters struct {
+}
+

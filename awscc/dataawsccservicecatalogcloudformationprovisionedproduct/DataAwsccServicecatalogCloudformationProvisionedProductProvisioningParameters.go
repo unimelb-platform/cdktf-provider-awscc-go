@@ -1,0 +1,6 @@
+package dataawsccservicecatalogcloudformationprovisionedproduct
+
+
+type DataAwsccServicecatalogCloudformationProvisionedProductProvisioningParameters struct {
+}
+

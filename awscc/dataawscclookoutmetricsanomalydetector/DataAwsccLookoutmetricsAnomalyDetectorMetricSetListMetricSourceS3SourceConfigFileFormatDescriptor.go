@@ -1,0 +1,6 @@
+package dataawscclookoutmetricsanomalydetector
+
+
+type DataAwsccLookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3SourceConfigFileFormatDescriptor struct {
+}
+

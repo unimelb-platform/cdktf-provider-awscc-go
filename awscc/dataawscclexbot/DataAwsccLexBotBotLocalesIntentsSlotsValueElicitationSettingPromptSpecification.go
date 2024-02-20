@@ -1,0 +1,6 @@
+package dataawscclexbot
+
+
+type DataAwsccLexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecification struct {
+}
+

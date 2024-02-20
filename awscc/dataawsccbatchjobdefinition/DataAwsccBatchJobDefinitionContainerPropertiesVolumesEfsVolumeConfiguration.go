@@ -1,0 +1,6 @@
+package dataawsccbatchjobdefinition
+
+
+type DataAwsccBatchJobDefinitionContainerPropertiesVolumesEfsVolumeConfiguration struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawscclookoutequipmentinferencescheduler
+
+
+type DataAwsccLookoutequipmentInferenceSchedulerDataOutputConfiguration struct {
+}
+

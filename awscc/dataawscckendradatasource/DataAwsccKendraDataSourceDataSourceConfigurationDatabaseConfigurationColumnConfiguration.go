@@ -1,0 +1,6 @@
+package dataawscckendradatasource
+
+
+type DataAwsccKendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfiguration struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccquicksightdatasource
+
+
+type DataAwsccQuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocation struct {
+}
+

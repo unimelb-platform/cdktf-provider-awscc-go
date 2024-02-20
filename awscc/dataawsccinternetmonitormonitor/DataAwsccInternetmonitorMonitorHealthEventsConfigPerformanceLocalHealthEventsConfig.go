@@ -1,0 +1,6 @@
+package dataawsccinternetmonitormonitor
+
+
+type DataAwsccInternetmonitorMonitorHealthEventsConfigPerformanceLocalHealthEventsConfig struct {
+}
+

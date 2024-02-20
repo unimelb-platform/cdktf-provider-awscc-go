@@ -1,0 +1,6 @@
+package dataawscctransferworkflow
+
+
+type DataAwsccTransferWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocation struct {
+}
+

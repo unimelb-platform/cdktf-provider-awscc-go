@@ -1,0 +1,6 @@
+package dataawscclexbot
+
+
+type DataAwsccLexBotBotLocalesIntentsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupsListMessageImageResponseCard struct {
+}
+

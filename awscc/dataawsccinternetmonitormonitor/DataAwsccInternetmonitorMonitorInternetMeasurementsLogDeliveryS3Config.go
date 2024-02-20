@@ -1,0 +1,6 @@
+package dataawsccinternetmonitormonitor
+
+
+type DataAwsccInternetmonitorMonitorInternetMeasurementsLogDeliveryS3Config struct {
+}
+

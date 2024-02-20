@@ -1,0 +1,6 @@
+package dataawscccloudfrontdistribution
+
+
+type DataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteria struct {
+}
+

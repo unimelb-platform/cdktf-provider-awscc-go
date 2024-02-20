@@ -1,0 +1,6 @@
+package dataawsccpcaconnectoradtemplate
+
+
+type DataAwsccPcaconnectoradTemplateDefinitionTemplateV2CertificateValidity struct {
+}
+

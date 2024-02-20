@@ -1,0 +1,6 @@
+package dataawscccloudfrontresponseheaderspolicy
+
+
+type DataAwsccCloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigSecurityHeadersConfigStrictTransportSecurity struct {
+}
+

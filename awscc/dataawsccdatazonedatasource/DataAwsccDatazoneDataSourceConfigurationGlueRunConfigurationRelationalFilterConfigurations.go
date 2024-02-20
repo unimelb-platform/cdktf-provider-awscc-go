@@ -1,0 +1,6 @@
+package dataawsccdatazonedatasource
+
+
+type DataAwsccDatazoneDataSourceConfigurationGlueRunConfigurationRelationalFilterConfigurations struct {
+}
+

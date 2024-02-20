@@ -1,0 +1,6 @@
+package dataawsccsagemakermodelexplainabilityjobdefinition
+
+
+type DataAwsccSagemakerModelExplainabilityJobDefinitionNetworkConfigVpcConfig struct {
+}
+

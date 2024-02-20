@@ -1,0 +1,6 @@
+package dataawscccassandratable
+
+
+type DataAwsccCassandraTableReplicaSpecificationsReadCapacityAutoScaling struct {
+}
+

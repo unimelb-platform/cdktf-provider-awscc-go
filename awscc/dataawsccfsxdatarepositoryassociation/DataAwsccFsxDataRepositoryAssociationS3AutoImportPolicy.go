@@ -1,0 +1,6 @@
+package dataawsccfsxdatarepositoryassociation
+
+
+type DataAwsccFsxDataRepositoryAssociationS3AutoImportPolicy struct {
+}
+

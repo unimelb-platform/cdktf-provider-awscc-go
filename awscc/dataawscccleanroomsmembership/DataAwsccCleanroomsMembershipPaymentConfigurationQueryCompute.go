@@ -1,0 +1,6 @@
+package dataawscccleanroomsmembership
+
+
+type DataAwsccCleanroomsMembershipPaymentConfigurationQueryCompute struct {
+}
+

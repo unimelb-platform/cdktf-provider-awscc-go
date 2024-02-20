@@ -1,0 +1,6 @@
+package dataawsccdatazonedatasource
+
+
+type DataAwsccDatazoneDataSourceConfigurationRedshiftRunConfiguration struct {
+}
+

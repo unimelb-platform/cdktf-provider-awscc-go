@@ -1,0 +1,6 @@
+package dataawscctimestreamscheduledquery
+
+
+type DataAwsccTimestreamScheduledQueryTargetConfigurationTimestreamConfiguration struct {
+}
+

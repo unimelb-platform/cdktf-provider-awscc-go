@@ -1,0 +1,6 @@
+package dataawsccbillingconductorbillinggroup
+
+
+type DataAwsccBillingconductorBillingGroupComputationPreference struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccconfigconfigurationaggregator
+
+
+type DataAwsccConfigConfigurationAggregatorAccountAggregationSources struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawscccustomerprofilesintegration
+
+
+type DataAwsccCustomerprofilesIntegrationFlowDefinitionTriggerConfigTriggerProperties struct {
+}
+

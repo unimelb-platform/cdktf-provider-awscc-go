@@ -1,0 +1,6 @@
+package dataawsccmediapackagev2originendpoint
+
+
+type DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifests struct {
+}
+

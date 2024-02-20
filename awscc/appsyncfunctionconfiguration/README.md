@@ -1,0 +1,3 @@
+# `awscc_appsync_function_configuration`
+
+Refer to the Terraform Registory for docs: [`awscc_appsync_function_configuration`](https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/appsync_function_configuration).

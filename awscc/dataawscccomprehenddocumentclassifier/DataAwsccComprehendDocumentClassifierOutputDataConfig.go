@@ -1,0 +1,6 @@
+package dataawscccomprehenddocumentclassifier
+
+
+type DataAwsccComprehendDocumentClassifierOutputDataConfig struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccbackupbackupselection
+
+
+type DataAwsccBackupBackupSelectionBackupSelectionConditionsStringNotLike struct {
+}
+

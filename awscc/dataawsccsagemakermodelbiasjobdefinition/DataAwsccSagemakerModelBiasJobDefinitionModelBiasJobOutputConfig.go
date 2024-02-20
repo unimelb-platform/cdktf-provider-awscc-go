@@ -1,0 +1,6 @@
+package dataawsccsagemakermodelbiasjobdefinition
+
+
+type DataAwsccSagemakerModelBiasJobDefinitionModelBiasJobOutputConfig struct {
+}
+

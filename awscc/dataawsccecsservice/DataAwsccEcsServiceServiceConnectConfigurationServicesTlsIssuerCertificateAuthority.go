@@ -1,0 +1,6 @@
+package dataawsccecsservice
+
+
+type DataAwsccEcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthority struct {
+}
+

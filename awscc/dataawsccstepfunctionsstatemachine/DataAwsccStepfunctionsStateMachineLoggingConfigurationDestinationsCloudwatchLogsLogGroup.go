@@ -1,0 +1,6 @@
+package dataawsccstepfunctionsstatemachine
+
+
+type DataAwsccStepfunctionsStateMachineLoggingConfigurationDestinationsCloudwatchLogsLogGroup struct {
+}
+

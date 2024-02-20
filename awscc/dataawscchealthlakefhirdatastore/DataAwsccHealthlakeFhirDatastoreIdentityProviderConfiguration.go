@@ -1,0 +1,6 @@
+package dataawscchealthlakefhirdatastore
+
+
+type DataAwsccHealthlakeFhirDatastoreIdentityProviderConfiguration struct {
+}
+

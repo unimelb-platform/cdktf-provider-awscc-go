@@ -1,0 +1,6 @@
+package dataawsccivsrecordingconfiguration
+
+
+type DataAwsccIvsRecordingConfigurationThumbnailConfiguration struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccnetworkfirewallloggingconfiguration
+
+
+type DataAwsccNetworkfirewallLoggingConfigurationLoggingConfiguration struct {
+}
+

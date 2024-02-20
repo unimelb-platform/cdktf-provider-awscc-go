@@ -1,0 +1,6 @@
+package dataawscccognitologdeliveryconfiguration
+
+
+type DataAwsccCognitoLogDeliveryConfigurationLogConfigurationsCloudwatchLogsConfiguration struct {
+}
+

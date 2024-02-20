@@ -1,0 +1,6 @@
+package dataawsccrobomakersimulationapplication
+
+
+type DataAwsccRobomakerSimulationApplicationSimulationSoftwareSuite struct {
+}
+

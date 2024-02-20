@@ -1,0 +1,6 @@
+package dataawscccleanroomsconfiguredtable
+
+
+type DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1Aggregation struct {
+}
+

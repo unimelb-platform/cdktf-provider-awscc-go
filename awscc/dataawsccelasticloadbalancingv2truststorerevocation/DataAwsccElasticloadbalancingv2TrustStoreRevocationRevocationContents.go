@@ -1,0 +1,6 @@
+package dataawsccelasticloadbalancingv2truststorerevocation
+
+
+type DataAwsccElasticloadbalancingv2TrustStoreRevocationRevocationContents struct {
+}
+

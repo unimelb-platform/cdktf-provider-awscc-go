@@ -1,0 +1,6 @@
+package dataawsccdevopsgururesourcecollection
+
+
+type DataAwsccDevopsguruResourceCollectionResourceCollectionFilter struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccapplicationinsightsapplication
+
+
+type DataAwsccApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsAlarms struct {
+}
+

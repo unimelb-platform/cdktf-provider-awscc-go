@@ -1,0 +1,6 @@
+package dataawsccsagemakermodelpackage
+
+
+type DataAwsccSagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithms struct {
+}
+

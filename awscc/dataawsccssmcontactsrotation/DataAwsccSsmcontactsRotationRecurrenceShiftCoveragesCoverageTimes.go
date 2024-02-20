@@ -1,0 +1,6 @@
+package dataawsccssmcontactsrotation
+
+
+type DataAwsccSsmcontactsRotationRecurrenceShiftCoveragesCoverageTimes struct {
+}
+

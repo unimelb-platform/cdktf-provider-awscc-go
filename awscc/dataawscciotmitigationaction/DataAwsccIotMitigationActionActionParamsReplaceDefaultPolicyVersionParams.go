@@ -1,0 +1,6 @@
+package dataawscciotmitigationaction
+
+
+type DataAwsccIotMitigationActionActionParamsReplaceDefaultPolicyVersionParams struct {
+}
+

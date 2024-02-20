@@ -1,0 +1,6 @@
+package dataawsccbackupbackupplan
+
+
+type DataAwsccBackupBackupPlanBackupPlanBackupPlanRuleCopyActionsLifecycle struct {
+}
+

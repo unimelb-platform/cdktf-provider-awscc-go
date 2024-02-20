@@ -1,0 +1,6 @@
+package dataawscclexbot
+
+
+type DataAwsccLexBotBotLocalesSlotTypesExternalSourceSettingGrammarSlotTypeSettingSource struct {
+}
+

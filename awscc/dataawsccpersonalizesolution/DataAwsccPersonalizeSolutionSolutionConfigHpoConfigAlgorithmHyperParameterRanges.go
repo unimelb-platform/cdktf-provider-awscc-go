@@ -1,0 +1,6 @@
+package dataawsccpersonalizesolution
+
+
+type DataAwsccPersonalizeSolutionSolutionConfigHpoConfigAlgorithmHyperParameterRanges struct {
+}
+

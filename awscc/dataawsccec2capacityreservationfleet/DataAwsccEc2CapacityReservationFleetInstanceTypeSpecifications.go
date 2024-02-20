@@ -1,0 +1,6 @@
+package dataawsccec2capacityreservationfleet
+
+
+type DataAwsccEc2CapacityReservationFleetInstanceTypeSpecifications struct {
+}
+

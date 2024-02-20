@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawsccsagemakermodelqualityjobdefinition
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3InputOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3InputOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3InputOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3InputOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3InputOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3InputOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3InputOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3InputOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3InputOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3InputOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3InputOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3InputOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3InputOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3InputOutputReference) validateSetInternalValueParameters(val *DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3Input) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3InputOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3InputOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccSagemakerModelQualityJobDefinitionModelQualityJobInputGroundTruthS3InputOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

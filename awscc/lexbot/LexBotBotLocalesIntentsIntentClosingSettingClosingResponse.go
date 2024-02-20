@@ -1,0 +1,16 @@
+package lexbot
+
+
+type LexBotBotLocalesIntentsIntentClosingSettingClosingResponse struct {
+	// One to 5 message groups that contain update messages.
+	//
+	// Amazon Lex chooses one of the messages to play to the user.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lex_bot#message_groups_list LexBot#message_groups_list}
+	MessageGroupsList interface{} `field:"required" json:"messageGroupsList" yaml:"messageGroupsList"`
+	// Indicates whether the user can interrupt a speech prompt from the bot.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lex_bot#allow_interrupt LexBot#allow_interrupt}
+	AllowInterrupt interface{} `field:"optional" json:"allowInterrupt" yaml:"allowInterrupt"`
+}
+

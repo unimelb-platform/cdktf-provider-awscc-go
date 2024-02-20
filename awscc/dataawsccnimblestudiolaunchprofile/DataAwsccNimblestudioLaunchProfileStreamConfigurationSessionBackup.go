@@ -1,0 +1,6 @@
+package dataawsccnimblestudiolaunchprofile
+
+
+type DataAwsccNimblestudioLaunchProfileStreamConfigurationSessionBackup struct {
+}
+

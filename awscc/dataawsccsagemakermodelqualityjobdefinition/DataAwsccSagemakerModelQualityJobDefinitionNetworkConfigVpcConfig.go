@@ -1,0 +1,6 @@
+package dataawsccsagemakermodelqualityjobdefinition
+
+
+type DataAwsccSagemakerModelQualityJobDefinitionNetworkConfigVpcConfig struct {
+}
+

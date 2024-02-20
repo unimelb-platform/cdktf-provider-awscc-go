@@ -1,0 +1,6 @@
+package dataawsccappflowconnectorprofile
+
+
+type DataAwsccAppflowConnectorProfileConnectorProfileConfigConnectorProfilePropertiesDynatrace struct {
+}
+

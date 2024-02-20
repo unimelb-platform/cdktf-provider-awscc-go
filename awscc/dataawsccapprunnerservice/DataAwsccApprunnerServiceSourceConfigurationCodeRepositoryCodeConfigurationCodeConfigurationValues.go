@@ -1,0 +1,6 @@
+package dataawsccapprunnerservice
+
+
+type DataAwsccApprunnerServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues struct {
+}
+

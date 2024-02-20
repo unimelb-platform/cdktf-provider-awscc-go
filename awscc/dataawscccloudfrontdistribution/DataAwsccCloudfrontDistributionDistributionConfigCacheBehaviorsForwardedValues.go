@@ -1,0 +1,6 @@
+package dataawscccloudfrontdistribution
+
+
+type DataAwsccCloudfrontDistributionDistributionConfigCacheBehaviorsForwardedValues struct {
+}
+

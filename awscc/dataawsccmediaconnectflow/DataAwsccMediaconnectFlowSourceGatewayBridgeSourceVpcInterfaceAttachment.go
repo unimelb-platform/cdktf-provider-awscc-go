@@ -1,0 +1,6 @@
+package dataawsccmediaconnectflow
+
+
+type DataAwsccMediaconnectFlowSourceGatewayBridgeSourceVpcInterfaceAttachment struct {
+}
+

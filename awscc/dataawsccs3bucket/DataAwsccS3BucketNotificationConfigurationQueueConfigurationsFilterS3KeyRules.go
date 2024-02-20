@@ -1,0 +1,6 @@
+package dataawsccs3bucket
+
+
+type DataAwsccS3BucketNotificationConfigurationQueueConfigurationsFilterS3KeyRules struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccsagemakerinferenceexperiment
+
+
+type DataAwsccSagemakerInferenceExperimentEndpointMetadata struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawscccustomerprofileseventstream
+
+
+type DataAwsccCustomerprofilesEventStreamDestinationDetails struct {
+}
+

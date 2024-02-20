@@ -1,0 +1,6 @@
+package dataawscccloudformationstackset
+
+
+type DataAwsccCloudformationStackSetStackInstancesGroupDeploymentTargets struct {
+}
+

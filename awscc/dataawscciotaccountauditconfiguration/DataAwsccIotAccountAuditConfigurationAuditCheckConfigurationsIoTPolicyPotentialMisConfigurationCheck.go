@@ -1,0 +1,6 @@
+package dataawscciotaccountauditconfiguration
+
+
+type DataAwsccIotAccountAuditConfigurationAuditCheckConfigurationsIoTPolicyPotentialMisConfigurationCheck struct {
+}
+

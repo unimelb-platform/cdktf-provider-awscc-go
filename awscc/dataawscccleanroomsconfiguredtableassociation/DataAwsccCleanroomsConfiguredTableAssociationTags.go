@@ -1,0 +1,6 @@
+package dataawscccleanroomsconfiguredtableassociation
+
+
+type DataAwsccCleanroomsConfiguredTableAssociationTags struct {
+}
+

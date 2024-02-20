@@ -1,0 +1,6 @@
+package dataawsccs3multiregionaccesspoint
+
+
+type DataAwsccS3MultiRegionAccessPointPublicAccessBlockConfiguration struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccioteventsalarmmodel
+
+
+type DataAwsccIoteventsAlarmModelAlarmEventActionsAlarmActionsSqsPayload struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccbatchcomputeenvironment
+
+
+type DataAwsccBatchComputeEnvironmentComputeResourcesEc2Configuration struct {
+}
+

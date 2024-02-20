@@ -1,0 +1,6 @@
+package dataawscccomprehendflywheel
+
+
+type DataAwsccComprehendFlywheelTaskConfigEntityRecognitionConfigEntityTypes struct {
+}
+

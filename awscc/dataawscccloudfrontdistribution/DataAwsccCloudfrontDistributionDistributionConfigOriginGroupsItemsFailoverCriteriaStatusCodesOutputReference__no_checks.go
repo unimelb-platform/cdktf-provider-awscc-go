@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawscccloudfrontdistribution
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteriaStatusCodesOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteriaStatusCodesOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteriaStatusCodesOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteriaStatusCodesOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteriaStatusCodesOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteriaStatusCodesOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteriaStatusCodesOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteriaStatusCodesOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteriaStatusCodesOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteriaStatusCodesOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteriaStatusCodesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteriaStatusCodesOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteriaStatusCodesOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteriaStatusCodesOutputReference) validateSetInternalValueParameters(val *DataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteriaStatusCodes) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteriaStatusCodesOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteriaStatusCodesOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccCloudfrontDistributionDistributionConfigOriginGroupsItemsFailoverCriteriaStatusCodesOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

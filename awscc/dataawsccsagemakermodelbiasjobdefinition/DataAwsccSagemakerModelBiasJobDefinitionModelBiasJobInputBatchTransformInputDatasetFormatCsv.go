@@ -1,0 +1,6 @@
+package dataawsccsagemakermodelbiasjobdefinition
+
+
+type DataAwsccSagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputDatasetFormatCsv struct {
+}
+

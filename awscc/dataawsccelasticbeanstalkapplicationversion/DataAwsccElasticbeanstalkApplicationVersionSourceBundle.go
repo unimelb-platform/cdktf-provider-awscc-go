@@ -1,0 +1,6 @@
+package dataawsccelasticbeanstalkapplicationversion
+
+
+type DataAwsccElasticbeanstalkApplicationVersionSourceBundle struct {
+}
+

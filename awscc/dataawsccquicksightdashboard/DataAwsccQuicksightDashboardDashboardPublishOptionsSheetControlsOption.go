@@ -1,0 +1,6 @@
+package dataawsccquicksightdashboard
+
+
+type DataAwsccQuicksightDashboardDashboardPublishOptionsSheetControlsOption struct {
+}
+

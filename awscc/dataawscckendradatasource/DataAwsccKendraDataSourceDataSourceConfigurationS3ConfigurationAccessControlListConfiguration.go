@@ -1,0 +1,6 @@
+package dataawscckendradatasource
+
+
+type DataAwsccKendraDataSourceDataSourceConfigurationS3ConfigurationAccessControlListConfiguration struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawscccloudfrontoriginrequestpolicy
+
+
+type DataAwsccCloudfrontOriginRequestPolicyOriginRequestPolicyConfigCookiesConfig struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccappflowconnectorprofile
+
+
+type DataAwsccAppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OAuthRequest struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccelasticbeanstalkapplication
+
+
+type DataAwsccElasticbeanstalkApplicationResourceLifecycleConfigVersionLifecycleConfig struct {
+}
+

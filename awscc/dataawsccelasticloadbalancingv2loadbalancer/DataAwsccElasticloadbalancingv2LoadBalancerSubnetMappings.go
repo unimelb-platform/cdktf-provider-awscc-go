@@ -1,0 +1,6 @@
+package dataawsccelasticloadbalancingv2loadbalancer
+
+
+type DataAwsccElasticloadbalancingv2LoadBalancerSubnetMappings struct {
+}
+

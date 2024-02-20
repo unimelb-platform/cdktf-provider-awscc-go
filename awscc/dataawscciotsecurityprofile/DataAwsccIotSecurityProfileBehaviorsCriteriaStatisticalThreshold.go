@@ -1,0 +1,6 @@
+package dataawscciotsecurityprofile
+
+
+type DataAwsccIotSecurityProfileBehaviorsCriteriaStatisticalThreshold struct {
+}
+

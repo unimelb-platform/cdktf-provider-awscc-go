@@ -1,0 +1,6 @@
+package dataawsccssmincidentsreplicationset
+
+
+type DataAwsccSsmincidentsReplicationSetRegionsRegionConfiguration struct {
+}
+

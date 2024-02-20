@@ -1,0 +1,6 @@
+package dataawsccquicksighttopic
+
+
+type DataAwsccQuicksightTopicDataSetsCalculatedFieldsDefaultFormattingDisplayFormatOptionsNegativeFormat struct {
+}
+

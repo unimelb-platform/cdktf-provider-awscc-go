@@ -1,0 +1,6 @@
+package dataawsccpipespipe
+
+
+type DataAwsccPipesPipeTargetParametersSageMakerPipelineParametersPipelineParameterListStruct struct {
+}
+

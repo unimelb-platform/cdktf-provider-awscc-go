@@ -1,0 +1,6 @@
+package dataawsccentityresolutionidmappingworkflow
+
+
+type DataAwsccEntityresolutionIdMappingWorkflowOutputSourceConfig struct {
+}
+

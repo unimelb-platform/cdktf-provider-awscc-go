@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawscccloudfrontdistribution
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorLambdaFunctionAssociationsOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorLambdaFunctionAssociationsOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorLambdaFunctionAssociationsOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorLambdaFunctionAssociationsOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorLambdaFunctionAssociationsOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorLambdaFunctionAssociationsOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorLambdaFunctionAssociationsOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorLambdaFunctionAssociationsOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorLambdaFunctionAssociationsOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorLambdaFunctionAssociationsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorLambdaFunctionAssociationsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorLambdaFunctionAssociationsOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorLambdaFunctionAssociationsOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorLambdaFunctionAssociationsOutputReference) validateSetInternalValueParameters(val *DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorLambdaFunctionAssociations) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorLambdaFunctionAssociationsOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorLambdaFunctionAssociationsOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorLambdaFunctionAssociationsOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
+	return nil
+}
+

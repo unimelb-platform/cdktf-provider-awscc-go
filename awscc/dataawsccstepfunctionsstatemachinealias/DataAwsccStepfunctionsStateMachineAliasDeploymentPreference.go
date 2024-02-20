@@ -1,0 +1,6 @@
+package dataawsccstepfunctionsstatemachinealias
+
+
+type DataAwsccStepfunctionsStateMachineAliasDeploymentPreference struct {
+}
+

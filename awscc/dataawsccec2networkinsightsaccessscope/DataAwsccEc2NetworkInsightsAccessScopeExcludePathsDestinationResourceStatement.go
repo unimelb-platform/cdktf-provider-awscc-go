@@ -1,0 +1,6 @@
+package dataawsccec2networkinsightsaccessscope
+
+
+type DataAwsccEc2NetworkInsightsAccessScopeExcludePathsDestinationResourceStatement struct {
+}
+

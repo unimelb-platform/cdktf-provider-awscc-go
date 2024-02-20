@@ -1,0 +1,6 @@
+package dataawsccmedialivemultiplexprogram
+
+
+type DataAwsccMedialiveMultiplexprogramMultiplexProgramSettingsServiceDescriptor struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawscclakeformationprincipalpermissions
+
+
+type DataAwsccLakeformationPrincipalPermissionsResourceLfTagPolicyExpression struct {
+}
+

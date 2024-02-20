@@ -1,0 +1,6 @@
+package dataawsccec2verifiedaccessinstance
+
+
+type DataAwsccEc2VerifiedAccessInstanceLoggingConfigurationsS3 struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccquicksightdatasource
+
+
+type DataAwsccQuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParameters struct {
+}
+

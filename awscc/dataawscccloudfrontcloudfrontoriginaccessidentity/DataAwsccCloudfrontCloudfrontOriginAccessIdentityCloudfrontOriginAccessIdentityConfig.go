@@ -1,0 +1,6 @@
+package dataawscccloudfrontcloudfrontoriginaccessidentity
+
+
+type DataAwsccCloudfrontCloudfrontOriginAccessIdentityCloudfrontOriginAccessIdentityConfig struct {
+}
+

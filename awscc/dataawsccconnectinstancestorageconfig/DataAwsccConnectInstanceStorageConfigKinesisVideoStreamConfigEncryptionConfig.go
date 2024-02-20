@@ -1,0 +1,6 @@
+package dataawsccconnectinstancestorageconfig
+
+
+type DataAwsccConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfig struct {
+}
+

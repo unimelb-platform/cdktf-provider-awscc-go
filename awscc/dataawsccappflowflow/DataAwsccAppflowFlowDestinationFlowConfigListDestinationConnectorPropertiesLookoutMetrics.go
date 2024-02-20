@@ -1,0 +1,6 @@
+package dataawsccappflowflow
+
+
+type DataAwsccAppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesLookoutMetrics struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccautoscalinglaunchconfiguration
+
+
+type DataAwsccAutoscalingLaunchConfigurationBlockDeviceMappingsEbs struct {
+}
+

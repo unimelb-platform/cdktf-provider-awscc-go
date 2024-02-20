@@ -1,0 +1,6 @@
+package dataawsccappflowflow
+
+
+type DataAwsccAppflowFlowSourceFlowConfigSourceConnectorPropertiesSalesforce struct {
+}
+

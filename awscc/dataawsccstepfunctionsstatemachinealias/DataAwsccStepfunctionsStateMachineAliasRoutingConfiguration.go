@@ -1,0 +1,6 @@
+package dataawsccstepfunctionsstatemachinealias
+
+
+type DataAwsccStepfunctionsStateMachineAliasRoutingConfiguration struct {
+}
+

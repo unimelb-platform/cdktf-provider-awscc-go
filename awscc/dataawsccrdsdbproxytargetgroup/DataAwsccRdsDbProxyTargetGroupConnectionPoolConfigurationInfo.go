@@ -1,0 +1,6 @@
+package dataawsccrdsdbproxytargetgroup
+
+
+type DataAwsccRdsDbProxyTargetGroupConnectionPoolConfigurationInfo struct {
+}
+

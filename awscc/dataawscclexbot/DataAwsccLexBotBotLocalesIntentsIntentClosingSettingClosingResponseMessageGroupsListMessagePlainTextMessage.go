@@ -1,0 +1,6 @@
+package dataawscclexbot
+
+
+type DataAwsccLexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessagePlainTextMessage struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawscccodedeploydeploymentconfig
+
+
+type DataAwsccCodedeployDeploymentConfigTrafficRoutingConfig struct {
+}
+

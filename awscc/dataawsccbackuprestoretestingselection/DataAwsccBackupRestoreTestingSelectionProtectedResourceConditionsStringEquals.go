@@ -1,0 +1,6 @@
+package dataawsccbackuprestoretestingselection
+
+
+type DataAwsccBackupRestoreTestingSelectionProtectedResourceConditionsStringEquals struct {
+}
+

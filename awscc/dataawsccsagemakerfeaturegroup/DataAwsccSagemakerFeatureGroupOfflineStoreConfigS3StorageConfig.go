@@ -1,0 +1,6 @@
+package dataawsccsagemakerfeaturegroup
+
+
+type DataAwsccSagemakerFeatureGroupOfflineStoreConfigS3StorageConfig struct {
+}
+

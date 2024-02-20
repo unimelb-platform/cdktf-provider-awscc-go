@@ -1,0 +1,6 @@
+package dataawsccnetworkfirewallrulegroup
+
+
+type DataAwsccNetworkfirewallRuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRulesRuleDefinitionMatchAttributesDestinationPorts struct {
+}
+

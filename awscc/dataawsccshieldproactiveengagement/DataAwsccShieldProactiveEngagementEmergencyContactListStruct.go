@@ -1,0 +1,6 @@
+package dataawsccshieldproactiveengagement
+
+
+type DataAwsccShieldProactiveEngagementEmergencyContactListStruct struct {
+}
+

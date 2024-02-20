@@ -1,0 +1,6 @@
+package dataawsccbatchjobdefinition
+
+
+type DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContainers struct {
+}
+

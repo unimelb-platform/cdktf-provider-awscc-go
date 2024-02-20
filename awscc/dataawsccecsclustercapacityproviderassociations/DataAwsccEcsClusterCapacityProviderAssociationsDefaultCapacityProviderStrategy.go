@@ -1,0 +1,6 @@
+package dataawsccecsclustercapacityproviderassociations
+
+
+type DataAwsccEcsClusterCapacityProviderAssociationsDefaultCapacityProviderStrategy struct {
+}
+

@@ -1,0 +1,6 @@
+package dataawsccroute53recoveryreadinessresourceset
+
+
+type DataAwsccRoute53RecoveryreadinessResourceSetResourcesDnsTargetResourceTargetResource struct {
+}
+

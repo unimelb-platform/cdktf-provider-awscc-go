@@ -1,0 +1,6 @@
+package dataawsccnetworkfirewalltlsinspectionconfiguration
+
+
+type DataAwsccNetworkfirewallTlsInspectionConfigurationTlsInspectionConfigurationServerCertificateConfigurationsCheckCertificateRevocationStatus struct {
+}
+

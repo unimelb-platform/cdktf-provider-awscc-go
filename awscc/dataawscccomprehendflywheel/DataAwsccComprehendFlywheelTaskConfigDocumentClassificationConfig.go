@@ -1,0 +1,6 @@
+package dataawscccomprehendflywheel
+
+
+type DataAwsccComprehendFlywheelTaskConfigDocumentClassificationConfig struct {
+}
+

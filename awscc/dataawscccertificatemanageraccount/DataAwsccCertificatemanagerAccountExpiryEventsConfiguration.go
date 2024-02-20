@@ -1,0 +1,6 @@
+package dataawscccertificatemanageraccount
+
+
+type DataAwsccCertificatemanagerAccountExpiryEventsConfiguration struct {
+}
+

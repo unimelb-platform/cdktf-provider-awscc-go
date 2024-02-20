@@ -1,0 +1,6 @@
+package dataawsccdynamodbglobaltable
+
+
+type DataAwsccDynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisionedThroughputSettings struct {
+}
+

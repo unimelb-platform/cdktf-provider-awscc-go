@@ -1,0 +1,6 @@
+package dataawsccnetworkmanagervpcattachment
+
+
+type DataAwsccNetworkmanagerVpcAttachmentProposedSegmentChangeTags struct {
+}
+
