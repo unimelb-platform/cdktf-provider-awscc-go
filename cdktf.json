@@ -5,7 +5,7 @@
   "projectId": "a26c502b-a32e-45e4-ac62-f8579cff58ce",
   "sendCrashReports": "false",
   "terraformProviders": [
-    "awscc@~> 0.70.0"
+    "awscc@~> 1.87.0"
   ],
   "terraformModules": [],
   "context": {}
