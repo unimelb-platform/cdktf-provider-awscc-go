@@ -64,6 +64,10 @@ func (j *jsiiProxy_SagemakerAppResourceSpecOutputReference) validateSetInternalV
 	return nil
 }
 
+func (j *jsiiProxy_SagemakerAppResourceSpecOutputReference) validateSetLifecycleConfigArnParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_SagemakerAppResourceSpecOutputReference) validateSetSageMakerImageArnParameters(val *string) error {
 	return nil
 }

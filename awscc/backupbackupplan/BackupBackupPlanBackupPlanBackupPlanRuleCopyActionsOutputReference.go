@@ -67,6 +67,7 @@ type BackupBackupPlanBackupPlanBackupPlanRuleCopyActionsOutputReference interfac
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutLifecycle(value *BackupBackupPlanBackupPlanBackupPlanRuleCopyActionsLifecycle)
+	ResetDestinationBackupVaultArn()
 	ResetLifecycle()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -481,6 +482,14 @@ func (b *jsiiProxy_BackupBackupPlanBackupPlanBackupPlanRuleCopyActionsOutputRefe
 		b,
 		"putLifecycle",
 		[]interface{}{value},
+	)
+}
+
+func (b *jsiiProxy_BackupBackupPlanBackupPlanBackupPlanRuleCopyActionsOutputReference) ResetDestinationBackupVaultArn() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetDestinationBackupVaultArn",
+		nil, // no parameters
 	)
 }
 

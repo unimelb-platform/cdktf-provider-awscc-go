@@ -64,6 +64,7 @@ type OsisPipelineBufferOptionsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPersistentBufferEnabled()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (o *jsiiProxy_OsisPipelineBufferOptionsOutputReference) InterpolationForAtt
 	)
 
 	return returns
+}
+
+func (o *jsiiProxy_OsisPipelineBufferOptionsOutputReference) ResetPersistentBufferEnabled() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetPersistentBufferEnabled",
+		nil, // no parameters
+	)
 }
 
 func (o *jsiiProxy_OsisPipelineBufferOptionsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -49,6 +49,11 @@ type MediaconnectFlowSourceOutputReference interface {
 	MaxLatency() *float64
 	SetMaxLatency(val *float64)
 	MaxLatencyInput() *float64
+	MaxSyncBuffer() *float64
+	SetMaxSyncBuffer(val *float64)
+	MaxSyncBufferInput() *float64
+	MediaStreamSourceConfigurations() MediaconnectFlowSourceMediaStreamSourceConfigurationsList
+	MediaStreamSourceConfigurationsInput() interface{}
 	MinLatency() *float64
 	SetMinLatency(val *float64)
 	MinLatencyInput() *float64
@@ -115,6 +120,7 @@ type MediaconnectFlowSourceOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDecryption(value *MediaconnectFlowSourceDecryption)
 	PutGatewayBridgeSource(value *MediaconnectFlowSourceGatewayBridgeSource)
+	PutMediaStreamSourceConfigurations(value interface{})
 	ResetDecryption()
 	ResetDescription()
 	ResetEntitlementArn()
@@ -122,6 +128,8 @@ type MediaconnectFlowSourceOutputReference interface {
 	ResetIngestPort()
 	ResetMaxBitrate()
 	ResetMaxLatency()
+	ResetMaxSyncBuffer()
+	ResetMediaStreamSourceConfigurations()
 	ResetMinLatency()
 	ResetName()
 	ResetProtocol()
@@ -342,6 +350,46 @@ func (j *jsiiProxy_MediaconnectFlowSourceOutputReference) MaxLatencyInput() *flo
 	_jsii_.Get(
 		j,
 		"maxLatencyInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediaconnectFlowSourceOutputReference) MaxSyncBuffer() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxSyncBuffer",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediaconnectFlowSourceOutputReference) MaxSyncBufferInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxSyncBufferInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediaconnectFlowSourceOutputReference) MediaStreamSourceConfigurations() MediaconnectFlowSourceMediaStreamSourceConfigurationsList {
+	var returns MediaconnectFlowSourceMediaStreamSourceConfigurationsList
+	_jsii_.Get(
+		j,
+		"mediaStreamSourceConfigurations",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediaconnectFlowSourceOutputReference) MediaStreamSourceConfigurationsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"mediaStreamSourceConfigurationsInput",
 		&returns,
 	)
 	return returns
@@ -703,6 +751,17 @@ func (j *jsiiProxy_MediaconnectFlowSourceOutputReference)SetMaxLatency(val *floa
 	)
 }
 
+func (j *jsiiProxy_MediaconnectFlowSourceOutputReference)SetMaxSyncBuffer(val *float64) {
+	if err := j.validateSetMaxSyncBufferParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"maxSyncBuffer",
+		val,
+	)
+}
+
 func (j *jsiiProxy_MediaconnectFlowSourceOutputReference)SetMinLatency(val *float64) {
 	if err := j.validateSetMinLatencyParameters(val); err != nil {
 		panic(err)
@@ -1043,6 +1102,17 @@ func (m *jsiiProxy_MediaconnectFlowSourceOutputReference) PutGatewayBridgeSource
 	)
 }
 
+func (m *jsiiProxy_MediaconnectFlowSourceOutputReference) PutMediaStreamSourceConfigurations(value interface{}) {
+	if err := m.validatePutMediaStreamSourceConfigurationsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putMediaStreamSourceConfigurations",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_MediaconnectFlowSourceOutputReference) ResetDecryption() {
 	_jsii_.InvokeVoid(
 		m,
@@ -1095,6 +1165,22 @@ func (m *jsiiProxy_MediaconnectFlowSourceOutputReference) ResetMaxLatency() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetMaxLatency",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectFlowSourceOutputReference) ResetMaxSyncBuffer() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMaxSyncBuffer",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectFlowSourceOutputReference) ResetMediaStreamSourceConfigurations() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMediaStreamSourceConfigurations",
 		nil, // no parameters
 	)
 }

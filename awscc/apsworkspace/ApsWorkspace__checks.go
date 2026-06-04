@@ -119,6 +119,14 @@ func (a *jsiiProxy_ApsWorkspace) validateInterpolationForAttributeParameters(ter
 	return nil
 }
 
+func (a *jsiiProxy_ApsWorkspace) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (a *jsiiProxy_ApsWorkspace) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (a *jsiiProxy_ApsWorkspace) validateMoveToParameters(moveTarget *string, in
 	return nil
 }
 
+func (a *jsiiProxy_ApsWorkspace) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (a *jsiiProxy_ApsWorkspace) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -189,6 +205,17 @@ func (a *jsiiProxy_ApsWorkspace) validateOverrideLogicalIdParameters(newLogicalI
 }
 
 func (a *jsiiProxy_ApsWorkspace) validatePutLoggingConfigurationParameters(value *ApsWorkspaceLoggingConfiguration) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (a *jsiiProxy_ApsWorkspace) validatePutQueryLoggingConfigurationParameters(value *ApsWorkspaceQueryLoggingConfiguration) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -225,6 +252,17 @@ func (a *jsiiProxy_ApsWorkspace) validatePutTagsParameters(value interface{}) er
 		if !_jsii_.IsAnonymousProxy(value) {
 			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*ApsWorkspaceTags; received %#v (a %T)", value, value)
 		}
+	}
+
+	return nil
+}
+
+func (a *jsiiProxy_ApsWorkspace) validatePutWorkspaceConfigurationParameters(value *ApsWorkspaceWorkspaceConfiguration) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
 	}
 
 	return nil

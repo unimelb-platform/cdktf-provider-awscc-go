@@ -27,10 +27,10 @@ type AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOutputReferenc
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
-	SetInternalValue(val *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	LaunchTemplateSpecification() AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationOutputReference
-	LaunchTemplateSpecificationInput() *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification
+	LaunchTemplateSpecificationInput() interface{}
 	Overrides() AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesList
 	OverridesInput() interface{}
 	// Experimental.
@@ -67,6 +67,7 @@ type AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOutputReferenc
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutLaunchTemplateSpecification(value *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification)
 	PutOverrides(value interface{})
+	ResetLaunchTemplateSpecification()
 	ResetOverrides()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -123,8 +124,8 @@ func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
 	return returns
 }
 
-func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOutputReference) InternalValue() *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate {
-	var returns *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
+func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -143,8 +144,8 @@ func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
 	return returns
 }
 
-func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOutputReference) LaunchTemplateSpecificationInput() *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification {
-	var returns *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification
+func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOutputReference) LaunchTemplateSpecificationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"launchTemplateSpecificationInput",
@@ -243,7 +244,7 @@ func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
 	)
 }
 
-func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOutputReference)SetInternalValue(val *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate) {
+func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +482,14 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
 		a,
 		"putOverrides",
 		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOutputReference) ResetLaunchTemplateSpecification() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetLaunchTemplateSpecification",
+		nil, // no parameters
 	)
 }
 

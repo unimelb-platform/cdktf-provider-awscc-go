@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccgameliftfleet/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/gamelift_fleet awscc_gamelift_fleet}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/gamelift_fleet awscc_gamelift_fleet}.
 type DataAwsccGameliftFleet interface {
 	cdktf.TerraformDataSource
 	AnywhereConfiguration() DataAwsccGameliftFleetAnywhereConfigurationOutputReference
@@ -33,6 +33,7 @@ type DataAwsccGameliftFleet interface {
 	DesiredEc2Instances() *float64
 	Ec2InboundPermissions() DataAwsccGameliftFleetEc2InboundPermissionsList
 	Ec2InstanceType() *string
+	FleetArn() *string
 	FleetId() *string
 	FleetType() *string
 	// Experimental.
@@ -75,6 +76,7 @@ type DataAwsccGameliftFleet interface {
 	ScriptId() *string
 	ServerLaunchParameters() *string
 	ServerLaunchPath() *string
+	Tags() DataAwsccGameliftFleetTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -110,6 +112,10 @@ type DataAwsccGameliftFleet interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -249,6 +255,16 @@ func (j *jsiiProxy_DataAwsccGameliftFleet) Ec2InstanceType() *string {
 	_jsii_.Get(
 		j,
 		"ec2InstanceType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccGameliftFleet) FleetArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fleetArn",
 		&returns,
 	)
 	return returns
@@ -534,6 +550,16 @@ func (j *jsiiProxy_DataAwsccGameliftFleet) ServerLaunchPath() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccGameliftFleet) Tags() DataAwsccGameliftFleetTagsList {
+	var returns DataAwsccGameliftFleetTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccGameliftFleet) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -565,7 +591,7 @@ func (j *jsiiProxy_DataAwsccGameliftFleet) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/gamelift_fleet awscc_gamelift_fleet} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/gamelift_fleet awscc_gamelift_fleet} Data Source.
 func NewDataAwsccGameliftFleet(scope constructs.Construct, id *string, config *DataAwsccGameliftFleetConfig) DataAwsccGameliftFleet {
 	_init_.Initialize()
 
@@ -583,7 +609,7 @@ func NewDataAwsccGameliftFleet(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/gamelift_fleet awscc_gamelift_fleet} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/gamelift_fleet awscc_gamelift_fleet} Data Source.
 func NewDataAwsccGameliftFleet_Override(d DataAwsccGameliftFleet, scope constructs.Construct, id *string, config *DataAwsccGameliftFleetConfig) {
 	_init_.Initialize()
 
@@ -950,6 +976,32 @@ func (d *jsiiProxy_DataAwsccGameliftFleet) SynthesizeAttributes() *map[string]in
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGameliftFleet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGameliftFleet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

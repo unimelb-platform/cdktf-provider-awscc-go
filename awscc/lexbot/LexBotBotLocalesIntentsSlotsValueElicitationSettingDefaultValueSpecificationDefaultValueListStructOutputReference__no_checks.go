@@ -60,7 +60,7 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingDefaultVal
 	return nil
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingDefaultValueSpecificationDefaultValueListStructOutputReference) validateSetInternalValueParameters(val *LexBotBotLocalesIntentsSlotsValueElicitationSettingDefaultValueSpecificationDefaultValueListStruct) error {
+func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingDefaultValueSpecificationDefaultValueListStructOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

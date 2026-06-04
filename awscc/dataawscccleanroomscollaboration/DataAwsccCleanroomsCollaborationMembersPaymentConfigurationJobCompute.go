@@ -1,0 +1,6 @@
+package dataawscccleanroomscollaboration
+
+
+type DataAwsccCleanroomsCollaborationMembersPaymentConfigurationJobCompute struct {
+}
+

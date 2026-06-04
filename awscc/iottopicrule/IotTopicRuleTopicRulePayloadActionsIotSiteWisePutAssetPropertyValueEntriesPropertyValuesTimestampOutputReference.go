@@ -27,8 +27,8 @@ type IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropertyValueEntriesP
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropertyValueEntriesPropertyValuesTimestamp
-	SetInternalValue(val *IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropertyValueEntriesPropertyValuesTimestamp)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	OffsetInNanos() *string
 	SetOffsetInNanos(val *string)
 	OffsetInNanosInput() *string
@@ -68,6 +68,7 @@ type IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropertyValueEntriesP
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetOffsetInNanos()
+	ResetTimeInSeconds()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -123,8 +124,8 @@ func (j *jsiiProxy_IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropert
 	return returns
 }
 
-func (j *jsiiProxy_IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropertyValueEntriesPropertyValuesTimestampOutputReference) InternalValue() *IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropertyValueEntriesPropertyValuesTimestamp {
-	var returns *IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropertyValueEntriesPropertyValuesTimestamp
+func (j *jsiiProxy_IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropertyValueEntriesPropertyValuesTimestampOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -243,7 +244,7 @@ func (j *jsiiProxy_IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropert
 	)
 }
 
-func (j *jsiiProxy_IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropertyValueEntriesPropertyValuesTimestampOutputReference)SetInternalValue(val *IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropertyValueEntriesPropertyValuesTimestamp) {
+func (j *jsiiProxy_IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropertyValueEntriesPropertyValuesTimestampOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -488,6 +489,14 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropert
 	_jsii_.InvokeVoid(
 		i,
 		"resetOffsetInNanos",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropertyValueEntriesPropertyValuesTimestampOutputReference) ResetTimeInSeconds() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTimeInSeconds",
 		nil, // no parameters
 	)
 }

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/billingconductorcustomlineitem/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/billingconductor_custom_line_item awscc_billingconductor_custom_line_item}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/billingconductor_custom_line_item awscc_billingconductor_custom_line_item}.
 type BillingconductorCustomLineItem interface {
 	cdktf.TerraformResource
 	AccountId() *string
@@ -107,12 +107,22 @@ type BillingconductorCustomLineItem interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -128,6 +138,9 @@ type BillingconductorCustomLineItem interface {
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -513,7 +526,7 @@ func (j *jsiiProxy_BillingconductorCustomLineItem) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/billingconductor_custom_line_item awscc_billingconductor_custom_line_item} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/billingconductor_custom_line_item awscc_billingconductor_custom_line_item} Resource.
 func NewBillingconductorCustomLineItem(scope constructs.Construct, id *string, config *BillingconductorCustomLineItemConfig) BillingconductorCustomLineItem {
 	_init_.Initialize()
 
@@ -531,7 +544,7 @@ func NewBillingconductorCustomLineItem(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/billingconductor_custom_line_item awscc_billingconductor_custom_line_item} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/billingconductor_custom_line_item awscc_billingconductor_custom_line_item} Resource.
 func NewBillingconductorCustomLineItem_Override(b BillingconductorCustomLineItem, scope constructs.Construct, id *string, config *BillingconductorCustomLineItemConfig) {
 	_init_.Initialize()
 
@@ -923,6 +936,19 @@ func (b *jsiiProxy_BillingconductorCustomLineItem) GetStringMapAttribute(terrafo
 	return returns
 }
 
+func (b *jsiiProxy_BillingconductorCustomLineItem) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		b,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (b *jsiiProxy_BillingconductorCustomLineItem) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := b.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -950,6 +976,17 @@ func (b *jsiiProxy_BillingconductorCustomLineItem) InterpolationForAttribute(ter
 	return returns
 }
 
+func (b *jsiiProxy_BillingconductorCustomLineItem) MoveFromId(id *string) {
+	if err := b.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (b *jsiiProxy_BillingconductorCustomLineItem) MoveTo(moveTarget *string, index interface{}) {
 	if err := b.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -958,6 +995,17 @@ func (b *jsiiProxy_BillingconductorCustomLineItem) MoveTo(moveTarget *string, in
 		b,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (b *jsiiProxy_BillingconductorCustomLineItem) MoveToId(id *string) {
+	if err := b.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1059,6 +1107,32 @@ func (b *jsiiProxy_BillingconductorCustomLineItem) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		b,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_BillingconductorCustomLineItem) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		b,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_BillingconductorCustomLineItem) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		b,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

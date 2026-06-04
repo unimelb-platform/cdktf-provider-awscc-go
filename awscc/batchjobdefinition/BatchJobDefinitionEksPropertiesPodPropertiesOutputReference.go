@@ -35,6 +35,10 @@ type BatchJobDefinitionEksPropertiesPodPropertiesOutputReference interface {
 	HostNetwork() interface{}
 	SetHostNetwork(val interface{})
 	HostNetworkInput() interface{}
+	ImagePullSecrets() BatchJobDefinitionEksPropertiesPodPropertiesImagePullSecretsList
+	ImagePullSecretsInput() interface{}
+	InitContainers() BatchJobDefinitionEksPropertiesPodPropertiesInitContainersList
+	InitContainersInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	Metadata() BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference
@@ -42,6 +46,9 @@ type BatchJobDefinitionEksPropertiesPodPropertiesOutputReference interface {
 	ServiceAccountName() *string
 	SetServiceAccountName(val *string)
 	ServiceAccountNameInput() *string
+	ShareProcessNamespace() interface{}
+	SetShareProcessNamespace(val interface{})
+	ShareProcessNamespaceInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -77,13 +84,18 @@ type BatchJobDefinitionEksPropertiesPodPropertiesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutContainers(value interface{})
+	PutImagePullSecrets(value interface{})
+	PutInitContainers(value interface{})
 	PutMetadata(value *BatchJobDefinitionEksPropertiesPodPropertiesMetadata)
 	PutVolumes(value interface{})
 	ResetContainers()
 	ResetDnsPolicy()
 	ResetHostNetwork()
+	ResetImagePullSecrets()
+	ResetInitContainers()
 	ResetMetadata()
 	ResetServiceAccountName()
+	ResetShareProcessNamespace()
 	ResetVolumes()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -200,6 +212,46 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) 
 	return returns
 }
 
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) ImagePullSecrets() BatchJobDefinitionEksPropertiesPodPropertiesImagePullSecretsList {
+	var returns BatchJobDefinitionEksPropertiesPodPropertiesImagePullSecretsList
+	_jsii_.Get(
+		j,
+		"imagePullSecrets",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) ImagePullSecretsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"imagePullSecretsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) InitContainers() BatchJobDefinitionEksPropertiesPodPropertiesInitContainersList {
+	var returns BatchJobDefinitionEksPropertiesPodPropertiesInitContainersList
+	_jsii_.Get(
+		j,
+		"initContainers",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) InitContainersInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"initContainersInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) InternalValue() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -245,6 +297,26 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) 
 	_jsii_.Get(
 		j,
 		"serviceAccountNameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) ShareProcessNamespace() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"shareProcessNamespace",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) ShareProcessNamespaceInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"shareProcessNamespaceInput",
 		&returns,
 	)
 	return returns
@@ -380,6 +452,17 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference)S
 	_jsii_.Set(
 		j,
 		"serviceAccountName",
+		val,
+	)
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference)SetShareProcessNamespace(val interface{}) {
+	if err := j.validateSetShareProcessNamespaceParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"shareProcessNamespace",
 		val,
 	)
 }
@@ -603,6 +686,28 @@ func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) 
 	)
 }
 
+func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) PutImagePullSecrets(value interface{}) {
+	if err := b.validatePutImagePullSecretsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"putImagePullSecrets",
+		[]interface{}{value},
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) PutInitContainers(value interface{}) {
+	if err := b.validatePutInitContainersParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"putInitContainers",
+		[]interface{}{value},
+	)
+}
+
 func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) PutMetadata(value *BatchJobDefinitionEksPropertiesPodPropertiesMetadata) {
 	if err := b.validatePutMetadataParameters(value); err != nil {
 		panic(err)
@@ -649,6 +754,22 @@ func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) 
 	)
 }
 
+func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) ResetImagePullSecrets() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetImagePullSecrets",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) ResetInitContainers() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetInitContainers",
+		nil, // no parameters
+	)
+}
+
 func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) ResetMetadata() {
 	_jsii_.InvokeVoid(
 		b,
@@ -661,6 +782,14 @@ func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) 
 	_jsii_.InvokeVoid(
 		b,
 		"resetServiceAccountName",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) ResetShareProcessNamespace() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetShareProcessNamespace",
 		nil, // no parameters
 	)
 }

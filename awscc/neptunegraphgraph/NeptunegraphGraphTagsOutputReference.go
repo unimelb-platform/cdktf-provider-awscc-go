@@ -67,6 +67,7 @@ type NeptunegraphGraphTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
 	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (n *jsiiProxy_NeptunegraphGraphTagsOutputReference) InterpolationForAttribu
 	)
 
 	return returns
+}
+
+func (n *jsiiProxy_NeptunegraphGraphTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetKey",
+		nil, // no parameters
+	)
 }
 
 func (n *jsiiProxy_NeptunegraphGraphTagsOutputReference) ResetValue() {

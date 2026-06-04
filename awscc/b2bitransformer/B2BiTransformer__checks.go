@@ -119,6 +119,14 @@ func (b *jsiiProxy_B2BiTransformer) validateInterpolationForAttributeParameters(
 	return nil
 }
 
+func (b *jsiiProxy_B2BiTransformer) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (b *jsiiProxy_B2BiTransformer) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (b *jsiiProxy_B2BiTransformer) validateMoveToParameters(moveTarget *string,
 	return nil
 }
 
+func (b *jsiiProxy_B2BiTransformer) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (b *jsiiProxy_B2BiTransformer) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -189,6 +205,50 @@ func (b *jsiiProxy_B2BiTransformer) validateOverrideLogicalIdParameters(newLogic
 }
 
 func (b *jsiiProxy_B2BiTransformer) validatePutEdiTypeParameters(value *B2BiTransformerEdiType) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (b *jsiiProxy_B2BiTransformer) validatePutInputConversionParameters(value *B2BiTransformerInputConversion) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (b *jsiiProxy_B2BiTransformer) validatePutMappingParameters(value *B2BiTransformerMapping) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (b *jsiiProxy_B2BiTransformer) validatePutOutputConversionParameters(value *B2BiTransformerOutputConversion) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (b *jsiiProxy_B2BiTransformer) validatePutSampleDocumentsParameters(value *B2BiTransformerSampleDocuments) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -377,14 +437,6 @@ func (j *jsiiProxy_B2BiTransformer) validateSetLifecycleParameters(val *cdktf.Te
 }
 
 func (j *jsiiProxy_B2BiTransformer) validateSetMappingTemplateParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_B2BiTransformer) validateSetModifiedAtParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

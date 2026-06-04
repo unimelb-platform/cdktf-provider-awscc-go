@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2ipamresourcediscovery/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_ipam_resource_discovery awscc_ec2_ipam_resource_discovery}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_ipam_resource_discovery awscc_ec2_ipam_resource_discovery}.
 type DataAwsccEc2IpamResourceDiscovery interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -47,6 +47,7 @@ type DataAwsccEc2IpamResourceDiscovery interface {
 	// The tree node.
 	Node() constructs.Node
 	OperatingRegions() DataAwsccEc2IpamResourceDiscoveryOperatingRegionsList
+	OrganizationalUnitExclusions() DataAwsccEc2IpamResourceDiscoveryOrganizationalUnitExclusionsList
 	OwnerId() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
@@ -91,6 +92,10 @@ type DataAwsccEc2IpamResourceDiscovery interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -275,6 +280,16 @@ func (j *jsiiProxy_DataAwsccEc2IpamResourceDiscovery) OperatingRegions() DataAws
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2IpamResourceDiscovery) OrganizationalUnitExclusions() DataAwsccEc2IpamResourceDiscoveryOrganizationalUnitExclusionsList {
+	var returns DataAwsccEc2IpamResourceDiscoveryOrganizationalUnitExclusionsList
+	_jsii_.Get(
+		j,
+		"organizationalUnitExclusions",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2IpamResourceDiscovery) OwnerId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -356,7 +371,7 @@ func (j *jsiiProxy_DataAwsccEc2IpamResourceDiscovery) TerraformResourceType() *s
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_ipam_resource_discovery awscc_ec2_ipam_resource_discovery} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_ipam_resource_discovery awscc_ec2_ipam_resource_discovery} Data Source.
 func NewDataAwsccEc2IpamResourceDiscovery(scope constructs.Construct, id *string, config *DataAwsccEc2IpamResourceDiscoveryConfig) DataAwsccEc2IpamResourceDiscovery {
 	_init_.Initialize()
 
@@ -374,7 +389,7 @@ func NewDataAwsccEc2IpamResourceDiscovery(scope constructs.Construct, id *string
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_ipam_resource_discovery awscc_ec2_ipam_resource_discovery} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_ipam_resource_discovery awscc_ec2_ipam_resource_discovery} Data Source.
 func NewDataAwsccEc2IpamResourceDiscovery_Override(d DataAwsccEc2IpamResourceDiscovery, scope constructs.Construct, id *string, config *DataAwsccEc2IpamResourceDiscoveryConfig) {
 	_init_.Initialize()
 
@@ -741,6 +756,32 @@ func (d *jsiiProxy_DataAwsccEc2IpamResourceDiscovery) SynthesizeAttributes() *ma
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2IpamResourceDiscovery) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2IpamResourceDiscovery) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

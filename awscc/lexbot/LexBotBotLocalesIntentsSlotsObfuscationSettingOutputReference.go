@@ -64,6 +64,7 @@ type LexBotBotLocalesIntentsSlotsObfuscationSettingOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetObfuscationSettingType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsObfuscationSettingOutputReference
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsObfuscationSettingOutputReference) ResetObfuscationSettingType() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetObfuscationSettingType",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsObfuscationSettingOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

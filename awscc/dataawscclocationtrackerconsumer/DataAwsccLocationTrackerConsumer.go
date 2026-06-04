@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscclocationtrackerconsumer/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/location_tracker_consumer awscc_location_tracker_consumer}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/location_tracker_consumer awscc_location_tracker_consumer}.
 type DataAwsccLocationTrackerConsumer interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -84,6 +84,10 @@ type DataAwsccLocationTrackerConsumer interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -279,7 +283,7 @@ func (j *jsiiProxy_DataAwsccLocationTrackerConsumer) TrackerName() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/location_tracker_consumer awscc_location_tracker_consumer} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/location_tracker_consumer awscc_location_tracker_consumer} Data Source.
 func NewDataAwsccLocationTrackerConsumer(scope constructs.Construct, id *string, config *DataAwsccLocationTrackerConsumerConfig) DataAwsccLocationTrackerConsumer {
 	_init_.Initialize()
 
@@ -297,7 +301,7 @@ func NewDataAwsccLocationTrackerConsumer(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/location_tracker_consumer awscc_location_tracker_consumer} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/location_tracker_consumer awscc_location_tracker_consumer} Data Source.
 func NewDataAwsccLocationTrackerConsumer_Override(d DataAwsccLocationTrackerConsumer, scope constructs.Construct, id *string, config *DataAwsccLocationTrackerConsumerConfig) {
 	_init_.Initialize()
 
@@ -664,6 +668,32 @@ func (d *jsiiProxy_DataAwsccLocationTrackerConsumer) SynthesizeAttributes() *map
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLocationTrackerConsumer) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLocationTrackerConsumer) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

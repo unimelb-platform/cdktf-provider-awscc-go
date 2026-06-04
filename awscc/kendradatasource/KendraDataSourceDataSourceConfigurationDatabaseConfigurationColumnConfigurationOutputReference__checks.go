@@ -226,9 +226,25 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationC
 	return nil
 }
 
-func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfigurationOutputReference) validateSetInternalValueParameters(val *KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfiguration) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfigurationOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfiguration:
+		val := val.(*KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfiguration)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfiguration:
+		val_ := val.(KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfiguration)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfiguration; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

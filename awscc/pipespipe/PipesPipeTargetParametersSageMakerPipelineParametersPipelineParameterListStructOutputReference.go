@@ -67,6 +67,8 @@ type PipesPipeTargetParametersSageMakerPipelineParametersPipelineParameterListSt
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (p *jsiiProxy_PipesPipeTargetParametersSageMakerPipelineParametersPipelineP
 	)
 
 	return returns
+}
+
+func (p *jsiiProxy_PipesPipeTargetParametersSageMakerPipelineParametersPipelineParameterListStructOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PipesPipeTargetParametersSageMakerPipelineParametersPipelineParameterListStructOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (p *jsiiProxy_PipesPipeTargetParametersSageMakerPipelineParametersPipelineParameterListStructOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

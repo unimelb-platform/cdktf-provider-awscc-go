@@ -75,6 +75,7 @@ type AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesZendeskOu
 	PutErrorHandlingConfig(value *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesZendeskErrorHandlingConfig)
 	ResetErrorHandlingConfig()
 	ResetIdFieldNames()
+	ResetObject()
 	ResetWriteOperationType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -566,6 +567,14 @@ func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPrope
 	_jsii_.InvokeVoid(
 		a,
 		"resetIdFieldNames",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesZendeskOutputReference) ResetObject() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetObject",
 		nil, // no parameters
 	)
 }

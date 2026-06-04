@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2vpnconnection/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_vpn_connection awscc_ec2_vpn_connection}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_vpn_connection awscc_ec2_vpn_connection}.
 type Ec2VpnConnection interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -31,6 +31,9 @@ type Ec2VpnConnection interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	EnableAcceleration() interface{}
+	SetEnableAcceleration(val interface{})
+	EnableAccelerationInput() interface{}
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -44,8 +47,17 @@ type Ec2VpnConnection interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	LocalIpv4NetworkCidr() *string
+	SetLocalIpv4NetworkCidr(val *string)
+	LocalIpv4NetworkCidrInput() *string
+	LocalIpv6NetworkCidr() *string
+	SetLocalIpv6NetworkCidr(val *string)
+	LocalIpv6NetworkCidrInput() *string
 	// The tree node.
 	Node() constructs.Node
+	OutsideIpAddressType() *string
+	SetOutsideIpAddressType(val *string)
+	OutsideIpAddressTypeInput() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -56,6 +68,12 @@ type Ec2VpnConnection interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RemoteIpv4NetworkCidr() *string
+	SetRemoteIpv4NetworkCidr(val *string)
+	RemoteIpv4NetworkCidrInput() *string
+	RemoteIpv6NetworkCidr() *string
+	SetRemoteIpv6NetworkCidr(val *string)
+	RemoteIpv6NetworkCidrInput() *string
 	StaticRoutesOnly() interface{}
 	SetStaticRoutesOnly(val interface{})
 	StaticRoutesOnlyInput() interface{}
@@ -70,6 +88,12 @@ type Ec2VpnConnection interface {
 	TransitGatewayId() *string
 	SetTransitGatewayId(val *string)
 	TransitGatewayIdInput() *string
+	TransportTransitGatewayAttachmentId() *string
+	SetTransportTransitGatewayAttachmentId(val *string)
+	TransportTransitGatewayAttachmentIdInput() *string
+	TunnelInsideIpVersion() *string
+	SetTunnelInsideIpVersion(val *string)
+	TunnelInsideIpVersionInput() *string
 	Type() *string
 	SetType(val *string)
 	TypeInput() *string
@@ -103,26 +127,47 @@ type Ec2VpnConnection interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutTags(value interface{})
 	PutVpnTunnelOptionsSpecifications(value interface{})
+	ResetEnableAcceleration()
+	ResetLocalIpv4NetworkCidr()
+	ResetLocalIpv6NetworkCidr()
+	ResetOutsideIpAddressType()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetRemoteIpv4NetworkCidr()
+	ResetRemoteIpv6NetworkCidr()
 	ResetStaticRoutesOnly()
 	ResetTags()
 	ResetTransitGatewayId()
+	ResetTransportTransitGatewayAttachmentId()
+	ResetTunnelInsideIpVersion()
 	ResetVpnGatewayId()
 	ResetVpnTunnelOptionsSpecifications()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -207,6 +252,26 @@ func (j *jsiiProxy_Ec2VpnConnection) DependsOn() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2VpnConnection) EnableAcceleration() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableAcceleration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) EnableAccelerationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableAccelerationInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2VpnConnection) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
@@ -257,11 +322,71 @@ func (j *jsiiProxy_Ec2VpnConnection) Lifecycle() *cdktf.TerraformResourceLifecyc
 	return returns
 }
 
+func (j *jsiiProxy_Ec2VpnConnection) LocalIpv4NetworkCidr() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"localIpv4NetworkCidr",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) LocalIpv4NetworkCidrInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"localIpv4NetworkCidrInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) LocalIpv6NetworkCidr() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"localIpv6NetworkCidr",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) LocalIpv6NetworkCidrInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"localIpv6NetworkCidrInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2VpnConnection) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) OutsideIpAddressType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"outsideIpAddressType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) OutsideIpAddressTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"outsideIpAddressTypeInput",
 		&returns,
 	)
 	return returns
@@ -292,6 +417,46 @@ func (j *jsiiProxy_Ec2VpnConnection) RawOverrides() interface{} {
 	_jsii_.Get(
 		j,
 		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) RemoteIpv4NetworkCidr() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"remoteIpv4NetworkCidr",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) RemoteIpv4NetworkCidrInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"remoteIpv4NetworkCidrInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) RemoteIpv6NetworkCidr() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"remoteIpv6NetworkCidr",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) RemoteIpv6NetworkCidrInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"remoteIpv6NetworkCidrInput",
 		&returns,
 	)
 	return returns
@@ -387,6 +552,46 @@ func (j *jsiiProxy_Ec2VpnConnection) TransitGatewayIdInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2VpnConnection) TransportTransitGatewayAttachmentId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"transportTransitGatewayAttachmentId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) TransportTransitGatewayAttachmentIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"transportTransitGatewayAttachmentIdInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) TunnelInsideIpVersion() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"tunnelInsideIpVersion",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) TunnelInsideIpVersionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"tunnelInsideIpVersionInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2VpnConnection) Type() *string {
 	var returns *string
 	_jsii_.Get(
@@ -458,7 +663,7 @@ func (j *jsiiProxy_Ec2VpnConnection) VpnTunnelOptionsSpecificationsInput() inter
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_vpn_connection awscc_ec2_vpn_connection} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_vpn_connection awscc_ec2_vpn_connection} Resource.
 func NewEc2VpnConnection(scope constructs.Construct, id *string, config *Ec2VpnConnectionConfig) Ec2VpnConnection {
 	_init_.Initialize()
 
@@ -476,7 +681,7 @@ func NewEc2VpnConnection(scope constructs.Construct, id *string, config *Ec2VpnC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_vpn_connection awscc_ec2_vpn_connection} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_vpn_connection awscc_ec2_vpn_connection} Resource.
 func NewEc2VpnConnection_Override(e Ec2VpnConnection, scope constructs.Construct, id *string, config *Ec2VpnConnectionConfig) {
 	_init_.Initialize()
 
@@ -528,6 +733,17 @@ func (j *jsiiProxy_Ec2VpnConnection)SetDependsOn(val *[]*string) {
 	)
 }
 
+func (j *jsiiProxy_Ec2VpnConnection)SetEnableAcceleration(val interface{}) {
+	if err := j.validateSetEnableAccelerationParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enableAcceleration",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Ec2VpnConnection)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
@@ -543,6 +759,39 @@ func (j *jsiiProxy_Ec2VpnConnection)SetLifecycle(val *cdktf.TerraformResourceLif
 	_jsii_.Set(
 		j,
 		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2VpnConnection)SetLocalIpv4NetworkCidr(val *string) {
+	if err := j.validateSetLocalIpv4NetworkCidrParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"localIpv4NetworkCidr",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2VpnConnection)SetLocalIpv6NetworkCidr(val *string) {
+	if err := j.validateSetLocalIpv6NetworkCidrParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"localIpv6NetworkCidr",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2VpnConnection)SetOutsideIpAddressType(val *string) {
+	if err := j.validateSetOutsideIpAddressTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"outsideIpAddressType",
 		val,
 	)
 }
@@ -566,6 +815,28 @@ func (j *jsiiProxy_Ec2VpnConnection)SetProvisioners(val *[]interface{}) {
 	)
 }
 
+func (j *jsiiProxy_Ec2VpnConnection)SetRemoteIpv4NetworkCidr(val *string) {
+	if err := j.validateSetRemoteIpv4NetworkCidrParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"remoteIpv4NetworkCidr",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2VpnConnection)SetRemoteIpv6NetworkCidr(val *string) {
+	if err := j.validateSetRemoteIpv6NetworkCidrParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"remoteIpv6NetworkCidr",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Ec2VpnConnection)SetStaticRoutesOnly(val interface{}) {
 	if err := j.validateSetStaticRoutesOnlyParameters(val); err != nil {
 		panic(err)
@@ -584,6 +855,28 @@ func (j *jsiiProxy_Ec2VpnConnection)SetTransitGatewayId(val *string) {
 	_jsii_.Set(
 		j,
 		"transitGatewayId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2VpnConnection)SetTransportTransitGatewayAttachmentId(val *string) {
+	if err := j.validateSetTransportTransitGatewayAttachmentIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"transportTransitGatewayAttachmentId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2VpnConnection)SetTunnelInsideIpVersion(val *string) {
+	if err := j.validateSetTunnelInsideIpVersionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"tunnelInsideIpVersion",
 		val,
 	)
 }
@@ -879,6 +1172,19 @@ func (e *jsiiProxy_Ec2VpnConnection) GetStringMapAttribute(terraformAttribute *s
 	return returns
 }
 
+func (e *jsiiProxy_Ec2VpnConnection) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2VpnConnection) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -906,6 +1212,17 @@ func (e *jsiiProxy_Ec2VpnConnection) InterpolationForAttribute(terraformAttribut
 	return returns
 }
 
+func (e *jsiiProxy_Ec2VpnConnection) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2VpnConnection) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -914,6 +1231,17 @@ func (e *jsiiProxy_Ec2VpnConnection) MoveTo(moveTarget *string, index interface{
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Ec2VpnConnection) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -950,10 +1278,58 @@ func (e *jsiiProxy_Ec2VpnConnection) PutVpnTunnelOptionsSpecifications(value int
 	)
 }
 
+func (e *jsiiProxy_Ec2VpnConnection) ResetEnableAcceleration() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetEnableAcceleration",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2VpnConnection) ResetLocalIpv4NetworkCidr() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetLocalIpv4NetworkCidr",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2VpnConnection) ResetLocalIpv6NetworkCidr() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetLocalIpv6NetworkCidr",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2VpnConnection) ResetOutsideIpAddressType() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetOutsideIpAddressType",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_Ec2VpnConnection) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2VpnConnection) ResetRemoteIpv4NetworkCidr() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetRemoteIpv4NetworkCidr",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2VpnConnection) ResetRemoteIpv6NetworkCidr() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetRemoteIpv6NetworkCidr",
 		nil, // no parameters
 	)
 }
@@ -982,6 +1358,22 @@ func (e *jsiiProxy_Ec2VpnConnection) ResetTransitGatewayId() {
 	)
 }
 
+func (e *jsiiProxy_Ec2VpnConnection) ResetTransportTransitGatewayAttachmentId() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetTransportTransitGatewayAttachmentId",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2VpnConnection) ResetTunnelInsideIpVersion() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetTunnelInsideIpVersion",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_Ec2VpnConnection) ResetVpnGatewayId() {
 	_jsii_.InvokeVoid(
 		e,
@@ -1004,6 +1396,32 @@ func (e *jsiiProxy_Ec2VpnConnection) SynthesizeAttributes() *map[string]interfac
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2VpnConnection) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2VpnConnection) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

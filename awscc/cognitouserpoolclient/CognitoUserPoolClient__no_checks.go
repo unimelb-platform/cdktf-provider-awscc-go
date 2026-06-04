@@ -56,7 +56,15 @@ func (c *jsiiProxy_CognitoUserPoolClient) validateInterpolationForAttributeParam
 	return nil
 }
 
+func (c *jsiiProxy_CognitoUserPoolClient) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CognitoUserPoolClient) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_CognitoUserPoolClient) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -65,6 +73,10 @@ func (c *jsiiProxy_CognitoUserPoolClient) validateOverrideLogicalIdParameters(ne
 }
 
 func (c *jsiiProxy_CognitoUserPoolClient) validatePutAnalyticsConfigurationParameters(value *CognitoUserPoolClientAnalyticsConfiguration) error {
+	return nil
+}
+
+func (c *jsiiProxy_CognitoUserPoolClient) validatePutRefreshTokenRotationParameters(value *CognitoUserPoolClientRefreshTokenRotation) error {
 	return nil
 }
 

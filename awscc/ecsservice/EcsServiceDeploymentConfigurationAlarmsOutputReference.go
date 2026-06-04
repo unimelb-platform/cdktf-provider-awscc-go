@@ -70,6 +70,9 @@ type EcsServiceDeploymentConfigurationAlarmsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAlarmNames()
+	ResetEnable()
+	ResetRollback()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (e *jsiiProxy_EcsServiceDeploymentConfigurationAlarmsOutputReference) Inter
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EcsServiceDeploymentConfigurationAlarmsOutputReference) ResetAlarmNames() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetAlarmNames",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcsServiceDeploymentConfigurationAlarmsOutputReference) ResetEnable() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetEnable",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcsServiceDeploymentConfigurationAlarmsOutputReference) ResetRollback() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetRollback",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EcsServiceDeploymentConfigurationAlarmsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

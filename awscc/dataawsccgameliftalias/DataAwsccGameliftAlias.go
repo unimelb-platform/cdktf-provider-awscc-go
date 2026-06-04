@@ -9,9 +9,10 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccgameliftalias/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/gamelift_alias awscc_gamelift_alias}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/gamelift_alias awscc_gamelift_alias}.
 type DataAwsccGameliftAlias interface {
 	cdktf.TerraformDataSource
+	AliasArn() *string
 	AliasId() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
@@ -51,6 +52,7 @@ type DataAwsccGameliftAlias interface {
 	// Experimental.
 	RawOverrides() interface{}
 	RoutingStrategy() DataAwsccGameliftAliasRoutingStrategyOutputReference
+	Tags() DataAwsccGameliftAliasTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -86,6 +88,10 @@ type DataAwsccGameliftAlias interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -98,6 +104,16 @@ type DataAwsccGameliftAlias interface {
 // The jsii proxy struct for DataAwsccGameliftAlias
 type jsiiProxy_DataAwsccGameliftAlias struct {
 	internal.Type__cdktfTerraformDataSource
+}
+
+func (j *jsiiProxy_DataAwsccGameliftAlias) AliasArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"aliasArn",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccGameliftAlias) AliasId() *string {
@@ -270,6 +286,16 @@ func (j *jsiiProxy_DataAwsccGameliftAlias) RoutingStrategy() DataAwsccGameliftAl
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccGameliftAlias) Tags() DataAwsccGameliftAliasTagsList {
+	var returns DataAwsccGameliftAliasTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccGameliftAlias) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -301,7 +327,7 @@ func (j *jsiiProxy_DataAwsccGameliftAlias) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/gamelift_alias awscc_gamelift_alias} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/gamelift_alias awscc_gamelift_alias} Data Source.
 func NewDataAwsccGameliftAlias(scope constructs.Construct, id *string, config *DataAwsccGameliftAliasConfig) DataAwsccGameliftAlias {
 	_init_.Initialize()
 
@@ -319,7 +345,7 @@ func NewDataAwsccGameliftAlias(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/gamelift_alias awscc_gamelift_alias} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/gamelift_alias awscc_gamelift_alias} Data Source.
 func NewDataAwsccGameliftAlias_Override(d DataAwsccGameliftAlias, scope constructs.Construct, id *string, config *DataAwsccGameliftAliasConfig) {
 	_init_.Initialize()
 
@@ -686,6 +712,32 @@ func (d *jsiiProxy_DataAwsccGameliftAlias) SynthesizeAttributes() *map[string]in
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGameliftAlias) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGameliftAlias) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

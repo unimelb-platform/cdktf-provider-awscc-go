@@ -83,9 +83,12 @@ type AppflowConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSnow
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetAccountName()
+	ResetBucketName()
 	ResetBucketPrefix()
 	ResetPrivateLinkServiceName()
 	ResetRegion()
+	ResetStage()
+	ResetWarehouse()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -665,6 +668,14 @@ func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfile
 	)
 }
 
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSnowflakeOutputReference) ResetBucketName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetBucketName",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSnowflakeOutputReference) ResetBucketPrefix() {
 	_jsii_.InvokeVoid(
 		a,
@@ -685,6 +696,22 @@ func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfile
 	_jsii_.InvokeVoid(
 		a,
 		"resetRegion",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSnowflakeOutputReference) ResetStage() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetStage",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSnowflakeOutputReference) ResetWarehouse() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetWarehouse",
 		nil, // no parameters
 	)
 }

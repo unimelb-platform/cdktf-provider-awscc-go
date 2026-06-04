@@ -67,6 +67,7 @@ type CloudtrailTrailEventSelectorsDataResourcesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetType()
 	ResetValues()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (c *jsiiProxy_CloudtrailTrailEventSelectorsDataResourcesOutputReference) In
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CloudtrailTrailEventSelectorsDataResourcesOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetType",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CloudtrailTrailEventSelectorsDataResourcesOutputReference) ResetValues() {

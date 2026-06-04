@@ -1,6 +1,0 @@
-package dataawsccmediapackageoriginendpoint
-
-
-type DataAwsccMediapackageOriginEndpointDashPackageEncryption struct {
-}
-

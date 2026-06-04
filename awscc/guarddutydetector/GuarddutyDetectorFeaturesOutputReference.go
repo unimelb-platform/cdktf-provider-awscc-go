@@ -71,6 +71,8 @@ type GuarddutyDetectorFeaturesOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAdditionalConfiguration(value interface{})
 	ResetAdditionalConfiguration()
+	ResetName()
+	ResetStatus()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -522,6 +524,22 @@ func (g *jsiiProxy_GuarddutyDetectorFeaturesOutputReference) ResetAdditionalConf
 	_jsii_.InvokeVoid(
 		g,
 		"resetAdditionalConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GuarddutyDetectorFeaturesOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GuarddutyDetectorFeaturesOutputReference) ResetStatus() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetStatus",
 		nil, // no parameters
 	)
 }

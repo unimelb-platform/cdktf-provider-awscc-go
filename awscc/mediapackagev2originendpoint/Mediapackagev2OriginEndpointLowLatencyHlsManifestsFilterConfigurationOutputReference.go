@@ -10,6 +10,9 @@ import (
 
 type Mediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurationOutputReference interface {
 	cdktf.ComplexObject
+	ClipStartTime() *string
+	SetClipStartTime(val *string)
+	ClipStartTimeInput() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -73,6 +76,7 @@ type Mediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurationOutput
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetClipStartTime()
 	ResetEnd()
 	ResetManifestFilter()
 	ResetStart()
@@ -90,6 +94,26 @@ type Mediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurationOutput
 // The jsii proxy struct for Mediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurationOutputReference
 type jsiiProxy_Mediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurationOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_Mediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurationOutputReference) ClipStartTime() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"clipStartTime",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Mediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurationOutputReference) ClipStartTimeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"clipStartTimeInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_Mediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurationOutputReference) ComplexObjectIndex() interface{} {
@@ -267,6 +291,17 @@ func NewMediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurationOut
 		"awscc.mediapackagev2OriginEndpoint.Mediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurationOutputReference",
 		[]interface{}{terraformResource, terraformAttribute},
 		m,
+	)
+}
+
+func (j *jsiiProxy_Mediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurationOutputReference)SetClipStartTime(val *string) {
+	if err := j.validateSetClipStartTimeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"clipStartTime",
+		val,
 	)
 }
 
@@ -553,6 +588,14 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfi
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurationOutputReference) ResetClipStartTime() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetClipStartTime",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_Mediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurationOutputReference) ResetEnd() {

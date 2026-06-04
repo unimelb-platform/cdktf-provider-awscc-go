@@ -26,7 +26,7 @@ type KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReferenc
 	// Experimental.
 	SetComplexObjectIsFromSet(val *bool)
 	CopyCommand() KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommandOutputReference
-	CopyCommandInput() *KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommand
+	CopyCommandInput() interface{}
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
 	//
 	// If this returns an empty array the stack will not be attached.
@@ -52,7 +52,9 @@ type KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReferenc
 	SetS3BackupMode(val *string)
 	S3BackupModeInput() *string
 	S3Configuration() KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationS3ConfigurationOutputReference
-	S3ConfigurationInput() *KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationS3Configuration
+	S3ConfigurationInput() interface{}
+	SecretsManagerConfiguration() KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationSecretsManagerConfigurationOutputReference
+	SecretsManagerConfigurationInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -94,11 +96,19 @@ type KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReferenc
 	PutRetryOptions(value *KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationRetryOptions)
 	PutS3BackupConfiguration(value *KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationS3BackupConfiguration)
 	PutS3Configuration(value *KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationS3Configuration)
+	PutSecretsManagerConfiguration(value *KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationSecretsManagerConfiguration)
 	ResetCloudwatchLoggingOptions()
+	ResetClusterJdbcurl()
+	ResetCopyCommand()
+	ResetPassword()
 	ResetProcessingConfiguration()
 	ResetRetryOptions()
+	ResetRoleArn()
 	ResetS3BackupConfiguration()
 	ResetS3BackupMode()
+	ResetS3Configuration()
+	ResetSecretsManagerConfiguration()
+	ResetUsername()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -184,8 +194,8 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfiguration
 	return returns
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReference) CopyCommandInput() *KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommand {
-	var returns *KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommand
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReference) CopyCommandInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"copyCommandInput",
@@ -354,11 +364,31 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfiguration
 	return returns
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReference) S3ConfigurationInput() *KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationS3Configuration {
-	var returns *KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationS3Configuration
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReference) S3ConfigurationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"s3ConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReference) SecretsManagerConfiguration() KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationSecretsManagerConfigurationOutputReference {
+	var returns KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationSecretsManagerConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"secretsManagerConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReference) SecretsManagerConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"secretsManagerConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -794,10 +824,45 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfiguration
 	)
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReference) PutSecretsManagerConfiguration(value *KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationSecretsManagerConfiguration) {
+	if err := k.validatePutSecretsManagerConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"putSecretsManagerConfiguration",
+		[]interface{}{value},
+	)
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReference) ResetCloudwatchLoggingOptions() {
 	_jsii_.InvokeVoid(
 		k,
 		"resetCloudwatchLoggingOptions",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReference) ResetClusterJdbcurl() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetClusterJdbcurl",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReference) ResetCopyCommand() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetCopyCommand",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReference) ResetPassword() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetPassword",
 		nil, // no parameters
 	)
 }
@@ -818,6 +883,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfiguration
 	)
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReference) ResetS3BackupConfiguration() {
 	_jsii_.InvokeVoid(
 		k,
@@ -830,6 +903,30 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfiguration
 	_jsii_.InvokeVoid(
 		k,
 		"resetS3BackupMode",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReference) ResetS3Configuration() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetS3Configuration",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReference) ResetSecretsManagerConfiguration() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetSecretsManagerConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReference) ResetUsername() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetUsername",
 		nil, // no parameters
 	)
 }

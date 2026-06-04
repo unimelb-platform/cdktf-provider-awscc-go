@@ -56,7 +56,15 @@ func (c *jsiiProxy_CognitoIdentityPool) validateInterpolationForAttributeParamet
 	return nil
 }
 
+func (c *jsiiProxy_CognitoIdentityPool) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CognitoIdentityPool) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_CognitoIdentityPool) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -69,6 +77,10 @@ func (c *jsiiProxy_CognitoIdentityPool) validatePutCognitoIdentityProvidersParam
 }
 
 func (c *jsiiProxy_CognitoIdentityPool) validatePutCognitoStreamsParameters(value *CognitoIdentityPoolCognitoStreams) error {
+	return nil
+}
+
+func (c *jsiiProxy_CognitoIdentityPool) validatePutIdentityPoolTagsParameters(value interface{}) error {
 	return nil
 }
 

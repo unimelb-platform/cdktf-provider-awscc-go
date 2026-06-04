@@ -48,6 +48,10 @@ func (b *jsiiProxy_BackupBackupPlanBackupPlanBackupPlanRuleOutputReference) vali
 	return nil
 }
 
+func (b *jsiiProxy_BackupBackupPlanBackupPlanBackupPlanRuleOutputReference) validatePutIndexActionsParameters(value interface{}) error {
+	return nil
+}
+
 func (b *jsiiProxy_BackupBackupPlanBackupPlanBackupPlanRuleOutputReference) validatePutLifecycleParameters(value *BackupBackupPlanBackupPlanBackupPlanRuleLifecycle) error {
 	return nil
 }

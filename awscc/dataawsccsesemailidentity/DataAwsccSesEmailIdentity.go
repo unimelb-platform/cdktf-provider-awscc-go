@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccsesemailidentity/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ses_email_identity awscc_ses_email_identity}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ses_email_identity awscc_ses_email_identity}.
 type DataAwsccSesEmailIdentity interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -94,6 +94,10 @@ type DataAwsccSesEmailIdentity interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -389,7 +393,7 @@ func (j *jsiiProxy_DataAwsccSesEmailIdentity) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ses_email_identity awscc_ses_email_identity} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ses_email_identity awscc_ses_email_identity} Data Source.
 func NewDataAwsccSesEmailIdentity(scope constructs.Construct, id *string, config *DataAwsccSesEmailIdentityConfig) DataAwsccSesEmailIdentity {
 	_init_.Initialize()
 
@@ -407,7 +411,7 @@ func NewDataAwsccSesEmailIdentity(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ses_email_identity awscc_ses_email_identity} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ses_email_identity awscc_ses_email_identity} Data Source.
 func NewDataAwsccSesEmailIdentity_Override(d DataAwsccSesEmailIdentity, scope constructs.Construct, id *string, config *DataAwsccSesEmailIdentityConfig) {
 	_init_.Initialize()
 
@@ -774,6 +778,32 @@ func (d *jsiiProxy_DataAwsccSesEmailIdentity) SynthesizeAttributes() *map[string
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSesEmailIdentity) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSesEmailIdentity) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -29,7 +29,7 @@ type SagemakerModelExplainabilityJobDefinitionModelExplainabilityJobInputBatchTr
 	SetDataCapturedDestinationS3Uri(val *string)
 	DataCapturedDestinationS3UriInput() *string
 	DatasetFormat() SagemakerModelExplainabilityJobDefinitionModelExplainabilityJobInputBatchTransformInputDatasetFormatOutputReference
-	DatasetFormatInput() *SagemakerModelExplainabilityJobDefinitionModelExplainabilityJobInputBatchTransformInputDatasetFormat
+	DatasetFormatInput() interface{}
 	FeaturesAttribute() *string
 	SetFeaturesAttribute(val *string)
 	FeaturesAttributeInput() *string
@@ -85,8 +85,11 @@ type SagemakerModelExplainabilityJobDefinitionModelExplainabilityJobInputBatchTr
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDatasetFormat(value *SagemakerModelExplainabilityJobDefinitionModelExplainabilityJobInputBatchTransformInputDatasetFormat)
+	ResetDataCapturedDestinationS3Uri()
+	ResetDatasetFormat()
 	ResetFeaturesAttribute()
 	ResetInferenceAttribute()
+	ResetLocalPath()
 	ResetProbabilityAttribute()
 	ResetS3DataDistributionType()
 	ResetS3InputMode()
@@ -165,8 +168,8 @@ func (j *jsiiProxy_SagemakerModelExplainabilityJobDefinitionModelExplainabilityJ
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerModelExplainabilityJobDefinitionModelExplainabilityJobInputBatchTransformInputOutputReference) DatasetFormatInput() *SagemakerModelExplainabilityJobDefinitionModelExplainabilityJobInputBatchTransformInputDatasetFormat {
-	var returns *SagemakerModelExplainabilityJobDefinitionModelExplainabilityJobInputBatchTransformInputDatasetFormat
+func (j *jsiiProxy_SagemakerModelExplainabilityJobDefinitionModelExplainabilityJobInputBatchTransformInputOutputReference) DatasetFormatInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"datasetFormatInput",
@@ -692,6 +695,22 @@ func (s *jsiiProxy_SagemakerModelExplainabilityJobDefinitionModelExplainabilityJ
 	)
 }
 
+func (s *jsiiProxy_SagemakerModelExplainabilityJobDefinitionModelExplainabilityJobInputBatchTransformInputOutputReference) ResetDataCapturedDestinationS3Uri() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDataCapturedDestinationS3Uri",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelExplainabilityJobDefinitionModelExplainabilityJobInputBatchTransformInputOutputReference) ResetDatasetFormat() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDatasetFormat",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerModelExplainabilityJobDefinitionModelExplainabilityJobInputBatchTransformInputOutputReference) ResetFeaturesAttribute() {
 	_jsii_.InvokeVoid(
 		s,
@@ -704,6 +723,14 @@ func (s *jsiiProxy_SagemakerModelExplainabilityJobDefinitionModelExplainabilityJ
 	_jsii_.InvokeVoid(
 		s,
 		"resetInferenceAttribute",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelExplainabilityJobDefinitionModelExplainabilityJobInputBatchTransformInputOutputReference) ResetLocalPath() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetLocalPath",
 		nil, // no parameters
 	)
 }

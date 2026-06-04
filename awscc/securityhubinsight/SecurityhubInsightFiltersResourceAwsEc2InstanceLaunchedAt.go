@@ -1,0 +1,18 @@
+package securityhubinsight
+
+
+type SecurityhubInsightFiltersResourceAwsEc2InstanceLaunchedAt struct {
+	// A date range for the date filter.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/securityhub_insight#date_range SecurityhubInsight#date_range}
+	DateRange *SecurityhubInsightFiltersResourceAwsEc2InstanceLaunchedAtDateRange `field:"optional" json:"dateRange" yaml:"dateRange"`
+	// The date and time, in UTC and ISO 8601 format.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/securityhub_insight#end SecurityhubInsight#end}
+	End *string `field:"optional" json:"end" yaml:"end"`
+	// The date and time, in UTC and ISO 8601 format.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/securityhub_insight#start SecurityhubInsight#start}
+	Start *string `field:"optional" json:"start" yaml:"start"`
+}
+

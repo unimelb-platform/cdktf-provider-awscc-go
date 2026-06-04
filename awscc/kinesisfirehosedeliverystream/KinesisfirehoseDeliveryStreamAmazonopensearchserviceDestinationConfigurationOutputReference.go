@@ -58,7 +58,7 @@ type KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfiguratio
 	SetS3BackupMode(val *string)
 	S3BackupModeInput() *string
 	S3Configuration() KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3ConfigurationOutputReference
-	S3ConfigurationInput() *KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3Configuration
+	S3ConfigurationInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -108,10 +108,13 @@ type KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfiguratio
 	ResetClusterEndpoint()
 	ResetDocumentIdOptions()
 	ResetDomainArn()
+	ResetIndexName()
 	ResetIndexRotationPeriod()
 	ResetProcessingConfiguration()
 	ResetRetryOptions()
+	ResetRoleArn()
 	ResetS3BackupMode()
+	ResetS3Configuration()
 	ResetTypeName()
 	ResetVpcConfiguration()
 	// Produce the Token's value at resolution time.
@@ -409,8 +412,8 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinati
 	return returns
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationOutputReference) S3ConfigurationInput() *KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3Configuration {
-	var returns *KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3Configuration
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationOutputReference) S3ConfigurationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"s3ConfigurationInput",
@@ -942,6 +945,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinati
 	)
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationOutputReference) ResetIndexName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetIndexName",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationOutputReference) ResetIndexRotationPeriod() {
 	_jsii_.InvokeVoid(
 		k,
@@ -966,10 +977,26 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinati
 	)
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationOutputReference) ResetS3BackupMode() {
 	_jsii_.InvokeVoid(
 		k,
 		"resetS3BackupMode",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationOutputReference) ResetS3Configuration() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetS3Configuration",
 		nil, // no parameters
 	)
 }

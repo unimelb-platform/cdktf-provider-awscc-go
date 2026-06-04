@@ -72,6 +72,7 @@ type LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationPromp
 	PutDtmfSpecification(value *LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecification)
 	ResetAudioSpecification()
 	ResetDtmfSpecification()
+	ResetStartTimeoutMs()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpec
 	_jsii_.InvokeVoid(
 		l,
 		"resetDtmfSpecification",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationOutputReference) ResetStartTimeoutMs() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetStartTimeoutMs",
 		nil, // no parameters
 	)
 }

@@ -38,6 +38,9 @@ type Ec2TransitGatewayVpcAttachmentOptionsOutputReference interface {
 	Ipv6Support() *string
 	SetIpv6Support(val *string)
 	Ipv6SupportInput() *string
+	SecurityGroupReferencingSupport() *string
+	SetSecurityGroupReferencingSupport(val *string)
+	SecurityGroupReferencingSupportInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -73,6 +76,7 @@ type Ec2TransitGatewayVpcAttachmentOptionsOutputReference interface {
 	ResetApplianceModeSupport()
 	ResetDnsSupport()
 	ResetIpv6Support()
+	ResetSecurityGroupReferencingSupport()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -198,6 +202,26 @@ func (j *jsiiProxy_Ec2TransitGatewayVpcAttachmentOptionsOutputReference) Ipv6Sup
 	return returns
 }
 
+func (j *jsiiProxy_Ec2TransitGatewayVpcAttachmentOptionsOutputReference) SecurityGroupReferencingSupport() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"securityGroupReferencingSupport",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2TransitGatewayVpcAttachmentOptionsOutputReference) SecurityGroupReferencingSupportInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"securityGroupReferencingSupportInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2TransitGatewayVpcAttachmentOptionsOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -308,6 +332,17 @@ func (j *jsiiProxy_Ec2TransitGatewayVpcAttachmentOptionsOutputReference)SetIpv6S
 	_jsii_.Set(
 		j,
 		"ipv6Support",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2TransitGatewayVpcAttachmentOptionsOutputReference)SetSecurityGroupReferencingSupport(val *string) {
+	if err := j.validateSetSecurityGroupReferencingSupportParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"securityGroupReferencingSupport",
 		val,
 	)
 }
@@ -540,6 +575,14 @@ func (e *jsiiProxy_Ec2TransitGatewayVpcAttachmentOptionsOutputReference) ResetIp
 	_jsii_.InvokeVoid(
 		e,
 		"resetIpv6Support",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2TransitGatewayVpcAttachmentOptionsOutputReference) ResetSecurityGroupReferencingSupport() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetSecurityGroupReferencingSupport",
 		nil, // no parameters
 	)
 }

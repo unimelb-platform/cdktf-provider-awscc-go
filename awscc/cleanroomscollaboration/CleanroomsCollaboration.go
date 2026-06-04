@@ -9,9 +9,12 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/cleanroomscollaboration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cleanrooms_collaboration awscc_cleanrooms_collaboration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cleanrooms_collaboration awscc_cleanrooms_collaboration}.
 type CleanroomsCollaboration interface {
 	cdktf.TerraformResource
+	AnalyticsEngine() *string
+	SetAnalyticsEngine(val *string)
+	AnalyticsEngineInput() *string
 	Arn() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
@@ -32,6 +35,8 @@ type CleanroomsCollaboration interface {
 	CreatorMemberAbilities() *[]*string
 	SetCreatorMemberAbilities(val *[]*string)
 	CreatorMemberAbilitiesInput() *[]*string
+	CreatorMlMemberAbilities() CleanroomsCollaborationCreatorMlMemberAbilitiesOutputReference
+	CreatorMlMemberAbilitiesInput() interface{}
 	CreatorPaymentConfiguration() CleanroomsCollaborationCreatorPaymentConfigurationOutputReference
 	CreatorPaymentConfigurationInput() interface{}
 	DataEncryptionMetadata() CleanroomsCollaborationDataEncryptionMetadataOutputReference
@@ -52,6 +57,9 @@ type CleanroomsCollaboration interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
+	JobLogStatus() *string
+	SetJobLogStatus(val *string)
+	JobLogStatusInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -108,26 +116,45 @@ type CleanroomsCollaboration interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutCreatorMlMemberAbilities(value *CleanroomsCollaborationCreatorMlMemberAbilities)
 	PutCreatorPaymentConfiguration(value *CleanroomsCollaborationCreatorPaymentConfiguration)
 	PutDataEncryptionMetadata(value *CleanroomsCollaborationDataEncryptionMetadata)
 	PutMembers(value interface{})
 	PutTags(value interface{})
+	ResetAnalyticsEngine()
+	ResetCreatorMemberAbilities()
+	ResetCreatorMlMemberAbilities()
 	ResetCreatorPaymentConfiguration()
 	ResetDataEncryptionMetadata()
+	ResetJobLogStatus()
+	ResetMembers()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -140,6 +167,26 @@ type CleanroomsCollaboration interface {
 // The jsii proxy struct for CleanroomsCollaboration
 type jsiiProxy_CleanroomsCollaboration struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_CleanroomsCollaboration) AnalyticsEngine() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"analyticsEngine",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsCollaboration) AnalyticsEngineInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"analyticsEngineInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_CleanroomsCollaboration) Arn() *string {
@@ -237,6 +284,26 @@ func (j *jsiiProxy_CleanroomsCollaboration) CreatorMemberAbilitiesInput() *[]*st
 	_jsii_.Get(
 		j,
 		"creatorMemberAbilitiesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsCollaboration) CreatorMlMemberAbilities() CleanroomsCollaborationCreatorMlMemberAbilitiesOutputReference {
+	var returns CleanroomsCollaborationCreatorMlMemberAbilitiesOutputReference
+	_jsii_.Get(
+		j,
+		"creatorMlMemberAbilities",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsCollaboration) CreatorMlMemberAbilitiesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"creatorMlMemberAbilitiesInput",
 		&returns,
 	)
 	return returns
@@ -347,6 +414,26 @@ func (j *jsiiProxy_CleanroomsCollaboration) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsCollaboration) JobLogStatus() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"jobLogStatus",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsCollaboration) JobLogStatusInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"jobLogStatusInput",
 		&returns,
 	)
 	return returns
@@ -513,7 +600,7 @@ func (j *jsiiProxy_CleanroomsCollaboration) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cleanrooms_collaboration awscc_cleanrooms_collaboration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cleanrooms_collaboration awscc_cleanrooms_collaboration} Resource.
 func NewCleanroomsCollaboration(scope constructs.Construct, id *string, config *CleanroomsCollaborationConfig) CleanroomsCollaboration {
 	_init_.Initialize()
 
@@ -531,7 +618,7 @@ func NewCleanroomsCollaboration(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cleanrooms_collaboration awscc_cleanrooms_collaboration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cleanrooms_collaboration awscc_cleanrooms_collaboration} Resource.
 func NewCleanroomsCollaboration_Override(c CleanroomsCollaboration, scope constructs.Construct, id *string, config *CleanroomsCollaborationConfig) {
 	_init_.Initialize()
 
@@ -539,6 +626,17 @@ func NewCleanroomsCollaboration_Override(c CleanroomsCollaboration, scope constr
 		"awscc.cleanroomsCollaboration.CleanroomsCollaboration",
 		[]interface{}{scope, id, config},
 		c,
+	)
+}
+
+func (j *jsiiProxy_CleanroomsCollaboration)SetAnalyticsEngine(val *string) {
+	if err := j.validateSetAnalyticsEngineParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"analyticsEngine",
+		val,
 	)
 }
 
@@ -609,6 +707,17 @@ func (j *jsiiProxy_CleanroomsCollaboration)SetForEach(val cdktf.ITerraformIterat
 	_jsii_.Set(
 		j,
 		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CleanroomsCollaboration)SetJobLogStatus(val *string) {
+	if err := j.validateSetJobLogStatusParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"jobLogStatus",
 		val,
 	)
 }
@@ -934,6 +1043,19 @@ func (c *jsiiProxy_CleanroomsCollaboration) GetStringMapAttribute(terraformAttri
 	return returns
 }
 
+func (c *jsiiProxy_CleanroomsCollaboration) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_CleanroomsCollaboration) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -961,6 +1083,17 @@ func (c *jsiiProxy_CleanroomsCollaboration) InterpolationForAttribute(terraformA
 	return returns
 }
 
+func (c *jsiiProxy_CleanroomsCollaboration) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CleanroomsCollaboration) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -972,6 +1105,17 @@ func (c *jsiiProxy_CleanroomsCollaboration) MoveTo(moveTarget *string, index int
 	)
 }
 
+func (c *jsiiProxy_CleanroomsCollaboration) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CleanroomsCollaboration) OverrideLogicalId(newLogicalId *string) {
 	if err := c.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -980,6 +1124,17 @@ func (c *jsiiProxy_CleanroomsCollaboration) OverrideLogicalId(newLogicalId *stri
 		c,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (c *jsiiProxy_CleanroomsCollaboration) PutCreatorMlMemberAbilities(value *CleanroomsCollaborationCreatorMlMemberAbilities) {
+	if err := c.validatePutCreatorMlMemberAbilitiesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putCreatorMlMemberAbilities",
+		[]interface{}{value},
 	)
 }
 
@@ -1027,6 +1182,30 @@ func (c *jsiiProxy_CleanroomsCollaboration) PutTags(value interface{}) {
 	)
 }
 
+func (c *jsiiProxy_CleanroomsCollaboration) ResetAnalyticsEngine() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAnalyticsEngine",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsCollaboration) ResetCreatorMemberAbilities() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetCreatorMemberAbilities",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsCollaboration) ResetCreatorMlMemberAbilities() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetCreatorMlMemberAbilities",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CleanroomsCollaboration) ResetCreatorPaymentConfiguration() {
 	_jsii_.InvokeVoid(
 		c,
@@ -1039,6 +1218,22 @@ func (c *jsiiProxy_CleanroomsCollaboration) ResetDataEncryptionMetadata() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetDataEncryptionMetadata",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsCollaboration) ResetJobLogStatus() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetJobLogStatus",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsCollaboration) ResetMembers() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetMembers",
 		nil, // no parameters
 	)
 }
@@ -1065,6 +1260,32 @@ func (c *jsiiProxy_CleanroomsCollaboration) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CleanroomsCollaboration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CleanroomsCollaboration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

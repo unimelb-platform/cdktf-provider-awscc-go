@@ -1,0 +1,6 @@
+package dataawsccelasticloadbalancingv2listener
+
+
+type DataAwsccElasticloadbalancingv2ListenerDefaultActions struct {
+}
+

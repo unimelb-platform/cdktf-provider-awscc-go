@@ -68,7 +68,7 @@ func (j *jsiiProxy_CloudtrailTrailAdvancedEventSelectorsFieldSelectorsOutputRefe
 	return nil
 }
 
-func (j *jsiiProxy_CloudtrailTrailAdvancedEventSelectorsFieldSelectorsOutputReference) validateSetInternalValueParameters(val *CloudtrailTrailAdvancedEventSelectorsFieldSelectors) error {
+func (j *jsiiProxy_CloudtrailTrailAdvancedEventSelectorsFieldSelectorsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

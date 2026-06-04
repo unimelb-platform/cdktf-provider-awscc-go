@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/mediapackagev2originendpoint/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediapackagev2_origin_endpoint awscc_mediapackagev2_origin_endpoint}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediapackagev2_origin_endpoint awscc_mediapackagev2_origin_endpoint}.
 type Mediapackagev2OriginEndpoint interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -35,6 +35,9 @@ type Mediapackagev2OriginEndpoint interface {
 	// Experimental.
 	SetCount(val interface{})
 	CreatedAt() *string
+	DashManifests() Mediapackagev2OriginEndpointDashManifestsList
+	DashManifestsInput() interface{}
+	DashManifestUrls() *[]*string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -42,6 +45,8 @@ type Mediapackagev2OriginEndpoint interface {
 	Description() *string
 	SetDescription(val *string)
 	DescriptionInput() *string
+	ForceEndpointErrorConfiguration() Mediapackagev2OriginEndpointForceEndpointErrorConfigurationOutputReference
+	ForceEndpointErrorConfigurationInput() interface{}
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -52,6 +57,7 @@ type Mediapackagev2OriginEndpoint interface {
 	FriendlyUniqueId() *string
 	HlsManifests() Mediapackagev2OriginEndpointHlsManifestsList
 	HlsManifestsInput() interface{}
+	HlsManifestUrls() *[]*string
 	Id() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
@@ -59,6 +65,7 @@ type Mediapackagev2OriginEndpoint interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	LowLatencyHlsManifests() Mediapackagev2OriginEndpointLowLatencyHlsManifestsList
 	LowLatencyHlsManifestsInput() interface{}
+	LowLatencyHlsManifestUrls() *[]*string
 	ModifiedAt() *string
 	// The tree node.
 	Node() constructs.Node
@@ -112,25 +119,36 @@ type Mediapackagev2OriginEndpoint interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutDashManifests(value interface{})
+	PutForceEndpointErrorConfiguration(value *Mediapackagev2OriginEndpointForceEndpointErrorConfiguration)
 	PutHlsManifests(value interface{})
 	PutLowLatencyHlsManifests(value interface{})
 	PutSegment(value *Mediapackagev2OriginEndpointSegment)
 	PutTags(value interface{})
-	ResetChannelGroupName()
-	ResetChannelName()
+	ResetDashManifests()
 	ResetDescription()
+	ResetForceEndpointErrorConfiguration()
 	ResetHlsManifests()
 	ResetLowLatencyHlsManifests()
-	ResetOriginEndpointName()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -138,6 +156,9 @@ type Mediapackagev2OriginEndpoint interface {
 	ResetStartoverWindowSeconds()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -272,6 +293,36 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpoint) CreatedAt() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Mediapackagev2OriginEndpoint) DashManifests() Mediapackagev2OriginEndpointDashManifestsList {
+	var returns Mediapackagev2OriginEndpointDashManifestsList
+	_jsii_.Get(
+		j,
+		"dashManifests",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Mediapackagev2OriginEndpoint) DashManifestsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"dashManifestsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Mediapackagev2OriginEndpoint) DashManifestUrls() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"dashManifestUrls",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Mediapackagev2OriginEndpoint) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -297,6 +348,26 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpoint) DescriptionInput() *string {
 	_jsii_.Get(
 		j,
 		"descriptionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Mediapackagev2OriginEndpoint) ForceEndpointErrorConfiguration() Mediapackagev2OriginEndpointForceEndpointErrorConfigurationOutputReference {
+	var returns Mediapackagev2OriginEndpointForceEndpointErrorConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"forceEndpointErrorConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Mediapackagev2OriginEndpoint) ForceEndpointErrorConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"forceEndpointErrorConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -352,6 +423,16 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpoint) HlsManifestsInput() interface{}
 	return returns
 }
 
+func (j *jsiiProxy_Mediapackagev2OriginEndpoint) HlsManifestUrls() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"hlsManifestUrls",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Mediapackagev2OriginEndpoint) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -387,6 +468,16 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpoint) LowLatencyHlsManifestsInput() i
 	_jsii_.Get(
 		j,
 		"lowLatencyHlsManifestsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Mediapackagev2OriginEndpoint) LowLatencyHlsManifestUrls() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"lowLatencyHlsManifestUrls",
 		&returns,
 	)
 	return returns
@@ -553,7 +644,7 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpoint) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediapackagev2_origin_endpoint awscc_mediapackagev2_origin_endpoint} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediapackagev2_origin_endpoint awscc_mediapackagev2_origin_endpoint} Resource.
 func NewMediapackagev2OriginEndpoint(scope constructs.Construct, id *string, config *Mediapackagev2OriginEndpointConfig) Mediapackagev2OriginEndpoint {
 	_init_.Initialize()
 
@@ -571,7 +662,7 @@ func NewMediapackagev2OriginEndpoint(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediapackagev2_origin_endpoint awscc_mediapackagev2_origin_endpoint} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediapackagev2_origin_endpoint awscc_mediapackagev2_origin_endpoint} Resource.
 func NewMediapackagev2OriginEndpoint_Override(m Mediapackagev2OriginEndpoint, scope constructs.Construct, id *string, config *Mediapackagev2OriginEndpointConfig) {
 	_init_.Initialize()
 
@@ -985,6 +1076,19 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpoint) GetStringMapAttribute(terraform
 	return returns
 }
 
+func (m *jsiiProxy_Mediapackagev2OriginEndpoint) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (m *jsiiProxy_Mediapackagev2OriginEndpoint) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1012,6 +1116,17 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpoint) InterpolationForAttribute(terra
 	return returns
 }
 
+func (m *jsiiProxy_Mediapackagev2OriginEndpoint) MoveFromId(id *string) {
+	if err := m.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_Mediapackagev2OriginEndpoint) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1023,6 +1138,17 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpoint) MoveTo(moveTarget *string, inde
 	)
 }
 
+func (m *jsiiProxy_Mediapackagev2OriginEndpoint) MoveToId(id *string) {
+	if err := m.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_Mediapackagev2OriginEndpoint) OverrideLogicalId(newLogicalId *string) {
 	if err := m.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -1031,6 +1157,28 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpoint) OverrideLogicalId(newLogicalId 
 		m,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpoint) PutDashManifests(value interface{}) {
+	if err := m.validatePutDashManifestsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putDashManifests",
+		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpoint) PutForceEndpointErrorConfiguration(value *Mediapackagev2OriginEndpointForceEndpointErrorConfiguration) {
+	if err := m.validatePutForceEndpointErrorConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putForceEndpointErrorConfiguration",
+		[]interface{}{value},
 	)
 }
 
@@ -1078,18 +1226,10 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpoint) PutTags(value interface{}) {
 	)
 }
 
-func (m *jsiiProxy_Mediapackagev2OriginEndpoint) ResetChannelGroupName() {
+func (m *jsiiProxy_Mediapackagev2OriginEndpoint) ResetDashManifests() {
 	_jsii_.InvokeVoid(
 		m,
-		"resetChannelGroupName",
-		nil, // no parameters
-	)
-}
-
-func (m *jsiiProxy_Mediapackagev2OriginEndpoint) ResetChannelName() {
-	_jsii_.InvokeVoid(
-		m,
-		"resetChannelName",
+		"resetDashManifests",
 		nil, // no parameters
 	)
 }
@@ -1098,6 +1238,14 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpoint) ResetDescription() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpoint) ResetForceEndpointErrorConfiguration() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetForceEndpointErrorConfiguration",
 		nil, // no parameters
 	)
 }
@@ -1114,14 +1262,6 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpoint) ResetLowLatencyHlsManifests() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetLowLatencyHlsManifests",
-		nil, // no parameters
-	)
-}
-
-func (m *jsiiProxy_Mediapackagev2OriginEndpoint) ResetOriginEndpointName() {
-	_jsii_.InvokeVoid(
-		m,
-		"resetOriginEndpointName",
 		nil, // no parameters
 	)
 }
@@ -1164,6 +1304,32 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpoint) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		m,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpoint) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		m,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpoint) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

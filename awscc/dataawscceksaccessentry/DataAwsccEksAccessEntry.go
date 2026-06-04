@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscceksaccessentry/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/eks_access_entry awscc_eks_access_entry}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/eks_access_entry awscc_eks_access_entry}.
 type DataAwsccEksAccessEntry interface {
 	cdktf.TerraformDataSource
 	AccessEntryArn() *string
@@ -90,6 +90,10 @@ type DataAwsccEksAccessEntry interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -345,7 +349,7 @@ func (j *jsiiProxy_DataAwsccEksAccessEntry) Username() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/eks_access_entry awscc_eks_access_entry} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/eks_access_entry awscc_eks_access_entry} Data Source.
 func NewDataAwsccEksAccessEntry(scope constructs.Construct, id *string, config *DataAwsccEksAccessEntryConfig) DataAwsccEksAccessEntry {
 	_init_.Initialize()
 
@@ -363,7 +367,7 @@ func NewDataAwsccEksAccessEntry(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/eks_access_entry awscc_eks_access_entry} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/eks_access_entry awscc_eks_access_entry} Data Source.
 func NewDataAwsccEksAccessEntry_Override(d DataAwsccEksAccessEntry, scope constructs.Construct, id *string, config *DataAwsccEksAccessEntryConfig) {
 	_init_.Initialize()
 
@@ -730,6 +734,32 @@ func (d *jsiiProxy_DataAwsccEksAccessEntry) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEksAccessEntry) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEksAccessEntry) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

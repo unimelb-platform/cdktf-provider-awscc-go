@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/wisdomassistantassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/wisdom_assistant_association awscc_wisdom_assistant_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/wisdom_assistant_association awscc_wisdom_assistant_association}.
 type WisdomAssistantAssociation interface {
 	cdktf.TerraformResource
 	AssistantArn() *string
@@ -96,12 +96,22 @@ type WisdomAssistantAssociation interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -112,6 +122,9 @@ type WisdomAssistantAssociation interface {
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -407,7 +420,7 @@ func (j *jsiiProxy_WisdomAssistantAssociation) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/wisdom_assistant_association awscc_wisdom_assistant_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/wisdom_assistant_association awscc_wisdom_assistant_association} Resource.
 func NewWisdomAssistantAssociation(scope constructs.Construct, id *string, config *WisdomAssistantAssociationConfig) WisdomAssistantAssociation {
 	_init_.Initialize()
 
@@ -425,7 +438,7 @@ func NewWisdomAssistantAssociation(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/wisdom_assistant_association awscc_wisdom_assistant_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/wisdom_assistant_association awscc_wisdom_assistant_association} Resource.
 func NewWisdomAssistantAssociation_Override(w WisdomAssistantAssociation, scope constructs.Construct, id *string, config *WisdomAssistantAssociationConfig) {
 	_init_.Initialize()
 
@@ -795,6 +808,19 @@ func (w *jsiiProxy_WisdomAssistantAssociation) GetStringMapAttribute(terraformAt
 	return returns
 }
 
+func (w *jsiiProxy_WisdomAssistantAssociation) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		w,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (w *jsiiProxy_WisdomAssistantAssociation) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := w.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -822,6 +848,17 @@ func (w *jsiiProxy_WisdomAssistantAssociation) InterpolationForAttribute(terrafo
 	return returns
 }
 
+func (w *jsiiProxy_WisdomAssistantAssociation) MoveFromId(id *string) {
+	if err := w.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		w,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (w *jsiiProxy_WisdomAssistantAssociation) MoveTo(moveTarget *string, index interface{}) {
 	if err := w.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -830,6 +867,17 @@ func (w *jsiiProxy_WisdomAssistantAssociation) MoveTo(moveTarget *string, index 
 		w,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (w *jsiiProxy_WisdomAssistantAssociation) MoveToId(id *string) {
+	if err := w.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		w,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -888,6 +936,32 @@ func (w *jsiiProxy_WisdomAssistantAssociation) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		w,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (w *jsiiProxy_WisdomAssistantAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		w,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (w *jsiiProxy_WisdomAssistantAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		w,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -71,6 +71,7 @@ type EventsRuleTargetsEcsParametersCapacityProviderStrategyOutputReference inter
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetBase()
+	ResetCapacityProvider()
 	ResetWeight()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -523,6 +524,14 @@ func (e *jsiiProxy_EventsRuleTargetsEcsParametersCapacityProviderStrategyOutputR
 	_jsii_.InvokeVoid(
 		e,
 		"resetBase",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EventsRuleTargetsEcsParametersCapacityProviderStrategyOutputReference) ResetCapacityProvider() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetCapacityProvider",
 		nil, // no parameters
 	)
 }

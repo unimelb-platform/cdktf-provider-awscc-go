@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccnetworkmanagervpcattachments/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_vpc_attachments awscc_networkmanager_vpc_attachments}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_vpc_attachments awscc_networkmanager_vpc_attachments}.
 type DataAwsccNetworkmanagerVpcAttachments interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccNetworkmanagerVpcAttachments interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerVpcAttachments) TerraformResourceType(
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_vpc_attachments awscc_networkmanager_vpc_attachments} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_vpc_attachments awscc_networkmanager_vpc_attachments} Data Source.
 func NewDataAwsccNetworkmanagerVpcAttachments(scope constructs.Construct, id *string, config *DataAwsccNetworkmanagerVpcAttachmentsConfig) DataAwsccNetworkmanagerVpcAttachments {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccNetworkmanagerVpcAttachments(scope constructs.Construct, id *st
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_vpc_attachments awscc_networkmanager_vpc_attachments} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_vpc_attachments awscc_networkmanager_vpc_attachments} Data Source.
 func NewDataAwsccNetworkmanagerVpcAttachments_Override(d DataAwsccNetworkmanagerVpcAttachments, scope constructs.Construct, id *string, config *DataAwsccNetworkmanagerVpcAttachmentsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccNetworkmanagerVpcAttachments) SynthesizeAttributes()
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkmanagerVpcAttachments) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkmanagerVpcAttachments) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -1,0 +1,6 @@
+package dataawsccsagemakerspace
+
+
+type DataAwsccSagemakerSpaceSpaceSettingsCodeEditorAppSettingsAppLifecycleManagement struct {
+}
+

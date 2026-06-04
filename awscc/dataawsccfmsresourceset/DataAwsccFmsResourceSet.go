@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccfmsresourceset/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/fms_resource_set awscc_fms_resource_set}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/fms_resource_set awscc_fms_resource_set}.
 type DataAwsccFmsResourceSet interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -50,6 +50,7 @@ type DataAwsccFmsResourceSet interface {
 	// Experimental.
 	RawOverrides() interface{}
 	Resources() *[]*string
+	ResourceSetId() *string
 	ResourceTypeList() *[]*string
 	Tags() DataAwsccFmsResourceSetTagsList
 	// Experimental.
@@ -87,6 +88,10 @@ type DataAwsccFmsResourceSet interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -261,6 +266,16 @@ func (j *jsiiProxy_DataAwsccFmsResourceSet) Resources() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccFmsResourceSet) ResourceSetId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"resourceSetId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccFmsResourceSet) ResourceTypeList() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -312,7 +327,7 @@ func (j *jsiiProxy_DataAwsccFmsResourceSet) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/fms_resource_set awscc_fms_resource_set} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/fms_resource_set awscc_fms_resource_set} Data Source.
 func NewDataAwsccFmsResourceSet(scope constructs.Construct, id *string, config *DataAwsccFmsResourceSetConfig) DataAwsccFmsResourceSet {
 	_init_.Initialize()
 
@@ -330,7 +345,7 @@ func NewDataAwsccFmsResourceSet(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/fms_resource_set awscc_fms_resource_set} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/fms_resource_set awscc_fms_resource_set} Data Source.
 func NewDataAwsccFmsResourceSet_Override(d DataAwsccFmsResourceSet, scope constructs.Construct, id *string, config *DataAwsccFmsResourceSetConfig) {
 	_init_.Initialize()
 
@@ -697,6 +712,32 @@ func (d *jsiiProxy_DataAwsccFmsResourceSet) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccFmsResourceSet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccFmsResourceSet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

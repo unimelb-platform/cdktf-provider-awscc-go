@@ -9,14 +9,22 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ekscluster/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/eks_cluster awscc_eks_cluster}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/eks_cluster awscc_eks_cluster}.
 type EksCluster interface {
 	cdktf.TerraformResource
+	AccessConfig() EksClusterAccessConfigOutputReference
+	AccessConfigInput() interface{}
 	Arn() *string
+	BootstrapSelfManagedAddons() interface{}
+	SetBootstrapSelfManagedAddons(val interface{})
+	BootstrapSelfManagedAddonsInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	CertificateAuthorityData() *string
+	ClusterId() *string
 	ClusterSecurityGroupId() *string
+	ComputeConfig() EksClusterComputeConfigOutputReference
+	ComputeConfigInput() interface{}
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -35,6 +43,9 @@ type EksCluster interface {
 	EncryptionConfigInput() interface{}
 	EncryptionConfigKeyArn() *string
 	Endpoint() *string
+	Force() interface{}
+	SetForce(val interface{})
+	ForceInput() interface{}
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -58,6 +69,8 @@ type EksCluster interface {
 	// The tree node.
 	Node() constructs.Node
 	OpenIdConnectIssuerUrl() *string
+	OutpostConfig() EksClusterOutpostConfigOutputReference
+	OutpostConfigInput() interface{}
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -68,11 +81,15 @@ type EksCluster interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RemoteNetworkConfig() EksClusterRemoteNetworkConfigOutputReference
+	RemoteNetworkConfigInput() interface{}
 	ResourcesVpcConfig() EksClusterResourcesVpcConfigOutputReference
 	ResourcesVpcConfigInput() interface{}
 	RoleArn() *string
 	SetRoleArn(val *string)
 	RoleArnInput() *string
+	StorageConfig() EksClusterStorageConfigOutputReference
+	StorageConfigInput() interface{}
 	Tags() EksClusterTagsList
 	TagsInput() interface{}
 	// Experimental.
@@ -81,9 +98,13 @@ type EksCluster interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	UpgradePolicy() EksClusterUpgradePolicyOutputReference
+	UpgradePolicyInput() interface{}
 	Version() *string
 	SetVersion(val *string)
 	VersionInput() *string
+	ZonalShiftConfig() EksClusterZonalShiftConfigOutputReference
+	ZonalShiftConfigInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -108,30 +129,59 @@ type EksCluster interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutAccessConfig(value *EksClusterAccessConfig)
+	PutComputeConfig(value *EksClusterComputeConfig)
 	PutEncryptionConfig(value interface{})
 	PutKubernetesNetworkConfig(value *EksClusterKubernetesNetworkConfig)
 	PutLogging(value *EksClusterLogging)
+	PutOutpostConfig(value *EksClusterOutpostConfig)
+	PutRemoteNetworkConfig(value *EksClusterRemoteNetworkConfig)
 	PutResourcesVpcConfig(value *EksClusterResourcesVpcConfig)
+	PutStorageConfig(value *EksClusterStorageConfig)
 	PutTags(value interface{})
+	PutUpgradePolicy(value *EksClusterUpgradePolicy)
+	PutZonalShiftConfig(value *EksClusterZonalShiftConfig)
+	ResetAccessConfig()
+	ResetBootstrapSelfManagedAddons()
+	ResetComputeConfig()
 	ResetEncryptionConfig()
+	ResetForce()
 	ResetKubernetesNetworkConfig()
 	ResetLogging()
 	ResetName()
+	ResetOutpostConfig()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetRemoteNetworkConfig()
+	ResetStorageConfig()
 	ResetTags()
+	ResetUpgradePolicy()
 	ResetVersion()
+	ResetZonalShiftConfig()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -146,11 +196,51 @@ type jsiiProxy_EksCluster struct {
 	internal.Type__cdktfTerraformResource
 }
 
+func (j *jsiiProxy_EksCluster) AccessConfig() EksClusterAccessConfigOutputReference {
+	var returns EksClusterAccessConfigOutputReference
+	_jsii_.Get(
+		j,
+		"accessConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EksCluster) AccessConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"accessConfigInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_EksCluster) Arn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"arn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EksCluster) BootstrapSelfManagedAddons() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"bootstrapSelfManagedAddons",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EksCluster) BootstrapSelfManagedAddonsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"bootstrapSelfManagedAddonsInput",
 		&returns,
 	)
 	return returns
@@ -176,11 +266,41 @@ func (j *jsiiProxy_EksCluster) CertificateAuthorityData() *string {
 	return returns
 }
 
+func (j *jsiiProxy_EksCluster) ClusterId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"clusterId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_EksCluster) ClusterSecurityGroupId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"clusterSecurityGroupId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EksCluster) ComputeConfig() EksClusterComputeConfigOutputReference {
+	var returns EksClusterComputeConfigOutputReference
+	_jsii_.Get(
+		j,
+		"computeConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EksCluster) ComputeConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"computeConfigInput",
 		&returns,
 	)
 	return returns
@@ -261,6 +381,26 @@ func (j *jsiiProxy_EksCluster) Endpoint() *string {
 	_jsii_.Get(
 		j,
 		"endpoint",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EksCluster) Force() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"force",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EksCluster) ForceInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"forceInput",
 		&returns,
 	)
 	return returns
@@ -396,6 +536,26 @@ func (j *jsiiProxy_EksCluster) OpenIdConnectIssuerUrl() *string {
 	return returns
 }
 
+func (j *jsiiProxy_EksCluster) OutpostConfig() EksClusterOutpostConfigOutputReference {
+	var returns EksClusterOutpostConfigOutputReference
+	_jsii_.Get(
+		j,
+		"outpostConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EksCluster) OutpostConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"outpostConfigInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_EksCluster) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -421,6 +581,26 @@ func (j *jsiiProxy_EksCluster) RawOverrides() interface{} {
 	_jsii_.Get(
 		j,
 		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EksCluster) RemoteNetworkConfig() EksClusterRemoteNetworkConfigOutputReference {
+	var returns EksClusterRemoteNetworkConfigOutputReference
+	_jsii_.Get(
+		j,
+		"remoteNetworkConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EksCluster) RemoteNetworkConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"remoteNetworkConfigInput",
 		&returns,
 	)
 	return returns
@@ -461,6 +641,26 @@ func (j *jsiiProxy_EksCluster) RoleArnInput() *string {
 	_jsii_.Get(
 		j,
 		"roleArnInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EksCluster) StorageConfig() EksClusterStorageConfigOutputReference {
+	var returns EksClusterStorageConfigOutputReference
+	_jsii_.Get(
+		j,
+		"storageConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EksCluster) StorageConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"storageConfigInput",
 		&returns,
 	)
 	return returns
@@ -516,6 +716,26 @@ func (j *jsiiProxy_EksCluster) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_EksCluster) UpgradePolicy() EksClusterUpgradePolicyOutputReference {
+	var returns EksClusterUpgradePolicyOutputReference
+	_jsii_.Get(
+		j,
+		"upgradePolicy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EksCluster) UpgradePolicyInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"upgradePolicyInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_EksCluster) Version() *string {
 	var returns *string
 	_jsii_.Get(
@@ -536,8 +756,28 @@ func (j *jsiiProxy_EksCluster) VersionInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_EksCluster) ZonalShiftConfig() EksClusterZonalShiftConfigOutputReference {
+	var returns EksClusterZonalShiftConfigOutputReference
+	_jsii_.Get(
+		j,
+		"zonalShiftConfig",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/eks_cluster awscc_eks_cluster} Resource.
+func (j *jsiiProxy_EksCluster) ZonalShiftConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"zonalShiftConfigInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/eks_cluster awscc_eks_cluster} Resource.
 func NewEksCluster(scope constructs.Construct, id *string, config *EksClusterConfig) EksCluster {
 	_init_.Initialize()
 
@@ -555,7 +795,7 @@ func NewEksCluster(scope constructs.Construct, id *string, config *EksClusterCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/eks_cluster awscc_eks_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/eks_cluster awscc_eks_cluster} Resource.
 func NewEksCluster_Override(e EksCluster, scope constructs.Construct, id *string, config *EksClusterConfig) {
 	_init_.Initialize()
 
@@ -563,6 +803,17 @@ func NewEksCluster_Override(e EksCluster, scope constructs.Construct, id *string
 		"awscc.eksCluster.EksCluster",
 		[]interface{}{scope, id, config},
 		e,
+	)
+}
+
+func (j *jsiiProxy_EksCluster)SetBootstrapSelfManagedAddons(val interface{}) {
+	if err := j.validateSetBootstrapSelfManagedAddonsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"bootstrapSelfManagedAddons",
+		val,
 	)
 }
 
@@ -592,6 +843,17 @@ func (j *jsiiProxy_EksCluster)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_EksCluster)SetForce(val interface{}) {
+	if err := j.validateSetForceParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"force",
 		val,
 	)
 }
@@ -936,6 +1198,19 @@ func (e *jsiiProxy_EksCluster) GetStringMapAttribute(terraformAttribute *string)
 	return returns
 }
 
+func (e *jsiiProxy_EksCluster) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_EksCluster) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -963,6 +1238,17 @@ func (e *jsiiProxy_EksCluster) InterpolationForAttribute(terraformAttribute *str
 	return returns
 }
 
+func (e *jsiiProxy_EksCluster) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_EksCluster) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -974,6 +1260,17 @@ func (e *jsiiProxy_EksCluster) MoveTo(moveTarget *string, index interface{}) {
 	)
 }
 
+func (e *jsiiProxy_EksCluster) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_EksCluster) OverrideLogicalId(newLogicalId *string) {
 	if err := e.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -982,6 +1279,28 @@ func (e *jsiiProxy_EksCluster) OverrideLogicalId(newLogicalId *string) {
 		e,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (e *jsiiProxy_EksCluster) PutAccessConfig(value *EksClusterAccessConfig) {
+	if err := e.validatePutAccessConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putAccessConfig",
+		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_EksCluster) PutComputeConfig(value *EksClusterComputeConfig) {
+	if err := e.validatePutComputeConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putComputeConfig",
+		[]interface{}{value},
 	)
 }
 
@@ -1018,6 +1337,28 @@ func (e *jsiiProxy_EksCluster) PutLogging(value *EksClusterLogging) {
 	)
 }
 
+func (e *jsiiProxy_EksCluster) PutOutpostConfig(value *EksClusterOutpostConfig) {
+	if err := e.validatePutOutpostConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putOutpostConfig",
+		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_EksCluster) PutRemoteNetworkConfig(value *EksClusterRemoteNetworkConfig) {
+	if err := e.validatePutRemoteNetworkConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putRemoteNetworkConfig",
+		[]interface{}{value},
+	)
+}
+
 func (e *jsiiProxy_EksCluster) PutResourcesVpcConfig(value *EksClusterResourcesVpcConfig) {
 	if err := e.validatePutResourcesVpcConfigParameters(value); err != nil {
 		panic(err)
@@ -1025,6 +1366,17 @@ func (e *jsiiProxy_EksCluster) PutResourcesVpcConfig(value *EksClusterResourcesV
 	_jsii_.InvokeVoid(
 		e,
 		"putResourcesVpcConfig",
+		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_EksCluster) PutStorageConfig(value *EksClusterStorageConfig) {
+	if err := e.validatePutStorageConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putStorageConfig",
 		[]interface{}{value},
 	)
 }
@@ -1040,10 +1392,64 @@ func (e *jsiiProxy_EksCluster) PutTags(value interface{}) {
 	)
 }
 
+func (e *jsiiProxy_EksCluster) PutUpgradePolicy(value *EksClusterUpgradePolicy) {
+	if err := e.validatePutUpgradePolicyParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putUpgradePolicy",
+		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_EksCluster) PutZonalShiftConfig(value *EksClusterZonalShiftConfig) {
+	if err := e.validatePutZonalShiftConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putZonalShiftConfig",
+		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_EksCluster) ResetAccessConfig() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetAccessConfig",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EksCluster) ResetBootstrapSelfManagedAddons() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetBootstrapSelfManagedAddons",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EksCluster) ResetComputeConfig() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetComputeConfig",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EksCluster) ResetEncryptionConfig() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetEncryptionConfig",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EksCluster) ResetForce() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetForce",
 		nil, // no parameters
 	)
 }
@@ -1072,10 +1478,34 @@ func (e *jsiiProxy_EksCluster) ResetName() {
 	)
 }
 
+func (e *jsiiProxy_EksCluster) ResetOutpostConfig() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetOutpostConfig",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EksCluster) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EksCluster) ResetRemoteNetworkConfig() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetRemoteNetworkConfig",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EksCluster) ResetStorageConfig() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetStorageConfig",
 		nil, // no parameters
 	)
 }
@@ -1088,10 +1518,26 @@ func (e *jsiiProxy_EksCluster) ResetTags() {
 	)
 }
 
+func (e *jsiiProxy_EksCluster) ResetUpgradePolicy() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetUpgradePolicy",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EksCluster) ResetVersion() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetVersion",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EksCluster) ResetZonalShiftConfig() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetZonalShiftConfig",
 		nil, // no parameters
 	)
 }
@@ -1102,6 +1548,32 @@ func (e *jsiiProxy_EksCluster) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_EksCluster) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_EksCluster) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

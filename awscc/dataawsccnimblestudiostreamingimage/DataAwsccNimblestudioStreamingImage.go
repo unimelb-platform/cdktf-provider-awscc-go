@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccnimblestudiostreamingimage/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/nimblestudio_streaming_image awscc_nimblestudio_streaming_image}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/nimblestudio_streaming_image awscc_nimblestudio_streaming_image}.
 type DataAwsccNimblestudioStreamingImage interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -27,6 +27,8 @@ type DataAwsccNimblestudioStreamingImage interface {
 	Description() *string
 	Ec2ImageId() *string
 	EncryptionConfiguration() DataAwsccNimblestudioStreamingImageEncryptionConfigurationOutputReference
+	EncryptionConfigurationKeyArn() *string
+	EncryptionConfigurationKeyType() *string
 	EulaIds() *[]*string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
@@ -92,6 +94,10 @@ type DataAwsccNimblestudioStreamingImage interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -171,6 +177,26 @@ func (j *jsiiProxy_DataAwsccNimblestudioStreamingImage) EncryptionConfiguration(
 	_jsii_.Get(
 		j,
 		"encryptionConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccNimblestudioStreamingImage) EncryptionConfigurationKeyArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"encryptionConfigurationKeyArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccNimblestudioStreamingImage) EncryptionConfigurationKeyType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"encryptionConfigurationKeyType",
 		&returns,
 	)
 	return returns
@@ -367,7 +393,7 @@ func (j *jsiiProxy_DataAwsccNimblestudioStreamingImage) TerraformResourceType() 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/nimblestudio_streaming_image awscc_nimblestudio_streaming_image} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/nimblestudio_streaming_image awscc_nimblestudio_streaming_image} Data Source.
 func NewDataAwsccNimblestudioStreamingImage(scope constructs.Construct, id *string, config *DataAwsccNimblestudioStreamingImageConfig) DataAwsccNimblestudioStreamingImage {
 	_init_.Initialize()
 
@@ -385,7 +411,7 @@ func NewDataAwsccNimblestudioStreamingImage(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/nimblestudio_streaming_image awscc_nimblestudio_streaming_image} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/nimblestudio_streaming_image awscc_nimblestudio_streaming_image} Data Source.
 func NewDataAwsccNimblestudioStreamingImage_Override(d DataAwsccNimblestudioStreamingImage, scope constructs.Construct, id *string, config *DataAwsccNimblestudioStreamingImageConfig) {
 	_init_.Initialize()
 
@@ -752,6 +778,32 @@ func (d *jsiiProxy_DataAwsccNimblestudioStreamingImage) SynthesizeAttributes() *
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNimblestudioStreamingImage) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNimblestudioStreamingImage) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

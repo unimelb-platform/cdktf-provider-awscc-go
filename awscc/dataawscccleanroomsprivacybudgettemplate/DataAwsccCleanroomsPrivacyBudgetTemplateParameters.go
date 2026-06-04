@@ -1,0 +1,6 @@
+package dataawscccleanroomsprivacybudgettemplate
+
+
+type DataAwsccCleanroomsPrivacyBudgetTemplateParameters struct {
+}
+

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/refactorspacesenvironment/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/refactorspaces_environment awscc_refactorspaces_environment}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/refactorspaces_environment awscc_refactorspaces_environment}.
 type RefactorspacesEnvironment interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -97,22 +97,37 @@ type RefactorspacesEnvironment interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutTags(value interface{})
 	ResetDescription()
+	ResetName()
+	ResetNetworkFabricType()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -408,7 +423,7 @@ func (j *jsiiProxy_RefactorspacesEnvironment) TransitGatewayId() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/refactorspaces_environment awscc_refactorspaces_environment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/refactorspaces_environment awscc_refactorspaces_environment} Resource.
 func NewRefactorspacesEnvironment(scope constructs.Construct, id *string, config *RefactorspacesEnvironmentConfig) RefactorspacesEnvironment {
 	_init_.Initialize()
 
@@ -426,7 +441,7 @@ func NewRefactorspacesEnvironment(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/refactorspaces_environment awscc_refactorspaces_environment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/refactorspaces_environment awscc_refactorspaces_environment} Resource.
 func NewRefactorspacesEnvironment_Override(r RefactorspacesEnvironment, scope constructs.Construct, id *string, config *RefactorspacesEnvironmentConfig) {
 	_init_.Initialize()
 
@@ -807,6 +822,19 @@ func (r *jsiiProxy_RefactorspacesEnvironment) GetStringMapAttribute(terraformAtt
 	return returns
 }
 
+func (r *jsiiProxy_RefactorspacesEnvironment) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (r *jsiiProxy_RefactorspacesEnvironment) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -834,6 +862,17 @@ func (r *jsiiProxy_RefactorspacesEnvironment) InterpolationForAttribute(terrafor
 	return returns
 }
 
+func (r *jsiiProxy_RefactorspacesEnvironment) MoveFromId(id *string) {
+	if err := r.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_RefactorspacesEnvironment) MoveTo(moveTarget *string, index interface{}) {
 	if err := r.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -842,6 +881,17 @@ func (r *jsiiProxy_RefactorspacesEnvironment) MoveTo(moveTarget *string, index i
 		r,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (r *jsiiProxy_RefactorspacesEnvironment) MoveToId(id *string) {
+	if err := r.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -875,6 +925,22 @@ func (r *jsiiProxy_RefactorspacesEnvironment) ResetDescription() {
 	)
 }
 
+func (r *jsiiProxy_RefactorspacesEnvironment) ResetName() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RefactorspacesEnvironment) ResetNetworkFabricType() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetNetworkFabricType",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_RefactorspacesEnvironment) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		r,
@@ -897,6 +963,32 @@ func (r *jsiiProxy_RefactorspacesEnvironment) SynthesizeAttributes() *map[string
 	_jsii_.Invoke(
 		r,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RefactorspacesEnvironment) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		r,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RefactorspacesEnvironment) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

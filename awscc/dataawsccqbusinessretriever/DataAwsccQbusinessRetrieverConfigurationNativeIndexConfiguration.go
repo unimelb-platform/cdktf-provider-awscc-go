@@ -1,0 +1,6 @@
+package dataawsccqbusinessretriever
+
+
+type DataAwsccQbusinessRetrieverConfigurationNativeIndexConfiguration struct {
+}
+

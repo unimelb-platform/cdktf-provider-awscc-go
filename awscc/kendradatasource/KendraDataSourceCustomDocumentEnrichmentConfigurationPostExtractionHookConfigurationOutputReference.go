@@ -71,6 +71,8 @@ type KendraDataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConf
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutInvocationCondition(value *KendraDataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationCondition)
 	ResetInvocationCondition()
+	ResetLambdaArn()
+	ResetS3Bucket()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -522,6 +524,22 @@ func (k *jsiiProxy_KendraDataSourceCustomDocumentEnrichmentConfigurationPostExtr
 	_jsii_.InvokeVoid(
 		k,
 		"resetInvocationCondition",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationOutputReference) ResetLambdaArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetLambdaArn",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationOutputReference) ResetS3Bucket() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetS3Bucket",
 		nil, // no parameters
 	)
 }

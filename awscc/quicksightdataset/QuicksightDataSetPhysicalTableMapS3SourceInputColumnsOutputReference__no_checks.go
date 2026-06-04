@@ -56,7 +56,7 @@ func (j *jsiiProxy_QuicksightDataSetPhysicalTableMapS3SourceInputColumnsOutputRe
 	return nil
 }
 
-func (j *jsiiProxy_QuicksightDataSetPhysicalTableMapS3SourceInputColumnsOutputReference) validateSetInternalValueParameters(val *QuicksightDataSetPhysicalTableMapS3SourceInputColumns) error {
+func (j *jsiiProxy_QuicksightDataSetPhysicalTableMapS3SourceInputColumnsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

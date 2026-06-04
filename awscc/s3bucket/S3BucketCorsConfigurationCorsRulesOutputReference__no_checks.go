@@ -76,7 +76,7 @@ func (j *jsiiProxy_S3BucketCorsConfigurationCorsRulesOutputReference) validateSe
 	return nil
 }
 
-func (j *jsiiProxy_S3BucketCorsConfigurationCorsRulesOutputReference) validateSetInternalValueParameters(val *S3BucketCorsConfigurationCorsRules) error {
+func (j *jsiiProxy_S3BucketCorsConfigurationCorsRulesOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

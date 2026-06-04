@@ -64,7 +64,7 @@ func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityValueWorkerConfigurati
 	return nil
 }
 
-func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityValueWorkerConfigurationOutputReference) validateSetInternalValueParameters(val *EmrserverlessApplicationInitialCapacityValueWorkerConfiguration) error {
+func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityValueWorkerConfigurationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

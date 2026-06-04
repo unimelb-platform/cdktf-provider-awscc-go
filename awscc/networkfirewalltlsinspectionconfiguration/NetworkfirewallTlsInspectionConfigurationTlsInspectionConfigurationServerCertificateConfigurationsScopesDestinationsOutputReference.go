@@ -64,6 +64,7 @@ type NetworkfirewallTlsInspectionConfigurationTlsInspectionConfigurationServerCe
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAddressDefinition()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (n *jsiiProxy_NetworkfirewallTlsInspectionConfigurationTlsInspectionConfigu
 	)
 
 	return returns
+}
+
+func (n *jsiiProxy_NetworkfirewallTlsInspectionConfigurationTlsInspectionConfigurationServerCertificateConfigurationsScopesDestinationsOutputReference) ResetAddressDefinition() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetAddressDefinition",
+		nil, // no parameters
+	)
 }
 
 func (n *jsiiProxy_NetworkfirewallTlsInspectionConfigurationTlsInspectionConfigurationServerCertificateConfigurationsScopesDestinationsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

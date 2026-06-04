@@ -82,8 +82,10 @@ type EksIdentityProviderConfigOidcOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutRequiredClaims(value interface{})
+	ResetClientId()
 	ResetGroupsClaim()
 	ResetGroupsPrefix()
+	ResetIssuerUrl()
 	ResetRequiredClaims()
 	ResetUsernameClaim()
 	ResetUsernamePrefix()
@@ -658,6 +660,14 @@ func (e *jsiiProxy_EksIdentityProviderConfigOidcOutputReference) PutRequiredClai
 	)
 }
 
+func (e *jsiiProxy_EksIdentityProviderConfigOidcOutputReference) ResetClientId() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetClientId",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EksIdentityProviderConfigOidcOutputReference) ResetGroupsClaim() {
 	_jsii_.InvokeVoid(
 		e,
@@ -670,6 +680,14 @@ func (e *jsiiProxy_EksIdentityProviderConfigOidcOutputReference) ResetGroupsPref
 	_jsii_.InvokeVoid(
 		e,
 		"resetGroupsPrefix",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EksIdentityProviderConfigOidcOutputReference) ResetIssuerUrl() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetIssuerUrl",
 		nil, // no parameters
 	)
 }

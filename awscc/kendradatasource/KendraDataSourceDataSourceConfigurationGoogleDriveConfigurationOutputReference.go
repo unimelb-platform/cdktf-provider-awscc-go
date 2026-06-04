@@ -88,6 +88,7 @@ type KendraDataSourceDataSourceConfigurationGoogleDriveConfigurationOutputRefere
 	ResetExclusionPatterns()
 	ResetFieldMappings()
 	ResetInclusionPatterns()
+	ResetSecretArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -703,6 +704,14 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationGoogleDriveConfigurati
 	_jsii_.InvokeVoid(
 		k,
 		"resetInclusionPatterns",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationGoogleDriveConfigurationOutputReference) ResetSecretArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetSecretArn",
 		nil, // no parameters
 	)
 }

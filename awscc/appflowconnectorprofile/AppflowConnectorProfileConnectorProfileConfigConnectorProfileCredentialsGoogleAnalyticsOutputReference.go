@@ -77,6 +77,8 @@ type AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoo
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutConnectorOAuthRequest(value *AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsConnectorOAuthRequest)
 	ResetAccessToken()
+	ResetClientId()
+	ResetClientSecret()
 	ResetConnectorOAuthRequest()
 	ResetRefreshToken()
 	// Produce the Token's value at resolution time.
@@ -592,6 +594,22 @@ func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfile
 	_jsii_.InvokeVoid(
 		a,
 		"resetAccessToken",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOutputReference) ResetClientId() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetClientId",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOutputReference) ResetClientSecret() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetClientSecret",
 		nil, // no parameters
 	)
 }

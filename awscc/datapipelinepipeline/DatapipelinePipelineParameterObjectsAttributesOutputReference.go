@@ -27,8 +27,8 @@ type DatapipelinePipelineParameterObjectsAttributesOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DatapipelinePipelineParameterObjectsAttributes
-	SetInternalValue(val *DatapipelinePipelineParameterObjectsAttributes)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Key() *string
 	SetKey(val *string)
 	KeyInput() *string
@@ -67,6 +67,8 @@ type DatapipelinePipelineParameterObjectsAttributesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetStringValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_DatapipelinePipelineParameterObjectsAttributesOutputReference
 	return returns
 }
 
-func (j *jsiiProxy_DatapipelinePipelineParameterObjectsAttributesOutputReference) InternalValue() *DatapipelinePipelineParameterObjectsAttributes {
-	var returns *DatapipelinePipelineParameterObjectsAttributes
+func (j *jsiiProxy_DatapipelinePipelineParameterObjectsAttributesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -242,7 +244,7 @@ func (j *jsiiProxy_DatapipelinePipelineParameterObjectsAttributesOutputReference
 	)
 }
 
-func (j *jsiiProxy_DatapipelinePipelineParameterObjectsAttributesOutputReference)SetInternalValue(val *DatapipelinePipelineParameterObjectsAttributes) {
+func (j *jsiiProxy_DatapipelinePipelineParameterObjectsAttributesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (d *jsiiProxy_DatapipelinePipelineParameterObjectsAttributesOutputReference
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatapipelinePipelineParameterObjectsAttributesOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatapipelinePipelineParameterObjectsAttributesOutputReference) ResetStringValue() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetStringValue",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatapipelinePipelineParameterObjectsAttributesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

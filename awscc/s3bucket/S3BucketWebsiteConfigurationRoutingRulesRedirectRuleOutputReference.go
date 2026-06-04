@@ -33,8 +33,8 @@ type S3BucketWebsiteConfigurationRoutingRulesRedirectRuleOutputReference interfa
 	HttpRedirectCode() *string
 	SetHttpRedirectCode(val *string)
 	HttpRedirectCodeInput() *string
-	InternalValue() *S3BucketWebsiteConfigurationRoutingRulesRedirectRule
-	SetInternalValue(val *S3BucketWebsiteConfigurationRoutingRulesRedirectRule)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Protocol() *string
 	SetProtocol(val *string)
 	ProtocolInput() *string
@@ -176,8 +176,8 @@ func (j *jsiiProxy_S3BucketWebsiteConfigurationRoutingRulesRedirectRuleOutputRef
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketWebsiteConfigurationRoutingRulesRedirectRuleOutputReference) InternalValue() *S3BucketWebsiteConfigurationRoutingRulesRedirectRule {
-	var returns *S3BucketWebsiteConfigurationRoutingRulesRedirectRule
+func (j *jsiiProxy_S3BucketWebsiteConfigurationRoutingRulesRedirectRuleOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -338,7 +338,7 @@ func (j *jsiiProxy_S3BucketWebsiteConfigurationRoutingRulesRedirectRuleOutputRef
 	)
 }
 
-func (j *jsiiProxy_S3BucketWebsiteConfigurationRoutingRulesRedirectRuleOutputReference)SetInternalValue(val *S3BucketWebsiteConfigurationRoutingRulesRedirectRule) {
+func (j *jsiiProxy_S3BucketWebsiteConfigurationRoutingRulesRedirectRuleOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

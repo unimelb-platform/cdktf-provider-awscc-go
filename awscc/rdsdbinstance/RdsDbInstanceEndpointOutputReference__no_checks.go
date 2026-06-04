@@ -56,7 +56,7 @@ func (j *jsiiProxy_RdsDbInstanceEndpointOutputReference) validateSetComplexObjec
 	return nil
 }
 
-func (j *jsiiProxy_RdsDbInstanceEndpointOutputReference) validateSetInternalValueParameters(val interface{}) error {
+func (j *jsiiProxy_RdsDbInstanceEndpointOutputReference) validateSetInternalValueParameters(val *RdsDbInstanceEndpoint) error {
 	return nil
 }
 

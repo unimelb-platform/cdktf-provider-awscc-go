@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccamplifydomain/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/amplify_domain awscc_amplify_domain}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/amplify_domain awscc_amplify_domain}.
 type DataAwsccAmplifyDomain interface {
 	cdktf.TerraformDataSource
 	AppId() *string
@@ -18,7 +18,9 @@ type DataAwsccAmplifyDomain interface {
 	AutoSubDomainIamRole() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	Certificate() DataAwsccAmplifyDomainCertificateOutputReference
 	CertificateRecord() *string
+	CertificateSettings() DataAwsccAmplifyDomainCertificateSettingsOutputReference
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -63,6 +65,7 @@ type DataAwsccAmplifyDomain interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	UpdateStatus() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -92,6 +95,10 @@ type DataAwsccAmplifyDomain interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -156,11 +163,31 @@ func (j *jsiiProxy_DataAwsccAmplifyDomain) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccAmplifyDomain) Certificate() DataAwsccAmplifyDomainCertificateOutputReference {
+	var returns DataAwsccAmplifyDomainCertificateOutputReference
+	_jsii_.Get(
+		j,
+		"certificate",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccAmplifyDomain) CertificateRecord() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"certificateRecord",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccAmplifyDomain) CertificateSettings() DataAwsccAmplifyDomainCertificateSettingsOutputReference {
+	var returns DataAwsccAmplifyDomainCertificateSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"certificateSettings",
 		&returns,
 	)
 	return returns
@@ -366,8 +393,18 @@ func (j *jsiiProxy_DataAwsccAmplifyDomain) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccAmplifyDomain) UpdateStatus() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"updateStatus",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/amplify_domain awscc_amplify_domain} Data Source.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/amplify_domain awscc_amplify_domain} Data Source.
 func NewDataAwsccAmplifyDomain(scope constructs.Construct, id *string, config *DataAwsccAmplifyDomainConfig) DataAwsccAmplifyDomain {
 	_init_.Initialize()
 
@@ -385,7 +422,7 @@ func NewDataAwsccAmplifyDomain(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/amplify_domain awscc_amplify_domain} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/amplify_domain awscc_amplify_domain} Data Source.
 func NewDataAwsccAmplifyDomain_Override(d DataAwsccAmplifyDomain, scope constructs.Construct, id *string, config *DataAwsccAmplifyDomainConfig) {
 	_init_.Initialize()
 
@@ -752,6 +789,32 @@ func (d *jsiiProxy_DataAwsccAmplifyDomain) SynthesizeAttributes() *map[string]in
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAmplifyDomain) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAmplifyDomain) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

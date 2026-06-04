@@ -74,6 +74,7 @@ type DatazoneDataSourceAssetFormsInputOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetContent()
+	ResetFormName()
 	ResetTypeIdentifier()
 	ResetTypeRevision()
 	// Produce the Token's value at resolution time.
@@ -558,6 +559,14 @@ func (d *jsiiProxy_DatazoneDataSourceAssetFormsInputOutputReference) ResetConten
 	_jsii_.InvokeVoid(
 		d,
 		"resetContent",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatazoneDataSourceAssetFormsInputOutputReference) ResetFormName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetFormName",
 		nil, // no parameters
 	)
 }

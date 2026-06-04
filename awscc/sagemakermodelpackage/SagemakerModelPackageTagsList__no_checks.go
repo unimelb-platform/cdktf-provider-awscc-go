@@ -4,6 +4,10 @@ package sagemakermodelpackage
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (s *jsiiProxy_SagemakerModelPackageTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_SagemakerModelPackageTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -59,7 +59,7 @@ type LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigOutput
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	VpcConfiguration() LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcConfigurationOutputReference
-	VpcConfigurationInput() *LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcConfiguration
+	VpcConfigurationInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -85,6 +85,14 @@ type LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigOutput
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutVpcConfiguration(value *LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcConfiguration)
+	ResetDatabaseHost()
+	ResetDatabaseName()
+	ResetDatabasePort()
+	ResetDbInstanceIdentifier()
+	ResetRoleArn()
+	ResetSecretManagerArn()
+	ResetTableName()
+	ResetVpcConfiguration()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -320,8 +328,8 @@ func (j *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSour
 	return returns
 }
 
-func (j *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigOutputReference) VpcConfigurationInput() *LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcConfiguration {
-	var returns *LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcConfiguration
+func (j *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigOutputReference) VpcConfigurationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"vpcConfigurationInput",
@@ -684,6 +692,70 @@ func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSour
 		l,
 		"putVpcConfiguration",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigOutputReference) ResetDatabaseHost() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetDatabaseHost",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigOutputReference) ResetDatabaseName() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetDatabaseName",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigOutputReference) ResetDatabasePort() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetDatabasePort",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigOutputReference) ResetDbInstanceIdentifier() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetDbInstanceIdentifier",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigOutputReference) ResetSecretManagerArn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetSecretManagerArn",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigOutputReference) ResetTableName() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetTableName",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigOutputReference) ResetVpcConfiguration() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetVpcConfiguration",
+		nil, // no parameters
 	)
 }
 

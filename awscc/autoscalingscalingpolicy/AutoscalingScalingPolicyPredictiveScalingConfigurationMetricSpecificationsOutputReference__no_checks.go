@@ -80,7 +80,7 @@ func (j *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricS
 	return nil
 }
 
-func (j *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsOutputReference) validateSetInternalValueParameters(val *AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecifications) error {
+func (j *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

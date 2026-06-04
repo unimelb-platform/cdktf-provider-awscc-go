@@ -185,9 +185,25 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfiguratio
 	return nil
 }
 
-func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrlsOutputReference) validateSetInternalValueParameters(val *KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrls) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrlsOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrls:
+		val := val.(*KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrls)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrls:
+		val_ := val.(KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrls)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrls; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

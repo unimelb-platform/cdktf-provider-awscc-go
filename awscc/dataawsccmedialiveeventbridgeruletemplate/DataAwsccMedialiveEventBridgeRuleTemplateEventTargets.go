@@ -1,0 +1,6 @@
+package dataawsccmedialiveeventbridgeruletemplate
+
+
+type DataAwsccMedialiveEventBridgeRuleTemplateEventTargets struct {
+}
+

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/connectpredefinedattribute/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/connect_predefined_attribute awscc_connect_predefined_attribute}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/connect_predefined_attribute awscc_connect_predefined_attribute}.
 type ConnectPredefinedAttribute interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -40,6 +40,8 @@ type ConnectPredefinedAttribute interface {
 	InstanceArn() *string
 	SetInstanceArn(val *string)
 	InstanceArnInput() *string
+	LastModifiedRegion() *string
+	LastModifiedTime() *float64
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -91,12 +93,22 @@ type ConnectPredefinedAttribute interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -105,6 +117,9 @@ type ConnectPredefinedAttribute interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -224,6 +239,26 @@ func (j *jsiiProxy_ConnectPredefinedAttribute) InstanceArnInput() *string {
 	_jsii_.Get(
 		j,
 		"instanceArnInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ConnectPredefinedAttribute) LastModifiedRegion() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"lastModifiedRegion",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ConnectPredefinedAttribute) LastModifiedTime() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"lastModifiedTime",
 		&returns,
 	)
 	return returns
@@ -350,7 +385,7 @@ func (j *jsiiProxy_ConnectPredefinedAttribute) ValuesInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/connect_predefined_attribute awscc_connect_predefined_attribute} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/connect_predefined_attribute awscc_connect_predefined_attribute} Resource.
 func NewConnectPredefinedAttribute(scope constructs.Construct, id *string, config *ConnectPredefinedAttributeConfig) ConnectPredefinedAttribute {
 	_init_.Initialize()
 
@@ -368,7 +403,7 @@ func NewConnectPredefinedAttribute(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/connect_predefined_attribute awscc_connect_predefined_attribute} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/connect_predefined_attribute awscc_connect_predefined_attribute} Resource.
 func NewConnectPredefinedAttribute_Override(c ConnectPredefinedAttribute, scope constructs.Construct, id *string, config *ConnectPredefinedAttributeConfig) {
 	_init_.Initialize()
 
@@ -738,6 +773,19 @@ func (c *jsiiProxy_ConnectPredefinedAttribute) GetStringMapAttribute(terraformAt
 	return returns
 }
 
+func (c *jsiiProxy_ConnectPredefinedAttribute) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_ConnectPredefinedAttribute) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -765,6 +813,17 @@ func (c *jsiiProxy_ConnectPredefinedAttribute) InterpolationForAttribute(terrafo
 	return returns
 }
 
+func (c *jsiiProxy_ConnectPredefinedAttribute) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_ConnectPredefinedAttribute) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -773,6 +832,17 @@ func (c *jsiiProxy_ConnectPredefinedAttribute) MoveTo(moveTarget *string, index 
 		c,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (c *jsiiProxy_ConnectPredefinedAttribute) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -812,6 +882,32 @@ func (c *jsiiProxy_ConnectPredefinedAttribute) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_ConnectPredefinedAttribute) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_ConnectPredefinedAttribute) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

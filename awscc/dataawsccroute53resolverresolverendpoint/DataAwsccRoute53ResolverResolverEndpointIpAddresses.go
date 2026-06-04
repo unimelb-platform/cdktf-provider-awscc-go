@@ -1,0 +1,6 @@
+package dataawsccroute53resolverresolverendpoint
+
+
+type DataAwsccRoute53ResolverResolverEndpointIpAddresses struct {
+}
+

@@ -4,6 +4,10 @@ package elasticloadbalancingv2targetgroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (e *jsiiProxy_Elasticloadbalancingv2TargetGroupTargetGroupAttributesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Elasticloadbalancingv2TargetGroupTargetGroupAttributesList) validateGetParameters(index *float64) error {
 	return nil
 }

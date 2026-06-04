@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccemrstudiosessionmapping/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/emr_studio_session_mapping awscc_emr_studio_session_mapping}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/emr_studio_session_mapping awscc_emr_studio_session_mapping}.
 type DataAwsccEmrStudioSessionMapping interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -86,6 +86,10 @@ type DataAwsccEmrStudioSessionMapping interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -301,7 +305,7 @@ func (j *jsiiProxy_DataAwsccEmrStudioSessionMapping) TerraformResourceType() *st
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/emr_studio_session_mapping awscc_emr_studio_session_mapping} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/emr_studio_session_mapping awscc_emr_studio_session_mapping} Data Source.
 func NewDataAwsccEmrStudioSessionMapping(scope constructs.Construct, id *string, config *DataAwsccEmrStudioSessionMappingConfig) DataAwsccEmrStudioSessionMapping {
 	_init_.Initialize()
 
@@ -319,7 +323,7 @@ func NewDataAwsccEmrStudioSessionMapping(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/emr_studio_session_mapping awscc_emr_studio_session_mapping} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/emr_studio_session_mapping awscc_emr_studio_session_mapping} Data Source.
 func NewDataAwsccEmrStudioSessionMapping_Override(d DataAwsccEmrStudioSessionMapping, scope constructs.Construct, id *string, config *DataAwsccEmrStudioSessionMappingConfig) {
 	_init_.Initialize()
 
@@ -686,6 +690,32 @@ func (d *jsiiProxy_DataAwsccEmrStudioSessionMapping) SynthesizeAttributes() *map
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEmrStudioSessionMapping) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEmrStudioSessionMapping) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

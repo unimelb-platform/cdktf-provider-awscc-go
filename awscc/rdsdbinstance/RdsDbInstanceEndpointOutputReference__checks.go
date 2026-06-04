@@ -163,25 +163,9 @@ func (j *jsiiProxy_RdsDbInstanceEndpointOutputReference) validateSetComplexObjec
 	return nil
 }
 
-func (j *jsiiProxy_RdsDbInstanceEndpointOutputReference) validateSetInternalValueParameters(val interface{}) error {
-	switch val.(type) {
-	case cdktf.IResolvable:
-		// ok
-	case *RdsDbInstanceEndpoint:
-		val := val.(*RdsDbInstanceEndpoint)
-		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-			return err
-		}
-	case RdsDbInstanceEndpoint:
-		val_ := val.(RdsDbInstanceEndpoint)
-		val := &val_
-		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-			return err
-		}
-	default:
-		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *RdsDbInstanceEndpoint; received %#v (a %T)", val, val)
-		}
+func (j *jsiiProxy_RdsDbInstanceEndpointOutputReference) validateSetInternalValueParameters(val *RdsDbInstanceEndpoint) error {
+	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+		return err
 	}
 
 	return nil

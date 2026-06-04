@@ -20,6 +20,8 @@ type BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference interfac
 	ComplexObjectIsFromSet() *bool
 	// Experimental.
 	SetComplexObjectIsFromSet(val *bool)
+	ConsumableResourceProperties() BatchJobDefinitionNodePropertiesNodeRangePropertiesConsumableResourcePropertiesOutputReference
+	ConsumableResourcePropertiesInput() interface{}
 	Container() BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference
 	ContainerInput() interface{}
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
@@ -27,10 +29,17 @@ type BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference interfac
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	EcsProperties() BatchJobDefinitionNodePropertiesNodeRangePropertiesEcsPropertiesOutputReference
+	EcsPropertiesInput() interface{}
+	EksProperties() BatchJobDefinitionNodePropertiesNodeRangePropertiesEksPropertiesOutputReference
+	EksPropertiesInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *BatchJobDefinitionNodePropertiesNodeRangeProperties
-	SetInternalValue(val *BatchJobDefinitionNodePropertiesNodeRangeProperties)
+	InstanceTypes() *[]*string
+	SetInstanceTypes(val *[]*string)
+	InstanceTypesInput() *[]*string
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	TargetNodes() *string
 	SetTargetNodes(val *string)
 	TargetNodesInput() *string
@@ -66,8 +75,16 @@ type BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference interfac
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutConsumableResourceProperties(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesConsumableResourceProperties)
 	PutContainer(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesContainer)
+	PutEcsProperties(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesEcsProperties)
+	PutEksProperties(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesEksProperties)
+	ResetConsumableResourceProperties()
 	ResetContainer()
+	ResetEcsProperties()
+	ResetEksProperties()
+	ResetInstanceTypes()
+	ResetTargetNodes()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -103,6 +120,26 @@ func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputRefe
 	return returns
 }
 
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) ConsumableResourceProperties() BatchJobDefinitionNodePropertiesNodeRangePropertiesConsumableResourcePropertiesOutputReference {
+	var returns BatchJobDefinitionNodePropertiesNodeRangePropertiesConsumableResourcePropertiesOutputReference
+	_jsii_.Get(
+		j,
+		"consumableResourceProperties",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) ConsumableResourcePropertiesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"consumableResourcePropertiesInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) Container() BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference {
 	var returns BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference
 	_jsii_.Get(
@@ -133,6 +170,46 @@ func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputRefe
 	return returns
 }
 
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) EcsProperties() BatchJobDefinitionNodePropertiesNodeRangePropertiesEcsPropertiesOutputReference {
+	var returns BatchJobDefinitionNodePropertiesNodeRangePropertiesEcsPropertiesOutputReference
+	_jsii_.Get(
+		j,
+		"ecsProperties",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) EcsPropertiesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"ecsPropertiesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) EksProperties() BatchJobDefinitionNodePropertiesNodeRangePropertiesEksPropertiesOutputReference {
+	var returns BatchJobDefinitionNodePropertiesNodeRangePropertiesEksPropertiesOutputReference
+	_jsii_.Get(
+		j,
+		"eksProperties",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) EksPropertiesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"eksPropertiesInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -143,8 +220,28 @@ func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputRefe
 	return returns
 }
 
-func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) InternalValue() *BatchJobDefinitionNodePropertiesNodeRangeProperties {
-	var returns *BatchJobDefinitionNodePropertiesNodeRangeProperties
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) InstanceTypes() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"instanceTypes",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) InstanceTypesInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"instanceTypesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -243,7 +340,18 @@ func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputRefe
 	)
 }
 
-func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference)SetInternalValue(val *BatchJobDefinitionNodePropertiesNodeRangeProperties) {
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference)SetInstanceTypes(val *[]*string) {
+	if err := j.validateSetInstanceTypesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"instanceTypes",
+		val,
+	)
+}
+
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -473,6 +581,17 @@ func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputRefe
 	return returns
 }
 
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) PutConsumableResourceProperties(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesConsumableResourceProperties) {
+	if err := b.validatePutConsumableResourcePropertiesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"putConsumableResourceProperties",
+		[]interface{}{value},
+	)
+}
+
 func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) PutContainer(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesContainer) {
 	if err := b.validatePutContainerParameters(value); err != nil {
 		panic(err)
@@ -484,10 +603,72 @@ func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputRefe
 	)
 }
 
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) PutEcsProperties(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesEcsProperties) {
+	if err := b.validatePutEcsPropertiesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"putEcsProperties",
+		[]interface{}{value},
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) PutEksProperties(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesEksProperties) {
+	if err := b.validatePutEksPropertiesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"putEksProperties",
+		[]interface{}{value},
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) ResetConsumableResourceProperties() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetConsumableResourceProperties",
+		nil, // no parameters
+	)
+}
+
 func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) ResetContainer() {
 	_jsii_.InvokeVoid(
 		b,
 		"resetContainer",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) ResetEcsProperties() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetEcsProperties",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) ResetEksProperties() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetEksProperties",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) ResetInstanceTypes() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetInstanceTypes",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) ResetTargetNodes() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetTargetNodes",
 		nil, // no parameters
 	)
 }

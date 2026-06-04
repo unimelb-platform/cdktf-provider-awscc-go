@@ -1,0 +1,6 @@
+package dataawsccapplicationautoscalingscalingpolicy
+
+
+type DataAwsccApplicationautoscalingScalingPolicyPredictiveScalingPolicyConfigurationMetricSpecificationsCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatMetricDimensions struct {
+}
+

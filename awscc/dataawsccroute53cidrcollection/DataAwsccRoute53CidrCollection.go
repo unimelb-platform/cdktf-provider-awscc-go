@@ -9,12 +9,13 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccroute53cidrcollection/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53_cidr_collection awscc_route53_cidr_collection}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53_cidr_collection awscc_route53_cidr_collection}.
 type DataAwsccRoute53CidrCollection interface {
 	cdktf.TerraformDataSource
 	Arn() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	CidrCollectionId() *string
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -85,6 +86,10 @@ type DataAwsccRoute53CidrCollection interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -114,6 +119,16 @@ func (j *jsiiProxy_DataAwsccRoute53CidrCollection) CdktfStack() cdktf.TerraformS
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRoute53CidrCollection) CidrCollectionId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"cidrCollectionId",
 		&returns,
 	)
 	return returns
@@ -290,7 +305,7 @@ func (j *jsiiProxy_DataAwsccRoute53CidrCollection) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53_cidr_collection awscc_route53_cidr_collection} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53_cidr_collection awscc_route53_cidr_collection} Data Source.
 func NewDataAwsccRoute53CidrCollection(scope constructs.Construct, id *string, config *DataAwsccRoute53CidrCollectionConfig) DataAwsccRoute53CidrCollection {
 	_init_.Initialize()
 
@@ -308,7 +323,7 @@ func NewDataAwsccRoute53CidrCollection(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53_cidr_collection awscc_route53_cidr_collection} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53_cidr_collection awscc_route53_cidr_collection} Data Source.
 func NewDataAwsccRoute53CidrCollection_Override(d DataAwsccRoute53CidrCollection, scope constructs.Construct, id *string, config *DataAwsccRoute53CidrCollectionConfig) {
 	_init_.Initialize()
 
@@ -675,6 +690,32 @@ func (d *jsiiProxy_DataAwsccRoute53CidrCollection) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53CidrCollection) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53CidrCollection) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

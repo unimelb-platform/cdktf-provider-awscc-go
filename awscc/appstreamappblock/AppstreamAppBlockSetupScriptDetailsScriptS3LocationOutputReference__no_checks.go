@@ -56,7 +56,7 @@ func (j *jsiiProxy_AppstreamAppBlockSetupScriptDetailsScriptS3LocationOutputRefe
 	return nil
 }
 
-func (j *jsiiProxy_AppstreamAppBlockSetupScriptDetailsScriptS3LocationOutputReference) validateSetInternalValueParameters(val *AppstreamAppBlockSetupScriptDetailsScriptS3Location) error {
+func (j *jsiiProxy_AppstreamAppBlockSetupScriptDetailsScriptS3LocationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

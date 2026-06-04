@@ -70,6 +70,8 @@ type StepfunctionsStateMachineDefinitionS3LocationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucket()
+	ResetKey()
 	ResetVersion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -516,6 +518,22 @@ func (s *jsiiProxy_StepfunctionsStateMachineDefinitionS3LocationOutputReference)
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_StepfunctionsStateMachineDefinitionS3LocationOutputReference) ResetBucket() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetBucket",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_StepfunctionsStateMachineDefinitionS3LocationOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetKey",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_StepfunctionsStateMachineDefinitionS3LocationOutputReference) ResetVersion() {

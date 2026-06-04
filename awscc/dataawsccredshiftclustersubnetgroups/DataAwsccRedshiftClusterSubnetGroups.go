@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccredshiftclustersubnetgroups/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/redshift_cluster_subnet_groups awscc_redshift_cluster_subnet_groups}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/redshift_cluster_subnet_groups awscc_redshift_cluster_subnet_groups}.
 type DataAwsccRedshiftClusterSubnetGroups interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccRedshiftClusterSubnetGroups interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccRedshiftClusterSubnetGroups) TerraformResourceType()
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/redshift_cluster_subnet_groups awscc_redshift_cluster_subnet_groups} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/redshift_cluster_subnet_groups awscc_redshift_cluster_subnet_groups} Data Source.
 func NewDataAwsccRedshiftClusterSubnetGroups(scope constructs.Construct, id *string, config *DataAwsccRedshiftClusterSubnetGroupsConfig) DataAwsccRedshiftClusterSubnetGroups {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccRedshiftClusterSubnetGroups(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/redshift_cluster_subnet_groups awscc_redshift_cluster_subnet_groups} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/redshift_cluster_subnet_groups awscc_redshift_cluster_subnet_groups} Data Source.
 func NewDataAwsccRedshiftClusterSubnetGroups_Override(d DataAwsccRedshiftClusterSubnetGroups, scope constructs.Construct, id *string, config *DataAwsccRedshiftClusterSubnetGroupsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccRedshiftClusterSubnetGroups) SynthesizeAttributes() 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRedshiftClusterSubnetGroups) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRedshiftClusterSubnetGroups) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

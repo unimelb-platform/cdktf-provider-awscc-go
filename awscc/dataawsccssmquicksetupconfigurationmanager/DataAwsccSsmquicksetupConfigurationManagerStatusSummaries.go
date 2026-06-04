@@ -1,0 +1,6 @@
+package dataawsccssmquicksetupconfigurationmanager
+
+
+type DataAwsccSsmquicksetupConfigurationManagerStatusSummaries struct {
+}
+

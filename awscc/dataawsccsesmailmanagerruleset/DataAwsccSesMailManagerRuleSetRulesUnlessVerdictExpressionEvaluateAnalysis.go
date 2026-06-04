@@ -1,0 +1,6 @@
+package dataawsccsesmailmanagerruleset
+
+
+type DataAwsccSesMailManagerRuleSetRulesUnlessVerdictExpressionEvaluateAnalysis struct {
+}
+

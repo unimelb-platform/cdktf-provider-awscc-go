@@ -64,6 +64,7 @@ type GameliftFleetScalingPoliciesTargetConfigurationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetTargetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (g *jsiiProxy_GameliftFleetScalingPoliciesTargetConfigurationOutputReferenc
 	)
 
 	return returns
+}
+
+func (g *jsiiProxy_GameliftFleetScalingPoliciesTargetConfigurationOutputReference) ResetTargetValue() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetTargetValue",
+		nil, // no parameters
+	)
 }
 
 func (g *jsiiProxy_GameliftFleetScalingPoliciesTargetConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

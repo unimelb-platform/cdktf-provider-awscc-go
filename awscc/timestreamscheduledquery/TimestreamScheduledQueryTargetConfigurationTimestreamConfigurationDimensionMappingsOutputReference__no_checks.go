@@ -60,7 +60,7 @@ func (j *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigur
 	return nil
 }
 
-func (j *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationDimensionMappingsOutputReference) validateSetInternalValueParameters(val *TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationDimensionMappings) error {
+func (j *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationDimensionMappingsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

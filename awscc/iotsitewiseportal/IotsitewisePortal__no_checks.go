@@ -56,7 +56,15 @@ func (i *jsiiProxy_IotsitewisePortal) validateInterpolationForAttributeParameter
 	return nil
 }
 
+func (i *jsiiProxy_IotsitewisePortal) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotsitewisePortal) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotsitewisePortal) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -65,6 +73,10 @@ func (i *jsiiProxy_IotsitewisePortal) validateOverrideLogicalIdParameters(newLog
 }
 
 func (i *jsiiProxy_IotsitewisePortal) validatePutAlarmsParameters(value *IotsitewisePortalAlarms) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotsitewisePortal) validatePutPortalTypeConfigurationParameters(value interface{}) error {
 	return nil
 }
 
@@ -117,6 +129,10 @@ func (j *jsiiProxy_IotsitewisePortal) validateSetPortalDescriptionParameters(val
 }
 
 func (j *jsiiProxy_IotsitewisePortal) validateSetPortalNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewisePortal) validateSetPortalTypeParameters(val *string) error {
 	return nil
 }
 

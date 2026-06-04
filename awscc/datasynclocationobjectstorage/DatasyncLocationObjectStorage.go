@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/datasynclocationobjectstorage/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datasync_location_object_storage awscc_datasync_location_object_storage}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datasync_location_object_storage awscc_datasync_location_object_storage}.
 type DatasyncLocationObjectStorage interface {
 	cdktf.TerraformResource
 	AccessKey() *string
@@ -23,6 +23,8 @@ type DatasyncLocationObjectStorage interface {
 	BucketNameInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	CmkSecretConfig() DatasyncLocationObjectStorageCmkSecretConfigOutputReference
+	CmkSecretConfigInput() interface{}
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -33,6 +35,8 @@ type DatasyncLocationObjectStorage interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	CustomSecretConfig() DatasyncLocationObjectStorageCustomSecretConfigOutputReference
+	CustomSecretConfigInput() interface{}
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -52,6 +56,7 @@ type DatasyncLocationObjectStorage interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	LocationArn() *string
 	LocationUri() *string
+	ManagedSecretConfig() DatasyncLocationObjectStorageManagedSecretConfigOutputReference
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
@@ -114,18 +119,33 @@ type DatasyncLocationObjectStorage interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutCmkSecretConfig(value *DatasyncLocationObjectStorageCmkSecretConfig)
+	PutCustomSecretConfig(value *DatasyncLocationObjectStorageCustomSecretConfig)
 	PutTags(value interface{})
 	ResetAccessKey()
+	ResetAgentArns()
 	ResetBucketName()
+	ResetCmkSecretConfig()
+	ResetCustomSecretConfig()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -137,6 +157,9 @@ type DatasyncLocationObjectStorage interface {
 	ResetSubdirectory()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -221,6 +244,26 @@ func (j *jsiiProxy_DatasyncLocationObjectStorage) CdktfStack() cdktf.TerraformSt
 	return returns
 }
 
+func (j *jsiiProxy_DatasyncLocationObjectStorage) CmkSecretConfig() DatasyncLocationObjectStorageCmkSecretConfigOutputReference {
+	var returns DatasyncLocationObjectStorageCmkSecretConfigOutputReference
+	_jsii_.Get(
+		j,
+		"cmkSecretConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatasyncLocationObjectStorage) CmkSecretConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"cmkSecretConfigInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DatasyncLocationObjectStorage) Connection() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -246,6 +289,26 @@ func (j *jsiiProxy_DatasyncLocationObjectStorage) Count() interface{} {
 	_jsii_.Get(
 		j,
 		"count",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatasyncLocationObjectStorage) CustomSecretConfig() DatasyncLocationObjectStorageCustomSecretConfigOutputReference {
+	var returns DatasyncLocationObjectStorageCustomSecretConfigOutputReference
+	_jsii_.Get(
+		j,
+		"customSecretConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatasyncLocationObjectStorage) CustomSecretConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"customSecretConfigInput",
 		&returns,
 	)
 	return returns
@@ -326,6 +389,16 @@ func (j *jsiiProxy_DatasyncLocationObjectStorage) LocationUri() *string {
 	_jsii_.Get(
 		j,
 		"locationUri",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatasyncLocationObjectStorage) ManagedSecretConfig() DatasyncLocationObjectStorageManagedSecretConfigOutputReference {
+	var returns DatasyncLocationObjectStorageManagedSecretConfigOutputReference
+	_jsii_.Get(
+		j,
+		"managedSecretConfig",
 		&returns,
 	)
 	return returns
@@ -542,7 +615,7 @@ func (j *jsiiProxy_DatasyncLocationObjectStorage) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datasync_location_object_storage awscc_datasync_location_object_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datasync_location_object_storage awscc_datasync_location_object_storage} Resource.
 func NewDatasyncLocationObjectStorage(scope constructs.Construct, id *string, config *DatasyncLocationObjectStorageConfig) DatasyncLocationObjectStorage {
 	_init_.Initialize()
 
@@ -560,7 +633,7 @@ func NewDatasyncLocationObjectStorage(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datasync_location_object_storage awscc_datasync_location_object_storage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datasync_location_object_storage awscc_datasync_location_object_storage} Resource.
 func NewDatasyncLocationObjectStorage_Override(d DatasyncLocationObjectStorage, scope constructs.Construct, id *string, config *DatasyncLocationObjectStorageConfig) {
 	_init_.Initialize()
 
@@ -1007,6 +1080,19 @@ func (d *jsiiProxy_DatasyncLocationObjectStorage) GetStringMapAttribute(terrafor
 	return returns
 }
 
+func (d *jsiiProxy_DatasyncLocationObjectStorage) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (d *jsiiProxy_DatasyncLocationObjectStorage) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := d.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1034,6 +1120,17 @@ func (d *jsiiProxy_DatasyncLocationObjectStorage) InterpolationForAttribute(terr
 	return returns
 }
 
+func (d *jsiiProxy_DatasyncLocationObjectStorage) MoveFromId(id *string) {
+	if err := d.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (d *jsiiProxy_DatasyncLocationObjectStorage) MoveTo(moveTarget *string, index interface{}) {
 	if err := d.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1045,6 +1142,17 @@ func (d *jsiiProxy_DatasyncLocationObjectStorage) MoveTo(moveTarget *string, ind
 	)
 }
 
+func (d *jsiiProxy_DatasyncLocationObjectStorage) MoveToId(id *string) {
+	if err := d.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (d *jsiiProxy_DatasyncLocationObjectStorage) OverrideLogicalId(newLogicalId *string) {
 	if err := d.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -1053,6 +1161,28 @@ func (d *jsiiProxy_DatasyncLocationObjectStorage) OverrideLogicalId(newLogicalId
 		d,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (d *jsiiProxy_DatasyncLocationObjectStorage) PutCmkSecretConfig(value *DatasyncLocationObjectStorageCmkSecretConfig) {
+	if err := d.validatePutCmkSecretConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putCmkSecretConfig",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DatasyncLocationObjectStorage) PutCustomSecretConfig(value *DatasyncLocationObjectStorageCustomSecretConfig) {
+	if err := d.validatePutCustomSecretConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putCustomSecretConfig",
+		[]interface{}{value},
 	)
 }
 
@@ -1075,10 +1205,34 @@ func (d *jsiiProxy_DatasyncLocationObjectStorage) ResetAccessKey() {
 	)
 }
 
+func (d *jsiiProxy_DatasyncLocationObjectStorage) ResetAgentArns() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetAgentArns",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DatasyncLocationObjectStorage) ResetBucketName() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetBucketName",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatasyncLocationObjectStorage) ResetCmkSecretConfig() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetCmkSecretConfig",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatasyncLocationObjectStorage) ResetCustomSecretConfig() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetCustomSecretConfig",
 		nil, // no parameters
 	)
 }
@@ -1153,6 +1307,32 @@ func (d *jsiiProxy_DatasyncLocationObjectStorage) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DatasyncLocationObjectStorage) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DatasyncLocationObjectStorage) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

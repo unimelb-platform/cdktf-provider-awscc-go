@@ -67,6 +67,8 @@ type BackupBackupVaultNotificationsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBackupVaultEvents()
+	ResetSnsTopicArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (b *jsiiProxy_BackupBackupVaultNotificationsOutputReference) InterpolationF
 	)
 
 	return returns
+}
+
+func (b *jsiiProxy_BackupBackupVaultNotificationsOutputReference) ResetBackupVaultEvents() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetBackupVaultEvents",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BackupBackupVaultNotificationsOutputReference) ResetSnsTopicArn() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetSnsTopicArn",
+		nil, // no parameters
+	)
 }
 
 func (b *jsiiProxy_BackupBackupVaultNotificationsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

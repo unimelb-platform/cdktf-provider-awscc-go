@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/kendrafaq/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/kendra_faq awscc_kendra_faq}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/kendra_faq awscc_kendra_faq}.
 type KendraFaq interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -32,6 +32,7 @@ type KendraFaq interface {
 	Description() *string
 	SetDescription(val *string)
 	DescriptionInput() *string
+	FaqId() *string
 	FileFormat() *string
 	SetFileFormat(val *string)
 	FileFormatInput() *string
@@ -47,6 +48,9 @@ type KendraFaq interface {
 	IndexId() *string
 	SetIndexId(val *string)
 	IndexIdInput() *string
+	LanguageCode() *string
+	SetLanguageCode(val *string)
+	LanguageCodeInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -103,12 +107,22 @@ type KendraFaq interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -116,11 +130,15 @@ type KendraFaq interface {
 	PutTags(value interface{})
 	ResetDescription()
 	ResetFileFormat()
+	ResetLanguageCode()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -215,6 +233,16 @@ func (j *jsiiProxy_KendraFaq) DescriptionInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_KendraFaq) FaqId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"faqId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_KendraFaq) FileFormat() *string {
 	var returns *string
 	_jsii_.Get(
@@ -290,6 +318,26 @@ func (j *jsiiProxy_KendraFaq) IndexIdInput() *string {
 	_jsii_.Get(
 		j,
 		"indexIdInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KendraFaq) LanguageCode() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"languageCode",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KendraFaq) LanguageCodeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"languageCodeInput",
 		&returns,
 	)
 	return returns
@@ -456,7 +504,7 @@ func (j *jsiiProxy_KendraFaq) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/kendra_faq awscc_kendra_faq} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/kendra_faq awscc_kendra_faq} Resource.
 func NewKendraFaq(scope constructs.Construct, id *string, config *KendraFaqConfig) KendraFaq {
 	_init_.Initialize()
 
@@ -474,7 +522,7 @@ func NewKendraFaq(scope constructs.Construct, id *string, config *KendraFaqConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/kendra_faq awscc_kendra_faq} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/kendra_faq awscc_kendra_faq} Resource.
 func NewKendraFaq_Override(k KendraFaq, scope constructs.Construct, id *string, config *KendraFaqConfig) {
 	_init_.Initialize()
 
@@ -552,6 +600,17 @@ func (j *jsiiProxy_KendraFaq)SetIndexId(val *string) {
 	_jsii_.Set(
 		j,
 		"indexId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_KendraFaq)SetLanguageCode(val *string) {
+	if err := j.validateSetLanguageCodeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"languageCode",
 		val,
 	)
 }
@@ -877,6 +936,19 @@ func (k *jsiiProxy_KendraFaq) GetStringMapAttribute(terraformAttribute *string) 
 	return returns
 }
 
+func (k *jsiiProxy_KendraFaq) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		k,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (k *jsiiProxy_KendraFaq) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := k.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -904,6 +976,17 @@ func (k *jsiiProxy_KendraFaq) InterpolationForAttribute(terraformAttribute *stri
 	return returns
 }
 
+func (k *jsiiProxy_KendraFaq) MoveFromId(id *string) {
+	if err := k.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (k *jsiiProxy_KendraFaq) MoveTo(moveTarget *string, index interface{}) {
 	if err := k.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -912,6 +995,17 @@ func (k *jsiiProxy_KendraFaq) MoveTo(moveTarget *string, index interface{}) {
 		k,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (k *jsiiProxy_KendraFaq) MoveToId(id *string) {
+	if err := k.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -964,6 +1058,14 @@ func (k *jsiiProxy_KendraFaq) ResetFileFormat() {
 	)
 }
 
+func (k *jsiiProxy_KendraFaq) ResetLanguageCode() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetLanguageCode",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KendraFaq) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		k,
@@ -986,6 +1088,32 @@ func (k *jsiiProxy_KendraFaq) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		k,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (k *jsiiProxy_KendraFaq) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		k,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (k *jsiiProxy_KendraFaq) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		k,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

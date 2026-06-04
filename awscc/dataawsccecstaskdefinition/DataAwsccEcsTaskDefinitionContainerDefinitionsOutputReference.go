@@ -61,6 +61,7 @@ type DataAwsccEcsTaskDefinitionContainerDefinitionsOutputReference interface {
 	ReadonlyRootFilesystem() cdktf.IResolvable
 	RepositoryCredentials() DataAwsccEcsTaskDefinitionContainerDefinitionsRepositoryCredentialsOutputReference
 	ResourceRequirements() DataAwsccEcsTaskDefinitionContainerDefinitionsResourceRequirementsList
+	RestartPolicy() DataAwsccEcsTaskDefinitionContainerDefinitionsRestartPolicyOutputReference
 	Secrets() DataAwsccEcsTaskDefinitionContainerDefinitionsSecretsList
 	StartTimeout() *float64
 	StopTimeout() *float64
@@ -75,6 +76,7 @@ type DataAwsccEcsTaskDefinitionContainerDefinitionsOutputReference interface {
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	Ulimits() DataAwsccEcsTaskDefinitionContainerDefinitionsUlimitsList
 	User() *string
+	VersionConsistency() *string
 	VolumesFrom() DataAwsccEcsTaskDefinitionContainerDefinitionsVolumesFromList
 	WorkingDirectory() *string
 	// Experimental.
@@ -486,6 +488,16 @@ func (j *jsiiProxy_DataAwsccEcsTaskDefinitionContainerDefinitionsOutputReference
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEcsTaskDefinitionContainerDefinitionsOutputReference) RestartPolicy() DataAwsccEcsTaskDefinitionContainerDefinitionsRestartPolicyOutputReference {
+	var returns DataAwsccEcsTaskDefinitionContainerDefinitionsRestartPolicyOutputReference
+	_jsii_.Get(
+		j,
+		"restartPolicy",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEcsTaskDefinitionContainerDefinitionsOutputReference) Secrets() DataAwsccEcsTaskDefinitionContainerDefinitionsSecretsList {
 	var returns DataAwsccEcsTaskDefinitionContainerDefinitionsSecretsList
 	_jsii_.Get(
@@ -561,6 +573,16 @@ func (j *jsiiProxy_DataAwsccEcsTaskDefinitionContainerDefinitionsOutputReference
 	_jsii_.Get(
 		j,
 		"user",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEcsTaskDefinitionContainerDefinitionsOutputReference) VersionConsistency() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"versionConsistency",
 		&returns,
 	)
 	return returns

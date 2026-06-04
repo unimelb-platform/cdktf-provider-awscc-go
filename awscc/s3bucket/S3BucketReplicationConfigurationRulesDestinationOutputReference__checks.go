@@ -223,9 +223,25 @@ func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationOutputReferen
 	return nil
 }
 
-func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationOutputReference) validateSetInternalValueParameters(val *S3BucketReplicationConfigurationRulesDestination) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *S3BucketReplicationConfigurationRulesDestination:
+		val := val.(*S3BucketReplicationConfigurationRulesDestination)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case S3BucketReplicationConfigurationRulesDestination:
+		val_ := val.(S3BucketReplicationConfigurationRulesDestination)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *S3BucketReplicationConfigurationRulesDestination; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

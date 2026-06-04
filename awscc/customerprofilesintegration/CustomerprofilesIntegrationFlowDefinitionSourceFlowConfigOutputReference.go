@@ -35,10 +35,10 @@ type CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutputReference in
 	Fqn() *string
 	IncrementalPullConfig() CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigIncrementalPullConfigOutputReference
 	IncrementalPullConfigInput() interface{}
-	InternalValue() *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfig
-	SetInternalValue(val *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfig)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	SourceConnectorProperties() CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorPropertiesOutputReference
-	SourceConnectorPropertiesInput() *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorProperties
+	SourceConnectorPropertiesInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -74,7 +74,9 @@ type CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutputReference in
 	PutIncrementalPullConfig(value *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigIncrementalPullConfig)
 	PutSourceConnectorProperties(value *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorProperties)
 	ResetConnectorProfileName()
+	ResetConnectorType()
 	ResetIncrementalPullConfig()
+	ResetSourceConnectorProperties()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -190,8 +192,8 @@ func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutp
 	return returns
 }
 
-func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutputReference) InternalValue() *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfig {
-	var returns *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfig
+func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -210,8 +212,8 @@ func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutp
 	return returns
 }
 
-func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutputReference) SourceConnectorPropertiesInput() *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorProperties {
-	var returns *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorProperties
+func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutputReference) SourceConnectorPropertiesInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"sourceConnectorPropertiesInput",
@@ -312,7 +314,7 @@ func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutp
 	)
 }
 
-func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutputReference)SetInternalValue(val *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfig) {
+func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -561,10 +563,26 @@ func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutp
 	)
 }
 
+func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutputReference) ResetConnectorType() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetConnectorType",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutputReference) ResetIncrementalPullConfig() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetIncrementalPullConfig",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutputReference) ResetSourceConnectorProperties() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetSourceConnectorProperties",
 		nil, // no parameters
 	)
 }

@@ -56,7 +56,15 @@ func (i *jsiiProxy_InternetmonitorMonitor) validateInterpolationForAttributePara
 	return nil
 }
 
+func (i *jsiiProxy_InternetmonitorMonitor) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_InternetmonitorMonitor) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_InternetmonitorMonitor) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -100,7 +108,15 @@ func (j *jsiiProxy_InternetmonitorMonitor) validateSetCountParameters(val interf
 	return nil
 }
 
+func (j *jsiiProxy_InternetmonitorMonitor) validateSetIncludeLinkedAccountsParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_InternetmonitorMonitor) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
+	return nil
+}
+
+func (j *jsiiProxy_InternetmonitorMonitor) validateSetLinkedAccountIdParameters(val *string) error {
 	return nil
 }
 

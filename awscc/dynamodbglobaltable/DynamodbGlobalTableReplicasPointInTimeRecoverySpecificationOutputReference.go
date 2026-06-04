@@ -32,6 +32,9 @@ type DynamodbGlobalTableReplicasPointInTimeRecoverySpecificationOutputReference 
 	PointInTimeRecoveryEnabled() interface{}
 	SetPointInTimeRecoveryEnabled(val interface{})
 	PointInTimeRecoveryEnabledInput() interface{}
+	RecoveryPeriodInDays() *float64
+	SetRecoveryPeriodInDays(val *float64)
+	RecoveryPeriodInDaysInput() *float64
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -65,6 +68,7 @@ type DynamodbGlobalTableReplicasPointInTimeRecoverySpecificationOutputReference 
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetPointInTimeRecoveryEnabled()
+	ResetRecoveryPeriodInDays()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -145,6 +149,26 @@ func (j *jsiiProxy_DynamodbGlobalTableReplicasPointInTimeRecoverySpecificationOu
 	_jsii_.Get(
 		j,
 		"pointInTimeRecoveryEnabledInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTableReplicasPointInTimeRecoverySpecificationOutputReference) RecoveryPeriodInDays() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"recoveryPeriodInDays",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTableReplicasPointInTimeRecoverySpecificationOutputReference) RecoveryPeriodInDaysInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"recoveryPeriodInDaysInput",
 		&returns,
 	)
 	return returns
@@ -238,6 +262,17 @@ func (j *jsiiProxy_DynamodbGlobalTableReplicasPointInTimeRecoverySpecificationOu
 	_jsii_.Set(
 		j,
 		"pointInTimeRecoveryEnabled",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DynamodbGlobalTableReplicasPointInTimeRecoverySpecificationOutputReference)SetRecoveryPeriodInDays(val *float64) {
+	if err := j.validateSetRecoveryPeriodInDaysParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"recoveryPeriodInDays",
 		val,
 	)
 }
@@ -454,6 +489,14 @@ func (d *jsiiProxy_DynamodbGlobalTableReplicasPointInTimeRecoverySpecificationOu
 	_jsii_.InvokeVoid(
 		d,
 		"resetPointInTimeRecoveryEnabled",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableReplicasPointInTimeRecoverySpecificationOutputReference) ResetRecoveryPeriodInDays() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetRecoveryPeriodInDays",
 		nil, // no parameters
 	)
 }

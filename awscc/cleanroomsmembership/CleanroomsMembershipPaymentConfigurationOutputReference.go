@@ -29,8 +29,12 @@ type CleanroomsMembershipPaymentConfigurationOutputReference interface {
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	JobCompute() CleanroomsMembershipPaymentConfigurationJobComputeOutputReference
+	JobComputeInput() interface{}
+	MachineLearning() CleanroomsMembershipPaymentConfigurationMachineLearningOutputReference
+	MachineLearningInput() interface{}
 	QueryCompute() CleanroomsMembershipPaymentConfigurationQueryComputeOutputReference
-	QueryComputeInput() *CleanroomsMembershipPaymentConfigurationQueryCompute
+	QueryComputeInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -63,7 +67,12 @@ type CleanroomsMembershipPaymentConfigurationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutJobCompute(value *CleanroomsMembershipPaymentConfigurationJobCompute)
+	PutMachineLearning(value *CleanroomsMembershipPaymentConfigurationMachineLearning)
 	PutQueryCompute(value *CleanroomsMembershipPaymentConfigurationQueryCompute)
+	ResetJobCompute()
+	ResetMachineLearning()
+	ResetQueryCompute()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -129,6 +138,46 @@ func (j *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) Inte
 	return returns
 }
 
+func (j *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) JobCompute() CleanroomsMembershipPaymentConfigurationJobComputeOutputReference {
+	var returns CleanroomsMembershipPaymentConfigurationJobComputeOutputReference
+	_jsii_.Get(
+		j,
+		"jobCompute",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) JobComputeInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"jobComputeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) MachineLearning() CleanroomsMembershipPaymentConfigurationMachineLearningOutputReference {
+	var returns CleanroomsMembershipPaymentConfigurationMachineLearningOutputReference
+	_jsii_.Get(
+		j,
+		"machineLearning",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) MachineLearningInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"machineLearningInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) QueryCompute() CleanroomsMembershipPaymentConfigurationQueryComputeOutputReference {
 	var returns CleanroomsMembershipPaymentConfigurationQueryComputeOutputReference
 	_jsii_.Get(
@@ -139,8 +188,8 @@ func (j *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) Quer
 	return returns
 }
 
-func (j *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) QueryComputeInput() *CleanroomsMembershipPaymentConfigurationQueryCompute {
-	var returns *CleanroomsMembershipPaymentConfigurationQueryCompute
+func (j *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) QueryComputeInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"queryComputeInput",
@@ -438,6 +487,28 @@ func (c *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) Inte
 	return returns
 }
 
+func (c *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) PutJobCompute(value *CleanroomsMembershipPaymentConfigurationJobCompute) {
+	if err := c.validatePutJobComputeParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putJobCompute",
+		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) PutMachineLearning(value *CleanroomsMembershipPaymentConfigurationMachineLearning) {
+	if err := c.validatePutMachineLearningParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putMachineLearning",
+		[]interface{}{value},
+	)
+}
+
 func (c *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) PutQueryCompute(value *CleanroomsMembershipPaymentConfigurationQueryCompute) {
 	if err := c.validatePutQueryComputeParameters(value); err != nil {
 		panic(err)
@@ -446,6 +517,30 @@ func (c *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) PutQ
 		c,
 		"putQueryCompute",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) ResetJobCompute() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetJobCompute",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) ResetMachineLearning() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetMachineLearning",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) ResetQueryCompute() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetQueryCompute",
+		nil, // no parameters
 	)
 }
 

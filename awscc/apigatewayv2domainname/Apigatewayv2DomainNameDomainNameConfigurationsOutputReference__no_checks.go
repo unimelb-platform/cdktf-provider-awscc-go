@@ -72,6 +72,10 @@ func (j *jsiiProxy_Apigatewayv2DomainNameDomainNameConfigurationsOutputReference
 	return nil
 }
 
+func (j *jsiiProxy_Apigatewayv2DomainNameDomainNameConfigurationsOutputReference) validateSetIpAddressTypeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Apigatewayv2DomainNameDomainNameConfigurationsOutputReference) validateSetOwnershipVerificationCertificateArnParameters(val *string) error {
 	return nil
 }

@@ -79,6 +79,8 @@ type StepfunctionsStateMachineAliasDeploymentPreferenceOutputReference interface
 	ResetAlarms()
 	ResetInterval()
 	ResetPercentage()
+	ResetStateMachineVersionArn()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -608,6 +610,22 @@ func (s *jsiiProxy_StepfunctionsStateMachineAliasDeploymentPreferenceOutputRefer
 	_jsii_.InvokeVoid(
 		s,
 		"resetPercentage",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_StepfunctionsStateMachineAliasDeploymentPreferenceOutputReference) ResetStateMachineVersionArn() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStateMachineVersionArn",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_StepfunctionsStateMachineAliasDeploymentPreferenceOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetType",
 		nil, // no parameters
 	)
 }

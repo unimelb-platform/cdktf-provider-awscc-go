@@ -39,6 +39,8 @@ type OsisPipelineVpcEndpointsVpcOptionsOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	VpcAttachmentOptions() OsisPipelineVpcEndpointsVpcOptionsVpcAttachmentOptionsOutputReference
+	VpcEndpointManagement() *string
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -163,6 +165,26 @@ func (j *jsiiProxy_OsisPipelineVpcEndpointsVpcOptionsOutputReference) TerraformR
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OsisPipelineVpcEndpointsVpcOptionsOutputReference) VpcAttachmentOptions() OsisPipelineVpcEndpointsVpcOptionsVpcAttachmentOptionsOutputReference {
+	var returns OsisPipelineVpcEndpointsVpcOptionsVpcAttachmentOptionsOutputReference
+	_jsii_.Get(
+		j,
+		"vpcAttachmentOptions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OsisPipelineVpcEndpointsVpcOptionsOutputReference) VpcEndpointManagement() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"vpcEndpointManagement",
 		&returns,
 	)
 	return returns

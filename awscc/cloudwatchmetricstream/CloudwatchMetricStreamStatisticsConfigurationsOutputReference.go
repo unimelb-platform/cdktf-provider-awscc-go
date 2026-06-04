@@ -67,6 +67,8 @@ type CloudwatchMetricStreamStatisticsConfigurationsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutIncludeMetrics(value interface{})
+	ResetAdditionalStatistics()
+	ResetIncludeMetrics()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -480,6 +482,22 @@ func (c *jsiiProxy_CloudwatchMetricStreamStatisticsConfigurationsOutputReference
 		c,
 		"putIncludeMetrics",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CloudwatchMetricStreamStatisticsConfigurationsOutputReference) ResetAdditionalStatistics() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAdditionalStatistics",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudwatchMetricStreamStatisticsConfigurationsOutputReference) ResetIncludeMetrics() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetIncludeMetrics",
+		nil, // no parameters
 	)
 }
 

@@ -56,7 +56,15 @@ func (r *jsiiProxy_Route53RecoverycontrolSafetyRule) validateInterpolationForAtt
 	return nil
 }
 
+func (r *jsiiProxy_Route53RecoverycontrolSafetyRule) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_Route53RecoverycontrolSafetyRule) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (r *jsiiProxy_Route53RecoverycontrolSafetyRule) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -32,6 +32,7 @@ type DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContainersVolumeMounts
 	MountPath() *string
 	Name() *string
 	ReadOnly() cdktf.IResolvable
+	SubPath() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -154,6 +155,16 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContaine
 	_jsii_.Get(
 		j,
 		"readOnly",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsOutputReference) SubPath() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"subPath",
 		&returns,
 	)
 	return returns

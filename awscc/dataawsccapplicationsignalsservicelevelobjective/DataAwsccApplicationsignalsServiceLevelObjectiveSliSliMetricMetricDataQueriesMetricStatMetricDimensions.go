@@ -1,0 +1,6 @@
+package dataawsccapplicationsignalsservicelevelobjective
+
+
+type DataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStatMetricDimensions struct {
+}
+

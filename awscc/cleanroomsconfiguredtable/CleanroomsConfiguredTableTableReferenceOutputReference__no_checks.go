@@ -44,7 +44,15 @@ func (c *jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference) valid
 	return nil
 }
 
+func (c *jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference) validatePutAthenaParameters(value *CleanroomsConfiguredTableTableReferenceAthena) error {
+	return nil
+}
+
 func (c *jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference) validatePutGlueParameters(value *CleanroomsConfiguredTableTableReferenceGlue) error {
+	return nil
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference) validatePutSnowflakeParameters(value *CleanroomsConfiguredTableTableReferenceSnowflake) error {
 	return nil
 }
 

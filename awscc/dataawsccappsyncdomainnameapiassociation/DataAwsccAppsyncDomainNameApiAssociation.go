@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccappsyncdomainnameapiassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appsync_domain_name_api_association awscc_appsync_domain_name_api_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appsync_domain_name_api_association awscc_appsync_domain_name_api_association}.
 type DataAwsccAppsyncDomainNameApiAssociation interface {
 	cdktf.TerraformDataSource
 	ApiAssociationIdentifier() *string
@@ -85,6 +85,10 @@ type DataAwsccAppsyncDomainNameApiAssociation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -290,7 +294,7 @@ func (j *jsiiProxy_DataAwsccAppsyncDomainNameApiAssociation) TerraformResourceTy
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appsync_domain_name_api_association awscc_appsync_domain_name_api_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appsync_domain_name_api_association awscc_appsync_domain_name_api_association} Data Source.
 func NewDataAwsccAppsyncDomainNameApiAssociation(scope constructs.Construct, id *string, config *DataAwsccAppsyncDomainNameApiAssociationConfig) DataAwsccAppsyncDomainNameApiAssociation {
 	_init_.Initialize()
 
@@ -308,7 +312,7 @@ func NewDataAwsccAppsyncDomainNameApiAssociation(scope constructs.Construct, id 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appsync_domain_name_api_association awscc_appsync_domain_name_api_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appsync_domain_name_api_association awscc_appsync_domain_name_api_association} Data Source.
 func NewDataAwsccAppsyncDomainNameApiAssociation_Override(d DataAwsccAppsyncDomainNameApiAssociation, scope constructs.Construct, id *string, config *DataAwsccAppsyncDomainNameApiAssociationConfig) {
 	_init_.Initialize()
 
@@ -675,6 +679,32 @@ func (d *jsiiProxy_DataAwsccAppsyncDomainNameApiAssociation) SynthesizeAttribute
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppsyncDomainNameApiAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppsyncDomainNameApiAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -56,7 +56,15 @@ func (d *jsiiProxy_DatabrewDataset) validateInterpolationForAttributeParameters(
 	return nil
 }
 
+func (d *jsiiProxy_DatabrewDataset) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DatabrewDataset) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DatabrewDataset) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -117,6 +125,10 @@ func (j *jsiiProxy_DatabrewDataset) validateSetNameParameters(val *string) error
 }
 
 func (j *jsiiProxy_DatabrewDataset) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DatabrewDataset) validateSetSourceParameters(val *string) error {
 	return nil
 }
 

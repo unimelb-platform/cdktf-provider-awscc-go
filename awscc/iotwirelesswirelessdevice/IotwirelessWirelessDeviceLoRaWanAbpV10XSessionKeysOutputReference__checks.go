@@ -171,9 +171,25 @@ func (j *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV10XSessionKeysOutputRefer
 	return nil
 }
 
-func (j *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV10XSessionKeysOutputReference) validateSetInternalValueParameters(val *IotwirelessWirelessDeviceLoRaWanAbpV10XSessionKeys) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV10XSessionKeysOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *IotwirelessWirelessDeviceLoRaWanAbpV10XSessionKeys:
+		val := val.(*IotwirelessWirelessDeviceLoRaWanAbpV10XSessionKeys)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case IotwirelessWirelessDeviceLoRaWanAbpV10XSessionKeys:
+		val_ := val.(IotwirelessWirelessDeviceLoRaWanAbpV10XSessionKeys)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *IotwirelessWirelessDeviceLoRaWanAbpV10XSessionKeys; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

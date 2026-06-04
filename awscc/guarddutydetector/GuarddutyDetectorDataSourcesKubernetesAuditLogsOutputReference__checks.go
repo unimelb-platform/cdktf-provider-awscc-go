@@ -183,9 +183,25 @@ func (j *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesAuditLogsOutputReferenc
 	return nil
 }
 
-func (j *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesAuditLogsOutputReference) validateSetInternalValueParameters(val *GuarddutyDetectorDataSourcesKubernetesAuditLogs) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesAuditLogsOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *GuarddutyDetectorDataSourcesKubernetesAuditLogs:
+		val := val.(*GuarddutyDetectorDataSourcesKubernetesAuditLogs)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case GuarddutyDetectorDataSourcesKubernetesAuditLogs:
+		val_ := val.(GuarddutyDetectorDataSourcesKubernetesAuditLogs)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *GuarddutyDetectorDataSourcesKubernetesAuditLogs; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

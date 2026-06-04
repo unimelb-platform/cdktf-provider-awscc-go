@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccgameliftscript/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/gamelift_script awscc_gamelift_script}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/gamelift_script awscc_gamelift_script}.
 type DataAwsccGameliftScript interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -50,6 +50,7 @@ type DataAwsccGameliftScript interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	ScriptId() *string
 	SizeOnDisk() *float64
 	StorageLocation() DataAwsccGameliftScriptStorageLocationOutputReference
 	Tags() DataAwsccGameliftScriptTagsList
@@ -89,6 +90,10 @@ type DataAwsccGameliftScript interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -263,6 +268,16 @@ func (j *jsiiProxy_DataAwsccGameliftScript) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccGameliftScript) ScriptId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"scriptId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccGameliftScript) SizeOnDisk() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -334,7 +349,7 @@ func (j *jsiiProxy_DataAwsccGameliftScript) Version() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/gamelift_script awscc_gamelift_script} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/gamelift_script awscc_gamelift_script} Data Source.
 func NewDataAwsccGameliftScript(scope constructs.Construct, id *string, config *DataAwsccGameliftScriptConfig) DataAwsccGameliftScript {
 	_init_.Initialize()
 
@@ -352,7 +367,7 @@ func NewDataAwsccGameliftScript(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/gamelift_script awscc_gamelift_script} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/gamelift_script awscc_gamelift_script} Data Source.
 func NewDataAwsccGameliftScript_Override(d DataAwsccGameliftScript, scope constructs.Construct, id *string, config *DataAwsccGameliftScriptConfig) {
 	_init_.Initialize()
 
@@ -719,6 +734,32 @@ func (d *jsiiProxy_DataAwsccGameliftScript) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGameliftScript) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGameliftScript) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

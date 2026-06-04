@@ -67,6 +67,8 @@ type QuicksightAnalysisParametersDecimalParametersOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
+	ResetValues()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (q *jsiiProxy_QuicksightAnalysisParametersDecimalParametersOutputReference)
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightAnalysisParametersDecimalParametersOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightAnalysisParametersDecimalParametersOutputReference) ResetValues() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetValues",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightAnalysisParametersDecimalParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -119,6 +119,14 @@ func (d *jsiiProxy_DatasyncLocationAzureBlob) validateInterpolationForAttributeP
 	return nil
 }
 
+func (d *jsiiProxy_DatasyncLocationAzureBlob) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (d *jsiiProxy_DatasyncLocationAzureBlob) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (d *jsiiProxy_DatasyncLocationAzureBlob) validateMoveToParameters(moveTarge
 	return nil
 }
 
+func (d *jsiiProxy_DatasyncLocationAzureBlob) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (d *jsiiProxy_DatasyncLocationAzureBlob) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -189,6 +205,28 @@ func (d *jsiiProxy_DatasyncLocationAzureBlob) validateOverrideLogicalIdParameter
 }
 
 func (d *jsiiProxy_DatasyncLocationAzureBlob) validatePutAzureBlobSasConfigurationParameters(value *DatasyncLocationAzureBlobAzureBlobSasConfiguration) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DatasyncLocationAzureBlob) validatePutCmkSecretConfigParameters(value *DatasyncLocationAzureBlobCmkSecretConfig) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DatasyncLocationAzureBlob) validatePutCustomSecretConfigParameters(value *DatasyncLocationAzureBlobCustomSecretConfig) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -471,9 +509,6 @@ func validateNewDatasyncLocationAzureBlobParameters(scope constructs.Construct, 
 		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
-	if config == nil {
-		return fmt.Errorf("parameter config is required, but nil was provided")
-	}
 	if err := _jsii_.ValidateStruct(config, func() string { return "parameter config" }); err != nil {
 		return err
 	}

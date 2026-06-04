@@ -67,6 +67,7 @@ type BatchJobDefinitionEksPropertiesPodPropertiesContainersEnvOutputReference in
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
 	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersEnvOutp
 	)
 
 	return returns
+}
+
+func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersEnvOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetName",
+		nil, // no parameters
+	)
 }
 
 func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersEnvOutputReference) ResetValue() {

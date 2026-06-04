@@ -80,6 +80,7 @@ type ApigatewayMethodIntegrationIntegrationResponsesOutputReference interface {
 	ResetResponseParameters()
 	ResetResponseTemplates()
 	ResetSelectionPattern()
+	ResetStatusCode()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -617,6 +618,14 @@ func (a *jsiiProxy_ApigatewayMethodIntegrationIntegrationResponsesOutputReferenc
 	_jsii_.InvokeVoid(
 		a,
 		"resetSelectionPattern",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApigatewayMethodIntegrationIntegrationResponsesOutputReference) ResetStatusCode() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetStatusCode",
 		nil, // no parameters
 	)
 }

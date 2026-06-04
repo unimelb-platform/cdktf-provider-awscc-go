@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2flowlog/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_flow_log awscc_ec2_flow_log}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_flow_log awscc_ec2_flow_log}.
 type Ec2FlowLog interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -36,6 +36,7 @@ type Ec2FlowLog interface {
 	SetDependsOn(val *[]*string)
 	DestinationOptions() Ec2FlowLogDestinationOptionsOutputReference
 	DestinationOptionsInput() interface{}
+	FlowLogId() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -117,12 +118,22 @@ type Ec2FlowLog interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -142,6 +153,9 @@ type Ec2FlowLog interface {
 	ResetTags()
 	ResetTrafficType()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -261,6 +275,16 @@ func (j *jsiiProxy_Ec2FlowLog) DestinationOptionsInput() interface{} {
 	_jsii_.Get(
 		j,
 		"destinationOptionsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2FlowLog) FlowLogId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"flowLogId",
 		&returns,
 	)
 	return returns
@@ -567,7 +591,7 @@ func (j *jsiiProxy_Ec2FlowLog) TrafficTypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_flow_log awscc_ec2_flow_log} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_flow_log awscc_ec2_flow_log} Resource.
 func NewEc2FlowLog(scope constructs.Construct, id *string, config *Ec2FlowLogConfig) Ec2FlowLog {
 	_init_.Initialize()
 
@@ -585,7 +609,7 @@ func NewEc2FlowLog(scope constructs.Construct, id *string, config *Ec2FlowLogCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_flow_log awscc_ec2_flow_log} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_flow_log awscc_ec2_flow_log} Resource.
 func NewEc2FlowLog_Override(e Ec2FlowLog, scope constructs.Construct, id *string, config *Ec2FlowLogConfig) {
 	_init_.Initialize()
 
@@ -1043,6 +1067,19 @@ func (e *jsiiProxy_Ec2FlowLog) GetStringMapAttribute(terraformAttribute *string)
 	return returns
 }
 
+func (e *jsiiProxy_Ec2FlowLog) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2FlowLog) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1070,6 +1107,17 @@ func (e *jsiiProxy_Ec2FlowLog) InterpolationForAttribute(terraformAttribute *str
 	return returns
 }
 
+func (e *jsiiProxy_Ec2FlowLog) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2FlowLog) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1078,6 +1126,17 @@ func (e *jsiiProxy_Ec2FlowLog) MoveTo(moveTarget *string, index interface{}) {
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Ec2FlowLog) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1208,6 +1267,32 @@ func (e *jsiiProxy_Ec2FlowLog) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2FlowLog) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2FlowLog) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

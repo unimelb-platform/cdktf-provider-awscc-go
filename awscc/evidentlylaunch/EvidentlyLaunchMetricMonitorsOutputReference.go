@@ -76,8 +76,11 @@ type EvidentlyLaunchMetricMonitorsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEntityIdKey()
 	ResetEventPattern()
+	ResetMetricName()
 	ResetUnitLabel()
+	ResetValueKey()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -587,6 +590,14 @@ func (e *jsiiProxy_EvidentlyLaunchMetricMonitorsOutputReference) InterpolationFo
 	return returns
 }
 
+func (e *jsiiProxy_EvidentlyLaunchMetricMonitorsOutputReference) ResetEntityIdKey() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetEntityIdKey",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EvidentlyLaunchMetricMonitorsOutputReference) ResetEventPattern() {
 	_jsii_.InvokeVoid(
 		e,
@@ -595,10 +606,26 @@ func (e *jsiiProxy_EvidentlyLaunchMetricMonitorsOutputReference) ResetEventPatte
 	)
 }
 
+func (e *jsiiProxy_EvidentlyLaunchMetricMonitorsOutputReference) ResetMetricName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetMetricName",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EvidentlyLaunchMetricMonitorsOutputReference) ResetUnitLabel() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetUnitLabel",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EvidentlyLaunchMetricMonitorsOutputReference) ResetValueKey() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetValueKey",
 		nil, // no parameters
 	)
 }

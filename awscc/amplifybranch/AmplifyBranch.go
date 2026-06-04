@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/amplifybranch/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/amplify_branch awscc_amplify_branch}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/amplify_branch awscc_amplify_branch}.
 type AmplifyBranch interface {
 	cdktf.TerraformResource
 	AppId() *string
@@ -28,6 +28,9 @@ type AmplifyBranch interface {
 	BuildSpecInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	ComputeRoleArn() *string
+	SetComputeRoleArn(val *string)
+	ComputeRoleArnInput() *string
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -54,6 +57,9 @@ type AmplifyBranch interface {
 	EnablePullRequestPreview() interface{}
 	SetEnablePullRequestPreview(val interface{})
 	EnablePullRequestPreviewInput() interface{}
+	EnableSkewProtection() interface{}
+	SetEnableSkewProtection(val interface{})
+	EnableSkewProtectionInput() interface{}
 	EnvironmentVariables() AmplifyBranchEnvironmentVariablesList
 	EnvironmentVariablesInput() interface{}
 	// Experimental.
@@ -122,12 +128,22 @@ type AmplifyBranch interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -138,10 +154,12 @@ type AmplifyBranch interface {
 	ResetBackend()
 	ResetBasicAuthConfig()
 	ResetBuildSpec()
+	ResetComputeRoleArn()
 	ResetDescription()
 	ResetEnableAutoBuild()
 	ResetEnablePerformanceMode()
 	ResetEnablePullRequestPreview()
+	ResetEnableSkewProtection()
 	ResetEnvironmentVariables()
 	ResetFramework()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -151,6 +169,9 @@ type AmplifyBranch interface {
 	ResetStage()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -285,6 +306,26 @@ func (j *jsiiProxy_AmplifyBranch) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
+func (j *jsiiProxy_AmplifyBranch) ComputeRoleArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"computeRoleArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AmplifyBranch) ComputeRoleArnInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"computeRoleArnInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_AmplifyBranch) Connection() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -400,6 +441,26 @@ func (j *jsiiProxy_AmplifyBranch) EnablePullRequestPreviewInput() interface{} {
 	_jsii_.Get(
 		j,
 		"enablePullRequestPreviewInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AmplifyBranch) EnableSkewProtection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableSkewProtection",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AmplifyBranch) EnableSkewProtectionInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableSkewProtectionInput",
 		&returns,
 	)
 	return returns
@@ -626,7 +687,7 @@ func (j *jsiiProxy_AmplifyBranch) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/amplify_branch awscc_amplify_branch} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/amplify_branch awscc_amplify_branch} Resource.
 func NewAmplifyBranch(scope constructs.Construct, id *string, config *AmplifyBranchConfig) AmplifyBranch {
 	_init_.Initialize()
 
@@ -644,7 +705,7 @@ func NewAmplifyBranch(scope constructs.Construct, id *string, config *AmplifyBra
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/amplify_branch awscc_amplify_branch} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/amplify_branch awscc_amplify_branch} Resource.
 func NewAmplifyBranch_Override(a AmplifyBranch, scope constructs.Construct, id *string, config *AmplifyBranchConfig) {
 	_init_.Initialize()
 
@@ -684,6 +745,17 @@ func (j *jsiiProxy_AmplifyBranch)SetBuildSpec(val *string) {
 	_jsii_.Set(
 		j,
 		"buildSpec",
+		val,
+	)
+}
+
+func (j *jsiiProxy_AmplifyBranch)SetComputeRoleArn(val *string) {
+	if err := j.validateSetComputeRoleArnParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"computeRoleArn",
 		val,
 	)
 }
@@ -758,6 +830,17 @@ func (j *jsiiProxy_AmplifyBranch)SetEnablePullRequestPreview(val interface{}) {
 	_jsii_.Set(
 		j,
 		"enablePullRequestPreview",
+		val,
+	)
+}
+
+func (j *jsiiProxy_AmplifyBranch)SetEnableSkewProtection(val interface{}) {
+	if err := j.validateSetEnableSkewProtectionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enableSkewProtection",
 		val,
 	)
 }
@@ -1102,6 +1185,19 @@ func (a *jsiiProxy_AmplifyBranch) GetStringMapAttribute(terraformAttribute *stri
 	return returns
 }
 
+func (a *jsiiProxy_AmplifyBranch) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (a *jsiiProxy_AmplifyBranch) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := a.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1129,6 +1225,17 @@ func (a *jsiiProxy_AmplifyBranch) InterpolationForAttribute(terraformAttribute *
 	return returns
 }
 
+func (a *jsiiProxy_AmplifyBranch) MoveFromId(id *string) {
+	if err := a.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (a *jsiiProxy_AmplifyBranch) MoveTo(moveTarget *string, index interface{}) {
 	if err := a.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1137,6 +1244,17 @@ func (a *jsiiProxy_AmplifyBranch) MoveTo(moveTarget *string, index interface{}) 
 		a,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (a *jsiiProxy_AmplifyBranch) MoveToId(id *string) {
+	if err := a.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1219,6 +1337,14 @@ func (a *jsiiProxy_AmplifyBranch) ResetBuildSpec() {
 	)
 }
 
+func (a *jsiiProxy_AmplifyBranch) ResetComputeRoleArn() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetComputeRoleArn",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_AmplifyBranch) ResetDescription() {
 	_jsii_.InvokeVoid(
 		a,
@@ -1247,6 +1373,14 @@ func (a *jsiiProxy_AmplifyBranch) ResetEnablePullRequestPreview() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetEnablePullRequestPreview",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AmplifyBranch) ResetEnableSkewProtection() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetEnableSkewProtection",
 		nil, // no parameters
 	)
 }
@@ -1305,6 +1439,32 @@ func (a *jsiiProxy_AmplifyBranch) SynthesizeAttributes() *map[string]interface{}
 	_jsii_.Invoke(
 		a,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AmplifyBranch) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		a,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AmplifyBranch) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

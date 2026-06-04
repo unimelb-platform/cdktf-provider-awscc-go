@@ -67,6 +67,8 @@ type RobomakerSimulationApplicationRenderingEngineOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
+	ResetVersion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (r *jsiiProxy_RobomakerSimulationApplicationRenderingEngineOutputReference)
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_RobomakerSimulationApplicationRenderingEngineOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RobomakerSimulationApplicationRenderingEngineOutputReference) ResetVersion() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetVersion",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_RobomakerSimulationApplicationRenderingEngineOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

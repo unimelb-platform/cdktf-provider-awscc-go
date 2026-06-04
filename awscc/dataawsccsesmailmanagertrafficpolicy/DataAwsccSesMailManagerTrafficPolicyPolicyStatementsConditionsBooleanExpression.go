@@ -1,0 +1,6 @@
+package dataawsccsesmailmanagertrafficpolicy
+
+
+type DataAwsccSesMailManagerTrafficPolicyPolicyStatementsConditionsBooleanExpression struct {
+}
+

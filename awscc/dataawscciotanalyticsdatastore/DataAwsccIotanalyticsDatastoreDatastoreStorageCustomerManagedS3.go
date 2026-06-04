@@ -1,0 +1,6 @@
+package dataawscciotanalyticsdatastore
+
+
+type DataAwsccIotanalyticsDatastoreDatastoreStorageCustomerManagedS3 struct {
+}
+

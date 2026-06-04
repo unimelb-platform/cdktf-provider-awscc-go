@@ -64,7 +64,7 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationRe
 	return nil
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponseOutputReference) validateSetInternalValueParameters(val *LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponse) error {
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponseOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

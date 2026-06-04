@@ -74,6 +74,7 @@ type S3BucketMetricsConfigurationsOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutTagFilters(value interface{})
 	ResetAccessPointArn()
+	ResetId()
 	ResetPrefix()
 	ResetTagFilters()
 	// Produce the Token's value at resolution time.
@@ -558,6 +559,14 @@ func (s *jsiiProxy_S3BucketMetricsConfigurationsOutputReference) ResetAccessPoin
 	_jsii_.InvokeVoid(
 		s,
 		"resetAccessPointArn",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketMetricsConfigurationsOutputReference) ResetId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetId",
 		nil, // no parameters
 	)
 }

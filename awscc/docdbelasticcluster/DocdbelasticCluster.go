@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/docdbelasticcluster/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/docdbelastic_cluster awscc_docdbelastic_cluster}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/docdbelastic_cluster awscc_docdbelastic_cluster}.
 type DocdbelasticCluster interface {
 	cdktf.TerraformResource
 	AdminUserName() *string
@@ -21,6 +21,9 @@ type DocdbelasticCluster interface {
 	AuthType() *string
 	SetAuthType(val *string)
 	AuthTypeInput() *string
+	BackupRetentionPeriod() *float64
+	SetBackupRetentionPeriod(val *float64)
+	BackupRetentionPeriodInput() *float64
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	ClusterArn() *string
@@ -60,6 +63,9 @@ type DocdbelasticCluster interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	PreferredBackupWindow() *string
+	SetPreferredBackupWindow(val *string)
+	PreferredBackupWindowInput() *string
 	PreferredMaintenanceWindow() *string
 	SetPreferredMaintenanceWindow(val *string)
 	PreferredMaintenanceWindowInput() *string
@@ -79,6 +85,9 @@ type DocdbelasticCluster interface {
 	ShardCount() *float64
 	SetShardCount(val *float64)
 	ShardCountInput() *float64
+	ShardInstanceCount() *float64
+	SetShardInstanceCount(val *float64)
+	ShardInstanceCountInput() *float64
 	SubnetIds() *[]*string
 	SetSubnetIds(val *[]*string)
 	SubnetIdsInput() *[]*string
@@ -117,26 +126,42 @@ type DocdbelasticCluster interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutTags(value interface{})
 	ResetAdminUserPassword()
+	ResetBackupRetentionPeriod()
 	ResetKmsKeyId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetPreferredBackupWindow()
 	ResetPreferredMaintenanceWindow()
+	ResetShardInstanceCount()
 	ResetSubnetIds()
 	ResetTags()
 	ResetVpcSecurityGroupIds()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -206,6 +231,26 @@ func (j *jsiiProxy_DocdbelasticCluster) AuthTypeInput() *string {
 	_jsii_.Get(
 		j,
 		"authTypeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DocdbelasticCluster) BackupRetentionPeriod() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"backupRetentionPeriod",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DocdbelasticCluster) BackupRetentionPeriodInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"backupRetentionPeriodInput",
 		&returns,
 	)
 	return returns
@@ -381,6 +426,26 @@ func (j *jsiiProxy_DocdbelasticCluster) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_DocdbelasticCluster) PreferredBackupWindow() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"preferredBackupWindow",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DocdbelasticCluster) PreferredBackupWindowInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"preferredBackupWindowInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DocdbelasticCluster) PreferredMaintenanceWindow() *string {
 	var returns *string
 	_jsii_.Get(
@@ -466,6 +531,26 @@ func (j *jsiiProxy_DocdbelasticCluster) ShardCountInput() *float64 {
 	_jsii_.Get(
 		j,
 		"shardCountInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DocdbelasticCluster) ShardInstanceCount() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"shardInstanceCount",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DocdbelasticCluster) ShardInstanceCountInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"shardInstanceCountInput",
 		&returns,
 	)
 	return returns
@@ -562,7 +647,7 @@ func (j *jsiiProxy_DocdbelasticCluster) VpcSecurityGroupIdsInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/docdbelastic_cluster awscc_docdbelastic_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/docdbelastic_cluster awscc_docdbelastic_cluster} Resource.
 func NewDocdbelasticCluster(scope constructs.Construct, id *string, config *DocdbelasticClusterConfig) DocdbelasticCluster {
 	_init_.Initialize()
 
@@ -580,7 +665,7 @@ func NewDocdbelasticCluster(scope constructs.Construct, id *string, config *Docd
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/docdbelastic_cluster awscc_docdbelastic_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/docdbelastic_cluster awscc_docdbelastic_cluster} Resource.
 func NewDocdbelasticCluster_Override(d DocdbelasticCluster, scope constructs.Construct, id *string, config *DocdbelasticClusterConfig) {
 	_init_.Initialize()
 
@@ -620,6 +705,17 @@ func (j *jsiiProxy_DocdbelasticCluster)SetAuthType(val *string) {
 	_jsii_.Set(
 		j,
 		"authType",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DocdbelasticCluster)SetBackupRetentionPeriod(val *float64) {
+	if err := j.validateSetBackupRetentionPeriodParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"backupRetentionPeriod",
 		val,
 	)
 }
@@ -695,6 +791,17 @@ func (j *jsiiProxy_DocdbelasticCluster)SetLifecycle(val *cdktf.TerraformResource
 	)
 }
 
+func (j *jsiiProxy_DocdbelasticCluster)SetPreferredBackupWindow(val *string) {
+	if err := j.validateSetPreferredBackupWindowParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"preferredBackupWindow",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DocdbelasticCluster)SetPreferredMaintenanceWindow(val *string) {
 	if err := j.validateSetPreferredMaintenanceWindowParameters(val); err != nil {
 		panic(err)
@@ -743,6 +850,17 @@ func (j *jsiiProxy_DocdbelasticCluster)SetShardCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"shardCount",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DocdbelasticCluster)SetShardInstanceCount(val *float64) {
+	if err := j.validateSetShardInstanceCountParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"shardInstanceCount",
 		val,
 	)
 }
@@ -1038,6 +1156,19 @@ func (d *jsiiProxy_DocdbelasticCluster) GetStringMapAttribute(terraformAttribute
 	return returns
 }
 
+func (d *jsiiProxy_DocdbelasticCluster) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (d *jsiiProxy_DocdbelasticCluster) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := d.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1065,6 +1196,17 @@ func (d *jsiiProxy_DocdbelasticCluster) InterpolationForAttribute(terraformAttri
 	return returns
 }
 
+func (d *jsiiProxy_DocdbelasticCluster) MoveFromId(id *string) {
+	if err := d.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (d *jsiiProxy_DocdbelasticCluster) MoveTo(moveTarget *string, index interface{}) {
 	if err := d.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1073,6 +1215,17 @@ func (d *jsiiProxy_DocdbelasticCluster) MoveTo(moveTarget *string, index interfa
 		d,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (d *jsiiProxy_DocdbelasticCluster) MoveToId(id *string) {
+	if err := d.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1106,6 +1259,14 @@ func (d *jsiiProxy_DocdbelasticCluster) ResetAdminUserPassword() {
 	)
 }
 
+func (d *jsiiProxy_DocdbelasticCluster) ResetBackupRetentionPeriod() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetBackupRetentionPeriod",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DocdbelasticCluster) ResetKmsKeyId() {
 	_jsii_.InvokeVoid(
 		d,
@@ -1122,10 +1283,26 @@ func (d *jsiiProxy_DocdbelasticCluster) ResetOverrideLogicalId() {
 	)
 }
 
+func (d *jsiiProxy_DocdbelasticCluster) ResetPreferredBackupWindow() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetPreferredBackupWindow",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DocdbelasticCluster) ResetPreferredMaintenanceWindow() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetPreferredMaintenanceWindow",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DocdbelasticCluster) ResetShardInstanceCount() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetShardInstanceCount",
 		nil, // no parameters
 	)
 }
@@ -1160,6 +1337,32 @@ func (d *jsiiProxy_DocdbelasticCluster) SynthesizeAttributes() *map[string]inter
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DocdbelasticCluster) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DocdbelasticCluster) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -56,7 +56,15 @@ func (e *jsiiProxy_Ec2CustomerGateway) validateInterpolationForAttributeParamete
 	return nil
 }
 
+func (e *jsiiProxy_Ec2CustomerGateway) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2CustomerGateway) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2CustomerGateway) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -85,6 +93,14 @@ func validateEc2CustomerGateway_IsTerraformResourceParameters(x interface{}) err
 }
 
 func (j *jsiiProxy_Ec2CustomerGateway) validateSetBgpAsnParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2CustomerGateway) validateSetBgpAsnExtendedParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2CustomerGateway) validateSetCertificateArnParameters(val *string) error {
 	return nil
 }
 

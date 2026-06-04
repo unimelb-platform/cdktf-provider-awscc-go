@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccfinspaceenvironment/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/finspace_environment awscc_finspace_environment}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/finspace_environment awscc_finspace_environment}.
 type DataAwsccFinspaceEnvironment interface {
 	cdktf.TerraformDataSource
 	AwsAccountId() *string
@@ -97,6 +97,10 @@ type DataAwsccFinspaceEnvironment interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -422,7 +426,7 @@ func (j *jsiiProxy_DataAwsccFinspaceEnvironment) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/finspace_environment awscc_finspace_environment} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/finspace_environment awscc_finspace_environment} Data Source.
 func NewDataAwsccFinspaceEnvironment(scope constructs.Construct, id *string, config *DataAwsccFinspaceEnvironmentConfig) DataAwsccFinspaceEnvironment {
 	_init_.Initialize()
 
@@ -440,7 +444,7 @@ func NewDataAwsccFinspaceEnvironment(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/finspace_environment awscc_finspace_environment} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/finspace_environment awscc_finspace_environment} Data Source.
 func NewDataAwsccFinspaceEnvironment_Override(d DataAwsccFinspaceEnvironment, scope constructs.Construct, id *string, config *DataAwsccFinspaceEnvironmentConfig) {
 	_init_.Initialize()
 
@@ -807,6 +811,32 @@ func (d *jsiiProxy_DataAwsccFinspaceEnvironment) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccFinspaceEnvironment) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccFinspaceEnvironment) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

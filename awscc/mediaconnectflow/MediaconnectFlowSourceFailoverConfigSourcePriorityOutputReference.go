@@ -64,6 +64,7 @@ type MediaconnectFlowSourceFailoverConfigSourcePriorityOutputReference interface
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPrimarySource()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (m *jsiiProxy_MediaconnectFlowSourceFailoverConfigSourcePriorityOutputRefer
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_MediaconnectFlowSourceFailoverConfigSourcePriorityOutputReference) ResetPrimarySource() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetPrimarySource",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_MediaconnectFlowSourceFailoverConfigSourcePriorityOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

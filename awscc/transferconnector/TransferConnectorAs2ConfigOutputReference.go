@@ -53,6 +53,9 @@ type TransferConnectorAs2ConfigOutputReference interface {
 	PartnerProfileId() *string
 	SetPartnerProfileId(val *string)
 	PartnerProfileIdInput() *string
+	PreserveContentType() *string
+	SetPreserveContentType(val *string)
+	PreserveContentTypeInput() *string
 	SigningAlgorithm() *string
 	SetSigningAlgorithm(val *string)
 	SigningAlgorithmInput() *string
@@ -96,6 +99,7 @@ type TransferConnectorAs2ConfigOutputReference interface {
 	ResetMdnSigningAlgorithm()
 	ResetMessageSubject()
 	ResetPartnerProfileId()
+	ResetPreserveContentType()
 	ResetSigningAlgorithm()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -322,6 +326,26 @@ func (j *jsiiProxy_TransferConnectorAs2ConfigOutputReference) PartnerProfileIdIn
 	return returns
 }
 
+func (j *jsiiProxy_TransferConnectorAs2ConfigOutputReference) PreserveContentType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"preserveContentType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TransferConnectorAs2ConfigOutputReference) PreserveContentTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"preserveContentTypeInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_TransferConnectorAs2ConfigOutputReference) SigningAlgorithm() *string {
 	var returns *string
 	_jsii_.Get(
@@ -507,6 +531,17 @@ func (j *jsiiProxy_TransferConnectorAs2ConfigOutputReference)SetPartnerProfileId
 	_jsii_.Set(
 		j,
 		"partnerProfileId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_TransferConnectorAs2ConfigOutputReference)SetPreserveContentType(val *string) {
+	if err := j.validateSetPreserveContentTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"preserveContentType",
 		val,
 	)
 }
@@ -790,6 +825,14 @@ func (t *jsiiProxy_TransferConnectorAs2ConfigOutputReference) ResetPartnerProfil
 	_jsii_.InvokeVoid(
 		t,
 		"resetPartnerProfileId",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TransferConnectorAs2ConfigOutputReference) ResetPreserveContentType() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetPreserveContentType",
 		nil, // no parameters
 	)
 }

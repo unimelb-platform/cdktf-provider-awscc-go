@@ -26,7 +26,9 @@ type DataAwsccAcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationO
 	// Experimental.
 	CreationStack() *[]*string
 	CrlDistributionPointExtensionConfiguration() DataAwsccAcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationCrlDistributionPointExtensionConfigurationOutputReference
+	CrlType() *string
 	CustomCname() *string
+	CustomPath() *string
 	Enabled() cdktf.IResolvable
 	ExpirationInDays() *float64
 	// Experimental.
@@ -122,11 +124,31 @@ func (j *jsiiProxy_DataAwsccAcmpcaCertificateAuthorityRevocationConfigurationCrl
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccAcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputReference) CrlType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"crlType",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccAcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputReference) CustomCname() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"customCname",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccAcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputReference) CustomPath() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"customPath",
 		&returns,
 	)
 	return returns

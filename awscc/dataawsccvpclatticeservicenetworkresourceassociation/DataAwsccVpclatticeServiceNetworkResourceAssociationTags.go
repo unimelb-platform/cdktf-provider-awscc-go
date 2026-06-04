@@ -1,0 +1,6 @@
+package dataawsccvpclatticeservicenetworkresourceassociation
+
+
+type DataAwsccVpclatticeServiceNetworkResourceAssociationTags struct {
+}
+

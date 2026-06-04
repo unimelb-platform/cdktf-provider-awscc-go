@@ -1,0 +1,6 @@
+package dataawsccgluedatabase
+
+
+type DataAwsccGlueDatabaseDatabaseInputCreateTableDefaultPermissionsPrincipal struct {
+}
+

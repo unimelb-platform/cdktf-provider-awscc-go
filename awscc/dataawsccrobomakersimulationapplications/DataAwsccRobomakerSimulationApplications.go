@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccrobomakersimulationapplications/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/robomaker_simulation_applications awscc_robomaker_simulation_applications}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/robomaker_simulation_applications awscc_robomaker_simulation_applications}.
 type DataAwsccRobomakerSimulationApplications interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccRobomakerSimulationApplications interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccRobomakerSimulationApplications) TerraformResourceTy
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/robomaker_simulation_applications awscc_robomaker_simulation_applications} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/robomaker_simulation_applications awscc_robomaker_simulation_applications} Data Source.
 func NewDataAwsccRobomakerSimulationApplications(scope constructs.Construct, id *string, config *DataAwsccRobomakerSimulationApplicationsConfig) DataAwsccRobomakerSimulationApplications {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccRobomakerSimulationApplications(scope constructs.Construct, id 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/robomaker_simulation_applications awscc_robomaker_simulation_applications} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/robomaker_simulation_applications awscc_robomaker_simulation_applications} Data Source.
 func NewDataAwsccRobomakerSimulationApplications_Override(d DataAwsccRobomakerSimulationApplications, scope constructs.Construct, id *string, config *DataAwsccRobomakerSimulationApplicationsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccRobomakerSimulationApplications) SynthesizeAttribute
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRobomakerSimulationApplications) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRobomakerSimulationApplications) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

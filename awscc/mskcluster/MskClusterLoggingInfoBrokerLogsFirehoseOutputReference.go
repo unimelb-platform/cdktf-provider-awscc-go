@@ -68,6 +68,7 @@ type MskClusterLoggingInfoBrokerLogsFirehoseOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetDeliveryStream()
+	ResetEnabled()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (m *jsiiProxy_MskClusterLoggingInfoBrokerLogsFirehoseOutputReference) Reset
 	_jsii_.InvokeVoid(
 		m,
 		"resetDeliveryStream",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MskClusterLoggingInfoBrokerLogsFirehoseOutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetEnabled",
 		nil, // no parameters
 	)
 }

@@ -60,7 +60,7 @@ func (j *jsiiProxy_CloudwatchAlarmMetricsMetricStatMetricOutputReference) valida
 	return nil
 }
 
-func (j *jsiiProxy_CloudwatchAlarmMetricsMetricStatMetricOutputReference) validateSetInternalValueParameters(val *CloudwatchAlarmMetricsMetricStatMetric) error {
+func (j *jsiiProxy_CloudwatchAlarmMetricsMetricStatMetricOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

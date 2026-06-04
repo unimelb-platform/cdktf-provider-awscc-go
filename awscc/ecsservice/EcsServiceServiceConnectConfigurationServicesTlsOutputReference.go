@@ -30,7 +30,7 @@ type EcsServiceServiceConnectConfigurationServicesTlsOutputReference interface {
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	IssuerCertificateAuthority() EcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthorityOutputReference
-	IssuerCertificateAuthorityInput() *EcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthority
+	IssuerCertificateAuthorityInput() interface{}
 	KmsKey() *string
 	SetKmsKey(val *string)
 	KmsKeyInput() *string
@@ -70,6 +70,7 @@ type EcsServiceServiceConnectConfigurationServicesTlsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutIssuerCertificateAuthority(value *EcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthority)
+	ResetIssuerCertificateAuthority()
 	ResetKmsKey()
 	ResetRoleArn()
 	// Produce the Token's value at resolution time.
@@ -147,8 +148,8 @@ func (j *jsiiProxy_EcsServiceServiceConnectConfigurationServicesTlsOutputReferen
 	return returns
 }
 
-func (j *jsiiProxy_EcsServiceServiceConnectConfigurationServicesTlsOutputReference) IssuerCertificateAuthorityInput() *EcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthority {
-	var returns *EcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthority
+func (j *jsiiProxy_EcsServiceServiceConnectConfigurationServicesTlsOutputReference) IssuerCertificateAuthorityInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"issuerCertificateAuthorityInput",
@@ -516,6 +517,14 @@ func (e *jsiiProxy_EcsServiceServiceConnectConfigurationServicesTlsOutputReferen
 		e,
 		"putIssuerCertificateAuthority",
 		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_EcsServiceServiceConnectConfigurationServicesTlsOutputReference) ResetIssuerCertificateAuthority() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetIssuerCertificateAuthority",
+		nil, // no parameters
 	)
 }
 

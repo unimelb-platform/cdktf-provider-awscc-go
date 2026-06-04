@@ -27,8 +27,8 @@ type DatasyncLocationFsxOpenZfsProtocolNfsMountOptionsOutputReference interface 
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DatasyncLocationFsxOpenZfsProtocolNfsMountOptions
-	SetInternalValue(val *DatasyncLocationFsxOpenZfsProtocolNfsMountOptions)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -120,8 +120,8 @@ func (j *jsiiProxy_DatasyncLocationFsxOpenZfsProtocolNfsMountOptionsOutputRefere
 	return returns
 }
 
-func (j *jsiiProxy_DatasyncLocationFsxOpenZfsProtocolNfsMountOptionsOutputReference) InternalValue() *DatasyncLocationFsxOpenZfsProtocolNfsMountOptions {
-	var returns *DatasyncLocationFsxOpenZfsProtocolNfsMountOptions
+func (j *jsiiProxy_DatasyncLocationFsxOpenZfsProtocolNfsMountOptionsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -220,7 +220,7 @@ func (j *jsiiProxy_DatasyncLocationFsxOpenZfsProtocolNfsMountOptionsOutputRefere
 	)
 }
 
-func (j *jsiiProxy_DatasyncLocationFsxOpenZfsProtocolNfsMountOptionsOutputReference)SetInternalValue(val *DatasyncLocationFsxOpenZfsProtocolNfsMountOptions) {
+func (j *jsiiProxy_DatasyncLocationFsxOpenZfsProtocolNfsMountOptionsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

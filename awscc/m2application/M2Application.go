@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/m2application/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/m2_application awscc_m2_application}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/m2_application awscc_m2_application}.
 type M2Application interface {
 	cdktf.TerraformResource
 	ApplicationArn() *string
@@ -105,16 +105,27 @@ type M2Application interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutDefinition(value *M2ApplicationDefinition)
+	ResetDefinition()
 	ResetDescription()
 	ResetKmsKeyId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -123,6 +134,9 @@ type M2Application interface {
 	ResetRoleArn()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -468,7 +482,7 @@ func (j *jsiiProxy_M2Application) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/m2_application awscc_m2_application} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/m2_application awscc_m2_application} Resource.
 func NewM2Application(scope constructs.Construct, id *string, config *M2ApplicationConfig) M2Application {
 	_init_.Initialize()
 
@@ -486,7 +500,7 @@ func NewM2Application(scope constructs.Construct, id *string, config *M2Applicat
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/m2_application awscc_m2_application} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/m2_application awscc_m2_application} Resource.
 func NewM2Application_Override(m M2Application, scope constructs.Construct, id *string, config *M2ApplicationConfig) {
 	_init_.Initialize()
 
@@ -900,6 +914,19 @@ func (m *jsiiProxy_M2Application) GetStringMapAttribute(terraformAttribute *stri
 	return returns
 }
 
+func (m *jsiiProxy_M2Application) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (m *jsiiProxy_M2Application) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -927,6 +954,17 @@ func (m *jsiiProxy_M2Application) InterpolationForAttribute(terraformAttribute *
 	return returns
 }
 
+func (m *jsiiProxy_M2Application) MoveFromId(id *string) {
+	if err := m.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_M2Application) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -935,6 +973,17 @@ func (m *jsiiProxy_M2Application) MoveTo(moveTarget *string, index interface{}) 
 		m,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (m *jsiiProxy_M2Application) MoveToId(id *string) {
+	if err := m.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -957,6 +1006,14 @@ func (m *jsiiProxy_M2Application) PutDefinition(value *M2ApplicationDefinition) 
 		m,
 		"putDefinition",
 		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_M2Application) ResetDefinition() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetDefinition",
+		nil, // no parameters
 	)
 }
 
@@ -1006,6 +1063,32 @@ func (m *jsiiProxy_M2Application) SynthesizeAttributes() *map[string]interface{}
 	_jsii_.Invoke(
 		m,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_M2Application) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		m,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_M2Application) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

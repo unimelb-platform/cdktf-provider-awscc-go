@@ -1,0 +1,6 @@
+package dataawsccnetworkmanagerconnectattachment
+
+
+type DataAwsccNetworkmanagerConnectAttachmentProposedNetworkFunctionGroupChange struct {
+}
+

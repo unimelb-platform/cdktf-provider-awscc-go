@@ -30,6 +30,7 @@ type DataAwsccGroundstationMissionProfileStreamsKmsKeyOutputReference interface 
 	InternalValue() *DataAwsccGroundstationMissionProfileStreamsKmsKey
 	SetInternalValue(val *DataAwsccGroundstationMissionProfileStreamsKmsKey)
 	KmsAliasArn() *string
+	KmsAliasName() *string
 	KmsKeyArn() *string
 	// Experimental.
 	TerraformAttribute() *string
@@ -133,6 +134,16 @@ func (j *jsiiProxy_DataAwsccGroundstationMissionProfileStreamsKmsKeyOutputRefere
 	_jsii_.Get(
 		j,
 		"kmsAliasArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccGroundstationMissionProfileStreamsKmsKeyOutputReference) KmsAliasName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kmsAliasName",
 		&returns,
 	)
 	return returns

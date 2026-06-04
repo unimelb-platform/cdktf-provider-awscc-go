@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccconfigorganizationconformancepacks/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/config_organization_conformance_packs awscc_config_organization_conformance_packs}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/config_organization_conformance_packs awscc_config_organization_conformance_packs}.
 type DataAwsccConfigOrganizationConformancePacks interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccConfigOrganizationConformancePacks interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccConfigOrganizationConformancePacks) TerraformResourc
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/config_organization_conformance_packs awscc_config_organization_conformance_packs} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/config_organization_conformance_packs awscc_config_organization_conformance_packs} Data Source.
 func NewDataAwsccConfigOrganizationConformancePacks(scope constructs.Construct, id *string, config *DataAwsccConfigOrganizationConformancePacksConfig) DataAwsccConfigOrganizationConformancePacks {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccConfigOrganizationConformancePacks(scope constructs.Construct, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/config_organization_conformance_packs awscc_config_organization_conformance_packs} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/config_organization_conformance_packs awscc_config_organization_conformance_packs} Data Source.
 func NewDataAwsccConfigOrganizationConformancePacks_Override(d DataAwsccConfigOrganizationConformancePacks, scope constructs.Construct, id *string, config *DataAwsccConfigOrganizationConformancePacksConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccConfigOrganizationConformancePacks) SynthesizeAttrib
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccConfigOrganizationConformancePacks) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccConfigOrganizationConformancePacks) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

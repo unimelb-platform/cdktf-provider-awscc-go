@@ -4,6 +4,10 @@ package globalacceleratorlistener
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (g *jsiiProxy_GlobalacceleratorListenerPortRangesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (g *jsiiProxy_GlobalacceleratorListenerPortRangesList) validateGetParameters(index *float64) error {
 	return nil
 }

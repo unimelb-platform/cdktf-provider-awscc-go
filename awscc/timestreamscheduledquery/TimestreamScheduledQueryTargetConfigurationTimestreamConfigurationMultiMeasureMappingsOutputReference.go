@@ -67,6 +67,7 @@ type TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationMultiMeas
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMultiMeasureAttributeMappings(value interface{})
+	ResetMultiMeasureAttributeMappings()
 	ResetTargetMultiMeasureName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -481,6 +482,14 @@ func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigur
 		t,
 		"putMultiMeasureAttributeMappings",
 		[]interface{}{value},
+	)
+}
+
+func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationMultiMeasureMappingsOutputReference) ResetMultiMeasureAttributeMappings() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetMultiMeasureAttributeMappings",
+		nil, // no parameters
 	)
 }
 

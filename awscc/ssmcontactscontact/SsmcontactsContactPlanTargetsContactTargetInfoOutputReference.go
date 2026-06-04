@@ -67,6 +67,8 @@ type SsmcontactsContactPlanTargetsContactTargetInfoOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetContactId()
+	ResetIsEssential()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (s *jsiiProxy_SsmcontactsContactPlanTargetsContactTargetInfoOutputReference
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SsmcontactsContactPlanTargetsContactTargetInfoOutputReference) ResetContactId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetContactId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SsmcontactsContactPlanTargetsContactTargetInfoOutputReference) ResetIsEssential() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetIsEssential",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SsmcontactsContactPlanTargetsContactTargetInfoOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

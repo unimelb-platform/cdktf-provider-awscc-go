@@ -171,9 +171,25 @@ func (j *jsiiProxy_SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgori
 	return nil
 }
 
-func (j *jsiiProxy_SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithmsOutputReference) validateSetInternalValueParameters(val *SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithms) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithmsOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithms:
+		val := val.(*SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithms)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithms:
+		val_ := val.(SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithms)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithms; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

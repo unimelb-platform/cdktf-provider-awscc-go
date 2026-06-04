@@ -68,6 +68,7 @@ type NetworkfirewallRuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsO
 	PutCustomActions(value interface{})
 	PutStatelessRules(value interface{})
 	ResetCustomActions()
+	ResetStatelessRules()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatelessRulesAnd
 	_jsii_.InvokeVoid(
 		n,
 		"resetCustomActions",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsOutputReference) ResetStatelessRules() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetStatelessRules",
 		nil, // no parameters
 	)
 }

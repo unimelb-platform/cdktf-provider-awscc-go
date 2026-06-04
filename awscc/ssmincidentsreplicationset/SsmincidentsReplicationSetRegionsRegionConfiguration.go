@@ -2,9 +2,9 @@ package ssmincidentsreplicationset
 
 
 type SsmincidentsReplicationSetRegionsRegionConfiguration struct {
-	// The ARN of the ReplicationSet.
+	// The AWS Key Management Service key ID or Key Alias to use to encrypt your replication set.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ssmincidents_replication_set#sse_kms_key_id SsmincidentsReplicationSet#sse_kms_key_id}
-	SseKmsKeyId *string `field:"required" json:"sseKmsKeyId" yaml:"sseKmsKeyId"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ssmincidents_replication_set#sse_kms_key_id SsmincidentsReplicationSet#sse_kms_key_id}
+	SseKmsKeyId *string `field:"optional" json:"sseKmsKeyId" yaml:"sseKmsKeyId"`
 }
 

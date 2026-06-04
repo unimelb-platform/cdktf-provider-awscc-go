@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccmediaconnectflowoutput/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediaconnect_flow_output awscc_mediaconnect_flow_output}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediaconnect_flow_output awscc_mediaconnect_flow_output}.
 type DataAwsccMediaconnectFlowOutput interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -45,11 +45,15 @@ type DataAwsccMediaconnectFlowOutput interface {
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	MaxLatency() *float64
+	MediaStreamOutputConfigurations() DataAwsccMediaconnectFlowOutputMediaStreamOutputConfigurationsList
 	MinLatency() *float64
 	Name() *string
+	NdiProgramName() *string
+	NdiSpeedHqQuality() *float64
 	// The tree node.
 	Node() constructs.Node
 	OutputArn() *string
+	OutputStatus() *string
 	Port() *float64
 	Protocol() *string
 	// Experimental.
@@ -97,6 +101,10 @@ type DataAwsccMediaconnectFlowOutput interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -271,6 +279,16 @@ func (j *jsiiProxy_DataAwsccMediaconnectFlowOutput) MaxLatency() *float64 {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccMediaconnectFlowOutput) MediaStreamOutputConfigurations() DataAwsccMediaconnectFlowOutputMediaStreamOutputConfigurationsList {
+	var returns DataAwsccMediaconnectFlowOutputMediaStreamOutputConfigurationsList
+	_jsii_.Get(
+		j,
+		"mediaStreamOutputConfigurations",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccMediaconnectFlowOutput) MinLatency() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -291,6 +309,26 @@ func (j *jsiiProxy_DataAwsccMediaconnectFlowOutput) Name() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccMediaconnectFlowOutput) NdiProgramName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ndiProgramName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccMediaconnectFlowOutput) NdiSpeedHqQuality() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"ndiSpeedHqQuality",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccMediaconnectFlowOutput) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -306,6 +344,16 @@ func (j *jsiiProxy_DataAwsccMediaconnectFlowOutput) OutputArn() *string {
 	_jsii_.Get(
 		j,
 		"outputArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccMediaconnectFlowOutput) OutputStatus() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"outputStatus",
 		&returns,
 	)
 	return returns
@@ -422,7 +470,7 @@ func (j *jsiiProxy_DataAwsccMediaconnectFlowOutput) VpcInterfaceAttachment() Dat
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediaconnect_flow_output awscc_mediaconnect_flow_output} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediaconnect_flow_output awscc_mediaconnect_flow_output} Data Source.
 func NewDataAwsccMediaconnectFlowOutput(scope constructs.Construct, id *string, config *DataAwsccMediaconnectFlowOutputConfig) DataAwsccMediaconnectFlowOutput {
 	_init_.Initialize()
 
@@ -440,7 +488,7 @@ func NewDataAwsccMediaconnectFlowOutput(scope constructs.Construct, id *string, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediaconnect_flow_output awscc_mediaconnect_flow_output} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediaconnect_flow_output awscc_mediaconnect_flow_output} Data Source.
 func NewDataAwsccMediaconnectFlowOutput_Override(d DataAwsccMediaconnectFlowOutput, scope constructs.Construct, id *string, config *DataAwsccMediaconnectFlowOutputConfig) {
 	_init_.Initialize()
 
@@ -807,6 +855,32 @@ func (d *jsiiProxy_DataAwsccMediaconnectFlowOutput) SynthesizeAttributes() *map[
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMediaconnectFlowOutput) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMediaconnectFlowOutput) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

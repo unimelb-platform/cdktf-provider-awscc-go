@@ -28,8 +28,8 @@ type RdsDbClusterReadEndpointOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() interface{}
-	SetInternalValue(val interface{})
+	InternalValue() *RdsDbClusterReadEndpoint
+	SetInternalValue(val *RdsDbClusterReadEndpoint)
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -127,8 +127,8 @@ func (j *jsiiProxy_RdsDbClusterReadEndpointOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_RdsDbClusterReadEndpointOutputReference) InternalValue() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_RdsDbClusterReadEndpointOutputReference) InternalValue() *RdsDbClusterReadEndpoint {
+	var returns *RdsDbClusterReadEndpoint
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -207,7 +207,7 @@ func (j *jsiiProxy_RdsDbClusterReadEndpointOutputReference)SetComplexObjectIsFro
 	)
 }
 
-func (j *jsiiProxy_RdsDbClusterReadEndpointOutputReference)SetInternalValue(val interface{}) {
+func (j *jsiiProxy_RdsDbClusterReadEndpointOutputReference)SetInternalValue(val *RdsDbClusterReadEndpoint) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

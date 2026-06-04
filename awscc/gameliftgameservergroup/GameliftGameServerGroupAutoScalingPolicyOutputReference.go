@@ -33,7 +33,7 @@ type GameliftGameServerGroupAutoScalingPolicyOutputReference interface {
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	TargetTrackingConfiguration() GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfigurationOutputReference
-	TargetTrackingConfigurationInput() *GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfiguration
+	TargetTrackingConfigurationInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -68,6 +68,7 @@ type GameliftGameServerGroupAutoScalingPolicyOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutTargetTrackingConfiguration(value *GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfiguration)
 	ResetEstimatedInstanceWarmup()
+	ResetTargetTrackingConfiguration()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -163,8 +164,8 @@ func (j *jsiiProxy_GameliftGameServerGroupAutoScalingPolicyOutputReference) Targ
 	return returns
 }
 
-func (j *jsiiProxy_GameliftGameServerGroupAutoScalingPolicyOutputReference) TargetTrackingConfigurationInput() *GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfiguration {
-	var returns *GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfiguration
+func (j *jsiiProxy_GameliftGameServerGroupAutoScalingPolicyOutputReference) TargetTrackingConfigurationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"targetTrackingConfigurationInput",
@@ -488,6 +489,14 @@ func (g *jsiiProxy_GameliftGameServerGroupAutoScalingPolicyOutputReference) Rese
 	_jsii_.InvokeVoid(
 		g,
 		"resetEstimatedInstanceWarmup",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GameliftGameServerGroupAutoScalingPolicyOutputReference) ResetTargetTrackingConfiguration() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetTargetTrackingConfiguration",
 		nil, // no parameters
 	)
 }

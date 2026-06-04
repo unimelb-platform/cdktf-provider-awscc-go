@@ -56,7 +56,7 @@ func (j *jsiiProxy_RdsDbInstanceCertificateDetailsOutputReference) validateSetCo
 	return nil
 }
 
-func (j *jsiiProxy_RdsDbInstanceCertificateDetailsOutputReference) validateSetInternalValueParameters(val interface{}) error {
+func (j *jsiiProxy_RdsDbInstanceCertificateDetailsOutputReference) validateSetInternalValueParameters(val *RdsDbInstanceCertificateDetails) error {
 	return nil
 }
 

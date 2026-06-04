@@ -119,6 +119,14 @@ func (e *jsiiProxy_Ec2DhcpOptions) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
+func (e *jsiiProxy_Ec2DhcpOptions) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_Ec2DhcpOptions) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (e *jsiiProxy_Ec2DhcpOptions) validateMoveToParameters(moveTarget *string, 
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (e *jsiiProxy_Ec2DhcpOptions) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -358,6 +374,14 @@ func (j *jsiiProxy_Ec2DhcpOptions) validateSetDomainNameParameters(val *string) 
 }
 
 func (j *jsiiProxy_Ec2DhcpOptions) validateSetDomainNameServersParameters(val *[]*string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Ec2DhcpOptions) validateSetIpv6AddressPreferredLeaseTimeParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

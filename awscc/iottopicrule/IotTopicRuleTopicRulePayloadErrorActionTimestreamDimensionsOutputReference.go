@@ -27,8 +27,8 @@ type IotTopicRuleTopicRulePayloadErrorActionTimestreamDimensionsOutputReference 
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *IotTopicRuleTopicRulePayloadErrorActionTimestreamDimensions
-	SetInternalValue(val *IotTopicRuleTopicRulePayloadErrorActionTimestreamDimensions)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -67,6 +67,8 @@ type IotTopicRuleTopicRulePayloadErrorActionTimestreamDimensionsOutputReference 
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionTimestreamDimensionsOu
 	return returns
 }
 
-func (j *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionTimestreamDimensionsOutputReference) InternalValue() *IotTopicRuleTopicRulePayloadErrorActionTimestreamDimensions {
-	var returns *IotTopicRuleTopicRulePayloadErrorActionTimestreamDimensions
+func (j *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionTimestreamDimensionsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -242,7 +244,7 @@ func (j *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionTimestreamDimensionsOu
 	)
 }
 
-func (j *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionTimestreamDimensionsOutputReference)SetInternalValue(val *IotTopicRuleTopicRulePayloadErrorActionTimestreamDimensions) {
+func (j *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionTimestreamDimensionsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionTimestreamDimensionsOu
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionTimestreamDimensionsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionTimestreamDimensionsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionTimestreamDimensionsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscclocationgeofencecollection/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/location_geofence_collection awscc_location_geofence_collection}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/location_geofence_collection awscc_location_geofence_collection}.
 type DataAwsccLocationGeofenceCollection interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -92,6 +92,10 @@ type DataAwsccLocationGeofenceCollection interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -367,7 +371,7 @@ func (j *jsiiProxy_DataAwsccLocationGeofenceCollection) UpdateTime() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/location_geofence_collection awscc_location_geofence_collection} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/location_geofence_collection awscc_location_geofence_collection} Data Source.
 func NewDataAwsccLocationGeofenceCollection(scope constructs.Construct, id *string, config *DataAwsccLocationGeofenceCollectionConfig) DataAwsccLocationGeofenceCollection {
 	_init_.Initialize()
 
@@ -385,7 +389,7 @@ func NewDataAwsccLocationGeofenceCollection(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/location_geofence_collection awscc_location_geofence_collection} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/location_geofence_collection awscc_location_geofence_collection} Data Source.
 func NewDataAwsccLocationGeofenceCollection_Override(d DataAwsccLocationGeofenceCollection, scope constructs.Construct, id *string, config *DataAwsccLocationGeofenceCollectionConfig) {
 	_init_.Initialize()
 
@@ -752,6 +756,32 @@ func (d *jsiiProxy_DataAwsccLocationGeofenceCollection) SynthesizeAttributes() *
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLocationGeofenceCollection) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLocationGeofenceCollection) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -27,8 +27,8 @@ type EksAccessEntryAccessPoliciesAccessScopeOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *EksAccessEntryAccessPoliciesAccessScope
-	SetInternalValue(val *EksAccessEntryAccessPoliciesAccessScope)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Namespaces() *[]*string
 	SetNamespaces(val *[]*string)
 	NamespacesInput() *[]*string
@@ -68,6 +68,7 @@ type EksAccessEntryAccessPoliciesAccessScopeOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetNamespaces()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -123,8 +124,8 @@ func (j *jsiiProxy_EksAccessEntryAccessPoliciesAccessScopeOutputReference) Fqn()
 	return returns
 }
 
-func (j *jsiiProxy_EksAccessEntryAccessPoliciesAccessScopeOutputReference) InternalValue() *EksAccessEntryAccessPoliciesAccessScope {
-	var returns *EksAccessEntryAccessPoliciesAccessScope
+func (j *jsiiProxy_EksAccessEntryAccessPoliciesAccessScopeOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -243,7 +244,7 @@ func (j *jsiiProxy_EksAccessEntryAccessPoliciesAccessScopeOutputReference)SetCom
 	)
 }
 
-func (j *jsiiProxy_EksAccessEntryAccessPoliciesAccessScopeOutputReference)SetInternalValue(val *EksAccessEntryAccessPoliciesAccessScope) {
+func (j *jsiiProxy_EksAccessEntryAccessPoliciesAccessScopeOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -488,6 +489,14 @@ func (e *jsiiProxy_EksAccessEntryAccessPoliciesAccessScopeOutputReference) Reset
 	_jsii_.InvokeVoid(
 		e,
 		"resetNamespaces",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EksAccessEntryAccessPoliciesAccessScopeOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetType",
 		nil, // no parameters
 	)
 }

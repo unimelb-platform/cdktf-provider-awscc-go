@@ -4,6 +4,10 @@ package dataawsccconnectuserhierarchygroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccConnectUserHierarchyGroupTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccConnectUserHierarchyGroupTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

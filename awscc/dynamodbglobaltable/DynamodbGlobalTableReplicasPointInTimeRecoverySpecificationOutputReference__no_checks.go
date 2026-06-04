@@ -64,6 +64,10 @@ func (j *jsiiProxy_DynamodbGlobalTableReplicasPointInTimeRecoverySpecificationOu
 	return nil
 }
 
+func (j *jsiiProxy_DynamodbGlobalTableReplicasPointInTimeRecoverySpecificationOutputReference) validateSetRecoveryPeriodInDaysParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_DynamodbGlobalTableReplicasPointInTimeRecoverySpecificationOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

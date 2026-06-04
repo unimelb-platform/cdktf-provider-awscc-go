@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccconnectphonenumber/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/connect_phone_number awscc_connect_phone_number}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/connect_phone_number awscc_connect_phone_number}.
 type DataAwsccConnectPhoneNumber interface {
 	cdktf.TerraformDataSource
 	Address() *string
@@ -91,6 +91,10 @@ type DataAwsccConnectPhoneNumber interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -356,7 +360,7 @@ func (j *jsiiProxy_DataAwsccConnectPhoneNumber) Type() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/connect_phone_number awscc_connect_phone_number} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/connect_phone_number awscc_connect_phone_number} Data Source.
 func NewDataAwsccConnectPhoneNumber(scope constructs.Construct, id *string, config *DataAwsccConnectPhoneNumberConfig) DataAwsccConnectPhoneNumber {
 	_init_.Initialize()
 
@@ -374,7 +378,7 @@ func NewDataAwsccConnectPhoneNumber(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/connect_phone_number awscc_connect_phone_number} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/connect_phone_number awscc_connect_phone_number} Data Source.
 func NewDataAwsccConnectPhoneNumber_Override(d DataAwsccConnectPhoneNumber, scope constructs.Construct, id *string, config *DataAwsccConnectPhoneNumberConfig) {
 	_init_.Initialize()
 
@@ -741,6 +745,32 @@ func (d *jsiiProxy_DataAwsccConnectPhoneNumber) SynthesizeAttributes() *map[stri
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccConnectPhoneNumber) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccConnectPhoneNumber) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/devopsguruloganomalydetectionintegration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/devopsguru_log_anomaly_detection_integration awscc_devopsguru_log_anomaly_detection_integration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/devopsguru_log_anomaly_detection_integration awscc_devopsguru_log_anomaly_detection_integration}.
 type DevopsguruLogAnomalyDetectionIntegration interface {
 	cdktf.TerraformResource
 	AccountId() *string
@@ -84,12 +84,22 @@ type DevopsguruLogAnomalyDetectionIntegration interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -97,6 +107,9 @@ type DevopsguruLogAnomalyDetectionIntegration interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -292,7 +305,7 @@ func (j *jsiiProxy_DevopsguruLogAnomalyDetectionIntegration) TerraformResourceTy
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/devopsguru_log_anomaly_detection_integration awscc_devopsguru_log_anomaly_detection_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/devopsguru_log_anomaly_detection_integration awscc_devopsguru_log_anomaly_detection_integration} Resource.
 func NewDevopsguruLogAnomalyDetectionIntegration(scope constructs.Construct, id *string, config *DevopsguruLogAnomalyDetectionIntegrationConfig) DevopsguruLogAnomalyDetectionIntegration {
 	_init_.Initialize()
 
@@ -310,7 +323,7 @@ func NewDevopsguruLogAnomalyDetectionIntegration(scope constructs.Construct, id 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/devopsguru_log_anomaly_detection_integration awscc_devopsguru_log_anomaly_detection_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/devopsguru_log_anomaly_detection_integration awscc_devopsguru_log_anomaly_detection_integration} Resource.
 func NewDevopsguruLogAnomalyDetectionIntegration_Override(d DevopsguruLogAnomalyDetectionIntegration, scope constructs.Construct, id *string, config *DevopsguruLogAnomalyDetectionIntegrationConfig) {
 	_init_.Initialize()
 
@@ -658,6 +671,19 @@ func (d *jsiiProxy_DevopsguruLogAnomalyDetectionIntegration) GetStringMapAttribu
 	return returns
 }
 
+func (d *jsiiProxy_DevopsguruLogAnomalyDetectionIntegration) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (d *jsiiProxy_DevopsguruLogAnomalyDetectionIntegration) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := d.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -685,6 +711,17 @@ func (d *jsiiProxy_DevopsguruLogAnomalyDetectionIntegration) InterpolationForAtt
 	return returns
 }
 
+func (d *jsiiProxy_DevopsguruLogAnomalyDetectionIntegration) MoveFromId(id *string) {
+	if err := d.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (d *jsiiProxy_DevopsguruLogAnomalyDetectionIntegration) MoveTo(moveTarget *string, index interface{}) {
 	if err := d.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -693,6 +730,17 @@ func (d *jsiiProxy_DevopsguruLogAnomalyDetectionIntegration) MoveTo(moveTarget *
 		d,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (d *jsiiProxy_DevopsguruLogAnomalyDetectionIntegration) MoveToId(id *string) {
+	if err := d.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -721,6 +769,32 @@ func (d *jsiiProxy_DevopsguruLogAnomalyDetectionIntegration) SynthesizeAttribute
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DevopsguruLogAnomalyDetectionIntegration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DevopsguruLogAnomalyDetectionIntegration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

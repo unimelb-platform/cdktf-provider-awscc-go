@@ -19,7 +19,9 @@ type CloudfrontKeyGroupConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudfront_key_group#key_group_config CloudfrontKeyGroup#key_group_config}.
+	// The key group configuration.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudfront_key_group#key_group_config CloudfrontKeyGroup#key_group_config}
 	KeyGroupConfig *CloudfrontKeyGroupKeyGroupConfig `field:"required" json:"keyGroupConfig" yaml:"keyGroupConfig"`
 }
 

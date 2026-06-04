@@ -71,6 +71,7 @@ type MediapackagePackagingConfigurationMssPackageOutputReference interface {
 	PutEncryption(value *MediapackagePackagingConfigurationMssPackageEncryption)
 	PutMssManifests(value interface{})
 	ResetEncryption()
+	ResetMssManifests()
 	ResetSegmentDurationSeconds()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -523,6 +524,14 @@ func (m *jsiiProxy_MediapackagePackagingConfigurationMssPackageOutputReference) 
 	_jsii_.InvokeVoid(
 		m,
 		"resetEncryption",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediapackagePackagingConfigurationMssPackageOutputReference) ResetMssManifests() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMssManifests",
 		nil, // no parameters
 	)
 }

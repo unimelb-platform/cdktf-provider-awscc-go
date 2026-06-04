@@ -70,6 +70,8 @@ type GameliftFleetRuntimeConfigurationServerProcessesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetConcurrentExecutions()
+	ResetLaunchPath()
 	ResetParameters()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -516,6 +518,22 @@ func (g *jsiiProxy_GameliftFleetRuntimeConfigurationServerProcessesOutputReferen
 	)
 
 	return returns
+}
+
+func (g *jsiiProxy_GameliftFleetRuntimeConfigurationServerProcessesOutputReference) ResetConcurrentExecutions() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetConcurrentExecutions",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GameliftFleetRuntimeConfigurationServerProcessesOutputReference) ResetLaunchPath() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetLaunchPath",
+		nil, // no parameters
+	)
 }
 
 func (g *jsiiProxy_GameliftFleetRuntimeConfigurationServerProcessesOutputReference) ResetParameters() {

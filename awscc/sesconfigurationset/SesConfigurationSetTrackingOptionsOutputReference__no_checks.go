@@ -60,6 +60,10 @@ func (j *jsiiProxy_SesConfigurationSetTrackingOptionsOutputReference) validateSe
 	return nil
 }
 
+func (j *jsiiProxy_SesConfigurationSetTrackingOptionsOutputReference) validateSetHttpsPolicyParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_SesConfigurationSetTrackingOptionsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }

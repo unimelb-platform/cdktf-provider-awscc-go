@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2localgatewayroutetablevpcassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_local_gateway_route_table_vpc_association awscc_ec2_local_gateway_route_table_vpc_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_local_gateway_route_table_vpc_association awscc_ec2_local_gateway_route_table_vpc_association}.
 type DataAwsccEc2LocalGatewayRouteTableVpcAssociation interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -88,6 +88,10 @@ type DataAwsccEc2LocalGatewayRouteTableVpcAssociation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -323,7 +327,7 @@ func (j *jsiiProxy_DataAwsccEc2LocalGatewayRouteTableVpcAssociation) VpcId() *st
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_local_gateway_route_table_vpc_association awscc_ec2_local_gateway_route_table_vpc_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_local_gateway_route_table_vpc_association awscc_ec2_local_gateway_route_table_vpc_association} Data Source.
 func NewDataAwsccEc2LocalGatewayRouteTableVpcAssociation(scope constructs.Construct, id *string, config *DataAwsccEc2LocalGatewayRouteTableVpcAssociationConfig) DataAwsccEc2LocalGatewayRouteTableVpcAssociation {
 	_init_.Initialize()
 
@@ -341,7 +345,7 @@ func NewDataAwsccEc2LocalGatewayRouteTableVpcAssociation(scope constructs.Constr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_local_gateway_route_table_vpc_association awscc_ec2_local_gateway_route_table_vpc_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_local_gateway_route_table_vpc_association awscc_ec2_local_gateway_route_table_vpc_association} Data Source.
 func NewDataAwsccEc2LocalGatewayRouteTableVpcAssociation_Override(d DataAwsccEc2LocalGatewayRouteTableVpcAssociation, scope constructs.Construct, id *string, config *DataAwsccEc2LocalGatewayRouteTableVpcAssociationConfig) {
 	_init_.Initialize()
 
@@ -708,6 +712,32 @@ func (d *jsiiProxy_DataAwsccEc2LocalGatewayRouteTableVpcAssociation) SynthesizeA
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2LocalGatewayRouteTableVpcAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2LocalGatewayRouteTableVpcAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

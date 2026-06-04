@@ -60,7 +60,19 @@ func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) validatePutPointI
 	return nil
 }
 
+func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) validatePutReadOnDemandThroughputSettingsParameters(value *DynamodbGlobalTableReplicasReadOnDemandThroughputSettings) error {
+	return nil
+}
+
 func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) validatePutReadProvisionedThroughputSettingsParameters(value *DynamodbGlobalTableReplicasReadProvisionedThroughputSettings) error {
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) validatePutReplicaStreamSpecificationParameters(value *DynamodbGlobalTableReplicasReplicaStreamSpecification) error {
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) validatePutResourcePolicyParameters(value *DynamodbGlobalTableReplicasResourcePolicy) error {
 	return nil
 }
 

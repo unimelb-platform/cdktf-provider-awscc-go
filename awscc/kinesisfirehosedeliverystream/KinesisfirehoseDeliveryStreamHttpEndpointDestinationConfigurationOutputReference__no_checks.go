@@ -72,6 +72,10 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigura
 	return nil
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputReference) validatePutSecretsManagerConfigurationParameters(value *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfiguration) error {
+	return nil
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

@@ -70,7 +70,9 @@ type EmrserverlessApplicationMaximumCapacityOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCpu()
 	ResetDisk()
+	ResetMemory()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -518,10 +520,26 @@ func (e *jsiiProxy_EmrserverlessApplicationMaximumCapacityOutputReference) Inter
 	return returns
 }
 
+func (e *jsiiProxy_EmrserverlessApplicationMaximumCapacityOutputReference) ResetCpu() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetCpu",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EmrserverlessApplicationMaximumCapacityOutputReference) ResetDisk() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetDisk",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EmrserverlessApplicationMaximumCapacityOutputReference) ResetMemory() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetMemory",
 		nil, // no parameters
 	)
 }

@@ -30,6 +30,7 @@ type DataAwsccSagemakerUserProfileUserSettingsJupyterLabAppSettingsDefaultResour
 	InstanceType() *string
 	InternalValue() *DataAwsccSagemakerUserProfileUserSettingsJupyterLabAppSettingsDefaultResourceSpec
 	SetInternalValue(val *DataAwsccSagemakerUserProfileUserSettingsJupyterLabAppSettingsDefaultResourceSpec)
+	LifecycleConfigArn() *string
 	SageMakerImageArn() *string
 	SageMakerImageVersionArn() *string
 	// Experimental.
@@ -134,6 +135,16 @@ func (j *jsiiProxy_DataAwsccSagemakerUserProfileUserSettingsJupyterLabAppSetting
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerUserProfileUserSettingsJupyterLabAppSettingsDefaultResourceSpecOutputReference) LifecycleConfigArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"lifecycleConfigArn",
 		&returns,
 	)
 	return returns

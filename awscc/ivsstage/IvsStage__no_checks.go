@@ -56,11 +56,23 @@ func (i *jsiiProxy_IvsStage) validateInterpolationForAttributeParameters(terrafo
 	return nil
 }
 
+func (i *jsiiProxy_IvsStage) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IvsStage) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (i *jsiiProxy_IvsStage) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IvsStage) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (i *jsiiProxy_IvsStage) validatePutAutoParticipantRecordingConfigurationParameters(value *IvsStageAutoParticipantRecordingConfiguration) error {
 	return nil
 }
 

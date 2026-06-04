@@ -19,9 +19,11 @@ type SsmguiconnectPreferencesConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// A map for Idle Connection Preferences.
+	// The set of preferences used for recording RDP connections in the requesting AWS account and AWS Region.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ssmguiconnect_preferences#idle_connection SsmguiconnectPreferences#idle_connection}
-	IdleConnection interface{} `field:"optional" json:"idleConnection" yaml:"idleConnection"`
+	// This includes details such as which S3 bucket recordings are stored in.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ssmguiconnect_preferences#connection_recording_preferences SsmguiconnectPreferences#connection_recording_preferences}
+	ConnectionRecordingPreferences *SsmguiconnectPreferencesConnectionRecordingPreferences `field:"optional" json:"connectionRecordingPreferences" yaml:"connectionRecordingPreferences"`
 }
 

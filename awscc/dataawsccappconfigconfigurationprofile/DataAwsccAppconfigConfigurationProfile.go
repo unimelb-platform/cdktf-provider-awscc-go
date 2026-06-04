@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccappconfigconfigurationprofile/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appconfig_configuration_profile awscc_appconfig_configuration_profile}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appconfig_configuration_profile awscc_appconfig_configuration_profile}.
 type DataAwsccAppconfigConfigurationProfile interface {
 	cdktf.TerraformDataSource
 	ApplicationId() *string
@@ -22,6 +22,7 @@ type DataAwsccAppconfigConfigurationProfile interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	DeletionProtectionCheck() *string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -93,6 +94,10 @@ type DataAwsccAppconfigConfigurationProfile interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -152,6 +157,16 @@ func (j *jsiiProxy_DataAwsccAppconfigConfigurationProfile) Count() interface{} {
 	_jsii_.Get(
 		j,
 		"count",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccAppconfigConfigurationProfile) DeletionProtectionCheck() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"deletionProtectionCheck",
 		&returns,
 	)
 	return returns
@@ -378,7 +393,7 @@ func (j *jsiiProxy_DataAwsccAppconfigConfigurationProfile) Validators() DataAwsc
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appconfig_configuration_profile awscc_appconfig_configuration_profile} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appconfig_configuration_profile awscc_appconfig_configuration_profile} Data Source.
 func NewDataAwsccAppconfigConfigurationProfile(scope constructs.Construct, id *string, config *DataAwsccAppconfigConfigurationProfileConfig) DataAwsccAppconfigConfigurationProfile {
 	_init_.Initialize()
 
@@ -396,7 +411,7 @@ func NewDataAwsccAppconfigConfigurationProfile(scope constructs.Construct, id *s
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appconfig_configuration_profile awscc_appconfig_configuration_profile} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appconfig_configuration_profile awscc_appconfig_configuration_profile} Data Source.
 func NewDataAwsccAppconfigConfigurationProfile_Override(d DataAwsccAppconfigConfigurationProfile, scope constructs.Construct, id *string, config *DataAwsccAppconfigConfigurationProfileConfig) {
 	_init_.Initialize()
 
@@ -763,6 +778,32 @@ func (d *jsiiProxy_DataAwsccAppconfigConfigurationProfile) SynthesizeAttributes(
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppconfigConfigurationProfile) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppconfigConfigurationProfile) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

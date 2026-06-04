@@ -27,8 +27,8 @@ type ConnectTaskTemplateConstraintsReadOnlyFieldsIdOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *ConnectTaskTemplateConstraintsReadOnlyFieldsId
-	SetInternalValue(val *ConnectTaskTemplateConstraintsReadOnlyFieldsId)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -64,6 +64,7 @@ type ConnectTaskTemplateConstraintsReadOnlyFieldsIdOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -119,8 +120,8 @@ func (j *jsiiProxy_ConnectTaskTemplateConstraintsReadOnlyFieldsIdOutputReference
 	return returns
 }
 
-func (j *jsiiProxy_ConnectTaskTemplateConstraintsReadOnlyFieldsIdOutputReference) InternalValue() *ConnectTaskTemplateConstraintsReadOnlyFieldsId {
-	var returns *ConnectTaskTemplateConstraintsReadOnlyFieldsId
+func (j *jsiiProxy_ConnectTaskTemplateConstraintsReadOnlyFieldsIdOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -219,7 +220,7 @@ func (j *jsiiProxy_ConnectTaskTemplateConstraintsReadOnlyFieldsIdOutputReference
 	)
 }
 
-func (j *jsiiProxy_ConnectTaskTemplateConstraintsReadOnlyFieldsIdOutputReference)SetInternalValue(val *ConnectTaskTemplateConstraintsReadOnlyFieldsId) {
+func (j *jsiiProxy_ConnectTaskTemplateConstraintsReadOnlyFieldsIdOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -447,6 +448,14 @@ func (c *jsiiProxy_ConnectTaskTemplateConstraintsReadOnlyFieldsIdOutputReference
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ConnectTaskTemplateConstraintsReadOnlyFieldsIdOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetName",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ConnectTaskTemplateConstraintsReadOnlyFieldsIdOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

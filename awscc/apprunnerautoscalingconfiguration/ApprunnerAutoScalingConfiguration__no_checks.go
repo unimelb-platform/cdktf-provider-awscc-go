@@ -56,7 +56,15 @@ func (a *jsiiProxy_ApprunnerAutoScalingConfiguration) validateInterpolationForAt
 	return nil
 }
 
+func (a *jsiiProxy_ApprunnerAutoScalingConfiguration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_ApprunnerAutoScalingConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (a *jsiiProxy_ApprunnerAutoScalingConfiguration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

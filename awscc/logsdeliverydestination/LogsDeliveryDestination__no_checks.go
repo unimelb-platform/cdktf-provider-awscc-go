@@ -56,11 +56,23 @@ func (l *jsiiProxy_LogsDeliveryDestination) validateInterpolationForAttributePar
 	return nil
 }
 
+func (l *jsiiProxy_LogsDeliveryDestination) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LogsDeliveryDestination) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (l *jsiiProxy_LogsDeliveryDestination) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LogsDeliveryDestination) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (l *jsiiProxy_LogsDeliveryDestination) validatePutDeliveryDestinationPolicyParameters(value *LogsDeliveryDestinationDeliveryDestinationPolicy) error {
 	return nil
 }
 
@@ -92,10 +104,6 @@ func (j *jsiiProxy_LogsDeliveryDestination) validateSetCountParameters(val inter
 	return nil
 }
 
-func (j *jsiiProxy_LogsDeliveryDestination) validateSetDeliveryDestinationPolicyParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_LogsDeliveryDestination) validateSetDestinationResourceArnParameters(val *string) error {
 	return nil
 }
@@ -105,6 +113,10 @@ func (j *jsiiProxy_LogsDeliveryDestination) validateSetLifecycleParameters(val *
 }
 
 func (j *jsiiProxy_LogsDeliveryDestination) validateSetNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_LogsDeliveryDestination) validateSetOutputFormatParameters(val *string) error {
 	return nil
 }
 

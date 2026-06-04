@@ -80,9 +80,11 @@ type DatabrewJobDataCatalogOutputsOutputReference interface {
 	PutDatabaseOptions(value *DatabrewJobDataCatalogOutputsDatabaseOptions)
 	PutS3Options(value *DatabrewJobDataCatalogOutputsS3Options)
 	ResetCatalogId()
+	ResetDatabaseName()
 	ResetDatabaseOptions()
 	ResetOverwrite()
 	ResetS3Options()
+	ResetTableName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -631,6 +633,14 @@ func (d *jsiiProxy_DatabrewJobDataCatalogOutputsOutputReference) ResetCatalogId(
 	)
 }
 
+func (d *jsiiProxy_DatabrewJobDataCatalogOutputsOutputReference) ResetDatabaseName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetDatabaseName",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DatabrewJobDataCatalogOutputsOutputReference) ResetDatabaseOptions() {
 	_jsii_.InvokeVoid(
 		d,
@@ -651,6 +661,14 @@ func (d *jsiiProxy_DatabrewJobDataCatalogOutputsOutputReference) ResetS3Options(
 	_jsii_.InvokeVoid(
 		d,
 		"resetS3Options",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatabrewJobDataCatalogOutputsOutputReference) ResetTableName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetTableName",
 		nil, // no parameters
 	)
 }

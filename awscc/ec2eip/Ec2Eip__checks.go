@@ -119,6 +119,14 @@ func (e *jsiiProxy_Ec2Eip) validateInterpolationForAttributeParameters(terraform
 	return nil
 }
 
+func (e *jsiiProxy_Ec2Eip) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_Ec2Eip) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (e *jsiiProxy_Ec2Eip) validateMoveToParameters(moveTarget *string, index in
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (e *jsiiProxy_Ec2Eip) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -254,6 +270,14 @@ func validateEc2Eip_IsTerraformElementParameters(x interface{}) error {
 func validateEc2Eip_IsTerraformResourceParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Ec2Eip) validateSetAddressParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil
@@ -358,6 +382,14 @@ func (j *jsiiProxy_Ec2Eip) validateSetDomainParameters(val *string) error {
 }
 
 func (j *jsiiProxy_Ec2Eip) validateSetInstanceIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Ec2Eip) validateSetIpamPoolIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

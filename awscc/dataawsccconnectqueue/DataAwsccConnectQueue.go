@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccconnectqueue/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/connect_queue awscc_connect_queue}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/connect_queue awscc_connect_queue}.
 type DataAwsccConnectQueue interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -47,6 +47,7 @@ type DataAwsccConnectQueue interface {
 	// The tree node.
 	Node() constructs.Node
 	OutboundCallerConfig() DataAwsccConnectQueueOutboundCallerConfigOutputReference
+	OutboundEmailConfig() DataAwsccConnectQueueOutboundEmailConfigOutputReference
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -93,6 +94,10 @@ type DataAwsccConnectQueue interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -277,6 +282,16 @@ func (j *jsiiProxy_DataAwsccConnectQueue) OutboundCallerConfig() DataAwsccConnec
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccConnectQueue) OutboundEmailConfig() DataAwsccConnectQueueOutboundEmailConfigOutputReference {
+	var returns DataAwsccConnectQueueOutboundEmailConfigOutputReference
+	_jsii_.Get(
+		j,
+		"outboundEmailConfig",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccConnectQueue) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -378,7 +393,7 @@ func (j *jsiiProxy_DataAwsccConnectQueue) Type() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/connect_queue awscc_connect_queue} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/connect_queue awscc_connect_queue} Data Source.
 func NewDataAwsccConnectQueue(scope constructs.Construct, id *string, config *DataAwsccConnectQueueConfig) DataAwsccConnectQueue {
 	_init_.Initialize()
 
@@ -396,7 +411,7 @@ func NewDataAwsccConnectQueue(scope constructs.Construct, id *string, config *Da
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/connect_queue awscc_connect_queue} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/connect_queue awscc_connect_queue} Data Source.
 func NewDataAwsccConnectQueue_Override(d DataAwsccConnectQueue, scope constructs.Construct, id *string, config *DataAwsccConnectQueueConfig) {
 	_init_.Initialize()
 
@@ -763,6 +778,32 @@ func (d *jsiiProxy_DataAwsccConnectQueue) SynthesizeAttributes() *map[string]int
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccConnectQueue) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccConnectQueue) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

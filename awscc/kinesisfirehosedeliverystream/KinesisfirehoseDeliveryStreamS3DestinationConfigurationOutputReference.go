@@ -85,12 +85,14 @@ type KinesisfirehoseDeliveryStreamS3DestinationConfigurationOutputReference inte
 	PutBufferingHints(value *KinesisfirehoseDeliveryStreamS3DestinationConfigurationBufferingHints)
 	PutCloudwatchLoggingOptions(value *KinesisfirehoseDeliveryStreamS3DestinationConfigurationCloudwatchLoggingOptions)
 	PutEncryptionConfiguration(value *KinesisfirehoseDeliveryStreamS3DestinationConfigurationEncryptionConfiguration)
+	ResetBucketArn()
 	ResetBufferingHints()
 	ResetCloudwatchLoggingOptions()
 	ResetCompressionFormat()
 	ResetEncryptionConfiguration()
 	ResetErrorOutputPrefix()
 	ResetPrefix()
+	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -693,6 +695,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamS3DestinationConfigurationOutput
 	)
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamS3DestinationConfigurationOutputReference) ResetBucketArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetBucketArn",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamS3DestinationConfigurationOutputReference) ResetBufferingHints() {
 	_jsii_.InvokeVoid(
 		k,
@@ -737,6 +747,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamS3DestinationConfigurationOutput
 	_jsii_.InvokeVoid(
 		k,
 		"resetPrefix",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamS3DestinationConfigurationOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetRoleArn",
 		nil, // no parameters
 	)
 }

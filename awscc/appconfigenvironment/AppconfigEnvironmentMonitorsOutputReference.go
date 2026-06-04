@@ -67,6 +67,7 @@ type AppconfigEnvironmentMonitorsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAlarmArn()
 	ResetAlarmRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (a *jsiiProxy_AppconfigEnvironmentMonitorsOutputReference) InterpolationFor
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AppconfigEnvironmentMonitorsOutputReference) ResetAlarmArn() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetAlarmArn",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AppconfigEnvironmentMonitorsOutputReference) ResetAlarmRoleArn() {

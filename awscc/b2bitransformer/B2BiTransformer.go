@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/b2bitransformer/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/b2bi_transformer awscc_b2bi_transformer}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/b2bi_transformer awscc_b2bi_transformer}.
 type B2BiTransformer interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -43,21 +43,25 @@ type B2BiTransformer interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
+	InputConversion() B2BiTransformerInputConversionOutputReference
+	InputConversionInput() interface{}
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	Mapping() B2BiTransformerMappingOutputReference
+	MappingInput() interface{}
 	MappingTemplate() *string
 	SetMappingTemplate(val *string)
 	MappingTemplateInput() *string
 	ModifiedAt() *string
-	SetModifiedAt(val *string)
-	ModifiedAtInput() *string
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
+	OutputConversion() B2BiTransformerOutputConversionOutputReference
+	OutputConversionInput() interface{}
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -71,6 +75,8 @@ type B2BiTransformer interface {
 	SampleDocument() *string
 	SetSampleDocument(val *string)
 	SampleDocumentInput() *string
+	SampleDocuments() B2BiTransformerSampleDocumentsOutputReference
+	SampleDocumentsInput() interface{}
 	Status() *string
 	SetStatus(val *string)
 	StatusInput() *string
@@ -108,24 +114,47 @@ type B2BiTransformer interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutEdiType(value *B2BiTransformerEdiType)
+	PutInputConversion(value *B2BiTransformerInputConversion)
+	PutMapping(value *B2BiTransformerMapping)
+	PutOutputConversion(value *B2BiTransformerOutputConversion)
+	PutSampleDocuments(value *B2BiTransformerSampleDocuments)
 	PutTags(value interface{})
-	ResetModifiedAt()
+	ResetEdiType()
+	ResetFileFormat()
+	ResetInputConversion()
+	ResetMapping()
+	ResetMappingTemplate()
+	ResetOutputConversion()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetSampleDocument()
+	ResetSampleDocuments()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -280,11 +309,51 @@ func (j *jsiiProxy_B2BiTransformer) Id() *string {
 	return returns
 }
 
+func (j *jsiiProxy_B2BiTransformer) InputConversion() B2BiTransformerInputConversionOutputReference {
+	var returns B2BiTransformerInputConversionOutputReference
+	_jsii_.Get(
+		j,
+		"inputConversion",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_B2BiTransformer) InputConversionInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"inputConversionInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_B2BiTransformer) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
 		j,
 		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_B2BiTransformer) Mapping() B2BiTransformerMappingOutputReference {
+	var returns B2BiTransformerMappingOutputReference
+	_jsii_.Get(
+		j,
+		"mapping",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_B2BiTransformer) MappingInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"mappingInput",
 		&returns,
 	)
 	return returns
@@ -320,16 +389,6 @@ func (j *jsiiProxy_B2BiTransformer) ModifiedAt() *string {
 	return returns
 }
 
-func (j *jsiiProxy_B2BiTransformer) ModifiedAtInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"modifiedAtInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_B2BiTransformer) Name() *string {
 	var returns *string
 	_jsii_.Get(
@@ -355,6 +414,26 @@ func (j *jsiiProxy_B2BiTransformer) Node() constructs.Node {
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_B2BiTransformer) OutputConversion() B2BiTransformerOutputConversionOutputReference {
+	var returns B2BiTransformerOutputConversionOutputReference
+	_jsii_.Get(
+		j,
+		"outputConversion",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_B2BiTransformer) OutputConversionInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"outputConversionInput",
 		&returns,
 	)
 	return returns
@@ -405,6 +484,26 @@ func (j *jsiiProxy_B2BiTransformer) SampleDocumentInput() *string {
 	_jsii_.Get(
 		j,
 		"sampleDocumentInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_B2BiTransformer) SampleDocuments() B2BiTransformerSampleDocumentsOutputReference {
+	var returns B2BiTransformerSampleDocumentsOutputReference
+	_jsii_.Get(
+		j,
+		"sampleDocuments",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_B2BiTransformer) SampleDocumentsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"sampleDocumentsInput",
 		&returns,
 	)
 	return returns
@@ -501,7 +600,7 @@ func (j *jsiiProxy_B2BiTransformer) TransformerId() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/b2bi_transformer awscc_b2bi_transformer} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/b2bi_transformer awscc_b2bi_transformer} Resource.
 func NewB2BiTransformer(scope constructs.Construct, id *string, config *B2BiTransformerConfig) B2BiTransformer {
 	_init_.Initialize()
 
@@ -519,7 +618,7 @@ func NewB2BiTransformer(scope constructs.Construct, id *string, config *B2BiTran
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/b2bi_transformer awscc_b2bi_transformer} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/b2bi_transformer awscc_b2bi_transformer} Resource.
 func NewB2BiTransformer_Override(b B2BiTransformer, scope constructs.Construct, id *string, config *B2BiTransformerConfig) {
 	_init_.Initialize()
 
@@ -597,17 +696,6 @@ func (j *jsiiProxy_B2BiTransformer)SetMappingTemplate(val *string) {
 	_jsii_.Set(
 		j,
 		"mappingTemplate",
-		val,
-	)
-}
-
-func (j *jsiiProxy_B2BiTransformer)SetModifiedAt(val *string) {
-	if err := j.validateSetModifiedAtParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"modifiedAt",
 		val,
 	)
 }
@@ -933,6 +1021,19 @@ func (b *jsiiProxy_B2BiTransformer) GetStringMapAttribute(terraformAttribute *st
 	return returns
 }
 
+func (b *jsiiProxy_B2BiTransformer) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		b,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (b *jsiiProxy_B2BiTransformer) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := b.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -960,6 +1061,17 @@ func (b *jsiiProxy_B2BiTransformer) InterpolationForAttribute(terraformAttribute
 	return returns
 }
 
+func (b *jsiiProxy_B2BiTransformer) MoveFromId(id *string) {
+	if err := b.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (b *jsiiProxy_B2BiTransformer) MoveTo(moveTarget *string, index interface{}) {
 	if err := b.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -968,6 +1080,17 @@ func (b *jsiiProxy_B2BiTransformer) MoveTo(moveTarget *string, index interface{}
 		b,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (b *jsiiProxy_B2BiTransformer) MoveToId(id *string) {
+	if err := b.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -993,6 +1116,50 @@ func (b *jsiiProxy_B2BiTransformer) PutEdiType(value *B2BiTransformerEdiType) {
 	)
 }
 
+func (b *jsiiProxy_B2BiTransformer) PutInputConversion(value *B2BiTransformerInputConversion) {
+	if err := b.validatePutInputConversionParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"putInputConversion",
+		[]interface{}{value},
+	)
+}
+
+func (b *jsiiProxy_B2BiTransformer) PutMapping(value *B2BiTransformerMapping) {
+	if err := b.validatePutMappingParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"putMapping",
+		[]interface{}{value},
+	)
+}
+
+func (b *jsiiProxy_B2BiTransformer) PutOutputConversion(value *B2BiTransformerOutputConversion) {
+	if err := b.validatePutOutputConversionParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"putOutputConversion",
+		[]interface{}{value},
+	)
+}
+
+func (b *jsiiProxy_B2BiTransformer) PutSampleDocuments(value *B2BiTransformerSampleDocuments) {
+	if err := b.validatePutSampleDocumentsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"putSampleDocuments",
+		[]interface{}{value},
+	)
+}
+
 func (b *jsiiProxy_B2BiTransformer) PutTags(value interface{}) {
 	if err := b.validatePutTagsParameters(value); err != nil {
 		panic(err)
@@ -1004,10 +1171,50 @@ func (b *jsiiProxy_B2BiTransformer) PutTags(value interface{}) {
 	)
 }
 
-func (b *jsiiProxy_B2BiTransformer) ResetModifiedAt() {
+func (b *jsiiProxy_B2BiTransformer) ResetEdiType() {
 	_jsii_.InvokeVoid(
 		b,
-		"resetModifiedAt",
+		"resetEdiType",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_B2BiTransformer) ResetFileFormat() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetFileFormat",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_B2BiTransformer) ResetInputConversion() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetInputConversion",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_B2BiTransformer) ResetMapping() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetMapping",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_B2BiTransformer) ResetMappingTemplate() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetMappingTemplate",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_B2BiTransformer) ResetOutputConversion() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetOutputConversion",
 		nil, // no parameters
 	)
 }
@@ -1028,6 +1235,14 @@ func (b *jsiiProxy_B2BiTransformer) ResetSampleDocument() {
 	)
 }
 
+func (b *jsiiProxy_B2BiTransformer) ResetSampleDocuments() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetSampleDocuments",
+		nil, // no parameters
+	)
+}
+
 func (b *jsiiProxy_B2BiTransformer) ResetTags() {
 	_jsii_.InvokeVoid(
 		b,
@@ -1042,6 +1257,32 @@ func (b *jsiiProxy_B2BiTransformer) SynthesizeAttributes() *map[string]interface
 	_jsii_.Invoke(
 		b,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_B2BiTransformer) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		b,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_B2BiTransformer) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		b,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

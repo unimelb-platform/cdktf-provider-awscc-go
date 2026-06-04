@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscclambdacodesigningconfig/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lambda_code_signing_config awscc_lambda_code_signing_config}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lambda_code_signing_config awscc_lambda_code_signing_config}.
 type DataAwsccLambdaCodeSigningConfig interface {
 	cdktf.TerraformDataSource
 	AllowedPublishers() DataAwsccLambdaCodeSigningConfigAllowedPublishersOutputReference
@@ -52,6 +52,7 @@ type DataAwsccLambdaCodeSigningConfig interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	Tags() DataAwsccLambdaCodeSigningConfigTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -87,6 +88,10 @@ type DataAwsccLambdaCodeSigningConfig interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -281,6 +286,16 @@ func (j *jsiiProxy_DataAwsccLambdaCodeSigningConfig) RawOverrides() interface{} 
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccLambdaCodeSigningConfig) Tags() DataAwsccLambdaCodeSigningConfigTagsList {
+	var returns DataAwsccLambdaCodeSigningConfigTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccLambdaCodeSigningConfig) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -312,7 +327,7 @@ func (j *jsiiProxy_DataAwsccLambdaCodeSigningConfig) TerraformResourceType() *st
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lambda_code_signing_config awscc_lambda_code_signing_config} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lambda_code_signing_config awscc_lambda_code_signing_config} Data Source.
 func NewDataAwsccLambdaCodeSigningConfig(scope constructs.Construct, id *string, config *DataAwsccLambdaCodeSigningConfigConfig) DataAwsccLambdaCodeSigningConfig {
 	_init_.Initialize()
 
@@ -330,7 +345,7 @@ func NewDataAwsccLambdaCodeSigningConfig(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lambda_code_signing_config awscc_lambda_code_signing_config} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lambda_code_signing_config awscc_lambda_code_signing_config} Data Source.
 func NewDataAwsccLambdaCodeSigningConfig_Override(d DataAwsccLambdaCodeSigningConfig, scope constructs.Construct, id *string, config *DataAwsccLambdaCodeSigningConfigConfig) {
 	_init_.Initialize()
 
@@ -697,6 +712,32 @@ func (d *jsiiProxy_DataAwsccLambdaCodeSigningConfig) SynthesizeAttributes() *map
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLambdaCodeSigningConfig) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLambdaCodeSigningConfig) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

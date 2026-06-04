@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccnetworkmanagersitetositevpnattachment/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_site_to_site_vpn_attachment awscc_networkmanager_site_to_site_vpn_attachment}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_site_to_site_vpn_attachment awscc_networkmanager_site_to_site_vpn_attachment}.
 type DataAwsccNetworkmanagerSiteToSiteVpnAttachment interface {
 	cdktf.TerraformDataSource
 	AttachmentId() *string
@@ -46,9 +46,11 @@ type DataAwsccNetworkmanagerSiteToSiteVpnAttachment interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	NetworkFunctionGroupName() *string
 	// The tree node.
 	Node() constructs.Node
 	OwnerAccountId() *string
+	ProposedNetworkFunctionGroupChange() DataAwsccNetworkmanagerSiteToSiteVpnAttachmentProposedNetworkFunctionGroupChangeOutputReference
 	ProposedSegmentChange() DataAwsccNetworkmanagerSiteToSiteVpnAttachmentProposedSegmentChangeOutputReference
 	// Experimental.
 	Provider() cdktf.TerraformProvider
@@ -97,6 +99,10 @@ type DataAwsccNetworkmanagerSiteToSiteVpnAttachment interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -281,6 +287,16 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerSiteToSiteVpnAttachment) Lifecycle() *
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccNetworkmanagerSiteToSiteVpnAttachment) NetworkFunctionGroupName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"networkFunctionGroupName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccNetworkmanagerSiteToSiteVpnAttachment) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -296,6 +312,16 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerSiteToSiteVpnAttachment) OwnerAccountI
 	_jsii_.Get(
 		j,
 		"ownerAccountId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccNetworkmanagerSiteToSiteVpnAttachment) ProposedNetworkFunctionGroupChange() DataAwsccNetworkmanagerSiteToSiteVpnAttachmentProposedNetworkFunctionGroupChangeOutputReference {
+	var returns DataAwsccNetworkmanagerSiteToSiteVpnAttachmentProposedNetworkFunctionGroupChangeOutputReference
+	_jsii_.Get(
+		j,
+		"proposedNetworkFunctionGroupChange",
 		&returns,
 	)
 	return returns
@@ -422,7 +448,7 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerSiteToSiteVpnAttachment) VpnConnection
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_site_to_site_vpn_attachment awscc_networkmanager_site_to_site_vpn_attachment} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_site_to_site_vpn_attachment awscc_networkmanager_site_to_site_vpn_attachment} Data Source.
 func NewDataAwsccNetworkmanagerSiteToSiteVpnAttachment(scope constructs.Construct, id *string, config *DataAwsccNetworkmanagerSiteToSiteVpnAttachmentConfig) DataAwsccNetworkmanagerSiteToSiteVpnAttachment {
 	_init_.Initialize()
 
@@ -440,7 +466,7 @@ func NewDataAwsccNetworkmanagerSiteToSiteVpnAttachment(scope constructs.Construc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_site_to_site_vpn_attachment awscc_networkmanager_site_to_site_vpn_attachment} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_site_to_site_vpn_attachment awscc_networkmanager_site_to_site_vpn_attachment} Data Source.
 func NewDataAwsccNetworkmanagerSiteToSiteVpnAttachment_Override(d DataAwsccNetworkmanagerSiteToSiteVpnAttachment, scope constructs.Construct, id *string, config *DataAwsccNetworkmanagerSiteToSiteVpnAttachmentConfig) {
 	_init_.Initialize()
 
@@ -807,6 +833,32 @@ func (d *jsiiProxy_DataAwsccNetworkmanagerSiteToSiteVpnAttachment) SynthesizeAtt
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkmanagerSiteToSiteVpnAttachment) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkmanagerSiteToSiteVpnAttachment) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

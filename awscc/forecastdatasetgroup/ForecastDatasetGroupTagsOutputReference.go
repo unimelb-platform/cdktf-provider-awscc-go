@@ -67,6 +67,8 @@ type ForecastDatasetGroupTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (f *jsiiProxy_ForecastDatasetGroupTagsOutputReference) InterpolationForAttr
 	)
 
 	return returns
+}
+
+func (f *jsiiProxy_ForecastDatasetGroupTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (f *jsiiProxy_ForecastDatasetGroupTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (f *jsiiProxy_ForecastDatasetGroupTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

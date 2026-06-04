@@ -67,6 +67,7 @@ type Ec2NetworkInsightsPathTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
 	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (e *jsiiProxy_Ec2NetworkInsightsPathTagsOutputReference) InterpolationForAt
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_Ec2NetworkInsightsPathTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetKey",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_Ec2NetworkInsightsPathTagsOutputReference) ResetValue() {

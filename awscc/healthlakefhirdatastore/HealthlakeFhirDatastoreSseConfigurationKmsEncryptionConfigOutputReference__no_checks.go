@@ -60,7 +60,7 @@ func (j *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfigOut
 	return nil
 }
 
-func (j *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfigOutputReference) validateSetInternalValueParameters(val *HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfig) error {
+func (j *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfigOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

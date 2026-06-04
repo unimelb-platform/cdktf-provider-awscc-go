@@ -27,8 +27,8 @@ type AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplate
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification
-	SetInternalValue(val *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	LaunchTemplateId() *string
 	SetLaunchTemplateId(val *string)
 	LaunchTemplateIdInput() *string
@@ -72,6 +72,7 @@ type AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplate
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetLaunchTemplateId()
 	ResetLaunchTemplateName()
+	ResetVersion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -127,8 +128,8 @@ func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
 	return returns
 }
 
-func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationOutputReference) InternalValue() *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification {
-	var returns *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification
+func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -267,7 +268,7 @@ func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
 	)
 }
 
-func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationOutputReference)SetInternalValue(val *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification) {
+func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -531,6 +532,14 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
 	_jsii_.InvokeVoid(
 		a,
 		"resetLaunchTemplateName",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationOutputReference) ResetVersion() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetVersion",
 		nil, // no parameters
 	)
 }

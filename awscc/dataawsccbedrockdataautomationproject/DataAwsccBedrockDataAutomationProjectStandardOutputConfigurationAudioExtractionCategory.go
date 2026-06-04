@@ -1,0 +1,6 @@
+package dataawsccbedrockdataautomationproject
+
+
+type DataAwsccBedrockDataAutomationProjectStandardOutputConfigurationAudioExtractionCategory struct {
+}
+

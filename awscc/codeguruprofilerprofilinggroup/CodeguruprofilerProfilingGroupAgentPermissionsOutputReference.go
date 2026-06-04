@@ -64,6 +64,7 @@ type CodeguruprofilerProfilingGroupAgentPermissionsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPrincipals()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (c *jsiiProxy_CodeguruprofilerProfilingGroupAgentPermissionsOutputReference
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CodeguruprofilerProfilingGroupAgentPermissionsOutputReference) ResetPrincipals() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetPrincipals",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CodeguruprofilerProfilingGroupAgentPermissionsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

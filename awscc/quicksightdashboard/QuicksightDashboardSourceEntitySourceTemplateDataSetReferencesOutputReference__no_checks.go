@@ -64,7 +64,7 @@ func (j *jsiiProxy_QuicksightDashboardSourceEntitySourceTemplateDataSetReference
 	return nil
 }
 
-func (j *jsiiProxy_QuicksightDashboardSourceEntitySourceTemplateDataSetReferencesOutputReference) validateSetInternalValueParameters(val *QuicksightDashboardSourceEntitySourceTemplateDataSetReferences) error {
+func (j *jsiiProxy_QuicksightDashboardSourceEntitySourceTemplateDataSetReferencesOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

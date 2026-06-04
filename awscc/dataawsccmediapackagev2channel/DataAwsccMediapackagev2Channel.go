@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccmediapackagev2channel/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediapackagev2_channel awscc_mediapackagev2_channel}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediapackagev2_channel awscc_mediapackagev2_channel}.
 type DataAwsccMediapackagev2Channel interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -41,6 +41,9 @@ type DataAwsccMediapackagev2Channel interface {
 	SetId(val *string)
 	IdInput() *string
 	IngestEndpoints() DataAwsccMediapackagev2ChannelIngestEndpointsList
+	IngestEndpointUrls() *[]*string
+	InputSwitchConfiguration() DataAwsccMediapackagev2ChannelInputSwitchConfigurationOutputReference
+	InputType() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -48,6 +51,7 @@ type DataAwsccMediapackagev2Channel interface {
 	ModifiedAt() *string
 	// The tree node.
 	Node() constructs.Node
+	OutputHeaderConfiguration() DataAwsccMediapackagev2ChannelOutputHeaderConfigurationOutputReference
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -90,6 +94,10 @@ type DataAwsccMediapackagev2Channel interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -254,6 +262,36 @@ func (j *jsiiProxy_DataAwsccMediapackagev2Channel) IngestEndpoints() DataAwsccMe
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccMediapackagev2Channel) IngestEndpointUrls() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"ingestEndpointUrls",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccMediapackagev2Channel) InputSwitchConfiguration() DataAwsccMediapackagev2ChannelInputSwitchConfigurationOutputReference {
+	var returns DataAwsccMediapackagev2ChannelInputSwitchConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"inputSwitchConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccMediapackagev2Channel) InputType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"inputType",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccMediapackagev2Channel) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -279,6 +317,16 @@ func (j *jsiiProxy_DataAwsccMediapackagev2Channel) Node() constructs.Node {
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccMediapackagev2Channel) OutputHeaderConfiguration() DataAwsccMediapackagev2ChannelOutputHeaderConfigurationOutputReference {
+	var returns DataAwsccMediapackagev2ChannelOutputHeaderConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"outputHeaderConfiguration",
 		&returns,
 	)
 	return returns
@@ -345,7 +393,7 @@ func (j *jsiiProxy_DataAwsccMediapackagev2Channel) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediapackagev2_channel awscc_mediapackagev2_channel} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediapackagev2_channel awscc_mediapackagev2_channel} Data Source.
 func NewDataAwsccMediapackagev2Channel(scope constructs.Construct, id *string, config *DataAwsccMediapackagev2ChannelConfig) DataAwsccMediapackagev2Channel {
 	_init_.Initialize()
 
@@ -363,7 +411,7 @@ func NewDataAwsccMediapackagev2Channel(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediapackagev2_channel awscc_mediapackagev2_channel} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediapackagev2_channel awscc_mediapackagev2_channel} Data Source.
 func NewDataAwsccMediapackagev2Channel_Override(d DataAwsccMediapackagev2Channel, scope constructs.Construct, id *string, config *DataAwsccMediapackagev2ChannelConfig) {
 	_init_.Initialize()
 
@@ -730,6 +778,32 @@ func (d *jsiiProxy_DataAwsccMediapackagev2Channel) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMediapackagev2Channel) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMediapackagev2Channel) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

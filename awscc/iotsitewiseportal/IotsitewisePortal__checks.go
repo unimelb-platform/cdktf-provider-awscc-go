@@ -119,6 +119,14 @@ func (i *jsiiProxy_IotsitewisePortal) validateInterpolationForAttributeParameter
 	return nil
 }
 
+func (i *jsiiProxy_IotsitewisePortal) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (i *jsiiProxy_IotsitewisePortal) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (i *jsiiProxy_IotsitewisePortal) validateMoveToParameters(moveTarget *strin
 	return nil
 }
 
+func (i *jsiiProxy_IotsitewisePortal) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (i *jsiiProxy_IotsitewisePortal) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -194,6 +210,37 @@ func (i *jsiiProxy_IotsitewisePortal) validatePutAlarmsParameters(value *Iotsite
 	}
 	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
 		return err
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_IotsitewisePortal) validatePutPortalTypeConfigurationParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *map[string]*IotsitewisePortalPortalTypeConfiguration:
+		value := value.(*map[string]*IotsitewisePortalPortalTypeConfiguration)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case map[string]*IotsitewisePortalPortalTypeConfiguration:
+		value_ := value.(map[string]*IotsitewisePortalPortalTypeConfiguration)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *map[string]*IotsitewisePortalPortalTypeConfiguration; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil
@@ -401,6 +448,14 @@ func (j *jsiiProxy_IotsitewisePortal) validateSetPortalDescriptionParameters(val
 }
 
 func (j *jsiiProxy_IotsitewisePortal) validateSetPortalNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewisePortal) validateSetPortalTypeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

@@ -26,7 +26,7 @@ type ConnectInstanceStorageConfigKinesisVideoStreamConfigOutputReference interfa
 	// Experimental.
 	CreationStack() *[]*string
 	EncryptionConfig() ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfigOutputReference
-	EncryptionConfigInput() *ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfig
+	EncryptionConfigInput() interface{}
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -70,6 +70,9 @@ type ConnectInstanceStorageConfigKinesisVideoStreamConfigOutputReference interfa
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutEncryptionConfig(value *ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfig)
+	ResetEncryptionConfig()
+	ResetPrefix()
+	ResetRetentionPeriodHours()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -125,8 +128,8 @@ func (j *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigOutputRef
 	return returns
 }
 
-func (j *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigOutputReference) EncryptionConfigInput() *ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfig {
-	var returns *ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfig
+func (j *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigOutputReference) EncryptionConfigInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"encryptionConfigInput",
@@ -514,6 +517,30 @@ func (c *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigOutputRef
 		c,
 		"putEncryptionConfig",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigOutputReference) ResetEncryptionConfig() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetEncryptionConfig",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigOutputReference) ResetPrefix() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetPrefix",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigOutputReference) ResetRetentionPeriodHours() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetRetentionPeriodHours",
+		nil, // no parameters
 	)
 }
 

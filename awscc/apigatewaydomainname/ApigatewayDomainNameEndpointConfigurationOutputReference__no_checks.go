@@ -60,6 +60,10 @@ func (j *jsiiProxy_ApigatewayDomainNameEndpointConfigurationOutputReference) val
 	return nil
 }
 
+func (j *jsiiProxy_ApigatewayDomainNameEndpointConfigurationOutputReference) validateSetIpAddressTypeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ApigatewayDomainNameEndpointConfigurationOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

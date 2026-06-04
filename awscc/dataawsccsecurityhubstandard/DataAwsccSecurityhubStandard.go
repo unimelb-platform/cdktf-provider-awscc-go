@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccsecurityhubstandard/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/securityhub_standard awscc_securityhub_standard}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/securityhub_standard awscc_securityhub_standard}.
 type DataAwsccSecurityhubStandard interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -85,6 +85,10 @@ type DataAwsccSecurityhubStandard interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -290,7 +294,7 @@ func (j *jsiiProxy_DataAwsccSecurityhubStandard) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/securityhub_standard awscc_securityhub_standard} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/securityhub_standard awscc_securityhub_standard} Data Source.
 func NewDataAwsccSecurityhubStandard(scope constructs.Construct, id *string, config *DataAwsccSecurityhubStandardConfig) DataAwsccSecurityhubStandard {
 	_init_.Initialize()
 
@@ -308,7 +312,7 @@ func NewDataAwsccSecurityhubStandard(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/securityhub_standard awscc_securityhub_standard} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/securityhub_standard awscc_securityhub_standard} Data Source.
 func NewDataAwsccSecurityhubStandard_Override(d DataAwsccSecurityhubStandard, scope constructs.Construct, id *string, config *DataAwsccSecurityhubStandardConfig) {
 	_init_.Initialize()
 
@@ -675,6 +679,32 @@ func (d *jsiiProxy_DataAwsccSecurityhubStandard) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSecurityhubStandard) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSecurityhubStandard) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

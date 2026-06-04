@@ -64,7 +64,7 @@ func (j *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersOutputReference)
 	return nil
 }
 
-func (j *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersOutputReference) validateSetInternalValueParameters(val *Wafv2LoggingConfigurationLoggingFilterFilters) error {
+func (j *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

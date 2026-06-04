@@ -38,6 +38,9 @@ type Apigatewayv2DomainNameDomainNameConfigurationsOutputReference interface {
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	IpAddressType() *string
+	SetIpAddressType(val *string)
+	IpAddressTypeInput() *string
 	OwnershipVerificationCertificateArn() *string
 	SetOwnershipVerificationCertificateArn(val *string)
 	OwnershipVerificationCertificateArnInput() *string
@@ -79,6 +82,7 @@ type Apigatewayv2DomainNameDomainNameConfigurationsOutputReference interface {
 	ResetCertificateArn()
 	ResetCertificateName()
 	ResetEndpointType()
+	ResetIpAddressType()
 	ResetOwnershipVerificationCertificateArn()
 	ResetSecurityPolicy()
 	// Produce the Token's value at resolution time.
@@ -201,6 +205,26 @@ func (j *jsiiProxy_Apigatewayv2DomainNameDomainNameConfigurationsOutputReference
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Apigatewayv2DomainNameDomainNameConfigurationsOutputReference) IpAddressType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipAddressType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Apigatewayv2DomainNameDomainNameConfigurationsOutputReference) IpAddressTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipAddressTypeInput",
 		&returns,
 	)
 	return returns
@@ -356,6 +380,17 @@ func (j *jsiiProxy_Apigatewayv2DomainNameDomainNameConfigurationsOutputReference
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Apigatewayv2DomainNameDomainNameConfigurationsOutputReference)SetIpAddressType(val *string) {
+	if err := j.validateSetIpAddressTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ipAddressType",
 		val,
 	)
 }
@@ -610,6 +645,14 @@ func (a *jsiiProxy_Apigatewayv2DomainNameDomainNameConfigurationsOutputReference
 	_jsii_.InvokeVoid(
 		a,
 		"resetEndpointType",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_Apigatewayv2DomainNameDomainNameConfigurationsOutputReference) ResetIpAddressType() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetIpAddressType",
 		nil, // no parameters
 	)
 }

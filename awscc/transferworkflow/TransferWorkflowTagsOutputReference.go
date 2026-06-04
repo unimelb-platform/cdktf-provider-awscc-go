@@ -67,6 +67,8 @@ type TransferWorkflowTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (t *jsiiProxy_TransferWorkflowTagsOutputReference) InterpolationForAttribut
 	)
 
 	return returns
+}
+
+func (t *jsiiProxy_TransferWorkflowTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TransferWorkflowTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (t *jsiiProxy_TransferWorkflowTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -1,0 +1,6 @@
+package dataawsccbedrockdatasource
+
+
+type DataAwsccBedrockDataSourceVectorIngestionConfigurationParsingConfiguration struct {
+}
+

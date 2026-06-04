@@ -1,0 +1,6 @@
+package dataawsccrumappmonitor
+
+
+type DataAwsccRumAppMonitorDeobfuscationConfigurationJavaScriptSourceMaps struct {
+}
+

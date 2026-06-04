@@ -33,8 +33,8 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationCon
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationDeployAsApplicationConfigurationS3ContentLocation
-	SetInternalValue(val *Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationDeployAsApplicationConfigurationS3ContentLocation)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -68,6 +68,7 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationCon
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetBasePath()
+	ResetBucketArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -163,8 +164,8 @@ func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelin
 	return returns
 }
 
-func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationDeployAsApplicationConfigurationS3ContentLocationOutputReference) InternalValue() *Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationDeployAsApplicationConfigurationS3ContentLocation {
-	var returns *Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationDeployAsApplicationConfigurationS3ContentLocation
+func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationDeployAsApplicationConfigurationS3ContentLocationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -265,7 +266,7 @@ func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelin
 	)
 }
 
-func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationDeployAsApplicationConfigurationS3ContentLocationOutputReference)SetInternalValue(val *Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationDeployAsApplicationConfigurationS3ContentLocation) {
+func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationDeployAsApplicationConfigurationS3ContentLocationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -488,6 +489,14 @@ func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelin
 	_jsii_.InvokeVoid(
 		k,
 		"resetBasePath",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationDeployAsApplicationConfigurationS3ContentLocationOutputReference) ResetBucketArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetBucketArn",
 		nil, // no parameters
 	)
 }

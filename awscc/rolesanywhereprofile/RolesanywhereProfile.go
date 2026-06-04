@@ -9,9 +9,14 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/rolesanywhereprofile/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rolesanywhere_profile awscc_rolesanywhere_profile}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rolesanywhere_profile awscc_rolesanywhere_profile}.
 type RolesanywhereProfile interface {
 	cdktf.TerraformResource
+	AcceptRoleSessionName() interface{}
+	SetAcceptRoleSessionName(val interface{})
+	AcceptRoleSessionNameInput() interface{}
+	AttributeMappings() RolesanywhereProfileAttributeMappingsList
+	AttributeMappingsInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -108,16 +113,29 @@ type RolesanywhereProfile interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutAttributeMappings(value interface{})
 	PutTags(value interface{})
+	ResetAcceptRoleSessionName()
+	ResetAttributeMappings()
 	ResetDurationSeconds()
 	ResetEnabled()
 	ResetManagedPolicyArns()
@@ -128,6 +146,9 @@ type RolesanywhereProfile interface {
 	ResetSessionPolicy()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -140,6 +161,46 @@ type RolesanywhereProfile interface {
 // The jsii proxy struct for RolesanywhereProfile
 type jsiiProxy_RolesanywhereProfile struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_RolesanywhereProfile) AcceptRoleSessionName() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"acceptRoleSessionName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RolesanywhereProfile) AcceptRoleSessionNameInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"acceptRoleSessionNameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RolesanywhereProfile) AttributeMappings() RolesanywhereProfileAttributeMappingsList {
+	var returns RolesanywhereProfileAttributeMappingsList
+	_jsii_.Get(
+		j,
+		"attributeMappings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RolesanywhereProfile) AttributeMappingsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"attributeMappingsInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_RolesanywhereProfile) CdktfStack() cdktf.TerraformStack {
@@ -493,7 +554,7 @@ func (j *jsiiProxy_RolesanywhereProfile) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rolesanywhere_profile awscc_rolesanywhere_profile} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rolesanywhere_profile awscc_rolesanywhere_profile} Resource.
 func NewRolesanywhereProfile(scope constructs.Construct, id *string, config *RolesanywhereProfileConfig) RolesanywhereProfile {
 	_init_.Initialize()
 
@@ -511,7 +572,7 @@ func NewRolesanywhereProfile(scope constructs.Construct, id *string, config *Rol
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rolesanywhere_profile awscc_rolesanywhere_profile} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rolesanywhere_profile awscc_rolesanywhere_profile} Resource.
 func NewRolesanywhereProfile_Override(r RolesanywhereProfile, scope constructs.Construct, id *string, config *RolesanywhereProfileConfig) {
 	_init_.Initialize()
 
@@ -519,6 +580,17 @@ func NewRolesanywhereProfile_Override(r RolesanywhereProfile, scope constructs.C
 		"awscc.rolesanywhereProfile.RolesanywhereProfile",
 		[]interface{}{scope, id, config},
 		r,
+	)
+}
+
+func (j *jsiiProxy_RolesanywhereProfile)SetAcceptRoleSessionName(val interface{}) {
+	if err := j.validateSetAcceptRoleSessionNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"acceptRoleSessionName",
+		val,
 	)
 }
 
@@ -936,6 +1008,19 @@ func (r *jsiiProxy_RolesanywhereProfile) GetStringMapAttribute(terraformAttribut
 	return returns
 }
 
+func (r *jsiiProxy_RolesanywhereProfile) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (r *jsiiProxy_RolesanywhereProfile) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -963,6 +1048,17 @@ func (r *jsiiProxy_RolesanywhereProfile) InterpolationForAttribute(terraformAttr
 	return returns
 }
 
+func (r *jsiiProxy_RolesanywhereProfile) MoveFromId(id *string) {
+	if err := r.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_RolesanywhereProfile) MoveTo(moveTarget *string, index interface{}) {
 	if err := r.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -971,6 +1067,17 @@ func (r *jsiiProxy_RolesanywhereProfile) MoveTo(moveTarget *string, index interf
 		r,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (r *jsiiProxy_RolesanywhereProfile) MoveToId(id *string) {
+	if err := r.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -985,6 +1092,17 @@ func (r *jsiiProxy_RolesanywhereProfile) OverrideLogicalId(newLogicalId *string)
 	)
 }
 
+func (r *jsiiProxy_RolesanywhereProfile) PutAttributeMappings(value interface{}) {
+	if err := r.validatePutAttributeMappingsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putAttributeMappings",
+		[]interface{}{value},
+	)
+}
+
 func (r *jsiiProxy_RolesanywhereProfile) PutTags(value interface{}) {
 	if err := r.validatePutTagsParameters(value); err != nil {
 		panic(err)
@@ -993,6 +1111,22 @@ func (r *jsiiProxy_RolesanywhereProfile) PutTags(value interface{}) {
 		r,
 		"putTags",
 		[]interface{}{value},
+	)
+}
+
+func (r *jsiiProxy_RolesanywhereProfile) ResetAcceptRoleSessionName() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetAcceptRoleSessionName",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RolesanywhereProfile) ResetAttributeMappings() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetAttributeMappings",
+		nil, // no parameters
 	)
 }
 
@@ -1058,6 +1192,32 @@ func (r *jsiiProxy_RolesanywhereProfile) SynthesizeAttributes() *map[string]inte
 	_jsii_.Invoke(
 		r,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RolesanywhereProfile) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		r,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RolesanywhereProfile) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

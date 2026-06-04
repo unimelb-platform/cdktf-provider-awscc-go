@@ -67,6 +67,8 @@ type Inspectorv2FilterFilterCriteriaVulnerablePackagesNameOutputReference interf
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetComparison()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesNameOutputRe
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesNameOutputReference) ResetComparison() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetComparison",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesNameOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesNameOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -56,7 +56,15 @@ func (a *jsiiProxy_AmplifyBranch) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
+func (a *jsiiProxy_AmplifyBranch) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_AmplifyBranch) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (a *jsiiProxy_AmplifyBranch) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -108,6 +116,10 @@ func (j *jsiiProxy_AmplifyBranch) validateSetBuildSpecParameters(val *string) er
 	return nil
 }
 
+func (j *jsiiProxy_AmplifyBranch) validateSetComputeRoleArnParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_AmplifyBranch) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }
@@ -129,6 +141,10 @@ func (j *jsiiProxy_AmplifyBranch) validateSetEnablePerformanceModeParameters(val
 }
 
 func (j *jsiiProxy_AmplifyBranch) validateSetEnablePullRequestPreviewParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_AmplifyBranch) validateSetEnableSkewProtectionParameters(val interface{}) error {
 	return nil
 }
 

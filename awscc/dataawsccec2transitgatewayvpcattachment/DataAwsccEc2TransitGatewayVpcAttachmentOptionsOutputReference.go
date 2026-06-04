@@ -32,6 +32,7 @@ type DataAwsccEc2TransitGatewayVpcAttachmentOptionsOutputReference interface {
 	InternalValue() *DataAwsccEc2TransitGatewayVpcAttachmentOptions
 	SetInternalValue(val *DataAwsccEc2TransitGatewayVpcAttachmentOptions)
 	Ipv6Support() *string
+	SecurityGroupReferencingSupport() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -154,6 +155,16 @@ func (j *jsiiProxy_DataAwsccEc2TransitGatewayVpcAttachmentOptionsOutputReference
 	_jsii_.Get(
 		j,
 		"ipv6Support",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2TransitGatewayVpcAttachmentOptionsOutputReference) SecurityGroupReferencingSupport() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"securityGroupReferencingSupport",
 		&returns,
 	)
 	return returns

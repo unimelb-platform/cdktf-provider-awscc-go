@@ -27,8 +27,8 @@ type DatasyncLocationFsxOntapProtocolNfsMountOptionsOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DatasyncLocationFsxOntapProtocolNfsMountOptions
-	SetInternalValue(val *DatasyncLocationFsxOntapProtocolNfsMountOptions)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -120,8 +120,8 @@ func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolNfsMountOptionsOutputReferenc
 	return returns
 }
 
-func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolNfsMountOptionsOutputReference) InternalValue() *DatasyncLocationFsxOntapProtocolNfsMountOptions {
-	var returns *DatasyncLocationFsxOntapProtocolNfsMountOptions
+func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolNfsMountOptionsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -220,7 +220,7 @@ func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolNfsMountOptionsOutputReferenc
 	)
 }
 
-func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolNfsMountOptionsOutputReference)SetInternalValue(val *DatasyncLocationFsxOntapProtocolNfsMountOptions) {
+func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolNfsMountOptionsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

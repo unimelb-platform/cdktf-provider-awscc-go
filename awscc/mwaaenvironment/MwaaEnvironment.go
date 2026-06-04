@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/mwaaenvironment/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mwaa_environment awscc_mwaa_environment}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mwaa_environment awscc_mwaa_environment}.
 type MwaaEnvironment interface {
 	cdktf.TerraformResource
 	AirflowConfigurationOptions() *string
@@ -67,9 +67,15 @@ type MwaaEnvironment interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	LoggingConfiguration() MwaaEnvironmentLoggingConfigurationOutputReference
 	LoggingConfigurationInput() interface{}
+	MaxWebservers() *float64
+	SetMaxWebservers(val *float64)
+	MaxWebserversInput() *float64
 	MaxWorkers() *float64
 	SetMaxWorkers(val *float64)
 	MaxWorkersInput() *float64
+	MinWebservers() *float64
+	SetMinWebservers(val *float64)
+	MinWebserversInput() *float64
 	MinWorkers() *float64
 	SetMinWorkers(val *float64)
 	MinWorkersInput() *float64
@@ -131,6 +137,9 @@ type MwaaEnvironment interface {
 	WeeklyMaintenanceWindowStart() *string
 	SetWeeklyMaintenanceWindowStart(val *string)
 	WeeklyMaintenanceWindowStartInput() *string
+	WorkerReplacementStrategy() *string
+	SetWorkerReplacementStrategy(val *string)
+	WorkerReplacementStrategyInput() *string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -155,12 +164,22 @@ type MwaaEnvironment interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -174,7 +193,9 @@ type MwaaEnvironment interface {
 	ResetExecutionRoleArn()
 	ResetKmsKey()
 	ResetLoggingConfiguration()
+	ResetMaxWebservers()
 	ResetMaxWorkers()
+	ResetMinWebservers()
 	ResetMinWorkers()
 	ResetNetworkConfiguration()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -191,7 +212,11 @@ type MwaaEnvironment interface {
 	ResetTags()
 	ResetWebserverAccessMode()
 	ResetWeeklyMaintenanceWindowStart()
+	ResetWorkerReplacementStrategy()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -496,6 +521,26 @@ func (j *jsiiProxy_MwaaEnvironment) LoggingConfigurationInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_MwaaEnvironment) MaxWebservers() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxWebservers",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MwaaEnvironment) MaxWebserversInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxWebserversInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_MwaaEnvironment) MaxWorkers() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -511,6 +556,26 @@ func (j *jsiiProxy_MwaaEnvironment) MaxWorkersInput() *float64 {
 	_jsii_.Get(
 		j,
 		"maxWorkersInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MwaaEnvironment) MinWebservers() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"minWebservers",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MwaaEnvironment) MinWebserversInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"minWebserversInput",
 		&returns,
 	)
 	return returns
@@ -886,8 +951,28 @@ func (j *jsiiProxy_MwaaEnvironment) WeeklyMaintenanceWindowStartInput() *string 
 	return returns
 }
 
+func (j *jsiiProxy_MwaaEnvironment) WorkerReplacementStrategy() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"workerReplacementStrategy",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mwaa_environment awscc_mwaa_environment} Resource.
+func (j *jsiiProxy_MwaaEnvironment) WorkerReplacementStrategyInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"workerReplacementStrategyInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mwaa_environment awscc_mwaa_environment} Resource.
 func NewMwaaEnvironment(scope constructs.Construct, id *string, config *MwaaEnvironmentConfig) MwaaEnvironment {
 	_init_.Initialize()
 
@@ -905,7 +990,7 @@ func NewMwaaEnvironment(scope constructs.Construct, id *string, config *MwaaEnvi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mwaa_environment awscc_mwaa_environment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mwaa_environment awscc_mwaa_environment} Resource.
 func NewMwaaEnvironment_Override(m MwaaEnvironment, scope constructs.Construct, id *string, config *MwaaEnvironmentConfig) {
 	_init_.Initialize()
 
@@ -1042,6 +1127,17 @@ func (j *jsiiProxy_MwaaEnvironment)SetLifecycle(val *cdktf.TerraformResourceLife
 	)
 }
 
+func (j *jsiiProxy_MwaaEnvironment)SetMaxWebservers(val *float64) {
+	if err := j.validateSetMaxWebserversParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"maxWebservers",
+		val,
+	)
+}
+
 func (j *jsiiProxy_MwaaEnvironment)SetMaxWorkers(val *float64) {
 	if err := j.validateSetMaxWorkersParameters(val); err != nil {
 		panic(err)
@@ -1049,6 +1145,17 @@ func (j *jsiiProxy_MwaaEnvironment)SetMaxWorkers(val *float64) {
 	_jsii_.Set(
 		j,
 		"maxWorkers",
+		val,
+	)
+}
+
+func (j *jsiiProxy_MwaaEnvironment)SetMinWebservers(val *float64) {
+	if err := j.validateSetMinWebserversParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"minWebservers",
 		val,
 	)
 }
@@ -1211,6 +1318,17 @@ func (j *jsiiProxy_MwaaEnvironment)SetWeeklyMaintenanceWindowStart(val *string) 
 	_jsii_.Set(
 		j,
 		"weeklyMaintenanceWindowStart",
+		val,
+	)
+}
+
+func (j *jsiiProxy_MwaaEnvironment)SetWorkerReplacementStrategy(val *string) {
+	if err := j.validateSetWorkerReplacementStrategyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"workerReplacementStrategy",
 		val,
 	)
 }
@@ -1484,6 +1602,19 @@ func (m *jsiiProxy_MwaaEnvironment) GetStringMapAttribute(terraformAttribute *st
 	return returns
 }
 
+func (m *jsiiProxy_MwaaEnvironment) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (m *jsiiProxy_MwaaEnvironment) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1511,6 +1642,17 @@ func (m *jsiiProxy_MwaaEnvironment) InterpolationForAttribute(terraformAttribute
 	return returns
 }
 
+func (m *jsiiProxy_MwaaEnvironment) MoveFromId(id *string) {
+	if err := m.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_MwaaEnvironment) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1519,6 +1661,17 @@ func (m *jsiiProxy_MwaaEnvironment) MoveTo(moveTarget *string, index interface{}
 		m,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (m *jsiiProxy_MwaaEnvironment) MoveToId(id *string) {
+	if err := m.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1619,10 +1772,26 @@ func (m *jsiiProxy_MwaaEnvironment) ResetLoggingConfiguration() {
 	)
 }
 
+func (m *jsiiProxy_MwaaEnvironment) ResetMaxWebservers() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMaxWebservers",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_MwaaEnvironment) ResetMaxWorkers() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetMaxWorkers",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MwaaEnvironment) ResetMinWebservers() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMinWebservers",
 		nil, // no parameters
 	)
 }
@@ -1739,12 +1908,46 @@ func (m *jsiiProxy_MwaaEnvironment) ResetWeeklyMaintenanceWindowStart() {
 	)
 }
 
+func (m *jsiiProxy_MwaaEnvironment) ResetWorkerReplacementStrategy() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetWorkerReplacementStrategy",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_MwaaEnvironment) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		m,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MwaaEnvironment) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		m,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MwaaEnvironment) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

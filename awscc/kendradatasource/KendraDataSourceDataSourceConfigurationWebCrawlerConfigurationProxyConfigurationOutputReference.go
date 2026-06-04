@@ -71,6 +71,8 @@ type KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationProxyConfigur
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetCredentials()
+	ResetHost()
+	ResetPort()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -522,6 +524,22 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfiguratio
 	_jsii_.InvokeVoid(
 		k,
 		"resetCredentials",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationProxyConfigurationOutputReference) ResetHost() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetHost",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationProxyConfigurationOutputReference) ResetPort() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetPort",
 		nil, // no parameters
 	)
 }

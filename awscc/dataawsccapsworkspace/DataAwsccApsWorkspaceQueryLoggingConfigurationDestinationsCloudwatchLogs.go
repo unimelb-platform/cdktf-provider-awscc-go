@@ -1,0 +1,6 @@
+package dataawsccapsworkspace
+
+
+type DataAwsccApsWorkspaceQueryLoggingConfigurationDestinationsCloudwatchLogs struct {
+}
+

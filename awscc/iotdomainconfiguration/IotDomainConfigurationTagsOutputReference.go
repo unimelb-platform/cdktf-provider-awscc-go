@@ -67,6 +67,8 @@ type IotDomainConfigurationTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (i *jsiiProxy_IotDomainConfigurationTagsOutputReference) InterpolationForAt
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotDomainConfigurationTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotDomainConfigurationTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotDomainConfigurationTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

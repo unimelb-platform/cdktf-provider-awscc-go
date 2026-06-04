@@ -33,7 +33,7 @@ type AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifier
 	SetPolicyQualifierId(val *string)
 	PolicyQualifierIdInput() *string
 	Qualifier() AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifierOutputReference
-	QualifierInput() *AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifier
+	QualifierInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,6 +67,8 @@ type AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifier
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutQualifier(value *AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifier)
+	ResetPolicyQualifierId()
+	ResetQualifier()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -162,8 +164,8 @@ func (j *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesP
 	return returns
 }
 
-func (j *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersOutputReference) QualifierInput() *AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifier {
-	var returns *AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifier
+func (j *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersOutputReference) QualifierInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"qualifierInput",
@@ -480,6 +482,22 @@ func (a *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesP
 		a,
 		"putQualifier",
 		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersOutputReference) ResetPolicyQualifierId() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetPolicyQualifierId",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersOutputReference) ResetQualifier() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetQualifier",
+		nil, // no parameters
 	)
 }
 

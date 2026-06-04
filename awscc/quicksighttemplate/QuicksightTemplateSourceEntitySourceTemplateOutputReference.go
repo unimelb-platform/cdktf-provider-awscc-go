@@ -64,6 +64,7 @@ type QuicksightTemplateSourceEntitySourceTemplateOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (q *jsiiProxy_QuicksightTemplateSourceEntitySourceTemplateOutputReference) 
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightTemplateSourceEntitySourceTemplateOutputReference) ResetArn() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetArn",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightTemplateSourceEntitySourceTemplateOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

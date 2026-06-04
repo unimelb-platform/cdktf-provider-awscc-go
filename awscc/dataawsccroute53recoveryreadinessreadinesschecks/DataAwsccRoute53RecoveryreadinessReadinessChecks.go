@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccroute53recoveryreadinessreadinesschecks/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53recoveryreadiness_readiness_checks awscc_route53recoveryreadiness_readiness_checks}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53recoveryreadiness_readiness_checks awscc_route53recoveryreadiness_readiness_checks}.
 type DataAwsccRoute53RecoveryreadinessReadinessChecks interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccRoute53RecoveryreadinessReadinessChecks interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccRoute53RecoveryreadinessReadinessChecks) TerraformRe
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53recoveryreadiness_readiness_checks awscc_route53recoveryreadiness_readiness_checks} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53recoveryreadiness_readiness_checks awscc_route53recoveryreadiness_readiness_checks} Data Source.
 func NewDataAwsccRoute53RecoveryreadinessReadinessChecks(scope constructs.Construct, id *string, config *DataAwsccRoute53RecoveryreadinessReadinessChecksConfig) DataAwsccRoute53RecoveryreadinessReadinessChecks {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccRoute53RecoveryreadinessReadinessChecks(scope constructs.Constr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53recoveryreadiness_readiness_checks awscc_route53recoveryreadiness_readiness_checks} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53recoveryreadiness_readiness_checks awscc_route53recoveryreadiness_readiness_checks} Data Source.
 func NewDataAwsccRoute53RecoveryreadinessReadinessChecks_Override(d DataAwsccRoute53RecoveryreadinessReadinessChecks, scope constructs.Construct, id *string, config *DataAwsccRoute53RecoveryreadinessReadinessChecksConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccRoute53RecoveryreadinessReadinessChecks) SynthesizeA
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53RecoveryreadinessReadinessChecks) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53RecoveryreadinessReadinessChecks) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

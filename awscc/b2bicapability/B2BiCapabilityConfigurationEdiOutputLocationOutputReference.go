@@ -30,8 +30,8 @@ type B2BiCapabilityConfigurationEdiOutputLocationOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *B2BiCapabilityConfigurationEdiOutputLocation
-	SetInternalValue(val *B2BiCapabilityConfigurationEdiOutputLocation)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Key() *string
 	SetKey(val *string)
 	KeyInput() *string
@@ -144,8 +144,8 @@ func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputLocationOutputReference) 
 	return returns
 }
 
-func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputLocationOutputReference) InternalValue() *B2BiCapabilityConfigurationEdiOutputLocation {
-	var returns *B2BiCapabilityConfigurationEdiOutputLocation
+func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputLocationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -255,7 +255,7 @@ func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputLocationOutputReference)S
 	)
 }
 
-func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputLocationOutputReference)SetInternalValue(val *B2BiCapabilityConfigurationEdiOutputLocation) {
+func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputLocationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

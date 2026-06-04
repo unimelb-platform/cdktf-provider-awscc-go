@@ -56,11 +56,23 @@ func (s *jsiiProxy_SystemsmanagersapApplication) validateInterpolationForAttribu
 	return nil
 }
 
+func (s *jsiiProxy_SystemsmanagersapApplication) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_SystemsmanagersapApplication) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (s *jsiiProxy_SystemsmanagersapApplication) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_SystemsmanagersapApplication) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (s *jsiiProxy_SystemsmanagersapApplication) validatePutComponentsInfoParameters(value interface{}) error {
 	return nil
 }
 
@@ -101,6 +113,10 @@ func (j *jsiiProxy_SystemsmanagersapApplication) validateSetConnectionParameters
 }
 
 func (j *jsiiProxy_SystemsmanagersapApplication) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_SystemsmanagersapApplication) validateSetDatabaseArnParameters(val *string) error {
 	return nil
 }
 

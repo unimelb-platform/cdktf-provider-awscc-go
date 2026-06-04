@@ -67,6 +67,8 @@ type ConnectInstanceStorageConfigS3ConfigEncryptionConfigOutputReference interfa
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEncryptionType()
+	ResetKeyId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_ConnectInstanceStorageConfigS3ConfigEncryptionConfigOutputRef
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ConnectInstanceStorageConfigS3ConfigEncryptionConfigOutputReference) ResetEncryptionType() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetEncryptionType",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConnectInstanceStorageConfigS3ConfigEncryptionConfigOutputReference) ResetKeyId() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetKeyId",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ConnectInstanceStorageConfigS3ConfigEncryptionConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

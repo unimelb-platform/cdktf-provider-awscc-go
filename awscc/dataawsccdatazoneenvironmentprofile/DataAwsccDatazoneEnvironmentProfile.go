@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdatazoneenvironmentprofile/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datazone_environment_profile awscc_datazone_environment_profile}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datazone_environment_profile awscc_datazone_environment_profile}.
 type DataAwsccDatazoneEnvironmentProfile interface {
 	cdktf.TerraformDataSource
 	AwsAccountId() *string
@@ -33,6 +33,7 @@ type DataAwsccDatazoneEnvironmentProfile interface {
 	DomainIdentifier() *string
 	EnvironmentBlueprintId() *string
 	EnvironmentBlueprintIdentifier() *string
+	EnvironmentProfileId() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -96,6 +97,10 @@ type DataAwsccDatazoneEnvironmentProfile interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -235,6 +240,16 @@ func (j *jsiiProxy_DataAwsccDatazoneEnvironmentProfile) EnvironmentBlueprintIden
 	_jsii_.Get(
 		j,
 		"environmentBlueprintIdentifier",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatazoneEnvironmentProfile) EnvironmentProfileId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"environmentProfileId",
 		&returns,
 	)
 	return returns
@@ -411,7 +426,7 @@ func (j *jsiiProxy_DataAwsccDatazoneEnvironmentProfile) UserParameters() DataAws
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datazone_environment_profile awscc_datazone_environment_profile} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datazone_environment_profile awscc_datazone_environment_profile} Data Source.
 func NewDataAwsccDatazoneEnvironmentProfile(scope constructs.Construct, id *string, config *DataAwsccDatazoneEnvironmentProfileConfig) DataAwsccDatazoneEnvironmentProfile {
 	_init_.Initialize()
 
@@ -429,7 +444,7 @@ func NewDataAwsccDatazoneEnvironmentProfile(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datazone_environment_profile awscc_datazone_environment_profile} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datazone_environment_profile awscc_datazone_environment_profile} Data Source.
 func NewDataAwsccDatazoneEnvironmentProfile_Override(d DataAwsccDatazoneEnvironmentProfile, scope constructs.Construct, id *string, config *DataAwsccDatazoneEnvironmentProfileConfig) {
 	_init_.Initialize()
 
@@ -796,6 +811,32 @@ func (d *jsiiProxy_DataAwsccDatazoneEnvironmentProfile) SynthesizeAttributes() *
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatazoneEnvironmentProfile) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatazoneEnvironmentProfile) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

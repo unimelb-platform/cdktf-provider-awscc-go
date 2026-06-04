@@ -67,6 +67,7 @@ type AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCus
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetApiKey()
 	ResetApiSecretKey()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfile
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorApiKeyOutputReference) ResetApiKey() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetApiKey",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorApiKeyOutputReference) ResetApiSecretKey() {

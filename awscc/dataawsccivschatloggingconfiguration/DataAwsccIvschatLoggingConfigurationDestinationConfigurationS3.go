@@ -1,0 +1,6 @@
+package dataawsccivschatloggingconfiguration
+
+
+type DataAwsccIvschatLoggingConfigurationDestinationConfigurationS3 struct {
+}
+

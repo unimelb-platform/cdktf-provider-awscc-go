@@ -71,6 +71,8 @@ type ApprunnerServiceSourceConfigurationImageRepositoryOutputReference interface
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutImageConfiguration(value *ApprunnerServiceSourceConfigurationImageRepositoryImageConfiguration)
 	ResetImageConfiguration()
+	ResetImageIdentifier()
+	ResetImageRepositoryType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -522,6 +524,22 @@ func (a *jsiiProxy_ApprunnerServiceSourceConfigurationImageRepositoryOutputRefer
 	_jsii_.InvokeVoid(
 		a,
 		"resetImageConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApprunnerServiceSourceConfigurationImageRepositoryOutputReference) ResetImageIdentifier() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetImageIdentifier",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApprunnerServiceSourceConfigurationImageRepositoryOutputReference) ResetImageRepositoryType() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetImageRepositoryType",
 		nil, // no parameters
 	)
 }

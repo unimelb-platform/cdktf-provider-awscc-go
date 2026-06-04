@@ -31,7 +31,7 @@ type ConnectTaskTemplateFieldsOutputReference interface {
 	// Experimental.
 	Fqn() *string
 	Id() ConnectTaskTemplateFieldsIdOutputReference
-	IdInput() *ConnectTaskTemplateFieldsId
+	IdInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	SingleSelectOptions() *[]*string
@@ -74,7 +74,9 @@ type ConnectTaskTemplateFieldsOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutId(value *ConnectTaskTemplateFieldsId)
 	ResetDescription()
+	ResetId()
 	ResetSingleSelectOptions()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -160,8 +162,8 @@ func (j *jsiiProxy_ConnectTaskTemplateFieldsOutputReference) Id() ConnectTaskTem
 	return returns
 }
 
-func (j *jsiiProxy_ConnectTaskTemplateFieldsOutputReference) IdInput() *ConnectTaskTemplateFieldsId {
-	var returns *ConnectTaskTemplateFieldsId
+func (j *jsiiProxy_ConnectTaskTemplateFieldsOutputReference) IdInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"idInput",
@@ -561,10 +563,26 @@ func (c *jsiiProxy_ConnectTaskTemplateFieldsOutputReference) ResetDescription() 
 	)
 }
 
+func (c *jsiiProxy_ConnectTaskTemplateFieldsOutputReference) ResetId() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetId",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_ConnectTaskTemplateFieldsOutputReference) ResetSingleSelectOptions() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetSingleSelectOptions",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConnectTaskTemplateFieldsOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetType",
 		nil, // no parameters
 	)
 }

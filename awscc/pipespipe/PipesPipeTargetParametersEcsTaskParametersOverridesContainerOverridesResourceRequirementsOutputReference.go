@@ -67,6 +67,8 @@ type PipesPipeTargetParametersEcsTaskParametersOverridesContainerOverridesResour
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetType()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (p *jsiiProxy_PipesPipeTargetParametersEcsTaskParametersOverridesContainerO
 	)
 
 	return returns
+}
+
+func (p *jsiiProxy_PipesPipeTargetParametersEcsTaskParametersOverridesContainerOverridesResourceRequirementsOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetType",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PipesPipeTargetParametersEcsTaskParametersOverridesContainerOverridesResourceRequirementsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (p *jsiiProxy_PipesPipeTargetParametersEcsTaskParametersOverridesContainerOverridesResourceRequirementsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

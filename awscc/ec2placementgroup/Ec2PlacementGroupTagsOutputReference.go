@@ -67,6 +67,8 @@ type Ec2PlacementGroupTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (e *jsiiProxy_Ec2PlacementGroupTagsOutputReference) InterpolationForAttribu
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_Ec2PlacementGroupTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2PlacementGroupTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_Ec2PlacementGroupTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

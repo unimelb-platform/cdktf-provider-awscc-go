@@ -27,8 +27,8 @@ type AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignments
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignments
-	SetInternalValue(val *AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignments)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignments
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetWorkgroupNames()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -119,8 +120,8 @@ func (j *jsiiProxy_AthenaCapacityReservationCapacityAssignmentConfigurationCapac
 	return returns
 }
 
-func (j *jsiiProxy_AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignmentsOutputReference) InternalValue() *AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignments {
-	var returns *AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignments
+func (j *jsiiProxy_AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignmentsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -219,7 +220,7 @@ func (j *jsiiProxy_AthenaCapacityReservationCapacityAssignmentConfigurationCapac
 	)
 }
 
-func (j *jsiiProxy_AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignmentsOutputReference)SetInternalValue(val *AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignments) {
+func (j *jsiiProxy_AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignmentsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -447,6 +448,14 @@ func (a *jsiiProxy_AthenaCapacityReservationCapacityAssignmentConfigurationCapac
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignmentsOutputReference) ResetWorkgroupNames() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetWorkgroupNames",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignmentsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

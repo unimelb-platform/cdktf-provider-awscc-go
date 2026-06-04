@@ -1,0 +1,6 @@
+package dataawsccapplicationautoscalingscalabletarget
+
+
+type DataAwsccApplicationautoscalingScalableTargetSuspendedState struct {
+}
+

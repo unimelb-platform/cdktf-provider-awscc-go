@@ -36,7 +36,7 @@ type MediapackagePackagingConfigurationHlsPackageEncryptionOutputReference inter
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	SpekeKeyProvider() MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProviderOutputReference
-	SpekeKeyProviderInput() *MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProvider
+	SpekeKeyProviderInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -72,6 +72,7 @@ type MediapackagePackagingConfigurationHlsPackageEncryptionOutputReference inter
 	PutSpekeKeyProvider(value *MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProvider)
 	ResetConstantInitializationVector()
 	ResetEncryptionMethod()
+	ResetSpekeKeyProvider()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -187,8 +188,8 @@ func (j *jsiiProxy_MediapackagePackagingConfigurationHlsPackageEncryptionOutputR
 	return returns
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfigurationHlsPackageEncryptionOutputReference) SpekeKeyProviderInput() *MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProvider {
-	var returns *MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProvider
+func (j *jsiiProxy_MediapackagePackagingConfigurationHlsPackageEncryptionOutputReference) SpekeKeyProviderInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"spekeKeyProviderInput",
@@ -531,6 +532,14 @@ func (m *jsiiProxy_MediapackagePackagingConfigurationHlsPackageEncryptionOutputR
 	_jsii_.InvokeVoid(
 		m,
 		"resetEncryptionMethod",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediapackagePackagingConfigurationHlsPackageEncryptionOutputReference) ResetSpekeKeyProvider() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetSpekeKeyProvider",
 		nil, // no parameters
 	)
 }

@@ -1,0 +1,6 @@
+package dataawsccpcaconnectorscepconnector
+
+
+type DataAwsccPcaconnectorscepConnectorMobileDeviceManagementIntune struct {
+}
+

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccb2bitransformer/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/b2bi_transformer awscc_b2bi_transformer}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/b2bi_transformer awscc_b2bi_transformer}.
 type DataAwsccB2BiTransformer interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -38,15 +38,18 @@ type DataAwsccB2BiTransformer interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	InputConversion() DataAwsccB2BiTransformerInputConversionOutputReference
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	Mapping() DataAwsccB2BiTransformerMappingOutputReference
 	MappingTemplate() *string
 	ModifiedAt() *string
 	Name() *string
 	// The tree node.
 	Node() constructs.Node
+	OutputConversion() DataAwsccB2BiTransformerOutputConversionOutputReference
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -54,6 +57,7 @@ type DataAwsccB2BiTransformer interface {
 	// Experimental.
 	RawOverrides() interface{}
 	SampleDocument() *string
+	SampleDocuments() DataAwsccB2BiTransformerSampleDocumentsOutputReference
 	Status() *string
 	Tags() DataAwsccB2BiTransformerTagsList
 	// Experimental.
@@ -93,6 +97,10 @@ type DataAwsccB2BiTransformer interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -227,11 +235,31 @@ func (j *jsiiProxy_DataAwsccB2BiTransformer) IdInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccB2BiTransformer) InputConversion() DataAwsccB2BiTransformerInputConversionOutputReference {
+	var returns DataAwsccB2BiTransformerInputConversionOutputReference
+	_jsii_.Get(
+		j,
+		"inputConversion",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccB2BiTransformer) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
 		j,
 		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccB2BiTransformer) Mapping() DataAwsccB2BiTransformerMappingOutputReference {
+	var returns DataAwsccB2BiTransformerMappingOutputReference
+	_jsii_.Get(
+		j,
+		"mapping",
 		&returns,
 	)
 	return returns
@@ -277,6 +305,16 @@ func (j *jsiiProxy_DataAwsccB2BiTransformer) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccB2BiTransformer) OutputConversion() DataAwsccB2BiTransformerOutputConversionOutputReference {
+	var returns DataAwsccB2BiTransformerOutputConversionOutputReference
+	_jsii_.Get(
+		j,
+		"outputConversion",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccB2BiTransformer) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -302,6 +340,16 @@ func (j *jsiiProxy_DataAwsccB2BiTransformer) SampleDocument() *string {
 	_jsii_.Get(
 		j,
 		"sampleDocument",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccB2BiTransformer) SampleDocuments() DataAwsccB2BiTransformerSampleDocumentsOutputReference {
+	var returns DataAwsccB2BiTransformerSampleDocumentsOutputReference
+	_jsii_.Get(
+		j,
+		"sampleDocuments",
 		&returns,
 	)
 	return returns
@@ -378,7 +426,7 @@ func (j *jsiiProxy_DataAwsccB2BiTransformer) TransformerId() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/b2bi_transformer awscc_b2bi_transformer} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/b2bi_transformer awscc_b2bi_transformer} Data Source.
 func NewDataAwsccB2BiTransformer(scope constructs.Construct, id *string, config *DataAwsccB2BiTransformerConfig) DataAwsccB2BiTransformer {
 	_init_.Initialize()
 
@@ -396,7 +444,7 @@ func NewDataAwsccB2BiTransformer(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/b2bi_transformer awscc_b2bi_transformer} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/b2bi_transformer awscc_b2bi_transformer} Data Source.
 func NewDataAwsccB2BiTransformer_Override(d DataAwsccB2BiTransformer, scope constructs.Construct, id *string, config *DataAwsccB2BiTransformerConfig) {
 	_init_.Initialize()
 
@@ -763,6 +811,32 @@ func (d *jsiiProxy_DataAwsccB2BiTransformer) SynthesizeAttributes() *map[string]
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccB2BiTransformer) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccB2BiTransformer) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

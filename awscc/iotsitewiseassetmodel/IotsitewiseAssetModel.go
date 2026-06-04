@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/iotsitewiseassetmodel/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iotsitewise_asset_model awscc_iotsitewise_asset_model}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iotsitewise_asset_model awscc_iotsitewise_asset_model}.
 type IotsitewiseAssetModel interface {
 	cdktf.TerraformResource
 	AssetModelArn() *string
@@ -18,6 +18,9 @@ type IotsitewiseAssetModel interface {
 	AssetModelDescription() *string
 	SetAssetModelDescription(val *string)
 	AssetModelDescriptionInput() *string
+	AssetModelExternalId() *string
+	SetAssetModelExternalId(val *string)
+	AssetModelExternalIdInput() *string
 	AssetModelHierarchies() IotsitewiseAssetModelAssetModelHierarchiesList
 	AssetModelHierarchiesInput() interface{}
 	AssetModelId() *string
@@ -26,6 +29,9 @@ type IotsitewiseAssetModel interface {
 	AssetModelNameInput() *string
 	AssetModelProperties() IotsitewiseAssetModelAssetModelPropertiesList
 	AssetModelPropertiesInput() interface{}
+	AssetModelType() *string
+	SetAssetModelType(val *string)
+	AssetModelTypeInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -99,12 +105,22 @@ type IotsitewiseAssetModel interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -114,13 +130,18 @@ type IotsitewiseAssetModel interface {
 	PutTags(value interface{})
 	ResetAssetModelCompositeModels()
 	ResetAssetModelDescription()
+	ResetAssetModelExternalId()
 	ResetAssetModelHierarchies()
 	ResetAssetModelProperties()
+	ResetAssetModelType()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -180,6 +201,26 @@ func (j *jsiiProxy_IotsitewiseAssetModel) AssetModelDescriptionInput() *string {
 	_jsii_.Get(
 		j,
 		"assetModelDescriptionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModel) AssetModelExternalId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"assetModelExternalId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModel) AssetModelExternalIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"assetModelExternalIdInput",
 		&returns,
 	)
 	return returns
@@ -250,6 +291,26 @@ func (j *jsiiProxy_IotsitewiseAssetModel) AssetModelPropertiesInput() interface{
 	_jsii_.Get(
 		j,
 		"assetModelPropertiesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModel) AssetModelType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"assetModelType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModel) AssetModelTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"assetModelTypeInput",
 		&returns,
 	)
 	return returns
@@ -446,7 +507,7 @@ func (j *jsiiProxy_IotsitewiseAssetModel) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iotsitewise_asset_model awscc_iotsitewise_asset_model} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iotsitewise_asset_model awscc_iotsitewise_asset_model} Resource.
 func NewIotsitewiseAssetModel(scope constructs.Construct, id *string, config *IotsitewiseAssetModelConfig) IotsitewiseAssetModel {
 	_init_.Initialize()
 
@@ -464,7 +525,7 @@ func NewIotsitewiseAssetModel(scope constructs.Construct, id *string, config *Io
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iotsitewise_asset_model awscc_iotsitewise_asset_model} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iotsitewise_asset_model awscc_iotsitewise_asset_model} Resource.
 func NewIotsitewiseAssetModel_Override(i IotsitewiseAssetModel, scope constructs.Construct, id *string, config *IotsitewiseAssetModelConfig) {
 	_init_.Initialize()
 
@@ -486,6 +547,17 @@ func (j *jsiiProxy_IotsitewiseAssetModel)SetAssetModelDescription(val *string) {
 	)
 }
 
+func (j *jsiiProxy_IotsitewiseAssetModel)SetAssetModelExternalId(val *string) {
+	if err := j.validateSetAssetModelExternalIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"assetModelExternalId",
+		val,
+	)
+}
+
 func (j *jsiiProxy_IotsitewiseAssetModel)SetAssetModelName(val *string) {
 	if err := j.validateSetAssetModelNameParameters(val); err != nil {
 		panic(err)
@@ -493,6 +565,17 @@ func (j *jsiiProxy_IotsitewiseAssetModel)SetAssetModelName(val *string) {
 	_jsii_.Set(
 		j,
 		"assetModelName",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModel)SetAssetModelType(val *string) {
+	if err := j.validateSetAssetModelTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"assetModelType",
 		val,
 	)
 }
@@ -834,6 +917,19 @@ func (i *jsiiProxy_IotsitewiseAssetModel) GetStringMapAttribute(terraformAttribu
 	return returns
 }
 
+func (i *jsiiProxy_IotsitewiseAssetModel) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (i *jsiiProxy_IotsitewiseAssetModel) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := i.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -861,6 +957,17 @@ func (i *jsiiProxy_IotsitewiseAssetModel) InterpolationForAttribute(terraformAtt
 	return returns
 }
 
+func (i *jsiiProxy_IotsitewiseAssetModel) MoveFromId(id *string) {
+	if err := i.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (i *jsiiProxy_IotsitewiseAssetModel) MoveTo(moveTarget *string, index interface{}) {
 	if err := i.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -869,6 +976,17 @@ func (i *jsiiProxy_IotsitewiseAssetModel) MoveTo(moveTarget *string, index inter
 		i,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModel) MoveToId(id *string) {
+	if err := i.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -943,6 +1061,14 @@ func (i *jsiiProxy_IotsitewiseAssetModel) ResetAssetModelDescription() {
 	)
 }
 
+func (i *jsiiProxy_IotsitewiseAssetModel) ResetAssetModelExternalId() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetAssetModelExternalId",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IotsitewiseAssetModel) ResetAssetModelHierarchies() {
 	_jsii_.InvokeVoid(
 		i,
@@ -955,6 +1081,14 @@ func (i *jsiiProxy_IotsitewiseAssetModel) ResetAssetModelProperties() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetAssetModelProperties",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModel) ResetAssetModelType() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetAssetModelType",
 		nil, // no parameters
 	)
 }
@@ -981,6 +1115,32 @@ func (i *jsiiProxy_IotsitewiseAssetModel) SynthesizeAttributes() *map[string]int
 	_jsii_.Invoke(
 		i,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModel) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		i,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModel) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

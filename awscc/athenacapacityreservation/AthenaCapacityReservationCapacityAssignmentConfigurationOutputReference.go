@@ -64,6 +64,7 @@ type AthenaCapacityReservationCapacityAssignmentConfigurationOutputReference int
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutCapacityAssignments(value interface{})
+	ResetCapacityAssignments()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -446,6 +447,14 @@ func (a *jsiiProxy_AthenaCapacityReservationCapacityAssignmentConfigurationOutpu
 		a,
 		"putCapacityAssignments",
 		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_AthenaCapacityReservationCapacityAssignmentConfigurationOutputReference) ResetCapacityAssignments() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetCapacityAssignments",
+		nil, // no parameters
 	)
 }
 

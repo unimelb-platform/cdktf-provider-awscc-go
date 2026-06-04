@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccverifiedpermissionspolicystore/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/verifiedpermissions_policy_store awscc_verifiedpermissions_policy_store}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/verifiedpermissions_policy_store awscc_verifiedpermissions_policy_store}.
 type DataAwsccVerifiedpermissionsPolicyStore interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -21,6 +21,7 @@ type DataAwsccVerifiedpermissionsPolicyStore interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	DeletionProtection() DataAwsccVerifiedpermissionsPolicyStoreDeletionProtectionOutputReference
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -51,6 +52,7 @@ type DataAwsccVerifiedpermissionsPolicyStore interface {
 	// Experimental.
 	RawOverrides() interface{}
 	Schema() DataAwsccVerifiedpermissionsPolicyStoreSchemaOutputReference
+	Tags() DataAwsccVerifiedpermissionsPolicyStoreTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -87,6 +89,10 @@ type DataAwsccVerifiedpermissionsPolicyStore interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -136,6 +142,16 @@ func (j *jsiiProxy_DataAwsccVerifiedpermissionsPolicyStore) Count() interface{} 
 	_jsii_.Get(
 		j,
 		"count",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccVerifiedpermissionsPolicyStore) DeletionProtection() DataAwsccVerifiedpermissionsPolicyStoreDeletionProtectionOutputReference {
+	var returns DataAwsccVerifiedpermissionsPolicyStoreDeletionProtectionOutputReference
+	_jsii_.Get(
+		j,
+		"deletionProtection",
 		&returns,
 	)
 	return returns
@@ -271,6 +287,16 @@ func (j *jsiiProxy_DataAwsccVerifiedpermissionsPolicyStore) Schema() DataAwsccVe
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccVerifiedpermissionsPolicyStore) Tags() DataAwsccVerifiedpermissionsPolicyStoreTagsList {
+	var returns DataAwsccVerifiedpermissionsPolicyStoreTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccVerifiedpermissionsPolicyStore) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -312,7 +338,7 @@ func (j *jsiiProxy_DataAwsccVerifiedpermissionsPolicyStore) ValidationSettings()
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/verifiedpermissions_policy_store awscc_verifiedpermissions_policy_store} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/verifiedpermissions_policy_store awscc_verifiedpermissions_policy_store} Data Source.
 func NewDataAwsccVerifiedpermissionsPolicyStore(scope constructs.Construct, id *string, config *DataAwsccVerifiedpermissionsPolicyStoreConfig) DataAwsccVerifiedpermissionsPolicyStore {
 	_init_.Initialize()
 
@@ -330,7 +356,7 @@ func NewDataAwsccVerifiedpermissionsPolicyStore(scope constructs.Construct, id *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/verifiedpermissions_policy_store awscc_verifiedpermissions_policy_store} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/verifiedpermissions_policy_store awscc_verifiedpermissions_policy_store} Data Source.
 func NewDataAwsccVerifiedpermissionsPolicyStore_Override(d DataAwsccVerifiedpermissionsPolicyStore, scope constructs.Construct, id *string, config *DataAwsccVerifiedpermissionsPolicyStoreConfig) {
 	_init_.Initialize()
 
@@ -697,6 +723,32 @@ func (d *jsiiProxy_DataAwsccVerifiedpermissionsPolicyStore) SynthesizeAttributes
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccVerifiedpermissionsPolicyStore) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccVerifiedpermissionsPolicyStore) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -60,6 +60,10 @@ func (b *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) validateResolv
 	return nil
 }
 
+func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) validateSetCapabilityDirectionParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	return nil
 }

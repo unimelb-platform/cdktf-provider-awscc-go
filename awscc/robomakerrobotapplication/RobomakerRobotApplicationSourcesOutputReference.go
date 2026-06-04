@@ -70,6 +70,9 @@ type RobomakerRobotApplicationSourcesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetArchitecture()
+	ResetS3Bucket()
+	ResetS3Key()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (r *jsiiProxy_RobomakerRobotApplicationSourcesOutputReference) Interpolatio
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_RobomakerRobotApplicationSourcesOutputReference) ResetArchitecture() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetArchitecture",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RobomakerRobotApplicationSourcesOutputReference) ResetS3Bucket() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetS3Bucket",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RobomakerRobotApplicationSourcesOutputReference) ResetS3Key() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetS3Key",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_RobomakerRobotApplicationSourcesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

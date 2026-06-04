@@ -36,7 +36,7 @@ type IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateOutputReferen
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	RateIncreaseCriteria() IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateRateIncreaseCriteriaOutputReference
-	RateIncreaseCriteriaInput() *IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateRateIncreaseCriteria
+	RateIncreaseCriteriaInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -70,6 +70,9 @@ type IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateOutputReferen
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutRateIncreaseCriteria(value *IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateRateIncreaseCriteria)
+	ResetBaseRatePerMinute()
+	ResetIncrementFactor()
+	ResetRateIncreaseCriteria()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -185,8 +188,8 @@ func (j *jsiiProxy_IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRat
 	return returns
 }
 
-func (j *jsiiProxy_IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateOutputReference) RateIncreaseCriteriaInput() *IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateRateIncreaseCriteria {
-	var returns *IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateRateIncreaseCriteria
+func (j *jsiiProxy_IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateOutputReference) RateIncreaseCriteriaInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"rateIncreaseCriteriaInput",
@@ -514,6 +517,30 @@ func (i *jsiiProxy_IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRat
 		i,
 		"putRateIncreaseCriteria",
 		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateOutputReference) ResetBaseRatePerMinute() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetBaseRatePerMinute",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateOutputReference) ResetIncrementFactor() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetIncrementFactor",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateOutputReference) ResetRateIncreaseCriteria() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRateIncreaseCriteria",
+		nil, // no parameters
 	)
 }
 

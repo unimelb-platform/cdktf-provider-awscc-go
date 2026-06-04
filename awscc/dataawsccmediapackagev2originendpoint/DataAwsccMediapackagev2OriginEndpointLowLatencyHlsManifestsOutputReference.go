@@ -35,6 +35,7 @@ type DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsOutputReference 
 	ManifestWindowSeconds() *float64
 	ProgramDateTimeIntervalSeconds() *float64
 	ScteHls() DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsScteHlsOutputReference
+	StartTag() DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsStartTagOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -44,6 +45,7 @@ type DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsOutputReference 
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	Url() *string
+	UrlEncodeChildManifest() cdktf.IResolvable
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -193,6 +195,16 @@ func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsOu
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsOutputReference) StartTag() DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsStartTagOutputReference {
+	var returns DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsStartTagOutputReference
+	_jsii_.Get(
+		j,
+		"startTag",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -218,6 +230,16 @@ func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsOu
 	_jsii_.Get(
 		j,
 		"url",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsOutputReference) UrlEncodeChildManifest() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"urlEncodeChildManifest",
 		&returns,
 	)
 	return returns

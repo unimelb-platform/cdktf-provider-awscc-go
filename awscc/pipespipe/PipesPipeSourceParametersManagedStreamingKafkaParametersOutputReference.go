@@ -84,6 +84,7 @@ type PipesPipeSourceParametersManagedStreamingKafkaParametersOutputReference int
 	ResetCredentials()
 	ResetMaximumBatchingWindowInSeconds()
 	ResetStartingPosition()
+	ResetTopicName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -660,6 +661,14 @@ func (p *jsiiProxy_PipesPipeSourceParametersManagedStreamingKafkaParametersOutpu
 	_jsii_.InvokeVoid(
 		p,
 		"resetStartingPosition",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PipesPipeSourceParametersManagedStreamingKafkaParametersOutputReference) ResetTopicName() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetTopicName",
 		nil, // no parameters
 	)
 }

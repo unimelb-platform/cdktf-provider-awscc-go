@@ -72,6 +72,10 @@ func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancerSubnetMappingsOutputReferen
 	return nil
 }
 
+func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancerSubnetMappingsOutputReference) validateSetSourceNatIpv6PrefixParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancerSubnetMappingsOutputReference) validateSetSubnetIdParameters(val *string) error {
 	return nil
 }

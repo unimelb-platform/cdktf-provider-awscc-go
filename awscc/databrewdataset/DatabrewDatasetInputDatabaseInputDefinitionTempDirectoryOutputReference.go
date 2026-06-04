@@ -13,6 +13,9 @@ type DatabrewDatasetInputDatabaseInputDefinitionTempDirectoryOutputReference int
 	Bucket() *string
 	SetBucket(val *string)
 	BucketInput() *string
+	BucketOwner() *string
+	SetBucketOwner(val *string)
+	BucketOwnerInput() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -67,6 +70,8 @@ type DatabrewDatasetInputDatabaseInputDefinitionTempDirectoryOutputReference int
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucket()
+	ResetBucketOwner()
 	ResetKey()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -98,6 +103,26 @@ func (j *jsiiProxy_DatabrewDatasetInputDatabaseInputDefinitionTempDirectoryOutpu
 	_jsii_.Get(
 		j,
 		"bucketInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatabrewDatasetInputDatabaseInputDefinitionTempDirectoryOutputReference) BucketOwner() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"bucketOwner",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatabrewDatasetInputDatabaseInputDefinitionTempDirectoryOutputReference) BucketOwnerInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"bucketOwnerInput",
 		&returns,
 	)
 	return returns
@@ -228,6 +253,17 @@ func (j *jsiiProxy_DatabrewDatasetInputDatabaseInputDefinitionTempDirectoryOutpu
 	_jsii_.Set(
 		j,
 		"bucket",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DatabrewDatasetInputDatabaseInputDefinitionTempDirectoryOutputReference)SetBucketOwner(val *string) {
+	if err := j.validateSetBucketOwnerParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"bucketOwner",
 		val,
 	)
 }
@@ -482,6 +518,22 @@ func (d *jsiiProxy_DatabrewDatasetInputDatabaseInputDefinitionTempDirectoryOutpu
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatabrewDatasetInputDatabaseInputDefinitionTempDirectoryOutputReference) ResetBucket() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetBucket",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatabrewDatasetInputDatabaseInputDefinitionTempDirectoryOutputReference) ResetBucketOwner() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetBucketOwner",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatabrewDatasetInputDatabaseInputDefinitionTempDirectoryOutputReference) ResetKey() {

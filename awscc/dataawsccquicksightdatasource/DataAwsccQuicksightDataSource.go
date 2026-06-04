@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccquicksightdatasource/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/quicksight_data_source awscc_quicksight_data_source}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/quicksight_data_source awscc_quicksight_data_source}.
 type DataAwsccQuicksightDataSource interface {
 	cdktf.TerraformDataSource
 	AlternateDataSourceParameters() DataAwsccQuicksightDataSourceAlternateDataSourceParametersList
@@ -32,6 +32,7 @@ type DataAwsccQuicksightDataSource interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	ErrorInfo() DataAwsccQuicksightDataSourceErrorInfoOutputReference
+	FolderArns() *[]*string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -98,6 +99,10 @@ type DataAwsccQuicksightDataSource interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -227,6 +232,16 @@ func (j *jsiiProxy_DataAwsccQuicksightDataSource) ErrorInfo() DataAwsccQuicksigh
 	_jsii_.Get(
 		j,
 		"errorInfo",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccQuicksightDataSource) FolderArns() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"folderArns",
 		&returns,
 	)
 	return returns
@@ -433,7 +448,7 @@ func (j *jsiiProxy_DataAwsccQuicksightDataSource) VpcConnectionProperties() Data
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/quicksight_data_source awscc_quicksight_data_source} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/quicksight_data_source awscc_quicksight_data_source} Data Source.
 func NewDataAwsccQuicksightDataSource(scope constructs.Construct, id *string, config *DataAwsccQuicksightDataSourceConfig) DataAwsccQuicksightDataSource {
 	_init_.Initialize()
 
@@ -451,7 +466,7 @@ func NewDataAwsccQuicksightDataSource(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/quicksight_data_source awscc_quicksight_data_source} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/quicksight_data_source awscc_quicksight_data_source} Data Source.
 func NewDataAwsccQuicksightDataSource_Override(d DataAwsccQuicksightDataSource, scope constructs.Construct, id *string, config *DataAwsccQuicksightDataSourceConfig) {
 	_init_.Initialize()
 
@@ -818,6 +833,32 @@ func (d *jsiiProxy_DataAwsccQuicksightDataSource) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccQuicksightDataSource) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccQuicksightDataSource) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

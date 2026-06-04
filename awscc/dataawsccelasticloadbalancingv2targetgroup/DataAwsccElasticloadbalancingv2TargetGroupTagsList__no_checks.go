@@ -4,6 +4,10 @@ package dataawsccelasticloadbalancingv2targetgroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccElasticloadbalancingv2TargetGroupTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccElasticloadbalancingv2TargetGroupTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

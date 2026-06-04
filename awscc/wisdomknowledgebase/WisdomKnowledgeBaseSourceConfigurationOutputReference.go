@@ -31,6 +31,8 @@ type WisdomKnowledgeBaseSourceConfigurationOutputReference interface {
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	ManagedSourceConfiguration() WisdomKnowledgeBaseSourceConfigurationManagedSourceConfigurationOutputReference
+	ManagedSourceConfigurationInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,7 +66,9 @@ type WisdomKnowledgeBaseSourceConfigurationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAppIntegrations(value *WisdomKnowledgeBaseSourceConfigurationAppIntegrations)
+	PutManagedSourceConfiguration(value *WisdomKnowledgeBaseSourceConfigurationManagedSourceConfiguration)
 	ResetAppIntegrations()
+	ResetManagedSourceConfiguration()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -145,6 +149,26 @@ func (j *jsiiProxy_WisdomKnowledgeBaseSourceConfigurationOutputReference) Intern
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WisdomKnowledgeBaseSourceConfigurationOutputReference) ManagedSourceConfiguration() WisdomKnowledgeBaseSourceConfigurationManagedSourceConfigurationOutputReference {
+	var returns WisdomKnowledgeBaseSourceConfigurationManagedSourceConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"managedSourceConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WisdomKnowledgeBaseSourceConfigurationOutputReference) ManagedSourceConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"managedSourceConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -450,10 +474,29 @@ func (w *jsiiProxy_WisdomKnowledgeBaseSourceConfigurationOutputReference) PutApp
 	)
 }
 
+func (w *jsiiProxy_WisdomKnowledgeBaseSourceConfigurationOutputReference) PutManagedSourceConfiguration(value *WisdomKnowledgeBaseSourceConfigurationManagedSourceConfiguration) {
+	if err := w.validatePutManagedSourceConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		w,
+		"putManagedSourceConfiguration",
+		[]interface{}{value},
+	)
+}
+
 func (w *jsiiProxy_WisdomKnowledgeBaseSourceConfigurationOutputReference) ResetAppIntegrations() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetAppIntegrations",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_WisdomKnowledgeBaseSourceConfigurationOutputReference) ResetManagedSourceConfiguration() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetManagedSourceConfiguration",
 		nil, // no parameters
 	)
 }

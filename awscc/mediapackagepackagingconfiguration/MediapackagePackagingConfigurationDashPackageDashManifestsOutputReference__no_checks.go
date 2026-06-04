@@ -60,7 +60,7 @@ func (j *jsiiProxy_MediapackagePackagingConfigurationDashPackageDashManifestsOut
 	return nil
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfigurationDashPackageDashManifestsOutputReference) validateSetInternalValueParameters(val *MediapackagePackagingConfigurationDashPackageDashManifests) error {
+func (j *jsiiProxy_MediapackagePackagingConfigurationDashPackageDashManifestsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

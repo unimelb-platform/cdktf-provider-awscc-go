@@ -60,7 +60,7 @@ func (j *jsiiProxy_EcsServiceServiceConnectConfigurationServicesTlsIssuerCertifi
 	return nil
 }
 
-func (j *jsiiProxy_EcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthorityOutputReference) validateSetInternalValueParameters(val *EcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthority) error {
+func (j *jsiiProxy_EcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthorityOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

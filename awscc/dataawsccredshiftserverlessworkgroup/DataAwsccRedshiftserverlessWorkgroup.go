@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccredshiftserverlessworkgroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/redshiftserverless_workgroup awscc_redshiftserverless_workgroup}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/redshiftserverless_workgroup awscc_redshiftserverless_workgroup}.
 type DataAwsccRedshiftserverlessWorkgroup interface {
 	cdktf.TerraformDataSource
 	BaseCapacity() *float64
@@ -42,10 +42,12 @@ type DataAwsccRedshiftserverlessWorkgroup interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	MaxCapacity() *float64
 	NamespaceName() *string
 	// The tree node.
 	Node() constructs.Node
 	Port() *float64
+	PricePerformanceTarget() DataAwsccRedshiftserverlessWorkgroupPricePerformanceTargetOutputReference
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -53,7 +55,11 @@ type DataAwsccRedshiftserverlessWorkgroup interface {
 	PubliclyAccessible() cdktf.IResolvable
 	// Experimental.
 	RawOverrides() interface{}
+	RecoveryPointId() *string
 	SecurityGroupIds() *[]*string
+	SnapshotArn() *string
+	SnapshotName() *string
+	SnapshotOwnerAccount() *string
 	SubnetIds() *[]*string
 	Tags() DataAwsccRedshiftserverlessWorkgroupTagsList
 	// Experimental.
@@ -62,6 +68,7 @@ type DataAwsccRedshiftserverlessWorkgroup interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	TrackName() *string
 	Workgroup() DataAwsccRedshiftserverlessWorkgroupWorkgroupOutputReference
 	WorkgroupName() *string
 	// Experimental.
@@ -93,6 +100,10 @@ type DataAwsccRedshiftserverlessWorkgroup interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -237,6 +248,16 @@ func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroup) Lifecycle() *cdktf.Terr
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroup) MaxCapacity() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxCapacity",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroup) NamespaceName() *string {
 	var returns *string
 	_jsii_.Get(
@@ -262,6 +283,16 @@ func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroup) Port() *float64 {
 	_jsii_.Get(
 		j,
 		"port",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroup) PricePerformanceTarget() DataAwsccRedshiftserverlessWorkgroupPricePerformanceTargetOutputReference {
+	var returns DataAwsccRedshiftserverlessWorkgroupPricePerformanceTargetOutputReference
+	_jsii_.Get(
+		j,
+		"pricePerformanceTarget",
 		&returns,
 	)
 	return returns
@@ -297,11 +328,51 @@ func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroup) RawOverrides() interfac
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroup) RecoveryPointId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"recoveryPointId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroup) SecurityGroupIds() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
 		"securityGroupIds",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroup) SnapshotArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"snapshotArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroup) SnapshotName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"snapshotName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroup) SnapshotOwnerAccount() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"snapshotOwnerAccount",
 		&returns,
 	)
 	return returns
@@ -357,6 +428,16 @@ func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroup) TerraformResourceType()
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroup) TrackName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"trackName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroup) Workgroup() DataAwsccRedshiftserverlessWorkgroupWorkgroupOutputReference {
 	var returns DataAwsccRedshiftserverlessWorkgroupWorkgroupOutputReference
 	_jsii_.Get(
@@ -378,7 +459,7 @@ func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroup) WorkgroupName() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/redshiftserverless_workgroup awscc_redshiftserverless_workgroup} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/redshiftserverless_workgroup awscc_redshiftserverless_workgroup} Data Source.
 func NewDataAwsccRedshiftserverlessWorkgroup(scope constructs.Construct, id *string, config *DataAwsccRedshiftserverlessWorkgroupConfig) DataAwsccRedshiftserverlessWorkgroup {
 	_init_.Initialize()
 
@@ -396,7 +477,7 @@ func NewDataAwsccRedshiftserverlessWorkgroup(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/redshiftserverless_workgroup awscc_redshiftserverless_workgroup} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/redshiftserverless_workgroup awscc_redshiftserverless_workgroup} Data Source.
 func NewDataAwsccRedshiftserverlessWorkgroup_Override(d DataAwsccRedshiftserverlessWorkgroup, scope constructs.Construct, id *string, config *DataAwsccRedshiftserverlessWorkgroupConfig) {
 	_init_.Initialize()
 
@@ -763,6 +844,32 @@ func (d *jsiiProxy_DataAwsccRedshiftserverlessWorkgroup) SynthesizeAttributes() 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRedshiftserverlessWorkgroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRedshiftserverlessWorkgroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -29,6 +29,7 @@ type DataAwsccPcaconnectoradConnectorVpcInformationOutputReference interface {
 	Fqn() *string
 	InternalValue() *DataAwsccPcaconnectoradConnectorVpcInformation
 	SetInternalValue(val *DataAwsccPcaconnectoradConnectorVpcInformation)
+	IpAddressType() *string
 	SecurityGroupIds() *[]*string
 	// Experimental.
 	TerraformAttribute() *string
@@ -122,6 +123,16 @@ func (j *jsiiProxy_DataAwsccPcaconnectoradConnectorVpcInformationOutputReference
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccPcaconnectoradConnectorVpcInformationOutputReference) IpAddressType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipAddressType",
 		&returns,
 	)
 	return returns

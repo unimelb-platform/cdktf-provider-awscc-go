@@ -67,6 +67,8 @@ type IotfleetwiseCampaignDataDestinationConfigsTimestreamConfigOutputReference i
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetExecutionRoleArn()
+	ResetTimestreamTableArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (i *jsiiProxy_IotfleetwiseCampaignDataDestinationConfigsTimestreamConfigOut
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotfleetwiseCampaignDataDestinationConfigsTimestreamConfigOutputReference) ResetExecutionRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetExecutionRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotfleetwiseCampaignDataDestinationConfigsTimestreamConfigOutputReference) ResetTimestreamTableArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTimestreamTableArn",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotfleetwiseCampaignDataDestinationConfigsTimestreamConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -4,6 +4,10 @@ package guarddutydetector
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (g *jsiiProxy_GuarddutyDetectorTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (g *jsiiProxy_GuarddutyDetectorTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

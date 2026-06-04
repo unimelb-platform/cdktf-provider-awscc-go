@@ -67,6 +67,7 @@ type ElasticacheServerlessCacheTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
 	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (e *jsiiProxy_ElasticacheServerlessCacheTagsOutputReference) InterpolationF
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_ElasticacheServerlessCacheTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetKey",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_ElasticacheServerlessCacheTagsOutputReference) ResetValue() {

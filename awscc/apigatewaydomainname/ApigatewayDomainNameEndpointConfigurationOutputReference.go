@@ -29,6 +29,9 @@ type ApigatewayDomainNameEndpointConfigurationOutputReference interface {
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	IpAddressType() *string
+	SetIpAddressType(val *string)
+	IpAddressTypeInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +67,7 @@ type ApigatewayDomainNameEndpointConfigurationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetIpAddressType()
 	ResetTypes()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -125,6 +129,26 @@ func (j *jsiiProxy_ApigatewayDomainNameEndpointConfigurationOutputReference) Int
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApigatewayDomainNameEndpointConfigurationOutputReference) IpAddressType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipAddressType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApigatewayDomainNameEndpointConfigurationOutputReference) IpAddressTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipAddressTypeInput",
 		&returns,
 	)
 	return returns
@@ -227,6 +251,17 @@ func (j *jsiiProxy_ApigatewayDomainNameEndpointConfigurationOutputReference)SetI
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ApigatewayDomainNameEndpointConfigurationOutputReference)SetIpAddressType(val *string) {
+	if err := j.validateSetIpAddressTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ipAddressType",
 		val,
 	)
 }
@@ -448,6 +483,14 @@ func (a *jsiiProxy_ApigatewayDomainNameEndpointConfigurationOutputReference) Int
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_ApigatewayDomainNameEndpointConfigurationOutputReference) ResetIpAddressType() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetIpAddressType",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_ApigatewayDomainNameEndpointConfigurationOutputReference) ResetTypes() {

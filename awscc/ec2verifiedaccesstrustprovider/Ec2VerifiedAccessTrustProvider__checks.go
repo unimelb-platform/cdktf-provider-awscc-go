@@ -119,6 +119,14 @@ func (e *jsiiProxy_Ec2VerifiedAccessTrustProvider) validateInterpolationForAttri
 	return nil
 }
 
+func (e *jsiiProxy_Ec2VerifiedAccessTrustProvider) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VerifiedAccessTrustProvider) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (e *jsiiProxy_Ec2VerifiedAccessTrustProvider) validateMoveToParameters(move
 	return nil
 }
 
+func (e *jsiiProxy_Ec2VerifiedAccessTrustProvider) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VerifiedAccessTrustProvider) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -189,6 +205,17 @@ func (e *jsiiProxy_Ec2VerifiedAccessTrustProvider) validateOverrideLogicalIdPara
 }
 
 func (e *jsiiProxy_Ec2VerifiedAccessTrustProvider) validatePutDeviceOptionsParameters(value *Ec2VerifiedAccessTrustProviderDeviceOptions) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VerifiedAccessTrustProvider) validatePutNativeApplicationOidcOptionsParameters(value *Ec2VerifiedAccessTrustProviderNativeApplicationOidcOptions) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}

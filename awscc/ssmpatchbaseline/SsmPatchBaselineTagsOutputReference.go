@@ -67,6 +67,8 @@ type SsmPatchBaselineTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (s *jsiiProxy_SsmPatchBaselineTagsOutputReference) InterpolationForAttribut
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SsmPatchBaselineTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SsmPatchBaselineTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SsmPatchBaselineTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

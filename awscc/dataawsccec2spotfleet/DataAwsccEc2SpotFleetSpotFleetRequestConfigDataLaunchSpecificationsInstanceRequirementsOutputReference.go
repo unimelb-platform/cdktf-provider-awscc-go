@@ -18,6 +18,7 @@ type DataAwsccEc2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstance
 	AllowedInstanceTypes() *[]*string
 	BareMetal() *string
 	BaselineEbsBandwidthMbps() DataAwsccEc2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsBaselineEbsBandwidthMbpsOutputReference
+	BaselinePerformanceFactors() DataAwsccEc2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsBaselinePerformanceFactorsOutputReference
 	BurstablePerformance() *string
 	// the index of the complex object in a list.
 	// Experimental.
@@ -43,6 +44,7 @@ type DataAwsccEc2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstance
 	SetInternalValue(val *DataAwsccEc2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirements)
 	LocalStorage() *string
 	LocalStorageTypes() *[]*string
+	MaxSpotPriceAsPercentageOfOptimalOnDemandPrice() *float64
 	MemoryGiBPerVCpu() DataAwsccEc2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsMemoryGiBPerVCpuOutputReference
 	MemoryMiB() DataAwsccEc2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsMemoryMiBOutputReference
 	NetworkBandwidthGbps() DataAwsccEc2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsNetworkBandwidthGbpsOutputReference
@@ -179,6 +181,16 @@ func (j *jsiiProxy_DataAwsccEc2SpotFleetSpotFleetRequestConfigDataLaunchSpecific
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsOutputReference) BaselinePerformanceFactors() DataAwsccEc2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsBaselinePerformanceFactorsOutputReference {
+	var returns DataAwsccEc2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsBaselinePerformanceFactorsOutputReference
+	_jsii_.Get(
+		j,
+		"baselinePerformanceFactors",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsOutputReference) BurstablePerformance() *string {
 	var returns *string
 	_jsii_.Get(
@@ -284,6 +296,16 @@ func (j *jsiiProxy_DataAwsccEc2SpotFleetSpotFleetRequestConfigDataLaunchSpecific
 	_jsii_.Get(
 		j,
 		"localStorageTypes",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsOutputReference) MaxSpotPriceAsPercentageOfOptimalOnDemandPrice() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxSpotPriceAsPercentageOfOptimalOnDemandPrice",
 		&returns,
 	)
 	return returns

@@ -68,6 +68,7 @@ type KinesisfirehoseDeliveryStreamDeliveryStreamEncryptionConfigurationInputOutp
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetKeyArn()
+	ResetKeyType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamDeliveryStreamEncryptionConfigur
 	_jsii_.InvokeVoid(
 		k,
 		"resetKeyArn",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamDeliveryStreamEncryptionConfigurationInputOutputReference) ResetKeyType() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetKeyType",
 		nil, // no parameters
 	)
 }

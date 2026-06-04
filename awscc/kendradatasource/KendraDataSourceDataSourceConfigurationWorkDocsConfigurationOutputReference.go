@@ -83,6 +83,7 @@ type KendraDataSourceDataSourceConfigurationWorkDocsConfigurationOutputReference
 	ResetExclusionPatterns()
 	ResetFieldMappings()
 	ResetInclusionPatterns()
+	ResetOrganizationId()
 	ResetUseChangeLog()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -652,6 +653,14 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationWorkDocsConfigurationO
 	_jsii_.InvokeVoid(
 		k,
 		"resetInclusionPatterns",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationWorkDocsConfigurationOutputReference) ResetOrganizationId() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetOrganizationId",
 		nil, // no parameters
 	)
 }

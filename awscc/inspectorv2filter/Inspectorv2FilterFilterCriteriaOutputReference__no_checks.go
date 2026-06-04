@@ -48,6 +48,18 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutAw
 	return nil
 }
 
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutCodeVulnerabilityDetectorNameParameters(value interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutCodeVulnerabilityDetectorTagsParameters(value interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutCodeVulnerabilityFilePathParameters(value interface{}) error {
+	return nil
+}
+
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutComponentIdParameters(value interface{}) error {
 	return nil
 }
@@ -92,6 +104,14 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutEc
 	return nil
 }
 
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutEpssScoreParameters(value interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutExploitAvailableParameters(value interface{}) error {
+	return nil
+}
+
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutFindingArnParameters(value interface{}) error {
 	return nil
 }
@@ -108,7 +128,31 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutFi
 	return nil
 }
 
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutFixAvailableParameters(value interface{}) error {
+	return nil
+}
+
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutInspectorScoreParameters(value interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutLambdaFunctionExecutionRoleArnParameters(value interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutLambdaFunctionLastModifiedAtParameters(value interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutLambdaFunctionLayersParameters(value interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutLambdaFunctionNameParameters(value interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutLambdaFunctionRuntimeParameters(value interface{}) error {
 	return nil
 }
 

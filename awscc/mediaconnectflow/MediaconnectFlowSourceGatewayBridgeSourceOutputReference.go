@@ -67,6 +67,7 @@ type MediaconnectFlowSourceGatewayBridgeSourceOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutVpcInterfaceAttachment(value *MediaconnectFlowSourceGatewayBridgeSourceVpcInterfaceAttachment)
+	ResetBridgeArn()
 	ResetVpcInterfaceAttachment()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -481,6 +482,14 @@ func (m *jsiiProxy_MediaconnectFlowSourceGatewayBridgeSourceOutputReference) Put
 		m,
 		"putVpcInterfaceAttachment",
 		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_MediaconnectFlowSourceGatewayBridgeSourceOutputReference) ResetBridgeArn() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetBridgeArn",
+		nil, // no parameters
 	)
 }
 

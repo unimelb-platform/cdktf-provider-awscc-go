@@ -10,6 +10,9 @@ import (
 
 type BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference interface {
 	cdktf.ComplexObject
+	Annotations() *map[string]*string
+	SetAnnotations(val *map[string]*string)
+	AnnotationsInput() *map[string]*string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -29,9 +32,12 @@ type BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference interfa
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
-	Labels() *string
-	SetLabels(val *string)
-	LabelsInput() *string
+	Labels() *map[string]*string
+	SetLabels(val *map[string]*string)
+	LabelsInput() *map[string]*string
+	Namespace() *string
+	SetNamespace(val *string)
+	NamespaceInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,7 +70,9 @@ type BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference interfa
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAnnotations()
 	ResetLabels()
+	ResetNamespace()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -78,6 +86,26 @@ type BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference interfa
 // The jsii proxy struct for BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference
 type jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) Annotations() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"annotations",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) AnnotationsInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"annotationsInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) ComplexObjectIndex() interface{} {
@@ -130,8 +158,8 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputRef
 	return returns
 }
 
-func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) Labels() *string {
-	var returns *string
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) Labels() *map[string]*string {
+	var returns *map[string]*string
 	_jsii_.Get(
 		j,
 		"labels",
@@ -140,11 +168,31 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputRef
 	return returns
 }
 
-func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) LabelsInput() *string {
-	var returns *string
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) LabelsInput() *map[string]*string {
+	var returns *map[string]*string
 	_jsii_.Get(
 		j,
 		"labelsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) Namespace() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"namespace",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) NamespaceInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"namespaceInput",
 		&returns,
 	)
 	return returns
@@ -198,6 +246,17 @@ func NewBatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference_Over
 	)
 }
 
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference)SetAnnotations(val *map[string]*string) {
+	if err := j.validateSetAnnotationsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"annotations",
+		val,
+	)
+}
+
 func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference)SetComplexObjectIndex(val interface{}) {
 	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
 		panic(err)
@@ -231,13 +290,24 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputRef
 	)
 }
 
-func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference)SetLabels(val *string) {
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference)SetLabels(val *map[string]*string) {
 	if err := j.validateSetLabelsParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
 		"labels",
+		val,
+	)
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference)SetNamespace(val *string) {
+	if err := j.validateSetNamespaceParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"namespace",
 		val,
 	)
 }
@@ -450,10 +520,26 @@ func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputRef
 	return returns
 }
 
+func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) ResetAnnotations() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetAnnotations",
+		nil, // no parameters
+	)
+}
+
 func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) ResetLabels() {
 	_jsii_.InvokeVoid(
 		b,
 		"resetLabels",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) ResetNamespace() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetNamespace",
 		nil, // no parameters
 	)
 }

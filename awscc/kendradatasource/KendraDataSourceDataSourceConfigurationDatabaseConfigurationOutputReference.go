@@ -13,7 +13,7 @@ type KendraDataSourceDataSourceConfigurationDatabaseConfigurationOutputReference
 	AclConfiguration() KendraDataSourceDataSourceConfigurationDatabaseConfigurationAclConfigurationOutputReference
 	AclConfigurationInput() interface{}
 	ColumnConfiguration() KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfigurationOutputReference
-	ColumnConfigurationInput() *KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfiguration
+	ColumnConfigurationInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -25,7 +25,7 @@ type KendraDataSourceDataSourceConfigurationDatabaseConfigurationOutputReference
 	// Experimental.
 	SetComplexObjectIsFromSet(val *bool)
 	ConnectionConfiguration() KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfigurationOutputReference
-	ConnectionConfigurationInput() *KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfiguration
+	ConnectionConfigurationInput() interface{}
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
 	//
 	// If this returns an empty array the stack will not be attached.
@@ -80,6 +80,9 @@ type KendraDataSourceDataSourceConfigurationDatabaseConfigurationOutputReference
 	PutSqlConfiguration(value *KendraDataSourceDataSourceConfigurationDatabaseConfigurationSqlConfiguration)
 	PutVpcConfiguration(value *KendraDataSourceDataSourceConfigurationDatabaseConfigurationVpcConfiguration)
 	ResetAclConfiguration()
+	ResetColumnConfiguration()
+	ResetConnectionConfiguration()
+	ResetDatabaseEngineType()
 	ResetSqlConfiguration()
 	ResetVpcConfiguration()
 	// Produce the Token's value at resolution time.
@@ -127,8 +130,8 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationO
 	return returns
 }
 
-func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationOutputReference) ColumnConfigurationInput() *KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfiguration {
-	var returns *KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfiguration
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationOutputReference) ColumnConfigurationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"columnConfigurationInput",
@@ -167,8 +170,8 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationO
 	return returns
 }
 
-func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationOutputReference) ConnectionConfigurationInput() *KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfiguration {
-	var returns *KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfiguration
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationOutputReference) ConnectionConfigurationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"connectionConfigurationInput",
@@ -626,6 +629,30 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationO
 	_jsii_.InvokeVoid(
 		k,
 		"resetAclConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationOutputReference) ResetColumnConfiguration() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetColumnConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationOutputReference) ResetConnectionConfiguration() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetConnectionConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationOutputReference) ResetDatabaseEngineType() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetDatabaseEngineType",
 		nil, // no parameters
 	)
 }

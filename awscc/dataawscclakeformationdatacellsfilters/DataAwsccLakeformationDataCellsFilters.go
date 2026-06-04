@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscclakeformationdatacellsfilters/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lakeformation_data_cells_filters awscc_lakeformation_data_cells_filters}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lakeformation_data_cells_filters awscc_lakeformation_data_cells_filters}.
 type DataAwsccLakeformationDataCellsFilters interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccLakeformationDataCellsFilters interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccLakeformationDataCellsFilters) TerraformResourceType
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lakeformation_data_cells_filters awscc_lakeformation_data_cells_filters} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lakeformation_data_cells_filters awscc_lakeformation_data_cells_filters} Data Source.
 func NewDataAwsccLakeformationDataCellsFilters(scope constructs.Construct, id *string, config *DataAwsccLakeformationDataCellsFiltersConfig) DataAwsccLakeformationDataCellsFilters {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccLakeformationDataCellsFilters(scope constructs.Construct, id *s
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lakeformation_data_cells_filters awscc_lakeformation_data_cells_filters} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lakeformation_data_cells_filters awscc_lakeformation_data_cells_filters} Data Source.
 func NewDataAwsccLakeformationDataCellsFilters_Override(d DataAwsccLakeformationDataCellsFilters, scope constructs.Construct, id *string, config *DataAwsccLakeformationDataCellsFiltersConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccLakeformationDataCellsFilters) SynthesizeAttributes(
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLakeformationDataCellsFilters) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLakeformationDataCellsFilters) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

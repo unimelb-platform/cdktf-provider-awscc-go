@@ -10,6 +10,7 @@ import (
 
 type DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference interface {
 	cdktf.ComplexObject
+	AdditionalAnalyses() *string
 	AllowedAnalyses() *[]*string
 	AllowedAnalysisProviders() *[]*string
 	// the index of the complex object in a list.
@@ -27,6 +28,8 @@ type DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReferenc
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	DifferentialPrivacy() DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1CustomDifferentialPrivacyOutputReference
+	DisallowedOutputColumns() *[]*string
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1Custom
@@ -78,6 +81,16 @@ type jsiiProxy_DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutp
 	internal.Type__cdktfComplexObject
 }
 
+func (j *jsiiProxy_DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) AdditionalAnalyses() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"additionalAnalyses",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) AllowedAnalyses() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -123,6 +136,26 @@ func (j *jsiiProxy_DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1Custom
 	_jsii_.Get(
 		j,
 		"creationStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) DifferentialPrivacy() DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1CustomDifferentialPrivacyOutputReference {
+	var returns DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1CustomDifferentialPrivacyOutputReference
+	_jsii_.Get(
+		j,
+		"differentialPrivacy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) DisallowedOutputColumns() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"disallowedOutputColumns",
 		&returns,
 	)
 	return returns

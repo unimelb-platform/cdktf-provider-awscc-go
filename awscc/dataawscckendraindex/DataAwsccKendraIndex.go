@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscckendraindex/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kendra_index awscc_kendra_index}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kendra_index awscc_kendra_index}.
 type DataAwsccKendraIndex interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -40,6 +40,7 @@ type DataAwsccKendraIndex interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	IndexId() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -93,6 +94,10 @@ type DataAwsccKendraIndex interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -247,6 +252,16 @@ func (j *jsiiProxy_DataAwsccKendraIndex) IdInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccKendraIndex) IndexId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"indexId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccKendraIndex) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -378,7 +393,7 @@ func (j *jsiiProxy_DataAwsccKendraIndex) UserTokenConfigurations() DataAwsccKend
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kendra_index awscc_kendra_index} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kendra_index awscc_kendra_index} Data Source.
 func NewDataAwsccKendraIndex(scope constructs.Construct, id *string, config *DataAwsccKendraIndexConfig) DataAwsccKendraIndex {
 	_init_.Initialize()
 
@@ -396,7 +411,7 @@ func NewDataAwsccKendraIndex(scope constructs.Construct, id *string, config *Dat
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kendra_index awscc_kendra_index} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kendra_index awscc_kendra_index} Data Source.
 func NewDataAwsccKendraIndex_Override(d DataAwsccKendraIndex, scope constructs.Construct, id *string, config *DataAwsccKendraIndexConfig) {
 	_init_.Initialize()
 
@@ -763,6 +778,32 @@ func (d *jsiiProxy_DataAwsccKendraIndex) SynthesizeAttributes() *map[string]inte
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKendraIndex) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKendraIndex) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

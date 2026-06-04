@@ -29,8 +29,8 @@ type Wafv2LoggingConfigurationLoggingFilterFiltersConditionsOutputReference inte
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *Wafv2LoggingConfigurationLoggingFilterFiltersConditions
-	SetInternalValue(val *Wafv2LoggingConfigurationLoggingFilterFiltersConditions)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	LabelNameCondition() Wafv2LoggingConfigurationLoggingFilterFiltersConditionsLabelNameConditionOutputReference
 	LabelNameConditionInput() interface{}
 	// Experimental.
@@ -144,8 +144,8 @@ func (j *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersConditionsOutput
 	return returns
 }
 
-func (j *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersConditionsOutputReference) InternalValue() *Wafv2LoggingConfigurationLoggingFilterFiltersConditions {
-	var returns *Wafv2LoggingConfigurationLoggingFilterFiltersConditions
+func (j *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersConditionsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -244,7 +244,7 @@ func (j *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersConditionsOutput
 	)
 }
 
-func (j *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersConditionsOutputReference)SetInternalValue(val *Wafv2LoggingConfigurationLoggingFilterFiltersConditions) {
+func (j *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersConditionsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

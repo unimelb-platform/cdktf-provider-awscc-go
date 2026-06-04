@@ -4,6 +4,10 @@ package dataawscccassandrakeyspace
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccCassandraKeyspaceTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccCassandraKeyspaceTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

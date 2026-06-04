@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/connecthoursofoperation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/connect_hours_of_operation awscc_connect_hours_of_operation}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/connect_hours_of_operation awscc_connect_hours_of_operation}.
 type ConnectHoursOfOperation interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -42,6 +42,8 @@ type ConnectHoursOfOperation interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	HoursOfOperationArn() *string
+	HoursOfOperationOverrides() ConnectHoursOfOperationHoursOfOperationOverridesList
+	HoursOfOperationOverridesInput() interface{}
 	Id() *string
 	InstanceArn() *string
 	SetInstanceArn(val *string)
@@ -100,23 +102,38 @@ type ConnectHoursOfOperation interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutConfig(value interface{})
+	PutHoursOfOperationOverrides(value interface{})
 	PutTags(value interface{})
 	ResetDescription()
+	ResetHoursOfOperationOverrides()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,6 +273,26 @@ func (j *jsiiProxy_ConnectHoursOfOperation) HoursOfOperationArn() *string {
 	_jsii_.Get(
 		j,
 		"hoursOfOperationArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ConnectHoursOfOperation) HoursOfOperationOverrides() ConnectHoursOfOperationHoursOfOperationOverridesList {
+	var returns ConnectHoursOfOperationHoursOfOperationOverridesList
+	_jsii_.Get(
+		j,
+		"hoursOfOperationOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ConnectHoursOfOperation) HoursOfOperationOverridesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"hoursOfOperationOverridesInput",
 		&returns,
 	)
 	return returns
@@ -432,7 +469,7 @@ func (j *jsiiProxy_ConnectHoursOfOperation) TimeZoneInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/connect_hours_of_operation awscc_connect_hours_of_operation} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/connect_hours_of_operation awscc_connect_hours_of_operation} Resource.
 func NewConnectHoursOfOperation(scope constructs.Construct, id *string, config *ConnectHoursOfOperationConfig) ConnectHoursOfOperation {
 	_init_.Initialize()
 
@@ -450,7 +487,7 @@ func NewConnectHoursOfOperation(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/connect_hours_of_operation awscc_connect_hours_of_operation} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/connect_hours_of_operation awscc_connect_hours_of_operation} Resource.
 func NewConnectHoursOfOperation_Override(c ConnectHoursOfOperation, scope constructs.Construct, id *string, config *ConnectHoursOfOperationConfig) {
 	_init_.Initialize()
 
@@ -842,6 +879,19 @@ func (c *jsiiProxy_ConnectHoursOfOperation) GetStringMapAttribute(terraformAttri
 	return returns
 }
 
+func (c *jsiiProxy_ConnectHoursOfOperation) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_ConnectHoursOfOperation) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -869,6 +919,17 @@ func (c *jsiiProxy_ConnectHoursOfOperation) InterpolationForAttribute(terraformA
 	return returns
 }
 
+func (c *jsiiProxy_ConnectHoursOfOperation) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_ConnectHoursOfOperation) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -877,6 +938,17 @@ func (c *jsiiProxy_ConnectHoursOfOperation) MoveTo(moveTarget *string, index int
 		c,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (c *jsiiProxy_ConnectHoursOfOperation) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -902,6 +974,17 @@ func (c *jsiiProxy_ConnectHoursOfOperation) PutConfig(value interface{}) {
 	)
 }
 
+func (c *jsiiProxy_ConnectHoursOfOperation) PutHoursOfOperationOverrides(value interface{}) {
+	if err := c.validatePutHoursOfOperationOverridesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putHoursOfOperationOverrides",
+		[]interface{}{value},
+	)
+}
+
 func (c *jsiiProxy_ConnectHoursOfOperation) PutTags(value interface{}) {
 	if err := c.validatePutTagsParameters(value); err != nil {
 		panic(err)
@@ -917,6 +1000,14 @@ func (c *jsiiProxy_ConnectHoursOfOperation) ResetDescription() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConnectHoursOfOperation) ResetHoursOfOperationOverrides() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetHoursOfOperationOverrides",
 		nil, // no parameters
 	)
 }
@@ -943,6 +1034,32 @@ func (c *jsiiProxy_ConnectHoursOfOperation) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_ConnectHoursOfOperation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_ConnectHoursOfOperation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

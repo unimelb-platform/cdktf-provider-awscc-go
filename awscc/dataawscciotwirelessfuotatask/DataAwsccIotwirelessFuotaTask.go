@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciotwirelessfuotatask/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotwireless_fuota_task awscc_iotwireless_fuota_task}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotwireless_fuota_task awscc_iotwireless_fuota_task}.
 type DataAwsccIotwirelessFuotaTask interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -40,6 +40,7 @@ type DataAwsccIotwirelessFuotaTask interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	FuotaTaskId() *string
 	FuotaTaskStatus() *string
 	Id() *string
 	SetId(val *string)
@@ -94,6 +95,10 @@ type DataAwsccIotwirelessFuotaTask interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -258,6 +263,16 @@ func (j *jsiiProxy_DataAwsccIotwirelessFuotaTask) FriendlyUniqueId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccIotwirelessFuotaTask) FuotaTaskId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fuotaTaskId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccIotwirelessFuotaTask) FuotaTaskStatus() *string {
 	var returns *string
 	_jsii_.Get(
@@ -389,7 +404,7 @@ func (j *jsiiProxy_DataAwsccIotwirelessFuotaTask) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotwireless_fuota_task awscc_iotwireless_fuota_task} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotwireless_fuota_task awscc_iotwireless_fuota_task} Data Source.
 func NewDataAwsccIotwirelessFuotaTask(scope constructs.Construct, id *string, config *DataAwsccIotwirelessFuotaTaskConfig) DataAwsccIotwirelessFuotaTask {
 	_init_.Initialize()
 
@@ -407,7 +422,7 @@ func NewDataAwsccIotwirelessFuotaTask(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotwireless_fuota_task awscc_iotwireless_fuota_task} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotwireless_fuota_task awscc_iotwireless_fuota_task} Data Source.
 func NewDataAwsccIotwirelessFuotaTask_Override(d DataAwsccIotwirelessFuotaTask, scope constructs.Construct, id *string, config *DataAwsccIotwirelessFuotaTaskConfig) {
 	_init_.Initialize()
 
@@ -774,6 +789,32 @@ func (d *jsiiProxy_DataAwsccIotwirelessFuotaTask) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotwirelessFuotaTask) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotwirelessFuotaTask) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

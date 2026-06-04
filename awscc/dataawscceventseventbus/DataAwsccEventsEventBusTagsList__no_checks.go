@@ -4,6 +4,10 @@ package dataawscceventseventbus
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccEventsEventBusTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccEventsEventBusTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

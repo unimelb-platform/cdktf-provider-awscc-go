@@ -67,6 +67,8 @@ type DatabrewRulesetRulesSubstitutionMapOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetValue()
+	ResetValueReference()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (d *jsiiProxy_DatabrewRulesetRulesSubstitutionMapOutputReference) Interpola
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatabrewRulesetRulesSubstitutionMapOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetValue",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatabrewRulesetRulesSubstitutionMapOutputReference) ResetValueReference() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetValueReference",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatabrewRulesetRulesSubstitutionMapOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

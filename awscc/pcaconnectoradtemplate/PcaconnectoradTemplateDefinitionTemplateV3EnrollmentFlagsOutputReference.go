@@ -33,8 +33,8 @@ type PcaconnectoradTemplateDefinitionTemplateV3EnrollmentFlagsOutputReference in
 	IncludeSymmetricAlgorithms() interface{}
 	SetIncludeSymmetricAlgorithms(val interface{})
 	IncludeSymmetricAlgorithmsInput() interface{}
-	InternalValue() *PcaconnectoradTemplateDefinitionTemplateV3EnrollmentFlags
-	SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV3EnrollmentFlags)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	NoSecurityExtension() interface{}
 	SetNoSecurityExtension(val interface{})
 	NoSecurityExtensionInput() interface{}
@@ -176,8 +176,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3EnrollmentFlagsOutp
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3EnrollmentFlagsOutputReference) InternalValue() *PcaconnectoradTemplateDefinitionTemplateV3EnrollmentFlags {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV3EnrollmentFlags
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3EnrollmentFlagsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -338,7 +338,7 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3EnrollmentFlagsOutp
 	)
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3EnrollmentFlagsOutputReference)SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV3EnrollmentFlags) {
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3EnrollmentFlagsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

@@ -67,6 +67,8 @@ type DatasyncStorageSystemServerCredentialsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPassword()
+	ResetUsername()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (d *jsiiProxy_DatasyncStorageSystemServerCredentialsOutputReference) Interp
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatasyncStorageSystemServerCredentialsOutputReference) ResetPassword() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetPassword",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatasyncStorageSystemServerCredentialsOutputReference) ResetUsername() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetUsername",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatasyncStorageSystemServerCredentialsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

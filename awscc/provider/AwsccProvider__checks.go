@@ -87,6 +87,14 @@ func (j *jsiiProxy_AwsccProvider) validateSetAssumeRoleWithWebIdentityParameters
 	return nil
 }
 
+func (j *jsiiProxy_AwsccProvider) validateSetEndpointsParameters(val *AwsccProviderEndpoints) error {
+	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_AwsccProvider) validateSetInsecureParameters(val interface{}) error {
 	switch val.(type) {
 	case *bool:

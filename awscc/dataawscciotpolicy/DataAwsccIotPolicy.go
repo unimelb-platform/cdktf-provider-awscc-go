@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciotpolicy/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iot_policy awscc_iot_policy}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iot_policy awscc_iot_policy}.
 type DataAwsccIotPolicy interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -43,6 +43,7 @@ type DataAwsccIotPolicy interface {
 	// The tree node.
 	Node() constructs.Node
 	PolicyDocument() *string
+	PolicyId() *string
 	PolicyName() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
@@ -86,6 +87,10 @@ type DataAwsccIotPolicy interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -230,6 +235,16 @@ func (j *jsiiProxy_DataAwsccIotPolicy) PolicyDocument() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccIotPolicy) PolicyId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"policyId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccIotPolicy) PolicyName() *string {
 	var returns *string
 	_jsii_.Get(
@@ -301,7 +316,7 @@ func (j *jsiiProxy_DataAwsccIotPolicy) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iot_policy awscc_iot_policy} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iot_policy awscc_iot_policy} Data Source.
 func NewDataAwsccIotPolicy(scope constructs.Construct, id *string, config *DataAwsccIotPolicyConfig) DataAwsccIotPolicy {
 	_init_.Initialize()
 
@@ -319,7 +334,7 @@ func NewDataAwsccIotPolicy(scope constructs.Construct, id *string, config *DataA
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iot_policy awscc_iot_policy} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iot_policy awscc_iot_policy} Data Source.
 func NewDataAwsccIotPolicy_Override(d DataAwsccIotPolicy, scope constructs.Construct, id *string, config *DataAwsccIotPolicyConfig) {
 	_init_.Initialize()
 
@@ -686,6 +701,32 @@ func (d *jsiiProxy_DataAwsccIotPolicy) SynthesizeAttributes() *map[string]interf
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotPolicy) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotPolicy) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

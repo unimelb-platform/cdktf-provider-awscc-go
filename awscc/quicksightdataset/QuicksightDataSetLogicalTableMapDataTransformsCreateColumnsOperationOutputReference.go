@@ -64,6 +64,7 @@ type QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationOutputR
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutColumns(value interface{})
+	ResetColumns()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -446,6 +447,14 @@ func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOp
 		q,
 		"putColumns",
 		[]interface{}{value},
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationOutputReference) ResetColumns() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetColumns",
+		nil, // no parameters
 	)
 }
 

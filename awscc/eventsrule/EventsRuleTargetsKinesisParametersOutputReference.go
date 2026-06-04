@@ -64,6 +64,7 @@ type EventsRuleTargetsKinesisParametersOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPartitionKeyPath()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (e *jsiiProxy_EventsRuleTargetsKinesisParametersOutputReference) Interpolat
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EventsRuleTargetsKinesisParametersOutputReference) ResetPartitionKeyPath() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetPartitionKeyPath",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EventsRuleTargetsKinesisParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

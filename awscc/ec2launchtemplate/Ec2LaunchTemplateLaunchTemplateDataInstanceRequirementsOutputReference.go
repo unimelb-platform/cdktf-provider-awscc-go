@@ -31,6 +31,8 @@ type Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutputReference inte
 	BareMetalInput() *string
 	BaselineEbsBandwidthMbps() Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbpsOutputReference
 	BaselineEbsBandwidthMbpsInput() interface{}
+	BaselinePerformanceFactors() Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselinePerformanceFactorsOutputReference
+	BaselinePerformanceFactorsInput() interface{}
 	BurstablePerformance() *string
 	SetBurstablePerformance(val *string)
 	BurstablePerformanceInput() *string
@@ -127,6 +129,7 @@ type Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutputReference inte
 	PutAcceleratorCount(value *Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorCount)
 	PutAcceleratorTotalMemoryMiB(value *Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorTotalMemoryMiB)
 	PutBaselineEbsBandwidthMbps(value *Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbps)
+	PutBaselinePerformanceFactors(value *Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselinePerformanceFactors)
 	PutMemoryGiBPerVCpu(value *Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpu)
 	PutMemoryMiB(value *Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryMiB)
 	PutNetworkBandwidthGbps(value *Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsNetworkBandwidthGbps)
@@ -141,6 +144,7 @@ type Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutputReference inte
 	ResetAllowedInstanceTypes()
 	ResetBareMetal()
 	ResetBaselineEbsBandwidthMbps()
+	ResetBaselinePerformanceFactors()
 	ResetBurstablePerformance()
 	ResetCpuManufacturers()
 	ResetExcludedInstanceTypes()
@@ -327,6 +331,26 @@ func (j *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutput
 	_jsii_.Get(
 		j,
 		"baselineEbsBandwidthMbpsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutputReference) BaselinePerformanceFactors() Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselinePerformanceFactorsOutputReference {
+	var returns Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselinePerformanceFactorsOutputReference
+	_jsii_.Get(
+		j,
+		"baselinePerformanceFactors",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutputReference) BaselinePerformanceFactorsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"baselinePerformanceFactorsInput",
 		&returns,
 	)
 	return returns
@@ -1189,6 +1213,17 @@ func (e *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutput
 	)
 }
 
+func (e *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutputReference) PutBaselinePerformanceFactors(value *Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselinePerformanceFactors) {
+	if err := e.validatePutBaselinePerformanceFactorsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putBaselinePerformanceFactors",
+		[]interface{}{value},
+	)
+}
+
 func (e *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutputReference) PutMemoryGiBPerVCpu(value *Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpu) {
 	if err := e.validatePutMemoryGiBPerVCpuParameters(value); err != nil {
 		panic(err)
@@ -1315,6 +1350,14 @@ func (e *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutput
 	_jsii_.InvokeVoid(
 		e,
 		"resetBaselineEbsBandwidthMbps",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutputReference) ResetBaselinePerformanceFactors() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetBaselinePerformanceFactors",
 		nil, // no parameters
 	)
 }

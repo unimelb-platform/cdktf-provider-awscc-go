@@ -73,6 +73,7 @@ type IotfleetwiseCampaignDataDestinationConfigsS3ConfigOutputReference interface
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucketArn()
 	ResetDataFormat()
 	ResetPrefix()
 	ResetStorageCompressionFormat()
@@ -552,6 +553,14 @@ func (i *jsiiProxy_IotfleetwiseCampaignDataDestinationConfigsS3ConfigOutputRefer
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotfleetwiseCampaignDataDestinationConfigsS3ConfigOutputReference) ResetBucketArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetBucketArn",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotfleetwiseCampaignDataDestinationConfigsS3ConfigOutputReference) ResetDataFormat() {

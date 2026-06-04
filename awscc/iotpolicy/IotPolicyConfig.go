@@ -19,11 +19,11 @@ type IotPolicyConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iot_policy#policy_document IotPolicy#policy_document}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iot_policy#policy_document IotPolicy#policy_document}.
 	PolicyDocument *string `field:"required" json:"policyDocument" yaml:"policyDocument"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iot_policy#policy_name IotPolicy#policy_name}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iot_policy#policy_name IotPolicy#policy_name}.
 	PolicyName *string `field:"optional" json:"policyName" yaml:"policyName"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iot_policy#tags IotPolicy#tags}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iot_policy#tags IotPolicy#tags}.
 	Tags interface{} `field:"optional" json:"tags" yaml:"tags"`
 }
 

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccmediapackagev2channelgroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediapackagev2_channel_group awscc_mediapackagev2_channel_group}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediapackagev2_channel_group awscc_mediapackagev2_channel_group}.
 type DataAwsccMediapackagev2ChannelGroup interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -89,6 +89,10 @@ type DataAwsccMediapackagev2ChannelGroup interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -334,7 +338,7 @@ func (j *jsiiProxy_DataAwsccMediapackagev2ChannelGroup) TerraformResourceType() 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediapackagev2_channel_group awscc_mediapackagev2_channel_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediapackagev2_channel_group awscc_mediapackagev2_channel_group} Data Source.
 func NewDataAwsccMediapackagev2ChannelGroup(scope constructs.Construct, id *string, config *DataAwsccMediapackagev2ChannelGroupConfig) DataAwsccMediapackagev2ChannelGroup {
 	_init_.Initialize()
 
@@ -352,7 +356,7 @@ func NewDataAwsccMediapackagev2ChannelGroup(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediapackagev2_channel_group awscc_mediapackagev2_channel_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediapackagev2_channel_group awscc_mediapackagev2_channel_group} Data Source.
 func NewDataAwsccMediapackagev2ChannelGroup_Override(d DataAwsccMediapackagev2ChannelGroup, scope constructs.Construct, id *string, config *DataAwsccMediapackagev2ChannelGroupConfig) {
 	_init_.Initialize()
 
@@ -719,6 +723,32 @@ func (d *jsiiProxy_DataAwsccMediapackagev2ChannelGroup) SynthesizeAttributes() *
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMediapackagev2ChannelGroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMediapackagev2ChannelGroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

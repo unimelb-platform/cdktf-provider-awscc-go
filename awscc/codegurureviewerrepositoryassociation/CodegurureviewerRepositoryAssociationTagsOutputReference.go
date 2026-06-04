@@ -67,6 +67,8 @@ type CodegurureviewerRepositoryAssociationTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CodegurureviewerRepositoryAssociationTagsOutputReference) Int
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CodegurureviewerRepositoryAssociationTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CodegurureviewerRepositoryAssociationTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CodegurureviewerRepositoryAssociationTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

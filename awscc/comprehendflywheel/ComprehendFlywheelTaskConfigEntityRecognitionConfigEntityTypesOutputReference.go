@@ -64,6 +64,7 @@ type ComprehendFlywheelTaskConfigEntityRecognitionConfigEntityTypesOutputReferen
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (c *jsiiProxy_ComprehendFlywheelTaskConfigEntityRecognitionConfigEntityType
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ComprehendFlywheelTaskConfigEntityRecognitionConfigEntityTypesOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetType",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ComprehendFlywheelTaskConfigEntityRecognitionConfigEntityTypesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

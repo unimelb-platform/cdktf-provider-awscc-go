@@ -113,10 +113,12 @@ type EventsRuleTargetsOutputReference interface {
 	PutSageMakerPipelineParameters(value *EventsRuleTargetsSageMakerPipelineParameters)
 	PutSqsParameters(value *EventsRuleTargetsSqsParameters)
 	ResetAppSyncParameters()
+	ResetArn()
 	ResetBatchParameters()
 	ResetDeadLetterConfig()
 	ResetEcsParameters()
 	ResetHttpParameters()
+	ResetId()
 	ResetInput()
 	ResetInputPath()
 	ResetInputTransformer()
@@ -1016,6 +1018,14 @@ func (e *jsiiProxy_EventsRuleTargetsOutputReference) ResetAppSyncParameters() {
 	)
 }
 
+func (e *jsiiProxy_EventsRuleTargetsOutputReference) ResetArn() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetArn",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EventsRuleTargetsOutputReference) ResetBatchParameters() {
 	_jsii_.InvokeVoid(
 		e,
@@ -1044,6 +1054,14 @@ func (e *jsiiProxy_EventsRuleTargetsOutputReference) ResetHttpParameters() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetHttpParameters",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EventsRuleTargetsOutputReference) ResetId() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetId",
 		nil, // no parameters
 	)
 }

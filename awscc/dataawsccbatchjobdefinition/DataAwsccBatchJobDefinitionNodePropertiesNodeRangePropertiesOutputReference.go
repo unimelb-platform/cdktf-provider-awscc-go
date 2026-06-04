@@ -20,14 +20,18 @@ type DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference
 	ComplexObjectIsFromSet() *bool
 	// Experimental.
 	SetComplexObjectIsFromSet(val *bool)
+	ConsumableResourceProperties() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesConsumableResourcePropertiesOutputReference
 	Container() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
 	//
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	EcsProperties() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesEcsPropertiesOutputReference
+	EksProperties() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesEksPropertiesOutputReference
 	// Experimental.
 	Fqn() *string
+	InstanceTypes() *[]*string
 	InternalValue() *DataAwsccBatchJobDefinitionNodePropertiesNodeRangeProperties
 	SetInternalValue(val *DataAwsccBatchJobDefinitionNodePropertiesNodeRangeProperties)
 	TargetNodes() *string
@@ -98,6 +102,16 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesO
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) ConsumableResourceProperties() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesConsumableResourcePropertiesOutputReference {
+	var returns DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesConsumableResourcePropertiesOutputReference
+	_jsii_.Get(
+		j,
+		"consumableResourceProperties",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) Container() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference {
 	var returns DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference
 	_jsii_.Get(
@@ -118,11 +132,41 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesO
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) EcsProperties() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesEcsPropertiesOutputReference {
+	var returns DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesEcsPropertiesOutputReference
+	_jsii_.Get(
+		j,
+		"ecsProperties",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) EksProperties() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesEksPropertiesOutputReference {
+	var returns DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesEksPropertiesOutputReference
+	_jsii_.Get(
+		j,
+		"eksProperties",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) InstanceTypes() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"instanceTypes",
 		&returns,
 	)
 	return returns

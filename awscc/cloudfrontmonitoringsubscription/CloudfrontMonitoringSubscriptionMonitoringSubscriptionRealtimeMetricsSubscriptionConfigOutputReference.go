@@ -64,6 +64,7 @@ type CloudfrontMonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscr
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetRealtimeMetricsSubscriptionStatus()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (c *jsiiProxy_CloudfrontMonitoringSubscriptionMonitoringSubscriptionRealtim
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CloudfrontMonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigOutputReference) ResetRealtimeMetricsSubscriptionStatus() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetRealtimeMetricsSubscriptionStatus",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CloudfrontMonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

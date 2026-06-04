@@ -10,6 +10,8 @@ import (
 
 type SagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReference interface {
 	cdktf.ComplexObject
+	AppLifecycleManagement() SagemakerSpaceSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementOutputReference
+	AppLifecycleManagementInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -63,7 +65,9 @@ type SagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutAppLifecycleManagement(value *SagemakerSpaceSpaceSettingsCodeEditorAppSettingsAppLifecycleManagement)
 	PutDefaultResourceSpec(value *SagemakerSpaceSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec)
+	ResetAppLifecycleManagement()
 	ResetDefaultResourceSpec()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -78,6 +82,26 @@ type SagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReference interface {
 // The jsii proxy struct for SagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReference
 type jsiiProxy_SagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_SagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReference) AppLifecycleManagement() SagemakerSpaceSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementOutputReference {
+	var returns SagemakerSpaceSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementOutputReference
+	_jsii_.Get(
+		j,
+		"appLifecycleManagement",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReference) AppLifecycleManagementInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"appLifecycleManagementInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_SagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReference) ComplexObjectIndex() interface{} {
@@ -439,6 +463,17 @@ func (s *jsiiProxy_SagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReferen
 	return returns
 }
 
+func (s *jsiiProxy_SagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReference) PutAppLifecycleManagement(value *SagemakerSpaceSpaceSettingsCodeEditorAppSettingsAppLifecycleManagement) {
+	if err := s.validatePutAppLifecycleManagementParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putAppLifecycleManagement",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_SagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReference) PutDefaultResourceSpec(value *SagemakerSpaceSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec) {
 	if err := s.validatePutDefaultResourceSpecParameters(value); err != nil {
 		panic(err)
@@ -447,6 +482,14 @@ func (s *jsiiProxy_SagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReferen
 		s,
 		"putDefaultResourceSpec",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReference) ResetAppLifecycleManagement() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetAppLifecycleManagement",
+		nil, // no parameters
 	)
 }
 

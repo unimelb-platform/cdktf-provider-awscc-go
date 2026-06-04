@@ -64,7 +64,7 @@ func (j *jsiiProxy_S3BucketBucketEncryptionServerSideEncryptionConfigurationOutp
 	return nil
 }
 
-func (j *jsiiProxy_S3BucketBucketEncryptionServerSideEncryptionConfigurationOutputReference) validateSetInternalValueParameters(val *S3BucketBucketEncryptionServerSideEncryptionConfiguration) error {
+func (j *jsiiProxy_S3BucketBucketEncryptionServerSideEncryptionConfigurationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

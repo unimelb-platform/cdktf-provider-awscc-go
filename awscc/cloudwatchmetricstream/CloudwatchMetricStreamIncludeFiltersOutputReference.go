@@ -68,6 +68,7 @@ type CloudwatchMetricStreamIncludeFiltersOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetMetricNames()
+	ResetNamespace()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (c *jsiiProxy_CloudwatchMetricStreamIncludeFiltersOutputReference) ResetMet
 	_jsii_.InvokeVoid(
 		c,
 		"resetMetricNames",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudwatchMetricStreamIncludeFiltersOutputReference) ResetNamespace() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetNamespace",
 		nil, // no parameters
 	)
 }

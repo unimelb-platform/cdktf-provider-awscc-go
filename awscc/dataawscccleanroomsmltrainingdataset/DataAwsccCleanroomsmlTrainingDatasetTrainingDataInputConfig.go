@@ -1,0 +1,6 @@
+package dataawscccleanroomsmltrainingdataset
+
+
+type DataAwsccCleanroomsmlTrainingDatasetTrainingDataInputConfig struct {
+}
+

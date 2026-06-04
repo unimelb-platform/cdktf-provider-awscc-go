@@ -9,9 +9,11 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ecstaskset/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ecs_task_set awscc_ecs_task_set}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ecs_task_set awscc_ecs_task_set}.
 type EcsTaskSet interface {
 	cdktf.TerraformResource
+	CapacityProviderStrategy() EcsTaskSetCapacityProviderStrategyList
+	CapacityProviderStrategyInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	Cluster() *string
@@ -76,9 +78,12 @@ type EcsTaskSet interface {
 	ServiceInput() *string
 	ServiceRegistries() EcsTaskSetServiceRegistriesList
 	ServiceRegistriesInput() interface{}
+	Tags() EcsTaskSetTagsList
+	TagsInput() interface{}
 	TaskDefinition() *string
 	SetTaskDefinition(val *string)
 	TaskDefinitionInput() *string
+	TaskSetId() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -109,19 +114,32 @@ type EcsTaskSet interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutCapacityProviderStrategy(value interface{})
 	PutLoadBalancers(value interface{})
 	PutNetworkConfiguration(value *EcsTaskSetNetworkConfiguration)
 	PutScale(value *EcsTaskSetScale)
 	PutServiceRegistries(value interface{})
+	PutTags(value interface{})
+	ResetCapacityProviderStrategy()
 	ResetExternalId()
 	ResetLaunchType()
 	ResetLoadBalancers()
@@ -132,7 +150,11 @@ type EcsTaskSet interface {
 	ResetPlatformVersion()
 	ResetScale()
 	ResetServiceRegistries()
+	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -145,6 +167,26 @@ type EcsTaskSet interface {
 // The jsii proxy struct for EcsTaskSet
 type jsiiProxy_EcsTaskSet struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_EcsTaskSet) CapacityProviderStrategy() EcsTaskSetCapacityProviderStrategyList {
+	var returns EcsTaskSetCapacityProviderStrategyList
+	_jsii_.Get(
+		j,
+		"capacityProviderStrategy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EcsTaskSet) CapacityProviderStrategyInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"capacityProviderStrategyInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_EcsTaskSet) CdktfStack() cdktf.TerraformStack {
@@ -467,6 +509,26 @@ func (j *jsiiProxy_EcsTaskSet) ServiceRegistriesInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_EcsTaskSet) Tags() EcsTaskSetTagsList {
+	var returns EcsTaskSetTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EcsTaskSet) TagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_EcsTaskSet) TaskDefinition() *string {
 	var returns *string
 	_jsii_.Get(
@@ -482,6 +544,16 @@ func (j *jsiiProxy_EcsTaskSet) TaskDefinitionInput() *string {
 	_jsii_.Get(
 		j,
 		"taskDefinitionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EcsTaskSet) TaskSetId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"taskSetId",
 		&returns,
 	)
 	return returns
@@ -518,7 +590,7 @@ func (j *jsiiProxy_EcsTaskSet) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ecs_task_set awscc_ecs_task_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ecs_task_set awscc_ecs_task_set} Resource.
 func NewEcsTaskSet(scope constructs.Construct, id *string, config *EcsTaskSetConfig) EcsTaskSet {
 	_init_.Initialize()
 
@@ -536,7 +608,7 @@ func NewEcsTaskSet(scope constructs.Construct, id *string, config *EcsTaskSetCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ecs_task_set awscc_ecs_task_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ecs_task_set awscc_ecs_task_set} Resource.
 func NewEcsTaskSet_Override(e EcsTaskSet, scope constructs.Construct, id *string, config *EcsTaskSetConfig) {
 	_init_.Initialize()
 
@@ -950,6 +1022,19 @@ func (e *jsiiProxy_EcsTaskSet) GetStringMapAttribute(terraformAttribute *string)
 	return returns
 }
 
+func (e *jsiiProxy_EcsTaskSet) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_EcsTaskSet) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -977,6 +1062,17 @@ func (e *jsiiProxy_EcsTaskSet) InterpolationForAttribute(terraformAttribute *str
 	return returns
 }
 
+func (e *jsiiProxy_EcsTaskSet) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_EcsTaskSet) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -988,6 +1084,17 @@ func (e *jsiiProxy_EcsTaskSet) MoveTo(moveTarget *string, index interface{}) {
 	)
 }
 
+func (e *jsiiProxy_EcsTaskSet) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_EcsTaskSet) OverrideLogicalId(newLogicalId *string) {
 	if err := e.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -996,6 +1103,17 @@ func (e *jsiiProxy_EcsTaskSet) OverrideLogicalId(newLogicalId *string) {
 		e,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (e *jsiiProxy_EcsTaskSet) PutCapacityProviderStrategy(value interface{}) {
+	if err := e.validatePutCapacityProviderStrategyParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putCapacityProviderStrategy",
+		[]interface{}{value},
 	)
 }
 
@@ -1040,6 +1158,25 @@ func (e *jsiiProxy_EcsTaskSet) PutServiceRegistries(value interface{}) {
 		e,
 		"putServiceRegistries",
 		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_EcsTaskSet) PutTags(value interface{}) {
+	if err := e.validatePutTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putTags",
+		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_EcsTaskSet) ResetCapacityProviderStrategy() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetCapacityProviderStrategy",
+		nil, // no parameters
 	)
 }
 
@@ -1107,12 +1244,46 @@ func (e *jsiiProxy_EcsTaskSet) ResetServiceRegistries() {
 	)
 }
 
+func (e *jsiiProxy_EcsTaskSet) ResetTags() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetTags",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EcsTaskSet) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_EcsTaskSet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_EcsTaskSet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

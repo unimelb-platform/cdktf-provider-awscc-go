@@ -68,6 +68,7 @@ type EcsServiceServiceConnectConfigurationServicesClientAliasesOutputReference i
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetDnsName()
+	ResetPort()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (e *jsiiProxy_EcsServiceServiceConnectConfigurationServicesClientAliasesOut
 	_jsii_.InvokeVoid(
 		e,
 		"resetDnsName",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcsServiceServiceConnectConfigurationServicesClientAliasesOutputReference) ResetPort() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetPort",
 		nil, // no parameters
 	)
 }

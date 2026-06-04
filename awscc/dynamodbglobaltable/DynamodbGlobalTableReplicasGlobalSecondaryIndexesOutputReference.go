@@ -34,6 +34,8 @@ type DynamodbGlobalTableReplicasGlobalSecondaryIndexesOutputReference interface 
 	IndexNameInput() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	ReadOnDemandThroughputSettings() DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadOnDemandThroughputSettingsOutputReference
+	ReadOnDemandThroughputSettingsInput() interface{}
 	ReadProvisionedThroughputSettings() DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisionedThroughputSettingsOutputReference
 	ReadProvisionedThroughputSettingsInput() interface{}
 	// Experimental.
@@ -69,8 +71,11 @@ type DynamodbGlobalTableReplicasGlobalSecondaryIndexesOutputReference interface 
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutContributorInsightsSpecification(value *DynamodbGlobalTableReplicasGlobalSecondaryIndexesContributorInsightsSpecification)
+	PutReadOnDemandThroughputSettings(value *DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadOnDemandThroughputSettings)
 	PutReadProvisionedThroughputSettings(value *DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisionedThroughputSettings)
 	ResetContributorInsightsSpecification()
+	ResetIndexName()
+	ResetReadOnDemandThroughputSettings()
 	ResetReadProvisionedThroughputSettings()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -172,6 +177,26 @@ func (j *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesOutputRefere
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesOutputReference) ReadOnDemandThroughputSettings() DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadOnDemandThroughputSettingsOutputReference {
+	var returns DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadOnDemandThroughputSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"readOnDemandThroughputSettings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesOutputReference) ReadOnDemandThroughputSettingsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"readOnDemandThroughputSettingsInput",
 		&returns,
 	)
 	return returns
@@ -508,6 +533,17 @@ func (d *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesOutputRefere
 	)
 }
 
+func (d *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesOutputReference) PutReadOnDemandThroughputSettings(value *DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadOnDemandThroughputSettings) {
+	if err := d.validatePutReadOnDemandThroughputSettingsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putReadOnDemandThroughputSettings",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesOutputReference) PutReadProvisionedThroughputSettings(value *DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisionedThroughputSettings) {
 	if err := d.validatePutReadProvisionedThroughputSettingsParameters(value); err != nil {
 		panic(err)
@@ -523,6 +559,22 @@ func (d *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesOutputRefere
 	_jsii_.InvokeVoid(
 		d,
 		"resetContributorInsightsSpecification",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesOutputReference) ResetIndexName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetIndexName",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesOutputReference) ResetReadOnDemandThroughputSettings() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetReadOnDemandThroughputSettings",
 		nil, // no parameters
 	)
 }

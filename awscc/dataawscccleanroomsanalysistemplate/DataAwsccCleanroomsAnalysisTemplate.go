@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccleanroomsanalysistemplate/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cleanrooms_analysis_template awscc_cleanrooms_analysis_template}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cleanrooms_analysis_template awscc_cleanrooms_analysis_template}.
 type DataAwsccCleanroomsAnalysisTemplate interface {
 	cdktf.TerraformDataSource
 	AnalysisParameters() DataAwsccCleanroomsAnalysisTemplateAnalysisParametersList
@@ -59,6 +59,7 @@ type DataAwsccCleanroomsAnalysisTemplate interface {
 	RawOverrides() interface{}
 	Schema() DataAwsccCleanroomsAnalysisTemplateSchemaOutputReference
 	Source() DataAwsccCleanroomsAnalysisTemplateSourceOutputReference
+	SourceMetadata() DataAwsccCleanroomsAnalysisTemplateSourceMetadataOutputReference
 	Tags() DataAwsccCleanroomsAnalysisTemplateTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -95,6 +96,10 @@ type DataAwsccCleanroomsAnalysisTemplate interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -359,6 +364,16 @@ func (j *jsiiProxy_DataAwsccCleanroomsAnalysisTemplate) Source() DataAwsccCleanr
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccCleanroomsAnalysisTemplate) SourceMetadata() DataAwsccCleanroomsAnalysisTemplateSourceMetadataOutputReference {
+	var returns DataAwsccCleanroomsAnalysisTemplateSourceMetadataOutputReference
+	_jsii_.Get(
+		j,
+		"sourceMetadata",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccCleanroomsAnalysisTemplate) Tags() DataAwsccCleanroomsAnalysisTemplateTagsList {
 	var returns DataAwsccCleanroomsAnalysisTemplateTagsList
 	_jsii_.Get(
@@ -400,7 +415,7 @@ func (j *jsiiProxy_DataAwsccCleanroomsAnalysisTemplate) TerraformResourceType() 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cleanrooms_analysis_template awscc_cleanrooms_analysis_template} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cleanrooms_analysis_template awscc_cleanrooms_analysis_template} Data Source.
 func NewDataAwsccCleanroomsAnalysisTemplate(scope constructs.Construct, id *string, config *DataAwsccCleanroomsAnalysisTemplateConfig) DataAwsccCleanroomsAnalysisTemplate {
 	_init_.Initialize()
 
@@ -418,7 +433,7 @@ func NewDataAwsccCleanroomsAnalysisTemplate(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cleanrooms_analysis_template awscc_cleanrooms_analysis_template} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cleanrooms_analysis_template awscc_cleanrooms_analysis_template} Data Source.
 func NewDataAwsccCleanroomsAnalysisTemplate_Override(d DataAwsccCleanroomsAnalysisTemplate, scope constructs.Construct, id *string, config *DataAwsccCleanroomsAnalysisTemplateConfig) {
 	_init_.Initialize()
 
@@ -785,6 +800,32 @@ func (d *jsiiProxy_DataAwsccCleanroomsAnalysisTemplate) SynthesizeAttributes() *
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCleanroomsAnalysisTemplate) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCleanroomsAnalysisTemplate) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

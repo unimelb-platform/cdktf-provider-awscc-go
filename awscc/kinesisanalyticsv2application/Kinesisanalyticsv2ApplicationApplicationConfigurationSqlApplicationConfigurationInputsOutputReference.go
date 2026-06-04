@@ -32,7 +32,7 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigur
 	InputProcessingConfiguration() Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputProcessingConfigurationOutputReference
 	InputProcessingConfigurationInput() interface{}
 	InputSchema() Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaOutputReference
-	InputSchemaInput() *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchema
+	InputSchemaInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	KinesisFirehoseInput() Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsKinesisFirehoseInputOutputReference
@@ -81,8 +81,10 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigur
 	PutKinesisStreamsInput(value *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsKinesisStreamsInput)
 	ResetInputParallelism()
 	ResetInputProcessingConfiguration()
+	ResetInputSchema()
 	ResetKinesisFirehoseInput()
 	ResetKinesisStreamsInput()
+	ResetNamePrefix()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -188,8 +190,8 @@ func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 	return returns
 }
 
-func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsOutputReference) InputSchemaInput() *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchema {
-	var returns *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchema
+func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsOutputReference) InputSchemaInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"inputSchemaInput",
@@ -639,6 +641,14 @@ func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 	)
 }
 
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsOutputReference) ResetInputSchema() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetInputSchema",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsOutputReference) ResetKinesisFirehoseInput() {
 	_jsii_.InvokeVoid(
 		k,
@@ -651,6 +661,14 @@ func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 	_jsii_.InvokeVoid(
 		k,
 		"resetKinesisStreamsInput",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsOutputReference) ResetNamePrefix() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetNamePrefix",
 		nil, // no parameters
 	)
 }

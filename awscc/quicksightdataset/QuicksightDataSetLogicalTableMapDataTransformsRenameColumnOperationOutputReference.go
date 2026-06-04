@@ -67,6 +67,8 @@ type QuicksightDataSetLogicalTableMapDataTransformsRenameColumnOperationOutputRe
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetColumnName()
+	ResetNewColumnName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsRenameColumnOpe
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsRenameColumnOperationOutputReference) ResetColumnName() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetColumnName",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsRenameColumnOperationOutputReference) ResetNewColumnName() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetNewColumnName",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsRenameColumnOperationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

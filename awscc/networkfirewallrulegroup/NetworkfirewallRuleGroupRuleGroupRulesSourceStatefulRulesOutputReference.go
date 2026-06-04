@@ -31,7 +31,7 @@ type NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesOutputReference in
 	// Experimental.
 	Fqn() *string
 	Header() NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeaderOutputReference
-	HeaderInput() *NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeader
+	HeaderInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	RuleOptions() NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesRuleOptionsList
@@ -70,6 +70,9 @@ type NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesOutputReference in
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutHeader(value *NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeader)
 	PutRuleOptions(value interface{})
+	ResetAction()
+	ResetHeader()
+	ResetRuleOptions()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -155,8 +158,8 @@ func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesOutp
 	return returns
 }
 
-func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesOutputReference) HeaderInput() *NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeader {
-	var returns *NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeader
+func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesOutputReference) HeaderInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"headerInput",
@@ -514,6 +517,30 @@ func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesOutp
 		n,
 		"putRuleOptions",
 		[]interface{}{value},
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesOutputReference) ResetAction() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetAction",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesOutputReference) ResetHeader() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetHeader",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesOutputReference) ResetRuleOptions() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetRuleOptions",
+		nil, // no parameters
 	)
 }
 

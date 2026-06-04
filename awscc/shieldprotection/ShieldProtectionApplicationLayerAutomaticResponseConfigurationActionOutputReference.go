@@ -33,8 +33,8 @@ type ShieldProtectionApplicationLayerAutomaticResponseConfigurationActionOutputR
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *ShieldProtectionApplicationLayerAutomaticResponseConfigurationAction
-	SetInternalValue(val *ShieldProtectionApplicationLayerAutomaticResponseConfigurationAction)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -164,8 +164,8 @@ func (j *jsiiProxy_ShieldProtectionApplicationLayerAutomaticResponseConfiguratio
 	return returns
 }
 
-func (j *jsiiProxy_ShieldProtectionApplicationLayerAutomaticResponseConfigurationActionOutputReference) InternalValue() *ShieldProtectionApplicationLayerAutomaticResponseConfigurationAction {
-	var returns *ShieldProtectionApplicationLayerAutomaticResponseConfigurationAction
+func (j *jsiiProxy_ShieldProtectionApplicationLayerAutomaticResponseConfigurationActionOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -266,7 +266,7 @@ func (j *jsiiProxy_ShieldProtectionApplicationLayerAutomaticResponseConfiguratio
 	)
 }
 
-func (j *jsiiProxy_ShieldProtectionApplicationLayerAutomaticResponseConfigurationActionOutputReference)SetInternalValue(val *ShieldProtectionApplicationLayerAutomaticResponseConfigurationAction) {
+func (j *jsiiProxy_ShieldProtectionApplicationLayerAutomaticResponseConfigurationActionOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

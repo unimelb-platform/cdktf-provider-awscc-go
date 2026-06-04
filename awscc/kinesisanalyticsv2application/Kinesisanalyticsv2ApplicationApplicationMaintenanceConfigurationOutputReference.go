@@ -64,6 +64,7 @@ type Kinesisanalyticsv2ApplicationApplicationMaintenanceConfigurationOutputRefer
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetApplicationMaintenanceWindowStartTime()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationMaintenanceConfigurat
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationMaintenanceConfigurationOutputReference) ResetApplicationMaintenanceWindowStartTime() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetApplicationMaintenanceWindowStartTime",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationMaintenanceConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

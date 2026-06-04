@@ -70,6 +70,9 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationCon
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetArtifactId()
+	ResetGroupId()
+	ResetVersion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelin
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationCustomArtifactsConfigurationMavenReferenceOutputReference) ResetArtifactId() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetArtifactId",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationCustomArtifactsConfigurationMavenReferenceOutputReference) ResetGroupId() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetGroupId",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationCustomArtifactsConfigurationMavenReferenceOutputReference) ResetVersion() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetVersion",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationCustomArtifactsConfigurationMavenReferenceOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

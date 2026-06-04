@@ -56,7 +56,15 @@ func (n *jsiiProxy_NetworkfirewallFirewall) validateInterpolationForAttributePar
 	return nil
 }
 
+func (n *jsiiProxy_NetworkfirewallFirewall) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (n *jsiiProxy_NetworkfirewallFirewall) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (n *jsiiProxy_NetworkfirewallFirewall) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -101,6 +109,10 @@ func (j *jsiiProxy_NetworkfirewallFirewall) validateSetDeleteProtectionParameter
 }
 
 func (j *jsiiProxy_NetworkfirewallFirewall) validateSetDescriptionParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_NetworkfirewallFirewall) validateSetEnabledAnalysisTypesParameters(val *[]*string) error {
 	return nil
 }
 

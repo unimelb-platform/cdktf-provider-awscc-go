@@ -56,7 +56,15 @@ func (l *jsiiProxy_LogsDelivery) validateInterpolationForAttributeParameters(ter
 	return nil
 }
 
+func (l *jsiiProxy_LogsDelivery) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LogsDelivery) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (l *jsiiProxy_LogsDelivery) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -100,11 +108,27 @@ func (j *jsiiProxy_LogsDelivery) validateSetDeliverySourceNameParameters(val *st
 	return nil
 }
 
+func (j *jsiiProxy_LogsDelivery) validateSetFieldDelimiterParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_LogsDelivery) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }
 
 func (j *jsiiProxy_LogsDelivery) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_LogsDelivery) validateSetRecordFieldsParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_LogsDelivery) validateSetS3EnableHiveCompatiblePathParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_LogsDelivery) validateSetS3SuffixPathParameters(val *string) error {
 	return nil
 }
 

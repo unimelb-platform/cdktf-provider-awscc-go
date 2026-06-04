@@ -56,7 +56,15 @@ func (d *jsiiProxy_DynamodbGlobalTable) validateInterpolationForAttributeParamet
 	return nil
 }
 
+func (d *jsiiProxy_DynamodbGlobalTable) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DynamodbGlobalTable) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbGlobalTable) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -69,6 +77,10 @@ func (d *jsiiProxy_DynamodbGlobalTable) validatePutAttributeDefinitionsParameter
 }
 
 func (d *jsiiProxy_DynamodbGlobalTable) validatePutGlobalSecondaryIndexesParameters(value interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbGlobalTable) validatePutGlobalTableWitnessesParameters(value interface{}) error {
 	return nil
 }
 
@@ -93,6 +105,14 @@ func (d *jsiiProxy_DynamodbGlobalTable) validatePutStreamSpecificationParameters
 }
 
 func (d *jsiiProxy_DynamodbGlobalTable) validatePutTimeToLiveSpecificationParameters(value *DynamodbGlobalTableTimeToLiveSpecification) error {
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbGlobalTable) validatePutWarmThroughputParameters(value *DynamodbGlobalTableWarmThroughput) error {
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbGlobalTable) validatePutWriteOnDemandThroughputSettingsParameters(value *DynamodbGlobalTableWriteOnDemandThroughputSettings) error {
 	return nil
 }
 
@@ -129,6 +149,10 @@ func (j *jsiiProxy_DynamodbGlobalTable) validateSetCountParameters(val interface
 }
 
 func (j *jsiiProxy_DynamodbGlobalTable) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
+	return nil
+}
+
+func (j *jsiiProxy_DynamodbGlobalTable) validateSetMultiRegionConsistencyParameters(val *string) error {
 	return nil
 }
 

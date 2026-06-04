@@ -56,7 +56,15 @@ func (e *jsiiProxy_Ec2TransitGatewayMulticastGroupSource) validateInterpolationF
 	return nil
 }
 
+func (e *jsiiProxy_Ec2TransitGatewayMulticastGroupSource) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2TransitGatewayMulticastGroupSource) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2TransitGatewayMulticastGroupSource) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

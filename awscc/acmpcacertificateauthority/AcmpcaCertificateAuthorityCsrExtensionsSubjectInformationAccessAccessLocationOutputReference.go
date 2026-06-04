@@ -34,8 +34,8 @@ type AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocati
 	EdiPartyNameInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocation
-	SetInternalValue(val *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocation)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	IpAddress() *string
 	SetIpAddress(val *string)
 	IpAddressInput() *string
@@ -208,8 +208,8 @@ func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAcce
 	return returns
 }
 
-func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocationOutputReference) InternalValue() *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocation {
-	var returns *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocation
+func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -399,7 +399,7 @@ func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAcce
 	)
 }
 
-func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocationOutputReference)SetInternalValue(val *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocation) {
+func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

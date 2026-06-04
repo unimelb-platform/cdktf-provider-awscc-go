@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/batchjobdefinition/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/batch_job_definition awscc_batch_job_definition}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/batch_job_definition awscc_batch_job_definition}.
 type BatchJobDefinition interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -20,6 +20,8 @@ type BatchJobDefinition interface {
 	SetConnection(val interface{})
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
+	ConsumableResourceProperties() BatchJobDefinitionConsumableResourcePropertiesOutputReference
+	ConsumableResourcePropertiesInput() interface{}
 	ContainerProperties() BatchJobDefinitionContainerPropertiesOutputReference
 	ContainerPropertiesInput() interface{}
 	// Experimental.
@@ -30,6 +32,8 @@ type BatchJobDefinition interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	EcsProperties() BatchJobDefinitionEcsPropertiesOutputReference
+	EcsPropertiesInput() interface{}
 	EksProperties() BatchJobDefinitionEksPropertiesOutputReference
 	EksPropertiesInput() interface{}
 	// Experimental.
@@ -41,6 +45,7 @@ type BatchJobDefinition interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
+	JobDefinitionArn() *string
 	JobDefinitionName() *string
 	SetJobDefinitionName(val *string)
 	JobDefinitionNameInput() *string
@@ -52,9 +57,9 @@ type BatchJobDefinition interface {
 	Node() constructs.Node
 	NodeProperties() BatchJobDefinitionNodePropertiesOutputReference
 	NodePropertiesInput() interface{}
-	Parameters() *string
-	SetParameters(val *string)
-	ParametersInput() *string
+	Parameters() *map[string]*string
+	SetParameters(val *map[string]*string)
+	ParametersInput() *map[string]*string
 	PlatformCapabilities() *[]*string
 	SetPlatformCapabilities(val *[]*string)
 	PlatformCapabilitiesInput() *[]*string
@@ -76,9 +81,9 @@ type BatchJobDefinition interface {
 	SchedulingPriority() *float64
 	SetSchedulingPriority(val *float64)
 	SchedulingPriorityInput() *float64
-	Tags() *string
-	SetTags(val *string)
-	TagsInput() *string
+	Tags() *map[string]*string
+	SetTags(val *map[string]*string)
+	TagsInput() *map[string]*string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -114,21 +119,35 @@ type BatchJobDefinition interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutConsumableResourceProperties(value *BatchJobDefinitionConsumableResourceProperties)
 	PutContainerProperties(value *BatchJobDefinitionContainerProperties)
+	PutEcsProperties(value *BatchJobDefinitionEcsProperties)
 	PutEksProperties(value *BatchJobDefinitionEksProperties)
 	PutNodeProperties(value *BatchJobDefinitionNodeProperties)
 	PutRetryStrategy(value *BatchJobDefinitionRetryStrategy)
 	PutTimeout(value *BatchJobDefinitionTimeout)
+	ResetConsumableResourceProperties()
 	ResetContainerProperties()
+	ResetEcsProperties()
 	ResetEksProperties()
 	ResetJobDefinitionName()
 	ResetNodeProperties()
@@ -143,6 +162,9 @@ type BatchJobDefinition interface {
 	ResetTags()
 	ResetTimeout()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -187,6 +209,26 @@ func (j *jsiiProxy_BatchJobDefinition) ConstructNodeMetadata() *map[string]inter
 	return returns
 }
 
+func (j *jsiiProxy_BatchJobDefinition) ConsumableResourceProperties() BatchJobDefinitionConsumableResourcePropertiesOutputReference {
+	var returns BatchJobDefinitionConsumableResourcePropertiesOutputReference
+	_jsii_.Get(
+		j,
+		"consumableResourceProperties",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinition) ConsumableResourcePropertiesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"consumableResourcePropertiesInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_BatchJobDefinition) ContainerProperties() BatchJobDefinitionContainerPropertiesOutputReference {
 	var returns BatchJobDefinitionContainerPropertiesOutputReference
 	_jsii_.Get(
@@ -222,6 +264,26 @@ func (j *jsiiProxy_BatchJobDefinition) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinition) EcsProperties() BatchJobDefinitionEcsPropertiesOutputReference {
+	var returns BatchJobDefinitionEcsPropertiesOutputReference
+	_jsii_.Get(
+		j,
+		"ecsProperties",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinition) EcsPropertiesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"ecsPropertiesInput",
 		&returns,
 	)
 	return returns
@@ -287,6 +349,16 @@ func (j *jsiiProxy_BatchJobDefinition) Id() *string {
 	return returns
 }
 
+func (j *jsiiProxy_BatchJobDefinition) JobDefinitionArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"jobDefinitionArn",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_BatchJobDefinition) JobDefinitionName() *string {
 	var returns *string
 	_jsii_.Get(
@@ -347,8 +419,8 @@ func (j *jsiiProxy_BatchJobDefinition) NodePropertiesInput() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_BatchJobDefinition) Parameters() *string {
-	var returns *string
+func (j *jsiiProxy_BatchJobDefinition) Parameters() *map[string]*string {
+	var returns *map[string]*string
 	_jsii_.Get(
 		j,
 		"parameters",
@@ -357,8 +429,8 @@ func (j *jsiiProxy_BatchJobDefinition) Parameters() *string {
 	return returns
 }
 
-func (j *jsiiProxy_BatchJobDefinition) ParametersInput() *string {
-	var returns *string
+func (j *jsiiProxy_BatchJobDefinition) ParametersInput() *map[string]*string {
+	var returns *map[string]*string
 	_jsii_.Get(
 		j,
 		"parametersInput",
@@ -477,8 +549,8 @@ func (j *jsiiProxy_BatchJobDefinition) SchedulingPriorityInput() *float64 {
 	return returns
 }
 
-func (j *jsiiProxy_BatchJobDefinition) Tags() *string {
-	var returns *string
+func (j *jsiiProxy_BatchJobDefinition) Tags() *map[string]*string {
+	var returns *map[string]*string
 	_jsii_.Get(
 		j,
 		"tags",
@@ -487,8 +559,8 @@ func (j *jsiiProxy_BatchJobDefinition) Tags() *string {
 	return returns
 }
 
-func (j *jsiiProxy_BatchJobDefinition) TagsInput() *string {
-	var returns *string
+func (j *jsiiProxy_BatchJobDefinition) TagsInput() *map[string]*string {
+	var returns *map[string]*string
 	_jsii_.Get(
 		j,
 		"tagsInput",
@@ -568,7 +640,7 @@ func (j *jsiiProxy_BatchJobDefinition) TypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/batch_job_definition awscc_batch_job_definition} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/batch_job_definition awscc_batch_job_definition} Resource.
 func NewBatchJobDefinition(scope constructs.Construct, id *string, config *BatchJobDefinitionConfig) BatchJobDefinition {
 	_init_.Initialize()
 
@@ -586,7 +658,7 @@ func NewBatchJobDefinition(scope constructs.Construct, id *string, config *Batch
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/batch_job_definition awscc_batch_job_definition} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/batch_job_definition awscc_batch_job_definition} Resource.
 func NewBatchJobDefinition_Override(b BatchJobDefinition, scope constructs.Construct, id *string, config *BatchJobDefinitionConfig) {
 	_init_.Initialize()
 
@@ -657,7 +729,7 @@ func (j *jsiiProxy_BatchJobDefinition)SetLifecycle(val *cdktf.TerraformResourceL
 	)
 }
 
-func (j *jsiiProxy_BatchJobDefinition)SetParameters(val *string) {
+func (j *jsiiProxy_BatchJobDefinition)SetParameters(val *map[string]*string) {
 	if err := j.validateSetParametersParameters(val); err != nil {
 		panic(err)
 	}
@@ -720,7 +792,7 @@ func (j *jsiiProxy_BatchJobDefinition)SetSchedulingPriority(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_BatchJobDefinition)SetTags(val *string) {
+func (j *jsiiProxy_BatchJobDefinition)SetTags(val *map[string]*string) {
 	if err := j.validateSetTagsParameters(val); err != nil {
 		panic(err)
 	}
@@ -1011,6 +1083,19 @@ func (b *jsiiProxy_BatchJobDefinition) GetStringMapAttribute(terraformAttribute 
 	return returns
 }
 
+func (b *jsiiProxy_BatchJobDefinition) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		b,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (b *jsiiProxy_BatchJobDefinition) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := b.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1038,6 +1123,17 @@ func (b *jsiiProxy_BatchJobDefinition) InterpolationForAttribute(terraformAttrib
 	return returns
 }
 
+func (b *jsiiProxy_BatchJobDefinition) MoveFromId(id *string) {
+	if err := b.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (b *jsiiProxy_BatchJobDefinition) MoveTo(moveTarget *string, index interface{}) {
 	if err := b.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1046,6 +1142,17 @@ func (b *jsiiProxy_BatchJobDefinition) MoveTo(moveTarget *string, index interfac
 		b,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinition) MoveToId(id *string) {
+	if err := b.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1060,6 +1167,17 @@ func (b *jsiiProxy_BatchJobDefinition) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (b *jsiiProxy_BatchJobDefinition) PutConsumableResourceProperties(value *BatchJobDefinitionConsumableResourceProperties) {
+	if err := b.validatePutConsumableResourcePropertiesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"putConsumableResourceProperties",
+		[]interface{}{value},
+	)
+}
+
 func (b *jsiiProxy_BatchJobDefinition) PutContainerProperties(value *BatchJobDefinitionContainerProperties) {
 	if err := b.validatePutContainerPropertiesParameters(value); err != nil {
 		panic(err)
@@ -1067,6 +1185,17 @@ func (b *jsiiProxy_BatchJobDefinition) PutContainerProperties(value *BatchJobDef
 	_jsii_.InvokeVoid(
 		b,
 		"putContainerProperties",
+		[]interface{}{value},
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinition) PutEcsProperties(value *BatchJobDefinitionEcsProperties) {
+	if err := b.validatePutEcsPropertiesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"putEcsProperties",
 		[]interface{}{value},
 	)
 }
@@ -1115,10 +1244,26 @@ func (b *jsiiProxy_BatchJobDefinition) PutTimeout(value *BatchJobDefinitionTimeo
 	)
 }
 
+func (b *jsiiProxy_BatchJobDefinition) ResetConsumableResourceProperties() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetConsumableResourceProperties",
+		nil, // no parameters
+	)
+}
+
 func (b *jsiiProxy_BatchJobDefinition) ResetContainerProperties() {
 	_jsii_.InvokeVoid(
 		b,
 		"resetContainerProperties",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinition) ResetEcsProperties() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetEcsProperties",
 		nil, // no parameters
 	)
 }
@@ -1217,6 +1362,32 @@ func (b *jsiiProxy_BatchJobDefinition) SynthesizeAttributes() *map[string]interf
 	_jsii_.Invoke(
 		b,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_BatchJobDefinition) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		b,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_BatchJobDefinition) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		b,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

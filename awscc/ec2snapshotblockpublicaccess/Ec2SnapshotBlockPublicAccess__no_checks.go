@@ -56,7 +56,15 @@ func (e *jsiiProxy_Ec2SnapshotBlockPublicAccess) validateInterpolationForAttribu
 	return nil
 }
 
+func (e *jsiiProxy_Ec2SnapshotBlockPublicAccess) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2SnapshotBlockPublicAccess) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2SnapshotBlockPublicAccess) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

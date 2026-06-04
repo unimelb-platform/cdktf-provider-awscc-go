@@ -56,7 +56,15 @@ func (c *jsiiProxy_CustomerprofilesIntegration) validateInterpolationForAttribut
 	return nil
 }
 
+func (c *jsiiProxy_CustomerprofilesIntegration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CustomerprofilesIntegration) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_CustomerprofilesIntegration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -101,6 +109,10 @@ func (j *jsiiProxy_CustomerprofilesIntegration) validateSetCountParameters(val i
 }
 
 func (j *jsiiProxy_CustomerprofilesIntegration) validateSetDomainNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_CustomerprofilesIntegration) validateSetEventTriggerNamesParameters(val *[]*string) error {
 	return nil
 }
 

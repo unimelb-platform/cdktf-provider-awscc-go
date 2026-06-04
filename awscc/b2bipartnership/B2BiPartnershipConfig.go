@@ -19,17 +19,19 @@ type B2BiPartnershipConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/b2bi_partnership#email B2BiPartnership#email}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/b2bi_partnership#capabilities B2BiPartnership#capabilities}.
+	Capabilities *[]*string `field:"required" json:"capabilities" yaml:"capabilities"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/b2bi_partnership#email B2BiPartnership#email}.
 	Email *string `field:"required" json:"email" yaml:"email"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/b2bi_partnership#name B2BiPartnership#name}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/b2bi_partnership#name B2BiPartnership#name}.
 	Name *string `field:"required" json:"name" yaml:"name"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/b2bi_partnership#profile_id B2BiPartnership#profile_id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/b2bi_partnership#profile_id B2BiPartnership#profile_id}.
 	ProfileId *string `field:"required" json:"profileId" yaml:"profileId"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/b2bi_partnership#capabilities B2BiPartnership#capabilities}.
-	Capabilities *[]*string `field:"optional" json:"capabilities" yaml:"capabilities"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/b2bi_partnership#phone B2BiPartnership#phone}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/b2bi_partnership#capability_options B2BiPartnership#capability_options}.
+	CapabilityOptions *B2BiPartnershipCapabilityOptions `field:"optional" json:"capabilityOptions" yaml:"capabilityOptions"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/b2bi_partnership#phone B2BiPartnership#phone}.
 	Phone *string `field:"optional" json:"phone" yaml:"phone"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/b2bi_partnership#tags B2BiPartnership#tags}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/b2bi_partnership#tags B2BiPartnership#tags}.
 	Tags interface{} `field:"optional" json:"tags" yaml:"tags"`
 }
 

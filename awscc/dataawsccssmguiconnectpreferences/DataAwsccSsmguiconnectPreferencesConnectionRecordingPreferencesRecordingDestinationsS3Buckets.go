@@ -1,0 +1,6 @@
+package dataawsccssmguiconnectpreferences
+
+
+type DataAwsccSsmguiconnectPreferencesConnectionRecordingPreferencesRecordingDestinationsS3Buckets struct {
+}
+

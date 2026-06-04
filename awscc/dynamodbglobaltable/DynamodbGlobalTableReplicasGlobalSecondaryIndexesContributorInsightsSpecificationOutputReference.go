@@ -64,6 +64,7 @@ type DynamodbGlobalTableReplicasGlobalSecondaryIndexesContributorInsightsSpecifi
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEnabled()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (d *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesContributorI
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesContributorInsightsSpecificationOutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetEnabled",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesContributorInsightsSpecificationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

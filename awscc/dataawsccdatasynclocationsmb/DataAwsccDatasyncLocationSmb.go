@@ -9,10 +9,11 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdatasynclocationsmb/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_smb awscc_datasync_location_smb}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_smb awscc_datasync_location_smb}.
 type DataAwsccDatasyncLocationSmb interface {
 	cdktf.TerraformDataSource
 	AgentArns() *[]*string
+	AuthenticationType() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -25,6 +26,7 @@ type DataAwsccDatasyncLocationSmb interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DnsIpAddresses() *[]*string
 	Domain() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
@@ -37,6 +39,9 @@ type DataAwsccDatasyncLocationSmb interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	KerberosKeytab() *string
+	KerberosKrb5Conf() *string
+	KerberosPrincipal() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -92,6 +97,10 @@ type DataAwsccDatasyncLocationSmb interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -111,6 +120,16 @@ func (j *jsiiProxy_DataAwsccDatasyncLocationSmb) AgentArns() *[]*string {
 	_jsii_.Get(
 		j,
 		"agentArns",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatasyncLocationSmb) AuthenticationType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"authenticationType",
 		&returns,
 	)
 	return returns
@@ -151,6 +170,16 @@ func (j *jsiiProxy_DataAwsccDatasyncLocationSmb) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatasyncLocationSmb) DnsIpAddresses() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"dnsIpAddresses",
 		&returns,
 	)
 	return returns
@@ -211,6 +240,36 @@ func (j *jsiiProxy_DataAwsccDatasyncLocationSmb) IdInput() *string {
 	_jsii_.Get(
 		j,
 		"idInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatasyncLocationSmb) KerberosKeytab() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kerberosKeytab",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatasyncLocationSmb) KerberosKrb5Conf() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kerberosKrb5Conf",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatasyncLocationSmb) KerberosPrincipal() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kerberosPrincipal",
 		&returns,
 	)
 	return returns
@@ -367,7 +426,7 @@ func (j *jsiiProxy_DataAwsccDatasyncLocationSmb) User() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_smb awscc_datasync_location_smb} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_smb awscc_datasync_location_smb} Data Source.
 func NewDataAwsccDatasyncLocationSmb(scope constructs.Construct, id *string, config *DataAwsccDatasyncLocationSmbConfig) DataAwsccDatasyncLocationSmb {
 	_init_.Initialize()
 
@@ -385,7 +444,7 @@ func NewDataAwsccDatasyncLocationSmb(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_smb awscc_datasync_location_smb} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_smb awscc_datasync_location_smb} Data Source.
 func NewDataAwsccDatasyncLocationSmb_Override(d DataAwsccDatasyncLocationSmb, scope constructs.Construct, id *string, config *DataAwsccDatasyncLocationSmbConfig) {
 	_init_.Initialize()
 
@@ -752,6 +811,32 @@ func (d *jsiiProxy_DataAwsccDatasyncLocationSmb) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatasyncLocationSmb) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatasyncLocationSmb) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

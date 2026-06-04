@@ -64,6 +64,7 @@ type Ec2IpamPoolProvisionedCidrsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCidr()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (e *jsiiProxy_Ec2IpamPoolProvisionedCidrsOutputReference) InterpolationForA
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_Ec2IpamPoolProvisionedCidrsOutputReference) ResetCidr() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetCidr",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_Ec2IpamPoolProvisionedCidrsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

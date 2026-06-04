@@ -72,6 +72,10 @@ func (j *jsiiProxy_Ec2TransitGatewayVpcAttachmentOptionsOutputReference) validat
 	return nil
 }
 
+func (j *jsiiProxy_Ec2TransitGatewayVpcAttachmentOptionsOutputReference) validateSetSecurityGroupReferencingSupportParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Ec2TransitGatewayVpcAttachmentOptionsOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

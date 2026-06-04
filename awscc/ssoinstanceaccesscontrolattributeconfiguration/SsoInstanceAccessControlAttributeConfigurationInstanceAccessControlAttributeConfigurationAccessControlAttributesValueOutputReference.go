@@ -27,8 +27,8 @@ type SsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttribut
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *SsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationAccessControlAttributesValue
-	SetInternalValue(val *SsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationAccessControlAttributesValue)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Source() *[]*string
 	SetSource(val *[]*string)
 	SourceInput() *[]*string
@@ -64,6 +64,7 @@ type SsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttribut
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetSource()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -119,8 +120,8 @@ func (j *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationInstanceAccessC
 	return returns
 }
 
-func (j *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationAccessControlAttributesValueOutputReference) InternalValue() *SsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationAccessControlAttributesValue {
-	var returns *SsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationAccessControlAttributesValue
+func (j *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationAccessControlAttributesValueOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -219,7 +220,7 @@ func (j *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationInstanceAccessC
 	)
 }
 
-func (j *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationAccessControlAttributesValueOutputReference)SetInternalValue(val *SsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationAccessControlAttributesValue) {
+func (j *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationAccessControlAttributesValueOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationInstanceAccessC
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationAccessControlAttributesValueOutputReference) ResetSource() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSource",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationAccessControlAttributesValueOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -64,7 +64,7 @@ func (j *jsiiProxy_MskClusterOpenMonitoringPrometheusOutputReference) validateSe
 	return nil
 }
 
-func (j *jsiiProxy_MskClusterOpenMonitoringPrometheusOutputReference) validateSetInternalValueParameters(val *MskClusterOpenMonitoringPrometheus) error {
+func (j *jsiiProxy_MskClusterOpenMonitoringPrometheusOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

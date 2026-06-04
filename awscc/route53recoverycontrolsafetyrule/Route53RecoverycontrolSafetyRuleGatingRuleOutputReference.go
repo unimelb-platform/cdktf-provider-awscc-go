@@ -70,6 +70,9 @@ type Route53RecoverycontrolSafetyRuleGatingRuleOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetGatingControls()
+	ResetTargetControls()
+	ResetWaitPeriodMs()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (r *jsiiProxy_Route53RecoverycontrolSafetyRuleGatingRuleOutputReference) In
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_Route53RecoverycontrolSafetyRuleGatingRuleOutputReference) ResetGatingControls() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetGatingControls",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Route53RecoverycontrolSafetyRuleGatingRuleOutputReference) ResetTargetControls() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetTargetControls",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Route53RecoverycontrolSafetyRuleGatingRuleOutputReference) ResetWaitPeriodMs() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetWaitPeriodMs",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_Route53RecoverycontrolSafetyRuleGatingRuleOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

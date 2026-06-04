@@ -67,6 +67,8 @@ type CloudformationStackSetStackInstancesGroupParameterOverridesOutputReference 
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetParameterKey()
+	ResetParameterValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CloudformationStackSetStackInstancesGroupParameterOverridesOu
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CloudformationStackSetStackInstancesGroupParameterOverridesOutputReference) ResetParameterKey() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetParameterKey",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudformationStackSetStackInstancesGroupParameterOverridesOutputReference) ResetParameterValue() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetParameterValue",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CloudformationStackSetStackInstancesGroupParameterOverridesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

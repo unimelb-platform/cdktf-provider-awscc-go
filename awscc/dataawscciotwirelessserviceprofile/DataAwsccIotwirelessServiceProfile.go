@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciotwirelessserviceprofile/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotwireless_service_profile awscc_iotwireless_service_profile}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotwireless_service_profile awscc_iotwireless_service_profile}.
 type DataAwsccIotwirelessServiceProfile interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -50,6 +50,7 @@ type DataAwsccIotwirelessServiceProfile interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	ServiceProfileId() *string
 	Tags() DataAwsccIotwirelessServiceProfileTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -86,6 +87,10 @@ type DataAwsccIotwirelessServiceProfile interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -260,6 +265,16 @@ func (j *jsiiProxy_DataAwsccIotwirelessServiceProfile) RawOverrides() interface{
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccIotwirelessServiceProfile) ServiceProfileId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"serviceProfileId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccIotwirelessServiceProfile) Tags() DataAwsccIotwirelessServiceProfileTagsList {
 	var returns DataAwsccIotwirelessServiceProfileTagsList
 	_jsii_.Get(
@@ -301,7 +316,7 @@ func (j *jsiiProxy_DataAwsccIotwirelessServiceProfile) TerraformResourceType() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotwireless_service_profile awscc_iotwireless_service_profile} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotwireless_service_profile awscc_iotwireless_service_profile} Data Source.
 func NewDataAwsccIotwirelessServiceProfile(scope constructs.Construct, id *string, config *DataAwsccIotwirelessServiceProfileConfig) DataAwsccIotwirelessServiceProfile {
 	_init_.Initialize()
 
@@ -319,7 +334,7 @@ func NewDataAwsccIotwirelessServiceProfile(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotwireless_service_profile awscc_iotwireless_service_profile} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotwireless_service_profile awscc_iotwireless_service_profile} Data Source.
 func NewDataAwsccIotwirelessServiceProfile_Override(d DataAwsccIotwirelessServiceProfile, scope constructs.Construct, id *string, config *DataAwsccIotwirelessServiceProfileConfig) {
 	_init_.Initialize()
 
@@ -686,6 +701,32 @@ func (d *jsiiProxy_DataAwsccIotwirelessServiceProfile) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotwirelessServiceProfile) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotwirelessServiceProfile) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -119,6 +119,14 @@ func (d *jsiiProxy_DatasyncLocationObjectStorage) validateInterpolationForAttrib
 	return nil
 }
 
+func (d *jsiiProxy_DatasyncLocationObjectStorage) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (d *jsiiProxy_DatasyncLocationObjectStorage) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,9 +188,39 @@ func (d *jsiiProxy_DatasyncLocationObjectStorage) validateMoveToParameters(moveT
 	return nil
 }
 
+func (d *jsiiProxy_DatasyncLocationObjectStorage) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (d *jsiiProxy_DatasyncLocationObjectStorage) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DatasyncLocationObjectStorage) validatePutCmkSecretConfigParameters(value *DatasyncLocationObjectStorageCmkSecretConfig) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DatasyncLocationObjectStorage) validatePutCustomSecretConfigParameters(value *DatasyncLocationObjectStorageCustomSecretConfig) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
 	}
 
 	return nil
@@ -484,9 +522,6 @@ func validateNewDatasyncLocationObjectStorageParameters(scope constructs.Constru
 		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
-	if config == nil {
-		return fmt.Errorf("parameter config is required, but nil was provided")
-	}
 	if err := _jsii_.ValidateStruct(config, func() string { return "parameter config" }); err != nil {
 		return err
 	}

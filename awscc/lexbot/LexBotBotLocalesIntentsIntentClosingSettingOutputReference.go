@@ -11,7 +11,7 @@ import (
 type LexBotBotLocalesIntentsIntentClosingSettingOutputReference interface {
 	cdktf.ComplexObject
 	ClosingResponse() LexBotBotLocalesIntentsIntentClosingSettingClosingResponseOutputReference
-	ClosingResponseInput() *LexBotBotLocalesIntentsIntentClosingSettingClosingResponse
+	ClosingResponseInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -67,6 +67,7 @@ type LexBotBotLocalesIntentsIntentClosingSettingOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutClosingResponse(value *LexBotBotLocalesIntentsIntentClosingSettingClosingResponse)
+	ResetClosingResponse()
 	ResetIsActive()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -93,8 +94,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingOutputReference) C
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingOutputReference) ClosingResponseInput() *LexBotBotLocalesIntentsIntentClosingSettingClosingResponse {
-	var returns *LexBotBotLocalesIntentsIntentClosingSettingClosingResponse
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingOutputReference) ClosingResponseInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"closingResponseInput",
@@ -481,6 +482,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingOutputReference) P
 		l,
 		"putClosingResponse",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingOutputReference) ResetClosingResponse() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetClosingResponse",
+		nil, // no parameters
 	)
 }
 

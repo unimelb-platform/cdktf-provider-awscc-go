@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccresourceexplorer2view/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/resourceexplorer2_view awscc_resourceexplorer2_view}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/resourceexplorer2_view awscc_resourceexplorer2_view}.
 type DataAwsccResourceexplorer2View interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -88,6 +88,10 @@ type DataAwsccResourceexplorer2View interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -323,7 +327,7 @@ func (j *jsiiProxy_DataAwsccResourceexplorer2View) ViewName() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/resourceexplorer2_view awscc_resourceexplorer2_view} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/resourceexplorer2_view awscc_resourceexplorer2_view} Data Source.
 func NewDataAwsccResourceexplorer2View(scope constructs.Construct, id *string, config *DataAwsccResourceexplorer2ViewConfig) DataAwsccResourceexplorer2View {
 	_init_.Initialize()
 
@@ -341,7 +345,7 @@ func NewDataAwsccResourceexplorer2View(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/resourceexplorer2_view awscc_resourceexplorer2_view} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/resourceexplorer2_view awscc_resourceexplorer2_view} Data Source.
 func NewDataAwsccResourceexplorer2View_Override(d DataAwsccResourceexplorer2View, scope constructs.Construct, id *string, config *DataAwsccResourceexplorer2ViewConfig) {
 	_init_.Initialize()
 
@@ -708,6 +712,32 @@ func (d *jsiiProxy_DataAwsccResourceexplorer2View) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccResourceexplorer2View) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccResourceexplorer2View) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

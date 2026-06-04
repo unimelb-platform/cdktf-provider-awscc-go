@@ -56,7 +56,15 @@ func (i *jsiiProxy_IotcoredeviceadvisorSuiteDefinition) validateInterpolationFor
 	return nil
 }
 
+func (i *jsiiProxy_IotcoredeviceadvisorSuiteDefinition) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotcoredeviceadvisorSuiteDefinition) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotcoredeviceadvisorSuiteDefinition) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

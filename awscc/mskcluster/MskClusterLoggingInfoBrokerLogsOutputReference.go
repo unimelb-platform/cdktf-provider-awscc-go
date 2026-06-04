@@ -31,8 +31,8 @@ type MskClusterLoggingInfoBrokerLogsOutputReference interface {
 	FirehoseInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *MskClusterLoggingInfoBrokerLogs
-	SetInternalValue(val *MskClusterLoggingInfoBrokerLogs)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	S3() MskClusterLoggingInfoBrokerLogsS3OutputReference
 	S3Input() interface{}
 	// Experimental.
@@ -168,8 +168,8 @@ func (j *jsiiProxy_MskClusterLoggingInfoBrokerLogsOutputReference) Fqn() *string
 	return returns
 }
 
-func (j *jsiiProxy_MskClusterLoggingInfoBrokerLogsOutputReference) InternalValue() *MskClusterLoggingInfoBrokerLogs {
-	var returns *MskClusterLoggingInfoBrokerLogs
+func (j *jsiiProxy_MskClusterLoggingInfoBrokerLogsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -268,7 +268,7 @@ func (j *jsiiProxy_MskClusterLoggingInfoBrokerLogsOutputReference)SetComplexObje
 	)
 }
 
-func (j *jsiiProxy_MskClusterLoggingInfoBrokerLogsOutputReference)SetInternalValue(val *MskClusterLoggingInfoBrokerLogs) {
+func (j *jsiiProxy_MskClusterLoggingInfoBrokerLogsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

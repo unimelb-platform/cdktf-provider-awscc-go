@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccelasticbeanstalkconfigurationtemplates/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticbeanstalk_configuration_templates awscc_elasticbeanstalk_configuration_templates}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticbeanstalk_configuration_templates awscc_elasticbeanstalk_configuration_templates}.
 type DataAwsccElasticbeanstalkConfigurationTemplates interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccElasticbeanstalkConfigurationTemplates interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccElasticbeanstalkConfigurationTemplates) TerraformRes
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticbeanstalk_configuration_templates awscc_elasticbeanstalk_configuration_templates} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticbeanstalk_configuration_templates awscc_elasticbeanstalk_configuration_templates} Data Source.
 func NewDataAwsccElasticbeanstalkConfigurationTemplates(scope constructs.Construct, id *string, config *DataAwsccElasticbeanstalkConfigurationTemplatesConfig) DataAwsccElasticbeanstalkConfigurationTemplates {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccElasticbeanstalkConfigurationTemplates(scope constructs.Constru
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticbeanstalk_configuration_templates awscc_elasticbeanstalk_configuration_templates} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticbeanstalk_configuration_templates awscc_elasticbeanstalk_configuration_templates} Data Source.
 func NewDataAwsccElasticbeanstalkConfigurationTemplates_Override(d DataAwsccElasticbeanstalkConfigurationTemplates, scope constructs.Construct, id *string, config *DataAwsccElasticbeanstalkConfigurationTemplatesConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccElasticbeanstalkConfigurationTemplates) SynthesizeAt
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccElasticbeanstalkConfigurationTemplates) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccElasticbeanstalkConfigurationTemplates) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

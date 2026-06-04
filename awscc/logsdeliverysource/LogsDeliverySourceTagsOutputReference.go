@@ -67,6 +67,8 @@ type LogsDeliverySourceTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (l *jsiiProxy_LogsDeliverySourceTagsOutputReference) InterpolationForAttrib
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LogsDeliverySourceTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LogsDeliverySourceTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LogsDeliverySourceTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

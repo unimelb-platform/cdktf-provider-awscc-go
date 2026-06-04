@@ -21,7 +21,7 @@ type SesTemplateConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The content of the email, composed of a subject line, an HTML part, and a text-only part.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ses_template#template SesTemplate#template}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ses_template#template SesTemplate#template}
 	Template *SesTemplateTemplate `field:"optional" json:"template" yaml:"template"`
 }
 

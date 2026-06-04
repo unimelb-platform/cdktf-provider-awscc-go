@@ -9,11 +9,14 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/cassandrakeyspace/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cassandra_keyspace awscc_cassandra_keyspace}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cassandra_keyspace awscc_cassandra_keyspace}.
 type CassandraKeyspace interface {
 	cdktf.TerraformResource
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	ClientSideTimestampsEnabled() interface{}
+	SetClientSideTimestampsEnabled(val interface{})
+	ClientSideTimestampsEnabledInput() interface{}
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -90,17 +93,28 @@ type CassandraKeyspace interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutReplicationSpecification(value *CassandraKeyspaceReplicationSpecification)
 	PutTags(value interface{})
+	ResetClientSideTimestampsEnabled()
 	ResetKeyspaceName()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -108,6 +122,9 @@ type CassandraKeyspace interface {
 	ResetReplicationSpecification()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -127,6 +144,26 @@ func (j *jsiiProxy_CassandraKeyspace) CdktfStack() cdktf.TerraformStack {
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CassandraKeyspace) ClientSideTimestampsEnabled() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"clientSideTimestampsEnabled",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CassandraKeyspace) ClientSideTimestampsEnabledInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"clientSideTimestampsEnabledInput",
 		&returns,
 	)
 	return returns
@@ -353,7 +390,7 @@ func (j *jsiiProxy_CassandraKeyspace) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cassandra_keyspace awscc_cassandra_keyspace} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cassandra_keyspace awscc_cassandra_keyspace} Resource.
 func NewCassandraKeyspace(scope constructs.Construct, id *string, config *CassandraKeyspaceConfig) CassandraKeyspace {
 	_init_.Initialize()
 
@@ -371,7 +408,7 @@ func NewCassandraKeyspace(scope constructs.Construct, id *string, config *Cassan
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cassandra_keyspace awscc_cassandra_keyspace} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cassandra_keyspace awscc_cassandra_keyspace} Resource.
 func NewCassandraKeyspace_Override(c CassandraKeyspace, scope constructs.Construct, id *string, config *CassandraKeyspaceConfig) {
 	_init_.Initialize()
 
@@ -379,6 +416,17 @@ func NewCassandraKeyspace_Override(c CassandraKeyspace, scope constructs.Constru
 		"awscc.cassandraKeyspace.CassandraKeyspace",
 		[]interface{}{scope, id, config},
 		c,
+	)
+}
+
+func (j *jsiiProxy_CassandraKeyspace)SetClientSideTimestampsEnabled(val interface{}) {
+	if err := j.validateSetClientSideTimestampsEnabledParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"clientSideTimestampsEnabled",
+		val,
 	)
 }
 
@@ -730,6 +778,19 @@ func (c *jsiiProxy_CassandraKeyspace) GetStringMapAttribute(terraformAttribute *
 	return returns
 }
 
+func (c *jsiiProxy_CassandraKeyspace) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_CassandraKeyspace) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -757,6 +818,17 @@ func (c *jsiiProxy_CassandraKeyspace) InterpolationForAttribute(terraformAttribu
 	return returns
 }
 
+func (c *jsiiProxy_CassandraKeyspace) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CassandraKeyspace) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -765,6 +837,17 @@ func (c *jsiiProxy_CassandraKeyspace) MoveTo(moveTarget *string, index interface
 		c,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (c *jsiiProxy_CassandraKeyspace) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -798,6 +881,14 @@ func (c *jsiiProxy_CassandraKeyspace) PutTags(value interface{}) {
 		c,
 		"putTags",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CassandraKeyspace) ResetClientSideTimestampsEnabled() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetClientSideTimestampsEnabled",
+		nil, // no parameters
 	)
 }
 
@@ -839,6 +930,32 @@ func (c *jsiiProxy_CassandraKeyspace) SynthesizeAttributes() *map[string]interfa
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CassandraKeyspace) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CassandraKeyspace) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

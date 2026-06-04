@@ -42,8 +42,8 @@ type KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfiguratio
 	ErrorOutputPrefixInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3Configuration
-	SetInternalValue(val *KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3Configuration)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Prefix() *string
 	SetPrefix(val *string)
 	PrefixInput() *string
@@ -85,12 +85,14 @@ type KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfiguratio
 	PutBufferingHints(value *KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3ConfigurationBufferingHints)
 	PutCloudwatchLoggingOptions(value *KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3ConfigurationCloudwatchLoggingOptions)
 	PutEncryptionConfiguration(value *KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3ConfigurationEncryptionConfiguration)
+	ResetBucketArn()
 	ResetBufferingHints()
 	ResetCloudwatchLoggingOptions()
 	ResetCompressionFormat()
 	ResetEncryptionConfiguration()
 	ResetErrorOutputPrefix()
 	ResetPrefix()
+	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -266,8 +268,8 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinati
 	return returns
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3ConfigurationOutputReference) InternalValue() *KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3Configuration {
-	var returns *KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3Configuration
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3ConfigurationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -419,7 +421,7 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinati
 	)
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3ConfigurationOutputReference)SetInternalValue(val *KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3Configuration) {
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3ConfigurationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -693,6 +695,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinati
 	)
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3ConfigurationOutputReference) ResetBucketArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetBucketArn",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3ConfigurationOutputReference) ResetBufferingHints() {
 	_jsii_.InvokeVoid(
 		k,
@@ -737,6 +747,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinati
 	_jsii_.InvokeVoid(
 		k,
 		"resetPrefix",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3ConfigurationOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetRoleArn",
 		nil, // no parameters
 	)
 }

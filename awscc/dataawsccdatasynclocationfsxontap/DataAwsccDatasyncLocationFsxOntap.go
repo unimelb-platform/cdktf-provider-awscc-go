@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdatasynclocationfsxontap/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_fsx_ontap awscc_datasync_location_fsx_ontap}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_fsx_ontap awscc_datasync_location_fsx_ontap}.
 type DataAwsccDatasyncLocationFsxOntap interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -90,6 +90,10 @@ type DataAwsccDatasyncLocationFsxOntap interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -345,7 +349,7 @@ func (j *jsiiProxy_DataAwsccDatasyncLocationFsxOntap) TerraformResourceType() *s
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_fsx_ontap awscc_datasync_location_fsx_ontap} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_fsx_ontap awscc_datasync_location_fsx_ontap} Data Source.
 func NewDataAwsccDatasyncLocationFsxOntap(scope constructs.Construct, id *string, config *DataAwsccDatasyncLocationFsxOntapConfig) DataAwsccDatasyncLocationFsxOntap {
 	_init_.Initialize()
 
@@ -363,7 +367,7 @@ func NewDataAwsccDatasyncLocationFsxOntap(scope constructs.Construct, id *string
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_fsx_ontap awscc_datasync_location_fsx_ontap} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_fsx_ontap awscc_datasync_location_fsx_ontap} Data Source.
 func NewDataAwsccDatasyncLocationFsxOntap_Override(d DataAwsccDatasyncLocationFsxOntap, scope constructs.Construct, id *string, config *DataAwsccDatasyncLocationFsxOntapConfig) {
 	_init_.Initialize()
 
@@ -730,6 +734,32 @@ func (d *jsiiProxy_DataAwsccDatasyncLocationFsxOntap) SynthesizeAttributes() *ma
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatasyncLocationFsxOntap) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatasyncLocationFsxOntap) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

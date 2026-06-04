@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2transitgatewayvpcattachments/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_transit_gateway_vpc_attachments awscc_ec2_transit_gateway_vpc_attachments}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_transit_gateway_vpc_attachments awscc_ec2_transit_gateway_vpc_attachments}.
 type DataAwsccEc2TransitGatewayVpcAttachments interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccEc2TransitGatewayVpcAttachments interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccEc2TransitGatewayVpcAttachments) TerraformResourceTy
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_transit_gateway_vpc_attachments awscc_ec2_transit_gateway_vpc_attachments} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_transit_gateway_vpc_attachments awscc_ec2_transit_gateway_vpc_attachments} Data Source.
 func NewDataAwsccEc2TransitGatewayVpcAttachments(scope constructs.Construct, id *string, config *DataAwsccEc2TransitGatewayVpcAttachmentsConfig) DataAwsccEc2TransitGatewayVpcAttachments {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccEc2TransitGatewayVpcAttachments(scope constructs.Construct, id 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_transit_gateway_vpc_attachments awscc_ec2_transit_gateway_vpc_attachments} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_transit_gateway_vpc_attachments awscc_ec2_transit_gateway_vpc_attachments} Data Source.
 func NewDataAwsccEc2TransitGatewayVpcAttachments_Override(d DataAwsccEc2TransitGatewayVpcAttachments, scope constructs.Construct, id *string, config *DataAwsccEc2TransitGatewayVpcAttachmentsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccEc2TransitGatewayVpcAttachments) SynthesizeAttribute
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2TransitGatewayVpcAttachments) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2TransitGatewayVpcAttachments) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

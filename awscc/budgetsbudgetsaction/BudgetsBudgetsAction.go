@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/budgetsbudgetsaction/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/budgets_budgets_action awscc_budgets_budgets_action}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/budgets_budgets_action awscc_budgets_budgets_action}.
 type BudgetsBudgetsAction interface {
 	cdktf.TerraformResource
 	ActionId() *string
@@ -73,6 +73,8 @@ type BudgetsBudgetsAction interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	ResourceTags() BudgetsBudgetsActionResourceTagsList
+	ResourceTagsInput() interface{}
 	Subscribers() BudgetsBudgetsActionSubscribersList
 	SubscribersInput() interface{}
 	// Experimental.
@@ -105,23 +107,38 @@ type BudgetsBudgetsAction interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutActionThreshold(value *BudgetsBudgetsActionActionThreshold)
 	PutDefinition(value *BudgetsBudgetsActionDefinition)
+	PutResourceTags(value interface{})
 	PutSubscribers(value interface{})
 	ResetApprovalModel()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetResourceTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -426,6 +443,26 @@ func (j *jsiiProxy_BudgetsBudgetsAction) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_BudgetsBudgetsAction) ResourceTags() BudgetsBudgetsActionResourceTagsList {
+	var returns BudgetsBudgetsActionResourceTagsList
+	_jsii_.Get(
+		j,
+		"resourceTags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BudgetsBudgetsAction) ResourceTagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"resourceTagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_BudgetsBudgetsAction) Subscribers() BudgetsBudgetsActionSubscribersList {
 	var returns BudgetsBudgetsActionSubscribersList
 	_jsii_.Get(
@@ -477,7 +514,7 @@ func (j *jsiiProxy_BudgetsBudgetsAction) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/budgets_budgets_action awscc_budgets_budgets_action} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/budgets_budgets_action awscc_budgets_budgets_action} Resource.
 func NewBudgetsBudgetsAction(scope constructs.Construct, id *string, config *BudgetsBudgetsActionConfig) BudgetsBudgetsAction {
 	_init_.Initialize()
 
@@ -495,7 +532,7 @@ func NewBudgetsBudgetsAction(scope constructs.Construct, id *string, config *Bud
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/budgets_budgets_action awscc_budgets_budgets_action} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/budgets_budgets_action awscc_budgets_budgets_action} Resource.
 func NewBudgetsBudgetsAction_Override(b BudgetsBudgetsAction, scope constructs.Construct, id *string, config *BudgetsBudgetsActionConfig) {
 	_init_.Initialize()
 
@@ -898,6 +935,19 @@ func (b *jsiiProxy_BudgetsBudgetsAction) GetStringMapAttribute(terraformAttribut
 	return returns
 }
 
+func (b *jsiiProxy_BudgetsBudgetsAction) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		b,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (b *jsiiProxy_BudgetsBudgetsAction) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := b.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -925,6 +975,17 @@ func (b *jsiiProxy_BudgetsBudgetsAction) InterpolationForAttribute(terraformAttr
 	return returns
 }
 
+func (b *jsiiProxy_BudgetsBudgetsAction) MoveFromId(id *string) {
+	if err := b.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (b *jsiiProxy_BudgetsBudgetsAction) MoveTo(moveTarget *string, index interface{}) {
 	if err := b.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -933,6 +994,17 @@ func (b *jsiiProxy_BudgetsBudgetsAction) MoveTo(moveTarget *string, index interf
 		b,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (b *jsiiProxy_BudgetsBudgetsAction) MoveToId(id *string) {
+	if err := b.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -969,6 +1041,17 @@ func (b *jsiiProxy_BudgetsBudgetsAction) PutDefinition(value *BudgetsBudgetsActi
 	)
 }
 
+func (b *jsiiProxy_BudgetsBudgetsAction) PutResourceTags(value interface{}) {
+	if err := b.validatePutResourceTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"putResourceTags",
+		[]interface{}{value},
+	)
+}
+
 func (b *jsiiProxy_BudgetsBudgetsAction) PutSubscribers(value interface{}) {
 	if err := b.validatePutSubscribersParameters(value); err != nil {
 		panic(err)
@@ -996,12 +1079,46 @@ func (b *jsiiProxy_BudgetsBudgetsAction) ResetOverrideLogicalId() {
 	)
 }
 
+func (b *jsiiProxy_BudgetsBudgetsAction) ResetResourceTags() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetResourceTags",
+		nil, // no parameters
+	)
+}
+
 func (b *jsiiProxy_BudgetsBudgetsAction) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		b,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_BudgetsBudgetsAction) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		b,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_BudgetsBudgetsAction) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		b,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

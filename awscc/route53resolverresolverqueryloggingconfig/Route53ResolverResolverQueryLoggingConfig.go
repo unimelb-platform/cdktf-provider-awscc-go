@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/route53resolverresolverqueryloggingconfig/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/route53resolver_resolver_query_logging_config awscc_route53resolver_resolver_query_logging_config}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/route53resolver_resolver_query_logging_config awscc_route53resolver_resolver_query_logging_config}.
 type Route53ResolverResolverQueryLoggingConfig interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -64,8 +64,11 @@ type Route53ResolverResolverQueryLoggingConfig interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	ResolverQueryLoggingConfigId() *string
 	ShareStatus() *string
 	Status() *string
+	Tags() Route53ResolverResolverQueryLoggingConfigTagsList
+	TagsInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -96,21 +99,36 @@ type Route53ResolverResolverQueryLoggingConfig interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTags(value interface{})
 	ResetDestinationArn()
 	ResetName()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -355,6 +373,16 @@ func (j *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) RawOverrides() int
 	return returns
 }
 
+func (j *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) ResolverQueryLoggingConfigId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"resolverQueryLoggingConfigId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) ShareStatus() *string {
 	var returns *string
 	_jsii_.Get(
@@ -370,6 +398,26 @@ func (j *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) Status() *string {
 	_jsii_.Get(
 		j,
 		"status",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) Tags() Route53ResolverResolverQueryLoggingConfigTagsList {
+	var returns Route53ResolverResolverQueryLoggingConfigTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) TagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tagsInput",
 		&returns,
 	)
 	return returns
@@ -406,7 +454,7 @@ func (j *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) TerraformResourceT
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/route53resolver_resolver_query_logging_config awscc_route53resolver_resolver_query_logging_config} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/route53resolver_resolver_query_logging_config awscc_route53resolver_resolver_query_logging_config} Resource.
 func NewRoute53ResolverResolverQueryLoggingConfig(scope constructs.Construct, id *string, config *Route53ResolverResolverQueryLoggingConfigConfig) Route53ResolverResolverQueryLoggingConfig {
 	_init_.Initialize()
 
@@ -424,7 +472,7 @@ func NewRoute53ResolverResolverQueryLoggingConfig(scope constructs.Construct, id
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/route53resolver_resolver_query_logging_config awscc_route53resolver_resolver_query_logging_config} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/route53resolver_resolver_query_logging_config awscc_route53resolver_resolver_query_logging_config} Resource.
 func NewRoute53ResolverResolverQueryLoggingConfig_Override(r Route53ResolverResolverQueryLoggingConfig, scope constructs.Construct, id *string, config *Route53ResolverResolverQueryLoggingConfigConfig) {
 	_init_.Initialize()
 
@@ -794,6 +842,19 @@ func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) GetStringMapAttrib
 	return returns
 }
 
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -821,6 +882,17 @@ func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) InterpolationForAt
 	return returns
 }
 
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) MoveFromId(id *string) {
+	if err := r.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) MoveTo(moveTarget *string, index interface{}) {
 	if err := r.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -832,6 +904,17 @@ func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) MoveTo(moveTarget 
 	)
 }
 
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) MoveToId(id *string) {
+	if err := r.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) OverrideLogicalId(newLogicalId *string) {
 	if err := r.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -840,6 +923,17 @@ func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) OverrideLogicalId(
 		r,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) PutTags(value interface{}) {
+	if err := r.validatePutTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putTags",
+		[]interface{}{value},
 	)
 }
 
@@ -867,12 +961,46 @@ func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) ResetOverrideLogic
 	)
 }
 
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) ResetTags() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetTags",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		r,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		r,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

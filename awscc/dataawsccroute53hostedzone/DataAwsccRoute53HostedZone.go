@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccroute53hostedzone/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53_hosted_zone awscc_route53_hosted_zone}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53_hosted_zone awscc_route53_hosted_zone}.
 type DataAwsccRoute53HostedZone interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -33,6 +33,7 @@ type DataAwsccRoute53HostedZone interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	HostedZoneConfig() DataAwsccRoute53HostedZoneHostedZoneConfigOutputReference
+	HostedZoneId() *string
 	HostedZoneTags() DataAwsccRoute53HostedZoneHostedZoneTagsList
 	Id() *string
 	SetId(val *string)
@@ -88,6 +89,10 @@ type DataAwsccRoute53HostedZone interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -177,6 +182,16 @@ func (j *jsiiProxy_DataAwsccRoute53HostedZone) HostedZoneConfig() DataAwsccRoute
 	_jsii_.Get(
 		j,
 		"hostedZoneConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRoute53HostedZone) HostedZoneId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"hostedZoneId",
 		&returns,
 	)
 	return returns
@@ -323,7 +338,7 @@ func (j *jsiiProxy_DataAwsccRoute53HostedZone) VpCs() DataAwsccRoute53HostedZone
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53_hosted_zone awscc_route53_hosted_zone} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53_hosted_zone awscc_route53_hosted_zone} Data Source.
 func NewDataAwsccRoute53HostedZone(scope constructs.Construct, id *string, config *DataAwsccRoute53HostedZoneConfig) DataAwsccRoute53HostedZone {
 	_init_.Initialize()
 
@@ -341,7 +356,7 @@ func NewDataAwsccRoute53HostedZone(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53_hosted_zone awscc_route53_hosted_zone} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53_hosted_zone awscc_route53_hosted_zone} Data Source.
 func NewDataAwsccRoute53HostedZone_Override(d DataAwsccRoute53HostedZone, scope constructs.Construct, id *string, config *DataAwsccRoute53HostedZoneConfig) {
 	_init_.Initialize()
 
@@ -708,6 +723,32 @@ func (d *jsiiProxy_DataAwsccRoute53HostedZone) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53HostedZone) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53HostedZone) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

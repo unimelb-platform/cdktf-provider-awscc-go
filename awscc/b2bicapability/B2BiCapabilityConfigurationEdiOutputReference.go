@@ -10,6 +10,9 @@ import (
 
 type B2BiCapabilityConfigurationEdiOutputReference interface {
 	cdktf.ComplexObject
+	CapabilityDirection() *string
+	SetCapabilityDirection(val *string)
+	CapabilityDirectionInput() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -28,11 +31,11 @@ type B2BiCapabilityConfigurationEdiOutputReference interface {
 	// Experimental.
 	Fqn() *string
 	InputLocation() B2BiCapabilityConfigurationEdiInputLocationOutputReference
-	InputLocationInput() *B2BiCapabilityConfigurationEdiInputLocation
+	InputLocationInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	OutputLocation() B2BiCapabilityConfigurationEdiOutputLocationOutputReference
-	OutputLocationInput() *B2BiCapabilityConfigurationEdiOutputLocation
+	OutputLocationInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -45,7 +48,7 @@ type B2BiCapabilityConfigurationEdiOutputReference interface {
 	SetTransformerId(val *string)
 	TransformerIdInput() *string
 	Type() B2BiCapabilityConfigurationEdiTypeOutputReference
-	TypeInput() *B2BiCapabilityConfigurationEdiType
+	TypeInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -73,6 +76,11 @@ type B2BiCapabilityConfigurationEdiOutputReference interface {
 	PutInputLocation(value *B2BiCapabilityConfigurationEdiInputLocation)
 	PutOutputLocation(value *B2BiCapabilityConfigurationEdiOutputLocation)
 	PutType(value *B2BiCapabilityConfigurationEdiType)
+	ResetCapabilityDirection()
+	ResetInputLocation()
+	ResetOutputLocation()
+	ResetTransformerId()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -86,6 +94,26 @@ type B2BiCapabilityConfigurationEdiOutputReference interface {
 // The jsii proxy struct for B2BiCapabilityConfigurationEdiOutputReference
 type jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) CapabilityDirection() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"capabilityDirection",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) CapabilityDirectionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"capabilityDirectionInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) ComplexObjectIndex() interface{} {
@@ -138,8 +166,8 @@ func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) InputLocation(
 	return returns
 }
 
-func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) InputLocationInput() *B2BiCapabilityConfigurationEdiInputLocation {
-	var returns *B2BiCapabilityConfigurationEdiInputLocation
+func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) InputLocationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"inputLocationInput",
@@ -168,8 +196,8 @@ func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) OutputLocation
 	return returns
 }
 
-func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) OutputLocationInput() *B2BiCapabilityConfigurationEdiOutputLocation {
-	var returns *B2BiCapabilityConfigurationEdiOutputLocation
+func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) OutputLocationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"outputLocationInput",
@@ -228,8 +256,8 @@ func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) Type() B2BiCap
 	return returns
 }
 
-func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) TypeInput() *B2BiCapabilityConfigurationEdiType {
-	var returns *B2BiCapabilityConfigurationEdiType
+func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) TypeInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"typeInput",
@@ -263,6 +291,17 @@ func NewB2BiCapabilityConfigurationEdiOutputReference_Override(b B2BiCapabilityC
 		"awscc.b2BiCapability.B2BiCapabilityConfigurationEdiOutputReference",
 		[]interface{}{terraformResource, terraformAttribute},
 		b,
+	)
+}
+
+func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference)SetCapabilityDirection(val *string) {
+	if err := j.validateSetCapabilityDirectionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"capabilityDirection",
+		val,
 	)
 }
 
@@ -548,6 +587,46 @@ func (b *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) PutType(value 
 		b,
 		"putType",
 		[]interface{}{value},
+	)
+}
+
+func (b *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) ResetCapabilityDirection() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetCapabilityDirection",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) ResetInputLocation() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetInputLocation",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) ResetOutputLocation() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetOutputLocation",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) ResetTransformerId() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetTransformerId",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_B2BiCapabilityConfigurationEdiOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetType",
+		nil, // no parameters
 	)
 }
 

@@ -80,7 +80,7 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationS3
 	return nil
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationS3ConfigurationOutputReference) validateSetInternalValueParameters(val *KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationS3Configuration) error {
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationS3ConfigurationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

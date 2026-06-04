@@ -64,6 +64,10 @@ func (j *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterServerAppSettingsOutputRefe
 	return nil
 }
 
+func (j *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterServerAppSettingsOutputReference) validateSetLifecycleConfigArnsParameters(val *[]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterServerAppSettingsOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

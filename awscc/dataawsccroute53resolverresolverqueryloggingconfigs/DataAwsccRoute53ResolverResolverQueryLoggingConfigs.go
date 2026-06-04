@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccroute53resolverresolverqueryloggingconfigs/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53resolver_resolver_query_logging_configs awscc_route53resolver_resolver_query_logging_configs}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53resolver_resolver_query_logging_configs awscc_route53resolver_resolver_query_logging_configs}.
 type DataAwsccRoute53ResolverResolverQueryLoggingConfigs interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccRoute53ResolverResolverQueryLoggingConfigs interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccRoute53ResolverResolverQueryLoggingConfigs) Terrafor
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53resolver_resolver_query_logging_configs awscc_route53resolver_resolver_query_logging_configs} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53resolver_resolver_query_logging_configs awscc_route53resolver_resolver_query_logging_configs} Data Source.
 func NewDataAwsccRoute53ResolverResolverQueryLoggingConfigs(scope constructs.Construct, id *string, config *DataAwsccRoute53ResolverResolverQueryLoggingConfigsConfig) DataAwsccRoute53ResolverResolverQueryLoggingConfigs {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccRoute53ResolverResolverQueryLoggingConfigs(scope constructs.Con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53resolver_resolver_query_logging_configs awscc_route53resolver_resolver_query_logging_configs} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53resolver_resolver_query_logging_configs awscc_route53resolver_resolver_query_logging_configs} Data Source.
 func NewDataAwsccRoute53ResolverResolverQueryLoggingConfigs_Override(d DataAwsccRoute53ResolverResolverQueryLoggingConfigs, scope constructs.Construct, id *string, config *DataAwsccRoute53ResolverResolverQueryLoggingConfigsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccRoute53ResolverResolverQueryLoggingConfigs) Synthesi
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53ResolverResolverQueryLoggingConfigs) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53ResolverResolverQueryLoggingConfigs) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -4,6 +4,10 @@ package dataawscceventschemasschema
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccEventschemasSchemaTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccEventschemasSchemaTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

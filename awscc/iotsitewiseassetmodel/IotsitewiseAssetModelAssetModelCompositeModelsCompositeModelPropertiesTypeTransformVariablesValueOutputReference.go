@@ -27,14 +27,28 @@ type IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeT
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
+	HierarchyExternalId() *string
+	SetHierarchyExternalId(val *string)
+	HierarchyExternalIdInput() *string
+	HierarchyId() *string
+	SetHierarchyId(val *string)
+	HierarchyIdInput() *string
 	HierarchyLogicalId() *string
 	SetHierarchyLogicalId(val *string)
 	HierarchyLogicalIdInput() *string
-	InternalValue() *IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValue
-	SetInternalValue(val *IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValue)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
+	PropertyExternalId() *string
+	SetPropertyExternalId(val *string)
+	PropertyExternalIdInput() *string
+	PropertyId() *string
+	SetPropertyId(val *string)
+	PropertyIdInput() *string
 	PropertyLogicalId() *string
 	SetPropertyLogicalId(val *string)
 	PropertyLogicalIdInput() *string
+	PropertyPath() IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValuePropertyPathList
+	PropertyPathInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,7 +81,14 @@ type IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeT
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutPropertyPath(value interface{})
+	ResetHierarchyExternalId()
+	ResetHierarchyId()
 	ResetHierarchyLogicalId()
+	ResetPropertyExternalId()
+	ResetPropertyId()
+	ResetPropertyLogicalId()
+	ResetPropertyPath()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -123,6 +144,46 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelP
 	return returns
 }
 
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) HierarchyExternalId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"hierarchyExternalId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) HierarchyExternalIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"hierarchyExternalIdInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) HierarchyId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"hierarchyId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) HierarchyIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"hierarchyIdInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) HierarchyLogicalId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -143,11 +204,51 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelP
 	return returns
 }
 
-func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) InternalValue() *IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValue {
-	var returns *IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValue
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) PropertyExternalId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"propertyExternalId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) PropertyExternalIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"propertyExternalIdInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) PropertyId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"propertyId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) PropertyIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"propertyIdInput",
 		&returns,
 	)
 	return returns
@@ -168,6 +269,26 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelP
 	_jsii_.Get(
 		j,
 		"propertyLogicalIdInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) PropertyPath() IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValuePropertyPathList {
+	var returns IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValuePropertyPathList
+	_jsii_.Get(
+		j,
+		"propertyPath",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) PropertyPathInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"propertyPathInput",
 		&returns,
 	)
 	return returns
@@ -243,6 +364,28 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelP
 	)
 }
 
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference)SetHierarchyExternalId(val *string) {
+	if err := j.validateSetHierarchyExternalIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"hierarchyExternalId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference)SetHierarchyId(val *string) {
+	if err := j.validateSetHierarchyIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"hierarchyId",
+		val,
+	)
+}
+
 func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference)SetHierarchyLogicalId(val *string) {
 	if err := j.validateSetHierarchyLogicalIdParameters(val); err != nil {
 		panic(err)
@@ -254,13 +397,35 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelP
 	)
 }
 
-func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference)SetInternalValue(val *IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValue) {
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference)SetPropertyExternalId(val *string) {
+	if err := j.validateSetPropertyExternalIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"propertyExternalId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference)SetPropertyId(val *string) {
+	if err := j.validateSetPropertyIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"propertyId",
 		val,
 	)
 }
@@ -484,10 +649,69 @@ func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelP
 	return returns
 }
 
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) PutPropertyPath(value interface{}) {
+	if err := i.validatePutPropertyPathParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putPropertyPath",
+		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) ResetHierarchyExternalId() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetHierarchyExternalId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) ResetHierarchyId() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetHierarchyId",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) ResetHierarchyLogicalId() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetHierarchyLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) ResetPropertyExternalId() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetPropertyExternalId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) ResetPropertyId() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetPropertyId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) ResetPropertyLogicalId() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetPropertyLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) ResetPropertyPath() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetPropertyPath",
 		nil, // no parameters
 	)
 }

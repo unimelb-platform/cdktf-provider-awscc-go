@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccustomerprofilescalculatedattributedefinition/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/customerprofiles_calculated_attribute_definition awscc_customerprofiles_calculated_attribute_definition}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/customerprofiles_calculated_attribute_definition awscc_customerprofiles_calculated_attribute_definition}.
 type DataAwsccCustomerprofilesCalculatedAttributeDefinition interface {
 	cdktf.TerraformDataSource
 	AttributeDetails() DataAwsccCustomerprofilesCalculatedAttributeDefinitionAttributeDetailsOutputReference
@@ -55,7 +55,9 @@ type DataAwsccCustomerprofilesCalculatedAttributeDefinition interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	Readiness() DataAwsccCustomerprofilesCalculatedAttributeDefinitionReadinessOutputReference
 	Statistic() *string
+	Status() *string
 	Tags() DataAwsccCustomerprofilesCalculatedAttributeDefinitionTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -63,6 +65,7 @@ type DataAwsccCustomerprofilesCalculatedAttributeDefinition interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	UseHistoricalData() cdktf.IResolvable
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -92,6 +95,10 @@ type DataAwsccCustomerprofilesCalculatedAttributeDefinition interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -316,11 +323,31 @@ func (j *jsiiProxy_DataAwsccCustomerprofilesCalculatedAttributeDefinition) RawOv
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccCustomerprofilesCalculatedAttributeDefinition) Readiness() DataAwsccCustomerprofilesCalculatedAttributeDefinitionReadinessOutputReference {
+	var returns DataAwsccCustomerprofilesCalculatedAttributeDefinitionReadinessOutputReference
+	_jsii_.Get(
+		j,
+		"readiness",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccCustomerprofilesCalculatedAttributeDefinition) Statistic() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"statistic",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCustomerprofilesCalculatedAttributeDefinition) Status() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"status",
 		&returns,
 	)
 	return returns
@@ -366,8 +393,18 @@ func (j *jsiiProxy_DataAwsccCustomerprofilesCalculatedAttributeDefinition) Terra
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccCustomerprofilesCalculatedAttributeDefinition) UseHistoricalData() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"useHistoricalData",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/customerprofiles_calculated_attribute_definition awscc_customerprofiles_calculated_attribute_definition} Data Source.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/customerprofiles_calculated_attribute_definition awscc_customerprofiles_calculated_attribute_definition} Data Source.
 func NewDataAwsccCustomerprofilesCalculatedAttributeDefinition(scope constructs.Construct, id *string, config *DataAwsccCustomerprofilesCalculatedAttributeDefinitionConfig) DataAwsccCustomerprofilesCalculatedAttributeDefinition {
 	_init_.Initialize()
 
@@ -385,7 +422,7 @@ func NewDataAwsccCustomerprofilesCalculatedAttributeDefinition(scope constructs.
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/customerprofiles_calculated_attribute_definition awscc_customerprofiles_calculated_attribute_definition} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/customerprofiles_calculated_attribute_definition awscc_customerprofiles_calculated_attribute_definition} Data Source.
 func NewDataAwsccCustomerprofilesCalculatedAttributeDefinition_Override(d DataAwsccCustomerprofilesCalculatedAttributeDefinition, scope constructs.Construct, id *string, config *DataAwsccCustomerprofilesCalculatedAttributeDefinitionConfig) {
 	_init_.Initialize()
 
@@ -752,6 +789,32 @@ func (d *jsiiProxy_DataAwsccCustomerprofilesCalculatedAttributeDefinition) Synth
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCustomerprofilesCalculatedAttributeDefinition) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCustomerprofilesCalculatedAttributeDefinition) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

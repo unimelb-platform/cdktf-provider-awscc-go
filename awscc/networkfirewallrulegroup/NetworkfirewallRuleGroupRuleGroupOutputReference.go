@@ -32,7 +32,7 @@ type NetworkfirewallRuleGroupRuleGroupOutputReference interface {
 	ReferenceSets() NetworkfirewallRuleGroupRuleGroupReferenceSetsOutputReference
 	ReferenceSetsInput() interface{}
 	RulesSource() NetworkfirewallRuleGroupRuleGroupRulesSourceOutputReference
-	RulesSourceInput() *NetworkfirewallRuleGroupRuleGroupRulesSource
+	RulesSourceInput() interface{}
 	RuleVariables() NetworkfirewallRuleGroupRuleGroupRuleVariablesOutputReference
 	RuleVariablesInput() interface{}
 	StatefulRuleOptions() NetworkfirewallRuleGroupRuleGroupStatefulRuleOptionsOutputReference
@@ -74,6 +74,7 @@ type NetworkfirewallRuleGroupRuleGroupOutputReference interface {
 	PutRuleVariables(value *NetworkfirewallRuleGroupRuleGroupRuleVariables)
 	PutStatefulRuleOptions(value *NetworkfirewallRuleGroupRuleGroupStatefulRuleOptions)
 	ResetReferenceSets()
+	ResetRulesSource()
 	ResetRuleVariables()
 	ResetStatefulRuleOptions()
 	// Produce the Token's value at resolution time.
@@ -171,8 +172,8 @@ func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupOutputReference) RulesSource
 	return returns
 }
 
-func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupOutputReference) RulesSourceInput() *NetworkfirewallRuleGroupRuleGroupRulesSource {
-	var returns *NetworkfirewallRuleGroupRuleGroupRulesSource
+func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupOutputReference) RulesSourceInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"rulesSourceInput",
@@ -558,6 +559,14 @@ func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupOutputReference) ResetRefere
 	_jsii_.InvokeVoid(
 		n,
 		"resetReferenceSets",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupOutputReference) ResetRulesSource() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetRulesSource",
 		nil, // no parameters
 	)
 }

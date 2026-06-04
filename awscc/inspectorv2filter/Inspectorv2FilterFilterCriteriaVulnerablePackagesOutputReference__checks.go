@@ -112,6 +112,17 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputRefere
 	return nil
 }
 
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) validatePutFilePathParameters(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesFilePath) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) validatePutNameParameters(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesName) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
@@ -124,6 +135,17 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputRefere
 }
 
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) validatePutReleaseParameters(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesRelease) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) validatePutSourceLambdaLayerArnParameters(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesSourceLambdaLayerArn) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}

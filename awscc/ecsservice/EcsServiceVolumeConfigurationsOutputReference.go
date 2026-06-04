@@ -68,6 +68,7 @@ type EcsServiceVolumeConfigurationsOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutManagedEbsVolume(value *EcsServiceVolumeConfigurationsManagedEbsVolume)
 	ResetManagedEbsVolume()
+	ResetName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (e *jsiiProxy_EcsServiceVolumeConfigurationsOutputReference) ResetManagedEb
 	_jsii_.InvokeVoid(
 		e,
 		"resetManagedEbsVolume",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcsServiceVolumeConfigurationsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetName",
 		nil, // no parameters
 	)
 }

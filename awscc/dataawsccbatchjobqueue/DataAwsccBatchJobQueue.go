@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccbatchjobqueue/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/batch_job_queue awscc_batch_job_queue}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/batch_job_queue awscc_batch_job_queue}.
 type DataAwsccBatchJobQueue interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -38,6 +38,7 @@ type DataAwsccBatchJobQueue interface {
 	IdInput() *string
 	JobQueueArn() *string
 	JobQueueName() *string
+	JobStateTimeLimitActions() DataAwsccBatchJobQueueJobStateTimeLimitActionsList
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -89,6 +90,10 @@ type DataAwsccBatchJobQueue interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -223,6 +228,16 @@ func (j *jsiiProxy_DataAwsccBatchJobQueue) JobQueueName() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccBatchJobQueue) JobStateTimeLimitActions() DataAwsccBatchJobQueueJobStateTimeLimitActionsList {
+	var returns DataAwsccBatchJobQueueJobStateTimeLimitActionsList
+	_jsii_.Get(
+		j,
+		"jobStateTimeLimitActions",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccBatchJobQueue) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -334,7 +349,7 @@ func (j *jsiiProxy_DataAwsccBatchJobQueue) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/batch_job_queue awscc_batch_job_queue} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/batch_job_queue awscc_batch_job_queue} Data Source.
 func NewDataAwsccBatchJobQueue(scope constructs.Construct, id *string, config *DataAwsccBatchJobQueueConfig) DataAwsccBatchJobQueue {
 	_init_.Initialize()
 
@@ -352,7 +367,7 @@ func NewDataAwsccBatchJobQueue(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/batch_job_queue awscc_batch_job_queue} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/batch_job_queue awscc_batch_job_queue} Data Source.
 func NewDataAwsccBatchJobQueue_Override(d DataAwsccBatchJobQueue, scope constructs.Construct, id *string, config *DataAwsccBatchJobQueueConfig) {
 	_init_.Initialize()
 
@@ -719,6 +734,32 @@ func (d *jsiiProxy_DataAwsccBatchJobQueue) SynthesizeAttributes() *map[string]in
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccBatchJobQueue) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccBatchJobQueue) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

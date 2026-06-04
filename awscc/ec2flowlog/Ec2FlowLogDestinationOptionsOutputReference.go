@@ -70,6 +70,9 @@ type Ec2FlowLogDestinationOptionsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetFileFormat()
+	ResetHiveCompatiblePartitions()
+	ResetPerHourPartition()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (e *jsiiProxy_Ec2FlowLogDestinationOptionsOutputReference) InterpolationFor
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_Ec2FlowLogDestinationOptionsOutputReference) ResetFileFormat() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetFileFormat",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2FlowLogDestinationOptionsOutputReference) ResetHiveCompatiblePartitions() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetHiveCompatiblePartitions",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2FlowLogDestinationOptionsOutputReference) ResetPerHourPartition() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetPerHourPartition",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_Ec2FlowLogDestinationOptionsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -4,6 +4,10 @@ package rdsdbcluster
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (r *jsiiProxy_RdsDbClusterAssociatedRolesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RdsDbClusterAssociatedRolesList) validateGetParameters(index *float64) error {
 	return nil
 }

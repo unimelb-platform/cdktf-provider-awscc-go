@@ -90,6 +90,17 @@ func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsContain
 	return nil
 }
 
+func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsContainersOutputReference) validatePutModelDataSourceParameters(value *SagemakerModelPackageAdditionalInferenceSpecificationsContainersModelDataSource) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsContainersOutputReference) validatePutModelInputParameters(value *SagemakerModelPackageAdditionalInferenceSpecificationsContainersModelInput) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
@@ -222,9 +233,25 @@ func (j *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsContain
 	return nil
 }
 
-func (j *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsContainersOutputReference) validateSetInternalValueParameters(val *SagemakerModelPackageAdditionalInferenceSpecificationsContainers) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsContainersOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *SagemakerModelPackageAdditionalInferenceSpecificationsContainers:
+		val := val.(*SagemakerModelPackageAdditionalInferenceSpecificationsContainers)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case SagemakerModelPackageAdditionalInferenceSpecificationsContainers:
+		val_ := val.(SagemakerModelPackageAdditionalInferenceSpecificationsContainers)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *SagemakerModelPackageAdditionalInferenceSpecificationsContainers; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

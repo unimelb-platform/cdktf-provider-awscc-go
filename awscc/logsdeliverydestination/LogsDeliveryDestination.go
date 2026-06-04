@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/logsdeliverydestination/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_delivery_destination awscc_logs_delivery_destination}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_delivery_destination awscc_logs_delivery_destination}.
 type LogsDeliveryDestination interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -25,9 +25,8 @@ type LogsDeliveryDestination interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
-	DeliveryDestinationPolicy() *string
-	SetDeliveryDestinationPolicy(val *string)
-	DeliveryDestinationPolicyInput() *string
+	DeliveryDestinationPolicy() LogsDeliveryDestinationDeliveryDestinationPolicyOutputReference
+	DeliveryDestinationPolicyInput() interface{}
 	DeliveryDestinationType() *string
 	// Experimental.
 	DependsOn() *[]*string
@@ -54,6 +53,9 @@ type LogsDeliveryDestination interface {
 	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
+	OutputFormat() *string
+	SetOutputFormat(val *string)
+	OutputFormatInput() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -96,23 +98,38 @@ type LogsDeliveryDestination interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutDeliveryDestinationPolicy(value *LogsDeliveryDestinationDeliveryDestinationPolicy)
 	PutTags(value interface{})
 	ResetDeliveryDestinationPolicy()
 	ResetDestinationResourceArn()
+	ResetOutputFormat()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -177,8 +194,8 @@ func (j *jsiiProxy_LogsDeliveryDestination) Count() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_LogsDeliveryDestination) DeliveryDestinationPolicy() *string {
-	var returns *string
+func (j *jsiiProxy_LogsDeliveryDestination) DeliveryDestinationPolicy() LogsDeliveryDestinationDeliveryDestinationPolicyOutputReference {
+	var returns LogsDeliveryDestinationDeliveryDestinationPolicyOutputReference
 	_jsii_.Get(
 		j,
 		"deliveryDestinationPolicy",
@@ -187,8 +204,8 @@ func (j *jsiiProxy_LogsDeliveryDestination) DeliveryDestinationPolicy() *string 
 	return returns
 }
 
-func (j *jsiiProxy_LogsDeliveryDestination) DeliveryDestinationPolicyInput() *string {
-	var returns *string
+func (j *jsiiProxy_LogsDeliveryDestination) DeliveryDestinationPolicyInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"deliveryDestinationPolicyInput",
@@ -317,6 +334,26 @@ func (j *jsiiProxy_LogsDeliveryDestination) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_LogsDeliveryDestination) OutputFormat() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"outputFormat",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LogsDeliveryDestination) OutputFormatInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"outputFormatInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_LogsDeliveryDestination) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -398,7 +435,7 @@ func (j *jsiiProxy_LogsDeliveryDestination) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_delivery_destination awscc_logs_delivery_destination} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_delivery_destination awscc_logs_delivery_destination} Resource.
 func NewLogsDeliveryDestination(scope constructs.Construct, id *string, config *LogsDeliveryDestinationConfig) LogsDeliveryDestination {
 	_init_.Initialize()
 
@@ -416,7 +453,7 @@ func NewLogsDeliveryDestination(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_delivery_destination awscc_logs_delivery_destination} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_delivery_destination awscc_logs_delivery_destination} Resource.
 func NewLogsDeliveryDestination_Override(l LogsDeliveryDestination, scope constructs.Construct, id *string, config *LogsDeliveryDestinationConfig) {
 	_init_.Initialize()
 
@@ -445,17 +482,6 @@ func (j *jsiiProxy_LogsDeliveryDestination)SetCount(val interface{}) {
 	_jsii_.Set(
 		j,
 		"count",
-		val,
-	)
-}
-
-func (j *jsiiProxy_LogsDeliveryDestination)SetDeliveryDestinationPolicy(val *string) {
-	if err := j.validateSetDeliveryDestinationPolicyParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"deliveryDestinationPolicy",
 		val,
 	)
 }
@@ -505,6 +531,17 @@ func (j *jsiiProxy_LogsDeliveryDestination)SetName(val *string) {
 	_jsii_.Set(
 		j,
 		"name",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LogsDeliveryDestination)SetOutputFormat(val *string) {
+	if err := j.validateSetOutputFormatParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"outputFormat",
 		val,
 	)
 }
@@ -797,6 +834,19 @@ func (l *jsiiProxy_LogsDeliveryDestination) GetStringMapAttribute(terraformAttri
 	return returns
 }
 
+func (l *jsiiProxy_LogsDeliveryDestination) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (l *jsiiProxy_LogsDeliveryDestination) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := l.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -824,6 +874,17 @@ func (l *jsiiProxy_LogsDeliveryDestination) InterpolationForAttribute(terraformA
 	return returns
 }
 
+func (l *jsiiProxy_LogsDeliveryDestination) MoveFromId(id *string) {
+	if err := l.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (l *jsiiProxy_LogsDeliveryDestination) MoveTo(moveTarget *string, index interface{}) {
 	if err := l.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -835,6 +896,17 @@ func (l *jsiiProxy_LogsDeliveryDestination) MoveTo(moveTarget *string, index int
 	)
 }
 
+func (l *jsiiProxy_LogsDeliveryDestination) MoveToId(id *string) {
+	if err := l.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (l *jsiiProxy_LogsDeliveryDestination) OverrideLogicalId(newLogicalId *string) {
 	if err := l.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -843,6 +915,17 @@ func (l *jsiiProxy_LogsDeliveryDestination) OverrideLogicalId(newLogicalId *stri
 		l,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (l *jsiiProxy_LogsDeliveryDestination) PutDeliveryDestinationPolicy(value *LogsDeliveryDestinationDeliveryDestinationPolicy) {
+	if err := l.validatePutDeliveryDestinationPolicyParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"putDeliveryDestinationPolicy",
+		[]interface{}{value},
 	)
 }
 
@@ -873,6 +956,14 @@ func (l *jsiiProxy_LogsDeliveryDestination) ResetDestinationResourceArn() {
 	)
 }
 
+func (l *jsiiProxy_LogsDeliveryDestination) ResetOutputFormat() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetOutputFormat",
+		nil, // no parameters
+	)
+}
+
 func (l *jsiiProxy_LogsDeliveryDestination) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		l,
@@ -895,6 +986,32 @@ func (l *jsiiProxy_LogsDeliveryDestination) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		l,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LogsDeliveryDestination) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		l,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LogsDeliveryDestination) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

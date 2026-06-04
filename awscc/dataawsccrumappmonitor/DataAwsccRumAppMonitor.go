@@ -9,10 +9,11 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccrumappmonitor/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rum_app_monitor awscc_rum_app_monitor}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rum_app_monitor awscc_rum_app_monitor}.
 type DataAwsccRumAppMonitor interface {
 	cdktf.TerraformDataSource
 	AppMonitorConfiguration() DataAwsccRumAppMonitorAppMonitorConfigurationOutputReference
+	AppMonitorId() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -23,11 +24,13 @@ type DataAwsccRumAppMonitor interface {
 	SetCount(val interface{})
 	CustomEvents() DataAwsccRumAppMonitorCustomEventsOutputReference
 	CwLogEnabled() cdktf.IResolvable
+	DeobfuscationConfiguration() DataAwsccRumAppMonitorDeobfuscationConfigurationOutputReference
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	Domain() *string
+	DomainList() *[]*string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -52,6 +55,7 @@ type DataAwsccRumAppMonitor interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	ResourcePolicy() DataAwsccRumAppMonitorResourcePolicyOutputReference
 	Tags() DataAwsccRumAppMonitorTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -88,6 +92,10 @@ type DataAwsccRumAppMonitor interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -107,6 +115,16 @@ func (j *jsiiProxy_DataAwsccRumAppMonitor) AppMonitorConfiguration() DataAwsccRu
 	_jsii_.Get(
 		j,
 		"appMonitorConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRumAppMonitor) AppMonitorId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"appMonitorId",
 		&returns,
 	)
 	return returns
@@ -162,6 +180,16 @@ func (j *jsiiProxy_DataAwsccRumAppMonitor) CwLogEnabled() cdktf.IResolvable {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRumAppMonitor) DeobfuscationConfiguration() DataAwsccRumAppMonitorDeobfuscationConfigurationOutputReference {
+	var returns DataAwsccRumAppMonitorDeobfuscationConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"deobfuscationConfiguration",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRumAppMonitor) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -177,6 +205,16 @@ func (j *jsiiProxy_DataAwsccRumAppMonitor) Domain() *string {
 	_jsii_.Get(
 		j,
 		"domain",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRumAppMonitor) DomainList() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"domainList",
 		&returns,
 	)
 	return returns
@@ -282,6 +320,16 @@ func (j *jsiiProxy_DataAwsccRumAppMonitor) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRumAppMonitor) ResourcePolicy() DataAwsccRumAppMonitorResourcePolicyOutputReference {
+	var returns DataAwsccRumAppMonitorResourcePolicyOutputReference
+	_jsii_.Get(
+		j,
+		"resourcePolicy",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRumAppMonitor) Tags() DataAwsccRumAppMonitorTagsList {
 	var returns DataAwsccRumAppMonitorTagsList
 	_jsii_.Get(
@@ -323,7 +371,7 @@ func (j *jsiiProxy_DataAwsccRumAppMonitor) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rum_app_monitor awscc_rum_app_monitor} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rum_app_monitor awscc_rum_app_monitor} Data Source.
 func NewDataAwsccRumAppMonitor(scope constructs.Construct, id *string, config *DataAwsccRumAppMonitorConfig) DataAwsccRumAppMonitor {
 	_init_.Initialize()
 
@@ -341,7 +389,7 @@ func NewDataAwsccRumAppMonitor(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rum_app_monitor awscc_rum_app_monitor} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rum_app_monitor awscc_rum_app_monitor} Data Source.
 func NewDataAwsccRumAppMonitor_Override(d DataAwsccRumAppMonitor, scope constructs.Construct, id *string, config *DataAwsccRumAppMonitorConfig) {
 	_init_.Initialize()
 
@@ -708,6 +756,32 @@ func (d *jsiiProxy_DataAwsccRumAppMonitor) SynthesizeAttributes() *map[string]in
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRumAppMonitor) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRumAppMonitor) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

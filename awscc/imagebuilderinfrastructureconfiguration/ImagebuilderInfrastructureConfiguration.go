@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/imagebuilderinfrastructureconfiguration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/imagebuilder_infrastructure_configuration awscc_imagebuilder_infrastructure_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/imagebuilder_infrastructure_configuration awscc_imagebuilder_infrastructure_configuration}.
 type ImagebuilderInfrastructureConfiguration interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -63,6 +63,8 @@ type ImagebuilderInfrastructureConfiguration interface {
 	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
+	Placement() ImagebuilderInfrastructureConfigurationPlacementOutputReference
+	PlacementInput() interface{}
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -121,17 +123,28 @@ type ImagebuilderInfrastructureConfiguration interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutInstanceMetadataOptions(value *ImagebuilderInfrastructureConfigurationInstanceMetadataOptions)
 	PutLogging(value *ImagebuilderInfrastructureConfigurationLogging)
+	PutPlacement(value *ImagebuilderInfrastructureConfigurationPlacement)
 	ResetDescription()
 	ResetInstanceMetadataOptions()
 	ResetInstanceTypes()
@@ -140,6 +153,7 @@ type ImagebuilderInfrastructureConfiguration interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetPlacement()
 	ResetResourceTags()
 	ResetSecurityGroupIds()
 	ResetSnsTopicArn()
@@ -147,6 +161,9 @@ type ImagebuilderInfrastructureConfiguration interface {
 	ResetTags()
 	ResetTerminateInstanceOnFailure()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -421,6 +438,26 @@ func (j *jsiiProxy_ImagebuilderInfrastructureConfiguration) Node() constructs.No
 	return returns
 }
 
+func (j *jsiiProxy_ImagebuilderInfrastructureConfiguration) Placement() ImagebuilderInfrastructureConfigurationPlacementOutputReference {
+	var returns ImagebuilderInfrastructureConfigurationPlacementOutputReference
+	_jsii_.Get(
+		j,
+		"placement",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ImagebuilderInfrastructureConfiguration) PlacementInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"placementInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ImagebuilderInfrastructureConfiguration) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -602,7 +639,7 @@ func (j *jsiiProxy_ImagebuilderInfrastructureConfiguration) TerraformResourceTyp
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/imagebuilder_infrastructure_configuration awscc_imagebuilder_infrastructure_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/imagebuilder_infrastructure_configuration awscc_imagebuilder_infrastructure_configuration} Resource.
 func NewImagebuilderInfrastructureConfiguration(scope constructs.Construct, id *string, config *ImagebuilderInfrastructureConfigurationConfig) ImagebuilderInfrastructureConfiguration {
 	_init_.Initialize()
 
@@ -620,7 +657,7 @@ func NewImagebuilderInfrastructureConfiguration(scope constructs.Construct, id *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/imagebuilder_infrastructure_configuration awscc_imagebuilder_infrastructure_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/imagebuilder_infrastructure_configuration awscc_imagebuilder_infrastructure_configuration} Resource.
 func NewImagebuilderInfrastructureConfiguration_Override(i ImagebuilderInfrastructureConfiguration, scope constructs.Construct, id *string, config *ImagebuilderInfrastructureConfigurationConfig) {
 	_init_.Initialize()
 
@@ -1089,6 +1126,19 @@ func (i *jsiiProxy_ImagebuilderInfrastructureConfiguration) GetStringMapAttribut
 	return returns
 }
 
+func (i *jsiiProxy_ImagebuilderInfrastructureConfiguration) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (i *jsiiProxy_ImagebuilderInfrastructureConfiguration) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := i.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1116,6 +1166,17 @@ func (i *jsiiProxy_ImagebuilderInfrastructureConfiguration) InterpolationForAttr
 	return returns
 }
 
+func (i *jsiiProxy_ImagebuilderInfrastructureConfiguration) MoveFromId(id *string) {
+	if err := i.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (i *jsiiProxy_ImagebuilderInfrastructureConfiguration) MoveTo(moveTarget *string, index interface{}) {
 	if err := i.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1124,6 +1185,17 @@ func (i *jsiiProxy_ImagebuilderInfrastructureConfiguration) MoveTo(moveTarget *s
 		i,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (i *jsiiProxy_ImagebuilderInfrastructureConfiguration) MoveToId(id *string) {
+	if err := i.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1156,6 +1228,17 @@ func (i *jsiiProxy_ImagebuilderInfrastructureConfiguration) PutLogging(value *Im
 	_jsii_.InvokeVoid(
 		i,
 		"putLogging",
+		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_ImagebuilderInfrastructureConfiguration) PutPlacement(value *ImagebuilderInfrastructureConfigurationPlacement) {
+	if err := i.validatePutPlacementParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putPlacement",
 		[]interface{}{value},
 	)
 }
@@ -1204,6 +1287,14 @@ func (i *jsiiProxy_ImagebuilderInfrastructureConfiguration) ResetOverrideLogical
 	_jsii_.InvokeVoid(
 		i,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_ImagebuilderInfrastructureConfiguration) ResetPlacement() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetPlacement",
 		nil, // no parameters
 	)
 }
@@ -1262,6 +1353,32 @@ func (i *jsiiProxy_ImagebuilderInfrastructureConfiguration) SynthesizeAttributes
 	_jsii_.Invoke(
 		i,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_ImagebuilderInfrastructureConfiguration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		i,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_ImagebuilderInfrastructureConfiguration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

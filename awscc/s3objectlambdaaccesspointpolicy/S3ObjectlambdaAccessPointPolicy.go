@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/s3objectlambdaaccesspointpolicy/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/s3objectlambda_access_point_policy awscc_s3objectlambda_access_point_policy}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/s3objectlambda_access_point_policy awscc_s3objectlambda_access_point_policy}.
 type S3ObjectlambdaAccessPointPolicy interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -89,12 +89,22 @@ type S3ObjectlambdaAccessPointPolicy interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -102,6 +112,9 @@ type S3ObjectlambdaAccessPointPolicy interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -327,7 +340,7 @@ func (j *jsiiProxy_S3ObjectlambdaAccessPointPolicy) TerraformResourceType() *str
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/s3objectlambda_access_point_policy awscc_s3objectlambda_access_point_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/s3objectlambda_access_point_policy awscc_s3objectlambda_access_point_policy} Resource.
 func NewS3ObjectlambdaAccessPointPolicy(scope constructs.Construct, id *string, config *S3ObjectlambdaAccessPointPolicyConfig) S3ObjectlambdaAccessPointPolicy {
 	_init_.Initialize()
 
@@ -345,7 +358,7 @@ func NewS3ObjectlambdaAccessPointPolicy(scope constructs.Construct, id *string, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/s3objectlambda_access_point_policy awscc_s3objectlambda_access_point_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/s3objectlambda_access_point_policy awscc_s3objectlambda_access_point_policy} Resource.
 func NewS3ObjectlambdaAccessPointPolicy_Override(s S3ObjectlambdaAccessPointPolicy, scope constructs.Construct, id *string, config *S3ObjectlambdaAccessPointPolicyConfig) {
 	_init_.Initialize()
 
@@ -715,6 +728,19 @@ func (s *jsiiProxy_S3ObjectlambdaAccessPointPolicy) GetStringMapAttribute(terraf
 	return returns
 }
 
+func (s *jsiiProxy_S3ObjectlambdaAccessPointPolicy) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (s *jsiiProxy_S3ObjectlambdaAccessPointPolicy) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := s.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -742,6 +768,17 @@ func (s *jsiiProxy_S3ObjectlambdaAccessPointPolicy) InterpolationForAttribute(te
 	return returns
 }
 
+func (s *jsiiProxy_S3ObjectlambdaAccessPointPolicy) MoveFromId(id *string) {
+	if err := s.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (s *jsiiProxy_S3ObjectlambdaAccessPointPolicy) MoveTo(moveTarget *string, index interface{}) {
 	if err := s.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -750,6 +787,17 @@ func (s *jsiiProxy_S3ObjectlambdaAccessPointPolicy) MoveTo(moveTarget *string, i
 		s,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (s *jsiiProxy_S3ObjectlambdaAccessPointPolicy) MoveToId(id *string) {
+	if err := s.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -778,6 +826,32 @@ func (s *jsiiProxy_S3ObjectlambdaAccessPointPolicy) SynthesizeAttributes() *map[
 	_jsii_.Invoke(
 		s,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_S3ObjectlambdaAccessPointPolicy) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		s,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_S3ObjectlambdaAccessPointPolicy) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

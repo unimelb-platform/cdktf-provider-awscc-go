@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccbackuprestoretestingplans/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/backup_restore_testing_plans awscc_backup_restore_testing_plans}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/backup_restore_testing_plans awscc_backup_restore_testing_plans}.
 type DataAwsccBackupRestoreTestingPlans interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccBackupRestoreTestingPlans interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccBackupRestoreTestingPlans) TerraformResourceType() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/backup_restore_testing_plans awscc_backup_restore_testing_plans} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/backup_restore_testing_plans awscc_backup_restore_testing_plans} Data Source.
 func NewDataAwsccBackupRestoreTestingPlans(scope constructs.Construct, id *string, config *DataAwsccBackupRestoreTestingPlansConfig) DataAwsccBackupRestoreTestingPlans {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccBackupRestoreTestingPlans(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/backup_restore_testing_plans awscc_backup_restore_testing_plans} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/backup_restore_testing_plans awscc_backup_restore_testing_plans} Data Source.
 func NewDataAwsccBackupRestoreTestingPlans_Override(d DataAwsccBackupRestoreTestingPlans, scope constructs.Construct, id *string, config *DataAwsccBackupRestoreTestingPlansConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccBackupRestoreTestingPlans) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccBackupRestoreTestingPlans) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccBackupRestoreTestingPlans) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

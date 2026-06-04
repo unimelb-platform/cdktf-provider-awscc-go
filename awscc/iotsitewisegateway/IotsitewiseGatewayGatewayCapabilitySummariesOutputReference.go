@@ -68,6 +68,7 @@ type IotsitewiseGatewayGatewayCapabilitySummariesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetCapabilityConfiguration()
+	ResetCapabilityNamespace()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (i *jsiiProxy_IotsitewiseGatewayGatewayCapabilitySummariesOutputReference) 
 	_jsii_.InvokeVoid(
 		i,
 		"resetCapabilityConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseGatewayGatewayCapabilitySummariesOutputReference) ResetCapabilityNamespace() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetCapabilityNamespace",
 		nil, // no parameters
 	)
 }

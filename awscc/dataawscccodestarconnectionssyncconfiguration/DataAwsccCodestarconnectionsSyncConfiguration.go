@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccodestarconnectionssyncconfiguration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codestarconnections_sync_configuration awscc_codestarconnections_sync_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codestarconnections_sync_configuration awscc_codestarconnections_sync_configuration}.
 type DataAwsccCodestarconnectionsSyncConfiguration interface {
 	cdktf.TerraformDataSource
 	Branch() *string
@@ -49,6 +49,7 @@ type DataAwsccCodestarconnectionsSyncConfiguration interface {
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
 	ProviderType() *string
+	PublishDeploymentStatus() *string
 	// Experimental.
 	RawOverrides() interface{}
 	RepositoryLinkId() *string
@@ -62,6 +63,7 @@ type DataAwsccCodestarconnectionsSyncConfiguration interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	TriggerResourceUpdateOn() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -91,6 +93,10 @@ type DataAwsccCodestarconnectionsSyncConfiguration interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -265,6 +271,16 @@ func (j *jsiiProxy_DataAwsccCodestarconnectionsSyncConfiguration) ProviderType()
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccCodestarconnectionsSyncConfiguration) PublishDeploymentStatus() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"publishDeploymentStatus",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccCodestarconnectionsSyncConfiguration) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -355,8 +371,18 @@ func (j *jsiiProxy_DataAwsccCodestarconnectionsSyncConfiguration) TerraformResou
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccCodestarconnectionsSyncConfiguration) TriggerResourceUpdateOn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"triggerResourceUpdateOn",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codestarconnections_sync_configuration awscc_codestarconnections_sync_configuration} Data Source.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codestarconnections_sync_configuration awscc_codestarconnections_sync_configuration} Data Source.
 func NewDataAwsccCodestarconnectionsSyncConfiguration(scope constructs.Construct, id *string, config *DataAwsccCodestarconnectionsSyncConfigurationConfig) DataAwsccCodestarconnectionsSyncConfiguration {
 	_init_.Initialize()
 
@@ -374,7 +400,7 @@ func NewDataAwsccCodestarconnectionsSyncConfiguration(scope constructs.Construct
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codestarconnections_sync_configuration awscc_codestarconnections_sync_configuration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codestarconnections_sync_configuration awscc_codestarconnections_sync_configuration} Data Source.
 func NewDataAwsccCodestarconnectionsSyncConfiguration_Override(d DataAwsccCodestarconnectionsSyncConfiguration, scope constructs.Construct, id *string, config *DataAwsccCodestarconnectionsSyncConfigurationConfig) {
 	_init_.Initialize()
 
@@ -741,6 +767,32 @@ func (d *jsiiProxy_DataAwsccCodestarconnectionsSyncConfiguration) SynthesizeAttr
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCodestarconnectionsSyncConfiguration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCodestarconnectionsSyncConfiguration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

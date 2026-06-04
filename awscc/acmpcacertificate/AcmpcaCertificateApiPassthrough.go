@@ -2,13 +2,15 @@ package acmpcacertificate
 
 
 type AcmpcaCertificateApiPassthrough struct {
-	// Structure that contains X.500 extensions for a Certificate.
+	// Specifies X.509 extension information for a certificate.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/acmpca_certificate#extensions AcmpcaCertificate#extensions}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/acmpca_certificate#extensions AcmpcaCertificate#extensions}
 	Extensions *AcmpcaCertificateApiPassthroughExtensions `field:"optional" json:"extensions" yaml:"extensions"`
-	// Structure that contains X.500 distinguished name information.
+	// Contains information about the certificate subject.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/acmpca_certificate#subject AcmpcaCertificate#subject}
+	// The Subject field in the certificate identifies the entity that owns or controls the public key in the certificate. The entity can be a user, computer, device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the certificate.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/acmpca_certificate#subject AcmpcaCertificate#subject}
 	Subject *AcmpcaCertificateApiPassthroughSubject `field:"optional" json:"subject" yaml:"subject"`
 }
 

@@ -56,7 +56,15 @@ func (c *jsiiProxy_CleanroomsAnalysisTemplate) validateInterpolationForAttribute
 	return nil
 }
 
+func (c *jsiiProxy_CleanroomsAnalysisTemplate) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CleanroomsAnalysisTemplate) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_CleanroomsAnalysisTemplate) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -68,7 +76,15 @@ func (c *jsiiProxy_CleanroomsAnalysisTemplate) validatePutAnalysisParametersPara
 	return nil
 }
 
+func (c *jsiiProxy_CleanroomsAnalysisTemplate) validatePutSchemaParameters(value *CleanroomsAnalysisTemplateSchema) error {
+	return nil
+}
+
 func (c *jsiiProxy_CleanroomsAnalysisTemplate) validatePutSourceParameters(value *CleanroomsAnalysisTemplateSource) error {
+	return nil
+}
+
+func (c *jsiiProxy_CleanroomsAnalysisTemplate) validatePutSourceMetadataParameters(value *CleanroomsAnalysisTemplateSourceMetadata) error {
 	return nil
 }
 

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/codestarconnectionssyncconfiguration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/codestarconnections_sync_configuration awscc_codestarconnections_sync_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/codestarconnections_sync_configuration awscc_codestarconnections_sync_configuration}.
 type CodestarconnectionsSyncConfiguration interface {
 	cdktf.TerraformResource
 	Branch() *string
@@ -59,6 +59,9 @@ type CodestarconnectionsSyncConfiguration interface {
 	Provisioners() *[]interface{}
 	// Experimental.
 	SetProvisioners(val *[]interface{})
+	PublishDeploymentStatus() *string
+	SetPublishDeploymentStatus(val *string)
+	PublishDeploymentStatusInput() *string
 	// Experimental.
 	RawOverrides() interface{}
 	RepositoryLinkId() *string
@@ -80,6 +83,9 @@ type CodestarconnectionsSyncConfiguration interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	TriggerResourceUpdateOn() *string
+	SetTriggerResourceUpdateOn(val *string)
+	TriggerResourceUpdateOnInput() *string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -104,19 +110,34 @@ type CodestarconnectionsSyncConfiguration interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetPublishDeploymentStatus()
+	ResetTriggerResourceUpdateOn()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -321,6 +342,26 @@ func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) Provisioners() *[]inter
 	return returns
 }
 
+func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) PublishDeploymentStatus() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"publishDeploymentStatus",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) PublishDeploymentStatusInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"publishDeploymentStatusInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -451,8 +492,28 @@ func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) TerraformResourceType()
 	return returns
 }
 
+func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) TriggerResourceUpdateOn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"triggerResourceUpdateOn",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/codestarconnections_sync_configuration awscc_codestarconnections_sync_configuration} Resource.
+func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) TriggerResourceUpdateOnInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"triggerResourceUpdateOnInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/codestarconnections_sync_configuration awscc_codestarconnections_sync_configuration} Resource.
 func NewCodestarconnectionsSyncConfiguration(scope constructs.Construct, id *string, config *CodestarconnectionsSyncConfigurationConfig) CodestarconnectionsSyncConfiguration {
 	_init_.Initialize()
 
@@ -470,7 +531,7 @@ func NewCodestarconnectionsSyncConfiguration(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/codestarconnections_sync_configuration awscc_codestarconnections_sync_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/codestarconnections_sync_configuration awscc_codestarconnections_sync_configuration} Resource.
 func NewCodestarconnectionsSyncConfiguration_Override(c CodestarconnectionsSyncConfiguration, scope constructs.Construct, id *string, config *CodestarconnectionsSyncConfigurationConfig) {
 	_init_.Initialize()
 
@@ -571,6 +632,17 @@ func (j *jsiiProxy_CodestarconnectionsSyncConfiguration)SetProvisioners(val *[]i
 	)
 }
 
+func (j *jsiiProxy_CodestarconnectionsSyncConfiguration)SetPublishDeploymentStatus(val *string) {
+	if err := j.validateSetPublishDeploymentStatusParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"publishDeploymentStatus",
+		val,
+	)
+}
+
 func (j *jsiiProxy_CodestarconnectionsSyncConfiguration)SetRepositoryLinkId(val *string) {
 	if err := j.validateSetRepositoryLinkIdParameters(val); err != nil {
 		panic(err)
@@ -611,6 +683,17 @@ func (j *jsiiProxy_CodestarconnectionsSyncConfiguration)SetSyncType(val *string)
 	_jsii_.Set(
 		j,
 		"syncType",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CodestarconnectionsSyncConfiguration)SetTriggerResourceUpdateOn(val *string) {
+	if err := j.validateSetTriggerResourceUpdateOnParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"triggerResourceUpdateOn",
 		val,
 	)
 }
@@ -884,6 +967,19 @@ func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) GetStringMapAttribute(t
 	return returns
 }
 
+func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -911,6 +1007,17 @@ func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) InterpolationForAttribu
 	return returns
 }
 
+func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -919,6 +1026,17 @@ func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) MoveTo(moveTarget *stri
 		c,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -941,12 +1059,54 @@ func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) ResetOverrideLogicalId(
 	)
 }
 
+func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) ResetPublishDeploymentStatus() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetPublishDeploymentStatus",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) ResetTriggerResourceUpdateOn() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetTriggerResourceUpdateOn",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -28,8 +28,8 @@ type RdsDbInstanceCertificateDetailsOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() interface{}
-	SetInternalValue(val interface{})
+	InternalValue() *RdsDbInstanceCertificateDetails
+	SetInternalValue(val *RdsDbInstanceCertificateDetails)
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -128,8 +128,8 @@ func (j *jsiiProxy_RdsDbInstanceCertificateDetailsOutputReference) Fqn() *string
 	return returns
 }
 
-func (j *jsiiProxy_RdsDbInstanceCertificateDetailsOutputReference) InternalValue() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_RdsDbInstanceCertificateDetailsOutputReference) InternalValue() *RdsDbInstanceCertificateDetails {
+	var returns *RdsDbInstanceCertificateDetails
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -218,7 +218,7 @@ func (j *jsiiProxy_RdsDbInstanceCertificateDetailsOutputReference)SetComplexObje
 	)
 }
 
-func (j *jsiiProxy_RdsDbInstanceCertificateDetailsOutputReference)SetInternalValue(val interface{}) {
+func (j *jsiiProxy_RdsDbInstanceCertificateDetailsOutputReference)SetInternalValue(val *RdsDbInstanceCertificateDetails) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

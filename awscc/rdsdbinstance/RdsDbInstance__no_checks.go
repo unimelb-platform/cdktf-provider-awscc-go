@@ -56,7 +56,15 @@ func (r *jsiiProxy_RdsDbInstance) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
+func (r *jsiiProxy_RdsDbInstance) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RdsDbInstance) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (r *jsiiProxy_RdsDbInstance) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -65,14 +73,6 @@ func (r *jsiiProxy_RdsDbInstance) validateOverrideLogicalIdParameters(newLogical
 }
 
 func (r *jsiiProxy_RdsDbInstance) validatePutAssociatedRolesParameters(value interface{}) error {
-	return nil
-}
-
-func (r *jsiiProxy_RdsDbInstance) validatePutCertificateDetailsParameters(value *RdsDbInstanceCertificateDetails) error {
-	return nil
-}
-
-func (r *jsiiProxy_RdsDbInstance) validatePutEndpointParameters(value *RdsDbInstanceEndpoint) error {
 	return nil
 }
 
@@ -112,7 +112,19 @@ func (j *jsiiProxy_RdsDbInstance) validateSetAllowMajorVersionUpgradeParameters(
 	return nil
 }
 
+func (j *jsiiProxy_RdsDbInstance) validateSetApplyImmediatelyParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RdsDbInstance) validateSetAutomaticBackupReplicationKmsKeyIdParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_RdsDbInstance) validateSetAutomaticBackupReplicationRegionParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_RdsDbInstance) validateSetAutomaticBackupReplicationRetentionPeriodParameters(val *float64) error {
 	return nil
 }
 
@@ -125,6 +137,10 @@ func (j *jsiiProxy_RdsDbInstance) validateSetAvailabilityZoneParameters(val *str
 }
 
 func (j *jsiiProxy_RdsDbInstance) validateSetBackupRetentionPeriodParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_RdsDbInstance) validateSetBackupTargetParameters(val *string) error {
 	return nil
 }
 
@@ -153,6 +169,10 @@ func (j *jsiiProxy_RdsDbInstance) validateSetCountParameters(val interface{}) er
 }
 
 func (j *jsiiProxy_RdsDbInstance) validateSetCustomIamInstanceProfileParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_RdsDbInstance) validateSetDatabaseInsightsModeParameters(val *string) error {
 	return nil
 }
 
@@ -189,6 +209,10 @@ func (j *jsiiProxy_RdsDbInstance) validateSetDbSnapshotIdentifierParameters(val 
 }
 
 func (j *jsiiProxy_RdsDbInstance) validateSetDbSubnetGroupNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_RdsDbInstance) validateSetDbSystemIdParameters(val *string) error {
 	return nil
 }
 
@@ -241,6 +265,10 @@ func (j *jsiiProxy_RdsDbInstance) validateSetEnablePerformanceInsightsParameters
 }
 
 func (j *jsiiProxy_RdsDbInstance) validateSetEngineParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_RdsDbInstance) validateSetEngineLifecycleSupportParameters(val *string) error {
 	return nil
 }
 

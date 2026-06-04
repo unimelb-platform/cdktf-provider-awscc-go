@@ -30,8 +30,8 @@ type SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithmsOutputRefe
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithms
-	SetInternalValue(val *SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithms)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	ModelDataUrl() *string
 	SetModelDataUrl(val *string)
 	ModelDataUrlInput() *string
@@ -67,6 +67,7 @@ type SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithmsOutputRefe
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAlgorithmName()
 	ResetModelDataUrl()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -143,8 +144,8 @@ func (j *jsiiProxy_SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgori
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithmsOutputReference) InternalValue() *SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithms {
-	var returns *SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithms
+func (j *jsiiProxy_SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithmsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -254,7 +255,7 @@ func (j *jsiiProxy_SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgori
 	)
 }
 
-func (j *jsiiProxy_SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithmsOutputReference)SetInternalValue(val *SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithms) {
+func (j *jsiiProxy_SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithmsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -482,6 +483,14 @@ func (s *jsiiProxy_SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgori
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithmsOutputReference) ResetAlgorithmName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetAlgorithmName",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SagemakerModelPackageSourceAlgorithmSpecificationSourceAlgorithmsOutputReference) ResetModelDataUrl() {

@@ -27,10 +27,14 @@ type RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference interfa
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *RedshiftserverlessWorkgroupWorkgroupConfigParameters
-	SetInternalValue(val *RedshiftserverlessWorkgroupWorkgroupConfigParameters)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	ParameterKey() *string
+	SetParameterKey(val *string)
+	ParameterKeyInput() *string
 	ParameterValue() *string
+	SetParameterValue(val *string)
+	ParameterValueInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -63,6 +67,8 @@ type RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference interfa
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetParameterKey()
+	ResetParameterValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -118,8 +124,8 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputRef
 	return returns
 }
 
-func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference) InternalValue() *RedshiftserverlessWorkgroupWorkgroupConfigParameters {
-	var returns *RedshiftserverlessWorkgroupWorkgroupConfigParameters
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -138,11 +144,31 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputRef
 	return returns
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference) ParameterKeyInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"parameterKeyInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference) ParameterValue() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"parameterValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference) ParameterValueInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"parameterValueInput",
 		&returns,
 	)
 	return returns
@@ -218,13 +244,35 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputRef
 	)
 }
 
-func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference)SetInternalValue(val *RedshiftserverlessWorkgroupWorkgroupConfigParameters) {
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference)SetParameterKey(val *string) {
+	if err := j.validateSetParameterKeyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"parameterKey",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference)SetParameterValue(val *string) {
+	if err := j.validateSetParameterValueParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"parameterValue",
 		val,
 	)
 }
@@ -435,6 +483,22 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputRef
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference) ResetParameterKey() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetParameterKey",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference) ResetParameterValue() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetParameterValue",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -56,7 +56,15 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validateInterpolationForAttrib
 	return nil
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -72,7 +80,15 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validatePutAmazonopensearchser
 	return nil
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validatePutDatabaseSourceConfigurationParameters(value *KinesisfirehoseDeliveryStreamDatabaseSourceConfiguration) error {
+	return nil
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validatePutDeliveryStreamEncryptionConfigurationInputParameters(value *KinesisfirehoseDeliveryStreamDeliveryStreamEncryptionConfigurationInput) error {
+	return nil
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validatePutDirectPutSourceConfigurationParameters(value *KinesisfirehoseDeliveryStreamDirectPutSourceConfiguration) error {
 	return nil
 }
 
@@ -85,6 +101,10 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validatePutExtendedS3Destinati
 }
 
 func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validatePutHttpEndpointDestinationConfigurationParameters(value *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfiguration) error {
+	return nil
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validatePutIcebergDestinationConfigurationParameters(value *KinesisfirehoseDeliveryStreamIcebergDestinationConfiguration) error {
 	return nil
 }
 

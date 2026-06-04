@@ -64,6 +64,7 @@ type Resourceexplorer2ViewFiltersOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetFilterString()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (r *jsiiProxy_Resourceexplorer2ViewFiltersOutputReference) InterpolationFor
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_Resourceexplorer2ViewFiltersOutputReference) ResetFilterString() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetFilterString",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_Resourceexplorer2ViewFiltersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -163,9 +163,25 @@ func (j *jsiiProxy_CleanroomsMembershipPaymentConfigurationQueryComputeOutputRef
 	return nil
 }
 
-func (j *jsiiProxy_CleanroomsMembershipPaymentConfigurationQueryComputeOutputReference) validateSetInternalValueParameters(val *CleanroomsMembershipPaymentConfigurationQueryCompute) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_CleanroomsMembershipPaymentConfigurationQueryComputeOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *CleanroomsMembershipPaymentConfigurationQueryCompute:
+		val := val.(*CleanroomsMembershipPaymentConfigurationQueryCompute)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case CleanroomsMembershipPaymentConfigurationQueryCompute:
+		val_ := val.(CleanroomsMembershipPaymentConfigurationQueryCompute)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *CleanroomsMembershipPaymentConfigurationQueryCompute; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

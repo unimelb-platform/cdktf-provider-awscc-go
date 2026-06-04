@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscclakeformationprincipalpermissions/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lakeformation_principal_permissions awscc_lakeformation_principal_permissions}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lakeformation_principal_permissions awscc_lakeformation_principal_permissions}.
 type DataAwsccLakeformationPrincipalPermissions interface {
 	cdktf.TerraformDataSource
 	Catalog() *string
@@ -89,6 +89,10 @@ type DataAwsccLakeformationPrincipalPermissions interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -334,7 +338,7 @@ func (j *jsiiProxy_DataAwsccLakeformationPrincipalPermissions) TerraformResource
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lakeformation_principal_permissions awscc_lakeformation_principal_permissions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lakeformation_principal_permissions awscc_lakeformation_principal_permissions} Data Source.
 func NewDataAwsccLakeformationPrincipalPermissions(scope constructs.Construct, id *string, config *DataAwsccLakeformationPrincipalPermissionsConfig) DataAwsccLakeformationPrincipalPermissions {
 	_init_.Initialize()
 
@@ -352,7 +356,7 @@ func NewDataAwsccLakeformationPrincipalPermissions(scope constructs.Construct, i
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lakeformation_principal_permissions awscc_lakeformation_principal_permissions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lakeformation_principal_permissions awscc_lakeformation_principal_permissions} Data Source.
 func NewDataAwsccLakeformationPrincipalPermissions_Override(d DataAwsccLakeformationPrincipalPermissions, scope constructs.Construct, id *string, config *DataAwsccLakeformationPrincipalPermissionsConfig) {
 	_init_.Initialize()
 
@@ -719,6 +723,32 @@ func (d *jsiiProxy_DataAwsccLakeformationPrincipalPermissions) SynthesizeAttribu
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLakeformationPrincipalPermissions) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLakeformationPrincipalPermissions) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

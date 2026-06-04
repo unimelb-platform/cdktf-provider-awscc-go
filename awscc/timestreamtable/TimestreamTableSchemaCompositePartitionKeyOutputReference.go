@@ -72,6 +72,7 @@ type TimestreamTableSchemaCompositePartitionKeyOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetEnforcementInRecord()
 	ResetName()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (t *jsiiProxy_TimestreamTableSchemaCompositePartitionKeyOutputReference) Re
 	_jsii_.InvokeVoid(
 		t,
 		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TimestreamTableSchemaCompositePartitionKeyOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetType",
 		nil, // no parameters
 	)
 }

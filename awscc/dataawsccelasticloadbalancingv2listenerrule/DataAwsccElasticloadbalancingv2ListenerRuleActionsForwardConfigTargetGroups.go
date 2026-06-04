@@ -1,0 +1,6 @@
+package dataawsccelasticloadbalancingv2listenerrule
+
+
+type DataAwsccElasticloadbalancingv2ListenerRuleActionsForwardConfigTargetGroups struct {
+}
+

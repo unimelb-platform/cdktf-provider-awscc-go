@@ -64,6 +64,7 @@ type S3BucketReplicationConfigurationRulesSourceSelectionCriteriaReplicaModifica
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetStatus()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_S3BucketReplicationConfigurationRulesSourceSelectionCriteriaR
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_S3BucketReplicationConfigurationRulesSourceSelectionCriteriaReplicaModificationsOutputReference) ResetStatus() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStatus",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_S3BucketReplicationConfigurationRulesSourceSelectionCriteriaReplicaModificationsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccelasticloadbalancingv2targetgroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticloadbalancingv2_target_group awscc_elasticloadbalancingv2_target_group}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticloadbalancingv2_target_group awscc_elasticloadbalancingv2_target_group}.
 type DataAwsccElasticloadbalancingv2TargetGroup interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -105,6 +105,10 @@ type DataAwsccElasticloadbalancingv2TargetGroup interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -510,7 +514,7 @@ func (j *jsiiProxy_DataAwsccElasticloadbalancingv2TargetGroup) VpcId() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticloadbalancingv2_target_group awscc_elasticloadbalancingv2_target_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticloadbalancingv2_target_group awscc_elasticloadbalancingv2_target_group} Data Source.
 func NewDataAwsccElasticloadbalancingv2TargetGroup(scope constructs.Construct, id *string, config *DataAwsccElasticloadbalancingv2TargetGroupConfig) DataAwsccElasticloadbalancingv2TargetGroup {
 	_init_.Initialize()
 
@@ -528,7 +532,7 @@ func NewDataAwsccElasticloadbalancingv2TargetGroup(scope constructs.Construct, i
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticloadbalancingv2_target_group awscc_elasticloadbalancingv2_target_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticloadbalancingv2_target_group awscc_elasticloadbalancingv2_target_group} Data Source.
 func NewDataAwsccElasticloadbalancingv2TargetGroup_Override(d DataAwsccElasticloadbalancingv2TargetGroup, scope constructs.Construct, id *string, config *DataAwsccElasticloadbalancingv2TargetGroupConfig) {
 	_init_.Initialize()
 
@@ -895,6 +899,32 @@ func (d *jsiiProxy_DataAwsccElasticloadbalancingv2TargetGroup) SynthesizeAttribu
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccElasticloadbalancingv2TargetGroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccElasticloadbalancingv2TargetGroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

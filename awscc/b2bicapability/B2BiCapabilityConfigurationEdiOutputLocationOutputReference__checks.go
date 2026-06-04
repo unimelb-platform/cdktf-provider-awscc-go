@@ -171,9 +171,25 @@ func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputLocationOutputReference) 
 	return nil
 }
 
-func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputLocationOutputReference) validateSetInternalValueParameters(val *B2BiCapabilityConfigurationEdiOutputLocation) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_B2BiCapabilityConfigurationEdiOutputLocationOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *B2BiCapabilityConfigurationEdiOutputLocation:
+		val := val.(*B2BiCapabilityConfigurationEdiOutputLocation)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case B2BiCapabilityConfigurationEdiOutputLocation:
+		val_ := val.(B2BiCapabilityConfigurationEdiOutputLocation)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *B2BiCapabilityConfigurationEdiOutputLocation; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

@@ -10,6 +10,9 @@ import (
 
 type BatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutputReference interface {
 	cdktf.ComplexObject
+	AllowPrivilegeEscalation() interface{}
+	SetAllowPrivilegeEscalation(val interface{})
+	AllowPrivilegeEscalationInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -76,6 +79,7 @@ type BatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutput
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAllowPrivilegeEscalation()
 	ResetPrivileged()
 	ResetReadOnlyRootFilesystem()
 	ResetRunAsGroup()
@@ -94,6 +98,26 @@ type BatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutput
 // The jsii proxy struct for BatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutputReference
 type jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutputReference) AllowPrivilegeEscalation() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"allowPrivilegeEscalation",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutputReference) AllowPrivilegeEscalationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"allowPrivilegeEscalationInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutputReference) ComplexObjectIndex() interface{} {
@@ -291,6 +315,17 @@ func NewBatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOut
 		"awscc.batchJobDefinition.BatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutputReference",
 		[]interface{}{terraformResource, terraformAttribute},
 		b,
+	)
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutputReference)SetAllowPrivilegeEscalation(val interface{}) {
+	if err := j.validateSetAllowPrivilegeEscalationParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"allowPrivilegeEscalation",
+		val,
 	)
 }
 
@@ -588,6 +623,14 @@ func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersSecurit
 	)
 
 	return returns
+}
+
+func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutputReference) ResetAllowPrivilegeEscalation() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetAllowPrivilegeEscalation",
+		nil, // no parameters
+	)
 }
 
 func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutputReference) ResetPrivileged() {

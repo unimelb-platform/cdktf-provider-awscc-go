@@ -19,7 +19,9 @@ type CloudfrontCloudfrontOriginAccessIdentityConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudfront_cloudfront_origin_access_identity#cloudfront_origin_access_identity_config CloudfrontCloudfrontOriginAccessIdentity#cloudfront_origin_access_identity_config}.
+	// The current configuration information for the identity.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudfront_cloudfront_origin_access_identity#cloudfront_origin_access_identity_config CloudfrontCloudfrontOriginAccessIdentity#cloudfront_origin_access_identity_config}
 	CloudfrontOriginAccessIdentityConfig *CloudfrontCloudfrontOriginAccessIdentityCloudfrontOriginAccessIdentityConfig `field:"required" json:"cloudfrontOriginAccessIdentityConfig" yaml:"cloudfrontOriginAccessIdentityConfig"`
 }
 

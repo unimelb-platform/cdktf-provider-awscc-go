@@ -68,7 +68,7 @@ func (j *jsiiProxy_CloudformationStackSetStackInstancesGroupDeploymentTargetsOut
 	return nil
 }
 
-func (j *jsiiProxy_CloudformationStackSetStackInstancesGroupDeploymentTargetsOutputReference) validateSetInternalValueParameters(val *CloudformationStackSetStackInstancesGroupDeploymentTargets) error {
+func (j *jsiiProxy_CloudformationStackSetStackInstancesGroupDeploymentTargetsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

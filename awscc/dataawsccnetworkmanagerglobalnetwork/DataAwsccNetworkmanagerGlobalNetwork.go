@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccnetworkmanagerglobalnetwork/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_global_network awscc_networkmanager_global_network}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_global_network awscc_networkmanager_global_network}.
 type DataAwsccNetworkmanagerGlobalNetwork interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -35,6 +35,7 @@ type DataAwsccNetworkmanagerGlobalNetwork interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	GlobalNetworkId() *string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -87,6 +88,10 @@ type DataAwsccNetworkmanagerGlobalNetwork interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -196,6 +201,16 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerGlobalNetwork) FriendlyUniqueId() *str
 	_jsii_.Get(
 		j,
 		"friendlyUniqueId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccNetworkmanagerGlobalNetwork) GlobalNetworkId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"globalNetworkId",
 		&returns,
 	)
 	return returns
@@ -312,7 +327,7 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerGlobalNetwork) TerraformResourceType()
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_global_network awscc_networkmanager_global_network} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_global_network awscc_networkmanager_global_network} Data Source.
 func NewDataAwsccNetworkmanagerGlobalNetwork(scope constructs.Construct, id *string, config *DataAwsccNetworkmanagerGlobalNetworkConfig) DataAwsccNetworkmanagerGlobalNetwork {
 	_init_.Initialize()
 
@@ -330,7 +345,7 @@ func NewDataAwsccNetworkmanagerGlobalNetwork(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_global_network awscc_networkmanager_global_network} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_global_network awscc_networkmanager_global_network} Data Source.
 func NewDataAwsccNetworkmanagerGlobalNetwork_Override(d DataAwsccNetworkmanagerGlobalNetwork, scope constructs.Construct, id *string, config *DataAwsccNetworkmanagerGlobalNetworkConfig) {
 	_init_.Initialize()
 
@@ -697,6 +712,32 @@ func (d *jsiiProxy_DataAwsccNetworkmanagerGlobalNetwork) SynthesizeAttributes() 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkmanagerGlobalNetwork) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkmanagerGlobalNetwork) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

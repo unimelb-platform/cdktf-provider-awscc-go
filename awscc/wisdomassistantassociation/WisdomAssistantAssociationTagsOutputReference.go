@@ -67,6 +67,8 @@ type WisdomAssistantAssociationTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (w *jsiiProxy_WisdomAssistantAssociationTagsOutputReference) InterpolationF
 	)
 
 	return returns
+}
+
+func (w *jsiiProxy_WisdomAssistantAssociationTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_WisdomAssistantAssociationTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (w *jsiiProxy_WisdomAssistantAssociationTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

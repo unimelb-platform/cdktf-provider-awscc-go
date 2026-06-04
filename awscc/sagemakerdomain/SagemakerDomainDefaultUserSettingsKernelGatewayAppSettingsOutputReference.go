@@ -33,6 +33,9 @@ type SagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsOutputReference i
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	LifecycleConfigArns() *[]*string
+	SetLifecycleConfigArns(val *[]*string)
+	LifecycleConfigArnsInput() *[]*string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -69,6 +72,7 @@ type SagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsOutputReference i
 	PutDefaultResourceSpec(value *SagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec)
 	ResetCustomImages()
 	ResetDefaultResourceSpec()
+	ResetLifecycleConfigArns()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -174,6 +178,26 @@ func (j *jsiiProxy_SagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsOut
 	return returns
 }
 
+func (j *jsiiProxy_SagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsOutputReference) LifecycleConfigArns() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"lifecycleConfigArns",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsOutputReference) LifecycleConfigArnsInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"lifecycleConfigArnsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -251,6 +275,17 @@ func (j *jsiiProxy_SagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsOut
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsOutputReference)SetLifecycleConfigArns(val *[]*string) {
+	if err := j.validateSetLifecycleConfigArnsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"lifecycleConfigArns",
 		val,
 	)
 }
@@ -497,6 +532,14 @@ func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsOut
 	_jsii_.InvokeVoid(
 		s,
 		"resetDefaultResourceSpec",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsOutputReference) ResetLifecycleConfigArns() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetLifecycleConfigArns",
 		nil, // no parameters
 	)
 }

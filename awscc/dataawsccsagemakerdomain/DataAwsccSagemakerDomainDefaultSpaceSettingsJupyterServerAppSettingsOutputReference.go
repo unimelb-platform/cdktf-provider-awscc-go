@@ -30,6 +30,7 @@ type DataAwsccSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsOutputR
 	Fqn() *string
 	InternalValue() *DataAwsccSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettings
 	SetInternalValue(val *DataAwsccSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettings)
+	LifecycleConfigArns() *[]*string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -132,6 +133,16 @@ func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultSpaceSettingsJupyterServerAppS
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsOutputReference) LifecycleConfigArns() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"lifecycleConfigArns",
 		&returns,
 	)
 	return returns

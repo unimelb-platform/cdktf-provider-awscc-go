@@ -71,6 +71,7 @@ type KendraDataSourceDataSourceConfigurationSalesforceConfigurationKnowledgeArti
 	PutCustomKnowledgeArticleTypeConfigurations(value interface{})
 	PutStandardKnowledgeArticleTypeConfiguration(value *KendraDataSourceDataSourceConfigurationSalesforceConfigurationKnowledgeArticleConfigurationStandardKnowledgeArticleTypeConfiguration)
 	ResetCustomKnowledgeArticleTypeConfigurations()
+	ResetIncludedStates()
 	ResetStandardKnowledgeArticleTypeConfiguration()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -523,6 +524,14 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSalesforceConfiguratio
 	_jsii_.InvokeVoid(
 		k,
 		"resetCustomKnowledgeArticleTypeConfigurations",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSalesforceConfigurationKnowledgeArticleConfigurationOutputReference) ResetIncludedStates() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetIncludedStates",
 		nil, // no parameters
 	)
 }

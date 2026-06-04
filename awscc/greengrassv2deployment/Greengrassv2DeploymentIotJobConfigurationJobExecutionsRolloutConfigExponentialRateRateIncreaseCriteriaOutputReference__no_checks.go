@@ -56,7 +56,7 @@ func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationJobExecutionsRollout
 	return nil
 }
 
-func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateRateIncreaseCriteriaOutputReference) validateSetInternalValueParameters(val *Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateRateIncreaseCriteria) error {
+func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateRateIncreaseCriteriaOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

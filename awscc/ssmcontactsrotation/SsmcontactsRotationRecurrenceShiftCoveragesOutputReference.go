@@ -67,6 +67,8 @@ type SsmcontactsRotationRecurrenceShiftCoveragesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutCoverageTimes(value interface{})
+	ResetCoverageTimes()
+	ResetDayOfWeek()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -480,6 +482,22 @@ func (s *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesOutputReference) P
 		s,
 		"putCoverageTimes",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesOutputReference) ResetCoverageTimes() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetCoverageTimes",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesOutputReference) ResetDayOfWeek() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDayOfWeek",
+		nil, // no parameters
 	)
 }
 

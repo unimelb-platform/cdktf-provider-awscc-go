@@ -30,8 +30,8 @@ type EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeightsOutputReference 
 	GroupName() *string
 	SetGroupName(val *string)
 	GroupNameInput() *string
-	InternalValue() *EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeights
-	SetInternalValue(val *EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeights)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	SplitWeight() *float64
 	SetSplitWeight(val *float64)
 	SplitWeightInput() *float64
@@ -67,6 +67,8 @@ type EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeightsOutputReference 
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetGroupName()
+	ResetSplitWeight()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -142,8 +144,8 @@ func (j *jsiiProxy_EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeightsOu
 	return returns
 }
 
-func (j *jsiiProxy_EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeightsOutputReference) InternalValue() *EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeights {
-	var returns *EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeights
+func (j *jsiiProxy_EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeightsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -253,7 +255,7 @@ func (j *jsiiProxy_EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeightsOu
 	)
 }
 
-func (j *jsiiProxy_EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeightsOutputReference)SetInternalValue(val *EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeights) {
+func (j *jsiiProxy_EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeightsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (e *jsiiProxy_EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeightsOu
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeightsOutputReference) ResetGroupName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetGroupName",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeightsOutputReference) ResetSplitWeight() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetSplitWeight",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeightsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

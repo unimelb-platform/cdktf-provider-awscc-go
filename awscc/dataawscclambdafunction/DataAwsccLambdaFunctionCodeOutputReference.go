@@ -33,6 +33,7 @@ type DataAwsccLambdaFunctionCodeOutputReference interface {
 	S3Bucket() *string
 	S3Key() *string
 	S3ObjectVersion() *string
+	SourceKmsKeyArn() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -166,6 +167,16 @@ func (j *jsiiProxy_DataAwsccLambdaFunctionCodeOutputReference) S3ObjectVersion()
 	_jsii_.Get(
 		j,
 		"s3ObjectVersion",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccLambdaFunctionCodeOutputReference) SourceKmsKeyArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"sourceKmsKeyArn",
 		&returns,
 	)
 	return returns

@@ -56,7 +56,15 @@ func (e *jsiiProxy_Ec2Eip) validateInterpolationForAttributeParameters(terraform
 	return nil
 }
 
+func (e *jsiiProxy_Ec2Eip) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2Eip) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2Eip) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -84,6 +92,10 @@ func validateEc2Eip_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 
+func (j *jsiiProxy_Ec2Eip) validateSetAddressParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Ec2Eip) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }
@@ -97,6 +109,10 @@ func (j *jsiiProxy_Ec2Eip) validateSetDomainParameters(val *string) error {
 }
 
 func (j *jsiiProxy_Ec2Eip) validateSetInstanceIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2Eip) validateSetIpamPoolIdParameters(val *string) error {
 	return nil
 }
 

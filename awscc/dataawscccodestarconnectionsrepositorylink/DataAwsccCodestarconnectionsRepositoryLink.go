@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccodestarconnectionsrepositorylink/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codestarconnections_repository_link awscc_codestarconnections_repository_link}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codestarconnections_repository_link awscc_codestarconnections_repository_link}.
 type DataAwsccCodestarconnectionsRepositoryLink interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -90,6 +90,10 @@ type DataAwsccCodestarconnectionsRepositoryLink interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -345,7 +349,7 @@ func (j *jsiiProxy_DataAwsccCodestarconnectionsRepositoryLink) TerraformResource
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codestarconnections_repository_link awscc_codestarconnections_repository_link} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codestarconnections_repository_link awscc_codestarconnections_repository_link} Data Source.
 func NewDataAwsccCodestarconnectionsRepositoryLink(scope constructs.Construct, id *string, config *DataAwsccCodestarconnectionsRepositoryLinkConfig) DataAwsccCodestarconnectionsRepositoryLink {
 	_init_.Initialize()
 
@@ -363,7 +367,7 @@ func NewDataAwsccCodestarconnectionsRepositoryLink(scope constructs.Construct, i
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codestarconnections_repository_link awscc_codestarconnections_repository_link} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codestarconnections_repository_link awscc_codestarconnections_repository_link} Data Source.
 func NewDataAwsccCodestarconnectionsRepositoryLink_Override(d DataAwsccCodestarconnectionsRepositoryLink, scope constructs.Construct, id *string, config *DataAwsccCodestarconnectionsRepositoryLinkConfig) {
 	_init_.Initialize()
 
@@ -730,6 +734,32 @@ func (d *jsiiProxy_DataAwsccCodestarconnectionsRepositoryLink) SynthesizeAttribu
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCodestarconnectionsRepositoryLink) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCodestarconnectionsRepositoryLink) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

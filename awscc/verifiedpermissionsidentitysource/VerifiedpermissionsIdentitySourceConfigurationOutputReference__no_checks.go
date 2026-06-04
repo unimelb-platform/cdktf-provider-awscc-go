@@ -48,6 +48,10 @@ func (v *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationOutputReference
 	return nil
 }
 
+func (v *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationOutputReference) validatePutOpenIdConnectConfigurationParameters(value *VerifiedpermissionsIdentitySourceConfigurationOpenIdConnectConfiguration) error {
+	return nil
+}
+
 func (v *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

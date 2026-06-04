@@ -56,6 +56,10 @@ func (j *jsiiProxy_IotfleetwiseCampaignSignalsToCollectOutputReference) validate
 	return nil
 }
 
+func (j *jsiiProxy_IotfleetwiseCampaignSignalsToCollectOutputReference) validateSetDataPartitionIdParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_IotfleetwiseCampaignSignalsToCollectOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }

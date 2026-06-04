@@ -27,8 +27,8 @@ type ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersionOutputRef
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersion
-	SetInternalValue(val *ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersion)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,6 +67,8 @@ type ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersionOutputRef
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetType()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVe
 	return returns
 }
 
-func (j *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersionOutputReference) InternalValue() *ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersion {
-	var returns *ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersion
+func (j *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersionOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -242,7 +244,7 @@ func (j *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVe
 	)
 }
 
-func (j *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersionOutputReference)SetInternalValue(val *ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersion) {
+func (j *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersionOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (a *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVe
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersionOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetType",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersionOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersionOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

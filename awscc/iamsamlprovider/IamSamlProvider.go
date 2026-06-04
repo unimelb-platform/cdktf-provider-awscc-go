@@ -9,10 +9,16 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/iamsamlprovider/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iam_saml_provider awscc_iam_saml_provider}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iam_saml_provider awscc_iam_saml_provider}.
 type IamSamlProvider interface {
 	cdktf.TerraformResource
+	AddPrivateKey() *string
+	SetAddPrivateKey(val *string)
+	AddPrivateKeyInput() *string
 	Arn() *string
+	AssertionEncryptionMode() *string
+	SetAssertionEncryptionMode(val *string)
+	AssertionEncryptionModeInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -47,6 +53,8 @@ type IamSamlProvider interface {
 	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
+	PrivateKeyList() IamSamlProviderPrivateKeyListStructList
+	PrivateKeyListInput() interface{}
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -57,9 +65,13 @@ type IamSamlProvider interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RemovePrivateKey() *string
+	SetRemovePrivateKey(val *string)
+	RemovePrivateKeyInput() *string
 	SamlMetadataDocument() *string
 	SetSamlMetadataDocument(val *string)
 	SamlMetadataDocumentInput() *string
+	SamlProviderUuid() *string
 	Tags() IamSamlProviderTagsList
 	TagsInput() interface{}
 	// Experimental.
@@ -92,22 +104,41 @@ type IamSamlProvider interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutPrivateKeyList(value interface{})
 	PutTags(value interface{})
+	ResetAddPrivateKey()
+	ResetAssertionEncryptionMode()
 	ResetName()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetPrivateKeyList()
+	ResetRemovePrivateKey()
+	ResetSamlMetadataDocument()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -122,11 +153,51 @@ type jsiiProxy_IamSamlProvider struct {
 	internal.Type__cdktfTerraformResource
 }
 
+func (j *jsiiProxy_IamSamlProvider) AddPrivateKey() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"addPrivateKey",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IamSamlProvider) AddPrivateKeyInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"addPrivateKeyInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_IamSamlProvider) Arn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"arn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IamSamlProvider) AssertionEncryptionMode() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"assertionEncryptionMode",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IamSamlProvider) AssertionEncryptionModeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"assertionEncryptionModeInput",
 		&returns,
 	)
 	return returns
@@ -262,6 +333,26 @@ func (j *jsiiProxy_IamSamlProvider) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_IamSamlProvider) PrivateKeyList() IamSamlProviderPrivateKeyListStructList {
+	var returns IamSamlProviderPrivateKeyListStructList
+	_jsii_.Get(
+		j,
+		"privateKeyList",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IamSamlProvider) PrivateKeyListInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"privateKeyListInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_IamSamlProvider) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -292,6 +383,26 @@ func (j *jsiiProxy_IamSamlProvider) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_IamSamlProvider) RemovePrivateKey() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"removePrivateKey",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IamSamlProvider) RemovePrivateKeyInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"removePrivateKeyInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_IamSamlProvider) SamlMetadataDocument() *string {
 	var returns *string
 	_jsii_.Get(
@@ -307,6 +418,16 @@ func (j *jsiiProxy_IamSamlProvider) SamlMetadataDocumentInput() *string {
 	_jsii_.Get(
 		j,
 		"samlMetadataDocumentInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IamSamlProvider) SamlProviderUuid() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"samlProviderUuid",
 		&returns,
 	)
 	return returns
@@ -363,7 +484,7 @@ func (j *jsiiProxy_IamSamlProvider) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iam_saml_provider awscc_iam_saml_provider} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iam_saml_provider awscc_iam_saml_provider} Resource.
 func NewIamSamlProvider(scope constructs.Construct, id *string, config *IamSamlProviderConfig) IamSamlProvider {
 	_init_.Initialize()
 
@@ -381,7 +502,7 @@ func NewIamSamlProvider(scope constructs.Construct, id *string, config *IamSamlP
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iam_saml_provider awscc_iam_saml_provider} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iam_saml_provider awscc_iam_saml_provider} Resource.
 func NewIamSamlProvider_Override(i IamSamlProvider, scope constructs.Construct, id *string, config *IamSamlProviderConfig) {
 	_init_.Initialize()
 
@@ -389,6 +510,28 @@ func NewIamSamlProvider_Override(i IamSamlProvider, scope constructs.Construct, 
 		"awscc.iamSamlProvider.IamSamlProvider",
 		[]interface{}{scope, id, config},
 		i,
+	)
+}
+
+func (j *jsiiProxy_IamSamlProvider)SetAddPrivateKey(val *string) {
+	if err := j.validateSetAddPrivateKeyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"addPrivateKey",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IamSamlProvider)SetAssertionEncryptionMode(val *string) {
+	if err := j.validateSetAssertionEncryptionModeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"assertionEncryptionMode",
+		val,
 	)
 }
 
@@ -467,6 +610,17 @@ func (j *jsiiProxy_IamSamlProvider)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IamSamlProvider)SetRemovePrivateKey(val *string) {
+	if err := j.validateSetRemovePrivateKeyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"removePrivateKey",
 		val,
 	)
 }
@@ -751,6 +905,19 @@ func (i *jsiiProxy_IamSamlProvider) GetStringMapAttribute(terraformAttribute *st
 	return returns
 }
 
+func (i *jsiiProxy_IamSamlProvider) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (i *jsiiProxy_IamSamlProvider) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := i.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -778,6 +945,17 @@ func (i *jsiiProxy_IamSamlProvider) InterpolationForAttribute(terraformAttribute
 	return returns
 }
 
+func (i *jsiiProxy_IamSamlProvider) MoveFromId(id *string) {
+	if err := i.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (i *jsiiProxy_IamSamlProvider) MoveTo(moveTarget *string, index interface{}) {
 	if err := i.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -786,6 +964,17 @@ func (i *jsiiProxy_IamSamlProvider) MoveTo(moveTarget *string, index interface{}
 		i,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (i *jsiiProxy_IamSamlProvider) MoveToId(id *string) {
+	if err := i.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -800,6 +989,17 @@ func (i *jsiiProxy_IamSamlProvider) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (i *jsiiProxy_IamSamlProvider) PutPrivateKeyList(value interface{}) {
+	if err := i.validatePutPrivateKeyListParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putPrivateKeyList",
+		[]interface{}{value},
+	)
+}
+
 func (i *jsiiProxy_IamSamlProvider) PutTags(value interface{}) {
 	if err := i.validatePutTagsParameters(value); err != nil {
 		panic(err)
@@ -808,6 +1008,22 @@ func (i *jsiiProxy_IamSamlProvider) PutTags(value interface{}) {
 		i,
 		"putTags",
 		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IamSamlProvider) ResetAddPrivateKey() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetAddPrivateKey",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IamSamlProvider) ResetAssertionEncryptionMode() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetAssertionEncryptionMode",
+		nil, // no parameters
 	)
 }
 
@@ -827,6 +1043,30 @@ func (i *jsiiProxy_IamSamlProvider) ResetOverrideLogicalId() {
 	)
 }
 
+func (i *jsiiProxy_IamSamlProvider) ResetPrivateKeyList() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetPrivateKeyList",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IamSamlProvider) ResetRemovePrivateKey() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRemovePrivateKey",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IamSamlProvider) ResetSamlMetadataDocument() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetSamlMetadataDocument",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IamSamlProvider) ResetTags() {
 	_jsii_.InvokeVoid(
 		i,
@@ -841,6 +1081,32 @@ func (i *jsiiProxy_IamSamlProvider) SynthesizeAttributes() *map[string]interface
 	_jsii_.Invoke(
 		i,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IamSamlProvider) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		i,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IamSamlProvider) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

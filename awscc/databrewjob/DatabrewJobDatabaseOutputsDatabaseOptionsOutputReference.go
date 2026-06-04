@@ -27,8 +27,8 @@ type DatabrewJobDatabaseOutputsDatabaseOptionsOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DatabrewJobDatabaseOutputsDatabaseOptions
-	SetInternalValue(val *DatabrewJobDatabaseOutputsDatabaseOptions)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	TableName() *string
 	SetTableName(val *string)
 	TableNameInput() *string
@@ -67,6 +67,7 @@ type DatabrewJobDatabaseOutputsDatabaseOptionsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutTempDirectory(value *DatabrewJobDatabaseOutputsDatabaseOptionsTempDirectory)
+	ResetTableName()
 	ResetTempDirectory()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -123,8 +124,8 @@ func (j *jsiiProxy_DatabrewJobDatabaseOutputsDatabaseOptionsOutputReference) Fqn
 	return returns
 }
 
-func (j *jsiiProxy_DatabrewJobDatabaseOutputsDatabaseOptionsOutputReference) InternalValue() *DatabrewJobDatabaseOutputsDatabaseOptions {
-	var returns *DatabrewJobDatabaseOutputsDatabaseOptions
+func (j *jsiiProxy_DatabrewJobDatabaseOutputsDatabaseOptionsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -243,7 +244,7 @@ func (j *jsiiProxy_DatabrewJobDatabaseOutputsDatabaseOptionsOutputReference)SetC
 	)
 }
 
-func (j *jsiiProxy_DatabrewJobDatabaseOutputsDatabaseOptionsOutputReference)SetInternalValue(val *DatabrewJobDatabaseOutputsDatabaseOptions) {
+func (j *jsiiProxy_DatabrewJobDatabaseOutputsDatabaseOptionsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +482,14 @@ func (d *jsiiProxy_DatabrewJobDatabaseOutputsDatabaseOptionsOutputReference) Put
 		d,
 		"putTempDirectory",
 		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DatabrewJobDatabaseOutputsDatabaseOptionsOutputReference) ResetTableName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetTableName",
+		nil, // no parameters
 	)
 }
 

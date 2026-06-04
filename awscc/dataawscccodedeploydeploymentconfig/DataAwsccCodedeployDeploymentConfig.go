@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccodedeploydeploymentconfig/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codedeploy_deployment_config awscc_codedeploy_deployment_config}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codedeploy_deployment_config awscc_codedeploy_deployment_config}.
 type DataAwsccCodedeployDeploymentConfig interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -87,6 +87,10 @@ type DataAwsccCodedeployDeploymentConfig interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -312,7 +316,7 @@ func (j *jsiiProxy_DataAwsccCodedeployDeploymentConfig) ZonalConfig() DataAwsccC
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codedeploy_deployment_config awscc_codedeploy_deployment_config} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codedeploy_deployment_config awscc_codedeploy_deployment_config} Data Source.
 func NewDataAwsccCodedeployDeploymentConfig(scope constructs.Construct, id *string, config *DataAwsccCodedeployDeploymentConfigConfig) DataAwsccCodedeployDeploymentConfig {
 	_init_.Initialize()
 
@@ -330,7 +334,7 @@ func NewDataAwsccCodedeployDeploymentConfig(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codedeploy_deployment_config awscc_codedeploy_deployment_config} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codedeploy_deployment_config awscc_codedeploy_deployment_config} Data Source.
 func NewDataAwsccCodedeployDeploymentConfig_Override(d DataAwsccCodedeployDeploymentConfig, scope constructs.Construct, id *string, config *DataAwsccCodedeployDeploymentConfigConfig) {
 	_init_.Initialize()
 
@@ -697,6 +701,32 @@ func (d *jsiiProxy_DataAwsccCodedeployDeploymentConfig) SynthesizeAttributes() *
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCodedeployDeploymentConfig) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCodedeployDeploymentConfig) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

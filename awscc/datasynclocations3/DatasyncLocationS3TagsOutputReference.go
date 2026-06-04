@@ -67,6 +67,8 @@ type DatasyncLocationS3TagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (d *jsiiProxy_DatasyncLocationS3TagsOutputReference) InterpolationForAttrib
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatasyncLocationS3TagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatasyncLocationS3TagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatasyncLocationS3TagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

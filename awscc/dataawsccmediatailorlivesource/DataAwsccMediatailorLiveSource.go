@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccmediatailorlivesource/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediatailor_live_source awscc_mediatailor_live_source}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediatailor_live_source awscc_mediatailor_live_source}.
 type DataAwsccMediatailorLiveSource interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -87,6 +87,10 @@ type DataAwsccMediatailorLiveSource interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -312,7 +316,7 @@ func (j *jsiiProxy_DataAwsccMediatailorLiveSource) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediatailor_live_source awscc_mediatailor_live_source} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediatailor_live_source awscc_mediatailor_live_source} Data Source.
 func NewDataAwsccMediatailorLiveSource(scope constructs.Construct, id *string, config *DataAwsccMediatailorLiveSourceConfig) DataAwsccMediatailorLiveSource {
 	_init_.Initialize()
 
@@ -330,7 +334,7 @@ func NewDataAwsccMediatailorLiveSource(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediatailor_live_source awscc_mediatailor_live_source} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediatailor_live_source awscc_mediatailor_live_source} Data Source.
 func NewDataAwsccMediatailorLiveSource_Override(d DataAwsccMediatailorLiveSource, scope constructs.Construct, id *string, config *DataAwsccMediatailorLiveSourceConfig) {
 	_init_.Initialize()
 
@@ -697,6 +701,32 @@ func (d *jsiiProxy_DataAwsccMediatailorLiveSource) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMediatailorLiveSource) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMediatailorLiveSource) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

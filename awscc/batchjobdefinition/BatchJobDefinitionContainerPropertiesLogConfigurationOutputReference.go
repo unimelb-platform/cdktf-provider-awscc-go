@@ -32,9 +32,9 @@ type BatchJobDefinitionContainerPropertiesLogConfigurationOutputReference interf
 	LogDriver() *string
 	SetLogDriver(val *string)
 	LogDriverInput() *string
-	Options() *string
-	SetOptions(val *string)
-	OptionsInput() *string
+	Options() *map[string]*string
+	SetOptions(val *map[string]*string)
+	OptionsInput() *map[string]*string
 	SecretOptions() BatchJobDefinitionContainerPropertiesLogConfigurationSecretOptionsList
 	SecretOptionsInput() interface{}
 	// Experimental.
@@ -70,6 +70,7 @@ type BatchJobDefinitionContainerPropertiesLogConfigurationOutputReference interf
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutSecretOptions(value interface{})
+	ResetLogDriver()
 	ResetOptions()
 	ResetSecretOptions()
 	// Produce the Token's value at resolution time.
@@ -157,8 +158,8 @@ func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesLogConfigurationOutputRe
 	return returns
 }
 
-func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesLogConfigurationOutputReference) Options() *string {
-	var returns *string
+func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesLogConfigurationOutputReference) Options() *map[string]*string {
+	var returns *map[string]*string
 	_jsii_.Get(
 		j,
 		"options",
@@ -167,8 +168,8 @@ func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesLogConfigurationOutputRe
 	return returns
 }
 
-func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesLogConfigurationOutputReference) OptionsInput() *string {
-	var returns *string
+func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesLogConfigurationOutputReference) OptionsInput() *map[string]*string {
+	var returns *map[string]*string
 	_jsii_.Get(
 		j,
 		"optionsInput",
@@ -289,7 +290,7 @@ func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesLogConfigurationOutputRe
 	)
 }
 
-func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesLogConfigurationOutputReference)SetOptions(val *string) {
+func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesLogConfigurationOutputReference)SetOptions(val *map[string]*string) {
 	if err := j.validateSetOptionsParameters(val); err != nil {
 		panic(err)
 	}
@@ -516,6 +517,14 @@ func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesLogConfigurationOutputRe
 		b,
 		"putSecretOptions",
 		[]interface{}{value},
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesLogConfigurationOutputReference) ResetLogDriver() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetLogDriver",
+		nil, // no parameters
 	)
 }
 

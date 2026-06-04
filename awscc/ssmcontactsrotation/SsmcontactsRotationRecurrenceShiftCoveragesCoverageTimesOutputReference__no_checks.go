@@ -60,7 +60,7 @@ func (j *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimesOutpu
 	return nil
 }
 
-func (j *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimesOutputReference) validateSetInternalValueParameters(val *SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimes) error {
+func (j *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimesOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

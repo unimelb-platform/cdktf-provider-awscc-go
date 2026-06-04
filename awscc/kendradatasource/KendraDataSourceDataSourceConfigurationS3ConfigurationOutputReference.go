@@ -80,6 +80,7 @@ type KendraDataSourceDataSourceConfigurationS3ConfigurationOutputReference inter
 	PutAccessControlListConfiguration(value *KendraDataSourceDataSourceConfigurationS3ConfigurationAccessControlListConfiguration)
 	PutDocumentsMetadataConfiguration(value *KendraDataSourceDataSourceConfigurationS3ConfigurationDocumentsMetadataConfiguration)
 	ResetAccessControlListConfiguration()
+	ResetBucketName()
 	ResetDocumentsMetadataConfiguration()
 	ResetExclusionPatterns()
 	ResetInclusionPatterns()
@@ -628,6 +629,14 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationS3ConfigurationOutputR
 	_jsii_.InvokeVoid(
 		k,
 		"resetAccessControlListConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationS3ConfigurationOutputReference) ResetBucketName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetBucketName",
 		nil, // no parameters
 	)
 }

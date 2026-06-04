@@ -67,6 +67,8 @@ type Route53CidrCollectionLocationsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCidrList()
+	ResetLocationName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (r *jsiiProxy_Route53CidrCollectionLocationsOutputReference) InterpolationF
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_Route53CidrCollectionLocationsOutputReference) ResetCidrList() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetCidrList",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Route53CidrCollectionLocationsOutputReference) ResetLocationName() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetLocationName",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_Route53CidrCollectionLocationsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

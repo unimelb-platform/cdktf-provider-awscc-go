@@ -1,0 +1,6 @@
+package dataawsccsecurityhubinsight
+
+
+type DataAwsccSecurityhubInsightFiltersFindingProviderFieldsSeverityOriginal struct {
+}
+

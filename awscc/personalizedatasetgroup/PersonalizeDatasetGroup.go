@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/personalizedatasetgroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/personalize_dataset_group awscc_personalize_dataset_group}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/personalize_dataset_group awscc_personalize_dataset_group}.
 type PersonalizeDatasetGroup interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -96,12 +96,22 @@ type PersonalizeDatasetGroup interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -112,6 +122,9 @@ type PersonalizeDatasetGroup interface {
 	ResetOverrideLogicalId()
 	ResetRoleArn()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -387,7 +400,7 @@ func (j *jsiiProxy_PersonalizeDatasetGroup) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/personalize_dataset_group awscc_personalize_dataset_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/personalize_dataset_group awscc_personalize_dataset_group} Resource.
 func NewPersonalizeDatasetGroup(scope constructs.Construct, id *string, config *PersonalizeDatasetGroupConfig) PersonalizeDatasetGroup {
 	_init_.Initialize()
 
@@ -405,7 +418,7 @@ func NewPersonalizeDatasetGroup(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/personalize_dataset_group awscc_personalize_dataset_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/personalize_dataset_group awscc_personalize_dataset_group} Resource.
 func NewPersonalizeDatasetGroup_Override(p PersonalizeDatasetGroup, scope constructs.Construct, id *string, config *PersonalizeDatasetGroupConfig) {
 	_init_.Initialize()
 
@@ -797,6 +810,19 @@ func (p *jsiiProxy_PersonalizeDatasetGroup) GetStringMapAttribute(terraformAttri
 	return returns
 }
 
+func (p *jsiiProxy_PersonalizeDatasetGroup) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		p,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (p *jsiiProxy_PersonalizeDatasetGroup) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := p.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -824,6 +850,17 @@ func (p *jsiiProxy_PersonalizeDatasetGroup) InterpolationForAttribute(terraformA
 	return returns
 }
 
+func (p *jsiiProxy_PersonalizeDatasetGroup) MoveFromId(id *string) {
+	if err := p.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		p,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (p *jsiiProxy_PersonalizeDatasetGroup) MoveTo(moveTarget *string, index interface{}) {
 	if err := p.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -832,6 +869,17 @@ func (p *jsiiProxy_PersonalizeDatasetGroup) MoveTo(moveTarget *string, index int
 		p,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (p *jsiiProxy_PersonalizeDatasetGroup) MoveToId(id *string) {
+	if err := p.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		p,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -884,6 +932,32 @@ func (p *jsiiProxy_PersonalizeDatasetGroup) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		p,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (p *jsiiProxy_PersonalizeDatasetGroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		p,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (p *jsiiProxy_PersonalizeDatasetGroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		p,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

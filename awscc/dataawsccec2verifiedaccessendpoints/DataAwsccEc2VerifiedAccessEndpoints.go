@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2verifiedaccessendpoints/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_verified_access_endpoints awscc_ec2_verified_access_endpoints}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_verified_access_endpoints awscc_ec2_verified_access_endpoints}.
 type DataAwsccEc2VerifiedAccessEndpoints interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccEc2VerifiedAccessEndpoints interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccEc2VerifiedAccessEndpoints) TerraformResourceType() 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_verified_access_endpoints awscc_ec2_verified_access_endpoints} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_verified_access_endpoints awscc_ec2_verified_access_endpoints} Data Source.
 func NewDataAwsccEc2VerifiedAccessEndpoints(scope constructs.Construct, id *string, config *DataAwsccEc2VerifiedAccessEndpointsConfig) DataAwsccEc2VerifiedAccessEndpoints {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccEc2VerifiedAccessEndpoints(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_verified_access_endpoints awscc_ec2_verified_access_endpoints} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_verified_access_endpoints awscc_ec2_verified_access_endpoints} Data Source.
 func NewDataAwsccEc2VerifiedAccessEndpoints_Override(d DataAwsccEc2VerifiedAccessEndpoints, scope constructs.Construct, id *string, config *DataAwsccEc2VerifiedAccessEndpointsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccEc2VerifiedAccessEndpoints) SynthesizeAttributes() *
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2VerifiedAccessEndpoints) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2VerifiedAccessEndpoints) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

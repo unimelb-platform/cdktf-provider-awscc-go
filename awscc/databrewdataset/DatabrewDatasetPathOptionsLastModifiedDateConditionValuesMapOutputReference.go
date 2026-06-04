@@ -27,8 +27,8 @@ type DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMapOutputReference
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMap
-	SetInternalValue(val *DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMap)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,6 +67,8 @@ type DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMapOutputReference
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetValue()
+	ResetValueReference()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMapO
 	return returns
 }
 
-func (j *jsiiProxy_DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMapOutputReference) InternalValue() *DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMap {
-	var returns *DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMap
+func (j *jsiiProxy_DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMapOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -242,7 +244,7 @@ func (j *jsiiProxy_DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMapO
 	)
 }
 
-func (j *jsiiProxy_DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMapOutputReference)SetInternalValue(val *DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMap) {
+func (j *jsiiProxy_DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMapOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (d *jsiiProxy_DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMapO
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMapOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetValue",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMapOutputReference) ResetValueReference() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetValueReference",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMapOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

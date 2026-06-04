@@ -76,6 +76,10 @@ type ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentCon
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAgreeToInstallHanadbClient()
+	ResetHanaPort()
+	ResetHanaSecretName()
+	ResetHanasid()
 	ResetPrometheusPort()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -584,6 +588,38 @@ func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsCust
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfigurationConfigurationDetailsHanaPrometheusExporterOutputReference) ResetAgreeToInstallHanadbClient() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetAgreeToInstallHanadbClient",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfigurationConfigurationDetailsHanaPrometheusExporterOutputReference) ResetHanaPort() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetHanaPort",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfigurationConfigurationDetailsHanaPrometheusExporterOutputReference) ResetHanaSecretName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetHanaSecretName",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfigurationConfigurationDetailsHanaPrometheusExporterOutputReference) ResetHanasid() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetHanasid",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfigurationConfigurationDetailsHanaPrometheusExporterOutputReference) ResetPrometheusPort() {

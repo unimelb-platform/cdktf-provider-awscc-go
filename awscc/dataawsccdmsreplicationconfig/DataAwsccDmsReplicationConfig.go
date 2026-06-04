@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdmsreplicationconfig/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/dms_replication_config awscc_dms_replication_config}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/dms_replication_config awscc_dms_replication_config}.
 type DataAwsccDmsReplicationConfig interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -93,6 +93,10 @@ type DataAwsccDmsReplicationConfig interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -378,7 +382,7 @@ func (j *jsiiProxy_DataAwsccDmsReplicationConfig) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/dms_replication_config awscc_dms_replication_config} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/dms_replication_config awscc_dms_replication_config} Data Source.
 func NewDataAwsccDmsReplicationConfig(scope constructs.Construct, id *string, config *DataAwsccDmsReplicationConfigConfig) DataAwsccDmsReplicationConfig {
 	_init_.Initialize()
 
@@ -396,7 +400,7 @@ func NewDataAwsccDmsReplicationConfig(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/dms_replication_config awscc_dms_replication_config} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/dms_replication_config awscc_dms_replication_config} Data Source.
 func NewDataAwsccDmsReplicationConfig_Override(d DataAwsccDmsReplicationConfig, scope constructs.Construct, id *string, config *DataAwsccDmsReplicationConfigConfig) {
 	_init_.Initialize()
 
@@ -763,6 +767,32 @@ func (d *jsiiProxy_DataAwsccDmsReplicationConfig) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDmsReplicationConfig) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDmsReplicationConfig) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

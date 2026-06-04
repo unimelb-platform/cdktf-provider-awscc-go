@@ -56,7 +56,15 @@ func (n *jsiiProxy_NetworkfirewallLoggingConfiguration) validateInterpolationFor
 	return nil
 }
 
+func (n *jsiiProxy_NetworkfirewallLoggingConfiguration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (n *jsiiProxy_NetworkfirewallLoggingConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (n *jsiiProxy_NetworkfirewallLoggingConfiguration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -89,6 +97,10 @@ func (j *jsiiProxy_NetworkfirewallLoggingConfiguration) validateSetConnectionPar
 }
 
 func (j *jsiiProxy_NetworkfirewallLoggingConfiguration) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_NetworkfirewallLoggingConfiguration) validateSetEnableMonitoringDashboardParameters(val interface{}) error {
 	return nil
 }
 

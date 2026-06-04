@@ -56,11 +56,23 @@ func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validateInterpolationForAttributeP
 	return nil
 }
 
+func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validatePutCidrOptionsParameters(value *Ec2VerifiedAccessEndpointCidrOptions) error {
 	return nil
 }
 
@@ -69,6 +81,10 @@ func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validatePutLoadBalancerOptionsPara
 }
 
 func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validatePutNetworkInterfaceOptionsParameters(value *Ec2VerifiedAccessEndpointNetworkInterfaceOptions) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validatePutRdsOptionsParameters(value *Ec2VerifiedAccessEndpointRdsOptions) error {
 	return nil
 }
 

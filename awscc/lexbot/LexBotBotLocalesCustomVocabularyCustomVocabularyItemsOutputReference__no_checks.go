@@ -56,7 +56,7 @@ func (j *jsiiProxy_LexBotBotLocalesCustomVocabularyCustomVocabularyItemsOutputRe
 	return nil
 }
 
-func (j *jsiiProxy_LexBotBotLocalesCustomVocabularyCustomVocabularyItemsOutputReference) validateSetInternalValueParameters(val *LexBotBotLocalesCustomVocabularyCustomVocabularyItems) error {
+func (j *jsiiProxy_LexBotBotLocalesCustomVocabularyCustomVocabularyItemsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

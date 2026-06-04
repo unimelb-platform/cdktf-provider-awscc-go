@@ -1,0 +1,34 @@
+//go:build no_runtime_type_checking
+
+package dataawsccbedrockguardrail
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccBedrockGuardrailSensitiveInformationPolicyConfigPiiEntitiesConfigList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockGuardrailSensitiveInformationPolicyConfigPiiEntitiesConfigList) validateGetParameters(index *float64) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockGuardrailSensitiveInformationPolicyConfigPiiEntitiesConfigList) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockGuardrailSensitiveInformationPolicyConfigPiiEntitiesConfigList) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockGuardrailSensitiveInformationPolicyConfigPiiEntitiesConfigList) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockGuardrailSensitiveInformationPolicyConfigPiiEntitiesConfigList) validateSetWrapsSetParameters(val *bool) error {
+	return nil
+}
+
+func validateNewDataAwsccBedrockGuardrailSensitiveInformationPolicyConfigPiiEntitiesConfigListParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) error {
+	return nil
+}
+

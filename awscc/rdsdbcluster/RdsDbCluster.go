@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/rdsdbcluster/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rds_db_cluster awscc_rds_db_cluster}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_db_cluster awscc_rds_db_cluster}.
 type RdsDbCluster interface {
 	cdktf.TerraformResource
 	AllocatedStorage() *float64
@@ -31,6 +31,9 @@ type RdsDbCluster interface {
 	BackupRetentionPeriodInput() *float64
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	ClusterScalabilityType() *string
+	SetClusterScalabilityType(val *string)
+	ClusterScalabilityTypeInput() *string
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -44,6 +47,9 @@ type RdsDbCluster interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	DatabaseInsightsMode() *string
+	SetDatabaseInsightsMode(val *string)
+	DatabaseInsightsModeInput() *string
 	DatabaseName() *string
 	SetDatabaseName(val *string)
 	DatabaseNameInput() *string
@@ -92,10 +98,16 @@ type RdsDbCluster interface {
 	EnableIamDatabaseAuthentication() interface{}
 	SetEnableIamDatabaseAuthentication(val interface{})
 	EnableIamDatabaseAuthenticationInput() interface{}
+	EnableLocalWriteForwarding() interface{}
+	SetEnableLocalWriteForwarding(val interface{})
+	EnableLocalWriteForwardingInput() interface{}
 	Endpoint() RdsDbClusterEndpointOutputReference
 	Engine() *string
 	SetEngine(val *string)
 	EngineInput() *string
+	EngineLifecycleSupport() *string
+	SetEngineLifecycleSupport(val *string)
+	EngineLifecycleSupportInput() *string
 	EngineMode() *string
 	SetEngineMode(val *string)
 	EngineModeInput() *string
@@ -178,7 +190,6 @@ type RdsDbCluster interface {
 	// Experimental.
 	RawOverrides() interface{}
 	ReadEndpoint() RdsDbClusterReadEndpointOutputReference
-	ReadEndpointInput() interface{}
 	ReplicationSourceIdentifier() *string
 	SetReplicationSourceIdentifier(val *string)
 	ReplicationSourceIdentifierInput() *string
@@ -204,6 +215,7 @@ type RdsDbCluster interface {
 	StorageEncrypted() interface{}
 	SetStorageEncrypted(val interface{})
 	StorageEncryptedInput() interface{}
+	StorageThroughput() *float64
 	StorageType() *string
 	SetStorageType(val *string)
 	StorageTypeInput() *string
@@ -245,18 +257,27 @@ type RdsDbCluster interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutAssociatedRoles(value interface{})
 	PutMasterUserSecret(value *RdsDbClusterMasterUserSecret)
-	PutReadEndpoint(value *RdsDbClusterReadEndpoint)
 	PutScalingConfiguration(value *RdsDbClusterScalingConfiguration)
 	PutServerlessV2ScalingConfiguration(value *RdsDbClusterServerlessV2ScalingConfiguration)
 	PutTags(value interface{})
@@ -266,7 +287,9 @@ type RdsDbCluster interface {
 	ResetAvailabilityZones()
 	ResetBacktrackWindow()
 	ResetBackupRetentionPeriod()
+	ResetClusterScalabilityType()
 	ResetCopyTagsToSnapshot()
+	ResetDatabaseInsightsMode()
 	ResetDatabaseName()
 	ResetDbClusterIdentifier()
 	ResetDbClusterInstanceClass()
@@ -281,7 +304,9 @@ type RdsDbCluster interface {
 	ResetEnableGlobalWriteForwarding()
 	ResetEnableHttpEndpoint()
 	ResetEnableIamDatabaseAuthentication()
+	ResetEnableLocalWriteForwarding()
 	ResetEngine()
+	ResetEngineLifecycleSupport()
 	ResetEngineMode()
 	ResetEngineVersion()
 	ResetGlobalClusterIdentifier()
@@ -304,7 +329,6 @@ type RdsDbCluster interface {
 	ResetPreferredBackupWindow()
 	ResetPreferredMaintenanceWindow()
 	ResetPubliclyAccessible()
-	ResetReadEndpoint()
 	ResetReplicationSourceIdentifier()
 	ResetRestoreToTime()
 	ResetRestoreType()
@@ -319,6 +343,9 @@ type RdsDbCluster interface {
 	ResetUseLatestRestorableTime()
 	ResetVpcSecurityGroupIds()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -463,6 +490,26 @@ func (j *jsiiProxy_RdsDbCluster) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
+func (j *jsiiProxy_RdsDbCluster) ClusterScalabilityType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"clusterScalabilityType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsDbCluster) ClusterScalabilityTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"clusterScalabilityTypeInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RdsDbCluster) Connection() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -508,6 +555,26 @@ func (j *jsiiProxy_RdsDbCluster) Count() interface{} {
 	_jsii_.Get(
 		j,
 		"count",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsDbCluster) DatabaseInsightsMode() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseInsightsMode",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsDbCluster) DatabaseInsightsModeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseInsightsModeInput",
 		&returns,
 	)
 	return returns
@@ -823,6 +890,26 @@ func (j *jsiiProxy_RdsDbCluster) EnableIamDatabaseAuthenticationInput() interfac
 	return returns
 }
 
+func (j *jsiiProxy_RdsDbCluster) EnableLocalWriteForwarding() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableLocalWriteForwarding",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsDbCluster) EnableLocalWriteForwardingInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableLocalWriteForwardingInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RdsDbCluster) Endpoint() RdsDbClusterEndpointOutputReference {
 	var returns RdsDbClusterEndpointOutputReference
 	_jsii_.Get(
@@ -848,6 +935,26 @@ func (j *jsiiProxy_RdsDbCluster) EngineInput() *string {
 	_jsii_.Get(
 		j,
 		"engineInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsDbCluster) EngineLifecycleSupport() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"engineLifecycleSupport",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsDbCluster) EngineLifecycleSupportInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"engineLifecycleSupportInput",
 		&returns,
 	)
 	return returns
@@ -1333,16 +1440,6 @@ func (j *jsiiProxy_RdsDbCluster) ReadEndpoint() RdsDbClusterReadEndpointOutputRe
 	return returns
 }
 
-func (j *jsiiProxy_RdsDbCluster) ReadEndpointInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"readEndpointInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_RdsDbCluster) ReplicationSourceIdentifier() *string {
 	var returns *string
 	_jsii_.Get(
@@ -1523,6 +1620,16 @@ func (j *jsiiProxy_RdsDbCluster) StorageEncryptedInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RdsDbCluster) StorageThroughput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"storageThroughput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RdsDbCluster) StorageType() *string {
 	var returns *string
 	_jsii_.Get(
@@ -1634,7 +1741,7 @@ func (j *jsiiProxy_RdsDbCluster) VpcSecurityGroupIdsInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rds_db_cluster awscc_rds_db_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_db_cluster awscc_rds_db_cluster} Resource.
 func NewRdsDbCluster(scope constructs.Construct, id *string, config *RdsDbClusterConfig) RdsDbCluster {
 	_init_.Initialize()
 
@@ -1652,7 +1759,7 @@ func NewRdsDbCluster(scope constructs.Construct, id *string, config *RdsDbCluste
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rds_db_cluster awscc_rds_db_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_db_cluster awscc_rds_db_cluster} Resource.
 func NewRdsDbCluster_Override(r RdsDbCluster, scope constructs.Construct, id *string, config *RdsDbClusterConfig) {
 	_init_.Initialize()
 
@@ -1718,6 +1825,17 @@ func (j *jsiiProxy_RdsDbCluster)SetBackupRetentionPeriod(val *float64) {
 	)
 }
 
+func (j *jsiiProxy_RdsDbCluster)SetClusterScalabilityType(val *string) {
+	if err := j.validateSetClusterScalabilityTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"clusterScalabilityType",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RdsDbCluster)SetConnection(val interface{}) {
 	if err := j.validateSetConnectionParameters(val); err != nil {
 		panic(err)
@@ -1747,6 +1865,17 @@ func (j *jsiiProxy_RdsDbCluster)SetCount(val interface{}) {
 	_jsii_.Set(
 		j,
 		"count",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RdsDbCluster)SetDatabaseInsightsMode(val *string) {
+	if err := j.validateSetDatabaseInsightsModeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"databaseInsightsMode",
 		val,
 	)
 }
@@ -1913,6 +2042,17 @@ func (j *jsiiProxy_RdsDbCluster)SetEnableIamDatabaseAuthentication(val interface
 	)
 }
 
+func (j *jsiiProxy_RdsDbCluster)SetEnableLocalWriteForwarding(val interface{}) {
+	if err := j.validateSetEnableLocalWriteForwardingParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enableLocalWriteForwarding",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RdsDbCluster)SetEngine(val *string) {
 	if err := j.validateSetEngineParameters(val); err != nil {
 		panic(err)
@@ -1920,6 +2060,17 @@ func (j *jsiiProxy_RdsDbCluster)SetEngine(val *string) {
 	_jsii_.Set(
 		j,
 		"engine",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RdsDbCluster)SetEngineLifecycleSupport(val *string) {
+	if err := j.validateSetEngineLifecycleSupportParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"engineLifecycleSupport",
 		val,
 	)
 }
@@ -2539,6 +2690,19 @@ func (r *jsiiProxy_RdsDbCluster) GetStringMapAttribute(terraformAttribute *strin
 	return returns
 }
 
+func (r *jsiiProxy_RdsDbCluster) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (r *jsiiProxy_RdsDbCluster) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -2566,6 +2730,17 @@ func (r *jsiiProxy_RdsDbCluster) InterpolationForAttribute(terraformAttribute *s
 	return returns
 }
 
+func (r *jsiiProxy_RdsDbCluster) MoveFromId(id *string) {
+	if err := r.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_RdsDbCluster) MoveTo(moveTarget *string, index interface{}) {
 	if err := r.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -2574,6 +2749,17 @@ func (r *jsiiProxy_RdsDbCluster) MoveTo(moveTarget *string, index interface{}) {
 		r,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (r *jsiiProxy_RdsDbCluster) MoveToId(id *string) {
+	if err := r.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -2606,17 +2792,6 @@ func (r *jsiiProxy_RdsDbCluster) PutMasterUserSecret(value *RdsDbClusterMasterUs
 	_jsii_.InvokeVoid(
 		r,
 		"putMasterUserSecret",
-		[]interface{}{value},
-	)
-}
-
-func (r *jsiiProxy_RdsDbCluster) PutReadEndpoint(value *RdsDbClusterReadEndpoint) {
-	if err := r.validatePutReadEndpointParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		r,
-		"putReadEndpoint",
 		[]interface{}{value},
 	)
 }
@@ -2702,10 +2877,26 @@ func (r *jsiiProxy_RdsDbCluster) ResetBackupRetentionPeriod() {
 	)
 }
 
+func (r *jsiiProxy_RdsDbCluster) ResetClusterScalabilityType() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetClusterScalabilityType",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_RdsDbCluster) ResetCopyTagsToSnapshot() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetCopyTagsToSnapshot",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RdsDbCluster) ResetDatabaseInsightsMode() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetDatabaseInsightsMode",
 		nil, // no parameters
 	)
 }
@@ -2822,10 +3013,26 @@ func (r *jsiiProxy_RdsDbCluster) ResetEnableIamDatabaseAuthentication() {
 	)
 }
 
+func (r *jsiiProxy_RdsDbCluster) ResetEnableLocalWriteForwarding() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetEnableLocalWriteForwarding",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_RdsDbCluster) ResetEngine() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetEngine",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RdsDbCluster) ResetEngineLifecycleSupport() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetEngineLifecycleSupport",
 		nil, // no parameters
 	)
 }
@@ -2990,14 +3197,6 @@ func (r *jsiiProxy_RdsDbCluster) ResetPubliclyAccessible() {
 	)
 }
 
-func (r *jsiiProxy_RdsDbCluster) ResetReadEndpoint() {
-	_jsii_.InvokeVoid(
-		r,
-		"resetReadEndpoint",
-		nil, // no parameters
-	)
-}
-
 func (r *jsiiProxy_RdsDbCluster) ResetReplicationSourceIdentifier() {
 	_jsii_.InvokeVoid(
 		r,
@@ -3108,6 +3307,32 @@ func (r *jsiiProxy_RdsDbCluster) SynthesizeAttributes() *map[string]interface{} 
 	_jsii_.Invoke(
 		r,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RdsDbCluster) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		r,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RdsDbCluster) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

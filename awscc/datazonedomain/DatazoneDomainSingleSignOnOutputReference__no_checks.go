@@ -56,6 +56,10 @@ func (j *jsiiProxy_DatazoneDomainSingleSignOnOutputReference) validateSetComplex
 	return nil
 }
 
+func (j *jsiiProxy_DatazoneDomainSingleSignOnOutputReference) validateSetIdcInstanceArnParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DatazoneDomainSingleSignOnOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }

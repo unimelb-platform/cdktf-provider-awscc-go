@@ -67,6 +67,8 @@ type CleanroomsConfiguredTableTableReferenceGlueOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDatabaseName()
+	ResetTableName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CleanroomsConfiguredTableTableReferenceGlueOutputReference) I
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableTableReferenceGlueOutputReference) ResetDatabaseName() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetDatabaseName",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableTableReferenceGlueOutputReference) ResetTableName() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetTableName",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CleanroomsConfiguredTableTableReferenceGlueOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

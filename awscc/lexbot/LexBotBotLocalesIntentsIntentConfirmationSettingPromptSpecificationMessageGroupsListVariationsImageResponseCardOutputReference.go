@@ -76,6 +76,7 @@ type LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageG
 	ResetButtons()
 	ResetImageUrl()
 	ResetSubtitle()
+	ResetTitle()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -574,6 +575,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecifi
 	_jsii_.InvokeVoid(
 		l,
 		"resetSubtitle",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListVariationsImageResponseCardOutputReference) ResetTitle() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetTitle",
 		nil, // no parameters
 	)
 }

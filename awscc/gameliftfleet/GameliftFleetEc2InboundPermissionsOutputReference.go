@@ -73,6 +73,10 @@ type GameliftFleetEc2InboundPermissionsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetFromPort()
+	ResetIpRange()
+	ResetProtocol()
+	ResetToPort()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -549,6 +553,38 @@ func (g *jsiiProxy_GameliftFleetEc2InboundPermissionsOutputReference) Interpolat
 	)
 
 	return returns
+}
+
+func (g *jsiiProxy_GameliftFleetEc2InboundPermissionsOutputReference) ResetFromPort() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetFromPort",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GameliftFleetEc2InboundPermissionsOutputReference) ResetIpRange() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetIpRange",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GameliftFleetEc2InboundPermissionsOutputReference) ResetProtocol() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetProtocol",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GameliftFleetEc2InboundPermissionsOutputReference) ResetToPort() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetToPort",
+		nil, // no parameters
+	)
 }
 
 func (g *jsiiProxy_GameliftFleetEc2InboundPermissionsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

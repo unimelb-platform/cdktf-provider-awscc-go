@@ -44,6 +44,10 @@ func (v *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationCognitoUserPool
 	return nil
 }
 
+func (v *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationOutputReference) validatePutGroupConfigurationParameters(value *VerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationGroupConfiguration) error {
+	return nil
+}
+
 func (v *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

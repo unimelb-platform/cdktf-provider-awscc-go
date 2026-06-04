@@ -21,31 +21,27 @@ type MskReplicatorConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Specifies a list of Kafka clusters which are targets of the replicator.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/msk_replicator#kafka_clusters MskReplicator#kafka_clusters}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/msk_replicator#kafka_clusters MskReplicator#kafka_clusters}
 	KafkaClusters interface{} `field:"required" json:"kafkaClusters" yaml:"kafkaClusters"`
 	// A list of replication configurations, where each configuration targets a given source cluster to target cluster replication flow.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/msk_replicator#replication_info_list MskReplicator#replication_info_list}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/msk_replicator#replication_info_list MskReplicator#replication_info_list}
 	ReplicationInfoList interface{} `field:"required" json:"replicationInfoList" yaml:"replicationInfoList"`
 	// The name of the replicator.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/msk_replicator#replicator_name MskReplicator#replicator_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/msk_replicator#replicator_name MskReplicator#replicator_name}
 	ReplicatorName *string `field:"required" json:"replicatorName" yaml:"replicatorName"`
 	// The Amazon Resource Name (ARN) of the IAM role used by the replicator to access external resources.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/msk_replicator#service_execution_role_arn MskReplicator#service_execution_role_arn}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/msk_replicator#service_execution_role_arn MskReplicator#service_execution_role_arn}
 	ServiceExecutionRoleArn *string `field:"required" json:"serviceExecutionRoleArn" yaml:"serviceExecutionRoleArn"`
-	// The current version of the MSK replicator.
-	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/msk_replicator#current_version MskReplicator#current_version}
-	CurrentVersion *string `field:"optional" json:"currentVersion" yaml:"currentVersion"`
 	// A summary description of the replicator.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/msk_replicator#description MskReplicator#description}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/msk_replicator#description MskReplicator#description}
 	Description *string `field:"optional" json:"description" yaml:"description"`
 	// A collection of tags associated with a resource.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/msk_replicator#tags MskReplicator#tags}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/msk_replicator#tags MskReplicator#tags}
 	Tags interface{} `field:"optional" json:"tags" yaml:"tags"`
 }
 

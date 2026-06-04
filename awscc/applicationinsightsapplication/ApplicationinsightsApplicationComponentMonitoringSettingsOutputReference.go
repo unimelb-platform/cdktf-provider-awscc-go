@@ -80,9 +80,11 @@ type ApplicationinsightsApplicationComponentMonitoringSettingsOutputReference in
 	PutCustomComponentConfiguration(value *ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfiguration)
 	PutDefaultOverwriteComponentConfiguration(value *ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfiguration)
 	ResetComponentArn()
+	ResetComponentConfigurationMode()
 	ResetComponentName()
 	ResetCustomComponentConfiguration()
 	ResetDefaultOverwriteComponentConfiguration()
+	ResetTier()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -631,6 +633,14 @@ func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsOutp
 	)
 }
 
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsOutputReference) ResetComponentConfigurationMode() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetComponentConfigurationMode",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsOutputReference) ResetComponentName() {
 	_jsii_.InvokeVoid(
 		a,
@@ -651,6 +661,14 @@ func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsOutp
 	_jsii_.InvokeVoid(
 		a,
 		"resetDefaultOverwriteComponentConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsOutputReference) ResetTier() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetTier",
 		nil, // no parameters
 	)
 }

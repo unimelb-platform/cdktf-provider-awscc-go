@@ -4,6 +4,10 @@ package mediapackagepackagingconfiguration
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (m *jsiiProxy_MediapackagePackagingConfigurationHlsPackageHlsManifestsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_MediapackagePackagingConfigurationHlsPackageHlsManifestsList) validateGetParameters(index *float64) error {
 	return nil
 }

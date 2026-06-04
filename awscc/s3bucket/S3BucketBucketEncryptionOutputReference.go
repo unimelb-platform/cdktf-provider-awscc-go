@@ -64,6 +64,7 @@ type S3BucketBucketEncryptionOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutServerSideEncryptionConfiguration(value interface{})
+	ResetServerSideEncryptionConfiguration()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -446,6 +447,14 @@ func (s *jsiiProxy_S3BucketBucketEncryptionOutputReference) PutServerSideEncrypt
 		s,
 		"putServerSideEncryptionConfiguration",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_S3BucketBucketEncryptionOutputReference) ResetServerSideEncryptionConfiguration() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetServerSideEncryptionConfiguration",
+		nil, // no parameters
 	)
 }
 

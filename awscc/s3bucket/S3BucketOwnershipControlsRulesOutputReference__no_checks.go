@@ -56,7 +56,7 @@ func (j *jsiiProxy_S3BucketOwnershipControlsRulesOutputReference) validateSetCom
 	return nil
 }
 
-func (j *jsiiProxy_S3BucketOwnershipControlsRulesOutputReference) validateSetInternalValueParameters(val *S3BucketOwnershipControlsRules) error {
+func (j *jsiiProxy_S3BucketOwnershipControlsRulesOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

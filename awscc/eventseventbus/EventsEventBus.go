@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/eventseventbus/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/events_event_bus awscc_events_event_bus}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/events_event_bus awscc_events_event_bus}.
 type EventsEventBus interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -25,10 +25,15 @@ type EventsEventBus interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	DeadLetterConfig() EventsEventBusDeadLetterConfigOutputReference
+	DeadLetterConfigInput() interface{}
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	Description() *string
+	SetDescription(val *string)
+	DescriptionInput() *string
 	EventSourceName() *string
 	SetEventSourceName(val *string)
 	EventSourceNameInput() *string
@@ -41,6 +46,9 @@ type EventsEventBus interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
+	KmsKeyIdentifier() *string
+	SetKmsKeyIdentifier(val *string)
+	KmsKeyIdentifierInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -95,23 +103,40 @@ type EventsEventBus interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutDeadLetterConfig(value *EventsEventBusDeadLetterConfig)
 	PutTags(value interface{})
+	ResetDeadLetterConfig()
+	ResetDescription()
 	ResetEventSourceName()
+	ResetKmsKeyIdentifier()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPolicy()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -176,11 +201,51 @@ func (j *jsiiProxy_EventsEventBus) Count() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_EventsEventBus) DeadLetterConfig() EventsEventBusDeadLetterConfigOutputReference {
+	var returns EventsEventBusDeadLetterConfigOutputReference
+	_jsii_.Get(
+		j,
+		"deadLetterConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EventsEventBus) DeadLetterConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"deadLetterConfigInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_EventsEventBus) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EventsEventBus) Description() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"description",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EventsEventBus) DescriptionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"descriptionInput",
 		&returns,
 	)
 	return returns
@@ -241,6 +306,26 @@ func (j *jsiiProxy_EventsEventBus) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EventsEventBus) KmsKeyIdentifier() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kmsKeyIdentifier",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EventsEventBus) KmsKeyIdentifierInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kmsKeyIdentifierInput",
 		&returns,
 	)
 	return returns
@@ -387,7 +472,7 @@ func (j *jsiiProxy_EventsEventBus) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/events_event_bus awscc_events_event_bus} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/events_event_bus awscc_events_event_bus} Resource.
 func NewEventsEventBus(scope constructs.Construct, id *string, config *EventsEventBusConfig) EventsEventBus {
 	_init_.Initialize()
 
@@ -405,7 +490,7 @@ func NewEventsEventBus(scope constructs.Construct, id *string, config *EventsEve
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/events_event_bus awscc_events_event_bus} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/events_event_bus awscc_events_event_bus} Resource.
 func NewEventsEventBus_Override(e EventsEventBus, scope constructs.Construct, id *string, config *EventsEventBusConfig) {
 	_init_.Initialize()
 
@@ -446,6 +531,17 @@ func (j *jsiiProxy_EventsEventBus)SetDependsOn(val *[]*string) {
 	)
 }
 
+func (j *jsiiProxy_EventsEventBus)SetDescription(val *string) {
+	if err := j.validateSetDescriptionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"description",
+		val,
+	)
+}
+
 func (j *jsiiProxy_EventsEventBus)SetEventSourceName(val *string) {
 	if err := j.validateSetEventSourceNameParameters(val); err != nil {
 		panic(err)
@@ -461,6 +557,17 @@ func (j *jsiiProxy_EventsEventBus)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_EventsEventBus)SetKmsKeyIdentifier(val *string) {
+	if err := j.validateSetKmsKeyIdentifierParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"kmsKeyIdentifier",
 		val,
 	)
 }
@@ -786,6 +893,19 @@ func (e *jsiiProxy_EventsEventBus) GetStringMapAttribute(terraformAttribute *str
 	return returns
 }
 
+func (e *jsiiProxy_EventsEventBus) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_EventsEventBus) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -813,6 +933,17 @@ func (e *jsiiProxy_EventsEventBus) InterpolationForAttribute(terraformAttribute 
 	return returns
 }
 
+func (e *jsiiProxy_EventsEventBus) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_EventsEventBus) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -821,6 +952,17 @@ func (e *jsiiProxy_EventsEventBus) MoveTo(moveTarget *string, index interface{})
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_EventsEventBus) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -835,6 +977,17 @@ func (e *jsiiProxy_EventsEventBus) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (e *jsiiProxy_EventsEventBus) PutDeadLetterConfig(value *EventsEventBusDeadLetterConfig) {
+	if err := e.validatePutDeadLetterConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putDeadLetterConfig",
+		[]interface{}{value},
+	)
+}
+
 func (e *jsiiProxy_EventsEventBus) PutTags(value interface{}) {
 	if err := e.validatePutTagsParameters(value); err != nil {
 		panic(err)
@@ -846,10 +999,34 @@ func (e *jsiiProxy_EventsEventBus) PutTags(value interface{}) {
 	)
 }
 
+func (e *jsiiProxy_EventsEventBus) ResetDeadLetterConfig() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetDeadLetterConfig",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EventsEventBus) ResetDescription() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetDescription",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EventsEventBus) ResetEventSourceName() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetEventSourceName",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EventsEventBus) ResetKmsKeyIdentifier() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetKmsKeyIdentifier",
 		nil, // no parameters
 	)
 }
@@ -884,6 +1061,32 @@ func (e *jsiiProxy_EventsEventBus) SynthesizeAttributes() *map[string]interface{
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_EventsEventBus) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_EventsEventBus) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

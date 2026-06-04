@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/mediaconnectflowoutput/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediaconnect_flow_output awscc_mediaconnect_flow_output}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediaconnect_flow_output awscc_mediaconnect_flow_output}.
 type MediaconnectFlowOutput interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -58,15 +58,26 @@ type MediaconnectFlowOutput interface {
 	MaxLatency() *float64
 	SetMaxLatency(val *float64)
 	MaxLatencyInput() *float64
+	MediaStreamOutputConfigurations() MediaconnectFlowOutputMediaStreamOutputConfigurationsList
+	MediaStreamOutputConfigurationsInput() interface{}
 	MinLatency() *float64
 	SetMinLatency(val *float64)
 	MinLatencyInput() *float64
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
+	NdiProgramName() *string
+	SetNdiProgramName(val *string)
+	NdiProgramNameInput() *string
+	NdiSpeedHqQuality() *float64
+	SetNdiSpeedHqQuality(val *float64)
+	NdiSpeedHqQualityInput() *float64
 	// The tree node.
 	Node() constructs.Node
 	OutputArn() *string
+	OutputStatus() *string
+	SetOutputStatus(val *string)
+	OutputStatusInput() *string
 	Port() *float64
 	SetPort(val *float64)
 	PortInput() *float64
@@ -124,24 +135,39 @@ type MediaconnectFlowOutput interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutEncryption(value *MediaconnectFlowOutputEncryption)
+	PutMediaStreamOutputConfigurations(value interface{})
 	PutVpcInterfaceAttachment(value *MediaconnectFlowOutputVpcInterfaceAttachment)
 	ResetCidrAllowList()
 	ResetDescription()
 	ResetDestination()
 	ResetEncryption()
 	ResetMaxLatency()
+	ResetMediaStreamOutputConfigurations()
 	ResetMinLatency()
 	ResetName()
+	ResetNdiProgramName()
+	ResetNdiSpeedHqQuality()
+	ResetOutputStatus()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -151,6 +177,9 @@ type MediaconnectFlowOutput interface {
 	ResetStreamId()
 	ResetVpcInterfaceAttachment()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -385,6 +414,26 @@ func (j *jsiiProxy_MediaconnectFlowOutput) MaxLatencyInput() *float64 {
 	return returns
 }
 
+func (j *jsiiProxy_MediaconnectFlowOutput) MediaStreamOutputConfigurations() MediaconnectFlowOutputMediaStreamOutputConfigurationsList {
+	var returns MediaconnectFlowOutputMediaStreamOutputConfigurationsList
+	_jsii_.Get(
+		j,
+		"mediaStreamOutputConfigurations",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediaconnectFlowOutput) MediaStreamOutputConfigurationsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"mediaStreamOutputConfigurationsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_MediaconnectFlowOutput) MinLatency() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -425,6 +474,46 @@ func (j *jsiiProxy_MediaconnectFlowOutput) NameInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_MediaconnectFlowOutput) NdiProgramName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ndiProgramName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediaconnectFlowOutput) NdiProgramNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ndiProgramNameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediaconnectFlowOutput) NdiSpeedHqQuality() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"ndiSpeedHqQuality",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediaconnectFlowOutput) NdiSpeedHqQualityInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"ndiSpeedHqQualityInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_MediaconnectFlowOutput) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -440,6 +529,26 @@ func (j *jsiiProxy_MediaconnectFlowOutput) OutputArn() *string {
 	_jsii_.Get(
 		j,
 		"outputArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediaconnectFlowOutput) OutputStatus() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"outputStatus",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediaconnectFlowOutput) OutputStatusInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"outputStatusInput",
 		&returns,
 	)
 	return returns
@@ -626,7 +735,7 @@ func (j *jsiiProxy_MediaconnectFlowOutput) VpcInterfaceAttachmentInput() interfa
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediaconnect_flow_output awscc_mediaconnect_flow_output} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediaconnect_flow_output awscc_mediaconnect_flow_output} Resource.
 func NewMediaconnectFlowOutput(scope constructs.Construct, id *string, config *MediaconnectFlowOutputConfig) MediaconnectFlowOutput {
 	_init_.Initialize()
 
@@ -644,7 +753,7 @@ func NewMediaconnectFlowOutput(scope constructs.Construct, id *string, config *M
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediaconnect_flow_output awscc_mediaconnect_flow_output} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediaconnect_flow_output awscc_mediaconnect_flow_output} Resource.
 func NewMediaconnectFlowOutput_Override(m MediaconnectFlowOutput, scope constructs.Construct, id *string, config *MediaconnectFlowOutputConfig) {
 	_init_.Initialize()
 
@@ -777,6 +886,39 @@ func (j *jsiiProxy_MediaconnectFlowOutput)SetName(val *string) {
 	_jsii_.Set(
 		j,
 		"name",
+		val,
+	)
+}
+
+func (j *jsiiProxy_MediaconnectFlowOutput)SetNdiProgramName(val *string) {
+	if err := j.validateSetNdiProgramNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ndiProgramName",
+		val,
+	)
+}
+
+func (j *jsiiProxy_MediaconnectFlowOutput)SetNdiSpeedHqQuality(val *float64) {
+	if err := j.validateSetNdiSpeedHqQualityParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ndiSpeedHqQuality",
+		val,
+	)
+}
+
+func (j *jsiiProxy_MediaconnectFlowOutput)SetOutputStatus(val *string) {
+	if err := j.validateSetOutputStatusParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"outputStatus",
 		val,
 	)
 }
@@ -1124,6 +1266,19 @@ func (m *jsiiProxy_MediaconnectFlowOutput) GetStringMapAttribute(terraformAttrib
 	return returns
 }
 
+func (m *jsiiProxy_MediaconnectFlowOutput) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (m *jsiiProxy_MediaconnectFlowOutput) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1151,6 +1306,17 @@ func (m *jsiiProxy_MediaconnectFlowOutput) InterpolationForAttribute(terraformAt
 	return returns
 }
 
+func (m *jsiiProxy_MediaconnectFlowOutput) MoveFromId(id *string) {
+	if err := m.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_MediaconnectFlowOutput) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1159,6 +1325,17 @@ func (m *jsiiProxy_MediaconnectFlowOutput) MoveTo(moveTarget *string, index inte
 		m,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (m *jsiiProxy_MediaconnectFlowOutput) MoveToId(id *string) {
+	if err := m.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1180,6 +1357,17 @@ func (m *jsiiProxy_MediaconnectFlowOutput) PutEncryption(value *MediaconnectFlow
 	_jsii_.InvokeVoid(
 		m,
 		"putEncryption",
+		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_MediaconnectFlowOutput) PutMediaStreamOutputConfigurations(value interface{}) {
+	if err := m.validatePutMediaStreamOutputConfigurationsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putMediaStreamOutputConfigurations",
 		[]interface{}{value},
 	)
 }
@@ -1235,6 +1423,14 @@ func (m *jsiiProxy_MediaconnectFlowOutput) ResetMaxLatency() {
 	)
 }
 
+func (m *jsiiProxy_MediaconnectFlowOutput) ResetMediaStreamOutputConfigurations() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMediaStreamOutputConfigurations",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_MediaconnectFlowOutput) ResetMinLatency() {
 	_jsii_.InvokeVoid(
 		m,
@@ -1247,6 +1443,30 @@ func (m *jsiiProxy_MediaconnectFlowOutput) ResetName() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectFlowOutput) ResetNdiProgramName() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetNdiProgramName",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectFlowOutput) ResetNdiSpeedHqQuality() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetNdiSpeedHqQuality",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectFlowOutput) ResetOutputStatus() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetOutputStatus",
 		nil, // no parameters
 	)
 }
@@ -1305,6 +1525,32 @@ func (m *jsiiProxy_MediaconnectFlowOutput) SynthesizeAttributes() *map[string]in
 	_jsii_.Invoke(
 		m,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MediaconnectFlowOutput) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		m,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MediaconnectFlowOutput) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

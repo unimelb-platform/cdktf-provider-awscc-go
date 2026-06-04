@@ -9,13 +9,14 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccsagemakerappimageconfig/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_app_image_config awscc_sagemaker_app_image_config}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_app_image_config awscc_sagemaker_app_image_config}.
 type DataAwsccSagemakerAppImageConfig interface {
 	cdktf.TerraformDataSource
 	AppImageConfigArn() *string
 	AppImageConfigName() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	CodeEditorAppImageConfig() DataAwsccSagemakerAppImageConfigCodeEditorAppImageConfigOutputReference
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -87,6 +88,10 @@ type DataAwsccSagemakerAppImageConfig interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -126,6 +131,16 @@ func (j *jsiiProxy_DataAwsccSagemakerAppImageConfig) CdktfStack() cdktf.Terrafor
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerAppImageConfig) CodeEditorAppImageConfig() DataAwsccSagemakerAppImageConfigCodeEditorAppImageConfigOutputReference {
+	var returns DataAwsccSagemakerAppImageConfigCodeEditorAppImageConfigOutputReference
+	_jsii_.Get(
+		j,
+		"codeEditorAppImageConfig",
 		&returns,
 	)
 	return returns
@@ -312,7 +327,7 @@ func (j *jsiiProxy_DataAwsccSagemakerAppImageConfig) TerraformResourceType() *st
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_app_image_config awscc_sagemaker_app_image_config} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_app_image_config awscc_sagemaker_app_image_config} Data Source.
 func NewDataAwsccSagemakerAppImageConfig(scope constructs.Construct, id *string, config *DataAwsccSagemakerAppImageConfigConfig) DataAwsccSagemakerAppImageConfig {
 	_init_.Initialize()
 
@@ -330,7 +345,7 @@ func NewDataAwsccSagemakerAppImageConfig(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_app_image_config awscc_sagemaker_app_image_config} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_app_image_config awscc_sagemaker_app_image_config} Data Source.
 func NewDataAwsccSagemakerAppImageConfig_Override(d DataAwsccSagemakerAppImageConfig, scope constructs.Construct, id *string, config *DataAwsccSagemakerAppImageConfigConfig) {
 	_init_.Initialize()
 
@@ -697,6 +712,32 @@ func (d *jsiiProxy_DataAwsccSagemakerAppImageConfig) SynthesizeAttributes() *map
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerAppImageConfig) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerAppImageConfig) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -56,11 +56,23 @@ func (r *jsiiProxy_RedshiftserverlessNamespace) validateInterpolationForAttribut
 	return nil
 }
 
+func (r *jsiiProxy_RedshiftserverlessNamespace) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RedshiftserverlessNamespace) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (r *jsiiProxy_RedshiftserverlessNamespace) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RedshiftserverlessNamespace) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (r *jsiiProxy_RedshiftserverlessNamespace) validatePutSnapshotCopyConfigurationsParameters(value interface{}) error {
 	return nil
 }
 

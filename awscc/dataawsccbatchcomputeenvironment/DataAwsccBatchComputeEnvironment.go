@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccbatchcomputeenvironment/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/batch_compute_environment awscc_batch_compute_environment}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/batch_compute_environment awscc_batch_compute_environment}.
 type DataAwsccBatchComputeEnvironment interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -19,6 +19,7 @@ type DataAwsccBatchComputeEnvironment interface {
 	ComputeResources() DataAwsccBatchComputeEnvironmentComputeResourcesOutputReference
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
+	Context() *string
 	// Experimental.
 	Count() interface{}
 	// Experimental.
@@ -93,6 +94,10 @@ type DataAwsccBatchComputeEnvironment interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -152,6 +157,16 @@ func (j *jsiiProxy_DataAwsccBatchComputeEnvironment) ConstructNodeMetadata() *ma
 	_jsii_.Get(
 		j,
 		"constructNodeMetadata",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccBatchComputeEnvironment) Context() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"context",
 		&returns,
 	)
 	return returns
@@ -378,7 +393,7 @@ func (j *jsiiProxy_DataAwsccBatchComputeEnvironment) UpdatePolicy() DataAwsccBat
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/batch_compute_environment awscc_batch_compute_environment} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/batch_compute_environment awscc_batch_compute_environment} Data Source.
 func NewDataAwsccBatchComputeEnvironment(scope constructs.Construct, id *string, config *DataAwsccBatchComputeEnvironmentConfig) DataAwsccBatchComputeEnvironment {
 	_init_.Initialize()
 
@@ -396,7 +411,7 @@ func NewDataAwsccBatchComputeEnvironment(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/batch_compute_environment awscc_batch_compute_environment} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/batch_compute_environment awscc_batch_compute_environment} Data Source.
 func NewDataAwsccBatchComputeEnvironment_Override(d DataAwsccBatchComputeEnvironment, scope constructs.Construct, id *string, config *DataAwsccBatchComputeEnvironmentConfig) {
 	_init_.Initialize()
 
@@ -763,6 +778,32 @@ func (d *jsiiProxy_DataAwsccBatchComputeEnvironment) SynthesizeAttributes() *map
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccBatchComputeEnvironment) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccBatchComputeEnvironment) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

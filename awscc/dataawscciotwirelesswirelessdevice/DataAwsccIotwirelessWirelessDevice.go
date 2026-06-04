@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciotwirelesswirelessdevice/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotwireless_wireless_device awscc_iotwireless_wireless_device}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotwireless_wireless_device awscc_iotwireless_wireless_device}.
 type DataAwsccIotwirelessWirelessDevice interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -47,6 +47,7 @@ type DataAwsccIotwirelessWirelessDevice interface {
 	Name() *string
 	// The tree node.
 	Node() constructs.Node
+	Positioning() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -63,6 +64,7 @@ type DataAwsccIotwirelessWirelessDevice interface {
 	ThingArn() *string
 	ThingName() *string
 	Type() *string
+	WirelessDeviceId() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -92,6 +94,10 @@ type DataAwsccIotwirelessWirelessDevice interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -276,6 +282,16 @@ func (j *jsiiProxy_DataAwsccIotwirelessWirelessDevice) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccIotwirelessWirelessDevice) Positioning() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"positioning",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccIotwirelessWirelessDevice) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -366,8 +382,18 @@ func (j *jsiiProxy_DataAwsccIotwirelessWirelessDevice) Type() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccIotwirelessWirelessDevice) WirelessDeviceId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"wirelessDeviceId",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotwireless_wireless_device awscc_iotwireless_wireless_device} Data Source.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotwireless_wireless_device awscc_iotwireless_wireless_device} Data Source.
 func NewDataAwsccIotwirelessWirelessDevice(scope constructs.Construct, id *string, config *DataAwsccIotwirelessWirelessDeviceConfig) DataAwsccIotwirelessWirelessDevice {
 	_init_.Initialize()
 
@@ -385,7 +411,7 @@ func NewDataAwsccIotwirelessWirelessDevice(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotwireless_wireless_device awscc_iotwireless_wireless_device} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotwireless_wireless_device awscc_iotwireless_wireless_device} Data Source.
 func NewDataAwsccIotwirelessWirelessDevice_Override(d DataAwsccIotwirelessWirelessDevice, scope constructs.Construct, id *string, config *DataAwsccIotwirelessWirelessDeviceConfig) {
 	_init_.Initialize()
 
@@ -752,6 +778,32 @@ func (d *jsiiProxy_DataAwsccIotwirelessWirelessDevice) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotwirelessWirelessDevice) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotwirelessWirelessDevice) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

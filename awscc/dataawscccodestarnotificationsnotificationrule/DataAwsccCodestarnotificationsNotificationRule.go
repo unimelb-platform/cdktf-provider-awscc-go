@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccodestarnotificationsnotificationrule/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codestarnotifications_notification_rule awscc_codestarnotifications_notification_rule}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codestarnotifications_notification_rule awscc_codestarnotifications_notification_rule}.
 type DataAwsccCodestarnotificationsNotificationRule interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -93,6 +93,10 @@ type DataAwsccCodestarnotificationsNotificationRule interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -378,7 +382,7 @@ func (j *jsiiProxy_DataAwsccCodestarnotificationsNotificationRule) TerraformReso
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codestarnotifications_notification_rule awscc_codestarnotifications_notification_rule} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codestarnotifications_notification_rule awscc_codestarnotifications_notification_rule} Data Source.
 func NewDataAwsccCodestarnotificationsNotificationRule(scope constructs.Construct, id *string, config *DataAwsccCodestarnotificationsNotificationRuleConfig) DataAwsccCodestarnotificationsNotificationRule {
 	_init_.Initialize()
 
@@ -396,7 +400,7 @@ func NewDataAwsccCodestarnotificationsNotificationRule(scope constructs.Construc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codestarnotifications_notification_rule awscc_codestarnotifications_notification_rule} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codestarnotifications_notification_rule awscc_codestarnotifications_notification_rule} Data Source.
 func NewDataAwsccCodestarnotificationsNotificationRule_Override(d DataAwsccCodestarnotificationsNotificationRule, scope constructs.Construct, id *string, config *DataAwsccCodestarnotificationsNotificationRuleConfig) {
 	_init_.Initialize()
 
@@ -763,6 +767,32 @@ func (d *jsiiProxy_DataAwsccCodestarnotificationsNotificationRule) SynthesizeAtt
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCodestarnotificationsNotificationRule) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCodestarnotificationsNotificationRule) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

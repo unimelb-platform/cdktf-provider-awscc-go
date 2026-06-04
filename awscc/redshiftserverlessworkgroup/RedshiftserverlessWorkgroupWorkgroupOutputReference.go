@@ -22,6 +22,7 @@ type RedshiftserverlessWorkgroupWorkgroupOutputReference interface {
 	// Experimental.
 	SetComplexObjectIsFromSet(val *bool)
 	ConfigParameters() RedshiftserverlessWorkgroupWorkgroupConfigParametersList
+	ConfigParametersInput() interface{}
 	CreationDate() *string
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
 	//
@@ -29,12 +30,16 @@ type RedshiftserverlessWorkgroupWorkgroupOutputReference interface {
 	// Experimental.
 	CreationStack() *[]*string
 	Endpoint() RedshiftserverlessWorkgroupWorkgroupEndpointOutputReference
+	EndpointInput() interface{}
 	EnhancedVpcRouting() cdktf.IResolvable
 	// Experimental.
 	Fqn() *string
-	InternalValue() *RedshiftserverlessWorkgroupWorkgroup
-	SetInternalValue(val *RedshiftserverlessWorkgroupWorkgroup)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
+	MaxCapacity() *float64
 	NamespaceName() *string
+	PricePerformanceTarget() RedshiftserverlessWorkgroupWorkgroupPricePerformanceTargetOutputReference
+	PricePerformanceTargetInput() interface{}
 	PubliclyAccessible() cdktf.IResolvable
 	SecurityGroupIds() *[]*string
 	Status() *string
@@ -47,6 +52,7 @@ type RedshiftserverlessWorkgroupWorkgroupOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	TrackName() *string
 	WorkgroupArn() *string
 	WorkgroupId() *string
 	WorkgroupName() *string
@@ -74,6 +80,12 @@ type RedshiftserverlessWorkgroupWorkgroupOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutConfigParameters(value interface{})
+	PutEndpoint(value *RedshiftserverlessWorkgroupWorkgroupEndpoint)
+	PutPricePerformanceTarget(value *RedshiftserverlessWorkgroupWorkgroupPricePerformanceTarget)
+	ResetConfigParameters()
+	ResetEndpoint()
+	ResetPricePerformanceTarget()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -129,6 +141,16 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) ConfigPa
 	return returns
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) ConfigParametersInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"configParametersInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) CreationDate() *string {
 	var returns *string
 	_jsii_.Get(
@@ -159,6 +181,16 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) Endpoint
 	return returns
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) EndpointInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"endpointInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) EnhancedVpcRouting() cdktf.IResolvable {
 	var returns cdktf.IResolvable
 	_jsii_.Get(
@@ -179,11 +211,21 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) Fqn() *s
 	return returns
 }
 
-func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) InternalValue() *RedshiftserverlessWorkgroupWorkgroup {
-	var returns *RedshiftserverlessWorkgroupWorkgroup
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) MaxCapacity() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxCapacity",
 		&returns,
 	)
 	return returns
@@ -194,6 +236,26 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) Namespac
 	_jsii_.Get(
 		j,
 		"namespaceName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) PricePerformanceTarget() RedshiftserverlessWorkgroupWorkgroupPricePerformanceTargetOutputReference {
+	var returns RedshiftserverlessWorkgroupWorkgroupPricePerformanceTargetOutputReference
+	_jsii_.Get(
+		j,
+		"pricePerformanceTarget",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) PricePerformanceTargetInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"pricePerformanceTargetInput",
 		&returns,
 	)
 	return returns
@@ -254,6 +316,16 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) Terrafor
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) TrackName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"trackName",
 		&returns,
 	)
 	return returns
@@ -339,7 +411,7 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference)SetComple
 	)
 }
 
-func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference)SetInternalValue(val *RedshiftserverlessWorkgroupWorkgroup) {
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -556,6 +628,63 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) Interpol
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) PutConfigParameters(value interface{}) {
+	if err := r.validatePutConfigParametersParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putConfigParameters",
+		[]interface{}{value},
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) PutEndpoint(value *RedshiftserverlessWorkgroupWorkgroupEndpoint) {
+	if err := r.validatePutEndpointParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putEndpoint",
+		[]interface{}{value},
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) PutPricePerformanceTarget(value *RedshiftserverlessWorkgroupWorkgroupPricePerformanceTarget) {
+	if err := r.validatePutPricePerformanceTargetParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putPricePerformanceTarget",
+		[]interface{}{value},
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) ResetConfigParameters() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetConfigParameters",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) ResetEndpoint() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetEndpoint",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) ResetPricePerformanceTarget() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetPricePerformanceTarget",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

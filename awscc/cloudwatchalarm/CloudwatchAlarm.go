@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/cloudwatchalarm/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudwatch_alarm awscc_cloudwatch_alarm}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudwatch_alarm awscc_cloudwatch_alarm}.
 type CloudwatchAlarm interface {
 	cdktf.TerraformResource
 	ActionsEnabled() interface{}
@@ -103,6 +103,8 @@ type CloudwatchAlarm interface {
 	Statistic() *string
 	SetStatistic(val *string)
 	StatisticInput() *string
+	Tags() CloudwatchAlarmTagsList
+	TagsInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -145,17 +147,28 @@ type CloudwatchAlarm interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutDimensions(value interface{})
 	PutMetrics(value interface{})
+	PutTags(value interface{})
 	ResetActionsEnabled()
 	ResetAlarmActions()
 	ResetAlarmDescription()
@@ -174,11 +187,15 @@ type CloudwatchAlarm interface {
 	ResetOverrideLogicalId()
 	ResetPeriod()
 	ResetStatistic()
+	ResetTags()
 	ResetThreshold()
 	ResetThresholdMetricId()
 	ResetTreatMissingData()
 	ResetUnit()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -683,6 +700,26 @@ func (j *jsiiProxy_CloudwatchAlarm) StatisticInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_CloudwatchAlarm) Tags() CloudwatchAlarmTagsList {
+	var returns CloudwatchAlarmTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CloudwatchAlarm) TagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_CloudwatchAlarm) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -794,7 +831,7 @@ func (j *jsiiProxy_CloudwatchAlarm) UnitInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudwatch_alarm awscc_cloudwatch_alarm} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudwatch_alarm awscc_cloudwatch_alarm} Resource.
 func NewCloudwatchAlarm(scope constructs.Construct, id *string, config *CloudwatchAlarmConfig) CloudwatchAlarm {
 	_init_.Initialize()
 
@@ -812,7 +849,7 @@ func NewCloudwatchAlarm(scope constructs.Construct, id *string, config *Cloudwat
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudwatch_alarm awscc_cloudwatch_alarm} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudwatch_alarm awscc_cloudwatch_alarm} Resource.
 func NewCloudwatchAlarm_Override(c CloudwatchAlarm, scope constructs.Construct, id *string, config *CloudwatchAlarmConfig) {
 	_init_.Initialize()
 
@@ -1369,6 +1406,19 @@ func (c *jsiiProxy_CloudwatchAlarm) GetStringMapAttribute(terraformAttribute *st
 	return returns
 }
 
+func (c *jsiiProxy_CloudwatchAlarm) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_CloudwatchAlarm) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1396,6 +1446,17 @@ func (c *jsiiProxy_CloudwatchAlarm) InterpolationForAttribute(terraformAttribute
 	return returns
 }
 
+func (c *jsiiProxy_CloudwatchAlarm) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CloudwatchAlarm) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1404,6 +1465,17 @@ func (c *jsiiProxy_CloudwatchAlarm) MoveTo(moveTarget *string, index interface{}
 		c,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (c *jsiiProxy_CloudwatchAlarm) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1436,6 +1508,17 @@ func (c *jsiiProxy_CloudwatchAlarm) PutMetrics(value interface{}) {
 	_jsii_.InvokeVoid(
 		c,
 		"putMetrics",
+		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CloudwatchAlarm) PutTags(value interface{}) {
+	if err := c.validatePutTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putTags",
 		[]interface{}{value},
 	)
 }
@@ -1568,6 +1651,14 @@ func (c *jsiiProxy_CloudwatchAlarm) ResetStatistic() {
 	)
 }
 
+func (c *jsiiProxy_CloudwatchAlarm) ResetTags() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetTags",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CloudwatchAlarm) ResetThreshold() {
 	_jsii_.InvokeVoid(
 		c,
@@ -1606,6 +1697,32 @@ func (c *jsiiProxy_CloudwatchAlarm) SynthesizeAttributes() *map[string]interface
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CloudwatchAlarm) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CloudwatchAlarm) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

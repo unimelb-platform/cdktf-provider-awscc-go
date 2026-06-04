@@ -70,6 +70,9 @@ type IoteventsAlarmModelAlarmRuleSimpleRuleOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetComparisonOperator()
+	ResetInputProperty()
+	ResetThreshold()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (i *jsiiProxy_IoteventsAlarmModelAlarmRuleSimpleRuleOutputReference) Interp
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IoteventsAlarmModelAlarmRuleSimpleRuleOutputReference) ResetComparisonOperator() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetComparisonOperator",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IoteventsAlarmModelAlarmRuleSimpleRuleOutputReference) ResetInputProperty() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetInputProperty",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IoteventsAlarmModelAlarmRuleSimpleRuleOutputReference) ResetThreshold() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetThreshold",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IoteventsAlarmModelAlarmRuleSimpleRuleOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

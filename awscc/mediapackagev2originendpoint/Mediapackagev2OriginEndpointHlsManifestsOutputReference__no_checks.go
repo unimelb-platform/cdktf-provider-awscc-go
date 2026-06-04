@@ -52,6 +52,10 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) vali
 	return nil
 }
 
+func (m *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) validatePutStartTagParameters(value *Mediapackagev2OriginEndpointHlsManifestsStartTag) error {
+	return nil
+}
+
 func (m *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }
@@ -93,6 +97,10 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) vali
 }
 
 func (j *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) validateSetUrlParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) validateSetUrlEncodeChildManifestParameters(val interface{}) error {
 	return nil
 }
 

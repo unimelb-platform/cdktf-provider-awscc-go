@@ -27,8 +27,8 @@ type Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionCont
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfiguration
-	SetInternalValue(val *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfiguration)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	PresetSpeke20Audio() *string
 	SetPresetSpeke20Audio(val *string)
 	PresetSpeke20AudioInput() *string
@@ -67,6 +67,8 @@ type Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionCont
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPresetSpeke20Audio()
+	ResetPresetSpeke20Video()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProvider
 	return returns
 }
 
-func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfigurationOutputReference) InternalValue() *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfiguration {
-	var returns *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfiguration
+func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfigurationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -242,7 +244,7 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProvider
 	)
 }
 
-func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfigurationOutputReference)SetInternalValue(val *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfiguration) {
+func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfigurationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProvider
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfigurationOutputReference) ResetPresetSpeke20Audio() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetPresetSpeke20Audio",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfigurationOutputReference) ResetPresetSpeke20Video() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetPresetSpeke20Video",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

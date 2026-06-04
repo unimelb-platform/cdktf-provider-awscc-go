@@ -119,6 +119,14 @@ func (e *jsiiProxy_Ec2Subnet) validateInterpolationForAttributeParameters(terraf
 	return nil
 }
 
+func (e *jsiiProxy_Ec2Subnet) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_Ec2Subnet) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (e *jsiiProxy_Ec2Subnet) validateMoveToParameters(moveTarget *string, index
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (e *jsiiProxy_Ec2Subnet) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -424,6 +440,14 @@ func (j *jsiiProxy_Ec2Subnet) validateSetEnableDns64Parameters(val interface{}) 
 	return nil
 }
 
+func (j *jsiiProxy_Ec2Subnet) validateSetEnableLniAtDeviceIndexParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Ec2Subnet) validateSetIpv4IpamPoolIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -441,14 +465,6 @@ func (j *jsiiProxy_Ec2Subnet) validateSetIpv4NetmaskLengthParameters(val *float6
 }
 
 func (j *jsiiProxy_Ec2Subnet) validateSetIpv6CidrBlockParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_Ec2Subnet) validateSetIpv6CidrBlocksParameters(val *[]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

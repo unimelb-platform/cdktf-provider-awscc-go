@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccservicecatalogcloudformationprovisionedproduct/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/servicecatalog_cloudformation_provisioned_product awscc_servicecatalog_cloudformation_provisioned_product}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/servicecatalog_cloudformation_provisioned_product awscc_servicecatalog_cloudformation_provisioned_product}.
 type DataAwsccServicecatalogCloudformationProvisionedProduct interface {
 	cdktf.TerraformDataSource
 	AcceptLanguage() *string
@@ -98,6 +98,10 @@ type DataAwsccServicecatalogCloudformationProvisionedProduct interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -433,7 +437,7 @@ func (j *jsiiProxy_DataAwsccServicecatalogCloudformationProvisionedProduct) Terr
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/servicecatalog_cloudformation_provisioned_product awscc_servicecatalog_cloudformation_provisioned_product} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/servicecatalog_cloudformation_provisioned_product awscc_servicecatalog_cloudformation_provisioned_product} Data Source.
 func NewDataAwsccServicecatalogCloudformationProvisionedProduct(scope constructs.Construct, id *string, config *DataAwsccServicecatalogCloudformationProvisionedProductConfig) DataAwsccServicecatalogCloudformationProvisionedProduct {
 	_init_.Initialize()
 
@@ -451,7 +455,7 @@ func NewDataAwsccServicecatalogCloudformationProvisionedProduct(scope constructs
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/servicecatalog_cloudformation_provisioned_product awscc_servicecatalog_cloudformation_provisioned_product} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/servicecatalog_cloudformation_provisioned_product awscc_servicecatalog_cloudformation_provisioned_product} Data Source.
 func NewDataAwsccServicecatalogCloudformationProvisionedProduct_Override(d DataAwsccServicecatalogCloudformationProvisionedProduct, scope constructs.Construct, id *string, config *DataAwsccServicecatalogCloudformationProvisionedProductConfig) {
 	_init_.Initialize()
 
@@ -818,6 +822,32 @@ func (d *jsiiProxy_DataAwsccServicecatalogCloudformationProvisionedProduct) Synt
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccServicecatalogCloudformationProvisionedProduct) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccServicecatalogCloudformationProvisionedProduct) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

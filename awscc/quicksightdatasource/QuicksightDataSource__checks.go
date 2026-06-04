@@ -119,6 +119,14 @@ func (q *jsiiProxy_QuicksightDataSource) validateInterpolationForAttributeParame
 	return nil
 }
 
+func (q *jsiiProxy_QuicksightDataSource) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (q *jsiiProxy_QuicksightDataSource) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (q *jsiiProxy_QuicksightDataSource) validateMoveToParameters(moveTarget *st
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (q *jsiiProxy_QuicksightDataSource) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -482,6 +498,14 @@ func (j *jsiiProxy_QuicksightDataSource) validateSetDataSourceIdParameters(val *
 	return nil
 }
 
+func (j *jsiiProxy_QuicksightDataSource) validateSetFolderArnsParameters(val *[]*string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_QuicksightDataSource) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 		return err
@@ -561,6 +585,9 @@ func validateNewQuicksightDataSourceParameters(scope constructs.Construct, id *s
 		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
+	if config == nil {
+		return fmt.Errorf("parameter config is required, but nil was provided")
+	}
 	if err := _jsii_.ValidateStruct(config, func() string { return "parameter config" }); err != nil {
 		return err
 	}

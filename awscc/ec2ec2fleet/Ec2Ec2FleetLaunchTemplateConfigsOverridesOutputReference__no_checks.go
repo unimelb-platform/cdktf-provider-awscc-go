@@ -44,6 +44,10 @@ func (e *jsiiProxy_Ec2Ec2FleetLaunchTemplateConfigsOverridesOutputReference) val
 	return nil
 }
 
+func (e *jsiiProxy_Ec2Ec2FleetLaunchTemplateConfigsOverridesOutputReference) validatePutBlockDeviceMappingsParameters(value interface{}) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2Ec2FleetLaunchTemplateConfigsOverridesOutputReference) validatePutInstanceRequirementsParameters(value *Ec2Ec2FleetLaunchTemplateConfigsOverridesInstanceRequirements) error {
 	return nil
 }

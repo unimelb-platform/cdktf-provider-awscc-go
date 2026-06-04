@@ -56,7 +56,15 @@ func (d *jsiiProxy_DatasyncLocationAzureBlob) validateInterpolationForAttributeP
 	return nil
 }
 
+func (d *jsiiProxy_DatasyncLocationAzureBlob) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DatasyncLocationAzureBlob) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DatasyncLocationAzureBlob) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -65,6 +73,14 @@ func (d *jsiiProxy_DatasyncLocationAzureBlob) validateOverrideLogicalIdParameter
 }
 
 func (d *jsiiProxy_DatasyncLocationAzureBlob) validatePutAzureBlobSasConfigurationParameters(value *DatasyncLocationAzureBlobAzureBlobSasConfiguration) error {
+	return nil
+}
+
+func (d *jsiiProxy_DatasyncLocationAzureBlob) validatePutCmkSecretConfigParameters(value *DatasyncLocationAzureBlobCmkSecretConfig) error {
+	return nil
+}
+
+func (d *jsiiProxy_DatasyncLocationAzureBlob) validatePutCustomSecretConfigParameters(value *DatasyncLocationAzureBlobCustomSecretConfig) error {
 	return nil
 }
 

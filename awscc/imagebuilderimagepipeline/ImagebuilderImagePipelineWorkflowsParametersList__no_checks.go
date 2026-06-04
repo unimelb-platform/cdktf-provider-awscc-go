@@ -4,6 +4,10 @@ package imagebuilderimagepipeline
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (i *jsiiProxy_ImagebuilderImagePipelineWorkflowsParametersList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_ImagebuilderImagePipelineWorkflowsParametersList) validateGetParameters(index *float64) error {
 	return nil
 }

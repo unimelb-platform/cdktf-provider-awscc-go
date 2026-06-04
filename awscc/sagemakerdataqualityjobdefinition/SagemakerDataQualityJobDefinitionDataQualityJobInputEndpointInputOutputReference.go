@@ -76,7 +76,9 @@ type SagemakerDataQualityJobDefinitionDataQualityJobInputEndpointInputOutputRefe
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEndpointName()
 	ResetExcludeFeaturesAttribute()
+	ResetLocalPath()
 	ResetS3DataDistributionType()
 	ResetS3InputMode()
 	// Produce the Token's value at resolution time.
@@ -588,10 +590,26 @@ func (s *jsiiProxy_SagemakerDataQualityJobDefinitionDataQualityJobInputEndpointI
 	return returns
 }
 
+func (s *jsiiProxy_SagemakerDataQualityJobDefinitionDataQualityJobInputEndpointInputOutputReference) ResetEndpointName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetEndpointName",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerDataQualityJobDefinitionDataQualityJobInputEndpointInputOutputReference) ResetExcludeFeaturesAttribute() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetExcludeFeaturesAttribute",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerDataQualityJobDefinitionDataQualityJobInputEndpointInputOutputReference) ResetLocalPath() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetLocalPath",
 		nil, // no parameters
 	)
 }

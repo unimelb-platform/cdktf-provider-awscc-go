@@ -60,7 +60,7 @@ func (j *jsiiProxy_MediapackagePackagingConfigurationCmafPackageEncryptionSpekeK
 	return nil
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfigurationCmafPackageEncryptionSpekeKeyProviderOutputReference) validateSetInternalValueParameters(val *MediapackagePackagingConfigurationCmafPackageEncryptionSpekeKeyProvider) error {
+func (j *jsiiProxy_MediapackagePackagingConfigurationCmafPackageEncryptionSpekeKeyProviderOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

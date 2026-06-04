@@ -48,6 +48,14 @@ func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) 
 	return nil
 }
 
+func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) validatePutImagePullSecretsParameters(value interface{}) error {
+	return nil
+}
+
+func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) validatePutInitContainersParameters(value interface{}) error {
+	return nil
+}
+
 func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) validatePutMetadataParameters(value *BatchJobDefinitionEksPropertiesPodPropertiesMetadata) error {
 	return nil
 }
@@ -81,6 +89,10 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) 
 }
 
 func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) validateSetServiceAccountNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesOutputReference) validateSetShareProcessNamespaceParameters(val interface{}) error {
 	return nil
 }
 

@@ -70,6 +70,9 @@ type IotTopicRuleTopicRulePayloadErrorActionHttpAuthSigv4OutputReference interfa
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetRoleArn()
+	ResetServiceName()
+	ResetSigningRegion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionHttpAuthSigv4OutputRef
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionHttpAuthSigv4OutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionHttpAuthSigv4OutputReference) ResetServiceName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetServiceName",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionHttpAuthSigv4OutputReference) ResetSigningRegion() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetSigningRegion",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionHttpAuthSigv4OutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

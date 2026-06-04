@@ -70,6 +70,7 @@ type DatabrewJobOutputLocationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucket()
 	ResetBucketOwner()
 	ResetKey()
 	// Produce the Token's value at resolution time.
@@ -517,6 +518,14 @@ func (d *jsiiProxy_DatabrewJobOutputLocationOutputReference) InterpolationForAtt
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatabrewJobOutputLocationOutputReference) ResetBucket() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetBucket",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatabrewJobOutputLocationOutputReference) ResetBucketOwner() {

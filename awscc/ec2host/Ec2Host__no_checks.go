@@ -56,11 +56,23 @@ func (e *jsiiProxy_Ec2Host) validateInterpolationForAttributeParameters(terrafor
 	return nil
 }
 
+func (e *jsiiProxy_Ec2Host) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2Host) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (e *jsiiProxy_Ec2Host) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2Host) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2Host) validatePutTagsParameters(value interface{}) error {
 	return nil
 }
 

@@ -1,0 +1,6 @@
+package dataawsccbedrockagent
+
+
+type DataAwsccBedrockAgentPromptOverrideConfigurationPromptConfigurationsInferenceConfiguration struct {
+}
+

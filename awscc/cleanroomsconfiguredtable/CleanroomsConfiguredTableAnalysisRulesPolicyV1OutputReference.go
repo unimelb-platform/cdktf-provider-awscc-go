@@ -31,8 +31,8 @@ type CleanroomsConfiguredTableAnalysisRulesPolicyV1OutputReference interface {
 	CustomInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *CleanroomsConfiguredTableAnalysisRulesPolicyV1
-	SetInternalValue(val *CleanroomsConfiguredTableAnalysisRulesPolicyV1)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	List() CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference
 	ListInput() interface{}
 	// Experimental.
@@ -168,8 +168,8 @@ func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1OutputReference
 	return returns
 }
 
-func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1OutputReference) InternalValue() *CleanroomsConfiguredTableAnalysisRulesPolicyV1 {
-	var returns *CleanroomsConfiguredTableAnalysisRulesPolicyV1
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1OutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -268,7 +268,7 @@ func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1OutputReference
 	)
 }
 
-func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1OutputReference)SetInternalValue(val *CleanroomsConfiguredTableAnalysisRulesPolicyV1) {
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1OutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

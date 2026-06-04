@@ -31,6 +31,8 @@ type EcsClusterConfigurationOutputReference interface {
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	ManagedStorageConfiguration() EcsClusterConfigurationManagedStorageConfigurationOutputReference
+	ManagedStorageConfigurationInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,7 +66,9 @@ type EcsClusterConfigurationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutExecuteCommandConfiguration(value *EcsClusterConfigurationExecuteCommandConfiguration)
+	PutManagedStorageConfiguration(value *EcsClusterConfigurationManagedStorageConfiguration)
 	ResetExecuteCommandConfiguration()
+	ResetManagedStorageConfiguration()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -145,6 +149,26 @@ func (j *jsiiProxy_EcsClusterConfigurationOutputReference) InternalValue() inter
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EcsClusterConfigurationOutputReference) ManagedStorageConfiguration() EcsClusterConfigurationManagedStorageConfigurationOutputReference {
+	var returns EcsClusterConfigurationManagedStorageConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"managedStorageConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EcsClusterConfigurationOutputReference) ManagedStorageConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"managedStorageConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -450,10 +474,29 @@ func (e *jsiiProxy_EcsClusterConfigurationOutputReference) PutExecuteCommandConf
 	)
 }
 
+func (e *jsiiProxy_EcsClusterConfigurationOutputReference) PutManagedStorageConfiguration(value *EcsClusterConfigurationManagedStorageConfiguration) {
+	if err := e.validatePutManagedStorageConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putManagedStorageConfiguration",
+		[]interface{}{value},
+	)
+}
+
 func (e *jsiiProxy_EcsClusterConfigurationOutputReference) ResetExecuteCommandConfiguration() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetExecuteCommandConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcsClusterConfigurationOutputReference) ResetManagedStorageConfiguration() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetManagedStorageConfiguration",
 		nil, // no parameters
 	)
 }

@@ -1,0 +1,6 @@
+package dataawsccecrrepositorycreationtemplate
+
+
+type DataAwsccEcrRepositoryCreationTemplateEncryptionConfiguration struct {
+}
+

@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawsccsesconfigurationseteventdestination
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference) validateSetInternalValueParameters(val *DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestination) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

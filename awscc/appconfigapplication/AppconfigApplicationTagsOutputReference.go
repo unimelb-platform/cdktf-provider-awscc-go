@@ -67,6 +67,8 @@ type AppconfigApplicationTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (a *jsiiProxy_AppconfigApplicationTagsOutputReference) InterpolationForAttr
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AppconfigApplicationTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppconfigApplicationTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AppconfigApplicationTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

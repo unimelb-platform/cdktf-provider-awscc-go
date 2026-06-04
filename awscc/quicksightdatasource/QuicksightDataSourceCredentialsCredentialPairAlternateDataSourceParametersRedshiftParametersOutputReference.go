@@ -36,6 +36,10 @@ type QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersR
 	Host() *string
 	SetHost(val *string)
 	HostInput() *string
+	IamParameters() QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersIamParametersOutputReference
+	IamParametersInput() interface{}
+	IdentityCenterConfiguration() QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersIdentityCenterConfigurationOutputReference
+	IdentityCenterConfigurationInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	Port() *float64
@@ -73,8 +77,13 @@ type QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersR
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutIamParameters(value *QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersIamParameters)
+	PutIdentityCenterConfiguration(value *QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersIdentityCenterConfiguration)
 	ResetClusterId()
+	ResetDatabase()
 	ResetHost()
+	ResetIamParameters()
+	ResetIdentityCenterConfiguration()
 	ResetPort()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -186,6 +195,46 @@ func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSou
 	_jsii_.Get(
 		j,
 		"hostInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersOutputReference) IamParameters() QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersIamParametersOutputReference {
+	var returns QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersIamParametersOutputReference
+	_jsii_.Get(
+		j,
+		"iamParameters",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersOutputReference) IamParametersInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"iamParametersInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersOutputReference) IdentityCenterConfiguration() QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersIdentityCenterConfigurationOutputReference {
+	var returns QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersIdentityCenterConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"identityCenterConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersOutputReference) IdentityCenterConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"identityCenterConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -554,6 +603,28 @@ func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSou
 	return returns
 }
 
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersOutputReference) PutIamParameters(value *QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersIamParameters) {
+	if err := q.validatePutIamParametersParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		q,
+		"putIamParameters",
+		[]interface{}{value},
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersOutputReference) PutIdentityCenterConfiguration(value *QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersIdentityCenterConfiguration) {
+	if err := q.validatePutIdentityCenterConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		q,
+		"putIdentityCenterConfiguration",
+		[]interface{}{value},
+	)
+}
+
 func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersOutputReference) ResetClusterId() {
 	_jsii_.InvokeVoid(
 		q,
@@ -562,10 +633,34 @@ func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSou
 	)
 }
 
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersOutputReference) ResetDatabase() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDatabase",
+		nil, // no parameters
+	)
+}
+
 func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersOutputReference) ResetHost() {
 	_jsii_.InvokeVoid(
 		q,
 		"resetHost",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersOutputReference) ResetIamParameters() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetIamParameters",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersRedshiftParametersOutputReference) ResetIdentityCenterConfiguration() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetIdentityCenterConfiguration",
 		nil, // no parameters
 	)
 }

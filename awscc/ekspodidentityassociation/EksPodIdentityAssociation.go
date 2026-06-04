@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ekspodidentityassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/eks_pod_identity_association awscc_eks_pod_identity_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/eks_pod_identity_association awscc_eks_pod_identity_association}.
 type EksPodIdentityAssociation interface {
 	cdktf.TerraformResource
 	AssociationArn() *string
@@ -33,6 +33,10 @@ type EksPodIdentityAssociation interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DisableSessionTags() interface{}
+	SetDisableSessionTags(val interface{})
+	DisableSessionTagsInput() interface{}
+	ExternalId() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -69,6 +73,9 @@ type EksPodIdentityAssociation interface {
 	ServiceAccountInput() *string
 	Tags() EksPodIdentityAssociationTagsList
 	TagsInput() interface{}
+	TargetRoleArn() *string
+	SetTargetRoleArn(val *string)
+	TargetRoleArnInput() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -99,21 +106,36 @@ type EksPodIdentityAssociation interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutTags(value interface{})
+	ResetDisableSessionTags()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetTags()
+	ResetTargetRoleArn()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -213,6 +235,36 @@ func (j *jsiiProxy_EksPodIdentityAssociation) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EksPodIdentityAssociation) DisableSessionTags() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"disableSessionTags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EksPodIdentityAssociation) DisableSessionTagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"disableSessionTagsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EksPodIdentityAssociation) ExternalId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalId",
 		&returns,
 	)
 	return returns
@@ -388,6 +440,26 @@ func (j *jsiiProxy_EksPodIdentityAssociation) TagsInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_EksPodIdentityAssociation) TargetRoleArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"targetRoleArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EksPodIdentityAssociation) TargetRoleArnInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"targetRoleArnInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_EksPodIdentityAssociation) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -419,7 +491,7 @@ func (j *jsiiProxy_EksPodIdentityAssociation) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/eks_pod_identity_association awscc_eks_pod_identity_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/eks_pod_identity_association awscc_eks_pod_identity_association} Resource.
 func NewEksPodIdentityAssociation(scope constructs.Construct, id *string, config *EksPodIdentityAssociationConfig) EksPodIdentityAssociation {
 	_init_.Initialize()
 
@@ -437,7 +509,7 @@ func NewEksPodIdentityAssociation(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/eks_pod_identity_association awscc_eks_pod_identity_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/eks_pod_identity_association awscc_eks_pod_identity_association} Resource.
 func NewEksPodIdentityAssociation_Override(e EksPodIdentityAssociation, scope constructs.Construct, id *string, config *EksPodIdentityAssociationConfig) {
 	_init_.Initialize()
 
@@ -485,6 +557,17 @@ func (j *jsiiProxy_EksPodIdentityAssociation)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_EksPodIdentityAssociation)SetDisableSessionTags(val interface{}) {
+	if err := j.validateSetDisableSessionTagsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"disableSessionTags",
 		val,
 	)
 }
@@ -556,6 +639,17 @@ func (j *jsiiProxy_EksPodIdentityAssociation)SetServiceAccount(val *string) {
 	_jsii_.Set(
 		j,
 		"serviceAccount",
+		val,
+	)
+}
+
+func (j *jsiiProxy_EksPodIdentityAssociation)SetTargetRoleArn(val *string) {
+	if err := j.validateSetTargetRoleArnParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"targetRoleArn",
 		val,
 	)
 }
@@ -829,6 +923,19 @@ func (e *jsiiProxy_EksPodIdentityAssociation) GetStringMapAttribute(terraformAtt
 	return returns
 }
 
+func (e *jsiiProxy_EksPodIdentityAssociation) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_EksPodIdentityAssociation) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -856,6 +963,17 @@ func (e *jsiiProxy_EksPodIdentityAssociation) InterpolationForAttribute(terrafor
 	return returns
 }
 
+func (e *jsiiProxy_EksPodIdentityAssociation) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_EksPodIdentityAssociation) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -864,6 +982,17 @@ func (e *jsiiProxy_EksPodIdentityAssociation) MoveTo(moveTarget *string, index i
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_EksPodIdentityAssociation) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -889,6 +1018,14 @@ func (e *jsiiProxy_EksPodIdentityAssociation) PutTags(value interface{}) {
 	)
 }
 
+func (e *jsiiProxy_EksPodIdentityAssociation) ResetDisableSessionTags() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetDisableSessionTags",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EksPodIdentityAssociation) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		e,
@@ -905,12 +1042,46 @@ func (e *jsiiProxy_EksPodIdentityAssociation) ResetTags() {
 	)
 }
 
+func (e *jsiiProxy_EksPodIdentityAssociation) ResetTargetRoleArn() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetTargetRoleArn",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EksPodIdentityAssociation) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_EksPodIdentityAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_EksPodIdentityAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

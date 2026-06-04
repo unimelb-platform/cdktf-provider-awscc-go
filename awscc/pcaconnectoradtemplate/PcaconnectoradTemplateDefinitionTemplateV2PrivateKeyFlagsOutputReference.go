@@ -33,8 +33,8 @@ type PcaconnectoradTemplateDefinitionTemplateV2PrivateKeyFlagsOutputReference in
 	ExportableKeyInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *PcaconnectoradTemplateDefinitionTemplateV2PrivateKeyFlags
-	SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV2PrivateKeyFlags)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	StrongKeyProtectionRequired() interface{}
 	SetStrongKeyProtectionRequired(val interface{})
 	StrongKeyProtectionRequiredInput() interface{}
@@ -70,6 +70,7 @@ type PcaconnectoradTemplateDefinitionTemplateV2PrivateKeyFlagsOutputReference in
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetClientVersion()
 	ResetExportableKey()
 	ResetStrongKeyProtectionRequired()
 	// Produce the Token's value at resolution time.
@@ -167,8 +168,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2PrivateKeyFlagsOutp
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2PrivateKeyFlagsOutputReference) InternalValue() *PcaconnectoradTemplateDefinitionTemplateV2PrivateKeyFlags {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV2PrivateKeyFlags
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2PrivateKeyFlagsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -289,7 +290,7 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2PrivateKeyFlagsOutp
 	)
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2PrivateKeyFlagsOutputReference)SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV2PrivateKeyFlags) {
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2PrivateKeyFlagsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -517,6 +518,14 @@ func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2PrivateKeyFlagsOutp
 	)
 
 	return returns
+}
+
+func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2PrivateKeyFlagsOutputReference) ResetClientVersion() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetClientVersion",
+		nil, // no parameters
+	)
 }
 
 func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2PrivateKeyFlagsOutputReference) ResetExportableKey() {

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscclightsailinstance/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lightsail_instance awscc_lightsail_instance}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lightsail_instance awscc_lightsail_instance}.
 type DataAwsccLightsailInstance interface {
 	cdktf.TerraformDataSource
 	AddOns() DataAwsccLightsailInstanceAddOnsList
@@ -42,6 +42,7 @@ type DataAwsccLightsailInstance interface {
 	IdInput() *string
 	InstanceArn() *string
 	InstanceName() *string
+	Ipv6Addresses() *[]*string
 	IsStaticIp() cdktf.IResolvable
 	KeyPairName() *string
 	// Experimental.
@@ -102,6 +103,10 @@ type DataAwsccLightsailInstance interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -271,6 +276,16 @@ func (j *jsiiProxy_DataAwsccLightsailInstance) InstanceName() *string {
 	_jsii_.Get(
 		j,
 		"instanceName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccLightsailInstance) Ipv6Addresses() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"ipv6Addresses",
 		&returns,
 	)
 	return returns
@@ -477,7 +492,7 @@ func (j *jsiiProxy_DataAwsccLightsailInstance) UserName() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lightsail_instance awscc_lightsail_instance} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lightsail_instance awscc_lightsail_instance} Data Source.
 func NewDataAwsccLightsailInstance(scope constructs.Construct, id *string, config *DataAwsccLightsailInstanceConfig) DataAwsccLightsailInstance {
 	_init_.Initialize()
 
@@ -495,7 +510,7 @@ func NewDataAwsccLightsailInstance(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lightsail_instance awscc_lightsail_instance} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lightsail_instance awscc_lightsail_instance} Data Source.
 func NewDataAwsccLightsailInstance_Override(d DataAwsccLightsailInstance, scope constructs.Construct, id *string, config *DataAwsccLightsailInstanceConfig) {
 	_init_.Initialize()
 
@@ -862,6 +877,32 @@ func (d *jsiiProxy_DataAwsccLightsailInstance) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLightsailInstance) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLightsailInstance) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -44,6 +44,18 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) validate
 	return nil
 }
 
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) validatePutConfigParametersParameters(value interface{}) error {
+	return nil
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) validatePutEndpointParameters(value *RedshiftserverlessWorkgroupWorkgroupEndpoint) error {
+	return nil
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) validatePutPricePerformanceTargetParameters(value *RedshiftserverlessWorkgroupWorkgroupPricePerformanceTarget) error {
+	return nil
+}
+
 func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }
@@ -56,7 +68,7 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) validate
 	return nil
 }
 
-func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) validateSetInternalValueParameters(val *RedshiftserverlessWorkgroupWorkgroup) error {
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

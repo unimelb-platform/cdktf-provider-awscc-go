@@ -36,7 +36,7 @@ type Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponent
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	RateIncreaseCriteria() Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateRateIncreaseCriteriaOutputReference
-	RateIncreaseCriteriaInput() *Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateRateIncreaseCriteria
+	RateIncreaseCriteriaInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -70,6 +70,9 @@ type Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponent
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutRateIncreaseCriteria(value *Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateRateIncreaseCriteria)
+	ResetBaseRatePerMinute()
+	ResetIncrementFactor()
+	ResetRateIncreaseCriteria()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -185,8 +188,8 @@ func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationJobExecutionsRollout
 	return returns
 }
 
-func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateOutputReference) RateIncreaseCriteriaInput() *Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateRateIncreaseCriteria {
-	var returns *Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateRateIncreaseCriteria
+func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateOutputReference) RateIncreaseCriteriaInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"rateIncreaseCriteriaInput",
@@ -514,6 +517,30 @@ func (g *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationJobExecutionsRollout
 		g,
 		"putRateIncreaseCriteria",
 		[]interface{}{value},
+	)
+}
+
+func (g *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateOutputReference) ResetBaseRatePerMinute() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetBaseRatePerMinute",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateOutputReference) ResetIncrementFactor() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetIncrementFactor",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateOutputReference) ResetRateIncreaseCriteria() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetRateIncreaseCriteria",
+		nil, // no parameters
 	)
 }
 

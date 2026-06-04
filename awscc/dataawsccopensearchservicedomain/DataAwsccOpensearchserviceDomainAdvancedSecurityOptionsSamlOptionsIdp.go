@@ -1,0 +1,6 @@
+package dataawsccopensearchservicedomain
+
+
+type DataAwsccOpensearchserviceDomainAdvancedSecurityOptionsSamlOptionsIdp struct {
+}
+

@@ -4,6 +4,10 @@ package dataawsccconnectquickconnect
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccConnectQuickConnectTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccConnectQuickConnectTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

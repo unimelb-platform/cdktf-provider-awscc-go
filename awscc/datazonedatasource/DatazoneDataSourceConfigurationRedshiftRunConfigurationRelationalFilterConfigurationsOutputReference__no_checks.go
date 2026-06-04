@@ -64,7 +64,7 @@ func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRelati
 	return nil
 }
 
-func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConfigurationsOutputReference) validateSetInternalValueParameters(val *DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConfigurations) error {
+func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConfigurationsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

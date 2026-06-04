@@ -52,6 +52,10 @@ func (m *jsiiProxy_MediaconnectFlowSourceOutputReference) validatePutGatewayBrid
 	return nil
 }
 
+func (m *jsiiProxy_MediaconnectFlowSourceOutputReference) validatePutMediaStreamSourceConfigurationsParameters(value interface{}) error {
+	return nil
+}
+
 func (m *jsiiProxy_MediaconnectFlowSourceOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }
@@ -85,6 +89,10 @@ func (j *jsiiProxy_MediaconnectFlowSourceOutputReference) validateSetMaxBitrateP
 }
 
 func (j *jsiiProxy_MediaconnectFlowSourceOutputReference) validateSetMaxLatencyParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_MediaconnectFlowSourceOutputReference) validateSetMaxSyncBufferParameters(val *float64) error {
 	return nil
 }
 

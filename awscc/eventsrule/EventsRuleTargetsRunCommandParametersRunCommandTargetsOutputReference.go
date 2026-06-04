@@ -27,8 +27,8 @@ type EventsRuleTargetsRunCommandParametersRunCommandTargetsOutputReference inter
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *EventsRuleTargetsRunCommandParametersRunCommandTargets
-	SetInternalValue(val *EventsRuleTargetsRunCommandParametersRunCommandTargets)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Key() *string
 	SetKey(val *string)
 	KeyInput() *string
@@ -67,6 +67,8 @@ type EventsRuleTargetsRunCommandParametersRunCommandTargetsOutputReference inter
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValues()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_EventsRuleTargetsRunCommandParametersRunCommandTargetsOutputR
 	return returns
 }
 
-func (j *jsiiProxy_EventsRuleTargetsRunCommandParametersRunCommandTargetsOutputReference) InternalValue() *EventsRuleTargetsRunCommandParametersRunCommandTargets {
-	var returns *EventsRuleTargetsRunCommandParametersRunCommandTargets
+func (j *jsiiProxy_EventsRuleTargetsRunCommandParametersRunCommandTargetsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -242,7 +244,7 @@ func (j *jsiiProxy_EventsRuleTargetsRunCommandParametersRunCommandTargetsOutputR
 	)
 }
 
-func (j *jsiiProxy_EventsRuleTargetsRunCommandParametersRunCommandTargetsOutputReference)SetInternalValue(val *EventsRuleTargetsRunCommandParametersRunCommandTargets) {
+func (j *jsiiProxy_EventsRuleTargetsRunCommandParametersRunCommandTargetsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (e *jsiiProxy_EventsRuleTargetsRunCommandParametersRunCommandTargetsOutputR
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EventsRuleTargetsRunCommandParametersRunCommandTargetsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EventsRuleTargetsRunCommandParametersRunCommandTargetsOutputReference) ResetValues() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetValues",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EventsRuleTargetsRunCommandParametersRunCommandTargetsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

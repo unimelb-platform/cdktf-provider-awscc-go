@@ -1,0 +1,6 @@
+package dataawsccdatazoneenvironmentblueprintconfiguration
+
+
+type DataAwsccDatazoneEnvironmentBlueprintConfigurationProvisioningConfigurations struct {
+}
+

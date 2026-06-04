@@ -71,6 +71,8 @@ type QuicksightDataSourceCredentialsCredentialPairOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAlternateDataSourceParameters(value interface{})
 	ResetAlternateDataSourceParameters()
+	ResetPassword()
+	ResetUsername()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -522,6 +524,22 @@ func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairOutputReference)
 	_jsii_.InvokeVoid(
 		q,
 		"resetAlternateDataSourceParameters",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairOutputReference) ResetPassword() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetPassword",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairOutputReference) ResetUsername() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetUsername",
 		nil, // no parameters
 	)
 }

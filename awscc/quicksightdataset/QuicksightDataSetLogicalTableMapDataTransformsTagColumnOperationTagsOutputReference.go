@@ -32,8 +32,8 @@ type QuicksightDataSetLogicalTableMapDataTransformsTagColumnOperationTagsOutputR
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *QuicksightDataSetLogicalTableMapDataTransformsTagColumnOperationTags
-	SetInternalValue(val *QuicksightDataSetLogicalTableMapDataTransformsTagColumnOperationTags)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -164,8 +164,8 @@ func (j *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsTagColumnOperat
 	return returns
 }
 
-func (j *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsTagColumnOperationTagsOutputReference) InternalValue() *QuicksightDataSetLogicalTableMapDataTransformsTagColumnOperationTags {
-	var returns *QuicksightDataSetLogicalTableMapDataTransformsTagColumnOperationTags
+func (j *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsTagColumnOperationTagsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -255,7 +255,7 @@ func (j *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsTagColumnOperat
 	)
 }
 
-func (j *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsTagColumnOperationTagsOutputReference)SetInternalValue(val *QuicksightDataSetLogicalTableMapDataTransformsTagColumnOperationTags) {
+func (j *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsTagColumnOperationTagsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

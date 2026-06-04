@@ -64,6 +64,7 @@ type IotTopicRuleTopicRulePayloadErrorActionDynamoDBv2PutItemOutputReference int
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetTableName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionDynamoDBv2PutItemOutpu
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionDynamoDBv2PutItemOutputReference) ResetTableName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTableName",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionDynamoDBv2PutItemOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

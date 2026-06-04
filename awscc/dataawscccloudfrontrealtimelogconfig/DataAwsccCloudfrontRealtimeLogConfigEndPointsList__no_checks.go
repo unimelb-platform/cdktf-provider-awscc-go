@@ -4,6 +4,10 @@ package dataawscccloudfrontrealtimelogconfig
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccCloudfrontRealtimeLogConfigEndPointsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccCloudfrontRealtimeLogConfigEndPointsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -56,7 +56,15 @@ func (o *jsiiProxy_OmicsWorkflow) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
+func (o *jsiiProxy_OmicsWorkflow) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (o *jsiiProxy_OmicsWorkflow) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (o *jsiiProxy_OmicsWorkflow) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -125,6 +133,10 @@ func (j *jsiiProxy_OmicsWorkflow) validateSetProvisionersParameters(val *[]inter
 }
 
 func (j *jsiiProxy_OmicsWorkflow) validateSetStorageCapacityParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_OmicsWorkflow) validateSetStorageTypeParameters(val *string) error {
 	return nil
 }
 

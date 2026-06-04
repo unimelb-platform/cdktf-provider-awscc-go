@@ -60,7 +60,7 @@ func (j *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomAct
 	return nil
 }
 
-func (j *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinitionOutputReference) validateSetInternalValueParameters(val *NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinition) error {
+func (j *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinitionOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

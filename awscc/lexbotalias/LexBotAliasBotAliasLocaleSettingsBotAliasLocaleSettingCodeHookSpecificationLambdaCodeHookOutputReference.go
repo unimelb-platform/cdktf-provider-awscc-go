@@ -30,8 +30,8 @@ type LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecification
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHook
-	SetInternalValue(val *LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHook)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	LambdaArn() *string
 	SetLambdaArn(val *string)
 	LambdaArnInput() *string
@@ -67,6 +67,8 @@ type LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecification
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCodeHookInterfaceVersion()
+	ResetLambdaArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -142,8 +144,8 @@ func (j *jsiiProxy_LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHoo
 	return returns
 }
 
-func (j *jsiiProxy_LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHookOutputReference) InternalValue() *LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHook {
-	var returns *LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHook
+func (j *jsiiProxy_LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHookOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -253,7 +255,7 @@ func (j *jsiiProxy_LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHoo
 	)
 }
 
-func (j *jsiiProxy_LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHookOutputReference)SetInternalValue(val *LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHook) {
+func (j *jsiiProxy_LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHookOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (l *jsiiProxy_LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHoo
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHookOutputReference) ResetCodeHookInterfaceVersion() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetCodeHookInterfaceVersion",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHookOutputReference) ResetLambdaArn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetLambdaArn",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHookOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

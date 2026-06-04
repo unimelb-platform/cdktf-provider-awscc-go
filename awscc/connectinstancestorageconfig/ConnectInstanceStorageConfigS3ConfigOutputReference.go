@@ -70,6 +70,8 @@ type ConnectInstanceStorageConfigS3ConfigOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutEncryptionConfig(value *ConnectInstanceStorageConfigS3ConfigEncryptionConfig)
+	ResetBucketName()
+	ResetBucketPrefix()
 	ResetEncryptionConfig()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -515,6 +517,22 @@ func (c *jsiiProxy_ConnectInstanceStorageConfigS3ConfigOutputReference) PutEncry
 		c,
 		"putEncryptionConfig",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_ConnectInstanceStorageConfigS3ConfigOutputReference) ResetBucketName() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetBucketName",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConnectInstanceStorageConfigS3ConfigOutputReference) ResetBucketPrefix() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetBucketPrefix",
+		nil, // no parameters
 	)
 }
 

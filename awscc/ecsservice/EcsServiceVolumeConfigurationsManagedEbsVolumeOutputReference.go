@@ -63,6 +63,9 @@ type EcsServiceVolumeConfigurationsManagedEbsVolumeOutputReference interface {
 	Throughput() *float64
 	SetThroughput(val *float64)
 	ThroughputInput() *float64
+	VolumeInitializationRate() *float64
+	SetVolumeInitializationRate(val *float64)
+	VolumeInitializationRateInput() *float64
 	VolumeType() *string
 	SetVolumeType(val *string)
 	VolumeTypeInput() *string
@@ -95,10 +98,12 @@ type EcsServiceVolumeConfigurationsManagedEbsVolumeOutputReference interface {
 	ResetFilesystemType()
 	ResetIops()
 	ResetKmsKeyId()
+	ResetRoleArn()
 	ResetSizeInGiB()
 	ResetSnapshotId()
 	ResetTagSpecifications()
 	ResetThroughput()
+	ResetVolumeInitializationRate()
 	ResetVolumeType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -365,6 +370,26 @@ func (j *jsiiProxy_EcsServiceVolumeConfigurationsManagedEbsVolumeOutputReference
 	return returns
 }
 
+func (j *jsiiProxy_EcsServiceVolumeConfigurationsManagedEbsVolumeOutputReference) VolumeInitializationRate() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"volumeInitializationRate",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EcsServiceVolumeConfigurationsManagedEbsVolumeOutputReference) VolumeInitializationRateInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"volumeInitializationRateInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_EcsServiceVolumeConfigurationsManagedEbsVolumeOutputReference) VolumeType() *string {
 	var returns *string
 	_jsii_.Get(
@@ -552,6 +577,17 @@ func (j *jsiiProxy_EcsServiceVolumeConfigurationsManagedEbsVolumeOutputReference
 	_jsii_.Set(
 		j,
 		"throughput",
+		val,
+	)
+}
+
+func (j *jsiiProxy_EcsServiceVolumeConfigurationsManagedEbsVolumeOutputReference)SetVolumeInitializationRate(val *float64) {
+	if err := j.validateSetVolumeInitializationRateParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"volumeInitializationRate",
 		val,
 	)
 }
@@ -796,6 +832,14 @@ func (e *jsiiProxy_EcsServiceVolumeConfigurationsManagedEbsVolumeOutputReference
 	)
 }
 
+func (e *jsiiProxy_EcsServiceVolumeConfigurationsManagedEbsVolumeOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EcsServiceVolumeConfigurationsManagedEbsVolumeOutputReference) ResetSizeInGiB() {
 	_jsii_.InvokeVoid(
 		e,
@@ -824,6 +868,14 @@ func (e *jsiiProxy_EcsServiceVolumeConfigurationsManagedEbsVolumeOutputReference
 	_jsii_.InvokeVoid(
 		e,
 		"resetThroughput",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcsServiceVolumeConfigurationsManagedEbsVolumeOutputReference) ResetVolumeInitializationRate() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetVolumeInitializationRate",
 		nil, // no parameters
 	)
 }

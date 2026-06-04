@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/rdsdbinstance/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rds_db_instance awscc_rds_db_instance}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_db_instance awscc_rds_db_instance}.
 type RdsDbInstance interface {
 	cdktf.TerraformResource
 	AllocatedStorage() *string
@@ -18,11 +18,20 @@ type RdsDbInstance interface {
 	AllowMajorVersionUpgrade() interface{}
 	SetAllowMajorVersionUpgrade(val interface{})
 	AllowMajorVersionUpgradeInput() interface{}
+	ApplyImmediately() interface{}
+	SetApplyImmediately(val interface{})
+	ApplyImmediatelyInput() interface{}
 	AssociatedRoles() RdsDbInstanceAssociatedRolesList
 	AssociatedRolesInput() interface{}
+	AutomaticBackupReplicationKmsKeyId() *string
+	SetAutomaticBackupReplicationKmsKeyId(val *string)
+	AutomaticBackupReplicationKmsKeyIdInput() *string
 	AutomaticBackupReplicationRegion() *string
 	SetAutomaticBackupReplicationRegion(val *string)
 	AutomaticBackupReplicationRegionInput() *string
+	AutomaticBackupReplicationRetentionPeriod() *float64
+	SetAutomaticBackupReplicationRetentionPeriod(val *float64)
+	AutomaticBackupReplicationRetentionPeriodInput() *float64
 	AutoMinorVersionUpgrade() interface{}
 	SetAutoMinorVersionUpgrade(val interface{})
 	AutoMinorVersionUpgradeInput() interface{}
@@ -32,13 +41,15 @@ type RdsDbInstance interface {
 	BackupRetentionPeriod() *float64
 	SetBackupRetentionPeriod(val *float64)
 	BackupRetentionPeriodInput() *float64
+	BackupTarget() *string
+	SetBackupTarget(val *string)
+	BackupTargetInput() *string
 	CaCertificateIdentifier() *string
 	SetCaCertificateIdentifier(val *string)
 	CaCertificateIdentifierInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	CertificateDetails() RdsDbInstanceCertificateDetailsOutputReference
-	CertificateDetailsInput() interface{}
 	CertificateRotationRestart() interface{}
 	SetCertificateRotationRestart(val interface{})
 	CertificateRotationRestartInput() interface{}
@@ -61,6 +72,9 @@ type RdsDbInstance interface {
 	CustomIamInstanceProfile() *string
 	SetCustomIamInstanceProfile(val *string)
 	CustomIamInstanceProfileInput() *string
+	DatabaseInsightsMode() *string
+	SetDatabaseInsightsMode(val *string)
+	DatabaseInsightsModeInput() *string
 	DbClusterIdentifier() *string
 	SetDbClusterIdentifier(val *string)
 	DbClusterIdentifierInput() *string
@@ -91,6 +105,8 @@ type RdsDbInstance interface {
 	SetDbSubnetGroupName(val *string)
 	DbSubnetGroupNameInput() *string
 	DbSystemId() *string
+	SetDbSystemId(val *string)
+	DbSystemIdInput() *string
 	DedicatedLogVolume() interface{}
 	SetDedicatedLogVolume(val interface{})
 	DedicatedLogVolumeInput() interface{}
@@ -132,10 +148,12 @@ type RdsDbInstance interface {
 	SetEnablePerformanceInsights(val interface{})
 	EnablePerformanceInsightsInput() interface{}
 	Endpoint() RdsDbInstanceEndpointOutputReference
-	EndpointInput() interface{}
 	Engine() *string
 	SetEngine(val *string)
 	EngineInput() *string
+	EngineLifecycleSupport() *string
+	SetEngineLifecycleSupport(val *string)
+	EngineLifecycleSupportInput() *string
 	EngineVersion() *string
 	SetEngineVersion(val *string)
 	EngineVersionInput() *string
@@ -308,34 +326,46 @@ type RdsDbInstance interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutAssociatedRoles(value interface{})
-	PutCertificateDetails(value *RdsDbInstanceCertificateDetails)
-	PutEndpoint(value *RdsDbInstanceEndpoint)
 	PutMasterUserSecret(value *RdsDbInstanceMasterUserSecret)
 	PutProcessorFeatures(value interface{})
 	PutTags(value interface{})
 	ResetAllocatedStorage()
 	ResetAllowMajorVersionUpgrade()
+	ResetApplyImmediately()
 	ResetAssociatedRoles()
+	ResetAutomaticBackupReplicationKmsKeyId()
 	ResetAutomaticBackupReplicationRegion()
+	ResetAutomaticBackupReplicationRetentionPeriod()
 	ResetAutoMinorVersionUpgrade()
 	ResetAvailabilityZone()
 	ResetBackupRetentionPeriod()
+	ResetBackupTarget()
 	ResetCaCertificateIdentifier()
-	ResetCertificateDetails()
 	ResetCertificateRotationRestart()
 	ResetCharacterSetName()
 	ResetCopyTagsToSnapshot()
 	ResetCustomIamInstanceProfile()
+	ResetDatabaseInsightsMode()
 	ResetDbClusterIdentifier()
 	ResetDbClusterSnapshotIdentifier()
 	ResetDbInstanceClass()
@@ -345,6 +375,7 @@ type RdsDbInstance interface {
 	ResetDbSecurityGroups()
 	ResetDbSnapshotIdentifier()
 	ResetDbSubnetGroupName()
+	ResetDbSystemId()
 	ResetDedicatedLogVolume()
 	ResetDeleteAutomatedBackups()
 	ResetDeletionProtection()
@@ -357,8 +388,8 @@ type RdsDbInstance interface {
 	ResetEnableCloudwatchLogsExports()
 	ResetEnableIamDatabaseAuthentication()
 	ResetEnablePerformanceInsights()
-	ResetEndpoint()
 	ResetEngine()
+	ResetEngineLifecycleSupport()
 	ResetEngineVersion()
 	ResetIops()
 	ResetKmsKeyId()
@@ -403,6 +434,9 @@ type RdsDbInstance interface {
 	ResetUseLatestRestorableTime()
 	ResetVpcSecurityGroups()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -457,6 +491,26 @@ func (j *jsiiProxy_RdsDbInstance) AllowMajorVersionUpgradeInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RdsDbInstance) ApplyImmediately() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"applyImmediately",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsDbInstance) ApplyImmediatelyInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"applyImmediatelyInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RdsDbInstance) AssociatedRoles() RdsDbInstanceAssociatedRolesList {
 	var returns RdsDbInstanceAssociatedRolesList
 	_jsii_.Get(
@@ -477,6 +531,26 @@ func (j *jsiiProxy_RdsDbInstance) AssociatedRolesInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RdsDbInstance) AutomaticBackupReplicationKmsKeyId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"automaticBackupReplicationKmsKeyId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsDbInstance) AutomaticBackupReplicationKmsKeyIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"automaticBackupReplicationKmsKeyIdInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RdsDbInstance) AutomaticBackupReplicationRegion() *string {
 	var returns *string
 	_jsii_.Get(
@@ -492,6 +566,26 @@ func (j *jsiiProxy_RdsDbInstance) AutomaticBackupReplicationRegionInput() *strin
 	_jsii_.Get(
 		j,
 		"automaticBackupReplicationRegionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsDbInstance) AutomaticBackupReplicationRetentionPeriod() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"automaticBackupReplicationRetentionPeriod",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsDbInstance) AutomaticBackupReplicationRetentionPeriodInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"automaticBackupReplicationRetentionPeriodInput",
 		&returns,
 	)
 	return returns
@@ -557,6 +651,26 @@ func (j *jsiiProxy_RdsDbInstance) BackupRetentionPeriodInput() *float64 {
 	return returns
 }
 
+func (j *jsiiProxy_RdsDbInstance) BackupTarget() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"backupTarget",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsDbInstance) BackupTargetInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"backupTargetInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RdsDbInstance) CaCertificateIdentifier() *string {
 	var returns *string
 	_jsii_.Get(
@@ -592,16 +706,6 @@ func (j *jsiiProxy_RdsDbInstance) CertificateDetails() RdsDbInstanceCertificateD
 	_jsii_.Get(
 		j,
 		"certificateDetails",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_RdsDbInstance) CertificateDetailsInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"certificateDetailsInput",
 		&returns,
 	)
 	return returns
@@ -712,6 +816,26 @@ func (j *jsiiProxy_RdsDbInstance) CustomIamInstanceProfileInput() *string {
 	_jsii_.Get(
 		j,
 		"customIamInstanceProfileInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsDbInstance) DatabaseInsightsMode() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseInsightsMode",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsDbInstance) DatabaseInsightsModeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseInsightsModeInput",
 		&returns,
 	)
 	return returns
@@ -922,6 +1046,16 @@ func (j *jsiiProxy_RdsDbInstance) DbSystemId() *string {
 	_jsii_.Get(
 		j,
 		"dbSystemId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsDbInstance) DbSystemIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"dbSystemIdInput",
 		&returns,
 	)
 	return returns
@@ -1187,16 +1321,6 @@ func (j *jsiiProxy_RdsDbInstance) Endpoint() RdsDbInstanceEndpointOutputReferenc
 	return returns
 }
 
-func (j *jsiiProxy_RdsDbInstance) EndpointInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"endpointInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_RdsDbInstance) Engine() *string {
 	var returns *string
 	_jsii_.Get(
@@ -1212,6 +1336,26 @@ func (j *jsiiProxy_RdsDbInstance) EngineInput() *string {
 	_jsii_.Get(
 		j,
 		"engineInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsDbInstance) EngineLifecycleSupport() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"engineLifecycleSupport",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsDbInstance) EngineLifecycleSupportInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"engineLifecycleSupportInput",
 		&returns,
 	)
 	return returns
@@ -2138,7 +2282,7 @@ func (j *jsiiProxy_RdsDbInstance) VpcSecurityGroupsInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rds_db_instance awscc_rds_db_instance} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_db_instance awscc_rds_db_instance} Resource.
 func NewRdsDbInstance(scope constructs.Construct, id *string, config *RdsDbInstanceConfig) RdsDbInstance {
 	_init_.Initialize()
 
@@ -2156,7 +2300,7 @@ func NewRdsDbInstance(scope constructs.Construct, id *string, config *RdsDbInsta
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rds_db_instance awscc_rds_db_instance} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_db_instance awscc_rds_db_instance} Resource.
 func NewRdsDbInstance_Override(r RdsDbInstance, scope constructs.Construct, id *string, config *RdsDbInstanceConfig) {
 	_init_.Initialize()
 
@@ -2189,6 +2333,28 @@ func (j *jsiiProxy_RdsDbInstance)SetAllowMajorVersionUpgrade(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_RdsDbInstance)SetApplyImmediately(val interface{}) {
+	if err := j.validateSetApplyImmediatelyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"applyImmediately",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RdsDbInstance)SetAutomaticBackupReplicationKmsKeyId(val *string) {
+	if err := j.validateSetAutomaticBackupReplicationKmsKeyIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"automaticBackupReplicationKmsKeyId",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RdsDbInstance)SetAutomaticBackupReplicationRegion(val *string) {
 	if err := j.validateSetAutomaticBackupReplicationRegionParameters(val); err != nil {
 		panic(err)
@@ -2196,6 +2362,17 @@ func (j *jsiiProxy_RdsDbInstance)SetAutomaticBackupReplicationRegion(val *string
 	_jsii_.Set(
 		j,
 		"automaticBackupReplicationRegion",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RdsDbInstance)SetAutomaticBackupReplicationRetentionPeriod(val *float64) {
+	if err := j.validateSetAutomaticBackupReplicationRetentionPeriodParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"automaticBackupReplicationRetentionPeriod",
 		val,
 	)
 }
@@ -2229,6 +2406,17 @@ func (j *jsiiProxy_RdsDbInstance)SetBackupRetentionPeriod(val *float64) {
 	_jsii_.Set(
 		j,
 		"backupRetentionPeriod",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RdsDbInstance)SetBackupTarget(val *string) {
+	if err := j.validateSetBackupTargetParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"backupTarget",
 		val,
 	)
 }
@@ -2306,6 +2494,17 @@ func (j *jsiiProxy_RdsDbInstance)SetCustomIamInstanceProfile(val *string) {
 	_jsii_.Set(
 		j,
 		"customIamInstanceProfile",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RdsDbInstance)SetDatabaseInsightsMode(val *string) {
+	if err := j.validateSetDatabaseInsightsModeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"databaseInsightsMode",
 		val,
 	)
 }
@@ -2405,6 +2604,17 @@ func (j *jsiiProxy_RdsDbInstance)SetDbSubnetGroupName(val *string) {
 	_jsii_.Set(
 		j,
 		"dbSubnetGroupName",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RdsDbInstance)SetDbSystemId(val *string) {
+	if err := j.validateSetDbSystemIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"dbSystemId",
 		val,
 	)
 }
@@ -2556,6 +2766,17 @@ func (j *jsiiProxy_RdsDbInstance)SetEngine(val *string) {
 	_jsii_.Set(
 		j,
 		"engine",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RdsDbInstance)SetEngineLifecycleSupport(val *string) {
+	if err := j.validateSetEngineLifecycleSupportParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"engineLifecycleSupport",
 		val,
 	)
 }
@@ -3274,6 +3495,19 @@ func (r *jsiiProxy_RdsDbInstance) GetStringMapAttribute(terraformAttribute *stri
 	return returns
 }
 
+func (r *jsiiProxy_RdsDbInstance) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (r *jsiiProxy_RdsDbInstance) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -3301,6 +3535,17 @@ func (r *jsiiProxy_RdsDbInstance) InterpolationForAttribute(terraformAttribute *
 	return returns
 }
 
+func (r *jsiiProxy_RdsDbInstance) MoveFromId(id *string) {
+	if err := r.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_RdsDbInstance) MoveTo(moveTarget *string, index interface{}) {
 	if err := r.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -3309,6 +3554,17 @@ func (r *jsiiProxy_RdsDbInstance) MoveTo(moveTarget *string, index interface{}) 
 		r,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (r *jsiiProxy_RdsDbInstance) MoveToId(id *string) {
+	if err := r.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -3330,28 +3586,6 @@ func (r *jsiiProxy_RdsDbInstance) PutAssociatedRoles(value interface{}) {
 	_jsii_.InvokeVoid(
 		r,
 		"putAssociatedRoles",
-		[]interface{}{value},
-	)
-}
-
-func (r *jsiiProxy_RdsDbInstance) PutCertificateDetails(value *RdsDbInstanceCertificateDetails) {
-	if err := r.validatePutCertificateDetailsParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		r,
-		"putCertificateDetails",
-		[]interface{}{value},
-	)
-}
-
-func (r *jsiiProxy_RdsDbInstance) PutEndpoint(value *RdsDbInstanceEndpoint) {
-	if err := r.validatePutEndpointParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		r,
-		"putEndpoint",
 		[]interface{}{value},
 	)
 }
@@ -3405,6 +3639,14 @@ func (r *jsiiProxy_RdsDbInstance) ResetAllowMajorVersionUpgrade() {
 	)
 }
 
+func (r *jsiiProxy_RdsDbInstance) ResetApplyImmediately() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetApplyImmediately",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_RdsDbInstance) ResetAssociatedRoles() {
 	_jsii_.InvokeVoid(
 		r,
@@ -3413,10 +3655,26 @@ func (r *jsiiProxy_RdsDbInstance) ResetAssociatedRoles() {
 	)
 }
 
+func (r *jsiiProxy_RdsDbInstance) ResetAutomaticBackupReplicationKmsKeyId() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetAutomaticBackupReplicationKmsKeyId",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_RdsDbInstance) ResetAutomaticBackupReplicationRegion() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetAutomaticBackupReplicationRegion",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RdsDbInstance) ResetAutomaticBackupReplicationRetentionPeriod() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetAutomaticBackupReplicationRetentionPeriod",
 		nil, // no parameters
 	)
 }
@@ -3445,18 +3703,18 @@ func (r *jsiiProxy_RdsDbInstance) ResetBackupRetentionPeriod() {
 	)
 }
 
-func (r *jsiiProxy_RdsDbInstance) ResetCaCertificateIdentifier() {
+func (r *jsiiProxy_RdsDbInstance) ResetBackupTarget() {
 	_jsii_.InvokeVoid(
 		r,
-		"resetCaCertificateIdentifier",
+		"resetBackupTarget",
 		nil, // no parameters
 	)
 }
 
-func (r *jsiiProxy_RdsDbInstance) ResetCertificateDetails() {
+func (r *jsiiProxy_RdsDbInstance) ResetCaCertificateIdentifier() {
 	_jsii_.InvokeVoid(
 		r,
-		"resetCertificateDetails",
+		"resetCaCertificateIdentifier",
 		nil, // no parameters
 	)
 }
@@ -3489,6 +3747,14 @@ func (r *jsiiProxy_RdsDbInstance) ResetCustomIamInstanceProfile() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetCustomIamInstanceProfile",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RdsDbInstance) ResetDatabaseInsightsMode() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetDatabaseInsightsMode",
 		nil, // no parameters
 	)
 }
@@ -3561,6 +3827,14 @@ func (r *jsiiProxy_RdsDbInstance) ResetDbSubnetGroupName() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetDbSubnetGroupName",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RdsDbInstance) ResetDbSystemId() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetDbSystemId",
 		nil, // no parameters
 	)
 }
@@ -3661,18 +3935,18 @@ func (r *jsiiProxy_RdsDbInstance) ResetEnablePerformanceInsights() {
 	)
 }
 
-func (r *jsiiProxy_RdsDbInstance) ResetEndpoint() {
-	_jsii_.InvokeVoid(
-		r,
-		"resetEndpoint",
-		nil, // no parameters
-	)
-}
-
 func (r *jsiiProxy_RdsDbInstance) ResetEngine() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetEngine",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RdsDbInstance) ResetEngineLifecycleSupport() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetEngineLifecycleSupport",
 		nil, // no parameters
 	)
 }
@@ -4011,6 +4285,32 @@ func (r *jsiiProxy_RdsDbInstance) SynthesizeAttributes() *map[string]interface{}
 	_jsii_.Invoke(
 		r,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RdsDbInstance) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		r,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RdsDbInstance) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

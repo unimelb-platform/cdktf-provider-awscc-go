@@ -2,9 +2,17 @@ package ecstaskdefinition
 
 
 type EcsTaskDefinitionTags struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ecs_task_definition#key EcsTaskDefinition#key}.
+	// One part of a key-value pair that make up a tag.
+	//
+	// A ``key`` is a general label that acts like a category for more specific tag values.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ecs_task_definition#key EcsTaskDefinition#key}
 	Key *string `field:"optional" json:"key" yaml:"key"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ecs_task_definition#value EcsTaskDefinition#value}.
+	// The optional part of a key-value pair that make up a tag.
+	//
+	// A ``value`` acts as a descriptor within a tag category (key).
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ecs_task_definition#value EcsTaskDefinition#value}
 	Value *string `field:"optional" json:"value" yaml:"value"`
 }
 

@@ -35,7 +35,7 @@ type SagemakerFeatureGroupOfflineStoreConfigOutputReference interface {
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	S3StorageConfig() SagemakerFeatureGroupOfflineStoreConfigS3StorageConfigOutputReference
-	S3StorageConfigInput() *SagemakerFeatureGroupOfflineStoreConfigS3StorageConfig
+	S3StorageConfigInput() interface{}
 	TableFormat() *string
 	SetTableFormat(val *string)
 	TableFormatInput() *string
@@ -75,6 +75,7 @@ type SagemakerFeatureGroupOfflineStoreConfigOutputReference interface {
 	PutS3StorageConfig(value *SagemakerFeatureGroupOfflineStoreConfigS3StorageConfig)
 	ResetDataCatalogConfig()
 	ResetDisableGlueTableCreation()
+	ResetS3StorageConfig()
 	ResetTableFormat()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -191,8 +192,8 @@ func (j *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigOutputReference) S3Sto
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigOutputReference) S3StorageConfigInput() *SagemakerFeatureGroupOfflineStoreConfigS3StorageConfig {
-	var returns *SagemakerFeatureGroupOfflineStoreConfigS3StorageConfig
+func (j *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigOutputReference) S3StorageConfigInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"s3StorageConfigInput",
@@ -566,6 +567,14 @@ func (s *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigOutputReference) Reset
 	_jsii_.InvokeVoid(
 		s,
 		"resetDisableGlueTableCreation",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigOutputReference) ResetS3StorageConfig() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetS3StorageConfig",
 		nil, // no parameters
 	)
 }

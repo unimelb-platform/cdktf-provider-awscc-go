@@ -48,6 +48,14 @@ func (c *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReferen
 	return nil
 }
 
+func (c *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReference) validatePutFirehoseConfigurationParameters(value *CognitoLogDeliveryConfigurationLogConfigurationsFirehoseConfiguration) error {
+	return nil
+}
+
+func (c *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReference) validatePutS3ConfigurationParameters(value *CognitoLogDeliveryConfigurationLogConfigurationsS3Configuration) error {
+	return nil
+}
+
 func (c *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

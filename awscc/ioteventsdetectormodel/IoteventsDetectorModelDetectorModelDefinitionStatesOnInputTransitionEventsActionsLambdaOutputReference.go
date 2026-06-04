@@ -67,6 +67,7 @@ type IoteventsDetectorModelDetectorModelDefinitionStatesOnInputTransitionEventsA
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutPayload(value *IoteventsDetectorModelDetectorModelDefinitionStatesOnInputTransitionEventsActionsLambdaPayload)
+	ResetFunctionArn()
 	ResetPayload()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -481,6 +482,14 @@ func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputTra
 		i,
 		"putPayload",
 		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputTransitionEventsActionsLambdaOutputReference) ResetFunctionArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetFunctionArn",
+		nil, // no parameters
 	)
 }
 

@@ -1,0 +1,6 @@
+package dataawsccathenaworkgroup
+
+
+type DataAwsccAthenaWorkGroupWorkGroupConfigurationUpdatesManagedQueryResultsConfiguration struct {
+}
+

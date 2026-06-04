@@ -1,0 +1,6 @@
+package dataawsccappsyncgraphqlapi
+
+
+type DataAwsccAppsyncGraphQlApiAdditionalAuthenticationProvidersLambdaAuthorizerConfig struct {
+}
+

@@ -56,11 +56,23 @@ func (a *jsiiProxy_ApplicationautoscalingScalingPolicy) validateInterpolationFor
 	return nil
 }
 
+func (a *jsiiProxy_ApplicationautoscalingScalingPolicy) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_ApplicationautoscalingScalingPolicy) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (a *jsiiProxy_ApplicationautoscalingScalingPolicy) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_ApplicationautoscalingScalingPolicy) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (a *jsiiProxy_ApplicationautoscalingScalingPolicy) validatePutPredictiveScalingPolicyConfigurationParameters(value *ApplicationautoscalingScalingPolicyPredictiveScalingPolicyConfiguration) error {
 	return nil
 }
 

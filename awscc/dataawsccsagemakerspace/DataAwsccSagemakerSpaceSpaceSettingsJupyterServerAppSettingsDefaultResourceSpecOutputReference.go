@@ -30,6 +30,7 @@ type DataAwsccSagemakerSpaceSpaceSettingsJupyterServerAppSettingsDefaultResource
 	InstanceType() *string
 	InternalValue() *DataAwsccSagemakerSpaceSpaceSettingsJupyterServerAppSettingsDefaultResourceSpec
 	SetInternalValue(val *DataAwsccSagemakerSpaceSpaceSettingsJupyterServerAppSettingsDefaultResourceSpec)
+	LifecycleConfigArn() *string
 	SageMakerImageArn() *string
 	SageMakerImageVersionArn() *string
 	// Experimental.
@@ -134,6 +135,16 @@ func (j *jsiiProxy_DataAwsccSagemakerSpaceSpaceSettingsJupyterServerAppSettingsD
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerSpaceSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecOutputReference) LifecycleConfigArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"lifecycleConfigArn",
 		&returns,
 	)
 	return returns

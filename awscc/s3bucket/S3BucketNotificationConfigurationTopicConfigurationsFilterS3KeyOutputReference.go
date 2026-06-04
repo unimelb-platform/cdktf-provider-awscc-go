@@ -27,8 +27,8 @@ type S3BucketNotificationConfigurationTopicConfigurationsFilterS3KeyOutputRefere
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *S3BucketNotificationConfigurationTopicConfigurationsFilterS3Key
-	SetInternalValue(val *S3BucketNotificationConfigurationTopicConfigurationsFilterS3Key)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Rules() S3BucketNotificationConfigurationTopicConfigurationsFilterS3KeyRulesList
 	RulesInput() interface{}
 	// Experimental.
@@ -64,6 +64,7 @@ type S3BucketNotificationConfigurationTopicConfigurationsFilterS3KeyOutputRefere
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutRules(value interface{})
+	ResetRules()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -119,8 +120,8 @@ func (j *jsiiProxy_S3BucketNotificationConfigurationTopicConfigurationsFilterS3K
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketNotificationConfigurationTopicConfigurationsFilterS3KeyOutputReference) InternalValue() *S3BucketNotificationConfigurationTopicConfigurationsFilterS3Key {
-	var returns *S3BucketNotificationConfigurationTopicConfigurationsFilterS3Key
+func (j *jsiiProxy_S3BucketNotificationConfigurationTopicConfigurationsFilterS3KeyOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -219,7 +220,7 @@ func (j *jsiiProxy_S3BucketNotificationConfigurationTopicConfigurationsFilterS3K
 	)
 }
 
-func (j *jsiiProxy_S3BucketNotificationConfigurationTopicConfigurationsFilterS3KeyOutputReference)SetInternalValue(val *S3BucketNotificationConfigurationTopicConfigurationsFilterS3Key) {
+func (j *jsiiProxy_S3BucketNotificationConfigurationTopicConfigurationsFilterS3KeyOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -446,6 +447,14 @@ func (s *jsiiProxy_S3BucketNotificationConfigurationTopicConfigurationsFilterS3K
 		s,
 		"putRules",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_S3BucketNotificationConfigurationTopicConfigurationsFilterS3KeyOutputReference) ResetRules() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetRules",
+		nil, // no parameters
 	)
 }
 

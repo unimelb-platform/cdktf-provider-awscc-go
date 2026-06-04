@@ -68,6 +68,7 @@ type IoteventsDetectorModelDetectorModelDefinitionStatesOnInputTransitionEventsA
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetOffsetInNanos()
+	ResetTimeInSeconds()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputTra
 	_jsii_.InvokeVoid(
 		i,
 		"resetOffsetInNanos",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputTransitionEventsActionsIotSiteWisePropertyValueTimestampOutputReference) ResetTimeInSeconds() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTimeInSeconds",
 		nil, // no parameters
 	)
 }

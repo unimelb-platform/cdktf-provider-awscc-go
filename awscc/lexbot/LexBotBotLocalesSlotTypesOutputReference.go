@@ -81,6 +81,7 @@ type LexBotBotLocalesSlotTypesOutputReference interface {
 	PutValueSelectionSetting(value *LexBotBotLocalesSlotTypesValueSelectionSetting)
 	ResetDescription()
 	ResetExternalSourceSetting()
+	ResetName()
 	ResetParentSlotTypeSignature()
 	ResetSlotTypeValues()
 	ResetValueSelectionSetting()
@@ -636,6 +637,14 @@ func (l *jsiiProxy_LexBotBotLocalesSlotTypesOutputReference) ResetExternalSource
 	_jsii_.InvokeVoid(
 		l,
 		"resetExternalSourceSetting",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesSlotTypesOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetName",
 		nil, // no parameters
 	)
 }

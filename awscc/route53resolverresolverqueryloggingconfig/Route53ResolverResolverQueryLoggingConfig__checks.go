@@ -119,6 +119,14 @@ func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) validateInterpolat
 	return nil
 }
 
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,9 +188,48 @@ func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) validateMoveToPara
 	return nil
 }
 
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfig) validatePutTagsParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*Route53ResolverResolverQueryLoggingConfigTags:
+		value := value.(*[]*Route53ResolverResolverQueryLoggingConfigTags)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*Route53ResolverResolverQueryLoggingConfigTags:
+		value_ := value.([]*Route53ResolverResolverQueryLoggingConfigTags)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Route53ResolverResolverQueryLoggingConfigTags; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil

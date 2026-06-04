@@ -10,6 +10,7 @@ import (
 
 type DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOutputReference interface {
 	cdktf.ComplexObject
+	AuthenticationType() *string
 	Catalog() *string
 	// the index of the complex object in a list.
 	// Experimental.
@@ -26,11 +27,13 @@ type DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOutputR
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	DatabaseAccessControlRole() *string
 	// Experimental.
 	Fqn() *string
 	Host() *string
 	InternalValue() *DataAwsccQuicksightDataSourceDataSourceParametersStarburstParameters
 	SetInternalValue(val *DataAwsccQuicksightDataSourceDataSourceParametersStarburstParameters)
+	OAuthParameters() DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersOutputReference
 	Port() *float64
 	ProductType() *string
 	// Experimental.
@@ -80,6 +83,16 @@ type jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParamet
 	internal.Type__cdktfComplexObject
 }
 
+func (j *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOutputReference) AuthenticationType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"authenticationType",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOutputReference) Catalog() *string {
 	var returns *string
 	_jsii_.Get(
@@ -120,6 +133,16 @@ func (j *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstPar
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOutputReference) DatabaseAccessControlRole() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseAccessControlRole",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -145,6 +168,16 @@ func (j *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstPar
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOutputReference) OAuthParameters() DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersOutputReference {
+	var returns DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersOutputReference
+	_jsii_.Get(
+		j,
+		"oAuthParameters",
 		&returns,
 	)
 	return returns

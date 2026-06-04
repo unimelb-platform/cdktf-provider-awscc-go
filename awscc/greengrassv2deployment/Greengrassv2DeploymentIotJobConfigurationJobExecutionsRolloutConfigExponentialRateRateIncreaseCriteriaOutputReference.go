@@ -27,8 +27,8 @@ type Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponent
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateRateIncreaseCriteria
-	SetInternalValue(val *Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateRateIncreaseCriteria)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	NumberOfNotifiedThings() *float64
 	SetNumberOfNotifiedThings(val *float64)
 	NumberOfNotifiedThingsInput() *float64
@@ -124,8 +124,8 @@ func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationJobExecutionsRollout
 	return returns
 }
 
-func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateRateIncreaseCriteriaOutputReference) InternalValue() *Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateRateIncreaseCriteria {
-	var returns *Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateRateIncreaseCriteria
+func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateRateIncreaseCriteriaOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -244,7 +244,7 @@ func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationJobExecutionsRollout
 	)
 }
 
-func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateRateIncreaseCriteriaOutputReference)SetInternalValue(val *Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateRateIncreaseCriteria) {
+func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationJobExecutionsRolloutConfigExponentialRateRateIncreaseCriteriaOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

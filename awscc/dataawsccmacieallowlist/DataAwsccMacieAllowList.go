@@ -9,9 +9,10 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccmacieallowlist/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/macie_allow_list awscc_macie_allow_list}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/macie_allow_list awscc_macie_allow_list}.
 type DataAwsccMacieAllowList interface {
 	cdktf.TerraformDataSource
+	AllowListId() *string
 	Arn() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
@@ -88,6 +89,10 @@ type DataAwsccMacieAllowList interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -100,6 +105,16 @@ type DataAwsccMacieAllowList interface {
 // The jsii proxy struct for DataAwsccMacieAllowList
 type jsiiProxy_DataAwsccMacieAllowList struct {
 	internal.Type__cdktfTerraformDataSource
+}
+
+func (j *jsiiProxy_DataAwsccMacieAllowList) AllowListId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"allowListId",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccMacieAllowList) Arn() *string {
@@ -323,7 +338,7 @@ func (j *jsiiProxy_DataAwsccMacieAllowList) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/macie_allow_list awscc_macie_allow_list} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/macie_allow_list awscc_macie_allow_list} Data Source.
 func NewDataAwsccMacieAllowList(scope constructs.Construct, id *string, config *DataAwsccMacieAllowListConfig) DataAwsccMacieAllowList {
 	_init_.Initialize()
 
@@ -341,7 +356,7 @@ func NewDataAwsccMacieAllowList(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/macie_allow_list awscc_macie_allow_list} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/macie_allow_list awscc_macie_allow_list} Data Source.
 func NewDataAwsccMacieAllowList_Override(d DataAwsccMacieAllowList, scope constructs.Construct, id *string, config *DataAwsccMacieAllowListConfig) {
 	_init_.Initialize()
 
@@ -708,6 +723,32 @@ func (d *jsiiProxy_DataAwsccMacieAllowList) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMacieAllowList) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMacieAllowList) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

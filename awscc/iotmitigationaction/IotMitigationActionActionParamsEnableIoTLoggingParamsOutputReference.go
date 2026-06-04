@@ -67,6 +67,8 @@ type IotMitigationActionActionParamsEnableIoTLoggingParamsOutputReference interf
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetLogLevel()
+	ResetRoleArnForLogging()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (i *jsiiProxy_IotMitigationActionActionParamsEnableIoTLoggingParamsOutputRe
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotMitigationActionActionParamsEnableIoTLoggingParamsOutputReference) ResetLogLevel() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetLogLevel",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotMitigationActionActionParamsEnableIoTLoggingParamsOutputReference) ResetRoleArnForLogging() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArnForLogging",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotMitigationActionActionParamsEnableIoTLoggingParamsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

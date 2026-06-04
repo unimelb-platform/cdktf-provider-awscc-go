@@ -9,9 +9,11 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/iotsoftwarepackageversion/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iot_software_package_version awscc_iot_software_package_version}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iot_software_package_version awscc_iot_software_package_version}.
 type IotSoftwarePackageVersion interface {
 	cdktf.TerraformResource
+	Artifact() IotSoftwarePackageVersionArtifactOutputReference
+	ArtifactInput() interface{}
 	Attributes() *map[string]*string
 	SetAttributes(val *map[string]*string)
 	AttributesInput() *map[string]*string
@@ -64,6 +66,12 @@ type IotSoftwarePackageVersion interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	Recipe() *string
+	SetRecipe(val *string)
+	RecipeInput() *string
+	Sbom() IotSoftwarePackageVersionSbomOutputReference
+	SbomInput() interface{}
+	SbomValidationStatus() *string
 	Status() *string
 	Tags() IotSoftwarePackageVersionTagsList
 	TagsInput() interface{}
@@ -100,24 +108,42 @@ type IotSoftwarePackageVersion interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutArtifact(value *IotSoftwarePackageVersionArtifact)
+	PutSbom(value *IotSoftwarePackageVersionSbom)
 	PutTags(value interface{})
+	ResetArtifact()
 	ResetAttributes()
 	ResetDescription()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetRecipe()
+	ResetSbom()
 	ResetTags()
 	ResetVersionName()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -130,6 +156,26 @@ type IotSoftwarePackageVersion interface {
 // The jsii proxy struct for IotSoftwarePackageVersion
 type jsiiProxy_IotSoftwarePackageVersion struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_IotSoftwarePackageVersion) Artifact() IotSoftwarePackageVersionArtifactOutputReference {
+	var returns IotSoftwarePackageVersionArtifactOutputReference
+	_jsii_.Get(
+		j,
+		"artifact",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotSoftwarePackageVersion) ArtifactInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"artifactInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_IotSoftwarePackageVersion) Attributes() *map[string]*string {
@@ -352,6 +398,56 @@ func (j *jsiiProxy_IotSoftwarePackageVersion) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_IotSoftwarePackageVersion) Recipe() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"recipe",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotSoftwarePackageVersion) RecipeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"recipeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotSoftwarePackageVersion) Sbom() IotSoftwarePackageVersionSbomOutputReference {
+	var returns IotSoftwarePackageVersionSbomOutputReference
+	_jsii_.Get(
+		j,
+		"sbom",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotSoftwarePackageVersion) SbomInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"sbomInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotSoftwarePackageVersion) SbomValidationStatus() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"sbomValidationStatus",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_IotSoftwarePackageVersion) Status() *string {
 	var returns *string
 	_jsii_.Get(
@@ -433,7 +529,7 @@ func (j *jsiiProxy_IotSoftwarePackageVersion) VersionNameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iot_software_package_version awscc_iot_software_package_version} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iot_software_package_version awscc_iot_software_package_version} Resource.
 func NewIotSoftwarePackageVersion(scope constructs.Construct, id *string, config *IotSoftwarePackageVersionConfig) IotSoftwarePackageVersion {
 	_init_.Initialize()
 
@@ -451,7 +547,7 @@ func NewIotSoftwarePackageVersion(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iot_software_package_version awscc_iot_software_package_version} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iot_software_package_version awscc_iot_software_package_version} Resource.
 func NewIotSoftwarePackageVersion_Override(i IotSoftwarePackageVersion, scope constructs.Construct, id *string, config *IotSoftwarePackageVersionConfig) {
 	_init_.Initialize()
 
@@ -559,6 +655,17 @@ func (j *jsiiProxy_IotSoftwarePackageVersion)SetProvisioners(val *[]interface{})
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IotSoftwarePackageVersion)SetRecipe(val *string) {
+	if err := j.validateSetRecipeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"recipe",
 		val,
 	)
 }
@@ -843,6 +950,19 @@ func (i *jsiiProxy_IotSoftwarePackageVersion) GetStringMapAttribute(terraformAtt
 	return returns
 }
 
+func (i *jsiiProxy_IotSoftwarePackageVersion) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (i *jsiiProxy_IotSoftwarePackageVersion) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := i.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -870,6 +990,17 @@ func (i *jsiiProxy_IotSoftwarePackageVersion) InterpolationForAttribute(terrafor
 	return returns
 }
 
+func (i *jsiiProxy_IotSoftwarePackageVersion) MoveFromId(id *string) {
+	if err := i.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (i *jsiiProxy_IotSoftwarePackageVersion) MoveTo(moveTarget *string, index interface{}) {
 	if err := i.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -878,6 +1009,17 @@ func (i *jsiiProxy_IotSoftwarePackageVersion) MoveTo(moveTarget *string, index i
 		i,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (i *jsiiProxy_IotSoftwarePackageVersion) MoveToId(id *string) {
+	if err := i.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -892,6 +1034,28 @@ func (i *jsiiProxy_IotSoftwarePackageVersion) OverrideLogicalId(newLogicalId *st
 	)
 }
 
+func (i *jsiiProxy_IotSoftwarePackageVersion) PutArtifact(value *IotSoftwarePackageVersionArtifact) {
+	if err := i.validatePutArtifactParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putArtifact",
+		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IotSoftwarePackageVersion) PutSbom(value *IotSoftwarePackageVersionSbom) {
+	if err := i.validatePutSbomParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putSbom",
+		[]interface{}{value},
+	)
+}
+
 func (i *jsiiProxy_IotSoftwarePackageVersion) PutTags(value interface{}) {
 	if err := i.validatePutTagsParameters(value); err != nil {
 		panic(err)
@@ -900,6 +1064,14 @@ func (i *jsiiProxy_IotSoftwarePackageVersion) PutTags(value interface{}) {
 		i,
 		"putTags",
 		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IotSoftwarePackageVersion) ResetArtifact() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetArtifact",
+		nil, // no parameters
 	)
 }
 
@@ -927,6 +1099,22 @@ func (i *jsiiProxy_IotSoftwarePackageVersion) ResetOverrideLogicalId() {
 	)
 }
 
+func (i *jsiiProxy_IotSoftwarePackageVersion) ResetRecipe() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRecipe",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotSoftwarePackageVersion) ResetSbom() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetSbom",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IotSoftwarePackageVersion) ResetTags() {
 	_jsii_.InvokeVoid(
 		i,
@@ -949,6 +1137,32 @@ func (i *jsiiProxy_IotSoftwarePackageVersion) SynthesizeAttributes() *map[string
 	_jsii_.Invoke(
 		i,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IotSoftwarePackageVersion) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		i,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IotSoftwarePackageVersion) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

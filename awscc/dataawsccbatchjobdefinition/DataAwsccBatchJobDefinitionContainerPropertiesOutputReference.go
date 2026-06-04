@@ -26,6 +26,7 @@ type DataAwsccBatchJobDefinitionContainerPropertiesOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	EnableExecuteCommand() cdktf.IResolvable
 	Environment() DataAwsccBatchJobDefinitionContainerPropertiesEnvironmentList
 	EphemeralStorage() DataAwsccBatchJobDefinitionContainerPropertiesEphemeralStorageOutputReference
 	ExecutionRoleArn() *string
@@ -33,7 +34,6 @@ type DataAwsccBatchJobDefinitionContainerPropertiesOutputReference interface {
 	// Experimental.
 	Fqn() *string
 	Image() *string
-	InstanceType() *string
 	InternalValue() *DataAwsccBatchJobDefinitionContainerProperties
 	SetInternalValue(val *DataAwsccBatchJobDefinitionContainerProperties)
 	JobRoleArn() *string
@@ -44,6 +44,7 @@ type DataAwsccBatchJobDefinitionContainerPropertiesOutputReference interface {
 	NetworkConfiguration() DataAwsccBatchJobDefinitionContainerPropertiesNetworkConfigurationOutputReference
 	Privileged() cdktf.IResolvable
 	ReadonlyRootFilesystem() cdktf.IResolvable
+	RepositoryCredentials() DataAwsccBatchJobDefinitionContainerPropertiesRepositoryCredentialsOutputReference
 	ResourceRequirements() DataAwsccBatchJobDefinitionContainerPropertiesResourceRequirementsList
 	RuntimePlatform() DataAwsccBatchJobDefinitionContainerPropertiesRuntimePlatformOutputReference
 	Secrets() DataAwsccBatchJobDefinitionContainerPropertiesSecretsList
@@ -138,6 +139,16 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinitionContainerPropertiesOutputReference
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionContainerPropertiesOutputReference) EnableExecuteCommand() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"enableExecuteCommand",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccBatchJobDefinitionContainerPropertiesOutputReference) Environment() DataAwsccBatchJobDefinitionContainerPropertiesEnvironmentList {
 	var returns DataAwsccBatchJobDefinitionContainerPropertiesEnvironmentList
 	_jsii_.Get(
@@ -193,16 +204,6 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinitionContainerPropertiesOutputReference
 	_jsii_.Get(
 		j,
 		"image",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataAwsccBatchJobDefinitionContainerPropertiesOutputReference) InstanceType() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"instanceType",
 		&returns,
 	)
 	return returns
@@ -293,6 +294,16 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinitionContainerPropertiesOutputReference
 	_jsii_.Get(
 		j,
 		"readonlyRootFilesystem",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionContainerPropertiesOutputReference) RepositoryCredentials() DataAwsccBatchJobDefinitionContainerPropertiesRepositoryCredentialsOutputReference {
+	var returns DataAwsccBatchJobDefinitionContainerPropertiesRepositoryCredentialsOutputReference
+	_jsii_.Get(
+		j,
+		"repositoryCredentials",
 		&returns,
 	)
 	return returns

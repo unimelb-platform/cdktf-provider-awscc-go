@@ -163,9 +163,25 @@ func (j *jsiiProxy_S3BucketOwnershipControlsRulesOutputReference) validateSetCom
 	return nil
 }
 
-func (j *jsiiProxy_S3BucketOwnershipControlsRulesOutputReference) validateSetInternalValueParameters(val *S3BucketOwnershipControlsRules) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_S3BucketOwnershipControlsRulesOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *S3BucketOwnershipControlsRules:
+		val := val.(*S3BucketOwnershipControlsRules)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case S3BucketOwnershipControlsRules:
+		val_ := val.(S3BucketOwnershipControlsRules)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *S3BucketOwnershipControlsRules; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

@@ -73,6 +73,7 @@ type Ec2InstanceBlockDeviceMappingsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutEbs(value *Ec2InstanceBlockDeviceMappingsEbs)
+	ResetDeviceName()
 	ResetEbs()
 	ResetNoDevice()
 	ResetVirtualName()
@@ -551,6 +552,14 @@ func (e *jsiiProxy_Ec2InstanceBlockDeviceMappingsOutputReference) PutEbs(value *
 		e,
 		"putEbs",
 		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_Ec2InstanceBlockDeviceMappingsOutputReference) ResetDeviceName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetDeviceName",
+		nil, // no parameters
 	)
 }
 

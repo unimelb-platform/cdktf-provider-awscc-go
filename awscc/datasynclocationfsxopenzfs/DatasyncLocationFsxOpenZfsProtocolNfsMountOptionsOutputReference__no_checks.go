@@ -56,7 +56,7 @@ func (j *jsiiProxy_DatasyncLocationFsxOpenZfsProtocolNfsMountOptionsOutputRefere
 	return nil
 }
 
-func (j *jsiiProxy_DatasyncLocationFsxOpenZfsProtocolNfsMountOptionsOutputReference) validateSetInternalValueParameters(val *DatasyncLocationFsxOpenZfsProtocolNfsMountOptions) error {
+func (j *jsiiProxy_DatasyncLocationFsxOpenZfsProtocolNfsMountOptionsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

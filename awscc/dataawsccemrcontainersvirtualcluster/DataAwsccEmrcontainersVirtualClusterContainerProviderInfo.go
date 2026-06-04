@@ -1,6 +1,0 @@
-package dataawsccemrcontainersvirtualcluster
-
-
-type DataAwsccEmrcontainersVirtualClusterContainerProviderInfo struct {
-}
-

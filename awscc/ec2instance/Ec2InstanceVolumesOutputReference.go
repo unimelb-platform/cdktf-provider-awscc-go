@@ -67,6 +67,8 @@ type Ec2InstanceVolumesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDevice()
+	ResetVolumeId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (e *jsiiProxy_Ec2InstanceVolumesOutputReference) InterpolationForAttribute(
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_Ec2InstanceVolumesOutputReference) ResetDevice() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetDevice",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2InstanceVolumesOutputReference) ResetVolumeId() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetVolumeId",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_Ec2InstanceVolumesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

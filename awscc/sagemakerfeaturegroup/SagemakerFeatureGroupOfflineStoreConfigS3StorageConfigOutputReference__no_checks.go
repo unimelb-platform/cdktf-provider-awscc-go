@@ -56,7 +56,7 @@ func (j *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigS3StorageConfigOutputR
 	return nil
 }
 
-func (j *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigS3StorageConfigOutputReference) validateSetInternalValueParameters(val *SagemakerFeatureGroupOfflineStoreConfigS3StorageConfig) error {
+func (j *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigS3StorageConfigOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

@@ -56,7 +56,15 @@ func (s *jsiiProxy_S3StorageLensGroup) validateInterpolationForAttributeParamete
 	return nil
 }
 
+func (s *jsiiProxy_S3StorageLensGroup) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_S3StorageLensGroup) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (s *jsiiProxy_S3StorageLensGroup) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

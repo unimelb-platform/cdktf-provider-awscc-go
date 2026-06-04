@@ -56,7 +56,15 @@ func (i *jsiiProxy_Inspectorv2Filter) validateInterpolationForAttributeParameter
 	return nil
 }
 
+func (i *jsiiProxy_Inspectorv2Filter) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_Inspectorv2Filter) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2Filter) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -109,6 +117,10 @@ func (j *jsiiProxy_Inspectorv2Filter) validateSetNameParameters(val *string) err
 }
 
 func (j *jsiiProxy_Inspectorv2Filter) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Inspectorv2Filter) validateSetTagsParameters(val *map[string]*string) error {
 	return nil
 }
 

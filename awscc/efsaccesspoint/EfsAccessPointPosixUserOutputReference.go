@@ -70,7 +70,9 @@ type EfsAccessPointPosixUserOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetGid()
 	ResetSecondaryGids()
+	ResetUid()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -518,10 +520,26 @@ func (e *jsiiProxy_EfsAccessPointPosixUserOutputReference) InterpolationForAttri
 	return returns
 }
 
+func (e *jsiiProxy_EfsAccessPointPosixUserOutputReference) ResetGid() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetGid",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EfsAccessPointPosixUserOutputReference) ResetSecondaryGids() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetSecondaryGids",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EfsAccessPointPosixUserOutputReference) ResetUid() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetUid",
 		nil, // no parameters
 	)
 }

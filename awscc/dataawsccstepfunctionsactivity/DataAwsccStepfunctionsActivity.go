@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccstepfunctionsactivity/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/stepfunctions_activity awscc_stepfunctions_activity}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/stepfunctions_activity awscc_stepfunctions_activity}.
 type DataAwsccStepfunctionsActivity interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -25,6 +25,7 @@ type DataAwsccStepfunctionsActivity interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	EncryptionConfiguration() DataAwsccStepfunctionsActivityEncryptionConfigurationOutputReference
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -85,6 +86,10 @@ type DataAwsccStepfunctionsActivity interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -144,6 +149,16 @@ func (j *jsiiProxy_DataAwsccStepfunctionsActivity) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccStepfunctionsActivity) EncryptionConfiguration() DataAwsccStepfunctionsActivityEncryptionConfigurationOutputReference {
+	var returns DataAwsccStepfunctionsActivityEncryptionConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"encryptionConfiguration",
 		&returns,
 	)
 	return returns
@@ -290,7 +305,7 @@ func (j *jsiiProxy_DataAwsccStepfunctionsActivity) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/stepfunctions_activity awscc_stepfunctions_activity} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/stepfunctions_activity awscc_stepfunctions_activity} Data Source.
 func NewDataAwsccStepfunctionsActivity(scope constructs.Construct, id *string, config *DataAwsccStepfunctionsActivityConfig) DataAwsccStepfunctionsActivity {
 	_init_.Initialize()
 
@@ -308,7 +323,7 @@ func NewDataAwsccStepfunctionsActivity(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/stepfunctions_activity awscc_stepfunctions_activity} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/stepfunctions_activity awscc_stepfunctions_activity} Data Source.
 func NewDataAwsccStepfunctionsActivity_Override(d DataAwsccStepfunctionsActivity, scope constructs.Construct, id *string, config *DataAwsccStepfunctionsActivityConfig) {
 	_init_.Initialize()
 
@@ -675,6 +690,32 @@ func (d *jsiiProxy_DataAwsccStepfunctionsActivity) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccStepfunctionsActivity) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccStepfunctionsActivity) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

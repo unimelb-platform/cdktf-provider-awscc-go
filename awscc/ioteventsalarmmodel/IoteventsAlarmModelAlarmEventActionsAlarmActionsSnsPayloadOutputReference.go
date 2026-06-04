@@ -67,6 +67,8 @@ type IoteventsAlarmModelAlarmEventActionsAlarmActionsSnsPayloadOutputReference i
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetContentExpression()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsSnsPayloadOut
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsSnsPayloadOutputReference) ResetContentExpression() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetContentExpression",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsSnsPayloadOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetType",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsSnsPayloadOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

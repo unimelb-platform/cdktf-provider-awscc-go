@@ -48,6 +48,10 @@ func (a *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomized
 	return nil
 }
 
+func (a *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) validatePutMetricsParameters(value interface{}) error {
+	return nil
+}
+
 func (a *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }
@@ -69,6 +73,10 @@ func (j *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomized
 }
 
 func (j *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) validateSetNamespaceParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) validateSetPeriodParameters(val *float64) error {
 	return nil
 }
 

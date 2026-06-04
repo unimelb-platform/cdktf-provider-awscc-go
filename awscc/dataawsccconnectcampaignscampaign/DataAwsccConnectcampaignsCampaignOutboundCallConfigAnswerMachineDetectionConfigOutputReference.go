@@ -10,6 +10,7 @@ import (
 
 type DataAwsccConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutputReference interface {
 	cdktf.ComplexObject
+	AwaitAnswerMachinePrompt() cdktf.IResolvable
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -75,6 +76,16 @@ type DataAwsccConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionCo
 // The jsii proxy struct for DataAwsccConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutputReference
 type jsiiProxy_DataAwsccConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_DataAwsccConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutputReference) AwaitAnswerMachinePrompt() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"awaitAnswerMachinePrompt",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutputReference) ComplexObjectIndex() interface{} {

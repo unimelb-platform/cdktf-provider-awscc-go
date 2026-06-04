@@ -119,6 +119,14 @@ func (c *jsiiProxy_CognitoUserPoolClient) validateInterpolationForAttributeParam
 	return nil
 }
 
+func (c *jsiiProxy_CognitoUserPoolClient) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (c *jsiiProxy_CognitoUserPoolClient) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (c *jsiiProxy_CognitoUserPoolClient) validateMoveToParameters(moveTarget *s
 	return nil
 }
 
+func (c *jsiiProxy_CognitoUserPoolClient) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (c *jsiiProxy_CognitoUserPoolClient) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -189,6 +205,17 @@ func (c *jsiiProxy_CognitoUserPoolClient) validateOverrideLogicalIdParameters(ne
 }
 
 func (c *jsiiProxy_CognitoUserPoolClient) validatePutAnalyticsConfigurationParameters(value *CognitoUserPoolClientAnalyticsConfiguration) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (c *jsiiProxy_CognitoUserPoolClient) validatePutRefreshTokenRotationParameters(value *CognitoUserPoolClientRefreshTokenRotation) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}

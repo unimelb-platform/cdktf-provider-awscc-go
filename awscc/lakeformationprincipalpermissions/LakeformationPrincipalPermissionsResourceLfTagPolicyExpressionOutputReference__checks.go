@@ -163,9 +163,25 @@ func (j *jsiiProxy_LakeformationPrincipalPermissionsResourceLfTagPolicyExpressio
 	return nil
 }
 
-func (j *jsiiProxy_LakeformationPrincipalPermissionsResourceLfTagPolicyExpressionOutputReference) validateSetInternalValueParameters(val *LakeformationPrincipalPermissionsResourceLfTagPolicyExpression) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_LakeformationPrincipalPermissionsResourceLfTagPolicyExpressionOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *LakeformationPrincipalPermissionsResourceLfTagPolicyExpression:
+		val := val.(*LakeformationPrincipalPermissionsResourceLfTagPolicyExpression)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case LakeformationPrincipalPermissionsResourceLfTagPolicyExpression:
+		val_ := val.(LakeformationPrincipalPermissionsResourceLfTagPolicyExpression)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *LakeformationPrincipalPermissionsResourceLfTagPolicyExpression; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

@@ -119,6 +119,14 @@ func (g *jsiiProxy_GameliftBuild) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
+func (g *jsiiProxy_GameliftBuild) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (g *jsiiProxy_GameliftBuild) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (g *jsiiProxy_GameliftBuild) validateMoveToParameters(moveTarget *string, i
 	return nil
 }
 
+func (g *jsiiProxy_GameliftBuild) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (g *jsiiProxy_GameliftBuild) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -194,6 +210,37 @@ func (g *jsiiProxy_GameliftBuild) validatePutStorageLocationParameters(value *Ga
 	}
 	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
 		return err
+	}
+
+	return nil
+}
+
+func (g *jsiiProxy_GameliftBuild) validatePutTagsParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*GameliftBuildTags:
+		value := value.(*[]*GameliftBuildTags)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*GameliftBuildTags:
+		value_ := value.([]*GameliftBuildTags)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*GameliftBuildTags; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil

@@ -36,8 +36,8 @@ type QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumns
 	ExpressionInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumns
-	SetInternalValue(val *QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumns)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -70,6 +70,9 @@ type QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumns
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetColumnId()
+	ResetColumnName()
+	ResetExpression()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -185,8 +188,8 @@ func (j *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOp
 	return returns
 }
 
-func (j *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsOutputReference) InternalValue() *QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumns {
-	var returns *QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumns
+func (j *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -298,7 +301,7 @@ func (j *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOp
 	)
 }
 
-func (j *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsOutputReference)SetInternalValue(val *QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumns) {
+func (j *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -515,6 +518,30 @@ func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOp
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsOutputReference) ResetColumnId() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetColumnId",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsOutputReference) ResetColumnName() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetColumnName",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsOutputReference) ResetExpression() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetExpression",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -68,6 +68,7 @@ type EventsRuleTargetsInputTransformerOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetInputPathsMap()
+	ResetInputTemplate()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (e *jsiiProxy_EventsRuleTargetsInputTransformerOutputReference) ResetInputP
 	_jsii_.InvokeVoid(
 		e,
 		"resetInputPathsMap",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EventsRuleTargetsInputTransformerOutputReference) ResetInputTemplate() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetInputTemplate",
 		nil, // no parameters
 	)
 }

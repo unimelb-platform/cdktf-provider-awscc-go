@@ -44,6 +44,10 @@ func (c *jsiiProxy_CleanroomsCollaborationMembersOutputReference) validateInterp
 	return nil
 }
 
+func (c *jsiiProxy_CleanroomsCollaborationMembersOutputReference) validatePutMlMemberAbilitiesParameters(value *CleanroomsCollaborationMembersMlMemberAbilities) error {
+	return nil
+}
+
 func (c *jsiiProxy_CleanroomsCollaborationMembersOutputReference) validatePutPaymentConfigurationParameters(value *CleanroomsCollaborationMembersPaymentConfiguration) error {
 	return nil
 }

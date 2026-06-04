@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/logsdelivery/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_delivery awscc_logs_delivery}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_delivery awscc_logs_delivery}.
 type LogsDelivery interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -37,6 +37,9 @@ type LogsDelivery interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	FieldDelimiter() *string
+	SetFieldDelimiter(val *string)
+	FieldDelimiterInput() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -62,6 +65,15 @@ type LogsDelivery interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RecordFields() *[]*string
+	SetRecordFields(val *[]*string)
+	RecordFieldsInput() *[]*string
+	S3EnableHiveCompatiblePath() interface{}
+	SetS3EnableHiveCompatiblePath(val interface{})
+	S3EnableHiveCompatiblePathInput() interface{}
+	S3SuffixPath() *string
+	SetS3SuffixPath(val *string)
+	S3SuffixPathInput() *string
 	Tags() LogsDeliveryTagsList
 	TagsInput() interface{}
 	// Experimental.
@@ -94,21 +106,38 @@ type LogsDelivery interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutTags(value interface{})
+	ResetFieldDelimiter()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetRecordFields()
+	ResetS3EnableHiveCompatiblePath()
+	ResetS3SuffixPath()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -243,6 +272,26 @@ func (j *jsiiProxy_LogsDelivery) DependsOn() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_LogsDelivery) FieldDelimiter() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fieldDelimiter",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LogsDelivery) FieldDelimiterInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fieldDelimiterInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_LogsDelivery) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
@@ -333,6 +382,66 @@ func (j *jsiiProxy_LogsDelivery) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_LogsDelivery) RecordFields() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"recordFields",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LogsDelivery) RecordFieldsInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"recordFieldsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LogsDelivery) S3EnableHiveCompatiblePath() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"s3EnableHiveCompatiblePath",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LogsDelivery) S3EnableHiveCompatiblePathInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"s3EnableHiveCompatiblePathInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LogsDelivery) S3SuffixPath() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"s3SuffixPath",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LogsDelivery) S3SuffixPathInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"s3SuffixPathInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_LogsDelivery) Tags() LogsDeliveryTagsList {
 	var returns LogsDeliveryTagsList
 	_jsii_.Get(
@@ -384,7 +493,7 @@ func (j *jsiiProxy_LogsDelivery) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_delivery awscc_logs_delivery} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_delivery awscc_logs_delivery} Resource.
 func NewLogsDelivery(scope constructs.Construct, id *string, config *LogsDeliveryConfig) LogsDelivery {
 	_init_.Initialize()
 
@@ -402,7 +511,7 @@ func NewLogsDelivery(scope constructs.Construct, id *string, config *LogsDeliver
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_delivery awscc_logs_delivery} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_delivery awscc_logs_delivery} Resource.
 func NewLogsDelivery_Override(l LogsDelivery, scope constructs.Construct, id *string, config *LogsDeliveryConfig) {
 	_init_.Initialize()
 
@@ -465,6 +574,17 @@ func (j *jsiiProxy_LogsDelivery)SetDependsOn(val *[]*string) {
 	)
 }
 
+func (j *jsiiProxy_LogsDelivery)SetFieldDelimiter(val *string) {
+	if err := j.validateSetFieldDelimiterParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"fieldDelimiter",
+		val,
+	)
+}
+
 func (j *jsiiProxy_LogsDelivery)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
@@ -499,6 +619,39 @@ func (j *jsiiProxy_LogsDelivery)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LogsDelivery)SetRecordFields(val *[]*string) {
+	if err := j.validateSetRecordFieldsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"recordFields",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LogsDelivery)SetS3EnableHiveCompatiblePath(val interface{}) {
+	if err := j.validateSetS3EnableHiveCompatiblePathParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"s3EnableHiveCompatiblePath",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LogsDelivery)SetS3SuffixPath(val *string) {
+	if err := j.validateSetS3SuffixPathParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"s3SuffixPath",
 		val,
 	)
 }
@@ -772,6 +925,19 @@ func (l *jsiiProxy_LogsDelivery) GetStringMapAttribute(terraformAttribute *strin
 	return returns
 }
 
+func (l *jsiiProxy_LogsDelivery) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (l *jsiiProxy_LogsDelivery) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := l.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -799,6 +965,17 @@ func (l *jsiiProxy_LogsDelivery) InterpolationForAttribute(terraformAttribute *s
 	return returns
 }
 
+func (l *jsiiProxy_LogsDelivery) MoveFromId(id *string) {
+	if err := l.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (l *jsiiProxy_LogsDelivery) MoveTo(moveTarget *string, index interface{}) {
 	if err := l.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -807,6 +984,17 @@ func (l *jsiiProxy_LogsDelivery) MoveTo(moveTarget *string, index interface{}) {
 		l,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (l *jsiiProxy_LogsDelivery) MoveToId(id *string) {
+	if err := l.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -832,10 +1020,42 @@ func (l *jsiiProxy_LogsDelivery) PutTags(value interface{}) {
 	)
 }
 
+func (l *jsiiProxy_LogsDelivery) ResetFieldDelimiter() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetFieldDelimiter",
+		nil, // no parameters
+	)
+}
+
 func (l *jsiiProxy_LogsDelivery) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		l,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LogsDelivery) ResetRecordFields() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetRecordFields",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LogsDelivery) ResetS3EnableHiveCompatiblePath() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetS3EnableHiveCompatiblePath",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LogsDelivery) ResetS3SuffixPath() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetS3SuffixPath",
 		nil, // no parameters
 	)
 }
@@ -854,6 +1074,32 @@ func (l *jsiiProxy_LogsDelivery) SynthesizeAttributes() *map[string]interface{} 
 	_jsii_.Invoke(
 		l,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LogsDelivery) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		l,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LogsDelivery) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

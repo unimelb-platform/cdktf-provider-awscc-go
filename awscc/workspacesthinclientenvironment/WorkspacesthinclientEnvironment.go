@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/workspacesthinclientenvironment/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/workspacesthinclient_environment awscc_workspacesthinclient_environment}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/workspacesthinclient_environment awscc_workspacesthinclient_environment}.
 type WorkspacesthinclientEnvironment interface {
 	cdktf.TerraformResource
 	ActivationCode() *string
@@ -41,6 +41,9 @@ type WorkspacesthinclientEnvironment interface {
 	SetDesktopEndpoint(val *string)
 	DesktopEndpointInput() *string
 	DesktopType() *string
+	DeviceCreationTags() WorkspacesthinclientEnvironmentDeviceCreationTagsList
+	DeviceCreationTagsInput() interface{}
+	EnvironmentId() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -117,19 +120,31 @@ type WorkspacesthinclientEnvironment interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutDeviceCreationTags(value interface{})
 	PutMaintenanceWindow(value *WorkspacesthinclientEnvironmentMaintenanceWindow)
 	PutTags(value interface{})
 	ResetDesiredSoftwareSetId()
 	ResetDesktopEndpoint()
+	ResetDeviceCreationTags()
 	ResetKmsKeyArn()
 	ResetMaintenanceWindow()
 	ResetName()
@@ -140,6 +155,9 @@ type WorkspacesthinclientEnvironment interface {
 	ResetSoftwareSetUpdateSchedule()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -299,6 +317,36 @@ func (j *jsiiProxy_WorkspacesthinclientEnvironment) DesktopType() *string {
 	_jsii_.Get(
 		j,
 		"desktopType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspacesthinclientEnvironment) DeviceCreationTags() WorkspacesthinclientEnvironmentDeviceCreationTagsList {
+	var returns WorkspacesthinclientEnvironmentDeviceCreationTagsList
+	_jsii_.Get(
+		j,
+		"deviceCreationTags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspacesthinclientEnvironment) DeviceCreationTagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"deviceCreationTagsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspacesthinclientEnvironment) EnvironmentId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"environmentId",
 		&returns,
 	)
 	return returns
@@ -595,7 +643,7 @@ func (j *jsiiProxy_WorkspacesthinclientEnvironment) UpdatedAt() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/workspacesthinclient_environment awscc_workspacesthinclient_environment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/workspacesthinclient_environment awscc_workspacesthinclient_environment} Resource.
 func NewWorkspacesthinclientEnvironment(scope constructs.Construct, id *string, config *WorkspacesthinclientEnvironmentConfig) WorkspacesthinclientEnvironment {
 	_init_.Initialize()
 
@@ -613,7 +661,7 @@ func NewWorkspacesthinclientEnvironment(scope constructs.Construct, id *string, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/workspacesthinclient_environment awscc_workspacesthinclient_environment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/workspacesthinclient_environment awscc_workspacesthinclient_environment} Resource.
 func NewWorkspacesthinclientEnvironment_Override(w WorkspacesthinclientEnvironment, scope constructs.Construct, id *string, config *WorkspacesthinclientEnvironmentConfig) {
 	_init_.Initialize()
 
@@ -1038,6 +1086,19 @@ func (w *jsiiProxy_WorkspacesthinclientEnvironment) GetStringMapAttribute(terraf
 	return returns
 }
 
+func (w *jsiiProxy_WorkspacesthinclientEnvironment) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		w,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (w *jsiiProxy_WorkspacesthinclientEnvironment) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := w.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1065,6 +1126,17 @@ func (w *jsiiProxy_WorkspacesthinclientEnvironment) InterpolationForAttribute(te
 	return returns
 }
 
+func (w *jsiiProxy_WorkspacesthinclientEnvironment) MoveFromId(id *string) {
+	if err := w.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		w,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (w *jsiiProxy_WorkspacesthinclientEnvironment) MoveTo(moveTarget *string, index interface{}) {
 	if err := w.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1076,6 +1148,17 @@ func (w *jsiiProxy_WorkspacesthinclientEnvironment) MoveTo(moveTarget *string, i
 	)
 }
 
+func (w *jsiiProxy_WorkspacesthinclientEnvironment) MoveToId(id *string) {
+	if err := w.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		w,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (w *jsiiProxy_WorkspacesthinclientEnvironment) OverrideLogicalId(newLogicalId *string) {
 	if err := w.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -1084,6 +1167,17 @@ func (w *jsiiProxy_WorkspacesthinclientEnvironment) OverrideLogicalId(newLogical
 		w,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (w *jsiiProxy_WorkspacesthinclientEnvironment) PutDeviceCreationTags(value interface{}) {
+	if err := w.validatePutDeviceCreationTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		w,
+		"putDeviceCreationTags",
+		[]interface{}{value},
 	)
 }
 
@@ -1121,6 +1215,14 @@ func (w *jsiiProxy_WorkspacesthinclientEnvironment) ResetDesktopEndpoint() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetDesktopEndpoint",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_WorkspacesthinclientEnvironment) ResetDeviceCreationTags() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetDeviceCreationTags",
 		nil, // no parameters
 	)
 }
@@ -1187,6 +1289,32 @@ func (w *jsiiProxy_WorkspacesthinclientEnvironment) SynthesizeAttributes() *map[
 	_jsii_.Invoke(
 		w,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (w *jsiiProxy_WorkspacesthinclientEnvironment) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		w,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (w *jsiiProxy_WorkspacesthinclientEnvironment) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		w,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

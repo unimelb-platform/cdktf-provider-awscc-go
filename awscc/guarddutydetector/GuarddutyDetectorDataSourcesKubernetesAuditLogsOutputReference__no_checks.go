@@ -60,7 +60,7 @@ func (j *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesAuditLogsOutputReferenc
 	return nil
 }
 
-func (j *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesAuditLogsOutputReference) validateSetInternalValueParameters(val *GuarddutyDetectorDataSourcesKubernetesAuditLogs) error {
+func (j *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesAuditLogsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

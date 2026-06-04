@@ -56,6 +56,10 @@ func (j *jsiiProxy_IotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference)
 	return nil
 }
 
+func (j *jsiiProxy_IotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference) validateSetCoreDeviceOperatingSystemParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_IotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference) validateSetCoreDeviceThingNameParameters(val *string) error {
 	return nil
 }

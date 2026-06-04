@@ -73,6 +73,9 @@ type ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteCo
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEventLevels()
+	ResetEventName()
+	ResetLogGroupName()
 	ResetPatternSet()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -550,6 +553,30 @@ func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefa
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsWindowsEventsOutputReference) ResetEventLevels() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetEventLevels",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsWindowsEventsOutputReference) ResetEventName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetEventName",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsWindowsEventsOutputReference) ResetLogGroupName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetLogGroupName",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsWindowsEventsOutputReference) ResetPatternSet() {

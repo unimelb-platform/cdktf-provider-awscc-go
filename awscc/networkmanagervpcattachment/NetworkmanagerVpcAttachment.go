@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/networkmanagervpcattachment/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/networkmanager_vpc_attachment awscc_networkmanager_vpc_attachment}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/networkmanager_vpc_attachment awscc_networkmanager_vpc_attachment}.
 type NetworkmanagerVpcAttachment interface {
 	cdktf.TerraformResource
 	AttachmentId() *string
@@ -50,11 +50,14 @@ type NetworkmanagerVpcAttachment interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	NetworkFunctionGroupName() *string
 	// The tree node.
 	Node() constructs.Node
 	Options() NetworkmanagerVpcAttachmentOptionsOutputReference
 	OptionsInput() interface{}
 	OwnerAccountId() *string
+	ProposedNetworkFunctionGroupChange() NetworkmanagerVpcAttachmentProposedNetworkFunctionGroupChangeOutputReference
+	ProposedNetworkFunctionGroupChangeInput() interface{}
 	ProposedSegmentChange() NetworkmanagerVpcAttachmentProposedSegmentChangeOutputReference
 	ProposedSegmentChangeInput() interface{}
 	// Experimental.
@@ -109,25 +112,40 @@ type NetworkmanagerVpcAttachment interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutOptions(value *NetworkmanagerVpcAttachmentOptions)
+	PutProposedNetworkFunctionGroupChange(value *NetworkmanagerVpcAttachmentProposedNetworkFunctionGroupChange)
 	PutProposedSegmentChange(value *NetworkmanagerVpcAttachmentProposedSegmentChange)
 	PutTags(value interface{})
 	ResetOptions()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetProposedNetworkFunctionGroupChange()
 	ResetProposedSegmentChange()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -322,6 +340,16 @@ func (j *jsiiProxy_NetworkmanagerVpcAttachment) Lifecycle() *cdktf.TerraformReso
 	return returns
 }
 
+func (j *jsiiProxy_NetworkmanagerVpcAttachment) NetworkFunctionGroupName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"networkFunctionGroupName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_NetworkmanagerVpcAttachment) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -357,6 +385,26 @@ func (j *jsiiProxy_NetworkmanagerVpcAttachment) OwnerAccountId() *string {
 	_jsii_.Get(
 		j,
 		"ownerAccountId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_NetworkmanagerVpcAttachment) ProposedNetworkFunctionGroupChange() NetworkmanagerVpcAttachmentProposedNetworkFunctionGroupChangeOutputReference {
+	var returns NetworkmanagerVpcAttachmentProposedNetworkFunctionGroupChangeOutputReference
+	_jsii_.Get(
+		j,
+		"proposedNetworkFunctionGroupChange",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_NetworkmanagerVpcAttachment) ProposedNetworkFunctionGroupChangeInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"proposedNetworkFunctionGroupChangeInput",
 		&returns,
 	)
 	return returns
@@ -543,7 +591,7 @@ func (j *jsiiProxy_NetworkmanagerVpcAttachment) VpcArnInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/networkmanager_vpc_attachment awscc_networkmanager_vpc_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/networkmanager_vpc_attachment awscc_networkmanager_vpc_attachment} Resource.
 func NewNetworkmanagerVpcAttachment(scope constructs.Construct, id *string, config *NetworkmanagerVpcAttachmentConfig) NetworkmanagerVpcAttachment {
 	_init_.Initialize()
 
@@ -561,7 +609,7 @@ func NewNetworkmanagerVpcAttachment(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/networkmanager_vpc_attachment awscc_networkmanager_vpc_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/networkmanager_vpc_attachment awscc_networkmanager_vpc_attachment} Resource.
 func NewNetworkmanagerVpcAttachment_Override(n NetworkmanagerVpcAttachment, scope constructs.Construct, id *string, config *NetworkmanagerVpcAttachmentConfig) {
 	_init_.Initialize()
 
@@ -942,6 +990,19 @@ func (n *jsiiProxy_NetworkmanagerVpcAttachment) GetStringMapAttribute(terraformA
 	return returns
 }
 
+func (n *jsiiProxy_NetworkmanagerVpcAttachment) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		n,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (n *jsiiProxy_NetworkmanagerVpcAttachment) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := n.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -969,6 +1030,17 @@ func (n *jsiiProxy_NetworkmanagerVpcAttachment) InterpolationForAttribute(terraf
 	return returns
 }
 
+func (n *jsiiProxy_NetworkmanagerVpcAttachment) MoveFromId(id *string) {
+	if err := n.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		n,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (n *jsiiProxy_NetworkmanagerVpcAttachment) MoveTo(moveTarget *string, index interface{}) {
 	if err := n.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -977,6 +1049,17 @@ func (n *jsiiProxy_NetworkmanagerVpcAttachment) MoveTo(moveTarget *string, index
 		n,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (n *jsiiProxy_NetworkmanagerVpcAttachment) MoveToId(id *string) {
+	if err := n.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		n,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -998,6 +1081,17 @@ func (n *jsiiProxy_NetworkmanagerVpcAttachment) PutOptions(value *Networkmanager
 	_jsii_.InvokeVoid(
 		n,
 		"putOptions",
+		[]interface{}{value},
+	)
+}
+
+func (n *jsiiProxy_NetworkmanagerVpcAttachment) PutProposedNetworkFunctionGroupChange(value *NetworkmanagerVpcAttachmentProposedNetworkFunctionGroupChange) {
+	if err := n.validatePutProposedNetworkFunctionGroupChangeParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		n,
+		"putProposedNetworkFunctionGroupChange",
 		[]interface{}{value},
 	)
 }
@@ -1040,6 +1134,14 @@ func (n *jsiiProxy_NetworkmanagerVpcAttachment) ResetOverrideLogicalId() {
 	)
 }
 
+func (n *jsiiProxy_NetworkmanagerVpcAttachment) ResetProposedNetworkFunctionGroupChange() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetProposedNetworkFunctionGroupChange",
+		nil, // no parameters
+	)
+}
+
 func (n *jsiiProxy_NetworkmanagerVpcAttachment) ResetProposedSegmentChange() {
 	_jsii_.InvokeVoid(
 		n,
@@ -1062,6 +1164,32 @@ func (n *jsiiProxy_NetworkmanagerVpcAttachment) SynthesizeAttributes() *map[stri
 	_jsii_.Invoke(
 		n,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (n *jsiiProxy_NetworkmanagerVpcAttachment) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		n,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (n *jsiiProxy_NetworkmanagerVpcAttachment) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		n,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccworkspacesthinclientenvironment/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/workspacesthinclient_environment awscc_workspacesthinclient_environment}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/workspacesthinclient_environment awscc_workspacesthinclient_environment}.
 type DataAwsccWorkspacesthinclientEnvironment interface {
 	cdktf.TerraformDataSource
 	ActivationCode() *string
@@ -31,6 +31,8 @@ type DataAwsccWorkspacesthinclientEnvironment interface {
 	DesktopArn() *string
 	DesktopEndpoint() *string
 	DesktopType() *string
+	DeviceCreationTags() DataAwsccWorkspacesthinclientEnvironmentDeviceCreationTagsList
+	EnvironmentId() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -100,6 +102,10 @@ type DataAwsccWorkspacesthinclientEnvironment interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -219,6 +225,26 @@ func (j *jsiiProxy_DataAwsccWorkspacesthinclientEnvironment) DesktopType() *stri
 	_jsii_.Get(
 		j,
 		"desktopType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccWorkspacesthinclientEnvironment) DeviceCreationTags() DataAwsccWorkspacesthinclientEnvironmentDeviceCreationTagsList {
+	var returns DataAwsccWorkspacesthinclientEnvironmentDeviceCreationTagsList
+	_jsii_.Get(
+		j,
+		"deviceCreationTags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccWorkspacesthinclientEnvironment) EnvironmentId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"environmentId",
 		&returns,
 	)
 	return returns
@@ -455,7 +481,7 @@ func (j *jsiiProxy_DataAwsccWorkspacesthinclientEnvironment) UpdatedAt() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/workspacesthinclient_environment awscc_workspacesthinclient_environment} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/workspacesthinclient_environment awscc_workspacesthinclient_environment} Data Source.
 func NewDataAwsccWorkspacesthinclientEnvironment(scope constructs.Construct, id *string, config *DataAwsccWorkspacesthinclientEnvironmentConfig) DataAwsccWorkspacesthinclientEnvironment {
 	_init_.Initialize()
 
@@ -473,7 +499,7 @@ func NewDataAwsccWorkspacesthinclientEnvironment(scope constructs.Construct, id 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/workspacesthinclient_environment awscc_workspacesthinclient_environment} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/workspacesthinclient_environment awscc_workspacesthinclient_environment} Data Source.
 func NewDataAwsccWorkspacesthinclientEnvironment_Override(d DataAwsccWorkspacesthinclientEnvironment, scope constructs.Construct, id *string, config *DataAwsccWorkspacesthinclientEnvironmentConfig) {
 	_init_.Initialize()
 
@@ -840,6 +866,32 @@ func (d *jsiiProxy_DataAwsccWorkspacesthinclientEnvironment) SynthesizeAttribute
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccWorkspacesthinclientEnvironment) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccWorkspacesthinclientEnvironment) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

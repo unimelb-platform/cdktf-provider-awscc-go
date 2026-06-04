@@ -67,6 +67,8 @@ type XraySamplingRuleTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (x *jsiiProxy_XraySamplingRuleTagsOutputReference) InterpolationForAttribut
 	)
 
 	return returns
+}
+
+func (x *jsiiProxy_XraySamplingRuleTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		x,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (x *jsiiProxy_XraySamplingRuleTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		x,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (x *jsiiProxy_XraySamplingRuleTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

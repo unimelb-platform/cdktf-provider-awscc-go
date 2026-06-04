@@ -67,6 +67,8 @@ type MedialiveMultiplexprogramMultiplexProgramSettingsServiceDescriptorOutputRef
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetProviderName()
+	ResetServiceName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (m *jsiiProxy_MedialiveMultiplexprogramMultiplexProgramSettingsServiceDescr
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_MedialiveMultiplexprogramMultiplexProgramSettingsServiceDescriptorOutputReference) ResetProviderName() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetProviderName",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MedialiveMultiplexprogramMultiplexProgramSettingsServiceDescriptorOutputReference) ResetServiceName() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetServiceName",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_MedialiveMultiplexprogramMultiplexProgramSettingsServiceDescriptorOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -27,8 +27,8 @@ type S3BucketReplicationConfigurationRulesDestinationReplicationTimeTimeOutputRe
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *S3BucketReplicationConfigurationRulesDestinationReplicationTimeTime
-	SetInternalValue(val *S3BucketReplicationConfigurationRulesDestinationReplicationTimeTime)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Minutes() *float64
 	SetMinutes(val *float64)
 	MinutesInput() *float64
@@ -64,6 +64,7 @@ type S3BucketReplicationConfigurationRulesDestinationReplicationTimeTimeOutputRe
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetMinutes()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -119,8 +120,8 @@ func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationReplicationTi
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationReplicationTimeTimeOutputReference) InternalValue() *S3BucketReplicationConfigurationRulesDestinationReplicationTimeTime {
-	var returns *S3BucketReplicationConfigurationRulesDestinationReplicationTimeTime
+func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationReplicationTimeTimeOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -219,7 +220,7 @@ func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationReplicationTi
 	)
 }
 
-func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationReplicationTimeTimeOutputReference)SetInternalValue(val *S3BucketReplicationConfigurationRulesDestinationReplicationTimeTime) {
+func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationReplicationTimeTimeOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationReplicationTi
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationReplicationTimeTimeOutputReference) ResetMinutes() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetMinutes",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationReplicationTimeTimeOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -73,8 +73,10 @@ type QuicksightDataSetRowLevelPermissionDataSetOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetArn()
 	ResetFormatVersion()
 	ResetNamespace()
+	ResetPermissionPolicy()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -553,6 +555,14 @@ func (q *jsiiProxy_QuicksightDataSetRowLevelPermissionDataSetOutputReference) In
 	return returns
 }
 
+func (q *jsiiProxy_QuicksightDataSetRowLevelPermissionDataSetOutputReference) ResetArn() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetArn",
+		nil, // no parameters
+	)
+}
+
 func (q *jsiiProxy_QuicksightDataSetRowLevelPermissionDataSetOutputReference) ResetFormatVersion() {
 	_jsii_.InvokeVoid(
 		q,
@@ -565,6 +575,14 @@ func (q *jsiiProxy_QuicksightDataSetRowLevelPermissionDataSetOutputReference) Re
 	_jsii_.InvokeVoid(
 		q,
 		"resetNamespace",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetRowLevelPermissionDataSetOutputReference) ResetPermissionPolicy() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetPermissionPolicy",
 		nil, // no parameters
 	)
 }

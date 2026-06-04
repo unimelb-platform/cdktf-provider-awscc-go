@@ -71,6 +71,8 @@ type IotTopicRuleTopicRulePayloadErrorActionCloudwatchLogsOutputReference interf
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetBatchMode()
+	ResetLogGroupName()
+	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -522,6 +524,22 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionCloudwatchLogsOutputRe
 	_jsii_.InvokeVoid(
 		i,
 		"resetBatchMode",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionCloudwatchLogsOutputReference) ResetLogGroupName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetLogGroupName",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionCloudwatchLogsOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArn",
 		nil, // no parameters
 	)
 }

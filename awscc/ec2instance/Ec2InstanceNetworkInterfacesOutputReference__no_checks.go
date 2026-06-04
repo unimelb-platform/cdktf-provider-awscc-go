@@ -44,6 +44,10 @@ func (e *jsiiProxy_Ec2InstanceNetworkInterfacesOutputReference) validateInterpol
 	return nil
 }
 
+func (e *jsiiProxy_Ec2InstanceNetworkInterfacesOutputReference) validatePutEnaSrdSpecificationParameters(value *Ec2InstanceNetworkInterfacesEnaSrdSpecification) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2InstanceNetworkInterfacesOutputReference) validatePutIpv6AddressesParameters(value interface{}) error {
 	return nil
 }

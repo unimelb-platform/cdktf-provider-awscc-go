@@ -68,6 +68,7 @@ type SsmResourceDataSyncSyncSourceAwsOrganizationsSourceOutputReference interfac
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetOrganizationalUnits()
+	ResetOrganizationSourceType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (s *jsiiProxy_SsmResourceDataSyncSyncSourceAwsOrganizationsSourceOutputRefe
 	_jsii_.InvokeVoid(
 		s,
 		"resetOrganizationalUnits",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SsmResourceDataSyncSyncSourceAwsOrganizationsSourceOutputReference) ResetOrganizationSourceType() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOrganizationSourceType",
 		nil, // no parameters
 	)
 }

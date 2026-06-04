@@ -89,6 +89,7 @@ type AppflowFlowTriggerConfigTriggerPropertiesOutputReference interface {
 	ResetFirstExecutionFrom()
 	ResetFlowErrorDeactivationThreshold()
 	ResetScheduleEndTime()
+	ResetScheduleExpression()
 	ResetScheduleOffset()
 	ResetScheduleStartTime()
 	ResetTimeZone()
@@ -722,6 +723,14 @@ func (a *jsiiProxy_AppflowFlowTriggerConfigTriggerPropertiesOutputReference) Res
 	_jsii_.InvokeVoid(
 		a,
 		"resetScheduleEndTime",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowFlowTriggerConfigTriggerPropertiesOutputReference) ResetScheduleExpression() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetScheduleExpression",
 		nil, // no parameters
 	)
 }

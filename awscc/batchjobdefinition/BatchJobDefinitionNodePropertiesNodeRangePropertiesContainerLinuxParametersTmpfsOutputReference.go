@@ -70,7 +70,9 @@ type BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerLinuxParameters
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetContainerPath()
 	ResetMountOptions()
+	ResetSize()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -518,10 +520,26 @@ func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerL
 	return returns
 }
 
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerLinuxParametersTmpfsOutputReference) ResetContainerPath() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetContainerPath",
+		nil, // no parameters
+	)
+}
+
 func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerLinuxParametersTmpfsOutputReference) ResetMountOptions() {
 	_jsii_.InvokeVoid(
 		b,
 		"resetMountOptions",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerLinuxParametersTmpfsOutputReference) ResetSize() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetSize",
 		nil, // no parameters
 	)
 }

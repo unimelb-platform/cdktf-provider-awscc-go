@@ -92,6 +92,10 @@ func (j *jsiiProxy_TransferConnectorAs2ConfigOutputReference) validateSetPartner
 	return nil
 }
 
+func (j *jsiiProxy_TransferConnectorAs2ConfigOutputReference) validateSetPreserveContentTypeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_TransferConnectorAs2ConfigOutputReference) validateSetSigningAlgorithmParameters(val *string) error {
 	return nil
 }

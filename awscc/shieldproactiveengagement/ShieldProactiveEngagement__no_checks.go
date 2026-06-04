@@ -56,7 +56,15 @@ func (s *jsiiProxy_ShieldProactiveEngagement) validateInterpolationForAttributeP
 	return nil
 }
 
+func (s *jsiiProxy_ShieldProactiveEngagement) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_ShieldProactiveEngagement) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (s *jsiiProxy_ShieldProactiveEngagement) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccelasticachesubnetgroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticache_subnet_group awscc_elasticache_subnet_group}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticache_subnet_group awscc_elasticache_subnet_group}.
 type DataAwsccElasticacheSubnetGroup interface {
 	cdktf.TerraformDataSource
 	CacheSubnetGroupName() *string
@@ -86,6 +86,10 @@ type DataAwsccElasticacheSubnetGroup interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -301,7 +305,7 @@ func (j *jsiiProxy_DataAwsccElasticacheSubnetGroup) TerraformResourceType() *str
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticache_subnet_group awscc_elasticache_subnet_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticache_subnet_group awscc_elasticache_subnet_group} Data Source.
 func NewDataAwsccElasticacheSubnetGroup(scope constructs.Construct, id *string, config *DataAwsccElasticacheSubnetGroupConfig) DataAwsccElasticacheSubnetGroup {
 	_init_.Initialize()
 
@@ -319,7 +323,7 @@ func NewDataAwsccElasticacheSubnetGroup(scope constructs.Construct, id *string, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticache_subnet_group awscc_elasticache_subnet_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticache_subnet_group awscc_elasticache_subnet_group} Data Source.
 func NewDataAwsccElasticacheSubnetGroup_Override(d DataAwsccElasticacheSubnetGroup, scope constructs.Construct, id *string, config *DataAwsccElasticacheSubnetGroupConfig) {
 	_init_.Initialize()
 
@@ -686,6 +690,32 @@ func (d *jsiiProxy_DataAwsccElasticacheSubnetGroup) SynthesizeAttributes() *map[
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccElasticacheSubnetGroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccElasticacheSubnetGroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

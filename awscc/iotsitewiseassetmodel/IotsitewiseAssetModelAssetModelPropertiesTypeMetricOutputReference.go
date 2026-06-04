@@ -43,7 +43,7 @@ type IotsitewiseAssetModelAssetModelPropertiesTypeMetricOutputReference interfac
 	Variables() IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesList
 	VariablesInput() interface{}
 	Window() IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindowOutputReference
-	WindowInput() *IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindow
+	WindowInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -70,6 +70,9 @@ type IotsitewiseAssetModelAssetModelPropertiesTypeMetricOutputReference interfac
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutVariables(value interface{})
 	PutWindow(value *IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindow)
+	ResetExpression()
+	ResetVariables()
+	ResetWindow()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -205,8 +208,8 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricOutputRefe
 	return returns
 }
 
-func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricOutputReference) WindowInput() *IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindow {
-	var returns *IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindow
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricOutputReference) WindowInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"windowInput",
@@ -514,6 +517,30 @@ func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricOutputRefe
 		i,
 		"putWindow",
 		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricOutputReference) ResetExpression() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetExpression",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricOutputReference) ResetVariables() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetVariables",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricOutputReference) ResetWindow() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetWindow",
+		nil, // no parameters
 	)
 }
 

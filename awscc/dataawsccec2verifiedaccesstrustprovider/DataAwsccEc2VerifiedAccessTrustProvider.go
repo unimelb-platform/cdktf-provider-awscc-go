@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2verifiedaccesstrustprovider/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_verified_access_trust_provider awscc_ec2_verified_access_trust_provider}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_verified_access_trust_provider awscc_ec2_verified_access_trust_provider}.
 type DataAwsccEc2VerifiedAccessTrustProvider interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -44,6 +44,7 @@ type DataAwsccEc2VerifiedAccessTrustProvider interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	NativeApplicationOidcOptions() DataAwsccEc2VerifiedAccessTrustProviderNativeApplicationOidcOptionsOutputReference
 	// The tree node.
 	Node() constructs.Node
 	OidcOptions() DataAwsccEc2VerifiedAccessTrustProviderOidcOptionsOutputReference
@@ -94,6 +95,10 @@ type DataAwsccEc2VerifiedAccessTrustProvider interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -258,6 +263,16 @@ func (j *jsiiProxy_DataAwsccEc2VerifiedAccessTrustProvider) Lifecycle() *cdktf.T
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2VerifiedAccessTrustProvider) NativeApplicationOidcOptions() DataAwsccEc2VerifiedAccessTrustProviderNativeApplicationOidcOptionsOutputReference {
+	var returns DataAwsccEc2VerifiedAccessTrustProviderNativeApplicationOidcOptionsOutputReference
+	_jsii_.Get(
+		j,
+		"nativeApplicationOidcOptions",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2VerifiedAccessTrustProvider) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -389,7 +404,7 @@ func (j *jsiiProxy_DataAwsccEc2VerifiedAccessTrustProvider) VerifiedAccessTrustP
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_verified_access_trust_provider awscc_ec2_verified_access_trust_provider} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_verified_access_trust_provider awscc_ec2_verified_access_trust_provider} Data Source.
 func NewDataAwsccEc2VerifiedAccessTrustProvider(scope constructs.Construct, id *string, config *DataAwsccEc2VerifiedAccessTrustProviderConfig) DataAwsccEc2VerifiedAccessTrustProvider {
 	_init_.Initialize()
 
@@ -407,7 +422,7 @@ func NewDataAwsccEc2VerifiedAccessTrustProvider(scope constructs.Construct, id *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_verified_access_trust_provider awscc_ec2_verified_access_trust_provider} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_verified_access_trust_provider awscc_ec2_verified_access_trust_provider} Data Source.
 func NewDataAwsccEc2VerifiedAccessTrustProvider_Override(d DataAwsccEc2VerifiedAccessTrustProvider, scope constructs.Construct, id *string, config *DataAwsccEc2VerifiedAccessTrustProviderConfig) {
 	_init_.Initialize()
 
@@ -774,6 +789,32 @@ func (d *jsiiProxy_DataAwsccEc2VerifiedAccessTrustProvider) SynthesizeAttributes
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2VerifiedAccessTrustProvider) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2VerifiedAccessTrustProvider) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2subnet/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_subnet awscc_ec2_subnet}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_subnet awscc_ec2_subnet}.
 type Ec2Subnet interface {
 	cdktf.TerraformResource
 	AssignIpv6AddressOnCreation() interface{}
@@ -21,6 +21,7 @@ type Ec2Subnet interface {
 	SetAvailabilityZoneId(val *string)
 	AvailabilityZoneIdInput() *string
 	AvailabilityZoneInput() *string
+	BlockPublicAccessStates() Ec2SubnetBlockPublicAccessStatesOutputReference
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	CidrBlock() *string
@@ -43,6 +44,9 @@ type Ec2Subnet interface {
 	EnableDns64() interface{}
 	SetEnableDns64(val interface{})
 	EnableDns64Input() interface{}
+	EnableLniAtDeviceIndex() *float64
+	SetEnableLniAtDeviceIndex(val *float64)
+	EnableLniAtDeviceIndexInput() *float64
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -62,8 +66,6 @@ type Ec2Subnet interface {
 	SetIpv6CidrBlock(val *string)
 	Ipv6CidrBlockInput() *string
 	Ipv6CidrBlocks() *[]*string
-	SetIpv6CidrBlocks(val *[]*string)
-	Ipv6CidrBlocksInput() *[]*string
 	Ipv6IpamPoolId() *string
 	SetIpv6IpamPoolId(val *string)
 	Ipv6IpamPoolIdInput() *string
@@ -134,12 +136,22 @@ type Ec2Subnet interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -150,10 +162,10 @@ type Ec2Subnet interface {
 	ResetAvailabilityZoneId()
 	ResetCidrBlock()
 	ResetEnableDns64()
+	ResetEnableLniAtDeviceIndex()
 	ResetIpv4IpamPoolId()
 	ResetIpv4NetmaskLength()
 	ResetIpv6CidrBlock()
-	ResetIpv6CidrBlocks()
 	ResetIpv6IpamPoolId()
 	ResetIpv6Native()
 	ResetIpv6NetmaskLength()
@@ -165,6 +177,9 @@ type Ec2Subnet interface {
 	ResetPrivateDnsNameOptionsOnLaunch()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -234,6 +249,16 @@ func (j *jsiiProxy_Ec2Subnet) AvailabilityZoneInput() *string {
 	_jsii_.Get(
 		j,
 		"availabilityZoneInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2Subnet) BlockPublicAccessStates() Ec2SubnetBlockPublicAccessStatesOutputReference {
+	var returns Ec2SubnetBlockPublicAccessStatesOutputReference
+	_jsii_.Get(
+		j,
+		"blockPublicAccessStates",
 		&returns,
 	)
 	return returns
@@ -324,6 +349,26 @@ func (j *jsiiProxy_Ec2Subnet) EnableDns64Input() interface{} {
 	_jsii_.Get(
 		j,
 		"enableDns64Input",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2Subnet) EnableLniAtDeviceIndex() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"enableLniAtDeviceIndex",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2Subnet) EnableLniAtDeviceIndexInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"enableLniAtDeviceIndexInput",
 		&returns,
 	)
 	return returns
@@ -434,16 +479,6 @@ func (j *jsiiProxy_Ec2Subnet) Ipv6CidrBlocks() *[]*string {
 	_jsii_.Get(
 		j,
 		"ipv6CidrBlocks",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Ec2Subnet) Ipv6CidrBlocksInput() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"ipv6CidrBlocksInput",
 		&returns,
 	)
 	return returns
@@ -710,7 +745,7 @@ func (j *jsiiProxy_Ec2Subnet) VpcIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_subnet awscc_ec2_subnet} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_subnet awscc_ec2_subnet} Resource.
 func NewEc2Subnet(scope constructs.Construct, id *string, config *Ec2SubnetConfig) Ec2Subnet {
 	_init_.Initialize()
 
@@ -728,7 +763,7 @@ func NewEc2Subnet(scope constructs.Construct, id *string, config *Ec2SubnetConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_subnet awscc_ec2_subnet} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_subnet awscc_ec2_subnet} Resource.
 func NewEc2Subnet_Override(e Ec2Subnet, scope constructs.Construct, id *string, config *Ec2SubnetConfig) {
 	_init_.Initialize()
 
@@ -824,6 +859,17 @@ func (j *jsiiProxy_Ec2Subnet)SetEnableDns64(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_Ec2Subnet)SetEnableLniAtDeviceIndex(val *float64) {
+	if err := j.validateSetEnableLniAtDeviceIndexParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enableLniAtDeviceIndex",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Ec2Subnet)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
@@ -861,17 +907,6 @@ func (j *jsiiProxy_Ec2Subnet)SetIpv6CidrBlock(val *string) {
 	_jsii_.Set(
 		j,
 		"ipv6CidrBlock",
-		val,
-	)
-}
-
-func (j *jsiiProxy_Ec2Subnet)SetIpv6CidrBlocks(val *[]*string) {
-	if err := j.validateSetIpv6CidrBlocksParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"ipv6CidrBlocks",
 		val,
 	)
 }
@@ -1241,6 +1276,19 @@ func (e *jsiiProxy_Ec2Subnet) GetStringMapAttribute(terraformAttribute *string) 
 	return returns
 }
 
+func (e *jsiiProxy_Ec2Subnet) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2Subnet) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1268,6 +1316,17 @@ func (e *jsiiProxy_Ec2Subnet) InterpolationForAttribute(terraformAttribute *stri
 	return returns
 }
 
+func (e *jsiiProxy_Ec2Subnet) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2Subnet) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1276,6 +1335,17 @@ func (e *jsiiProxy_Ec2Subnet) MoveTo(moveTarget *string, index interface{}) {
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Ec2Subnet) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1352,6 +1422,14 @@ func (e *jsiiProxy_Ec2Subnet) ResetEnableDns64() {
 	)
 }
 
+func (e *jsiiProxy_Ec2Subnet) ResetEnableLniAtDeviceIndex() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetEnableLniAtDeviceIndex",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_Ec2Subnet) ResetIpv4IpamPoolId() {
 	_jsii_.InvokeVoid(
 		e,
@@ -1372,14 +1450,6 @@ func (e *jsiiProxy_Ec2Subnet) ResetIpv6CidrBlock() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetIpv6CidrBlock",
-		nil, // no parameters
-	)
-}
-
-func (e *jsiiProxy_Ec2Subnet) ResetIpv6CidrBlocks() {
-	_jsii_.InvokeVoid(
-		e,
-		"resetIpv6CidrBlocks",
 		nil, // no parameters
 	)
 }
@@ -1454,6 +1524,32 @@ func (e *jsiiProxy_Ec2Subnet) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2Subnet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2Subnet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

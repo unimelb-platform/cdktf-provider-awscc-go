@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscclightsailloadbalancer/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lightsail_load_balancer awscc_lightsail_load_balancer}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lightsail_load_balancer awscc_lightsail_load_balancer}.
 type DataAwsccLightsailLoadBalancer interface {
 	cdktf.TerraformDataSource
 	AttachedInstances() *[]*string
@@ -92,6 +92,10 @@ type DataAwsccLightsailLoadBalancer interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -367,7 +371,7 @@ func (j *jsiiProxy_DataAwsccLightsailLoadBalancer) TlsPolicyName() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lightsail_load_balancer awscc_lightsail_load_balancer} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lightsail_load_balancer awscc_lightsail_load_balancer} Data Source.
 func NewDataAwsccLightsailLoadBalancer(scope constructs.Construct, id *string, config *DataAwsccLightsailLoadBalancerConfig) DataAwsccLightsailLoadBalancer {
 	_init_.Initialize()
 
@@ -385,7 +389,7 @@ func NewDataAwsccLightsailLoadBalancer(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lightsail_load_balancer awscc_lightsail_load_balancer} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lightsail_load_balancer awscc_lightsail_load_balancer} Data Source.
 func NewDataAwsccLightsailLoadBalancer_Override(d DataAwsccLightsailLoadBalancer, scope constructs.Construct, id *string, config *DataAwsccLightsailLoadBalancerConfig) {
 	_init_.Initialize()
 
@@ -752,6 +756,32 @@ func (d *jsiiProxy_DataAwsccLightsailLoadBalancer) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLightsailLoadBalancer) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLightsailLoadBalancer) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/datazonedomain/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datazone_domain awscc_datazone_domain}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datazone_domain awscc_datazone_domain}.
 type DatazoneDomain interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -36,6 +36,10 @@ type DatazoneDomain interface {
 	DomainExecutionRole() *string
 	SetDomainExecutionRole(val *string)
 	DomainExecutionRoleInput() *string
+	DomainId() *string
+	DomainVersion() *string
+	SetDomainVersion(val *string)
+	DomainVersionInput() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -70,6 +74,10 @@ type DatazoneDomain interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RootDomainUnitId() *string
+	ServiceRole() *string
+	SetServiceRole(val *string)
+	ServiceRoleInput() *string
 	SingleSignOn() DatazoneDomainSingleSignOnOutputReference
 	SingleSignOnInput() interface{}
 	Status() *string
@@ -105,25 +113,40 @@ type DatazoneDomain interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutSingleSignOn(value *DatazoneDomainSingleSignOn)
 	PutTags(value interface{})
 	ResetDescription()
+	ResetDomainVersion()
 	ResetKmsKeyIdentifier()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetServiceRole()
 	ResetSingleSignOn()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -243,6 +266,36 @@ func (j *jsiiProxy_DatazoneDomain) DomainExecutionRoleInput() *string {
 	_jsii_.Get(
 		j,
 		"domainExecutionRoleInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneDomain) DomainId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"domainId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneDomain) DomainVersion() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"domainVersion",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneDomain) DomainVersionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"domainVersionInput",
 		&returns,
 	)
 	return returns
@@ -408,6 +461,36 @@ func (j *jsiiProxy_DatazoneDomain) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DatazoneDomain) RootDomainUnitId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"rootDomainUnitId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneDomain) ServiceRole() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"serviceRole",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneDomain) ServiceRoleInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"serviceRoleInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DatazoneDomain) SingleSignOn() DatazoneDomainSingleSignOnOutputReference {
 	var returns DatazoneDomainSingleSignOnOutputReference
 	_jsii_.Get(
@@ -489,7 +572,7 @@ func (j *jsiiProxy_DatazoneDomain) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datazone_domain awscc_datazone_domain} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datazone_domain awscc_datazone_domain} Resource.
 func NewDatazoneDomain(scope constructs.Construct, id *string, config *DatazoneDomainConfig) DatazoneDomain {
 	_init_.Initialize()
 
@@ -507,7 +590,7 @@ func NewDatazoneDomain(scope constructs.Construct, id *string, config *DatazoneD
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datazone_domain awscc_datazone_domain} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datazone_domain awscc_datazone_domain} Resource.
 func NewDatazoneDomain_Override(d DatazoneDomain, scope constructs.Construct, id *string, config *DatazoneDomainConfig) {
 	_init_.Initialize()
 
@@ -570,6 +653,17 @@ func (j *jsiiProxy_DatazoneDomain)SetDomainExecutionRole(val *string) {
 	)
 }
 
+func (j *jsiiProxy_DatazoneDomain)SetDomainVersion(val *string) {
+	if err := j.validateSetDomainVersionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"domainVersion",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DatazoneDomain)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
@@ -626,6 +720,17 @@ func (j *jsiiProxy_DatazoneDomain)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DatazoneDomain)SetServiceRole(val *string) {
+	if err := j.validateSetServiceRoleParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"serviceRole",
 		val,
 	)
 }
@@ -899,6 +1004,19 @@ func (d *jsiiProxy_DatazoneDomain) GetStringMapAttribute(terraformAttribute *str
 	return returns
 }
 
+func (d *jsiiProxy_DatazoneDomain) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (d *jsiiProxy_DatazoneDomain) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := d.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -926,6 +1044,17 @@ func (d *jsiiProxy_DatazoneDomain) InterpolationForAttribute(terraformAttribute 
 	return returns
 }
 
+func (d *jsiiProxy_DatazoneDomain) MoveFromId(id *string) {
+	if err := d.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (d *jsiiProxy_DatazoneDomain) MoveTo(moveTarget *string, index interface{}) {
 	if err := d.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -934,6 +1063,17 @@ func (d *jsiiProxy_DatazoneDomain) MoveTo(moveTarget *string, index interface{})
 		d,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (d *jsiiProxy_DatazoneDomain) MoveToId(id *string) {
+	if err := d.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -978,6 +1118,14 @@ func (d *jsiiProxy_DatazoneDomain) ResetDescription() {
 	)
 }
 
+func (d *jsiiProxy_DatazoneDomain) ResetDomainVersion() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetDomainVersion",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DatazoneDomain) ResetKmsKeyIdentifier() {
 	_jsii_.InvokeVoid(
 		d,
@@ -990,6 +1138,14 @@ func (d *jsiiProxy_DatazoneDomain) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatazoneDomain) ResetServiceRole() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetServiceRole",
 		nil, // no parameters
 	)
 }
@@ -1016,6 +1172,32 @@ func (d *jsiiProxy_DatazoneDomain) SynthesizeAttributes() *map[string]interface{
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DatazoneDomain) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DatazoneDomain) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

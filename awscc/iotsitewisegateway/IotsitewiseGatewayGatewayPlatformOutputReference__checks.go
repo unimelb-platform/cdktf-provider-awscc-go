@@ -90,7 +90,7 @@ func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) validateInt
 	return nil
 }
 
-func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) validatePutGreengrassParameters(value *IotsitewiseGatewayGatewayPlatformGreengrass) error {
+func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) validatePutGreengrassV2Parameters(value *IotsitewiseGatewayGatewayPlatformGreengrassV2) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -101,7 +101,7 @@ func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) validatePut
 	return nil
 }
 
-func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) validatePutGreengrassV2Parameters(value *IotsitewiseGatewayGatewayPlatformGreengrassV2) error {
+func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) validatePutSiemensIeParameters(value *IotsitewiseGatewayGatewayPlatformSiemensIe) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}

@@ -96,7 +96,10 @@ type KendraDataSourceDataSourceConfigurationConfluenceConfigurationOutputReferen
 	ResetExclusionPatterns()
 	ResetInclusionPatterns()
 	ResetPageConfiguration()
+	ResetSecretArn()
+	ResetServerUrl()
 	ResetSpaceConfiguration()
+	ResetVersion()
 	ResetVpcConfiguration()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -802,10 +805,34 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationConfluenceConfiguratio
 	)
 }
 
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationConfluenceConfigurationOutputReference) ResetSecretArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetSecretArn",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationConfluenceConfigurationOutputReference) ResetServerUrl() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetServerUrl",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationConfluenceConfigurationOutputReference) ResetSpaceConfiguration() {
 	_jsii_.InvokeVoid(
 		k,
 		"resetSpaceConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationConfluenceConfigurationOutputReference) ResetVersion() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetVersion",
 		nil, // no parameters
 	)
 }

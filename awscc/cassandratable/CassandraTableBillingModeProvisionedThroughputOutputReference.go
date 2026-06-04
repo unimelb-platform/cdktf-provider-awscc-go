@@ -67,6 +67,8 @@ type CassandraTableBillingModeProvisionedThroughputOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetReadCapacityUnits()
+	ResetWriteCapacityUnits()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CassandraTableBillingModeProvisionedThroughputOutputReference
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CassandraTableBillingModeProvisionedThroughputOutputReference) ResetReadCapacityUnits() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetReadCapacityUnits",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CassandraTableBillingModeProvisionedThroughputOutputReference) ResetWriteCapacityUnits() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetWriteCapacityUnits",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CassandraTableBillingModeProvisionedThroughputOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

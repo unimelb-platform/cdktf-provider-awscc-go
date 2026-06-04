@@ -36,8 +36,8 @@ type S3BucketInventoryConfigurationsDestinationOutputReference interface {
 	FormatInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *S3BucketInventoryConfigurationsDestination
-	SetInternalValue(val *S3BucketInventoryConfigurationsDestination)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Prefix() *string
 	SetPrefix(val *string)
 	PrefixInput() *string
@@ -74,6 +74,8 @@ type S3BucketInventoryConfigurationsDestinationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetBucketAccountId()
+	ResetBucketArn()
+	ResetFormat()
 	ResetPrefix()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -190,8 +192,8 @@ func (j *jsiiProxy_S3BucketInventoryConfigurationsDestinationOutputReference) Fq
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketInventoryConfigurationsDestinationOutputReference) InternalValue() *S3BucketInventoryConfigurationsDestination {
-	var returns *S3BucketInventoryConfigurationsDestination
+func (j *jsiiProxy_S3BucketInventoryConfigurationsDestinationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -323,7 +325,7 @@ func (j *jsiiProxy_S3BucketInventoryConfigurationsDestinationOutputReference)Set
 	)
 }
 
-func (j *jsiiProxy_S3BucketInventoryConfigurationsDestinationOutputReference)SetInternalValue(val *S3BucketInventoryConfigurationsDestination) {
+func (j *jsiiProxy_S3BucketInventoryConfigurationsDestinationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -557,6 +559,22 @@ func (s *jsiiProxy_S3BucketInventoryConfigurationsDestinationOutputReference) Re
 	_jsii_.InvokeVoid(
 		s,
 		"resetBucketAccountId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketInventoryConfigurationsDestinationOutputReference) ResetBucketArn() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetBucketArn",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketInventoryConfigurationsDestinationOutputReference) ResetFormat() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetFormat",
 		nil, // no parameters
 	)
 }

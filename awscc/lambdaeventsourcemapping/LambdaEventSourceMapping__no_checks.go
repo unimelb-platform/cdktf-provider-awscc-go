@@ -56,7 +56,15 @@ func (l *jsiiProxy_LambdaEventSourceMapping) validateInterpolationForAttributePa
 	return nil
 }
 
+func (l *jsiiProxy_LambdaEventSourceMapping) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LambdaEventSourceMapping) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (l *jsiiProxy_LambdaEventSourceMapping) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -80,6 +88,14 @@ func (l *jsiiProxy_LambdaEventSourceMapping) validatePutFilterCriteriaParameters
 	return nil
 }
 
+func (l *jsiiProxy_LambdaEventSourceMapping) validatePutMetricsConfigParameters(value *LambdaEventSourceMappingMetricsConfig) error {
+	return nil
+}
+
+func (l *jsiiProxy_LambdaEventSourceMapping) validatePutProvisionedPollerConfigParameters(value *LambdaEventSourceMappingProvisionedPollerConfig) error {
+	return nil
+}
+
 func (l *jsiiProxy_LambdaEventSourceMapping) validatePutScalingConfigParameters(value *LambdaEventSourceMappingScalingConfig) error {
 	return nil
 }
@@ -93,6 +109,10 @@ func (l *jsiiProxy_LambdaEventSourceMapping) validatePutSelfManagedKafkaEventSou
 }
 
 func (l *jsiiProxy_LambdaEventSourceMapping) validatePutSourceAccessConfigurationsParameters(value interface{}) error {
+	return nil
+}
+
+func (l *jsiiProxy_LambdaEventSourceMapping) validatePutTagsParameters(value interface{}) error {
 	return nil
 }
 
@@ -141,6 +161,10 @@ func (j *jsiiProxy_LambdaEventSourceMapping) validateSetFunctionNameParameters(v
 }
 
 func (j *jsiiProxy_LambdaEventSourceMapping) validateSetFunctionResponseTypesParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_LambdaEventSourceMapping) validateSetKmsKeyArnParameters(val *string) error {
 	return nil
 }
 

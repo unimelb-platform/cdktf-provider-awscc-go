@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccrdsdbcluster/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_db_cluster awscc_rds_db_cluster}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_db_cluster awscc_rds_db_cluster}.
 type DataAwsccRdsDbCluster interface {
 	cdktf.TerraformDataSource
 	AllocatedStorage() *float64
@@ -20,6 +20,7 @@ type DataAwsccRdsDbCluster interface {
 	BackupRetentionPeriod() *float64
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	ClusterScalabilityType() *string
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	CopyTagsToSnapshot() cdktf.IResolvable
@@ -27,6 +28,7 @@ type DataAwsccRdsDbCluster interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	DatabaseInsightsMode() *string
 	DatabaseName() *string
 	DbClusterArn() *string
 	DbClusterIdentifier() *string
@@ -47,8 +49,10 @@ type DataAwsccRdsDbCluster interface {
 	EnableGlobalWriteForwarding() cdktf.IResolvable
 	EnableHttpEndpoint() cdktf.IResolvable
 	EnableIamDatabaseAuthentication() cdktf.IResolvable
+	EnableLocalWriteForwarding() cdktf.IResolvable
 	Endpoint() DataAwsccRdsDbClusterEndpointOutputReference
 	Engine() *string
+	EngineLifecycleSupport() *string
 	EngineMode() *string
 	EngineVersion() *string
 	// Experimental.
@@ -101,6 +105,7 @@ type DataAwsccRdsDbCluster interface {
 	SourceDbClusterIdentifier() *string
 	SourceRegion() *string
 	StorageEncrypted() cdktf.IResolvable
+	StorageThroughput() *float64
 	StorageType() *string
 	Tags() DataAwsccRdsDbClusterTagsList
 	// Experimental.
@@ -140,6 +145,10 @@ type DataAwsccRdsDbCluster interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -224,6 +233,16 @@ func (j *jsiiProxy_DataAwsccRdsDbCluster) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRdsDbCluster) ClusterScalabilityType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"clusterScalabilityType",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRdsDbCluster) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -249,6 +268,16 @@ func (j *jsiiProxy_DataAwsccRdsDbCluster) Count() interface{} {
 	_jsii_.Get(
 		j,
 		"count",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRdsDbCluster) DatabaseInsightsMode() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseInsightsMode",
 		&returns,
 	)
 	return returns
@@ -424,6 +453,16 @@ func (j *jsiiProxy_DataAwsccRdsDbCluster) EnableIamDatabaseAuthentication() cdkt
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRdsDbCluster) EnableLocalWriteForwarding() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"enableLocalWriteForwarding",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRdsDbCluster) Endpoint() DataAwsccRdsDbClusterEndpointOutputReference {
 	var returns DataAwsccRdsDbClusterEndpointOutputReference
 	_jsii_.Get(
@@ -439,6 +478,16 @@ func (j *jsiiProxy_DataAwsccRdsDbCluster) Engine() *string {
 	_jsii_.Get(
 		j,
 		"engine",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRdsDbCluster) EngineLifecycleSupport() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"engineLifecycleSupport",
 		&returns,
 	)
 	return returns
@@ -824,6 +873,16 @@ func (j *jsiiProxy_DataAwsccRdsDbCluster) StorageEncrypted() cdktf.IResolvable {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRdsDbCluster) StorageThroughput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"storageThroughput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRdsDbCluster) StorageType() *string {
 	var returns *string
 	_jsii_.Get(
@@ -895,7 +954,7 @@ func (j *jsiiProxy_DataAwsccRdsDbCluster) VpcSecurityGroupIds() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_db_cluster awscc_rds_db_cluster} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_db_cluster awscc_rds_db_cluster} Data Source.
 func NewDataAwsccRdsDbCluster(scope constructs.Construct, id *string, config *DataAwsccRdsDbClusterConfig) DataAwsccRdsDbCluster {
 	_init_.Initialize()
 
@@ -913,7 +972,7 @@ func NewDataAwsccRdsDbCluster(scope constructs.Construct, id *string, config *Da
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_db_cluster awscc_rds_db_cluster} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_db_cluster awscc_rds_db_cluster} Data Source.
 func NewDataAwsccRdsDbCluster_Override(d DataAwsccRdsDbCluster, scope constructs.Construct, id *string, config *DataAwsccRdsDbClusterConfig) {
 	_init_.Initialize()
 
@@ -1280,6 +1339,32 @@ func (d *jsiiProxy_DataAwsccRdsDbCluster) SynthesizeAttributes() *map[string]int
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRdsDbCluster) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRdsDbCluster) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

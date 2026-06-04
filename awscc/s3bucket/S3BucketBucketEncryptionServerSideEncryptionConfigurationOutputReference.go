@@ -30,8 +30,8 @@ type S3BucketBucketEncryptionServerSideEncryptionConfigurationOutputReference in
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *S3BucketBucketEncryptionServerSideEncryptionConfiguration
-	SetInternalValue(val *S3BucketBucketEncryptionServerSideEncryptionConfiguration)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	ServerSideEncryptionByDefault() S3BucketBucketEncryptionServerSideEncryptionConfigurationServerSideEncryptionByDefaultOutputReference
 	ServerSideEncryptionByDefaultInput() interface{}
 	// Experimental.
@@ -144,8 +144,8 @@ func (j *jsiiProxy_S3BucketBucketEncryptionServerSideEncryptionConfigurationOutp
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketBucketEncryptionServerSideEncryptionConfigurationOutputReference) InternalValue() *S3BucketBucketEncryptionServerSideEncryptionConfiguration {
-	var returns *S3BucketBucketEncryptionServerSideEncryptionConfiguration
+func (j *jsiiProxy_S3BucketBucketEncryptionServerSideEncryptionConfigurationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -255,7 +255,7 @@ func (j *jsiiProxy_S3BucketBucketEncryptionServerSideEncryptionConfigurationOutp
 	)
 }
 
-func (j *jsiiProxy_S3BucketBucketEncryptionServerSideEncryptionConfigurationOutputReference)SetInternalValue(val *S3BucketBucketEncryptionServerSideEncryptionConfiguration) {
+func (j *jsiiProxy_S3BucketBucketEncryptionServerSideEncryptionConfigurationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

@@ -27,8 +27,8 @@ type CleanroomsCollaborationCreatorPaymentConfigurationQueryComputeOutputReferen
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *CleanroomsCollaborationCreatorPaymentConfigurationQueryCompute
-	SetInternalValue(val *CleanroomsCollaborationCreatorPaymentConfigurationQueryCompute)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	IsResponsible() interface{}
 	SetIsResponsible(val interface{})
 	IsResponsibleInput() interface{}
@@ -64,6 +64,7 @@ type CleanroomsCollaborationCreatorPaymentConfigurationQueryComputeOutputReferen
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetIsResponsible()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -119,8 +120,8 @@ func (j *jsiiProxy_CleanroomsCollaborationCreatorPaymentConfigurationQueryComput
 	return returns
 }
 
-func (j *jsiiProxy_CleanroomsCollaborationCreatorPaymentConfigurationQueryComputeOutputReference) InternalValue() *CleanroomsCollaborationCreatorPaymentConfigurationQueryCompute {
-	var returns *CleanroomsCollaborationCreatorPaymentConfigurationQueryCompute
+func (j *jsiiProxy_CleanroomsCollaborationCreatorPaymentConfigurationQueryComputeOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -219,7 +220,7 @@ func (j *jsiiProxy_CleanroomsCollaborationCreatorPaymentConfigurationQueryComput
 	)
 }
 
-func (j *jsiiProxy_CleanroomsCollaborationCreatorPaymentConfigurationQueryComputeOutputReference)SetInternalValue(val *CleanroomsCollaborationCreatorPaymentConfigurationQueryCompute) {
+func (j *jsiiProxy_CleanroomsCollaborationCreatorPaymentConfigurationQueryComputeOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -447,6 +448,14 @@ func (c *jsiiProxy_CleanroomsCollaborationCreatorPaymentConfigurationQueryComput
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CleanroomsCollaborationCreatorPaymentConfigurationQueryComputeOutputReference) ResetIsResponsible() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetIsResponsible",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CleanroomsCollaborationCreatorPaymentConfigurationQueryComputeOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

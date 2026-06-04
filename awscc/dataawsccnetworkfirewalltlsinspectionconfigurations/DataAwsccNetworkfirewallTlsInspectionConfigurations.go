@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccnetworkfirewalltlsinspectionconfigurations/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkfirewall_tls_inspection_configurations awscc_networkfirewall_tls_inspection_configurations}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkfirewall_tls_inspection_configurations awscc_networkfirewall_tls_inspection_configurations}.
 type DataAwsccNetworkfirewallTlsInspectionConfigurations interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccNetworkfirewallTlsInspectionConfigurations interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccNetworkfirewallTlsInspectionConfigurations) Terrafor
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkfirewall_tls_inspection_configurations awscc_networkfirewall_tls_inspection_configurations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkfirewall_tls_inspection_configurations awscc_networkfirewall_tls_inspection_configurations} Data Source.
 func NewDataAwsccNetworkfirewallTlsInspectionConfigurations(scope constructs.Construct, id *string, config *DataAwsccNetworkfirewallTlsInspectionConfigurationsConfig) DataAwsccNetworkfirewallTlsInspectionConfigurations {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccNetworkfirewallTlsInspectionConfigurations(scope constructs.Con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkfirewall_tls_inspection_configurations awscc_networkfirewall_tls_inspection_configurations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkfirewall_tls_inspection_configurations awscc_networkfirewall_tls_inspection_configurations} Data Source.
 func NewDataAwsccNetworkfirewallTlsInspectionConfigurations_Override(d DataAwsccNetworkfirewallTlsInspectionConfigurations, scope constructs.Construct, id *string, config *DataAwsccNetworkfirewallTlsInspectionConfigurationsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccNetworkfirewallTlsInspectionConfigurations) Synthesi
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkfirewallTlsInspectionConfigurations) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkfirewallTlsInspectionConfigurations) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

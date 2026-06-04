@@ -1,0 +1,6 @@
+package dataawsccbedrockguardrail
+
+
+type DataAwsccBedrockGuardrailSensitiveInformationPolicyConfigPiiEntitiesConfig struct {
+}
+

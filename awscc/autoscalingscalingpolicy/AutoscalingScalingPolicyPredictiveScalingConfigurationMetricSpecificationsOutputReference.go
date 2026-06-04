@@ -33,8 +33,8 @@ type AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsO
 	CustomizedScalingMetricSpecificationInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecifications
-	SetInternalValue(val *AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecifications)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	PredefinedLoadMetricSpecification() AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsPredefinedLoadMetricSpecificationOutputReference
 	PredefinedLoadMetricSpecificationInput() interface{}
 	PredefinedMetricPairSpecification() AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsPredefinedMetricPairSpecificationOutputReference
@@ -88,6 +88,7 @@ type AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsO
 	ResetPredefinedLoadMetricSpecification()
 	ResetPredefinedMetricPairSpecification()
 	ResetPredefinedScalingMetricSpecification()
+	ResetTargetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -203,8 +204,8 @@ func (j *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricS
 	return returns
 }
 
-func (j *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsOutputReference) InternalValue() *AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecifications {
-	var returns *AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecifications
+func (j *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -363,7 +364,7 @@ func (j *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricS
 	)
 }
 
-func (j *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsOutputReference)SetInternalValue(val *AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecifications) {
+func (j *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -703,6 +704,14 @@ func (a *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricS
 	_jsii_.InvokeVoid(
 		a,
 		"resetPredefinedScalingMetricSpecification",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsOutputReference) ResetTargetValue() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetTargetValue",
 		nil, // no parameters
 	)
 }

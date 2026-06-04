@@ -67,6 +67,8 @@ type SsmAssociationTargetsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValues()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (s *jsiiProxy_SsmAssociationTargetsOutputReference) InterpolationForAttribu
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SsmAssociationTargetsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SsmAssociationTargetsOutputReference) ResetValues() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetValues",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SsmAssociationTargetsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

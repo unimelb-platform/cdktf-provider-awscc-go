@@ -27,8 +27,8 @@ type SagemakerFeatureGroupOfflineStoreConfigS3StorageConfigOutputReference inter
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *SagemakerFeatureGroupOfflineStoreConfigS3StorageConfig
-	SetInternalValue(val *SagemakerFeatureGroupOfflineStoreConfigS3StorageConfig)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	KmsKeyId() *string
 	SetKmsKeyId(val *string)
 	KmsKeyIdInput() *string
@@ -68,6 +68,7 @@ type SagemakerFeatureGroupOfflineStoreConfigS3StorageConfigOutputReference inter
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetKmsKeyId()
+	ResetS3Uri()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -123,8 +124,8 @@ func (j *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigS3StorageConfigOutputR
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigS3StorageConfigOutputReference) InternalValue() *SagemakerFeatureGroupOfflineStoreConfigS3StorageConfig {
-	var returns *SagemakerFeatureGroupOfflineStoreConfigS3StorageConfig
+func (j *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigS3StorageConfigOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -243,7 +244,7 @@ func (j *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigS3StorageConfigOutputR
 	)
 }
 
-func (j *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigS3StorageConfigOutputReference)SetInternalValue(val *SagemakerFeatureGroupOfflineStoreConfigS3StorageConfig) {
+func (j *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigS3StorageConfigOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -488,6 +489,14 @@ func (s *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigS3StorageConfigOutputR
 	_jsii_.InvokeVoid(
 		s,
 		"resetKmsKeyId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigS3StorageConfigOutputReference) ResetS3Uri() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetS3Uri",
 		nil, // no parameters
 	)
 }

@@ -68,6 +68,7 @@ type DatabrewJobProfileConfigurationEntityDetectorConfigurationOutputReference i
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAllowedStatistics(value *DatabrewJobProfileConfigurationEntityDetectorConfigurationAllowedStatistics)
 	ResetAllowedStatistics()
+	ResetEntityTypes()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (d *jsiiProxy_DatabrewJobProfileConfigurationEntityDetectorConfigurationOut
 	_jsii_.InvokeVoid(
 		d,
 		"resetAllowedStatistics",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatabrewJobProfileConfigurationEntityDetectorConfigurationOutputReference) ResetEntityTypes() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetEntityTypes",
 		nil, // no parameters
 	)
 }

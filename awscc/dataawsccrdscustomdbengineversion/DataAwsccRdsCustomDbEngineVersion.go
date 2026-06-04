@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccrdscustomdbengineversion/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_custom_db_engine_version awscc_rds_custom_db_engine_version}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_custom_db_engine_version awscc_rds_custom_db_engine_version}.
 type DataAwsccRdsCustomDbEngineVersion interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -41,6 +41,7 @@ type DataAwsccRdsCustomDbEngineVersion interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	ImageId() *string
 	KmsKeyId() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
@@ -55,6 +56,7 @@ type DataAwsccRdsCustomDbEngineVersion interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	SourceCustomDbEngineVersionIdentifier() *string
 	Status() *string
 	Tags() DataAwsccRdsCustomDbEngineVersionTagsList
 	// Experimental.
@@ -63,6 +65,7 @@ type DataAwsccRdsCustomDbEngineVersion interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	UseAwsProvidedLatestImage() cdktf.IResolvable
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -92,6 +95,10 @@ type DataAwsccRdsCustomDbEngineVersion interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,6 +263,16 @@ func (j *jsiiProxy_DataAwsccRdsCustomDbEngineVersion) IdInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRdsCustomDbEngineVersion) ImageId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"imageId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRdsCustomDbEngineVersion) KmsKeyId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -316,6 +333,16 @@ func (j *jsiiProxy_DataAwsccRdsCustomDbEngineVersion) RawOverrides() interface{}
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRdsCustomDbEngineVersion) SourceCustomDbEngineVersionIdentifier() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"sourceCustomDbEngineVersionIdentifier",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRdsCustomDbEngineVersion) Status() *string {
 	var returns *string
 	_jsii_.Get(
@@ -366,8 +393,18 @@ func (j *jsiiProxy_DataAwsccRdsCustomDbEngineVersion) TerraformResourceType() *s
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRdsCustomDbEngineVersion) UseAwsProvidedLatestImage() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"useAwsProvidedLatestImage",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_custom_db_engine_version awscc_rds_custom_db_engine_version} Data Source.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_custom_db_engine_version awscc_rds_custom_db_engine_version} Data Source.
 func NewDataAwsccRdsCustomDbEngineVersion(scope constructs.Construct, id *string, config *DataAwsccRdsCustomDbEngineVersionConfig) DataAwsccRdsCustomDbEngineVersion {
 	_init_.Initialize()
 
@@ -385,7 +422,7 @@ func NewDataAwsccRdsCustomDbEngineVersion(scope constructs.Construct, id *string
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_custom_db_engine_version awscc_rds_custom_db_engine_version} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_custom_db_engine_version awscc_rds_custom_db_engine_version} Data Source.
 func NewDataAwsccRdsCustomDbEngineVersion_Override(d DataAwsccRdsCustomDbEngineVersion, scope constructs.Construct, id *string, config *DataAwsccRdsCustomDbEngineVersionConfig) {
 	_init_.Initialize()
 
@@ -752,6 +789,32 @@ func (d *jsiiProxy_DataAwsccRdsCustomDbEngineVersion) SynthesizeAttributes() *ma
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRdsCustomDbEngineVersion) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRdsCustomDbEngineVersion) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -68,6 +68,7 @@ type KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationProcessingCon
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutParameters(value interface{})
 	ResetParameters()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfiguratio
 	_jsii_.InvokeVoid(
 		k,
 		"resetParameters",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationProcessingConfigurationProcessorsOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetType",
 		nil, // no parameters
 	)
 }

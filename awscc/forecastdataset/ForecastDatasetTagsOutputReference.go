@@ -67,6 +67,8 @@ type ForecastDatasetTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (f *jsiiProxy_ForecastDatasetTagsOutputReference) InterpolationForAttribute
 	)
 
 	return returns
+}
+
+func (f *jsiiProxy_ForecastDatasetTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (f *jsiiProxy_ForecastDatasetTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (f *jsiiProxy_ForecastDatasetTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

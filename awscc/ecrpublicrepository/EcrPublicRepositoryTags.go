@@ -2,17 +2,15 @@ package ecrpublicrepository
 
 
 type EcrPublicRepositoryTags struct {
-	// The key name of the tag.
+	// One part of a key-value pair that make up a tag.
 	//
-	// You can specify a value that is 1 to 127 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
+	// A ``key`` is a general label that acts like a category for more specific tag values.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ecr_public_repository#key EcrPublicRepository#key}
-	Key *string `field:"required" json:"key" yaml:"key"`
-	// The value for the tag.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ecr_public_repository#key EcrPublicRepository#key}
+	Key *string `field:"optional" json:"key" yaml:"key"`
+	// A ``value`` acts as a descriptor within a tag category (key).
 	//
-	// You can specify a value that is 1 to 255 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
-	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ecr_public_repository#value EcrPublicRepository#value}
-	Value *string `field:"required" json:"value" yaml:"value"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ecr_public_repository#value EcrPublicRepository#value}
+	Value *string `field:"optional" json:"value" yaml:"value"`
 }
 

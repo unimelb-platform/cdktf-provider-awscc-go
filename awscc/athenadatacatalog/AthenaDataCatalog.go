@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/athenadatacatalog/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/athena_data_catalog awscc_athena_data_catalog}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/athena_data_catalog awscc_athena_data_catalog}.
 type AthenaDataCatalog interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -18,6 +18,9 @@ type AthenaDataCatalog interface {
 	Connection() interface{}
 	// Experimental.
 	SetConnection(val interface{})
+	ConnectionType() *string
+	SetConnectionType(val *string)
+	ConnectionTypeInput() *string
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -31,6 +34,9 @@ type AthenaDataCatalog interface {
 	Description() *string
 	SetDescription(val *string)
 	DescriptionInput() *string
+	Error() *string
+	SetError(val *string)
+	ErrorInput() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -62,6 +68,9 @@ type AthenaDataCatalog interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	Status() *string
+	SetStatus(val *string)
+	StatusInput() *string
 	Tags() AthenaDataCatalogTagsList
 	TagsInput() interface{}
 	// Experimental.
@@ -97,23 +106,39 @@ type AthenaDataCatalog interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutTags(value interface{})
+	ResetConnectionType()
 	ResetDescription()
+	ResetError()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetParameters()
+	ResetStatus()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -143,6 +168,26 @@ func (j *jsiiProxy_AthenaDataCatalog) Connection() interface{} {
 	_jsii_.Get(
 		j,
 		"connection",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AthenaDataCatalog) ConnectionType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"connectionType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AthenaDataCatalog) ConnectionTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"connectionTypeInput",
 		&returns,
 	)
 	return returns
@@ -193,6 +238,26 @@ func (j *jsiiProxy_AthenaDataCatalog) DescriptionInput() *string {
 	_jsii_.Get(
 		j,
 		"descriptionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AthenaDataCatalog) Error() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"error",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AthenaDataCatalog) ErrorInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"errorInput",
 		&returns,
 	)
 	return returns
@@ -328,6 +393,26 @@ func (j *jsiiProxy_AthenaDataCatalog) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_AthenaDataCatalog) Status() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"status",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AthenaDataCatalog) StatusInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"statusInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_AthenaDataCatalog) Tags() AthenaDataCatalogTagsList {
 	var returns AthenaDataCatalogTagsList
 	_jsii_.Get(
@@ -399,7 +484,7 @@ func (j *jsiiProxy_AthenaDataCatalog) TypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/athena_data_catalog awscc_athena_data_catalog} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/athena_data_catalog awscc_athena_data_catalog} Resource.
 func NewAthenaDataCatalog(scope constructs.Construct, id *string, config *AthenaDataCatalogConfig) AthenaDataCatalog {
 	_init_.Initialize()
 
@@ -417,7 +502,7 @@ func NewAthenaDataCatalog(scope constructs.Construct, id *string, config *Athena
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/athena_data_catalog awscc_athena_data_catalog} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/athena_data_catalog awscc_athena_data_catalog} Resource.
 func NewAthenaDataCatalog_Override(a AthenaDataCatalog, scope constructs.Construct, id *string, config *AthenaDataCatalogConfig) {
 	_init_.Initialize()
 
@@ -435,6 +520,17 @@ func (j *jsiiProxy_AthenaDataCatalog)SetConnection(val interface{}) {
 	_jsii_.Set(
 		j,
 		"connection",
+		val,
+	)
+}
+
+func (j *jsiiProxy_AthenaDataCatalog)SetConnectionType(val *string) {
+	if err := j.validateSetConnectionTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"connectionType",
 		val,
 	)
 }
@@ -465,6 +561,17 @@ func (j *jsiiProxy_AthenaDataCatalog)SetDescription(val *string) {
 	_jsii_.Set(
 		j,
 		"description",
+		val,
+	)
+}
+
+func (j *jsiiProxy_AthenaDataCatalog)SetError(val *string) {
+	if err := j.validateSetErrorParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"error",
 		val,
 	)
 }
@@ -525,6 +632,17 @@ func (j *jsiiProxy_AthenaDataCatalog)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_AthenaDataCatalog)SetStatus(val *string) {
+	if err := j.validateSetStatusParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"status",
 		val,
 	)
 }
@@ -809,6 +927,19 @@ func (a *jsiiProxy_AthenaDataCatalog) GetStringMapAttribute(terraformAttribute *
 	return returns
 }
 
+func (a *jsiiProxy_AthenaDataCatalog) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (a *jsiiProxy_AthenaDataCatalog) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := a.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -836,6 +967,17 @@ func (a *jsiiProxy_AthenaDataCatalog) InterpolationForAttribute(terraformAttribu
 	return returns
 }
 
+func (a *jsiiProxy_AthenaDataCatalog) MoveFromId(id *string) {
+	if err := a.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (a *jsiiProxy_AthenaDataCatalog) MoveTo(moveTarget *string, index interface{}) {
 	if err := a.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -844,6 +986,17 @@ func (a *jsiiProxy_AthenaDataCatalog) MoveTo(moveTarget *string, index interface
 		a,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (a *jsiiProxy_AthenaDataCatalog) MoveToId(id *string) {
+	if err := a.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -869,10 +1022,26 @@ func (a *jsiiProxy_AthenaDataCatalog) PutTags(value interface{}) {
 	)
 }
 
+func (a *jsiiProxy_AthenaDataCatalog) ResetConnectionType() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetConnectionType",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_AthenaDataCatalog) ResetDescription() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AthenaDataCatalog) ResetError() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetError",
 		nil, // no parameters
 	)
 }
@@ -893,6 +1062,14 @@ func (a *jsiiProxy_AthenaDataCatalog) ResetParameters() {
 	)
 }
 
+func (a *jsiiProxy_AthenaDataCatalog) ResetStatus() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetStatus",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_AthenaDataCatalog) ResetTags() {
 	_jsii_.InvokeVoid(
 		a,
@@ -907,6 +1084,32 @@ func (a *jsiiProxy_AthenaDataCatalog) SynthesizeAttributes() *map[string]interfa
 	_jsii_.Invoke(
 		a,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AthenaDataCatalog) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		a,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AthenaDataCatalog) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

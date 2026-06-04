@@ -27,10 +27,10 @@ type DataAwsccIotsitewiseGatewayGatewayPlatformOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	Greengrass() DataAwsccIotsitewiseGatewayGatewayPlatformGreengrassOutputReference
 	GreengrassV2() DataAwsccIotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference
 	InternalValue() *DataAwsccIotsitewiseGatewayGatewayPlatform
 	SetInternalValue(val *DataAwsccIotsitewiseGatewayGatewayPlatform)
+	SiemensIe() DataAwsccIotsitewiseGatewayGatewayPlatformSiemensIeOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -118,16 +118,6 @@ func (j *jsiiProxy_DataAwsccIotsitewiseGatewayGatewayPlatformOutputReference) Fq
 	return returns
 }
 
-func (j *jsiiProxy_DataAwsccIotsitewiseGatewayGatewayPlatformOutputReference) Greengrass() DataAwsccIotsitewiseGatewayGatewayPlatformGreengrassOutputReference {
-	var returns DataAwsccIotsitewiseGatewayGatewayPlatformGreengrassOutputReference
-	_jsii_.Get(
-		j,
-		"greengrass",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataAwsccIotsitewiseGatewayGatewayPlatformOutputReference) GreengrassV2() DataAwsccIotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference {
 	var returns DataAwsccIotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference
 	_jsii_.Get(
@@ -143,6 +133,16 @@ func (j *jsiiProxy_DataAwsccIotsitewiseGatewayGatewayPlatformOutputReference) In
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotsitewiseGatewayGatewayPlatformOutputReference) SiemensIe() DataAwsccIotsitewiseGatewayGatewayPlatformSiemensIeOutputReference {
+	var returns DataAwsccIotsitewiseGatewayGatewayPlatformSiemensIeOutputReference
+	_jsii_.Get(
+		j,
+		"siemensIe",
 		&returns,
 	)
 	return returns

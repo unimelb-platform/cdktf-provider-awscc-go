@@ -33,8 +33,8 @@ type DatabrewJobDataCatalogOutputsS3OptionsLocationOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DatabrewJobDataCatalogOutputsS3OptionsLocation
-	SetInternalValue(val *DatabrewJobDataCatalogOutputsS3OptionsLocation)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Key() *string
 	SetKey(val *string)
 	KeyInput() *string
@@ -70,6 +70,7 @@ type DatabrewJobDataCatalogOutputsS3OptionsLocationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucket()
 	ResetBucketOwner()
 	ResetKey()
 	// Produce the Token's value at resolution time.
@@ -167,8 +168,8 @@ func (j *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsLocationOutputReference
 	return returns
 }
 
-func (j *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsLocationOutputReference) InternalValue() *DatabrewJobDataCatalogOutputsS3OptionsLocation {
-	var returns *DatabrewJobDataCatalogOutputsS3OptionsLocation
+func (j *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsLocationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -289,7 +290,7 @@ func (j *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsLocationOutputReference
 	)
 }
 
-func (j *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsLocationOutputReference)SetInternalValue(val *DatabrewJobDataCatalogOutputsS3OptionsLocation) {
+func (j *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsLocationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -517,6 +518,14 @@ func (d *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsLocationOutputReference
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsLocationOutputReference) ResetBucket() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetBucket",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsLocationOutputReference) ResetBucketOwner() {

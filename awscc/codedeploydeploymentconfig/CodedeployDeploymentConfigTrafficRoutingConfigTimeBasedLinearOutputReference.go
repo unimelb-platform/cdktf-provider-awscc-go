@@ -67,6 +67,8 @@ type CodedeployDeploymentConfigTrafficRoutingConfigTimeBasedLinearOutputReferenc
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetLinearInterval()
+	ResetLinearPercentage()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CodedeployDeploymentConfigTrafficRoutingConfigTimeBasedLinear
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CodedeployDeploymentConfigTrafficRoutingConfigTimeBasedLinearOutputReference) ResetLinearInterval() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetLinearInterval",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CodedeployDeploymentConfigTrafficRoutingConfigTimeBasedLinearOutputReference) ResetLinearPercentage() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetLinearPercentage",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CodedeployDeploymentConfigTrafficRoutingConfigTimeBasedLinearOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

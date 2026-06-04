@@ -30,8 +30,8 @@ type LexBotAliasConversationLogSettingsTextLogSettingsDestinationCloudwatchOutpu
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotAliasConversationLogSettingsTextLogSettingsDestinationCloudwatch
-	SetInternalValue(val *LexBotAliasConversationLogSettingsTextLogSettingsDestinationCloudwatch)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	LogPrefix() *string
 	SetLogPrefix(val *string)
 	LogPrefixInput() *string
@@ -67,6 +67,8 @@ type LexBotAliasConversationLogSettingsTextLogSettingsDestinationCloudwatchOutpu
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCloudwatchLogGroupArn()
+	ResetLogPrefix()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -142,8 +144,8 @@ func (j *jsiiProxy_LexBotAliasConversationLogSettingsTextLogSettingsDestinationC
 	return returns
 }
 
-func (j *jsiiProxy_LexBotAliasConversationLogSettingsTextLogSettingsDestinationCloudwatchOutputReference) InternalValue() *LexBotAliasConversationLogSettingsTextLogSettingsDestinationCloudwatch {
-	var returns *LexBotAliasConversationLogSettingsTextLogSettingsDestinationCloudwatch
+func (j *jsiiProxy_LexBotAliasConversationLogSettingsTextLogSettingsDestinationCloudwatchOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -253,7 +255,7 @@ func (j *jsiiProxy_LexBotAliasConversationLogSettingsTextLogSettingsDestinationC
 	)
 }
 
-func (j *jsiiProxy_LexBotAliasConversationLogSettingsTextLogSettingsDestinationCloudwatchOutputReference)SetInternalValue(val *LexBotAliasConversationLogSettingsTextLogSettingsDestinationCloudwatch) {
+func (j *jsiiProxy_LexBotAliasConversationLogSettingsTextLogSettingsDestinationCloudwatchOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (l *jsiiProxy_LexBotAliasConversationLogSettingsTextLogSettingsDestinationC
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotAliasConversationLogSettingsTextLogSettingsDestinationCloudwatchOutputReference) ResetCloudwatchLogGroupArn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetCloudwatchLogGroupArn",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotAliasConversationLogSettingsTextLogSettingsDestinationCloudwatchOutputReference) ResetLogPrefix() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetLogPrefix",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotAliasConversationLogSettingsTextLogSettingsDestinationCloudwatchOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -30,6 +30,7 @@ type DataAwsccMediaconnectBridgeSourcesNetworkSourceOutputReference interface {
 	InternalValue() *DataAwsccMediaconnectBridgeSourcesNetworkSource
 	SetInternalValue(val *DataAwsccMediaconnectBridgeSourcesNetworkSource)
 	MulticastIp() *string
+	MulticastSourceSettings() DataAwsccMediaconnectBridgeSourcesNetworkSourceMulticastSourceSettingsOutputReference
 	Name() *string
 	NetworkName() *string
 	Port() *float64
@@ -136,6 +137,16 @@ func (j *jsiiProxy_DataAwsccMediaconnectBridgeSourcesNetworkSourceOutputReferenc
 	_jsii_.Get(
 		j,
 		"multicastIp",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccMediaconnectBridgeSourcesNetworkSourceOutputReference) MulticastSourceSettings() DataAwsccMediaconnectBridgeSourcesNetworkSourceMulticastSourceSettingsOutputReference {
+	var returns DataAwsccMediaconnectBridgeSourcesNetworkSourceMulticastSourceSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"multicastSourceSettings",
 		&returns,
 	)
 	return returns

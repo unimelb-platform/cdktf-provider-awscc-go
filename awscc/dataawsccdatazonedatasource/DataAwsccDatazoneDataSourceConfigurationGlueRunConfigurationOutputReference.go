@@ -10,6 +10,8 @@ import (
 
 type DataAwsccDatazoneDataSourceConfigurationGlueRunConfigurationOutputReference interface {
 	cdktf.ComplexObject
+	AutoImportDataQualityResult() cdktf.IResolvable
+	CatalogName() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -76,6 +78,26 @@ type DataAwsccDatazoneDataSourceConfigurationGlueRunConfigurationOutputReference
 // The jsii proxy struct for DataAwsccDatazoneDataSourceConfigurationGlueRunConfigurationOutputReference
 type jsiiProxy_DataAwsccDatazoneDataSourceConfigurationGlueRunConfigurationOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_DataAwsccDatazoneDataSourceConfigurationGlueRunConfigurationOutputReference) AutoImportDataQualityResult() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"autoImportDataQualityResult",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatazoneDataSourceConfigurationGlueRunConfigurationOutputReference) CatalogName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"catalogName",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccDatazoneDataSourceConfigurationGlueRunConfigurationOutputReference) ComplexObjectIndex() interface{} {

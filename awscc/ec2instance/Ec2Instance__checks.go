@@ -119,6 +119,14 @@ func (e *jsiiProxy_Ec2Instance) validateInterpolationForAttributeParameters(terr
 	return nil
 }
 
+func (e *jsiiProxy_Ec2Instance) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_Ec2Instance) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (e *jsiiProxy_Ec2Instance) validateMoveToParameters(moveTarget *string, ind
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (e *jsiiProxy_Ec2Instance) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -393,6 +409,17 @@ func (e *jsiiProxy_Ec2Instance) validatePutLicenseSpecificationsParameters(value
 		if !_jsii_.IsAnonymousProxy(value) {
 			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Ec2InstanceLicenseSpecifications; received %#v (a %T)", value, value)
 		}
+	}
+
+	return nil
+}
+
+func (e *jsiiProxy_Ec2Instance) validatePutMetadataOptionsParameters(value *Ec2InstanceMetadataOptions) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
 	}
 
 	return nil

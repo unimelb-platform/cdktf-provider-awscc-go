@@ -67,6 +67,8 @@ type RedshiftClusterParameterGroupTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (r *jsiiProxy_RedshiftClusterParameterGroupTagsOutputReference) Interpolati
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_RedshiftClusterParameterGroupTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RedshiftClusterParameterGroupTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_RedshiftClusterParameterGroupTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

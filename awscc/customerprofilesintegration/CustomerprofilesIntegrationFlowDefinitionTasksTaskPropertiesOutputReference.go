@@ -67,6 +67,8 @@ type CustomerprofilesIntegrationFlowDefinitionTasksTaskPropertiesOutputReference
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetOperatorPropertyKey()
+	ResetProperty()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTasksTaskPropertiesO
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTasksTaskPropertiesOutputReference) ResetOperatorPropertyKey() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetOperatorPropertyKey",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTasksTaskPropertiesOutputReference) ResetProperty() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetProperty",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTasksTaskPropertiesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

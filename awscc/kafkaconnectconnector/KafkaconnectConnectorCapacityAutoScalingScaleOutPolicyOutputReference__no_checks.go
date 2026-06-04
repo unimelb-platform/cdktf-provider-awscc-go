@@ -60,7 +60,7 @@ func (j *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingScaleOutPolicyOutputR
 	return nil
 }
 
-func (j *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingScaleOutPolicyOutputReference) validateSetInternalValueParameters(val *KafkaconnectConnectorCapacityAutoScalingScaleOutPolicy) error {
+func (j *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingScaleOutPolicyOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

@@ -4,6 +4,10 @@ package redshiftclusterparametergroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (r *jsiiProxy_RedshiftClusterParameterGroupParametersList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RedshiftClusterParameterGroupParametersList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -88,12 +88,14 @@ type AppflowConnectorProfileConnectorProfileConfigConnectorProfilePropertiesReds
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucketName()
 	ResetBucketPrefix()
 	ResetClusterIdentifier()
 	ResetDataApiRoleArn()
 	ResetDatabaseName()
 	ResetDatabaseUrl()
 	ResetIsRedshiftServerless()
+	ResetRoleArn()
 	ResetWorkgroupName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -728,6 +730,14 @@ func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfile
 	return returns
 }
 
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfilePropertiesRedshiftOutputReference) ResetBucketName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetBucketName",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfilePropertiesRedshiftOutputReference) ResetBucketPrefix() {
 	_jsii_.InvokeVoid(
 		a,
@@ -772,6 +782,14 @@ func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfile
 	_jsii_.InvokeVoid(
 		a,
 		"resetIsRedshiftServerless",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfilePropertiesRedshiftOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetRoleArn",
 		nil, // no parameters
 	)
 }

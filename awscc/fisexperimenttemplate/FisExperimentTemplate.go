@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/fisexperimenttemplate/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/fis_experiment_template awscc_fis_experiment_template}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/fis_experiment_template awscc_fis_experiment_template}.
 type FisExperimentTemplate interface {
 	cdktf.TerraformResource
 	Actions() FisExperimentTemplateActionsMap
@@ -35,6 +35,9 @@ type FisExperimentTemplate interface {
 	DescriptionInput() *string
 	ExperimentOptions() FisExperimentTemplateExperimentOptionsOutputReference
 	ExperimentOptionsInput() interface{}
+	ExperimentReportConfiguration() FisExperimentTemplateExperimentReportConfigurationOutputReference
+	ExperimentReportConfigurationInput() interface{}
+	ExperimentTemplateId() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -102,27 +105,43 @@ type FisExperimentTemplate interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutActions(value interface{})
 	PutExperimentOptions(value *FisExperimentTemplateExperimentOptions)
+	PutExperimentReportConfiguration(value *FisExperimentTemplateExperimentReportConfiguration)
 	PutLogConfiguration(value *FisExperimentTemplateLogConfiguration)
 	PutStopConditions(value interface{})
 	PutTargets(value interface{})
 	ResetActions()
 	ResetExperimentOptions()
+	ResetExperimentReportConfiguration()
 	ResetLogConfiguration()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -242,6 +261,36 @@ func (j *jsiiProxy_FisExperimentTemplate) ExperimentOptionsInput() interface{} {
 	_jsii_.Get(
 		j,
 		"experimentOptionsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FisExperimentTemplate) ExperimentReportConfiguration() FisExperimentTemplateExperimentReportConfigurationOutputReference {
+	var returns FisExperimentTemplateExperimentReportConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"experimentReportConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FisExperimentTemplate) ExperimentReportConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"experimentReportConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FisExperimentTemplate) ExperimentTemplateId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"experimentTemplateId",
 		&returns,
 	)
 	return returns
@@ -468,7 +517,7 @@ func (j *jsiiProxy_FisExperimentTemplate) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/fis_experiment_template awscc_fis_experiment_template} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/fis_experiment_template awscc_fis_experiment_template} Resource.
 func NewFisExperimentTemplate(scope constructs.Construct, id *string, config *FisExperimentTemplateConfig) FisExperimentTemplate {
 	_init_.Initialize()
 
@@ -486,7 +535,7 @@ func NewFisExperimentTemplate(scope constructs.Construct, id *string, config *Fi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/fis_experiment_template awscc_fis_experiment_template} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/fis_experiment_template awscc_fis_experiment_template} Resource.
 func NewFisExperimentTemplate_Override(f FisExperimentTemplate, scope constructs.Construct, id *string, config *FisExperimentTemplateConfig) {
 	_init_.Initialize()
 
@@ -867,6 +916,19 @@ func (f *jsiiProxy_FisExperimentTemplate) GetStringMapAttribute(terraformAttribu
 	return returns
 }
 
+func (f *jsiiProxy_FisExperimentTemplate) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		f,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (f *jsiiProxy_FisExperimentTemplate) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := f.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -894,6 +956,17 @@ func (f *jsiiProxy_FisExperimentTemplate) InterpolationForAttribute(terraformAtt
 	return returns
 }
 
+func (f *jsiiProxy_FisExperimentTemplate) MoveFromId(id *string) {
+	if err := f.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (f *jsiiProxy_FisExperimentTemplate) MoveTo(moveTarget *string, index interface{}) {
 	if err := f.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -902,6 +975,17 @@ func (f *jsiiProxy_FisExperimentTemplate) MoveTo(moveTarget *string, index inter
 		f,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (f *jsiiProxy_FisExperimentTemplate) MoveToId(id *string) {
+	if err := f.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -934,6 +1018,17 @@ func (f *jsiiProxy_FisExperimentTemplate) PutExperimentOptions(value *FisExperim
 	_jsii_.InvokeVoid(
 		f,
 		"putExperimentOptions",
+		[]interface{}{value},
+	)
+}
+
+func (f *jsiiProxy_FisExperimentTemplate) PutExperimentReportConfiguration(value *FisExperimentTemplateExperimentReportConfiguration) {
+	if err := f.validatePutExperimentReportConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"putExperimentReportConfiguration",
 		[]interface{}{value},
 	)
 }
@@ -987,6 +1082,14 @@ func (f *jsiiProxy_FisExperimentTemplate) ResetExperimentOptions() {
 	)
 }
 
+func (f *jsiiProxy_FisExperimentTemplate) ResetExperimentReportConfiguration() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetExperimentReportConfiguration",
+		nil, // no parameters
+	)
+}
+
 func (f *jsiiProxy_FisExperimentTemplate) ResetLogConfiguration() {
 	_jsii_.InvokeVoid(
 		f,
@@ -1003,12 +1106,46 @@ func (f *jsiiProxy_FisExperimentTemplate) ResetOverrideLogicalId() {
 	)
 }
 
+func (f *jsiiProxy_FisExperimentTemplate) ResetTags() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetTags",
+		nil, // no parameters
+	)
+}
+
 func (f *jsiiProxy_FisExperimentTemplate) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		f,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (f *jsiiProxy_FisExperimentTemplate) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		f,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (f *jsiiProxy_FisExperimentTemplate) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		f,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

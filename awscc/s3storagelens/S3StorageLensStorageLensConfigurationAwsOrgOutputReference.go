@@ -64,6 +64,7 @@ type S3StorageLensStorageLensConfigurationAwsOrgOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_S3StorageLensStorageLensConfigurationAwsOrgOutputReference) I
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_S3StorageLensStorageLensConfigurationAwsOrgOutputReference) ResetArn() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetArn",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_S3StorageLensStorageLensConfigurationAwsOrgOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

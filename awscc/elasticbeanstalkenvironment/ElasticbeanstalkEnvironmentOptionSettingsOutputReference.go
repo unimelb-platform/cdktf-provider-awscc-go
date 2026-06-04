@@ -73,6 +73,8 @@ type ElasticbeanstalkEnvironmentOptionSettingsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetNamespace()
+	ResetOptionName()
 	ResetResourceName()
 	ResetValue()
 	// Produce the Token's value at resolution time.
@@ -551,6 +553,22 @@ func (e *jsiiProxy_ElasticbeanstalkEnvironmentOptionSettingsOutputReference) Int
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_ElasticbeanstalkEnvironmentOptionSettingsOutputReference) ResetNamespace() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetNamespace",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ElasticbeanstalkEnvironmentOptionSettingsOutputReference) ResetOptionName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetOptionName",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_ElasticbeanstalkEnvironmentOptionSettingsOutputReference) ResetResourceName() {

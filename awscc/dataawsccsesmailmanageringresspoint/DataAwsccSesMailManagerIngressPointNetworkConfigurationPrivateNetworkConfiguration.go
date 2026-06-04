@@ -1,0 +1,6 @@
+package dataawsccsesmailmanageringresspoint
+
+
+type DataAwsccSesMailManagerIngressPointNetworkConfigurationPrivateNetworkConfiguration struct {
+}
+

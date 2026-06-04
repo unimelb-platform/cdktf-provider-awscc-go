@@ -32,6 +32,7 @@ type DataAwsccMskReplicatorReplicationInfoListTopicReplicationOutputReference in
 	Fqn() *string
 	InternalValue() *DataAwsccMskReplicatorReplicationInfoListTopicReplication
 	SetInternalValue(val *DataAwsccMskReplicatorReplicationInfoListTopicReplication)
+	StartingPosition() DataAwsccMskReplicatorReplicationInfoListTopicReplicationStartingPositionOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -40,6 +41,7 @@ type DataAwsccMskReplicatorReplicationInfoListTopicReplicationOutputReference in
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	TopicNameConfiguration() DataAwsccMskReplicatorReplicationInfoListTopicReplicationTopicNameConfigurationOutputReference
 	TopicsToExclude() *[]*string
 	TopicsToReplicate() *[]*string
 	// Experimental.
@@ -161,6 +163,16 @@ func (j *jsiiProxy_DataAwsccMskReplicatorReplicationInfoListTopicReplicationOutp
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccMskReplicatorReplicationInfoListTopicReplicationOutputReference) StartingPosition() DataAwsccMskReplicatorReplicationInfoListTopicReplicationStartingPositionOutputReference {
+	var returns DataAwsccMskReplicatorReplicationInfoListTopicReplicationStartingPositionOutputReference
+	_jsii_.Get(
+		j,
+		"startingPosition",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccMskReplicatorReplicationInfoListTopicReplicationOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -176,6 +188,16 @@ func (j *jsiiProxy_DataAwsccMskReplicatorReplicationInfoListTopicReplicationOutp
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccMskReplicatorReplicationInfoListTopicReplicationOutputReference) TopicNameConfiguration() DataAwsccMskReplicatorReplicationInfoListTopicReplicationTopicNameConfigurationOutputReference {
+	var returns DataAwsccMskReplicatorReplicationInfoListTopicReplicationTopicNameConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"topicNameConfiguration",
 		&returns,
 	)
 	return returns

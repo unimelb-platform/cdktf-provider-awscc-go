@@ -36,7 +36,7 @@ type AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverO
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	S3OutputFormatConfig() AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigOutputReference
-	S3OutputFormatConfigInput() *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfig
+	S3OutputFormatConfigInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -70,7 +70,9 @@ type AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverO
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutS3OutputFormatConfig(value *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfig)
+	ResetBucketName()
 	ResetBucketPrefix()
+	ResetS3OutputFormatConfig()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -186,8 +188,8 @@ func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPrope
 	return returns
 }
 
-func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverOutputReference) S3OutputFormatConfigInput() *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfig {
-	var returns *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfig
+func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverOutputReference) S3OutputFormatConfigInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"s3OutputFormatConfigInput",
@@ -518,10 +520,26 @@ func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPrope
 	)
 }
 
+func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverOutputReference) ResetBucketName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetBucketName",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverOutputReference) ResetBucketPrefix() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetBucketPrefix",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverOutputReference) ResetS3OutputFormatConfig() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetS3OutputFormatConfig",
 		nil, // no parameters
 	)
 }

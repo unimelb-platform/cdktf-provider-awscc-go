@@ -9,9 +9,10 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccomicssequencestore/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/omics_sequence_store awscc_omics_sequence_store}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/omics_sequence_store awscc_omics_sequence_store}.
 type DataAwsccOmicsSequenceStore interface {
 	cdktf.TerraformDataSource
+	AccessLogLocation() *string
 	Arn() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
@@ -27,6 +28,7 @@ type DataAwsccOmicsSequenceStore interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	Description() *string
+	ETagAlgorithmFamily() *string
 	FallbackLocation() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
@@ -46,14 +48,20 @@ type DataAwsccOmicsSequenceStore interface {
 	Name() *string
 	// The tree node.
 	Node() constructs.Node
+	PropagatedSetLevelTags() *[]*string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	S3AccessPointArn() *string
+	S3AccessPolicy() *string
+	S3Uri() *string
 	SequenceStoreId() *string
 	SseConfig() DataAwsccOmicsSequenceStoreSseConfigOutputReference
+	Status() *string
+	StatusMessage() *string
 	Tags() cdktf.StringMap
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -61,6 +69,7 @@ type DataAwsccOmicsSequenceStore interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	UpdateTime() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -90,6 +99,10 @@ type DataAwsccOmicsSequenceStore interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -102,6 +115,16 @@ type DataAwsccOmicsSequenceStore interface {
 // The jsii proxy struct for DataAwsccOmicsSequenceStore
 type jsiiProxy_DataAwsccOmicsSequenceStore struct {
 	internal.Type__cdktfTerraformDataSource
+}
+
+func (j *jsiiProxy_DataAwsccOmicsSequenceStore) AccessLogLocation() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"accessLogLocation",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccOmicsSequenceStore) Arn() *string {
@@ -169,6 +192,16 @@ func (j *jsiiProxy_DataAwsccOmicsSequenceStore) Description() *string {
 	_jsii_.Get(
 		j,
 		"description",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccOmicsSequenceStore) ETagAlgorithmFamily() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"eTagAlgorithmFamily",
 		&returns,
 	)
 	return returns
@@ -264,6 +297,16 @@ func (j *jsiiProxy_DataAwsccOmicsSequenceStore) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccOmicsSequenceStore) PropagatedSetLevelTags() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"propagatedSetLevelTags",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccOmicsSequenceStore) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -284,6 +327,36 @@ func (j *jsiiProxy_DataAwsccOmicsSequenceStore) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccOmicsSequenceStore) S3AccessPointArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"s3AccessPointArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccOmicsSequenceStore) S3AccessPolicy() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"s3AccessPolicy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccOmicsSequenceStore) S3Uri() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"s3Uri",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccOmicsSequenceStore) SequenceStoreId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -299,6 +372,26 @@ func (j *jsiiProxy_DataAwsccOmicsSequenceStore) SseConfig() DataAwsccOmicsSequen
 	_jsii_.Get(
 		j,
 		"sseConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccOmicsSequenceStore) Status() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"status",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccOmicsSequenceStore) StatusMessage() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"statusMessage",
 		&returns,
 	)
 	return returns
@@ -344,8 +437,18 @@ func (j *jsiiProxy_DataAwsccOmicsSequenceStore) TerraformResourceType() *string 
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccOmicsSequenceStore) UpdateTime() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"updateTime",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/omics_sequence_store awscc_omics_sequence_store} Data Source.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/omics_sequence_store awscc_omics_sequence_store} Data Source.
 func NewDataAwsccOmicsSequenceStore(scope constructs.Construct, id *string, config *DataAwsccOmicsSequenceStoreConfig) DataAwsccOmicsSequenceStore {
 	_init_.Initialize()
 
@@ -363,7 +466,7 @@ func NewDataAwsccOmicsSequenceStore(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/omics_sequence_store awscc_omics_sequence_store} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/omics_sequence_store awscc_omics_sequence_store} Data Source.
 func NewDataAwsccOmicsSequenceStore_Override(d DataAwsccOmicsSequenceStore, scope constructs.Construct, id *string, config *DataAwsccOmicsSequenceStoreConfig) {
 	_init_.Initialize()
 
@@ -730,6 +833,32 @@ func (d *jsiiProxy_DataAwsccOmicsSequenceStore) SynthesizeAttributes() *map[stri
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccOmicsSequenceStore) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccOmicsSequenceStore) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -1,0 +1,6 @@
+package dataawsccchatbotmicrosoftteamschannelconfiguration
+
+
+type DataAwsccChatbotMicrosoftTeamsChannelConfigurationTags struct {
+}
+

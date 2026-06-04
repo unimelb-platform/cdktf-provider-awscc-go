@@ -27,8 +27,8 @@ type AppstreamAppBlockSetupScriptDetailsScriptS3LocationOutputReference interfac
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *AppstreamAppBlockSetupScriptDetailsScriptS3Location
-	SetInternalValue(val *AppstreamAppBlockSetupScriptDetailsScriptS3Location)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	S3Bucket() *string
 	SetS3Bucket(val *string)
 	S3BucketInput() *string
@@ -67,6 +67,7 @@ type AppstreamAppBlockSetupScriptDetailsScriptS3LocationOutputReference interfac
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetS3Bucket()
 	ResetS3Key()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -123,8 +124,8 @@ func (j *jsiiProxy_AppstreamAppBlockSetupScriptDetailsScriptS3LocationOutputRefe
 	return returns
 }
 
-func (j *jsiiProxy_AppstreamAppBlockSetupScriptDetailsScriptS3LocationOutputReference) InternalValue() *AppstreamAppBlockSetupScriptDetailsScriptS3Location {
-	var returns *AppstreamAppBlockSetupScriptDetailsScriptS3Location
+func (j *jsiiProxy_AppstreamAppBlockSetupScriptDetailsScriptS3LocationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -243,7 +244,7 @@ func (j *jsiiProxy_AppstreamAppBlockSetupScriptDetailsScriptS3LocationOutputRefe
 	)
 }
 
-func (j *jsiiProxy_AppstreamAppBlockSetupScriptDetailsScriptS3LocationOutputReference)SetInternalValue(val *AppstreamAppBlockSetupScriptDetailsScriptS3Location) {
+func (j *jsiiProxy_AppstreamAppBlockSetupScriptDetailsScriptS3LocationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -482,6 +483,14 @@ func (a *jsiiProxy_AppstreamAppBlockSetupScriptDetailsScriptS3LocationOutputRefe
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AppstreamAppBlockSetupScriptDetailsScriptS3LocationOutputReference) ResetS3Bucket() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetS3Bucket",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AppstreamAppBlockSetupScriptDetailsScriptS3LocationOutputReference) ResetS3Key() {

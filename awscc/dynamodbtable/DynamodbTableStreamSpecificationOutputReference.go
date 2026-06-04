@@ -29,6 +29,8 @@ type DynamodbTableStreamSpecificationOutputReference interface {
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	ResourcePolicy() DynamodbTableStreamSpecificationResourcePolicyOutputReference
+	ResourcePolicyInput() interface{}
 	StreamViewType() *string
 	SetStreamViewType(val *string)
 	StreamViewTypeInput() *string
@@ -64,6 +66,9 @@ type DynamodbTableStreamSpecificationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutResourcePolicy(value *DynamodbTableStreamSpecificationResourcePolicy)
+	ResetResourcePolicy()
+	ResetStreamViewType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -124,6 +129,26 @@ func (j *jsiiProxy_DynamodbTableStreamSpecificationOutputReference) InternalValu
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbTableStreamSpecificationOutputReference) ResourcePolicy() DynamodbTableStreamSpecificationResourcePolicyOutputReference {
+	var returns DynamodbTableStreamSpecificationResourcePolicyOutputReference
+	_jsii_.Get(
+		j,
+		"resourcePolicy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbTableStreamSpecificationOutputReference) ResourcePolicyInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"resourcePolicyInput",
 		&returns,
 	)
 	return returns
@@ -447,6 +472,33 @@ func (d *jsiiProxy_DynamodbTableStreamSpecificationOutputReference) Interpolatio
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DynamodbTableStreamSpecificationOutputReference) PutResourcePolicy(value *DynamodbTableStreamSpecificationResourcePolicy) {
+	if err := d.validatePutResourcePolicyParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putResourcePolicy",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DynamodbTableStreamSpecificationOutputReference) ResetResourcePolicy() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetResourcePolicy",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbTableStreamSpecificationOutputReference) ResetStreamViewType() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetStreamViewType",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DynamodbTableStreamSpecificationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

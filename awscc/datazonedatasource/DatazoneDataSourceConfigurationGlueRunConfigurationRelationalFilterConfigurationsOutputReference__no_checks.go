@@ -64,7 +64,7 @@ func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationRelational
 	return nil
 }
 
-func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationRelationalFilterConfigurationsOutputReference) validateSetInternalValueParameters(val *DatazoneDataSourceConfigurationGlueRunConfigurationRelationalFilterConfigurations) error {
+func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationRelationalFilterConfigurationsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

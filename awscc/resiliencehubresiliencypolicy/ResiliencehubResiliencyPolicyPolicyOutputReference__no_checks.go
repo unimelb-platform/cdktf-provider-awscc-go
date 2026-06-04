@@ -44,6 +44,22 @@ func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validateI
 	return nil
 }
 
+func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validatePutAzParameters(value *ResiliencehubResiliencyPolicyPolicyAz) error {
+	return nil
+}
+
+func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validatePutHardwareParameters(value *ResiliencehubResiliencyPolicyPolicyHardware) error {
+	return nil
+}
+
+func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validatePutRegionParameters(value *ResiliencehubResiliencyPolicyPolicyRegion) error {
+	return nil
+}
+
+func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validatePutSoftwareAttributeParameters(value *ResiliencehubResiliencyPolicyPolicySoftware) error {
+	return nil
+}
+
 func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }
@@ -60,14 +76,6 @@ func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validateS
 	return nil
 }
 
-func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validateSetRpoInSecsParameters(val *float64) error {
-	return nil
-}
-
-func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validateSetRtoInSecsParameters(val *float64) error {
-	return nil
-}
-
 func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }
@@ -76,7 +84,7 @@ func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validateS
 	return nil
 }
 
-func validateNewResiliencehubResiliencyPolicyPolicyOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectKey *string) error {
+func validateNewResiliencehubResiliencyPolicyPolicyOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
 	return nil
 }
 

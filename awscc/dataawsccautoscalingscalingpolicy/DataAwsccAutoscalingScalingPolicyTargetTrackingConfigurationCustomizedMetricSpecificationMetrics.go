@@ -1,0 +1,6 @@
+package dataawsccautoscalingscalingpolicy
+
+
+type DataAwsccAutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetrics struct {
+}
+

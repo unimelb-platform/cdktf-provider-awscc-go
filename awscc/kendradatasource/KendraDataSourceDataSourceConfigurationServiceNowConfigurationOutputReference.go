@@ -80,8 +80,11 @@ type KendraDataSourceDataSourceConfigurationServiceNowConfigurationOutputReferen
 	PutKnowledgeArticleConfiguration(value *KendraDataSourceDataSourceConfigurationServiceNowConfigurationKnowledgeArticleConfiguration)
 	PutServiceCatalogConfiguration(value *KendraDataSourceDataSourceConfigurationServiceNowConfigurationServiceCatalogConfiguration)
 	ResetAuthenticationType()
+	ResetHostUrl()
 	ResetKnowledgeArticleConfiguration()
+	ResetSecretArn()
 	ResetServiceCatalogConfiguration()
+	ResetServiceNowBuildVersion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -630,6 +633,14 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationServiceNowConfiguratio
 	)
 }
 
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationServiceNowConfigurationOutputReference) ResetHostUrl() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetHostUrl",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationServiceNowConfigurationOutputReference) ResetKnowledgeArticleConfiguration() {
 	_jsii_.InvokeVoid(
 		k,
@@ -638,10 +649,26 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationServiceNowConfiguratio
 	)
 }
 
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationServiceNowConfigurationOutputReference) ResetSecretArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetSecretArn",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationServiceNowConfigurationOutputReference) ResetServiceCatalogConfiguration() {
 	_jsii_.InvokeVoid(
 		k,
 		"resetServiceCatalogConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationServiceNowConfigurationOutputReference) ResetServiceNowBuildVersion() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetServiceNowBuildVersion",
 		nil, // no parameters
 	)
 }

@@ -56,11 +56,23 @@ func (a *jsiiProxy_AppsyncDomainName) validateInterpolationForAttributeParameter
 	return nil
 }
 
+func (a *jsiiProxy_AppsyncDomainName) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_AppsyncDomainName) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (a *jsiiProxy_AppsyncDomainName) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_AppsyncDomainName) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (a *jsiiProxy_AppsyncDomainName) validatePutTagsParameters(value interface{}) error {
 	return nil
 }
 

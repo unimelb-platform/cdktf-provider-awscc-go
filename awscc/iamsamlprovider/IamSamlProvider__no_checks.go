@@ -56,11 +56,23 @@ func (i *jsiiProxy_IamSamlProvider) validateInterpolationForAttributeParameters(
 	return nil
 }
 
+func (i *jsiiProxy_IamSamlProvider) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IamSamlProvider) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (i *jsiiProxy_IamSamlProvider) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IamSamlProvider) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (i *jsiiProxy_IamSamlProvider) validatePutPrivateKeyListParameters(value interface{}) error {
 	return nil
 }
 
@@ -84,6 +96,14 @@ func validateIamSamlProvider_IsTerraformResourceParameters(x interface{}) error 
 	return nil
 }
 
+func (j *jsiiProxy_IamSamlProvider) validateSetAddPrivateKeyParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_IamSamlProvider) validateSetAssertionEncryptionModeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_IamSamlProvider) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }
@@ -101,6 +121,10 @@ func (j *jsiiProxy_IamSamlProvider) validateSetNameParameters(val *string) error
 }
 
 func (j *jsiiProxy_IamSamlProvider) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_IamSamlProvider) validateSetRemovePrivateKeyParameters(val *string) error {
 	return nil
 }
 

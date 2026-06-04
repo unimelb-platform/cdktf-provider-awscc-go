@@ -60,6 +60,10 @@ func (s *jsiiProxy_SagemakerInferenceComponentSpecificationOutputReference) vali
 	return nil
 }
 
+func (j *jsiiProxy_SagemakerInferenceComponentSpecificationOutputReference) validateSetBaseInferenceComponentNameParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_SagemakerInferenceComponentSpecificationOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	return nil
 }

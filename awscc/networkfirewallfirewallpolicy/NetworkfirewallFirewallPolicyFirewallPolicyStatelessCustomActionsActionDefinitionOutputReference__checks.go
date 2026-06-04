@@ -174,9 +174,25 @@ func (j *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomAct
 	return nil
 }
 
-func (j *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinitionOutputReference) validateSetInternalValueParameters(val *NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinition) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinitionOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinition:
+		val := val.(*NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinition)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinition:
+		val_ := val.(NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinition)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinition; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

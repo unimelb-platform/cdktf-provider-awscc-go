@@ -68,6 +68,7 @@ type LambdaFunctionRuntimeManagementConfigOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetRuntimeVersionArn()
+	ResetUpdateRuntimeOn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (l *jsiiProxy_LambdaFunctionRuntimeManagementConfigOutputReference) ResetRu
 	_jsii_.InvokeVoid(
 		l,
 		"resetRuntimeVersionArn",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LambdaFunctionRuntimeManagementConfigOutputReference) ResetUpdateRuntimeOn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetUpdateRuntimeOn",
 		nil, // no parameters
 	)
 }

@@ -171,9 +171,25 @@ func (j *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfigOut
 	return nil
 }
 
-func (j *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfigOutputReference) validateSetInternalValueParameters(val *HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfig) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfigOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfig:
+		val := val.(*HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfig)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfig:
+		val_ := val.(HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfig)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfig; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

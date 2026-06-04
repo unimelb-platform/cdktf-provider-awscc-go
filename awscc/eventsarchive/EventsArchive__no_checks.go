@@ -56,7 +56,15 @@ func (e *jsiiProxy_EventsArchive) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
+func (e *jsiiProxy_EventsArchive) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_EventsArchive) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_EventsArchive) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -97,6 +105,10 @@ func (j *jsiiProxy_EventsArchive) validateSetDescriptionParameters(val *string) 
 }
 
 func (j *jsiiProxy_EventsArchive) validateSetEventPatternParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_EventsArchive) validateSetKmsKeyIdentifierParameters(val *string) error {
 	return nil
 }
 

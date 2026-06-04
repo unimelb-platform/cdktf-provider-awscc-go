@@ -27,8 +27,8 @@ type NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesRuleOptionsOutputR
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesRuleOptions
-	SetInternalValue(val *NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesRuleOptions)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Keyword() *string
 	SetKeyword(val *string)
 	KeywordInput() *string
@@ -67,6 +67,7 @@ type NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesRuleOptionsOutputR
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKeyword()
 	ResetSettings()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -123,8 +124,8 @@ func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesRule
 	return returns
 }
 
-func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesRuleOptionsOutputReference) InternalValue() *NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesRuleOptions {
-	var returns *NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesRuleOptions
+func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesRuleOptionsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -243,7 +244,7 @@ func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesRule
 	)
 }
 
-func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesRuleOptionsOutputReference)SetInternalValue(val *NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesRuleOptions) {
+func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesRuleOptionsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -482,6 +483,14 @@ func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesRule
 	)
 
 	return returns
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesRuleOptionsOutputReference) ResetKeyword() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetKeyword",
+		nil, // no parameters
+	)
 }
 
 func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesRuleOptionsOutputReference) ResetSettings() {

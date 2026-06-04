@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2vpcendpointservice/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_vpc_endpoint_service awscc_ec2_vpc_endpoint_service}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_vpc_endpoint_service awscc_ec2_vpc_endpoint_service}.
 type Ec2VpcEndpointService interface {
 	cdktf.TerraformResource
 	AcceptanceRequired() interface{}
@@ -69,6 +69,14 @@ type Ec2VpcEndpointService interface {
 	// Experimental.
 	RawOverrides() interface{}
 	ServiceId() *string
+	SupportedIpAddressTypes() *[]*string
+	SetSupportedIpAddressTypes(val *[]*string)
+	SupportedIpAddressTypesInput() *[]*string
+	SupportedRegions() *[]*string
+	SetSupportedRegions(val *[]*string)
+	SupportedRegionsInput() *[]*string
+	Tags() Ec2VpcEndpointServiceTagsList
+	TagsInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -99,15 +107,26 @@ type Ec2VpcEndpointService interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTags(value interface{})
 	ResetAcceptanceRequired()
 	ResetContributorInsightsEnabled()
 	ResetGatewayLoadBalancerArns()
@@ -116,7 +135,13 @@ type Ec2VpcEndpointService interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPayerResponsibility()
+	ResetSupportedIpAddressTypes()
+	ResetSupportedRegions()
+	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -381,6 +406,66 @@ func (j *jsiiProxy_Ec2VpcEndpointService) ServiceId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2VpcEndpointService) SupportedIpAddressTypes() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"supportedIpAddressTypes",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpcEndpointService) SupportedIpAddressTypesInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"supportedIpAddressTypesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpcEndpointService) SupportedRegions() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"supportedRegions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpcEndpointService) SupportedRegionsInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"supportedRegionsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpcEndpointService) Tags() Ec2VpcEndpointServiceTagsList {
+	var returns Ec2VpcEndpointServiceTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpcEndpointService) TagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2VpcEndpointService) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -412,7 +497,7 @@ func (j *jsiiProxy_Ec2VpcEndpointService) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_vpc_endpoint_service awscc_ec2_vpc_endpoint_service} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_vpc_endpoint_service awscc_ec2_vpc_endpoint_service} Resource.
 func NewEc2VpcEndpointService(scope constructs.Construct, id *string, config *Ec2VpcEndpointServiceConfig) Ec2VpcEndpointService {
 	_init_.Initialize()
 
@@ -430,7 +515,7 @@ func NewEc2VpcEndpointService(scope constructs.Construct, id *string, config *Ec
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_vpc_endpoint_service awscc_ec2_vpc_endpoint_service} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_vpc_endpoint_service awscc_ec2_vpc_endpoint_service} Resource.
 func NewEc2VpcEndpointService_Override(e Ec2VpcEndpointService, scope constructs.Construct, id *string, config *Ec2VpcEndpointServiceConfig) {
 	_init_.Initialize()
 
@@ -560,6 +645,28 @@ func (j *jsiiProxy_Ec2VpcEndpointService)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2VpcEndpointService)SetSupportedIpAddressTypes(val *[]*string) {
+	if err := j.validateSetSupportedIpAddressTypesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"supportedIpAddressTypes",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2VpcEndpointService)SetSupportedRegions(val *[]*string) {
+	if err := j.validateSetSupportedRegionsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"supportedRegions",
 		val,
 	)
 }
@@ -833,6 +940,19 @@ func (e *jsiiProxy_Ec2VpcEndpointService) GetStringMapAttribute(terraformAttribu
 	return returns
 }
 
+func (e *jsiiProxy_Ec2VpcEndpointService) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2VpcEndpointService) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -860,6 +980,17 @@ func (e *jsiiProxy_Ec2VpcEndpointService) InterpolationForAttribute(terraformAtt
 	return returns
 }
 
+func (e *jsiiProxy_Ec2VpcEndpointService) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2VpcEndpointService) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -871,6 +1002,17 @@ func (e *jsiiProxy_Ec2VpcEndpointService) MoveTo(moveTarget *string, index inter
 	)
 }
 
+func (e *jsiiProxy_Ec2VpcEndpointService) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2VpcEndpointService) OverrideLogicalId(newLogicalId *string) {
 	if err := e.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -879,6 +1021,17 @@ func (e *jsiiProxy_Ec2VpcEndpointService) OverrideLogicalId(newLogicalId *string
 		e,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (e *jsiiProxy_Ec2VpcEndpointService) PutTags(value interface{}) {
+	if err := e.validatePutTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putTags",
+		[]interface{}{value},
 	)
 }
 
@@ -930,12 +1083,62 @@ func (e *jsiiProxy_Ec2VpcEndpointService) ResetPayerResponsibility() {
 	)
 }
 
+func (e *jsiiProxy_Ec2VpcEndpointService) ResetSupportedIpAddressTypes() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetSupportedIpAddressTypes",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2VpcEndpointService) ResetSupportedRegions() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetSupportedRegions",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2VpcEndpointService) ResetTags() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetTags",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_Ec2VpcEndpointService) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2VpcEndpointService) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2VpcEndpointService) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

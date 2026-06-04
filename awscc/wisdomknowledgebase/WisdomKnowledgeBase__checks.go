@@ -119,6 +119,14 @@ func (w *jsiiProxy_WisdomKnowledgeBase) validateInterpolationForAttributeParamet
 	return nil
 }
 
+func (w *jsiiProxy_WisdomKnowledgeBase) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (w *jsiiProxy_WisdomKnowledgeBase) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (w *jsiiProxy_WisdomKnowledgeBase) validateMoveToParameters(moveTarget *str
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (w *jsiiProxy_WisdomKnowledgeBase) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -247,6 +263,17 @@ func (w *jsiiProxy_WisdomKnowledgeBase) validatePutTagsParameters(value interfac
 		if !_jsii_.IsAnonymousProxy(value) {
 			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*WisdomKnowledgeBaseTags; received %#v (a %T)", value, value)
 		}
+	}
+
+	return nil
+}
+
+func (w *jsiiProxy_WisdomKnowledgeBase) validatePutVectorIngestionConfigurationParameters(value *WisdomKnowledgeBaseVectorIngestionConfiguration) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
 	}
 
 	return nil

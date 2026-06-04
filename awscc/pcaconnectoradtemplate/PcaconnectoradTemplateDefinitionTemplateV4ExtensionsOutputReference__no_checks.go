@@ -64,7 +64,7 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4ExtensionsOutputRef
 	return nil
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4ExtensionsOutputReference) validateSetInternalValueParameters(val *PcaconnectoradTemplateDefinitionTemplateV4Extensions) error {
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4ExtensionsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

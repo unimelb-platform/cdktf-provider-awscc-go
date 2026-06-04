@@ -80,6 +80,7 @@ type RdsOptionGroupOptionConfigurationsOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutOptionSettings(value interface{})
 	ResetDbSecurityGroupMemberships()
+	ResetOptionName()
 	ResetOptionSettings()
 	ResetOptionVersion()
 	ResetPort()
@@ -628,6 +629,14 @@ func (r *jsiiProxy_RdsOptionGroupOptionConfigurationsOutputReference) ResetDbSec
 	_jsii_.InvokeVoid(
 		r,
 		"resetDbSecurityGroupMemberships",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RdsOptionGroupOptionConfigurationsOutputReference) ResetOptionName() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetOptionName",
 		nil, // no parameters
 	)
 }

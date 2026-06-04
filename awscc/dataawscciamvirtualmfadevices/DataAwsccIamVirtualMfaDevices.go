@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciamvirtualmfadevices/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iam_virtual_mfa_devices awscc_iam_virtual_mfa_devices}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iam_virtual_mfa_devices awscc_iam_virtual_mfa_devices}.
 type DataAwsccIamVirtualMfaDevices interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccIamVirtualMfaDevices interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccIamVirtualMfaDevices) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iam_virtual_mfa_devices awscc_iam_virtual_mfa_devices} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iam_virtual_mfa_devices awscc_iam_virtual_mfa_devices} Data Source.
 func NewDataAwsccIamVirtualMfaDevices(scope constructs.Construct, id *string, config *DataAwsccIamVirtualMfaDevicesConfig) DataAwsccIamVirtualMfaDevices {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccIamVirtualMfaDevices(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iam_virtual_mfa_devices awscc_iam_virtual_mfa_devices} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iam_virtual_mfa_devices awscc_iam_virtual_mfa_devices} Data Source.
 func NewDataAwsccIamVirtualMfaDevices_Override(d DataAwsccIamVirtualMfaDevices, scope constructs.Construct, id *string, config *DataAwsccIamVirtualMfaDevicesConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccIamVirtualMfaDevices) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIamVirtualMfaDevices) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIamVirtualMfaDevices) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -67,6 +67,8 @@ type MediapackagePackagingGroupAuthorizationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCdnIdentifierSecret()
+	ResetSecretsRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (m *jsiiProxy_MediapackagePackagingGroupAuthorizationOutputReference) Inter
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_MediapackagePackagingGroupAuthorizationOutputReference) ResetCdnIdentifierSecret() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetCdnIdentifierSecret",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediapackagePackagingGroupAuthorizationOutputReference) ResetSecretsRoleArn() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetSecretsRoleArn",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_MediapackagePackagingGroupAuthorizationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

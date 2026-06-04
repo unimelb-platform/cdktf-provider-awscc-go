@@ -44,6 +44,14 @@ func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersRedshiftPara
 	return nil
 }
 
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersRedshiftParametersOutputReference) validatePutIamParametersParameters(value *QuicksightDataSourceAlternateDataSourceParametersRedshiftParametersIamParameters) error {
+	return nil
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersRedshiftParametersOutputReference) validatePutIdentityCenterConfigurationParameters(value *QuicksightDataSourceAlternateDataSourceParametersRedshiftParametersIdentityCenterConfiguration) error {
+	return nil
+}
+
 func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersRedshiftParametersOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

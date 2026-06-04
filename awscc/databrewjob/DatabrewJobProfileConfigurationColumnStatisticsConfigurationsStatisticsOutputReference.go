@@ -30,8 +30,8 @@ type DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatisticsOutp
 	IncludedStatistics() *[]*string
 	SetIncludedStatistics(val *[]*string)
 	IncludedStatisticsInput() *[]*string
-	InternalValue() *DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatistics
-	SetInternalValue(val *DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatistics)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Overrides() DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatisticsOverridesList
 	OverridesInput() interface{}
 	// Experimental.
@@ -144,8 +144,8 @@ func (j *jsiiProxy_DatabrewJobProfileConfigurationColumnStatisticsConfigurations
 	return returns
 }
 
-func (j *jsiiProxy_DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatisticsOutputReference) InternalValue() *DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatistics {
-	var returns *DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatistics
+func (j *jsiiProxy_DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatisticsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -255,7 +255,7 @@ func (j *jsiiProxy_DatabrewJobProfileConfigurationColumnStatisticsConfigurations
 	)
 }
 
-func (j *jsiiProxy_DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatisticsOutputReference)SetInternalValue(val *DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatistics) {
+func (j *jsiiProxy_DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatisticsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

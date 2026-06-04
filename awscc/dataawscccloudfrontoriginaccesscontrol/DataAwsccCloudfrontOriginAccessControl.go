@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccloudfrontoriginaccesscontrol/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudfront_origin_access_control awscc_cloudfront_origin_access_control}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudfront_origin_access_control awscc_cloudfront_origin_access_control}.
 type DataAwsccCloudfrontOriginAccessControl interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -42,6 +42,7 @@ type DataAwsccCloudfrontOriginAccessControl interface {
 	// The tree node.
 	Node() constructs.Node
 	OriginAccessControlConfig() DataAwsccCloudfrontOriginAccessControlOriginAccessControlConfigOutputReference
+	OriginAccessControlId() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -83,6 +84,10 @@ type DataAwsccCloudfrontOriginAccessControl interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -217,6 +222,16 @@ func (j *jsiiProxy_DataAwsccCloudfrontOriginAccessControl) OriginAccessControlCo
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccCloudfrontOriginAccessControl) OriginAccessControlId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"originAccessControlId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccCloudfrontOriginAccessControl) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -268,7 +283,7 @@ func (j *jsiiProxy_DataAwsccCloudfrontOriginAccessControl) TerraformResourceType
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudfront_origin_access_control awscc_cloudfront_origin_access_control} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudfront_origin_access_control awscc_cloudfront_origin_access_control} Data Source.
 func NewDataAwsccCloudfrontOriginAccessControl(scope constructs.Construct, id *string, config *DataAwsccCloudfrontOriginAccessControlConfig) DataAwsccCloudfrontOriginAccessControl {
 	_init_.Initialize()
 
@@ -286,7 +301,7 @@ func NewDataAwsccCloudfrontOriginAccessControl(scope constructs.Construct, id *s
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudfront_origin_access_control awscc_cloudfront_origin_access_control} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudfront_origin_access_control awscc_cloudfront_origin_access_control} Data Source.
 func NewDataAwsccCloudfrontOriginAccessControl_Override(d DataAwsccCloudfrontOriginAccessControl, scope constructs.Construct, id *string, config *DataAwsccCloudfrontOriginAccessControlConfig) {
 	_init_.Initialize()
 
@@ -653,6 +668,32 @@ func (d *jsiiProxy_DataAwsccCloudfrontOriginAccessControl) SynthesizeAttributes(
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontOriginAccessControl) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontOriginAccessControl) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

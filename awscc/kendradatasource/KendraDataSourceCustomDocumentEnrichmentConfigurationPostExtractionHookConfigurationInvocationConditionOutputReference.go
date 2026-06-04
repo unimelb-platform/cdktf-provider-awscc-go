@@ -70,7 +70,9 @@ type KendraDataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConf
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutConditionOnValue(value *KendraDataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValue)
+	ResetConditionDocumentAttributeKey()
 	ResetConditionOnValue()
+	ResetOperator()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -518,10 +520,26 @@ func (k *jsiiProxy_KendraDataSourceCustomDocumentEnrichmentConfigurationPostExtr
 	)
 }
 
+func (k *jsiiProxy_KendraDataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionOutputReference) ResetConditionDocumentAttributeKey() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetConditionDocumentAttributeKey",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KendraDataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionOutputReference) ResetConditionOnValue() {
 	_jsii_.InvokeVoid(
 		k,
 		"resetConditionOnValue",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionOutputReference) ResetOperator() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetOperator",
 		nil, // no parameters
 	)
 }

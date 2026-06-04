@@ -30,7 +30,7 @@ type S3BucketNotificationConfigurationQueueConfigurationsFilterOutputReference i
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	S3Key() S3BucketNotificationConfigurationQueueConfigurationsFilterS3KeyOutputReference
-	S3KeyInput() *S3BucketNotificationConfigurationQueueConfigurationsFilterS3Key
+	S3KeyInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type S3BucketNotificationConfigurationQueueConfigurationsFilterOutputReference i
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutS3Key(value *S3BucketNotificationConfigurationQueueConfigurationsFilterS3Key)
+	ResetS3Key()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -139,8 +140,8 @@ func (j *jsiiProxy_S3BucketNotificationConfigurationQueueConfigurationsFilterOut
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketNotificationConfigurationQueueConfigurationsFilterOutputReference) S3KeyInput() *S3BucketNotificationConfigurationQueueConfigurationsFilterS3Key {
-	var returns *S3BucketNotificationConfigurationQueueConfigurationsFilterS3Key
+func (j *jsiiProxy_S3BucketNotificationConfigurationQueueConfigurationsFilterOutputReference) S3KeyInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"s3KeyInput",
@@ -446,6 +447,14 @@ func (s *jsiiProxy_S3BucketNotificationConfigurationQueueConfigurationsFilterOut
 		s,
 		"putS3Key",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_S3BucketNotificationConfigurationQueueConfigurationsFilterOutputReference) ResetS3Key() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetS3Key",
+		nil, // no parameters
 	)
 }
 

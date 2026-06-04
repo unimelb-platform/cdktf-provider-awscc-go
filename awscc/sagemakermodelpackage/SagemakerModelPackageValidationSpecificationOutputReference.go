@@ -67,6 +67,8 @@ type SagemakerModelPackageValidationSpecificationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutValidationProfiles(value interface{})
+	ResetValidationProfiles()
+	ResetValidationRole()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -480,6 +482,22 @@ func (s *jsiiProxy_SagemakerModelPackageValidationSpecificationOutputReference) 
 		s,
 		"putValidationProfiles",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackageValidationSpecificationOutputReference) ResetValidationProfiles() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetValidationProfiles",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackageValidationSpecificationOutputReference) ResetValidationRole() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetValidationRole",
+		nil, // no parameters
 	)
 }
 

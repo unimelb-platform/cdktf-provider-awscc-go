@@ -80,7 +80,7 @@ func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationOutputReferen
 	return nil
 }
 
-func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationOutputReference) validateSetInternalValueParameters(val *S3BucketReplicationConfigurationRulesDestination) error {
+func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

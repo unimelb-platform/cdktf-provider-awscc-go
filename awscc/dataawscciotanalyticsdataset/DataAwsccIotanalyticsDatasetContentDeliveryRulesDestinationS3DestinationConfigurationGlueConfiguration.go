@@ -1,0 +1,6 @@
+package dataawscciotanalyticsdataset
+
+
+type DataAwsccIotanalyticsDatasetContentDeliveryRulesDestinationS3DestinationConfigurationGlueConfiguration struct {
+}
+

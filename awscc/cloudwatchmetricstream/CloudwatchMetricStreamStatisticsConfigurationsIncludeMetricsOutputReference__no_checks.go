@@ -56,7 +56,7 @@ func (j *jsiiProxy_CloudwatchMetricStreamStatisticsConfigurationsIncludeMetricsO
 	return nil
 }
 
-func (j *jsiiProxy_CloudwatchMetricStreamStatisticsConfigurationsIncludeMetricsOutputReference) validateSetInternalValueParameters(val *CloudwatchMetricStreamStatisticsConfigurationsIncludeMetrics) error {
+func (j *jsiiProxy_CloudwatchMetricStreamStatisticsConfigurationsIncludeMetricsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

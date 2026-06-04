@@ -1,0 +1,6 @@
+package dataawsccnetworkmanagercorenetwork
+
+
+type DataAwsccNetworkmanagerCoreNetworkNetworkFunctionGroupsSegments struct {
+}
+

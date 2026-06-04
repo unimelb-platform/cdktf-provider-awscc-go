@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2vpcendpointservicepermissions/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_vpc_endpoint_service_permissions awscc_ec2_vpc_endpoint_service_permissions}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_vpc_endpoint_service_permissions awscc_ec2_vpc_endpoint_service_permissions}.
 type DataAwsccEc2VpcEndpointServicePermissions interface {
 	cdktf.TerraformDataSource
 	AllowedPrincipals() *[]*string
@@ -84,6 +84,10 @@ type DataAwsccEc2VpcEndpointServicePermissions interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -279,7 +283,7 @@ func (j *jsiiProxy_DataAwsccEc2VpcEndpointServicePermissions) TerraformResourceT
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_vpc_endpoint_service_permissions awscc_ec2_vpc_endpoint_service_permissions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_vpc_endpoint_service_permissions awscc_ec2_vpc_endpoint_service_permissions} Data Source.
 func NewDataAwsccEc2VpcEndpointServicePermissions(scope constructs.Construct, id *string, config *DataAwsccEc2VpcEndpointServicePermissionsConfig) DataAwsccEc2VpcEndpointServicePermissions {
 	_init_.Initialize()
 
@@ -297,7 +301,7 @@ func NewDataAwsccEc2VpcEndpointServicePermissions(scope constructs.Construct, id
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_vpc_endpoint_service_permissions awscc_ec2_vpc_endpoint_service_permissions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_vpc_endpoint_service_permissions awscc_ec2_vpc_endpoint_service_permissions} Data Source.
 func NewDataAwsccEc2VpcEndpointServicePermissions_Override(d DataAwsccEc2VpcEndpointServicePermissions, scope constructs.Construct, id *string, config *DataAwsccEc2VpcEndpointServicePermissionsConfig) {
 	_init_.Initialize()
 
@@ -664,6 +668,32 @@ func (d *jsiiProxy_DataAwsccEc2VpcEndpointServicePermissions) SynthesizeAttribut
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2VpcEndpointServicePermissions) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2VpcEndpointServicePermissions) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

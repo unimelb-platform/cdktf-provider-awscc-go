@@ -1,0 +1,6 @@
+package dataawscccleanroomscollaboration
+
+
+type DataAwsccCleanroomsCollaborationCreatorPaymentConfigurationMachineLearningModelInference struct {
+}
+

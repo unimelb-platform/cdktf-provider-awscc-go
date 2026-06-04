@@ -1,0 +1,6 @@
+package dataawscctimestreaminfluxdbinstance
+
+
+type DataAwsccTimestreamInfluxDbInstanceLogDeliveryConfigurationS3Configuration struct {
+}
+

@@ -64,6 +64,7 @@ type LambdaFunctionEphemeralStorageOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetSize()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (l *jsiiProxy_LambdaFunctionEphemeralStorageOutputReference) InterpolationF
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LambdaFunctionEphemeralStorageOutputReference) ResetSize() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetSize",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LambdaFunctionEphemeralStorageOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -30,7 +30,7 @@ type HealthlakeFhirDatastoreSseConfigurationOutputReference interface {
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	KmsEncryptionConfig() HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfigOutputReference
-	KmsEncryptionConfigInput() *HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfig
+	KmsEncryptionConfigInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type HealthlakeFhirDatastoreSseConfigurationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutKmsEncryptionConfig(value *HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfig)
+	ResetKmsEncryptionConfig()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -139,8 +140,8 @@ func (j *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationOutputReference) KmsEn
 	return returns
 }
 
-func (j *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationOutputReference) KmsEncryptionConfigInput() *HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfig {
-	var returns *HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfig
+func (j *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationOutputReference) KmsEncryptionConfigInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"kmsEncryptionConfigInput",
@@ -446,6 +447,14 @@ func (h *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationOutputReference) PutKm
 		h,
 		"putKmsEncryptionConfig",
 		[]interface{}{value},
+	)
+}
+
+func (h *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationOutputReference) ResetKmsEncryptionConfig() {
+	_jsii_.InvokeVoid(
+		h,
+		"resetKmsEncryptionConfig",
+		nil, // no parameters
 	)
 }
 

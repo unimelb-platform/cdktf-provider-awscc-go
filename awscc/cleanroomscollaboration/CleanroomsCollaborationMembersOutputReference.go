@@ -38,6 +38,8 @@ type CleanroomsCollaborationMembersOutputReference interface {
 	MemberAbilities() *[]*string
 	SetMemberAbilities(val *[]*string)
 	MemberAbilitiesInput() *[]*string
+	MlMemberAbilities() CleanroomsCollaborationMembersMlMemberAbilitiesOutputReference
+	MlMemberAbilitiesInput() interface{}
 	PaymentConfiguration() CleanroomsCollaborationMembersPaymentConfigurationOutputReference
 	PaymentConfigurationInput() interface{}
 	// Experimental.
@@ -72,7 +74,12 @@ type CleanroomsCollaborationMembersOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutMlMemberAbilities(value *CleanroomsCollaborationMembersMlMemberAbilities)
 	PutPaymentConfiguration(value *CleanroomsCollaborationMembersPaymentConfiguration)
+	ResetAccountId()
+	ResetDisplayName()
+	ResetMemberAbilities()
+	ResetMlMemberAbilities()
 	ResetPaymentConfiguration()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -194,6 +201,26 @@ func (j *jsiiProxy_CleanroomsCollaborationMembersOutputReference) MemberAbilitie
 	_jsii_.Get(
 		j,
 		"memberAbilitiesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsCollaborationMembersOutputReference) MlMemberAbilities() CleanroomsCollaborationMembersMlMemberAbilitiesOutputReference {
+	var returns CleanroomsCollaborationMembersMlMemberAbilitiesOutputReference
+	_jsii_.Get(
+		j,
+		"mlMemberAbilities",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsCollaborationMembersOutputReference) MlMemberAbilitiesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"mlMemberAbilitiesInput",
 		&returns,
 	)
 	return returns
@@ -541,6 +568,17 @@ func (c *jsiiProxy_CleanroomsCollaborationMembersOutputReference) InterpolationF
 	return returns
 }
 
+func (c *jsiiProxy_CleanroomsCollaborationMembersOutputReference) PutMlMemberAbilities(value *CleanroomsCollaborationMembersMlMemberAbilities) {
+	if err := c.validatePutMlMemberAbilitiesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putMlMemberAbilities",
+		[]interface{}{value},
+	)
+}
+
 func (c *jsiiProxy_CleanroomsCollaborationMembersOutputReference) PutPaymentConfiguration(value *CleanroomsCollaborationMembersPaymentConfiguration) {
 	if err := c.validatePutPaymentConfigurationParameters(value); err != nil {
 		panic(err)
@@ -549,6 +587,38 @@ func (c *jsiiProxy_CleanroomsCollaborationMembersOutputReference) PutPaymentConf
 		c,
 		"putPaymentConfiguration",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CleanroomsCollaborationMembersOutputReference) ResetAccountId() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAccountId",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsCollaborationMembersOutputReference) ResetDisplayName() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetDisplayName",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsCollaborationMembersOutputReference) ResetMemberAbilities() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetMemberAbilities",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsCollaborationMembersOutputReference) ResetMlMemberAbilities() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetMlMemberAbilities",
+		nil, // no parameters
 	)
 }
 

@@ -1,0 +1,6 @@
+package dataawsccec2networkinterfaceattachment
+
+
+type DataAwsccEc2NetworkInterfaceAttachmentEnaSrdSpecification struct {
+}
+

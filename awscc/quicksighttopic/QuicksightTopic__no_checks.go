@@ -56,11 +56,23 @@ func (q *jsiiProxy_QuicksightTopic) validateInterpolationForAttributeParameters(
 	return nil
 }
 
+func (q *jsiiProxy_QuicksightTopic) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (q *jsiiProxy_QuicksightTopic) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (q *jsiiProxy_QuicksightTopic) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (q *jsiiProxy_QuicksightTopic) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (q *jsiiProxy_QuicksightTopic) validatePutConfigOptionsParameters(value *QuicksightTopicConfigOptions) error {
 	return nil
 }
 
@@ -97,6 +109,10 @@ func (j *jsiiProxy_QuicksightTopic) validateSetCountParameters(val interface{}) 
 }
 
 func (j *jsiiProxy_QuicksightTopic) validateSetDescriptionParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_QuicksightTopic) validateSetFolderArnsParameters(val *[]*string) error {
 	return nil
 }
 

@@ -64,6 +64,7 @@ type DynamodbGlobalTableStreamSpecificationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetStreamViewType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (d *jsiiProxy_DynamodbGlobalTableStreamSpecificationOutputReference) Interp
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableStreamSpecificationOutputReference) ResetStreamViewType() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetStreamViewType",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DynamodbGlobalTableStreamSpecificationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

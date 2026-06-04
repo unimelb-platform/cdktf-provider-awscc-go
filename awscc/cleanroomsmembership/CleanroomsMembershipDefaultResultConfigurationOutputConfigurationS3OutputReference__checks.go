@@ -171,9 +171,25 @@ func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigura
 	return nil
 }
 
-func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference) validateSetInternalValueParameters(val *CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3:
+		val := val.(*CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3:
+		val_ := val.(CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil
@@ -190,6 +206,26 @@ func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigura
 func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference) validateSetResultFormatParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference) validateSetSingleFileOutputParameters(val interface{}) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+	switch val.(type) {
+	case *bool:
+		// ok
+	case bool:
+		// ok
+	case cdktf.IResolvable:
+		// ok
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: *bool, cdktf.IResolvable; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

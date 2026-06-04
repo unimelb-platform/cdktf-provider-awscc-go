@@ -74,7 +74,9 @@ type AmplifyAppCustomRulesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetCondition()
+	ResetSource()
 	ResetStatus()
+	ResetTarget()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -561,10 +563,26 @@ func (a *jsiiProxy_AmplifyAppCustomRulesOutputReference) ResetCondition() {
 	)
 }
 
+func (a *jsiiProxy_AmplifyAppCustomRulesOutputReference) ResetSource() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetSource",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_AmplifyAppCustomRulesOutputReference) ResetStatus() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetStatus",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AmplifyAppCustomRulesOutputReference) ResetTarget() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetTarget",
 		nil, // no parameters
 	)
 }

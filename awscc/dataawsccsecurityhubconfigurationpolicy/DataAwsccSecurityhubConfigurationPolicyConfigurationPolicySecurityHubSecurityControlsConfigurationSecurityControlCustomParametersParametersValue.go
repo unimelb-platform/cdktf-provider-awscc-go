@@ -1,0 +1,6 @@
+package dataawsccsecurityhubconfigurationpolicy
+
+
+type DataAwsccSecurityhubConfigurationPolicyConfigurationPolicySecurityHubSecurityControlsConfigurationSecurityControlCustomParametersParametersValue struct {
+}
+

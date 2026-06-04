@@ -72,6 +72,7 @@ type IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEventsOutputRefer
 	PutActions(value interface{})
 	ResetActions()
 	ResetCondition()
+	ResetEventName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEve
 	_jsii_.InvokeVoid(
 		i,
 		"resetCondition",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEventsOutputReference) ResetEventName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetEventName",
 		nil, // no parameters
 	)
 }

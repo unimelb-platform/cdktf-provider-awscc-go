@@ -37,8 +37,11 @@ type DataAwsccCustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutput
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	TimestampFormat() *string
+	TimestampSource() *string
 	Unit() *string
 	Value() *float64
+	ValueRange() DataAwsccCustomerprofilesCalculatedAttributeDefinitionConditionsRangeValueRangeOutputReference
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -148,6 +151,26 @@ func (j *jsiiProxy_DataAwsccCustomerprofilesCalculatedAttributeDefinitionConditi
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccCustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) TimestampFormat() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"timestampFormat",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) TimestampSource() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"timestampSource",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccCustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) Unit() *string {
 	var returns *string
 	_jsii_.Get(
@@ -163,6 +186,16 @@ func (j *jsiiProxy_DataAwsccCustomerprofilesCalculatedAttributeDefinitionConditi
 	_jsii_.Get(
 		j,
 		"value",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) ValueRange() DataAwsccCustomerprofilesCalculatedAttributeDefinitionConditionsRangeValueRangeOutputReference {
+	var returns DataAwsccCustomerprofilesCalculatedAttributeDefinitionConditionsRangeValueRangeOutputReference
+	_jsii_.Get(
+		j,
+		"valueRange",
 		&returns,
 	)
 	return returns

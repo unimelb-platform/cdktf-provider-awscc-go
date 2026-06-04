@@ -60,6 +60,14 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) va
 	return nil
 }
 
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) validateSetExternalIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) validateSetIdParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }

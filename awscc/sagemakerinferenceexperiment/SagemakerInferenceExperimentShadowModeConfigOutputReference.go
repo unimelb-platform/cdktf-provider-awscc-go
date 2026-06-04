@@ -67,6 +67,8 @@ type SagemakerInferenceExperimentShadowModeConfigOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutShadowModelVariants(value interface{})
+	ResetShadowModelVariants()
+	ResetSourceModelVariantName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -480,6 +482,22 @@ func (s *jsiiProxy_SagemakerInferenceExperimentShadowModeConfigOutputReference) 
 		s,
 		"putShadowModelVariants",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SagemakerInferenceExperimentShadowModeConfigOutputReference) ResetShadowModelVariants() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetShadowModelVariants",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerInferenceExperimentShadowModeConfigOutputReference) ResetSourceModelVariantName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSourceModelVariantName",
+		nil, // no parameters
 	)
 }
 

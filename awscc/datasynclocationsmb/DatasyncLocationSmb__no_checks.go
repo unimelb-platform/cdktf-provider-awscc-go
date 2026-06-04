@@ -56,7 +56,15 @@ func (d *jsiiProxy_DatasyncLocationSmb) validateInterpolationForAttributeParamet
 	return nil
 }
 
+func (d *jsiiProxy_DatasyncLocationSmb) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DatasyncLocationSmb) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DatasyncLocationSmb) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -92,6 +100,10 @@ func (j *jsiiProxy_DatasyncLocationSmb) validateSetAgentArnsParameters(val *[]*s
 	return nil
 }
 
+func (j *jsiiProxy_DatasyncLocationSmb) validateSetAuthenticationTypeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DatasyncLocationSmb) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }
@@ -100,7 +112,23 @@ func (j *jsiiProxy_DatasyncLocationSmb) validateSetCountParameters(val interface
 	return nil
 }
 
+func (j *jsiiProxy_DatasyncLocationSmb) validateSetDnsIpAddressesParameters(val *[]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DatasyncLocationSmb) validateSetDomainParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DatasyncLocationSmb) validateSetKerberosKeytabParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DatasyncLocationSmb) validateSetKerberosKrb5ConfParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DatasyncLocationSmb) validateSetKerberosPrincipalParameters(val *string) error {
 	return nil
 }
 

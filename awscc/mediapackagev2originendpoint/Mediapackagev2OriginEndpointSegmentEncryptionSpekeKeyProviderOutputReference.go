@@ -29,11 +29,11 @@ type Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderOutputReferenc
 	SetDrmSystems(val *[]*string)
 	DrmSystemsInput() *[]*string
 	EncryptionContractConfiguration() Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfigurationOutputReference
-	EncryptionContractConfigurationInput() *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfiguration
+	EncryptionContractConfigurationInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProvider
-	SetInternalValue(val *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProvider)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	ResourceId() *string
 	SetResourceId(val *string)
 	ResourceIdInput() *string
@@ -76,6 +76,11 @@ type Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderOutputReferenc
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutEncryptionContractConfiguration(value *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfiguration)
+	ResetDrmSystems()
+	ResetEncryptionContractConfiguration()
+	ResetResourceId()
+	ResetRoleArn()
+	ResetUrl()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -151,8 +156,8 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProvider
 	return returns
 }
 
-func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderOutputReference) EncryptionContractConfigurationInput() *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfiguration {
-	var returns *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfiguration
+func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderOutputReference) EncryptionContractConfigurationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"encryptionContractConfigurationInput",
@@ -171,8 +176,8 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProvider
 	return returns
 }
 
-func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderOutputReference) InternalValue() *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProvider {
-	var returns *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProvider
+func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -322,7 +327,7 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProvider
 	)
 }
 
-func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderOutputReference)SetInternalValue(val *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProvider) {
+func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -582,6 +587,46 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProvider
 		m,
 		"putEncryptionContractConfiguration",
 		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderOutputReference) ResetDrmSystems() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetDrmSystems",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderOutputReference) ResetEncryptionContractConfiguration() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetEncryptionContractConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderOutputReference) ResetResourceId() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetResourceId",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderOutputReference) ResetUrl() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetUrl",
+		nil, // no parameters
 	)
 }
 

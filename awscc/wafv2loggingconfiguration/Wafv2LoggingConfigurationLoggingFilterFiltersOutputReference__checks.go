@@ -202,9 +202,25 @@ func (j *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersOutputReference)
 	return nil
 }
 
-func (j *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersOutputReference) validateSetInternalValueParameters(val *Wafv2LoggingConfigurationLoggingFilterFilters) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *Wafv2LoggingConfigurationLoggingFilterFilters:
+		val := val.(*Wafv2LoggingConfigurationLoggingFilterFilters)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case Wafv2LoggingConfigurationLoggingFilterFilters:
+		val_ := val.(Wafv2LoggingConfigurationLoggingFilterFilters)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *Wafv2LoggingConfigurationLoggingFilterFilters; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

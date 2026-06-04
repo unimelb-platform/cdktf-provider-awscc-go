@@ -48,6 +48,10 @@ func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersSecurit
 	return nil
 }
 
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutputReference) validateSetAllowPrivilegeEscalationParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	return nil
 }

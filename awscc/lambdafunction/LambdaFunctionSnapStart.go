@@ -2,9 +2,9 @@ package lambdafunction
 
 
 type LambdaFunctionSnapStart struct {
-	// Applying SnapStart setting on function resource type.
+	// Set ``ApplyOn`` to ``PublishedVersions`` to create a snapshot of the initialized execution environment when you publish a function version.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lambda_function#apply_on LambdaFunction#apply_on}
-	ApplyOn *string `field:"required" json:"applyOn" yaml:"applyOn"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lambda_function#apply_on LambdaFunction#apply_on}
+	ApplyOn *string `field:"optional" json:"applyOn" yaml:"applyOn"`
 }
 

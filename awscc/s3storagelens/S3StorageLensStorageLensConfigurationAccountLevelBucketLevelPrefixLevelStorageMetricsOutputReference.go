@@ -27,8 +27,8 @@ type S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStor
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetrics
-	SetInternalValue(val *S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetrics)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	IsEnabled() interface{}
 	SetIsEnabled(val interface{})
 	IsEnabledInput() interface{}
@@ -124,8 +124,8 @@ func (j *jsiiProxy_S3StorageLensStorageLensConfigurationAccountLevelBucketLevelP
 	return returns
 }
 
-func (j *jsiiProxy_S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetricsOutputReference) InternalValue() *S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetrics {
-	var returns *S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetrics
+func (j *jsiiProxy_S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetricsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -244,7 +244,7 @@ func (j *jsiiProxy_S3StorageLensStorageLensConfigurationAccountLevelBucketLevelP
 	)
 }
 
-func (j *jsiiProxy_S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetricsOutputReference)SetInternalValue(val *S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetrics) {
+func (j *jsiiProxy_S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetricsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

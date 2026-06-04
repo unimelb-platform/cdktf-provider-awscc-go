@@ -33,8 +33,8 @@ type CassandraTableClusteringKeyColumnsColumnOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *CassandraTableClusteringKeyColumnsColumn
-	SetInternalValue(val *CassandraTableClusteringKeyColumnsColumn)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,6 +67,8 @@ type CassandraTableClusteringKeyColumnsColumnOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetColumnName()
+	ResetColumnType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -162,8 +164,8 @@ func (j *jsiiProxy_CassandraTableClusteringKeyColumnsColumnOutputReference) Fqn(
 	return returns
 }
 
-func (j *jsiiProxy_CassandraTableClusteringKeyColumnsColumnOutputReference) InternalValue() *CassandraTableClusteringKeyColumnsColumn {
-	var returns *CassandraTableClusteringKeyColumnsColumn
+func (j *jsiiProxy_CassandraTableClusteringKeyColumnsColumnOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -264,7 +266,7 @@ func (j *jsiiProxy_CassandraTableClusteringKeyColumnsColumnOutputReference)SetCo
 	)
 }
 
-func (j *jsiiProxy_CassandraTableClusteringKeyColumnsColumnOutputReference)SetInternalValue(val *CassandraTableClusteringKeyColumnsColumn) {
+func (j *jsiiProxy_CassandraTableClusteringKeyColumnsColumnOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CassandraTableClusteringKeyColumnsColumnOutputReference) Inte
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CassandraTableClusteringKeyColumnsColumnOutputReference) ResetColumnName() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetColumnName",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CassandraTableClusteringKeyColumnsColumnOutputReference) ResetColumnType() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetColumnType",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CassandraTableClusteringKeyColumnsColumnOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

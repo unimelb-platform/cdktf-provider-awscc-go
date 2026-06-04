@@ -9,16 +9,20 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccrdsdbinstance/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_db_instance awscc_rds_db_instance}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_db_instance awscc_rds_db_instance}.
 type DataAwsccRdsDbInstance interface {
 	cdktf.TerraformDataSource
 	AllocatedStorage() *string
 	AllowMajorVersionUpgrade() cdktf.IResolvable
+	ApplyImmediately() cdktf.IResolvable
 	AssociatedRoles() DataAwsccRdsDbInstanceAssociatedRolesList
+	AutomaticBackupReplicationKmsKeyId() *string
 	AutomaticBackupReplicationRegion() *string
+	AutomaticBackupReplicationRetentionPeriod() *float64
 	AutoMinorVersionUpgrade() cdktf.IResolvable
 	AvailabilityZone() *string
 	BackupRetentionPeriod() *float64
+	BackupTarget() *string
 	CaCertificateIdentifier() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
@@ -33,6 +37,7 @@ type DataAwsccRdsDbInstance interface {
 	// Experimental.
 	SetCount(val interface{})
 	CustomIamInstanceProfile() *string
+	DatabaseInsightsMode() *string
 	DbClusterIdentifier() *string
 	DbClusterSnapshotIdentifier() *string
 	DbInstanceArn() *string
@@ -63,6 +68,7 @@ type DataAwsccRdsDbInstance interface {
 	EnablePerformanceInsights() cdktf.IResolvable
 	Endpoint() DataAwsccRdsDbInstanceEndpointOutputReference
 	Engine() *string
+	EngineLifecycleSupport() *string
 	EngineVersion() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
@@ -161,6 +167,10 @@ type DataAwsccRdsDbInstance interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -195,6 +205,16 @@ func (j *jsiiProxy_DataAwsccRdsDbInstance) AllowMajorVersionUpgrade() cdktf.IRes
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRdsDbInstance) ApplyImmediately() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"applyImmediately",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRdsDbInstance) AssociatedRoles() DataAwsccRdsDbInstanceAssociatedRolesList {
 	var returns DataAwsccRdsDbInstanceAssociatedRolesList
 	_jsii_.Get(
@@ -205,11 +225,31 @@ func (j *jsiiProxy_DataAwsccRdsDbInstance) AssociatedRoles() DataAwsccRdsDbInsta
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRdsDbInstance) AutomaticBackupReplicationKmsKeyId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"automaticBackupReplicationKmsKeyId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRdsDbInstance) AutomaticBackupReplicationRegion() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"automaticBackupReplicationRegion",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRdsDbInstance) AutomaticBackupReplicationRetentionPeriod() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"automaticBackupReplicationRetentionPeriod",
 		&returns,
 	)
 	return returns
@@ -240,6 +280,16 @@ func (j *jsiiProxy_DataAwsccRdsDbInstance) BackupRetentionPeriod() *float64 {
 	_jsii_.Get(
 		j,
 		"backupRetentionPeriod",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRdsDbInstance) BackupTarget() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"backupTarget",
 		&returns,
 	)
 	return returns
@@ -330,6 +380,16 @@ func (j *jsiiProxy_DataAwsccRdsDbInstance) CustomIamInstanceProfile() *string {
 	_jsii_.Get(
 		j,
 		"customIamInstanceProfile",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRdsDbInstance) DatabaseInsightsMode() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseInsightsMode",
 		&returns,
 	)
 	return returns
@@ -600,6 +660,16 @@ func (j *jsiiProxy_DataAwsccRdsDbInstance) Engine() *string {
 	_jsii_.Get(
 		j,
 		"engine",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRdsDbInstance) EngineLifecycleSupport() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"engineLifecycleSupport",
 		&returns,
 	)
 	return returns
@@ -1126,7 +1196,7 @@ func (j *jsiiProxy_DataAwsccRdsDbInstance) VpcSecurityGroups() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_db_instance awscc_rds_db_instance} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_db_instance awscc_rds_db_instance} Data Source.
 func NewDataAwsccRdsDbInstance(scope constructs.Construct, id *string, config *DataAwsccRdsDbInstanceConfig) DataAwsccRdsDbInstance {
 	_init_.Initialize()
 
@@ -1144,7 +1214,7 @@ func NewDataAwsccRdsDbInstance(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_db_instance awscc_rds_db_instance} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_db_instance awscc_rds_db_instance} Data Source.
 func NewDataAwsccRdsDbInstance_Override(d DataAwsccRdsDbInstance, scope constructs.Construct, id *string, config *DataAwsccRdsDbInstanceConfig) {
 	_init_.Initialize()
 
@@ -1511,6 +1581,32 @@ func (d *jsiiProxy_DataAwsccRdsDbInstance) SynthesizeAttributes() *map[string]in
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRdsDbInstance) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRdsDbInstance) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

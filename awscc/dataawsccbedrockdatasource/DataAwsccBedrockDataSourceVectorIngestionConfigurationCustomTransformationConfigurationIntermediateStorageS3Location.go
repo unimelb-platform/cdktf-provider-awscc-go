@@ -1,0 +1,6 @@
+package dataawsccbedrockdatasource
+
+
+type DataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageS3Location struct {
+}
+

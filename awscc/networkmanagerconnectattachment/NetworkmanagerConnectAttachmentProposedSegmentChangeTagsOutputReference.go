@@ -67,6 +67,8 @@ type NetworkmanagerConnectAttachmentProposedSegmentChangeTagsOutputReference int
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (n *jsiiProxy_NetworkmanagerConnectAttachmentProposedSegmentChangeTagsOutpu
 	)
 
 	return returns
+}
+
+func (n *jsiiProxy_NetworkmanagerConnectAttachmentProposedSegmentChangeTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkmanagerConnectAttachmentProposedSegmentChangeTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (n *jsiiProxy_NetworkmanagerConnectAttachmentProposedSegmentChangeTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -77,6 +77,7 @@ type BatchJobDefinitionContainerPropertiesVolumesEfsVolumeConfigurationOutputRef
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAuthorizationConfig(value *BatchJobDefinitionContainerPropertiesVolumesEfsVolumeConfigurationAuthorizationConfig)
 	ResetAuthorizationConfig()
+	ResetFileSystemId()
 	ResetRootDirectory()
 	ResetTransitEncryption()
 	ResetTransitEncryptionPort()
@@ -593,6 +594,14 @@ func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesVolumesEfsVolumeConfigur
 	_jsii_.InvokeVoid(
 		b,
 		"resetAuthorizationConfig",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesVolumesEfsVolumeConfigurationOutputReference) ResetFileSystemId() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetFileSystemId",
 		nil, // no parameters
 	)
 }

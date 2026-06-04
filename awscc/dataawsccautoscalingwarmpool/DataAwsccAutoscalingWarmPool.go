@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccautoscalingwarmpool/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/autoscaling_warm_pool awscc_autoscaling_warm_pool}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/autoscaling_warm_pool awscc_autoscaling_warm_pool}.
 type DataAwsccAutoscalingWarmPool interface {
 	cdktf.TerraformDataSource
 	AutoScalingGroupName() *string
@@ -87,6 +87,10 @@ type DataAwsccAutoscalingWarmPool interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -312,7 +316,7 @@ func (j *jsiiProxy_DataAwsccAutoscalingWarmPool) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/autoscaling_warm_pool awscc_autoscaling_warm_pool} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/autoscaling_warm_pool awscc_autoscaling_warm_pool} Data Source.
 func NewDataAwsccAutoscalingWarmPool(scope constructs.Construct, id *string, config *DataAwsccAutoscalingWarmPoolConfig) DataAwsccAutoscalingWarmPool {
 	_init_.Initialize()
 
@@ -330,7 +334,7 @@ func NewDataAwsccAutoscalingWarmPool(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/autoscaling_warm_pool awscc_autoscaling_warm_pool} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/autoscaling_warm_pool awscc_autoscaling_warm_pool} Data Source.
 func NewDataAwsccAutoscalingWarmPool_Override(d DataAwsccAutoscalingWarmPool, scope constructs.Construct, id *string, config *DataAwsccAutoscalingWarmPoolConfig) {
 	_init_.Initialize()
 
@@ -697,6 +701,32 @@ func (d *jsiiProxy_DataAwsccAutoscalingWarmPool) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAutoscalingWarmPool) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAutoscalingWarmPool) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

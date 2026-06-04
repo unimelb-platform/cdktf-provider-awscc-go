@@ -1,0 +1,6 @@
+package dataawsccmediaconnectflow
+
+
+type DataAwsccMediaconnectFlowSourceMonitoringConfigAudioMonitoringSettings struct {
+}
+

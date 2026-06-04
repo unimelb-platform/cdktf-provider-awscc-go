@@ -9,12 +9,14 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/b2bipartnership/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/b2bi_partnership awscc_b2bi_partnership}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/b2bi_partnership awscc_b2bi_partnership}.
 type B2BiPartnership interface {
 	cdktf.TerraformResource
 	Capabilities() *[]*string
 	SetCapabilities(val *[]*string)
 	CapabilitiesInput() *[]*string
+	CapabilityOptions() B2BiPartnershipCapabilityOptionsOutputReference
+	CapabilityOptionsInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -105,23 +107,37 @@ type B2BiPartnership interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutCapabilityOptions(value *B2BiPartnershipCapabilityOptions)
 	PutTags(value interface{})
-	ResetCapabilities()
+	ResetCapabilityOptions()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPhone()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -151,6 +167,26 @@ func (j *jsiiProxy_B2BiPartnership) CapabilitiesInput() *[]*string {
 	_jsii_.Get(
 		j,
 		"capabilitiesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_B2BiPartnership) CapabilityOptions() B2BiPartnershipCapabilityOptionsOutputReference {
+	var returns B2BiPartnershipCapabilityOptionsOutputReference
+	_jsii_.Get(
+		j,
+		"capabilityOptions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_B2BiPartnership) CapabilityOptionsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"capabilityOptionsInput",
 		&returns,
 	)
 	return returns
@@ -477,7 +513,7 @@ func (j *jsiiProxy_B2BiPartnership) TradingPartnerId() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/b2bi_partnership awscc_b2bi_partnership} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/b2bi_partnership awscc_b2bi_partnership} Resource.
 func NewB2BiPartnership(scope constructs.Construct, id *string, config *B2BiPartnershipConfig) B2BiPartnership {
 	_init_.Initialize()
 
@@ -495,7 +531,7 @@ func NewB2BiPartnership(scope constructs.Construct, id *string, config *B2BiPart
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/b2bi_partnership awscc_b2bi_partnership} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/b2bi_partnership awscc_b2bi_partnership} Resource.
 func NewB2BiPartnership_Override(b B2BiPartnership, scope constructs.Construct, id *string, config *B2BiPartnershipConfig) {
 	_init_.Initialize()
 
@@ -898,6 +934,19 @@ func (b *jsiiProxy_B2BiPartnership) GetStringMapAttribute(terraformAttribute *st
 	return returns
 }
 
+func (b *jsiiProxy_B2BiPartnership) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		b,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (b *jsiiProxy_B2BiPartnership) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := b.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -925,6 +974,17 @@ func (b *jsiiProxy_B2BiPartnership) InterpolationForAttribute(terraformAttribute
 	return returns
 }
 
+func (b *jsiiProxy_B2BiPartnership) MoveFromId(id *string) {
+	if err := b.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (b *jsiiProxy_B2BiPartnership) MoveTo(moveTarget *string, index interface{}) {
 	if err := b.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -933,6 +993,17 @@ func (b *jsiiProxy_B2BiPartnership) MoveTo(moveTarget *string, index interface{}
 		b,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (b *jsiiProxy_B2BiPartnership) MoveToId(id *string) {
+	if err := b.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -947,6 +1018,17 @@ func (b *jsiiProxy_B2BiPartnership) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (b *jsiiProxy_B2BiPartnership) PutCapabilityOptions(value *B2BiPartnershipCapabilityOptions) {
+	if err := b.validatePutCapabilityOptionsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"putCapabilityOptions",
+		[]interface{}{value},
+	)
+}
+
 func (b *jsiiProxy_B2BiPartnership) PutTags(value interface{}) {
 	if err := b.validatePutTagsParameters(value); err != nil {
 		panic(err)
@@ -958,10 +1040,10 @@ func (b *jsiiProxy_B2BiPartnership) PutTags(value interface{}) {
 	)
 }
 
-func (b *jsiiProxy_B2BiPartnership) ResetCapabilities() {
+func (b *jsiiProxy_B2BiPartnership) ResetCapabilityOptions() {
 	_jsii_.InvokeVoid(
 		b,
-		"resetCapabilities",
+		"resetCapabilityOptions",
 		nil, // no parameters
 	)
 }
@@ -996,6 +1078,32 @@ func (b *jsiiProxy_B2BiPartnership) SynthesizeAttributes() *map[string]interface
 	_jsii_.Invoke(
 		b,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_B2BiPartnership) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		b,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_B2BiPartnership) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		b,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -85,6 +85,7 @@ type KendraIndexUserTokenConfigurationsJwtTokenTypeConfigurationOutputReference 
 	ResetClaimRegex()
 	ResetGroupAttributeField()
 	ResetIssuer()
+	ResetKeyLocation()
 	ResetSecretManagerArn()
 	ResetUrl()
 	ResetUserNameAttributeField()
@@ -679,6 +680,14 @@ func (k *jsiiProxy_KendraIndexUserTokenConfigurationsJwtTokenTypeConfigurationOu
 	_jsii_.InvokeVoid(
 		k,
 		"resetIssuer",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraIndexUserTokenConfigurationsJwtTokenTypeConfigurationOutputReference) ResetKeyLocation() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetKeyLocation",
 		nil, // no parameters
 	)
 }

@@ -9,18 +9,25 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/autoscalingautoscalinggroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/autoscaling_auto_scaling_group awscc_autoscaling_auto_scaling_group}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/autoscaling_auto_scaling_group awscc_autoscaling_auto_scaling_group}.
 type AutoscalingAutoScalingGroup interface {
 	cdktf.TerraformResource
+	AutoScalingGroupArn() *string
 	AutoScalingGroupName() *string
 	SetAutoScalingGroupName(val *string)
 	AutoScalingGroupNameInput() *string
+	AvailabilityZoneDistribution() AutoscalingAutoScalingGroupAvailabilityZoneDistributionOutputReference
+	AvailabilityZoneDistributionInput() interface{}
+	AvailabilityZoneImpairmentPolicy() AutoscalingAutoScalingGroupAvailabilityZoneImpairmentPolicyOutputReference
+	AvailabilityZoneImpairmentPolicyInput() interface{}
 	AvailabilityZones() *[]*string
 	SetAvailabilityZones(val *[]*string)
 	AvailabilityZonesInput() *[]*string
 	CapacityRebalance() interface{}
 	SetCapacityRebalance(val interface{})
 	CapacityRebalanceInput() interface{}
+	CapacityReservationSpecification() AutoscalingAutoScalingGroupCapacityReservationSpecificationOutputReference
+	CapacityReservationSpecificationInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -124,6 +131,9 @@ type AutoscalingAutoScalingGroup interface {
 	ServiceLinkedRoleArn() *string
 	SetServiceLinkedRoleArn(val *string)
 	ServiceLinkedRoleArnInput() *string
+	SkipZonalShiftValidation() interface{}
+	SetSkipZonalShiftValidation(val interface{})
+	SkipZonalShiftValidationInput() interface{}
 	Tags() AutoscalingAutoScalingGroupTagsList
 	TagsInput() interface{}
 	TargetGroupArNs() *[]*string
@@ -138,6 +148,8 @@ type AutoscalingAutoScalingGroup interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	TrafficSources() AutoscalingAutoScalingGroupTrafficSourcesList
+	TrafficSourcesInput() interface{}
 	VpcZoneIdentifier() *[]*string
 	SetVpcZoneIdentifier(val *[]*string)
 	VpcZoneIdentifierInput() *[]*string
@@ -165,15 +177,28 @@ type AutoscalingAutoScalingGroup interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutAvailabilityZoneDistribution(value *AutoscalingAutoScalingGroupAvailabilityZoneDistribution)
+	PutAvailabilityZoneImpairmentPolicy(value *AutoscalingAutoScalingGroupAvailabilityZoneImpairmentPolicy)
+	PutCapacityReservationSpecification(value *AutoscalingAutoScalingGroupCapacityReservationSpecification)
 	PutInstanceMaintenancePolicy(value *AutoscalingAutoScalingGroupInstanceMaintenancePolicy)
 	PutLaunchTemplate(value *AutoscalingAutoScalingGroupLaunchTemplate)
 	PutLifecycleHookSpecificationList(value interface{})
@@ -182,9 +207,13 @@ type AutoscalingAutoScalingGroup interface {
 	PutNotificationConfiguration(value *AutoscalingAutoScalingGroupNotificationConfiguration)
 	PutNotificationConfigurations(value interface{})
 	PutTags(value interface{})
+	PutTrafficSources(value interface{})
 	ResetAutoScalingGroupName()
+	ResetAvailabilityZoneDistribution()
+	ResetAvailabilityZoneImpairmentPolicy()
 	ResetAvailabilityZones()
 	ResetCapacityRebalance()
+	ResetCapacityReservationSpecification()
 	ResetContext()
 	ResetCooldown()
 	ResetDefaultInstanceWarmup()
@@ -209,11 +238,16 @@ type AutoscalingAutoScalingGroup interface {
 	ResetOverrideLogicalId()
 	ResetPlacementGroup()
 	ResetServiceLinkedRoleArn()
+	ResetSkipZonalShiftValidation()
 	ResetTags()
 	ResetTargetGroupArNs()
 	ResetTerminationPolicies()
+	ResetTrafficSources()
 	ResetVpcZoneIdentifier()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -226,6 +260,16 @@ type AutoscalingAutoScalingGroup interface {
 // The jsii proxy struct for AutoscalingAutoScalingGroup
 type jsiiProxy_AutoscalingAutoScalingGroup struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_AutoscalingAutoScalingGroup) AutoScalingGroupArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"autoScalingGroupArn",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_AutoscalingAutoScalingGroup) AutoScalingGroupName() *string {
@@ -243,6 +287,46 @@ func (j *jsiiProxy_AutoscalingAutoScalingGroup) AutoScalingGroupNameInput() *str
 	_jsii_.Get(
 		j,
 		"autoScalingGroupNameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AutoscalingAutoScalingGroup) AvailabilityZoneDistribution() AutoscalingAutoScalingGroupAvailabilityZoneDistributionOutputReference {
+	var returns AutoscalingAutoScalingGroupAvailabilityZoneDistributionOutputReference
+	_jsii_.Get(
+		j,
+		"availabilityZoneDistribution",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AutoscalingAutoScalingGroup) AvailabilityZoneDistributionInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"availabilityZoneDistributionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AutoscalingAutoScalingGroup) AvailabilityZoneImpairmentPolicy() AutoscalingAutoScalingGroupAvailabilityZoneImpairmentPolicyOutputReference {
+	var returns AutoscalingAutoScalingGroupAvailabilityZoneImpairmentPolicyOutputReference
+	_jsii_.Get(
+		j,
+		"availabilityZoneImpairmentPolicy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AutoscalingAutoScalingGroup) AvailabilityZoneImpairmentPolicyInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"availabilityZoneImpairmentPolicyInput",
 		&returns,
 	)
 	return returns
@@ -283,6 +367,26 @@ func (j *jsiiProxy_AutoscalingAutoScalingGroup) CapacityRebalanceInput() interfa
 	_jsii_.Get(
 		j,
 		"capacityRebalanceInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AutoscalingAutoScalingGroup) CapacityReservationSpecification() AutoscalingAutoScalingGroupCapacityReservationSpecificationOutputReference {
+	var returns AutoscalingAutoScalingGroupCapacityReservationSpecificationOutputReference
+	_jsii_.Get(
+		j,
+		"capacityReservationSpecification",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AutoscalingAutoScalingGroup) CapacityReservationSpecificationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"capacityReservationSpecificationInput",
 		&returns,
 	)
 	return returns
@@ -888,6 +992,26 @@ func (j *jsiiProxy_AutoscalingAutoScalingGroup) ServiceLinkedRoleArnInput() *str
 	return returns
 }
 
+func (j *jsiiProxy_AutoscalingAutoScalingGroup) SkipZonalShiftValidation() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"skipZonalShiftValidation",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AutoscalingAutoScalingGroup) SkipZonalShiftValidationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"skipZonalShiftValidationInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_AutoscalingAutoScalingGroup) Tags() AutoscalingAutoScalingGroupTagsList {
 	var returns AutoscalingAutoScalingGroupTagsList
 	_jsii_.Get(
@@ -978,6 +1102,26 @@ func (j *jsiiProxy_AutoscalingAutoScalingGroup) TerraformResourceType() *string 
 	return returns
 }
 
+func (j *jsiiProxy_AutoscalingAutoScalingGroup) TrafficSources() AutoscalingAutoScalingGroupTrafficSourcesList {
+	var returns AutoscalingAutoScalingGroupTrafficSourcesList
+	_jsii_.Get(
+		j,
+		"trafficSources",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AutoscalingAutoScalingGroup) TrafficSourcesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"trafficSourcesInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_AutoscalingAutoScalingGroup) VpcZoneIdentifier() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -999,7 +1143,7 @@ func (j *jsiiProxy_AutoscalingAutoScalingGroup) VpcZoneIdentifierInput() *[]*str
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/autoscaling_auto_scaling_group awscc_autoscaling_auto_scaling_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/autoscaling_auto_scaling_group awscc_autoscaling_auto_scaling_group} Resource.
 func NewAutoscalingAutoScalingGroup(scope constructs.Construct, id *string, config *AutoscalingAutoScalingGroupConfig) AutoscalingAutoScalingGroup {
 	_init_.Initialize()
 
@@ -1017,7 +1161,7 @@ func NewAutoscalingAutoScalingGroup(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/autoscaling_auto_scaling_group awscc_autoscaling_auto_scaling_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/autoscaling_auto_scaling_group awscc_autoscaling_auto_scaling_group} Resource.
 func NewAutoscalingAutoScalingGroup_Override(a AutoscalingAutoScalingGroup, scope constructs.Construct, id *string, config *AutoscalingAutoScalingGroupConfig) {
 	_init_.Initialize()
 
@@ -1301,6 +1445,17 @@ func (j *jsiiProxy_AutoscalingAutoScalingGroup)SetServiceLinkedRoleArn(val *stri
 	_jsii_.Set(
 		j,
 		"serviceLinkedRoleArn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_AutoscalingAutoScalingGroup)SetSkipZonalShiftValidation(val interface{}) {
+	if err := j.validateSetSkipZonalShiftValidationParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"skipZonalShiftValidation",
 		val,
 	)
 }
@@ -1607,6 +1762,19 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroup) GetStringMapAttribute(terraformA
 	return returns
 }
 
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (a *jsiiProxy_AutoscalingAutoScalingGroup) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := a.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1634,6 +1802,17 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroup) InterpolationForAttribute(terraf
 	return returns
 }
 
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) MoveFromId(id *string) {
+	if err := a.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (a *jsiiProxy_AutoscalingAutoScalingGroup) MoveTo(moveTarget *string, index interface{}) {
 	if err := a.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1645,6 +1824,17 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroup) MoveTo(moveTarget *string, index
 	)
 }
 
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) MoveToId(id *string) {
+	if err := a.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (a *jsiiProxy_AutoscalingAutoScalingGroup) OverrideLogicalId(newLogicalId *string) {
 	if err := a.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -1653,6 +1843,39 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroup) OverrideLogicalId(newLogicalId *
 		a,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) PutAvailabilityZoneDistribution(value *AutoscalingAutoScalingGroupAvailabilityZoneDistribution) {
+	if err := a.validatePutAvailabilityZoneDistributionParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putAvailabilityZoneDistribution",
+		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) PutAvailabilityZoneImpairmentPolicy(value *AutoscalingAutoScalingGroupAvailabilityZoneImpairmentPolicy) {
+	if err := a.validatePutAvailabilityZoneImpairmentPolicyParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putAvailabilityZoneImpairmentPolicy",
+		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) PutCapacityReservationSpecification(value *AutoscalingAutoScalingGroupCapacityReservationSpecification) {
+	if err := a.validatePutCapacityReservationSpecificationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putCapacityReservationSpecification",
+		[]interface{}{value},
 	)
 }
 
@@ -1744,10 +1967,37 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroup) PutTags(value interface{}) {
 	)
 }
 
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) PutTrafficSources(value interface{}) {
+	if err := a.validatePutTrafficSourcesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putTrafficSources",
+		[]interface{}{value},
+	)
+}
+
 func (a *jsiiProxy_AutoscalingAutoScalingGroup) ResetAutoScalingGroupName() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetAutoScalingGroupName",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) ResetAvailabilityZoneDistribution() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetAvailabilityZoneDistribution",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) ResetAvailabilityZoneImpairmentPolicy() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetAvailabilityZoneImpairmentPolicy",
 		nil, // no parameters
 	)
 }
@@ -1764,6 +2014,14 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroup) ResetCapacityRebalance() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetCapacityRebalance",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) ResetCapacityReservationSpecification() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetCapacityReservationSpecification",
 		nil, // no parameters
 	)
 }
@@ -1944,6 +2202,14 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroup) ResetServiceLinkedRoleArn() {
 	)
 }
 
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) ResetSkipZonalShiftValidation() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetSkipZonalShiftValidation",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_AutoscalingAutoScalingGroup) ResetTags() {
 	_jsii_.InvokeVoid(
 		a,
@@ -1968,6 +2234,14 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroup) ResetTerminationPolicies() {
 	)
 }
 
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) ResetTrafficSources() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetTrafficSources",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_AutoscalingAutoScalingGroup) ResetVpcZoneIdentifier() {
 	_jsii_.InvokeVoid(
 		a,
@@ -1982,6 +2256,32 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroup) SynthesizeAttributes() *map[stri
 	_jsii_.Invoke(
 		a,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		a,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

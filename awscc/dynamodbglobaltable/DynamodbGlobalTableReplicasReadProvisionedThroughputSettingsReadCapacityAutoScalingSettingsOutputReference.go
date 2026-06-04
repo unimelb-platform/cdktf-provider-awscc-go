@@ -39,7 +39,7 @@ type DynamodbGlobalTableReplicasReadProvisionedThroughputSettingsReadCapacityAut
 	SetSeedCapacity(val *float64)
 	SeedCapacityInput() *float64
 	TargetTrackingScalingPolicyConfiguration() DynamodbGlobalTableReplicasReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfigurationOutputReference
-	TargetTrackingScalingPolicyConfigurationInput() *DynamodbGlobalTableReplicasReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration
+	TargetTrackingScalingPolicyConfigurationInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -73,7 +73,10 @@ type DynamodbGlobalTableReplicasReadProvisionedThroughputSettingsReadCapacityAut
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutTargetTrackingScalingPolicyConfiguration(value *DynamodbGlobalTableReplicasReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration)
+	ResetMaxCapacity()
+	ResetMinCapacity()
 	ResetSeedCapacity()
+	ResetTargetTrackingScalingPolicyConfiguration()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -209,8 +212,8 @@ func (j *jsiiProxy_DynamodbGlobalTableReplicasReadProvisionedThroughputSettingsR
 	return returns
 }
 
-func (j *jsiiProxy_DynamodbGlobalTableReplicasReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsOutputReference) TargetTrackingScalingPolicyConfigurationInput() *DynamodbGlobalTableReplicasReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration {
-	var returns *DynamodbGlobalTableReplicasReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration
+func (j *jsiiProxy_DynamodbGlobalTableReplicasReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsOutputReference) TargetTrackingScalingPolicyConfigurationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"targetTrackingScalingPolicyConfigurationInput",
@@ -552,10 +555,34 @@ func (d *jsiiProxy_DynamodbGlobalTableReplicasReadProvisionedThroughputSettingsR
 	)
 }
 
+func (d *jsiiProxy_DynamodbGlobalTableReplicasReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsOutputReference) ResetMaxCapacity() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetMaxCapacity",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableReplicasReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsOutputReference) ResetMinCapacity() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetMinCapacity",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DynamodbGlobalTableReplicasReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsOutputReference) ResetSeedCapacity() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetSeedCapacity",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableReplicasReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsOutputReference) ResetTargetTrackingScalingPolicyConfiguration() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetTargetTrackingScalingPolicyConfiguration",
 		nil, // no parameters
 	)
 }

@@ -79,6 +79,7 @@ type AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesSalesforc
 	ResetDataTransferApi()
 	ResetErrorHandlingConfig()
 	ResetIdFieldNames()
+	ResetObject()
 	ResetWriteOperationType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -609,6 +610,14 @@ func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPrope
 	_jsii_.InvokeVoid(
 		a,
 		"resetIdFieldNames",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesSalesforceOutputReference) ResetObject() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetObject",
 		nil, // no parameters
 	)
 }

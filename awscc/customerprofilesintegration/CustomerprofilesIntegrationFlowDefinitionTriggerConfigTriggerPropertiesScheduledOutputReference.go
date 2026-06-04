@@ -85,6 +85,7 @@ type CustomerprofilesIntegrationFlowDefinitionTriggerConfigTriggerPropertiesSche
 	ResetDataPullMode()
 	ResetFirstExecutionFrom()
 	ResetScheduleEndTime()
+	ResetScheduleExpression()
 	ResetScheduleOffset()
 	ResetScheduleStartTime()
 	ResetTimezone()
@@ -679,6 +680,14 @@ func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTriggerConfigTrigger
 	_jsii_.InvokeVoid(
 		c,
 		"resetScheduleEndTime",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTriggerConfigTriggerPropertiesScheduledOutputReference) ResetScheduleExpression() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetScheduleExpression",
 		nil, // no parameters
 	)
 }

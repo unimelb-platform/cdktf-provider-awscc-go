@@ -91,13 +91,16 @@ type IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEventsActionsDyna
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutPayload(value *IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEventsActionsDynamoDbPayload)
+	ResetHashKeyField()
 	ResetHashKeyType()
+	ResetHashKeyValue()
 	ResetOperation()
 	ResetPayload()
 	ResetPayloadField()
 	ResetRangeKeyField()
 	ResetRangeKeyType()
 	ResetRangeKeyValue()
+	ResetTableName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -762,10 +765,26 @@ func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEve
 	)
 }
 
+func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEventsActionsDynamoDbOutputReference) ResetHashKeyField() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetHashKeyField",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEventsActionsDynamoDbOutputReference) ResetHashKeyType() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetHashKeyType",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEventsActionsDynamoDbOutputReference) ResetHashKeyValue() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetHashKeyValue",
 		nil, // no parameters
 	)
 }
@@ -814,6 +833,14 @@ func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEve
 	_jsii_.InvokeVoid(
 		i,
 		"resetRangeKeyValue",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEventsActionsDynamoDbOutputReference) ResetTableName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTableName",
 		nil, // no parameters
 	)
 }

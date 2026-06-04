@@ -10,6 +10,9 @@ import (
 
 type QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference interface {
 	cdktf.ComplexObject
+	AuthenticationType() *string
+	SetAuthenticationType(val *string)
+	AuthenticationTypeInput() *string
 	Catalog() *string
 	SetCatalog(val *string)
 	CatalogInput() *string
@@ -28,6 +31,9 @@ type QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputR
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	DatabaseAccessControlRole() *string
+	SetDatabaseAccessControlRole(val *string)
+	DatabaseAccessControlRoleInput() *string
 	// Experimental.
 	Fqn() *string
 	Host() *string
@@ -35,6 +41,8 @@ type QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputR
 	HostInput() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	OAuthParameters() QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOAuthParametersOutputReference
+	OAuthParametersInput() interface{}
 	Port() *float64
 	SetPort(val *float64)
 	PortInput() *float64
@@ -73,6 +81,13 @@ type QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputR
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutOAuthParameters(value *QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOAuthParameters)
+	ResetAuthenticationType()
+	ResetCatalog()
+	ResetDatabaseAccessControlRole()
+	ResetHost()
+	ResetOAuthParameters()
+	ResetPort()
 	ResetProductType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -87,6 +102,26 @@ type QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputR
 // The jsii proxy struct for QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference
 type jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) AuthenticationType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"authenticationType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) AuthenticationTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"authenticationTypeInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) Catalog() *string {
@@ -139,6 +174,26 @@ func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstPar
 	return returns
 }
 
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) DatabaseAccessControlRole() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseAccessControlRole",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) DatabaseAccessControlRoleInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseAccessControlRoleInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -174,6 +229,26 @@ func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstPar
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) OAuthParameters() QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOAuthParametersOutputReference {
+	var returns QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOAuthParametersOutputReference
+	_jsii_.Get(
+		j,
+		"oAuthParameters",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) OAuthParametersInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"oAuthParametersInput",
 		&returns,
 	)
 	return returns
@@ -267,6 +342,17 @@ func NewQuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutp
 	)
 }
 
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference)SetAuthenticationType(val *string) {
+	if err := j.validateSetAuthenticationTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"authenticationType",
+		val,
+	)
+}
+
 func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference)SetCatalog(val *string) {
 	if err := j.validateSetCatalogParameters(val); err != nil {
 		panic(err)
@@ -296,6 +382,17 @@ func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstPar
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
+		val,
+	)
+}
+
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference)SetDatabaseAccessControlRole(val *string) {
+	if err := j.validateSetDatabaseAccessControlRoleParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"databaseAccessControlRole",
 		val,
 	)
 }
@@ -550,6 +647,65 @@ func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstPar
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) PutOAuthParameters(value *QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOAuthParameters) {
+	if err := q.validatePutOAuthParametersParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		q,
+		"putOAuthParameters",
+		[]interface{}{value},
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) ResetAuthenticationType() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetAuthenticationType",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) ResetCatalog() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetCatalog",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) ResetDatabaseAccessControlRole() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDatabaseAccessControlRole",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) ResetHost() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetHost",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) ResetOAuthParameters() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetOAuthParameters",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) ResetPort() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetPort",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) ResetProductType() {

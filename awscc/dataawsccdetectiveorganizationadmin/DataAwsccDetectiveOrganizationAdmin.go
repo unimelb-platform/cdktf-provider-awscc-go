@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdetectiveorganizationadmin/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/detective_organization_admin awscc_detective_organization_admin}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/detective_organization_admin awscc_detective_organization_admin}.
 type DataAwsccDetectiveOrganizationAdmin interface {
 	cdktf.TerraformDataSource
 	AccountId() *string
@@ -84,6 +84,10 @@ type DataAwsccDetectiveOrganizationAdmin interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -279,7 +283,7 @@ func (j *jsiiProxy_DataAwsccDetectiveOrganizationAdmin) TerraformResourceType() 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/detective_organization_admin awscc_detective_organization_admin} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/detective_organization_admin awscc_detective_organization_admin} Data Source.
 func NewDataAwsccDetectiveOrganizationAdmin(scope constructs.Construct, id *string, config *DataAwsccDetectiveOrganizationAdminConfig) DataAwsccDetectiveOrganizationAdmin {
 	_init_.Initialize()
 
@@ -297,7 +301,7 @@ func NewDataAwsccDetectiveOrganizationAdmin(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/detective_organization_admin awscc_detective_organization_admin} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/detective_organization_admin awscc_detective_organization_admin} Data Source.
 func NewDataAwsccDetectiveOrganizationAdmin_Override(d DataAwsccDetectiveOrganizationAdmin, scope constructs.Construct, id *string, config *DataAwsccDetectiveOrganizationAdminConfig) {
 	_init_.Initialize()
 
@@ -664,6 +668,32 @@ func (d *jsiiProxy_DataAwsccDetectiveOrganizationAdmin) SynthesizeAttributes() *
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDetectiveOrganizationAdmin) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDetectiveOrganizationAdmin) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

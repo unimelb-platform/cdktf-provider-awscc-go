@@ -56,11 +56,23 @@ func (d *jsiiProxy_DatazoneProject) validateInterpolationForAttributeParameters(
 	return nil
 }
 
+func (d *jsiiProxy_DatazoneProject) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DatazoneProject) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (d *jsiiProxy_DatazoneProject) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DatazoneProject) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DatazoneProject) validatePutUserParametersParameters(value interface{}) error {
 	return nil
 }
 
@@ -96,6 +108,10 @@ func (j *jsiiProxy_DatazoneProject) validateSetDomainIdentifierParameters(val *s
 	return nil
 }
 
+func (j *jsiiProxy_DatazoneProject) validateSetDomainUnitIdParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DatazoneProject) validateSetGlossaryTermsParameters(val *[]*string) error {
 	return nil
 }
@@ -105,6 +121,14 @@ func (j *jsiiProxy_DatazoneProject) validateSetLifecycleParameters(val *cdktf.Te
 }
 
 func (j *jsiiProxy_DatazoneProject) validateSetNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DatazoneProject) validateSetProjectProfileIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DatazoneProject) validateSetProjectProfileVersionParameters(val *string) error {
 	return nil
 }
 

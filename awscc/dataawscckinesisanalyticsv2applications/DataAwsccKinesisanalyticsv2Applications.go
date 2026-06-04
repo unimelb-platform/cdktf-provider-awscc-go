@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscckinesisanalyticsv2applications/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kinesisanalyticsv2_applications awscc_kinesisanalyticsv2_applications}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kinesisanalyticsv2_applications awscc_kinesisanalyticsv2_applications}.
 type DataAwsccKinesisanalyticsv2Applications interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccKinesisanalyticsv2Applications interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccKinesisanalyticsv2Applications) TerraformResourceTyp
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kinesisanalyticsv2_applications awscc_kinesisanalyticsv2_applications} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kinesisanalyticsv2_applications awscc_kinesisanalyticsv2_applications} Data Source.
 func NewDataAwsccKinesisanalyticsv2Applications(scope constructs.Construct, id *string, config *DataAwsccKinesisanalyticsv2ApplicationsConfig) DataAwsccKinesisanalyticsv2Applications {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccKinesisanalyticsv2Applications(scope constructs.Construct, id *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kinesisanalyticsv2_applications awscc_kinesisanalyticsv2_applications} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kinesisanalyticsv2_applications awscc_kinesisanalyticsv2_applications} Data Source.
 func NewDataAwsccKinesisanalyticsv2Applications_Override(d DataAwsccKinesisanalyticsv2Applications, scope constructs.Construct, id *string, config *DataAwsccKinesisanalyticsv2ApplicationsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccKinesisanalyticsv2Applications) SynthesizeAttributes
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKinesisanalyticsv2Applications) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKinesisanalyticsv2Applications) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

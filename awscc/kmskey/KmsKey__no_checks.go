@@ -56,7 +56,15 @@ func (k *jsiiProxy_KmsKey) validateInterpolationForAttributeParameters(terraform
 	return nil
 }
 
+func (k *jsiiProxy_KmsKey) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (k *jsiiProxy_KmsKey) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (k *jsiiProxy_KmsKey) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -137,6 +145,10 @@ func (j *jsiiProxy_KmsKey) validateSetPendingWindowInDaysParameters(val *float64
 }
 
 func (j *jsiiProxy_KmsKey) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_KmsKey) validateSetRotationPeriodInDaysParameters(val *float64) error {
 	return nil
 }
 

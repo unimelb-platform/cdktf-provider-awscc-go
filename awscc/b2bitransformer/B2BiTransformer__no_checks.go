@@ -56,7 +56,15 @@ func (b *jsiiProxy_B2BiTransformer) validateInterpolationForAttributeParameters(
 	return nil
 }
 
+func (b *jsiiProxy_B2BiTransformer) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (b *jsiiProxy_B2BiTransformer) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (b *jsiiProxy_B2BiTransformer) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -65,6 +73,22 @@ func (b *jsiiProxy_B2BiTransformer) validateOverrideLogicalIdParameters(newLogic
 }
 
 func (b *jsiiProxy_B2BiTransformer) validatePutEdiTypeParameters(value *B2BiTransformerEdiType) error {
+	return nil
+}
+
+func (b *jsiiProxy_B2BiTransformer) validatePutInputConversionParameters(value *B2BiTransformerInputConversion) error {
+	return nil
+}
+
+func (b *jsiiProxy_B2BiTransformer) validatePutMappingParameters(value *B2BiTransformerMapping) error {
+	return nil
+}
+
+func (b *jsiiProxy_B2BiTransformer) validatePutOutputConversionParameters(value *B2BiTransformerOutputConversion) error {
+	return nil
+}
+
+func (b *jsiiProxy_B2BiTransformer) validatePutSampleDocumentsParameters(value *B2BiTransformerSampleDocuments) error {
 	return nil
 }
 
@@ -105,10 +129,6 @@ func (j *jsiiProxy_B2BiTransformer) validateSetLifecycleParameters(val *cdktf.Te
 }
 
 func (j *jsiiProxy_B2BiTransformer) validateSetMappingTemplateParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_B2BiTransformer) validateSetModifiedAtParameters(val *string) error {
 	return nil
 }
 

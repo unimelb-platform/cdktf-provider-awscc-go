@@ -25,11 +25,28 @@ type DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference inte
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	DpdTimeoutAction() *string
+	DpdTimeoutSeconds() *float64
+	EnableTunnelLifecycleControl() cdktf.IResolvable
 	// Experimental.
 	Fqn() *string
+	IkeVersions() DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsIkeVersionsList
 	InternalValue() *DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecifications
 	SetInternalValue(val *DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecifications)
+	LogOptions() DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsLogOptionsOutputReference
+	Phase1DhGroupNumbers() DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase1DhGroupNumbersList
+	Phase1EncryptionAlgorithms() DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase1EncryptionAlgorithmsList
+	Phase1IntegrityAlgorithms() DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase1IntegrityAlgorithmsList
+	Phase1LifetimeSeconds() *float64
+	Phase2DhGroupNumbers() DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase2DhGroupNumbersList
+	Phase2EncryptionAlgorithms() DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase2EncryptionAlgorithmsList
+	Phase2IntegrityAlgorithms() DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase2IntegrityAlgorithmsList
+	Phase2LifetimeSeconds() *float64
 	PreSharedKey() *string
+	RekeyFuzzPercentage() *float64
+	RekeyMarginTimeSeconds() *float64
+	ReplayWindowSize() *float64
+	StartupAction() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -39,6 +56,7 @@ type DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference inte
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	TunnelInsideCidr() *string
+	TunnelInsideIpv6Cidr() *string
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -108,11 +126,51 @@ func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutput
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) DpdTimeoutAction() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"dpdTimeoutAction",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) DpdTimeoutSeconds() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"dpdTimeoutSeconds",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) EnableTunnelLifecycleControl() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"enableTunnelLifecycleControl",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) IkeVersions() DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsIkeVersionsList {
+	var returns DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsIkeVersionsList
+	_jsii_.Get(
+		j,
+		"ikeVersions",
 		&returns,
 	)
 	return returns
@@ -128,11 +186,141 @@ func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutput
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) LogOptions() DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsLogOptionsOutputReference {
+	var returns DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsLogOptionsOutputReference
+	_jsii_.Get(
+		j,
+		"logOptions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) Phase1DhGroupNumbers() DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase1DhGroupNumbersList {
+	var returns DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase1DhGroupNumbersList
+	_jsii_.Get(
+		j,
+		"phase1DhGroupNumbers",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) Phase1EncryptionAlgorithms() DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase1EncryptionAlgorithmsList {
+	var returns DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase1EncryptionAlgorithmsList
+	_jsii_.Get(
+		j,
+		"phase1EncryptionAlgorithms",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) Phase1IntegrityAlgorithms() DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase1IntegrityAlgorithmsList {
+	var returns DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase1IntegrityAlgorithmsList
+	_jsii_.Get(
+		j,
+		"phase1IntegrityAlgorithms",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) Phase1LifetimeSeconds() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"phase1LifetimeSeconds",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) Phase2DhGroupNumbers() DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase2DhGroupNumbersList {
+	var returns DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase2DhGroupNumbersList
+	_jsii_.Get(
+		j,
+		"phase2DhGroupNumbers",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) Phase2EncryptionAlgorithms() DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase2EncryptionAlgorithmsList {
+	var returns DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase2EncryptionAlgorithmsList
+	_jsii_.Get(
+		j,
+		"phase2EncryptionAlgorithms",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) Phase2IntegrityAlgorithms() DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase2IntegrityAlgorithmsList {
+	var returns DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase2IntegrityAlgorithmsList
+	_jsii_.Get(
+		j,
+		"phase2IntegrityAlgorithms",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) Phase2LifetimeSeconds() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"phase2LifetimeSeconds",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) PreSharedKey() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"preSharedKey",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) RekeyFuzzPercentage() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"rekeyFuzzPercentage",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) RekeyMarginTimeSeconds() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"rekeyMarginTimeSeconds",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) ReplayWindowSize() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"replayWindowSize",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) StartupAction() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"startupAction",
 		&returns,
 	)
 	return returns
@@ -163,6 +351,16 @@ func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutput
 	_jsii_.Get(
 		j,
 		"tunnelInsideCidr",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) TunnelInsideIpv6Cidr() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"tunnelInsideIpv6Cidr",
 		&returns,
 	)
 	return returns

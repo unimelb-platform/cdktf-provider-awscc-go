@@ -67,6 +67,7 @@ type LightsailLoadBalancerTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
 	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (l *jsiiProxy_LightsailLoadBalancerTagsOutputReference) InterpolationForAtt
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LightsailLoadBalancerTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetKey",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LightsailLoadBalancerTagsOutputReference) ResetValue() {

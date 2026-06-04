@@ -119,6 +119,14 @@ func (e *jsiiProxy_Ec2VpcEndpoint) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
+func (e *jsiiProxy_Ec2VpcEndpoint) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VpcEndpoint) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,9 +188,59 @@ func (e *jsiiProxy_Ec2VpcEndpoint) validateMoveToParameters(moveTarget *string, 
 	return nil
 }
 
+func (e *jsiiProxy_Ec2VpcEndpoint) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VpcEndpoint) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VpcEndpoint) validatePutDnsOptionsParameters(value *Ec2VpcEndpointDnsOptions) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VpcEndpoint) validatePutTagsParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*Ec2VpcEndpointTags:
+		value := value.(*[]*Ec2VpcEndpointTags)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*Ec2VpcEndpointTags:
+		value_ := value.([]*Ec2VpcEndpointTags)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Ec2VpcEndpointTags; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil
@@ -318,6 +376,14 @@ func (j *jsiiProxy_Ec2VpcEndpoint) validateSetCountParameters(val interface{}) e
 	return nil
 }
 
+func (j *jsiiProxy_Ec2VpcEndpoint) validateSetIpAddressTypeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Ec2VpcEndpoint) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 		return err
@@ -400,6 +466,14 @@ func (j *jsiiProxy_Ec2VpcEndpoint) validateSetProvisionersParameters(val *[]inte
 	return nil
 }
 
+func (j *jsiiProxy_Ec2VpcEndpoint) validateSetResourceConfigurationArnParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Ec2VpcEndpoint) validateSetRouteTableIdsParameters(val *[]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -417,6 +491,22 @@ func (j *jsiiProxy_Ec2VpcEndpoint) validateSetSecurityGroupIdsParameters(val *[]
 }
 
 func (j *jsiiProxy_Ec2VpcEndpoint) validateSetServiceNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpcEndpoint) validateSetServiceNetworkArnParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpcEndpoint) validateSetServiceRegionParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

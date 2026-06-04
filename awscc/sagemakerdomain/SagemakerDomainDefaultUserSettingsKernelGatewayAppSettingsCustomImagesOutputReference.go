@@ -70,6 +70,8 @@ type SagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsCustomImagesOutpu
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAppImageConfigName()
+	ResetImageName()
 	ResetImageVersionNumber()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -516,6 +518,22 @@ func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsCus
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsCustomImagesOutputReference) ResetAppImageConfigName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetAppImageConfigName",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsCustomImagesOutputReference) ResetImageName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetImageName",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsCustomImagesOutputReference) ResetImageVersionNumber() {

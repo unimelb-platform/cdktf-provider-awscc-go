@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccomprehenddocumentclassifiers/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/comprehend_document_classifiers awscc_comprehend_document_classifiers}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/comprehend_document_classifiers awscc_comprehend_document_classifiers}.
 type DataAwsccComprehendDocumentClassifiers interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccComprehendDocumentClassifiers interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccComprehendDocumentClassifiers) TerraformResourceType
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/comprehend_document_classifiers awscc_comprehend_document_classifiers} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/comprehend_document_classifiers awscc_comprehend_document_classifiers} Data Source.
 func NewDataAwsccComprehendDocumentClassifiers(scope constructs.Construct, id *string, config *DataAwsccComprehendDocumentClassifiersConfig) DataAwsccComprehendDocumentClassifiers {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccComprehendDocumentClassifiers(scope constructs.Construct, id *s
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/comprehend_document_classifiers awscc_comprehend_document_classifiers} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/comprehend_document_classifiers awscc_comprehend_document_classifiers} Data Source.
 func NewDataAwsccComprehendDocumentClassifiers_Override(d DataAwsccComprehendDocumentClassifiers, scope constructs.Construct, id *string, config *DataAwsccComprehendDocumentClassifiersConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccComprehendDocumentClassifiers) SynthesizeAttributes(
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccComprehendDocumentClassifiers) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccComprehendDocumentClassifiers) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

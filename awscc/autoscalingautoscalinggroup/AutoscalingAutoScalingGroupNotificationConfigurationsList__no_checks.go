@@ -4,6 +4,10 @@ package autoscalingautoscalinggroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (a *jsiiProxy_AutoscalingAutoScalingGroupNotificationConfigurationsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_AutoscalingAutoScalingGroupNotificationConfigurationsList) validateGetParameters(index *float64) error {
 	return nil
 }

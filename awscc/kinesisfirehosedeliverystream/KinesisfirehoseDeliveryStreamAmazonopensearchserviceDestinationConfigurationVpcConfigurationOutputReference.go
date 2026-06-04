@@ -70,6 +70,9 @@ type KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfiguratio
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetRoleArn()
+	ResetSecurityGroupIds()
+	ResetSubnetIds()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinati
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationVpcConfigurationOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationVpcConfigurationOutputReference) ResetSecurityGroupIds() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetSecurityGroupIds",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationVpcConfigurationOutputReference) ResetSubnetIds() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetSubnetIds",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationVpcConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

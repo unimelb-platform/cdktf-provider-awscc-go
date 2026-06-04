@@ -4,6 +4,10 @@ package dataawsccrdscustomdbengineversion
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccRdsCustomDbEngineVersionTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccRdsCustomDbEngineVersionTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

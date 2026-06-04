@@ -73,6 +73,8 @@ type TimestreamTableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocatio
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucketName()
+	ResetEncryptionOption()
 	ResetKmsKeyId()
 	ResetObjectKeyPrefix()
 	// Produce the Token's value at resolution time.
@@ -551,6 +553,22 @@ func (t *jsiiProxy_TimestreamTableMagneticStoreWritePropertiesMagneticStoreRejec
 	)
 
 	return returns
+}
+
+func (t *jsiiProxy_TimestreamTableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationOutputReference) ResetBucketName() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetBucketName",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TimestreamTableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationOutputReference) ResetEncryptionOption() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetEncryptionOption",
+		nil, // no parameters
+	)
 }
 
 func (t *jsiiProxy_TimestreamTableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationOutputReference) ResetKmsKeyId() {

@@ -72,6 +72,10 @@ func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) validat
 	return nil
 }
 
+func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) validatePutRepositoryCredentialsParameters(value *BatchJobDefinitionContainerPropertiesRepositoryCredentials) error {
+	return nil
+}
+
 func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) validatePutResourceRequirementsParameters(value interface{}) error {
 	return nil
 }
@@ -108,15 +112,15 @@ func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) validat
 	return nil
 }
 
+func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) validateSetEnableExecuteCommandParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) validateSetExecutionRoleArnParameters(val *string) error {
 	return nil
 }
 
 func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) validateSetImageParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) validateSetInstanceTypeParameters(val *string) error {
 	return nil
 }
 

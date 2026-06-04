@@ -35,6 +35,9 @@ type QuicksightDataSourcePermissionsOutputReference interface {
 	Principal() *string
 	SetPrincipal(val *string)
 	PrincipalInput() *string
+	Resource() *string
+	SetResource(val *string)
+	ResourceInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,6 +70,9 @@ type QuicksightDataSourcePermissionsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetActions()
+	ResetPrincipal()
+	ResetResource()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -172,6 +178,26 @@ func (j *jsiiProxy_QuicksightDataSourcePermissionsOutputReference) PrincipalInpu
 	return returns
 }
 
+func (j *jsiiProxy_QuicksightDataSourcePermissionsOutputReference) Resource() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"resource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSourcePermissionsOutputReference) ResourceInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"resourceInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_QuicksightDataSourcePermissionsOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -271,6 +297,17 @@ func (j *jsiiProxy_QuicksightDataSourcePermissionsOutputReference)SetPrincipal(v
 	_jsii_.Set(
 		j,
 		"principal",
+		val,
+	)
+}
+
+func (j *jsiiProxy_QuicksightDataSourcePermissionsOutputReference)SetResource(val *string) {
+	if err := j.validateSetResourceParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"resource",
 		val,
 	)
 }
@@ -481,6 +518,30 @@ func (q *jsiiProxy_QuicksightDataSourcePermissionsOutputReference) Interpolation
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSourcePermissionsOutputReference) ResetActions() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetActions",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourcePermissionsOutputReference) ResetPrincipal() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetPrincipal",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourcePermissionsOutputReference) ResetResource() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetResource",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSourcePermissionsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

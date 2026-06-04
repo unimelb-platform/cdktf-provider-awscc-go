@@ -72,6 +72,7 @@ type BackupBackupVaultLockConfigurationOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetChangeableForDays()
 	ResetMaxRetentionDays()
+	ResetMinRetentionDays()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (b *jsiiProxy_BackupBackupVaultLockConfigurationOutputReference) ResetMaxRe
 	_jsii_.InvokeVoid(
 		b,
 		"resetMaxRetentionDays",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BackupBackupVaultLockConfigurationOutputReference) ResetMinRetentionDays() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetMinRetentionDays",
 		nil, // no parameters
 	)
 }

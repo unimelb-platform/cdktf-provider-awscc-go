@@ -67,6 +67,8 @@ type MacieAllowListCriteriaS3WordsListStructOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucketName()
+	ResetObjectKey()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (m *jsiiProxy_MacieAllowListCriteriaS3WordsListStructOutputReference) Inter
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_MacieAllowListCriteriaS3WordsListStructOutputReference) ResetBucketName() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetBucketName",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MacieAllowListCriteriaS3WordsListStructOutputReference) ResetObjectKey() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetObjectKey",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_MacieAllowListCriteriaS3WordsListStructOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

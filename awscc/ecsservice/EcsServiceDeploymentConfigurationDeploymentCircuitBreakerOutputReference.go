@@ -67,6 +67,8 @@ type EcsServiceDeploymentConfigurationDeploymentCircuitBreakerOutputReference in
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEnable()
+	ResetRollback()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (e *jsiiProxy_EcsServiceDeploymentConfigurationDeploymentCircuitBreakerOutp
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EcsServiceDeploymentConfigurationDeploymentCircuitBreakerOutputReference) ResetEnable() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetEnable",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcsServiceDeploymentConfigurationDeploymentCircuitBreakerOutputReference) ResetRollback() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetRollback",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EcsServiceDeploymentConfigurationDeploymentCircuitBreakerOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

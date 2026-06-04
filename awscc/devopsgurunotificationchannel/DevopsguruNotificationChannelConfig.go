@@ -21,7 +21,7 @@ type DevopsguruNotificationChannelConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Information about notification channels you have configured with DevOps Guru.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/devopsguru_notification_channel#config DevopsguruNotificationChannel#config}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/devopsguru_notification_channel#config DevopsguruNotificationChannel#config}
 	Config *DevopsguruNotificationChannelConfigA `field:"required" json:"config" yaml:"config"`
 }
 

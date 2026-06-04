@@ -67,6 +67,8 @@ type KafkaconnectConnectorWorkerConfigurationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetRevision()
+	ResetWorkerConfigurationArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (k *jsiiProxy_KafkaconnectConnectorWorkerConfigurationOutputReference) Inte
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KafkaconnectConnectorWorkerConfigurationOutputReference) ResetRevision() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetRevision",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KafkaconnectConnectorWorkerConfigurationOutputReference) ResetWorkerConfigurationArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetWorkerConfigurationArn",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KafkaconnectConnectorWorkerConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

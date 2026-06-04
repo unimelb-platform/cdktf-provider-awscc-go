@@ -56,7 +56,7 @@ func (j *jsiiProxy_CleanroomsMembershipPaymentConfigurationQueryComputeOutputRef
 	return nil
 }
 
-func (j *jsiiProxy_CleanroomsMembershipPaymentConfigurationQueryComputeOutputReference) validateSetInternalValueParameters(val *CleanroomsMembershipPaymentConfigurationQueryCompute) error {
+func (j *jsiiProxy_CleanroomsMembershipPaymentConfigurationQueryComputeOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

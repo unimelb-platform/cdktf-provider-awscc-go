@@ -30,7 +30,7 @@ type AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsC
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	Metric() AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricOutputReference
-	MetricInput() *AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetric
+	MetricInput() interface{}
 	Stat() *string
 	SetStat(val *string)
 	StatInput() *string
@@ -70,6 +70,8 @@ type AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsC
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMetric(value *AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetric)
+	ResetMetric()
+	ResetStat()
 	ResetUnit()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -146,8 +148,8 @@ func (j *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricS
 	return returns
 }
 
-func (j *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatOutputReference) MetricInput() *AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetric {
-	var returns *AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetric
+func (j *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatOutputReference) MetricInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"metricInput",
@@ -515,6 +517,22 @@ func (a *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricS
 		a,
 		"putMetric",
 		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatOutputReference) ResetMetric() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetMetric",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatOutputReference) ResetStat() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetStat",
+		nil, // no parameters
 	)
 }
 

@@ -38,6 +38,7 @@ type DataAwsccS3BucketLifecycleConfigurationOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	TransitionDefaultMinimumObjectSize() *string
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -152,6 +153,16 @@ func (j *jsiiProxy_DataAwsccS3BucketLifecycleConfigurationOutputReference) Terra
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccS3BucketLifecycleConfigurationOutputReference) TransitionDefaultMinimumObjectSize() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"transitionDefaultMinimumObjectSize",
 		&returns,
 	)
 	return returns

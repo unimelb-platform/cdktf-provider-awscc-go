@@ -27,8 +27,8 @@ type LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3BucketOutput
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3Bucket
-	SetInternalValue(val *LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3Bucket)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	KmsKeyArn() *string
 	SetKmsKeyArn(val *string)
 	KmsKeyArnInput() *string
@@ -71,6 +71,8 @@ type LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3BucketOutput
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetKmsKeyArn()
+	ResetLogPrefix()
+	ResetS3BucketArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -126,8 +128,8 @@ func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestination
 	return returns
 }
 
-func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3BucketOutputReference) InternalValue() *LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3Bucket {
-	var returns *LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3Bucket
+func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3BucketOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -266,7 +268,7 @@ func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestination
 	)
 }
 
-func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3BucketOutputReference)SetInternalValue(val *LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3Bucket) {
+func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3BucketOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -522,6 +524,22 @@ func (l *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestination
 	_jsii_.InvokeVoid(
 		l,
 		"resetKmsKeyArn",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3BucketOutputReference) ResetLogPrefix() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetLogPrefix",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3BucketOutputReference) ResetS3BucketArn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetS3BucketArn",
 		nil, // no parameters
 	)
 }

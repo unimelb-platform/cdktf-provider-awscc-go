@@ -88,11 +88,15 @@ type IotTopicRuleTopicRulePayloadActionsDynamoDbOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetHashKeyField()
 	ResetHashKeyType()
+	ResetHashKeyValue()
 	ResetPayloadField()
 	ResetRangeKeyField()
 	ResetRangeKeyType()
 	ResetRangeKeyValue()
+	ResetRoleArn()
+	ResetTableName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -726,10 +730,26 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsDynamoDbOutputReference) I
 	return returns
 }
 
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsDynamoDbOutputReference) ResetHashKeyField() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetHashKeyField",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsDynamoDbOutputReference) ResetHashKeyType() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetHashKeyType",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsDynamoDbOutputReference) ResetHashKeyValue() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetHashKeyValue",
 		nil, // no parameters
 	)
 }
@@ -762,6 +782,22 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsDynamoDbOutputReference) R
 	_jsii_.InvokeVoid(
 		i,
 		"resetRangeKeyValue",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsDynamoDbOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsDynamoDbOutputReference) ResetTableName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTableName",
 		nil, // no parameters
 	)
 }

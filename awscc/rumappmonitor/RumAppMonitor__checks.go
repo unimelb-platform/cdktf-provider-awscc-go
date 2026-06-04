@@ -119,6 +119,14 @@ func (r *jsiiProxy_RumAppMonitor) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
+func (r *jsiiProxy_RumAppMonitor) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (r *jsiiProxy_RumAppMonitor) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (r *jsiiProxy_RumAppMonitor) validateMoveToParameters(moveTarget *string, i
 	return nil
 }
 
+func (r *jsiiProxy_RumAppMonitor) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (r *jsiiProxy_RumAppMonitor) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -200,6 +216,28 @@ func (r *jsiiProxy_RumAppMonitor) validatePutAppMonitorConfigurationParameters(v
 }
 
 func (r *jsiiProxy_RumAppMonitor) validatePutCustomEventsParameters(value *RumAppMonitorCustomEvents) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (r *jsiiProxy_RumAppMonitor) validatePutDeobfuscationConfigurationParameters(value *RumAppMonitorDeobfuscationConfiguration) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (r *jsiiProxy_RumAppMonitor) validatePutResourcePolicyParameters(value *RumAppMonitorResourcePolicy) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -392,6 +430,14 @@ func (j *jsiiProxy_RumAppMonitor) validateSetCwLogEnabledParameters(val interfac
 }
 
 func (j *jsiiProxy_RumAppMonitor) validateSetDomainParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_RumAppMonitor) validateSetDomainListParameters(val *[]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

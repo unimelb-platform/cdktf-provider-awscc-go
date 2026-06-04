@@ -120,6 +120,7 @@ type PipesPipeTargetParametersEcsTaskParametersOutputReference interface {
 	ResetReferenceId()
 	ResetTags()
 	ResetTaskCount()
+	ResetTaskDefinitionArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -1047,6 +1048,14 @@ func (p *jsiiProxy_PipesPipeTargetParametersEcsTaskParametersOutputReference) Re
 	_jsii_.InvokeVoid(
 		p,
 		"resetTaskCount",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PipesPipeTargetParametersEcsTaskParametersOutputReference) ResetTaskDefinitionArn() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetTaskDefinitionArn",
 		nil, // no parameters
 	)
 }

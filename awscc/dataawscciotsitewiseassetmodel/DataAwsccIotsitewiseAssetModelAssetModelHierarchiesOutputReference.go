@@ -26,8 +26,10 @@ type DataAwsccIotsitewiseAssetModelAssetModelHierarchiesOutputReference interfac
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	ExternalId() *string
 	// Experimental.
 	Fqn() *string
+	Id() *string
 	InternalValue() *DataAwsccIotsitewiseAssetModelAssetModelHierarchies
 	SetInternalValue(val *DataAwsccIotsitewiseAssetModelAssetModelHierarchies)
 	LogicalId() *string
@@ -119,11 +121,31 @@ func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelHierarchiesOutputRefe
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelHierarchiesOutputReference) ExternalId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelHierarchiesOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelHierarchiesOutputReference) Id() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"id",
 		&returns,
 	)
 	return returns

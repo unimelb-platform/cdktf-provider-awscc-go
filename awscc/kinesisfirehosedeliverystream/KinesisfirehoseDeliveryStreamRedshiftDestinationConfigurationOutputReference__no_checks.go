@@ -68,6 +68,10 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfiguration
 	return nil
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReference) validatePutSecretsManagerConfigurationParameters(value *KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationSecretsManagerConfiguration) error {
+	return nil
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

@@ -64,6 +64,7 @@ type Wafv2LoggingConfigurationRedactedFieldsSingleHeaderOutputReference interfac
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (w *jsiiProxy_Wafv2LoggingConfigurationRedactedFieldsSingleHeaderOutputRefe
 	)
 
 	return returns
+}
+
+func (w *jsiiProxy_Wafv2LoggingConfigurationRedactedFieldsSingleHeaderOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetName",
+		nil, // no parameters
+	)
 }
 
 func (w *jsiiProxy_Wafv2LoggingConfigurationRedactedFieldsSingleHeaderOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

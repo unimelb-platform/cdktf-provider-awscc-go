@@ -75,6 +75,8 @@ type MediaconnectFlowOutputEncryptionOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetAlgorithm()
 	ResetKeyType()
+	ResetRoleArn()
+	ResetSecretArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -565,6 +567,22 @@ func (m *jsiiProxy_MediaconnectFlowOutputEncryptionOutputReference) ResetKeyType
 	_jsii_.InvokeVoid(
 		m,
 		"resetKeyType",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectFlowOutputEncryptionOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectFlowOutputEncryptionOutputReference) ResetSecretArn() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetSecretArn",
 		nil, // no parameters
 	)
 }

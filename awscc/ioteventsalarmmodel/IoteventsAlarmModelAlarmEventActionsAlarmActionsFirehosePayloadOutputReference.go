@@ -67,6 +67,8 @@ type IoteventsAlarmModelAlarmEventActionsAlarmActionsFirehosePayloadOutputRefere
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetContentExpression()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsFirehosePaylo
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsFirehosePayloadOutputReference) ResetContentExpression() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetContentExpression",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsFirehosePayloadOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetType",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsFirehosePayloadOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -67,6 +67,7 @@ type DynamodbGlobalTableSseSpecificationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetSseEnabled()
 	ResetSseType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (d *jsiiProxy_DynamodbGlobalTableSseSpecificationOutputReference) Interpola
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableSseSpecificationOutputReference) ResetSseEnabled() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetSseEnabled",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DynamodbGlobalTableSseSpecificationOutputReference) ResetSseType() {

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccinternetmonitormonitors/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/internetmonitor_monitors awscc_internetmonitor_monitors}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/internetmonitor_monitors awscc_internetmonitor_monitors}.
 type DataAwsccInternetmonitorMonitors interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccInternetmonitorMonitors interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccInternetmonitorMonitors) TerraformResourceType() *st
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/internetmonitor_monitors awscc_internetmonitor_monitors} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/internetmonitor_monitors awscc_internetmonitor_monitors} Data Source.
 func NewDataAwsccInternetmonitorMonitors(scope constructs.Construct, id *string, config *DataAwsccInternetmonitorMonitorsConfig) DataAwsccInternetmonitorMonitors {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccInternetmonitorMonitors(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/internetmonitor_monitors awscc_internetmonitor_monitors} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/internetmonitor_monitors awscc_internetmonitor_monitors} Data Source.
 func NewDataAwsccInternetmonitorMonitors_Override(d DataAwsccInternetmonitorMonitors, scope constructs.Construct, id *string, config *DataAwsccInternetmonitorMonitorsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccInternetmonitorMonitors) SynthesizeAttributes() *map
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccInternetmonitorMonitors) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccInternetmonitorMonitors) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -90,8 +90,10 @@ type IotfleetwiseSignalCatalogNodesAttributeOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetAllowedValues()
 	ResetAssignedValue()
+	ResetDataType()
 	ResetDefaultValue()
 	ResetDescription()
+	ResetFullyQualifiedName()
 	ResetMax()
 	ResetMin()
 	ResetUnit()
@@ -744,6 +746,14 @@ func (i *jsiiProxy_IotfleetwiseSignalCatalogNodesAttributeOutputReference) Reset
 	)
 }
 
+func (i *jsiiProxy_IotfleetwiseSignalCatalogNodesAttributeOutputReference) ResetDataType() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetDataType",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IotfleetwiseSignalCatalogNodesAttributeOutputReference) ResetDefaultValue() {
 	_jsii_.InvokeVoid(
 		i,
@@ -756,6 +766,14 @@ func (i *jsiiProxy_IotfleetwiseSignalCatalogNodesAttributeOutputReference) Reset
 	_jsii_.InvokeVoid(
 		i,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotfleetwiseSignalCatalogNodesAttributeOutputReference) ResetFullyQualifiedName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetFullyQualifiedName",
 		nil, // no parameters
 	)
 }

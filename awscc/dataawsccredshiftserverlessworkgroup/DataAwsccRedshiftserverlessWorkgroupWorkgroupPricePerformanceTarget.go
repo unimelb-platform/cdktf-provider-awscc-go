@@ -1,0 +1,6 @@
+package dataawsccredshiftserverlessworkgroup
+
+
+type DataAwsccRedshiftserverlessWorkgroupWorkgroupPricePerformanceTarget struct {
+}
+

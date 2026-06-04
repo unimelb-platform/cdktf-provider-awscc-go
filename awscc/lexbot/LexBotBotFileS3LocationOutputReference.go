@@ -70,6 +70,8 @@ type LexBotBotFileS3LocationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetS3Bucket()
+	ResetS3ObjectKey()
 	ResetS3ObjectVersion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -516,6 +518,22 @@ func (l *jsiiProxy_LexBotBotFileS3LocationOutputReference) InterpolationForAttri
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotBotFileS3LocationOutputReference) ResetS3Bucket() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetS3Bucket",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotFileS3LocationOutputReference) ResetS3ObjectKey() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetS3ObjectKey",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotBotFileS3LocationOutputReference) ResetS3ObjectVersion() {

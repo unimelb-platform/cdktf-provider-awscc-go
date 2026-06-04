@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/datazoneproject/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datazone_project awscc_datazone_project}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datazone_project awscc_datazone_project}.
 type DatazoneProject interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -37,6 +37,9 @@ type DatazoneProject interface {
 	DomainIdentifier() *string
 	SetDomainIdentifier(val *string)
 	DomainIdentifierInput() *string
+	DomainUnitId() *string
+	SetDomainUnitId(val *string)
+	DomainUnitIdInput() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -59,6 +62,14 @@ type DatazoneProject interface {
 	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
+	ProjectId() *string
+	ProjectProfileId() *string
+	SetProjectProfileId(val *string)
+	ProjectProfileIdInput() *string
+	ProjectProfileVersion() *string
+	SetProjectProfileVersion(val *string)
+	ProjectProfileVersionInput() *string
+	ProjectStatus() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -75,6 +86,8 @@ type DatazoneProject interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	UserParameters() DatazoneProjectUserParametersList
+	UserParametersInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -99,21 +112,39 @@ type DatazoneProject interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutUserParameters(value interface{})
 	ResetDescription()
+	ResetDomainUnitId()
 	ResetGlossaryTerms()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetProjectProfileId()
+	ResetProjectProfileVersion()
+	ResetUserParameters()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -248,6 +279,26 @@ func (j *jsiiProxy_DatazoneProject) DomainIdentifierInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DatazoneProject) DomainUnitId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"domainUnitId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneProject) DomainUnitIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"domainUnitIdInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DatazoneProject) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
@@ -358,6 +409,66 @@ func (j *jsiiProxy_DatazoneProject) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_DatazoneProject) ProjectId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"projectId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneProject) ProjectProfileId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"projectProfileId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneProject) ProjectProfileIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"projectProfileIdInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneProject) ProjectProfileVersion() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"projectProfileVersion",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneProject) ProjectProfileVersionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"projectProfileVersionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneProject) ProjectStatus() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"projectStatus",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DatazoneProject) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -418,8 +529,28 @@ func (j *jsiiProxy_DatazoneProject) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DatazoneProject) UserParameters() DatazoneProjectUserParametersList {
+	var returns DatazoneProjectUserParametersList
+	_jsii_.Get(
+		j,
+		"userParameters",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datazone_project awscc_datazone_project} Resource.
+func (j *jsiiProxy_DatazoneProject) UserParametersInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"userParametersInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datazone_project awscc_datazone_project} Resource.
 func NewDatazoneProject(scope constructs.Construct, id *string, config *DatazoneProjectConfig) DatazoneProject {
 	_init_.Initialize()
 
@@ -437,7 +568,7 @@ func NewDatazoneProject(scope constructs.Construct, id *string, config *Datazone
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datazone_project awscc_datazone_project} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datazone_project awscc_datazone_project} Resource.
 func NewDatazoneProject_Override(d DatazoneProject, scope constructs.Construct, id *string, config *DatazoneProjectConfig) {
 	_init_.Initialize()
 
@@ -500,6 +631,17 @@ func (j *jsiiProxy_DatazoneProject)SetDomainIdentifier(val *string) {
 	)
 }
 
+func (j *jsiiProxy_DatazoneProject)SetDomainUnitId(val *string) {
+	if err := j.validateSetDomainUnitIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"domainUnitId",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DatazoneProject)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
@@ -537,6 +679,28 @@ func (j *jsiiProxy_DatazoneProject)SetName(val *string) {
 	_jsii_.Set(
 		j,
 		"name",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DatazoneProject)SetProjectProfileId(val *string) {
+	if err := j.validateSetProjectProfileIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"projectProfileId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DatazoneProject)SetProjectProfileVersion(val *string) {
+	if err := j.validateSetProjectProfileVersionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"projectProfileVersion",
 		val,
 	)
 }
@@ -829,6 +993,19 @@ func (d *jsiiProxy_DatazoneProject) GetStringMapAttribute(terraformAttribute *st
 	return returns
 }
 
+func (d *jsiiProxy_DatazoneProject) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (d *jsiiProxy_DatazoneProject) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := d.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -856,6 +1033,17 @@ func (d *jsiiProxy_DatazoneProject) InterpolationForAttribute(terraformAttribute
 	return returns
 }
 
+func (d *jsiiProxy_DatazoneProject) MoveFromId(id *string) {
+	if err := d.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (d *jsiiProxy_DatazoneProject) MoveTo(moveTarget *string, index interface{}) {
 	if err := d.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -864,6 +1052,17 @@ func (d *jsiiProxy_DatazoneProject) MoveTo(moveTarget *string, index interface{}
 		d,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (d *jsiiProxy_DatazoneProject) MoveToId(id *string) {
+	if err := d.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -878,10 +1077,29 @@ func (d *jsiiProxy_DatazoneProject) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (d *jsiiProxy_DatazoneProject) PutUserParameters(value interface{}) {
+	if err := d.validatePutUserParametersParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putUserParameters",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DatazoneProject) ResetDescription() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatazoneProject) ResetDomainUnitId() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetDomainUnitId",
 		nil, // no parameters
 	)
 }
@@ -902,12 +1120,62 @@ func (d *jsiiProxy_DatazoneProject) ResetOverrideLogicalId() {
 	)
 }
 
+func (d *jsiiProxy_DatazoneProject) ResetProjectProfileId() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetProjectProfileId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatazoneProject) ResetProjectProfileVersion() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetProjectProfileVersion",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatazoneProject) ResetUserParameters() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetUserParameters",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DatazoneProject) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DatazoneProject) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DatazoneProject) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

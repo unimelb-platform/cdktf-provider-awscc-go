@@ -67,6 +67,7 @@ type MskClusterLoggingInfoBrokerLogsCloudwatchLogsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEnabled()
 	ResetLogGroup()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (m *jsiiProxy_MskClusterLoggingInfoBrokerLogsCloudwatchLogsOutputReference)
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_MskClusterLoggingInfoBrokerLogsCloudwatchLogsOutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetEnabled",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_MskClusterLoggingInfoBrokerLogsCloudwatchLogsOutputReference) ResetLogGroup() {

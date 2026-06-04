@@ -41,7 +41,7 @@ type S3BucketReplicationConfigurationRulesDestinationReplicationTimeOutputRefere
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	Time() S3BucketReplicationConfigurationRulesDestinationReplicationTimeTimeOutputReference
-	TimeInput() *S3BucketReplicationConfigurationRulesDestinationReplicationTimeTime
+	TimeInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -67,6 +67,8 @@ type S3BucketReplicationConfigurationRulesDestinationReplicationTimeOutputRefere
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutTime(value *S3BucketReplicationConfigurationRulesDestinationReplicationTimeTime)
+	ResetStatus()
+	ResetTime()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -182,8 +184,8 @@ func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationReplicationTi
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationReplicationTimeOutputReference) TimeInput() *S3BucketReplicationConfigurationRulesDestinationReplicationTimeTime {
-	var returns *S3BucketReplicationConfigurationRulesDestinationReplicationTimeTime
+func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationReplicationTimeOutputReference) TimeInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"timeInput",
@@ -480,6 +482,22 @@ func (s *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationReplicationTi
 		s,
 		"putTime",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationReplicationTimeOutputReference) ResetStatus() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStatus",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationReplicationTimeOutputReference) ResetTime() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTime",
+		nil, // no parameters
 	)
 }
 

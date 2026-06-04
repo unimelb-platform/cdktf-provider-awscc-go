@@ -33,8 +33,8 @@ type MediapackagePackagingConfigurationHlsPackageHlsManifestsOutputReference int
 	IncludeIframeOnlyStream() interface{}
 	SetIncludeIframeOnlyStream(val interface{})
 	IncludeIframeOnlyStreamInput() interface{}
-	InternalValue() *MediapackagePackagingConfigurationHlsPackageHlsManifests
-	SetInternalValue(val *MediapackagePackagingConfigurationHlsPackageHlsManifests)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	ManifestName() *string
 	SetManifestName(val *string)
 	ManifestNameInput() *string
@@ -180,8 +180,8 @@ func (j *jsiiProxy_MediapackagePackagingConfigurationHlsPackageHlsManifestsOutpu
 	return returns
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfigurationHlsPackageHlsManifestsOutputReference) InternalValue() *MediapackagePackagingConfigurationHlsPackageHlsManifests {
-	var returns *MediapackagePackagingConfigurationHlsPackageHlsManifests
+func (j *jsiiProxy_MediapackagePackagingConfigurationHlsPackageHlsManifestsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -362,7 +362,7 @@ func (j *jsiiProxy_MediapackagePackagingConfigurationHlsPackageHlsManifestsOutpu
 	)
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfigurationHlsPackageHlsManifestsOutputReference)SetInternalValue(val *MediapackagePackagingConfigurationHlsPackageHlsManifests) {
+func (j *jsiiProxy_MediapackagePackagingConfigurationHlsPackageHlsManifestsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

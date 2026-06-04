@@ -4,6 +4,10 @@ package ecscapacityprovider
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (e *jsiiProxy_EcsCapacityProviderTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_EcsCapacityProviderTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

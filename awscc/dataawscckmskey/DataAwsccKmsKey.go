@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscckmskey/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kms_key awscc_kms_key}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kms_key awscc_kms_key}.
 type DataAwsccKmsKey interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -59,6 +59,7 @@ type DataAwsccKmsKey interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	RotationPeriodInDays() *float64
 	Tags() DataAwsccKmsKeyTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -95,6 +96,10 @@ type DataAwsccKmsKey interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -359,6 +364,16 @@ func (j *jsiiProxy_DataAwsccKmsKey) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccKmsKey) RotationPeriodInDays() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"rotationPeriodInDays",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccKmsKey) Tags() DataAwsccKmsKeyTagsList {
 	var returns DataAwsccKmsKeyTagsList
 	_jsii_.Get(
@@ -400,7 +415,7 @@ func (j *jsiiProxy_DataAwsccKmsKey) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kms_key awscc_kms_key} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kms_key awscc_kms_key} Data Source.
 func NewDataAwsccKmsKey(scope constructs.Construct, id *string, config *DataAwsccKmsKeyConfig) DataAwsccKmsKey {
 	_init_.Initialize()
 
@@ -418,7 +433,7 @@ func NewDataAwsccKmsKey(scope constructs.Construct, id *string, config *DataAwsc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kms_key awscc_kms_key} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kms_key awscc_kms_key} Data Source.
 func NewDataAwsccKmsKey_Override(d DataAwsccKmsKey, scope constructs.Construct, id *string, config *DataAwsccKmsKeyConfig) {
 	_init_.Initialize()
 
@@ -785,6 +800,32 @@ func (d *jsiiProxy_DataAwsccKmsKey) SynthesizeAttributes() *map[string]interface
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKmsKey) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKmsKey) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

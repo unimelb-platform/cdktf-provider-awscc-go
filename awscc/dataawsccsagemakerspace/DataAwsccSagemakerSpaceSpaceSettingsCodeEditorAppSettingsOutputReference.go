@@ -10,6 +10,7 @@ import (
 
 type DataAwsccSagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReference interface {
 	cdktf.ComplexObject
+	AppLifecycleManagement() DataAwsccSagemakerSpaceSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementOutputReference
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -75,6 +76,16 @@ type DataAwsccSagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReference in
 // The jsii proxy struct for DataAwsccSagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReference
 type jsiiProxy_DataAwsccSagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReference) AppLifecycleManagement() DataAwsccSagemakerSpaceSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementOutputReference {
+	var returns DataAwsccSagemakerSpaceSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementOutputReference
+	_jsii_.Get(
+		j,
+		"appLifecycleManagement",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccSagemakerSpaceSpaceSettingsCodeEditorAppSettingsOutputReference) ComplexObjectIndex() interface{} {

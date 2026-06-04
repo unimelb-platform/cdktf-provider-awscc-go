@@ -33,8 +33,8 @@ type CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggregateColumnsOu
 	Function() *string
 	SetFunction(val *string)
 	FunctionInput() *string
-	InternalValue() *CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggregateColumns
-	SetInternalValue(val *CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggregateColumns)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,6 +67,8 @@ type CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggregateColumnsOu
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetColumnNames()
+	ResetFunction()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -162,8 +164,8 @@ func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggr
 	return returns
 }
 
-func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggregateColumnsOutputReference) InternalValue() *CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggregateColumns {
-	var returns *CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggregateColumns
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggregateColumnsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -264,7 +266,7 @@ func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggr
 	)
 }
 
-func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggregateColumnsOutputReference)SetInternalValue(val *CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggregateColumns) {
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggregateColumnsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggr
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggregateColumnsOutputReference) ResetColumnNames() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetColumnNames",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggregateColumnsOutputReference) ResetFunction() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetFunction",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggregateColumnsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

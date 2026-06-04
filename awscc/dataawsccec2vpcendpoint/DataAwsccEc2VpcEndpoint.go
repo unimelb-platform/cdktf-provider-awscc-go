@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2vpcendpoint/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_vpc_endpoint awscc_ec2_vpc_endpoint}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_vpc_endpoint awscc_ec2_vpc_endpoint}.
 type DataAwsccEc2VpcEndpoint interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -26,6 +26,7 @@ type DataAwsccEc2VpcEndpoint interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	DnsEntries() *[]*string
+	DnsOptions() DataAwsccEc2VpcEndpointDnsOptionsOutputReference
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -37,6 +38,7 @@ type DataAwsccEc2VpcEndpoint interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	IpAddressType() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -52,16 +54,21 @@ type DataAwsccEc2VpcEndpoint interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	ResourceConfigurationArn() *string
 	RouteTableIds() *[]*string
 	SecurityGroupIds() *[]*string
 	ServiceName() *string
+	ServiceNetworkArn() *string
+	ServiceRegion() *string
 	SubnetIds() *[]*string
+	Tags() DataAwsccEc2VpcEndpointTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	VpcEndpointId() *string
 	VpcEndpointType() *string
 	VpcId() *string
 	// Experimental.
@@ -93,6 +100,10 @@ type DataAwsccEc2VpcEndpoint interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -167,6 +178,16 @@ func (j *jsiiProxy_DataAwsccEc2VpcEndpoint) DnsEntries() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2VpcEndpoint) DnsOptions() DataAwsccEc2VpcEndpointDnsOptionsOutputReference {
+	var returns DataAwsccEc2VpcEndpointDnsOptionsOutputReference
+	_jsii_.Get(
+		j,
+		"dnsOptions",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2VpcEndpoint) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
@@ -212,6 +233,16 @@ func (j *jsiiProxy_DataAwsccEc2VpcEndpoint) IdInput() *string {
 	_jsii_.Get(
 		j,
 		"idInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpcEndpoint) IpAddressType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipAddressType",
 		&returns,
 	)
 	return returns
@@ -287,6 +318,16 @@ func (j *jsiiProxy_DataAwsccEc2VpcEndpoint) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2VpcEndpoint) ResourceConfigurationArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"resourceConfigurationArn",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2VpcEndpoint) RouteTableIds() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -317,11 +358,41 @@ func (j *jsiiProxy_DataAwsccEc2VpcEndpoint) ServiceName() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2VpcEndpoint) ServiceNetworkArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"serviceNetworkArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpcEndpoint) ServiceRegion() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"serviceRegion",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2VpcEndpoint) SubnetIds() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
 		"subnetIds",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpcEndpoint) Tags() DataAwsccEc2VpcEndpointTagsList {
+	var returns DataAwsccEc2VpcEndpointTagsList
+	_jsii_.Get(
+		j,
+		"tags",
 		&returns,
 	)
 	return returns
@@ -357,6 +428,16 @@ func (j *jsiiProxy_DataAwsccEc2VpcEndpoint) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2VpcEndpoint) VpcEndpointId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"vpcEndpointId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2VpcEndpoint) VpcEndpointType() *string {
 	var returns *string
 	_jsii_.Get(
@@ -378,7 +459,7 @@ func (j *jsiiProxy_DataAwsccEc2VpcEndpoint) VpcId() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_vpc_endpoint awscc_ec2_vpc_endpoint} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_vpc_endpoint awscc_ec2_vpc_endpoint} Data Source.
 func NewDataAwsccEc2VpcEndpoint(scope constructs.Construct, id *string, config *DataAwsccEc2VpcEndpointConfig) DataAwsccEc2VpcEndpoint {
 	_init_.Initialize()
 
@@ -396,7 +477,7 @@ func NewDataAwsccEc2VpcEndpoint(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_vpc_endpoint awscc_ec2_vpc_endpoint} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_vpc_endpoint awscc_ec2_vpc_endpoint} Data Source.
 func NewDataAwsccEc2VpcEndpoint_Override(d DataAwsccEc2VpcEndpoint, scope constructs.Construct, id *string, config *DataAwsccEc2VpcEndpointConfig) {
 	_init_.Initialize()
 
@@ -763,6 +844,32 @@ func (d *jsiiProxy_DataAwsccEc2VpcEndpoint) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2VpcEndpoint) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2VpcEndpoint) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

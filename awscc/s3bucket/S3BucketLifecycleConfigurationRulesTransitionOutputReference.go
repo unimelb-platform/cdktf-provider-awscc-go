@@ -70,6 +70,7 @@ type S3BucketLifecycleConfigurationRulesTransitionOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetStorageClass()
 	ResetTransitionDate()
 	ResetTransitionInDays()
 	// Produce the Token's value at resolution time.
@@ -517,6 +518,14 @@ func (s *jsiiProxy_S3BucketLifecycleConfigurationRulesTransitionOutputReference)
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_S3BucketLifecycleConfigurationRulesTransitionOutputReference) ResetStorageClass() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStorageClass",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_S3BucketLifecycleConfigurationRulesTransitionOutputReference) ResetTransitionDate() {

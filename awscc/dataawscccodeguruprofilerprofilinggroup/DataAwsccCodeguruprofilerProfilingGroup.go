@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccodeguruprofilerprofilinggroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codeguruprofiler_profiling_group awscc_codeguruprofiler_profiling_group}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codeguruprofiler_profiling_group awscc_codeguruprofiler_profiling_group}.
 type DataAwsccCodeguruprofilerProfilingGroup interface {
 	cdktf.TerraformDataSource
 	AgentPermissions() DataAwsccCodeguruprofilerProfilingGroupAgentPermissionsOutputReference
@@ -88,6 +88,10 @@ type DataAwsccCodeguruprofilerProfilingGroup interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -323,7 +327,7 @@ func (j *jsiiProxy_DataAwsccCodeguruprofilerProfilingGroup) TerraformResourceTyp
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codeguruprofiler_profiling_group awscc_codeguruprofiler_profiling_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codeguruprofiler_profiling_group awscc_codeguruprofiler_profiling_group} Data Source.
 func NewDataAwsccCodeguruprofilerProfilingGroup(scope constructs.Construct, id *string, config *DataAwsccCodeguruprofilerProfilingGroupConfig) DataAwsccCodeguruprofilerProfilingGroup {
 	_init_.Initialize()
 
@@ -341,7 +345,7 @@ func NewDataAwsccCodeguruprofilerProfilingGroup(scope constructs.Construct, id *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codeguruprofiler_profiling_group awscc_codeguruprofiler_profiling_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codeguruprofiler_profiling_group awscc_codeguruprofiler_profiling_group} Data Source.
 func NewDataAwsccCodeguruprofilerProfilingGroup_Override(d DataAwsccCodeguruprofilerProfilingGroup, scope constructs.Construct, id *string, config *DataAwsccCodeguruprofilerProfilingGroupConfig) {
 	_init_.Initialize()
 
@@ -708,6 +712,32 @@ func (d *jsiiProxy_DataAwsccCodeguruprofilerProfilingGroup) SynthesizeAttributes
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCodeguruprofilerProfilingGroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCodeguruprofilerProfilingGroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -56,11 +56,23 @@ func (c *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateInterpolat
 	return nil
 }
 
+func (c *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (c *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (c *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validatePutTagsParameters(value interface{}) error {
 	return nil
 }
 
@@ -89,6 +101,10 @@ func (j *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateSetConnect
 }
 
 func (j *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateSetCustomizationResourceArnsParameters(val *[]*string) error {
 	return nil
 }
 
@@ -121,6 +137,10 @@ func (j *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateSetTeamIdP
 }
 
 func (j *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateSetTeamsChannelIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateSetTeamsChannelNameParameters(val *string) error {
 	return nil
 }
 

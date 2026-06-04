@@ -67,6 +67,8 @@ type Route53HealthCheckHealthCheckConfigAlarmIdentifierOutputReference interface
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
+	ResetRegion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (r *jsiiProxy_Route53HealthCheckHealthCheckConfigAlarmIdentifierOutputRefer
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_Route53HealthCheckHealthCheckConfigAlarmIdentifierOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Route53HealthCheckHealthCheckConfigAlarmIdentifierOutputReference) ResetRegion() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetRegion",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_Route53HealthCheckHealthCheckConfigAlarmIdentifierOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -56,7 +56,15 @@ func (t *jsiiProxy_TransferConnector) validateInterpolationForAttributeParameter
 	return nil
 }
 
+func (t *jsiiProxy_TransferConnector) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (t *jsiiProxy_TransferConnector) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (t *jsiiProxy_TransferConnector) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -113,6 +121,10 @@ func (j *jsiiProxy_TransferConnector) validateSetLoggingRoleParameters(val *stri
 }
 
 func (j *jsiiProxy_TransferConnector) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_TransferConnector) validateSetSecurityPolicyNameParameters(val *string) error {
 	return nil
 }
 

@@ -67,6 +67,8 @@ type LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationPromp
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAllowAudioInput()
+	ResetAllowDtmfInput()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpec
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesOutputReference) ResetAllowAudioInput() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetAllowAudioInput",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesOutputReference) ResetAllowDtmfInput() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetAllowDtmfInput",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

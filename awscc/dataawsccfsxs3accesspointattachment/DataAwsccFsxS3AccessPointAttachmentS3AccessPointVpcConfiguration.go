@@ -1,0 +1,6 @@
+package dataawsccfsxs3accesspointattachment
+
+
+type DataAwsccFsxS3AccessPointAttachmentS3AccessPointVpcConfiguration struct {
+}
+

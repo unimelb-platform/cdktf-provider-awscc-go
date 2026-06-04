@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/datasynctask/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datasync_task awscc_datasync_task}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datasync_task awscc_datasync_task}.
 type DatasyncTask interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -52,6 +52,8 @@ type DatasyncTask interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	ManifestConfig() DatasyncTaskManifestConfigOutputReference
+	ManifestConfigInput() interface{}
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -79,6 +81,9 @@ type DatasyncTask interface {
 	Tags() DatasyncTaskTagsList
 	TagsInput() interface{}
 	TaskArn() *string
+	TaskMode() *string
+	SetTaskMode(val *string)
+	TaskModeInput() *string
 	TaskReportConfig() DatasyncTaskTaskReportConfigOutputReference
 	TaskReportConfigInput() interface{}
 	// Experimental.
@@ -111,17 +116,28 @@ type DatasyncTask interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutExcludes(value interface{})
 	PutIncludes(value interface{})
+	PutManifestConfig(value *DatasyncTaskManifestConfig)
 	PutOptions(value *DatasyncTaskOptions)
 	PutSchedule(value *DatasyncTaskSchedule)
 	PutTags(value interface{})
@@ -129,6 +145,7 @@ type DatasyncTask interface {
 	ResetCloudwatchLogGroupArn()
 	ResetExcludes()
 	ResetIncludes()
+	ResetManifestConfig()
 	ResetName()
 	ResetOptions()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -136,8 +153,12 @@ type DatasyncTask interface {
 	ResetOverrideLogicalId()
 	ResetSchedule()
 	ResetTags()
+	ResetTaskMode()
 	ResetTaskReportConfig()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -342,6 +363,26 @@ func (j *jsiiProxy_DatasyncTask) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	return returns
 }
 
+func (j *jsiiProxy_DatasyncTask) ManifestConfig() DatasyncTaskManifestConfigOutputReference {
+	var returns DatasyncTaskManifestConfigOutputReference
+	_jsii_.Get(
+		j,
+		"manifestConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatasyncTask) ManifestConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"manifestConfigInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DatasyncTask) Name() *string {
 	var returns *string
 	_jsii_.Get(
@@ -512,6 +553,26 @@ func (j *jsiiProxy_DatasyncTask) TaskArn() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DatasyncTask) TaskMode() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"taskMode",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatasyncTask) TaskModeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"taskModeInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DatasyncTask) TaskReportConfig() DatasyncTaskTaskReportConfigOutputReference {
 	var returns DatasyncTaskTaskReportConfigOutputReference
 	_jsii_.Get(
@@ -563,7 +624,7 @@ func (j *jsiiProxy_DatasyncTask) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datasync_task awscc_datasync_task} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datasync_task awscc_datasync_task} Resource.
 func NewDatasyncTask(scope constructs.Construct, id *string, config *DatasyncTaskConfig) DatasyncTask {
 	_init_.Initialize()
 
@@ -581,7 +642,7 @@ func NewDatasyncTask(scope constructs.Construct, id *string, config *DatasyncTas
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datasync_task awscc_datasync_task} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datasync_task awscc_datasync_task} Resource.
 func NewDatasyncTask_Override(d DatasyncTask, scope constructs.Construct, id *string, config *DatasyncTaskConfig) {
 	_init_.Initialize()
 
@@ -700,6 +761,17 @@ func (j *jsiiProxy_DatasyncTask)SetSourceLocationArn(val *string) {
 	_jsii_.Set(
 		j,
 		"sourceLocationArn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DatasyncTask)SetTaskMode(val *string) {
+	if err := j.validateSetTaskModeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"taskMode",
 		val,
 	)
 }
@@ -973,6 +1045,19 @@ func (d *jsiiProxy_DatasyncTask) GetStringMapAttribute(terraformAttribute *strin
 	return returns
 }
 
+func (d *jsiiProxy_DatasyncTask) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (d *jsiiProxy_DatasyncTask) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := d.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1000,6 +1085,17 @@ func (d *jsiiProxy_DatasyncTask) InterpolationForAttribute(terraformAttribute *s
 	return returns
 }
 
+func (d *jsiiProxy_DatasyncTask) MoveFromId(id *string) {
+	if err := d.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (d *jsiiProxy_DatasyncTask) MoveTo(moveTarget *string, index interface{}) {
 	if err := d.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1008,6 +1104,17 @@ func (d *jsiiProxy_DatasyncTask) MoveTo(moveTarget *string, index interface{}) {
 		d,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (d *jsiiProxy_DatasyncTask) MoveToId(id *string) {
+	if err := d.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1040,6 +1147,17 @@ func (d *jsiiProxy_DatasyncTask) PutIncludes(value interface{}) {
 	_jsii_.InvokeVoid(
 		d,
 		"putIncludes",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DatasyncTask) PutManifestConfig(value *DatasyncTaskManifestConfig) {
+	if err := d.validatePutManifestConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putManifestConfig",
 		[]interface{}{value},
 	)
 }
@@ -1112,6 +1230,14 @@ func (d *jsiiProxy_DatasyncTask) ResetIncludes() {
 	)
 }
 
+func (d *jsiiProxy_DatasyncTask) ResetManifestConfig() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetManifestConfig",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DatasyncTask) ResetName() {
 	_jsii_.InvokeVoid(
 		d,
@@ -1152,6 +1278,14 @@ func (d *jsiiProxy_DatasyncTask) ResetTags() {
 	)
 }
 
+func (d *jsiiProxy_DatasyncTask) ResetTaskMode() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetTaskMode",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DatasyncTask) ResetTaskReportConfig() {
 	_jsii_.InvokeVoid(
 		d,
@@ -1166,6 +1300,32 @@ func (d *jsiiProxy_DatasyncTask) SynthesizeAttributes() *map[string]interface{} 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DatasyncTask) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DatasyncTask) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

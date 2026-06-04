@@ -56,11 +56,23 @@ func (c *jsiiProxy_CleanroomsCollaboration) validateInterpolationForAttributePar
 	return nil
 }
 
+func (c *jsiiProxy_CleanroomsCollaboration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CleanroomsCollaboration) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (c *jsiiProxy_CleanroomsCollaboration) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CleanroomsCollaboration) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (c *jsiiProxy_CleanroomsCollaboration) validatePutCreatorMlMemberAbilitiesParameters(value *CleanroomsCollaborationCreatorMlMemberAbilities) error {
 	return nil
 }
 
@@ -96,6 +108,10 @@ func validateCleanroomsCollaboration_IsTerraformResourceParameters(x interface{}
 	return nil
 }
 
+func (j *jsiiProxy_CleanroomsCollaboration) validateSetAnalyticsEngineParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_CleanroomsCollaboration) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }
@@ -113,6 +129,10 @@ func (j *jsiiProxy_CleanroomsCollaboration) validateSetCreatorMemberAbilitiesPar
 }
 
 func (j *jsiiProxy_CleanroomsCollaboration) validateSetDescriptionParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_CleanroomsCollaboration) validateSetJobLogStatusParameters(val *string) error {
 	return nil
 }
 

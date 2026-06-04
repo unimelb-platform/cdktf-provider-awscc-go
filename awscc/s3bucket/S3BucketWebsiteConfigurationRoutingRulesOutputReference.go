@@ -30,7 +30,7 @@ type S3BucketWebsiteConfigurationRoutingRulesOutputReference interface {
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	RedirectRule() S3BucketWebsiteConfigurationRoutingRulesRedirectRuleOutputReference
-	RedirectRuleInput() *S3BucketWebsiteConfigurationRoutingRulesRedirectRule
+	RedirectRuleInput() interface{}
 	RoutingRuleCondition() S3BucketWebsiteConfigurationRoutingRulesRoutingRuleConditionOutputReference
 	RoutingRuleConditionInput() interface{}
 	// Experimental.
@@ -67,6 +67,7 @@ type S3BucketWebsiteConfigurationRoutingRulesOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutRedirectRule(value *S3BucketWebsiteConfigurationRoutingRulesRedirectRule)
 	PutRoutingRuleCondition(value *S3BucketWebsiteConfigurationRoutingRulesRoutingRuleCondition)
+	ResetRedirectRule()
 	ResetRoutingRuleCondition()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -143,8 +144,8 @@ func (j *jsiiProxy_S3BucketWebsiteConfigurationRoutingRulesOutputReference) Redi
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketWebsiteConfigurationRoutingRulesOutputReference) RedirectRuleInput() *S3BucketWebsiteConfigurationRoutingRulesRedirectRule {
-	var returns *S3BucketWebsiteConfigurationRoutingRulesRedirectRule
+func (j *jsiiProxy_S3BucketWebsiteConfigurationRoutingRulesOutputReference) RedirectRuleInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"redirectRuleInput",
@@ -481,6 +482,14 @@ func (s *jsiiProxy_S3BucketWebsiteConfigurationRoutingRulesOutputReference) PutR
 		s,
 		"putRoutingRuleCondition",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_S3BucketWebsiteConfigurationRoutingRulesOutputReference) ResetRedirectRule() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetRedirectRule",
+		nil, // no parameters
 	)
 }
 

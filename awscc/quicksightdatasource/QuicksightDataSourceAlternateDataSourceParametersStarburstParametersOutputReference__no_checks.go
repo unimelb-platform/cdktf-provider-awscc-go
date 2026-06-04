@@ -44,7 +44,15 @@ func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstPar
 	return nil
 }
 
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) validatePutOAuthParametersParameters(value *QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOAuthParameters) error {
+	return nil
+}
+
 func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) validateSetAuthenticationTypeParameters(val *string) error {
 	return nil
 }
 
@@ -57,6 +65,10 @@ func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstPar
 }
 
 func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersStarburstParametersOutputReference) validateSetDatabaseAccessControlRoleParameters(val *string) error {
 	return nil
 }
 

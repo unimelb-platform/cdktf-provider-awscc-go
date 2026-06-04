@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/memorydbcluster/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/memorydb_cluster awscc_memorydb_cluster}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/memorydb_cluster awscc_memorydb_cluster}.
 type MemorydbCluster interface {
 	cdktf.TerraformResource
 	AclName() *string
@@ -46,6 +46,9 @@ type MemorydbCluster interface {
 	Description() *string
 	SetDescription(val *string)
 	DescriptionInput() *string
+	Engine() *string
+	SetEngine(val *string)
+	EngineInput() *string
 	EngineVersion() *string
 	SetEngineVersion(val *string)
 	EngineVersionInput() *string
@@ -61,6 +64,9 @@ type MemorydbCluster interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
+	IpDiscovery() *string
+	SetIpDiscovery(val *string)
+	IpDiscoveryInput() *string
 	KmsKeyId() *string
 	SetKmsKeyId(val *string)
 	KmsKeyIdInput() *string
@@ -71,6 +77,12 @@ type MemorydbCluster interface {
 	MaintenanceWindow() *string
 	SetMaintenanceWindow(val *string)
 	MaintenanceWindowInput() *string
+	MultiRegionClusterName() *string
+	SetMultiRegionClusterName(val *string)
+	MultiRegionClusterNameInput() *string
+	NetworkType() *string
+	SetNetworkType(val *string)
+	NetworkTypeInput() *string
 	// The tree node.
 	Node() constructs.Node
 	NodeType() *string
@@ -159,12 +171,22 @@ type MemorydbCluster interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -174,10 +196,14 @@ type MemorydbCluster interface {
 	ResetClusterEndpoint()
 	ResetDataTiering()
 	ResetDescription()
+	ResetEngine()
 	ResetEngineVersion()
 	ResetFinalSnapshotName()
+	ResetIpDiscovery()
 	ResetKmsKeyId()
 	ResetMaintenanceWindow()
+	ResetMultiRegionClusterName()
+	ResetNetworkType()
 	ResetNumReplicasPerShard()
 	ResetNumShards()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -196,6 +222,9 @@ type MemorydbCluster interface {
 	ResetTags()
 	ResetTlsEnabled()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -390,6 +419,26 @@ func (j *jsiiProxy_MemorydbCluster) DescriptionInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_MemorydbCluster) Engine() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"engine",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MemorydbCluster) EngineInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"engineInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_MemorydbCluster) EngineVersion() *string {
 	var returns *string
 	_jsii_.Get(
@@ -470,6 +519,26 @@ func (j *jsiiProxy_MemorydbCluster) Id() *string {
 	return returns
 }
 
+func (j *jsiiProxy_MemorydbCluster) IpDiscovery() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipDiscovery",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MemorydbCluster) IpDiscoveryInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipDiscoveryInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_MemorydbCluster) KmsKeyId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -515,6 +584,46 @@ func (j *jsiiProxy_MemorydbCluster) MaintenanceWindowInput() *string {
 	_jsii_.Get(
 		j,
 		"maintenanceWindowInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MemorydbCluster) MultiRegionClusterName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"multiRegionClusterName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MemorydbCluster) MultiRegionClusterNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"multiRegionClusterNameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MemorydbCluster) NetworkType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"networkType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MemorydbCluster) NetworkTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"networkTypeInput",
 		&returns,
 	)
 	return returns
@@ -911,7 +1020,7 @@ func (j *jsiiProxy_MemorydbCluster) TlsEnabledInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/memorydb_cluster awscc_memorydb_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/memorydb_cluster awscc_memorydb_cluster} Resource.
 func NewMemorydbCluster(scope constructs.Construct, id *string, config *MemorydbClusterConfig) MemorydbCluster {
 	_init_.Initialize()
 
@@ -929,7 +1038,7 @@ func NewMemorydbCluster(scope constructs.Construct, id *string, config *Memorydb
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/memorydb_cluster awscc_memorydb_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/memorydb_cluster awscc_memorydb_cluster} Resource.
 func NewMemorydbCluster_Override(m MemorydbCluster, scope constructs.Construct, id *string, config *MemorydbClusterConfig) {
 	_init_.Initialize()
 
@@ -1025,6 +1134,17 @@ func (j *jsiiProxy_MemorydbCluster)SetDescription(val *string) {
 	)
 }
 
+func (j *jsiiProxy_MemorydbCluster)SetEngine(val *string) {
+	if err := j.validateSetEngineParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"engine",
+		val,
+	)
+}
+
 func (j *jsiiProxy_MemorydbCluster)SetEngineVersion(val *string) {
 	if err := j.validateSetEngineVersionParameters(val); err != nil {
 		panic(err)
@@ -1051,6 +1171,17 @@ func (j *jsiiProxy_MemorydbCluster)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_MemorydbCluster)SetIpDiscovery(val *string) {
+	if err := j.validateSetIpDiscoveryParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ipDiscovery",
 		val,
 	)
 }
@@ -1084,6 +1215,28 @@ func (j *jsiiProxy_MemorydbCluster)SetMaintenanceWindow(val *string) {
 	_jsii_.Set(
 		j,
 		"maintenanceWindow",
+		val,
+	)
+}
+
+func (j *jsiiProxy_MemorydbCluster)SetMultiRegionClusterName(val *string) {
+	if err := j.validateSetMultiRegionClusterNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"multiRegionClusterName",
+		val,
+	)
+}
+
+func (j *jsiiProxy_MemorydbCluster)SetNetworkType(val *string) {
+	if err := j.validateSetNetworkTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"networkType",
 		val,
 	)
 }
@@ -1530,6 +1683,19 @@ func (m *jsiiProxy_MemorydbCluster) GetStringMapAttribute(terraformAttribute *st
 	return returns
 }
 
+func (m *jsiiProxy_MemorydbCluster) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (m *jsiiProxy_MemorydbCluster) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1557,6 +1723,17 @@ func (m *jsiiProxy_MemorydbCluster) InterpolationForAttribute(terraformAttribute
 	return returns
 }
 
+func (m *jsiiProxy_MemorydbCluster) MoveFromId(id *string) {
+	if err := m.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_MemorydbCluster) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1565,6 +1742,17 @@ func (m *jsiiProxy_MemorydbCluster) MoveTo(moveTarget *string, index interface{}
 		m,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (m *jsiiProxy_MemorydbCluster) MoveToId(id *string) {
+	if err := m.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1633,6 +1821,14 @@ func (m *jsiiProxy_MemorydbCluster) ResetDescription() {
 	)
 }
 
+func (m *jsiiProxy_MemorydbCluster) ResetEngine() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetEngine",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_MemorydbCluster) ResetEngineVersion() {
 	_jsii_.InvokeVoid(
 		m,
@@ -1649,6 +1845,14 @@ func (m *jsiiProxy_MemorydbCluster) ResetFinalSnapshotName() {
 	)
 }
 
+func (m *jsiiProxy_MemorydbCluster) ResetIpDiscovery() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetIpDiscovery",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_MemorydbCluster) ResetKmsKeyId() {
 	_jsii_.InvokeVoid(
 		m,
@@ -1661,6 +1865,22 @@ func (m *jsiiProxy_MemorydbCluster) ResetMaintenanceWindow() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetMaintenanceWindow",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MemorydbCluster) ResetMultiRegionClusterName() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMultiRegionClusterName",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MemorydbCluster) ResetNetworkType() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetNetworkType",
 		nil, // no parameters
 	)
 }
@@ -1791,6 +2011,32 @@ func (m *jsiiProxy_MemorydbCluster) SynthesizeAttributes() *map[string]interface
 	_jsii_.Invoke(
 		m,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MemorydbCluster) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		m,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MemorydbCluster) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -56,11 +56,23 @@ func (c *jsiiProxy_ChatbotSlackChannelConfiguration) validateInterpolationForAtt
 	return nil
 }
 
+func (c *jsiiProxy_ChatbotSlackChannelConfiguration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_ChatbotSlackChannelConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (c *jsiiProxy_ChatbotSlackChannelConfiguration) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_ChatbotSlackChannelConfiguration) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (c *jsiiProxy_ChatbotSlackChannelConfiguration) validatePutTagsParameters(value interface{}) error {
 	return nil
 }
 
@@ -89,6 +101,10 @@ func (j *jsiiProxy_ChatbotSlackChannelConfiguration) validateSetConnectionParame
 }
 
 func (j *jsiiProxy_ChatbotSlackChannelConfiguration) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ChatbotSlackChannelConfiguration) validateSetCustomizationResourceArnsParameters(val *[]*string) error {
 	return nil
 }
 

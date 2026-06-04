@@ -71,6 +71,7 @@ type SagemakerInferenceExperimentDataStorageConfigOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutContentType(value *SagemakerInferenceExperimentDataStorageConfigContentType)
 	ResetContentType()
+	ResetDestination()
 	ResetKmsKey()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -523,6 +524,14 @@ func (s *jsiiProxy_SagemakerInferenceExperimentDataStorageConfigOutputReference)
 	_jsii_.InvokeVoid(
 		s,
 		"resetContentType",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerInferenceExperimentDataStorageConfigOutputReference) ResetDestination() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDestination",
 		nil, // no parameters
 	)
 }

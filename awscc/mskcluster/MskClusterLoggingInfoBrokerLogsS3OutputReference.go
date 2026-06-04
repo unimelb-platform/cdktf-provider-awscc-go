@@ -71,6 +71,7 @@ type MskClusterLoggingInfoBrokerLogsS3OutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetBucket()
+	ResetEnabled()
 	ResetPrefix()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -523,6 +524,14 @@ func (m *jsiiProxy_MskClusterLoggingInfoBrokerLogsS3OutputReference) ResetBucket
 	_jsii_.InvokeVoid(
 		m,
 		"resetBucket",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MskClusterLoggingInfoBrokerLogsS3OutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetEnabled",
 		nil, // no parameters
 	)
 }

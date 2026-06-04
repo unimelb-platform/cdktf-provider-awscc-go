@@ -1,0 +1,6 @@
+package dataawsccbedrockapplicationinferenceprofile
+
+
+type DataAwsccBedrockApplicationInferenceProfileModelSource struct {
+}
+

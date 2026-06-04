@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/apsworkspace/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/aps_workspace awscc_aps_workspace}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/aps_workspace awscc_aps_workspace}.
 type ApsWorkspace interface {
 	cdktf.TerraformResource
 	AlertManagerDefinition() *string
@@ -64,6 +64,8 @@ type ApsWorkspace interface {
 	Provisioners() *[]interface{}
 	// Experimental.
 	SetProvisioners(val *[]interface{})
+	QueryLoggingConfiguration() ApsWorkspaceQueryLoggingConfigurationOutputReference
+	QueryLoggingConfigurationInput() interface{}
 	// Experimental.
 	RawOverrides() interface{}
 	Tags() ApsWorkspaceTagsList
@@ -74,6 +76,8 @@ type ApsWorkspace interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	WorkspaceConfiguration() ApsWorkspaceWorkspaceConfigurationOutputReference
+	WorkspaceConfigurationInput() interface{}
 	WorkspaceId() *string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
@@ -99,17 +103,29 @@ type ApsWorkspace interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutLoggingConfiguration(value *ApsWorkspaceLoggingConfiguration)
+	PutQueryLoggingConfiguration(value *ApsWorkspaceQueryLoggingConfiguration)
 	PutTags(value interface{})
+	PutWorkspaceConfiguration(value *ApsWorkspaceWorkspaceConfiguration)
 	ResetAlertManagerDefinition()
 	ResetAlias()
 	ResetKmsKeyArn()
@@ -117,8 +133,13 @@ type ApsWorkspace interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetQueryLoggingConfiguration()
 	ResetTags()
+	ResetWorkspaceConfiguration()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -363,6 +384,26 @@ func (j *jsiiProxy_ApsWorkspace) Provisioners() *[]interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_ApsWorkspace) QueryLoggingConfiguration() ApsWorkspaceQueryLoggingConfigurationOutputReference {
+	var returns ApsWorkspaceQueryLoggingConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"queryLoggingConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApsWorkspace) QueryLoggingConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"queryLoggingConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ApsWorkspace) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -423,6 +464,26 @@ func (j *jsiiProxy_ApsWorkspace) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ApsWorkspace) WorkspaceConfiguration() ApsWorkspaceWorkspaceConfigurationOutputReference {
+	var returns ApsWorkspaceWorkspaceConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"workspaceConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApsWorkspace) WorkspaceConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"workspaceConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ApsWorkspace) WorkspaceId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -434,7 +495,7 @@ func (j *jsiiProxy_ApsWorkspace) WorkspaceId() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/aps_workspace awscc_aps_workspace} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/aps_workspace awscc_aps_workspace} Resource.
 func NewApsWorkspace(scope constructs.Construct, id *string, config *ApsWorkspaceConfig) ApsWorkspace {
 	_init_.Initialize()
 
@@ -452,7 +513,7 @@ func NewApsWorkspace(scope constructs.Construct, id *string, config *ApsWorkspac
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/aps_workspace awscc_aps_workspace} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/aps_workspace awscc_aps_workspace} Resource.
 func NewApsWorkspace_Override(a ApsWorkspace, scope constructs.Construct, id *string, config *ApsWorkspaceConfig) {
 	_init_.Initialize()
 
@@ -833,6 +894,19 @@ func (a *jsiiProxy_ApsWorkspace) GetStringMapAttribute(terraformAttribute *strin
 	return returns
 }
 
+func (a *jsiiProxy_ApsWorkspace) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (a *jsiiProxy_ApsWorkspace) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := a.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -860,6 +934,17 @@ func (a *jsiiProxy_ApsWorkspace) InterpolationForAttribute(terraformAttribute *s
 	return returns
 }
 
+func (a *jsiiProxy_ApsWorkspace) MoveFromId(id *string) {
+	if err := a.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (a *jsiiProxy_ApsWorkspace) MoveTo(moveTarget *string, index interface{}) {
 	if err := a.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -868,6 +953,17 @@ func (a *jsiiProxy_ApsWorkspace) MoveTo(moveTarget *string, index interface{}) {
 		a,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (a *jsiiProxy_ApsWorkspace) MoveToId(id *string) {
+	if err := a.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -893,6 +989,17 @@ func (a *jsiiProxy_ApsWorkspace) PutLoggingConfiguration(value *ApsWorkspaceLogg
 	)
 }
 
+func (a *jsiiProxy_ApsWorkspace) PutQueryLoggingConfiguration(value *ApsWorkspaceQueryLoggingConfiguration) {
+	if err := a.validatePutQueryLoggingConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putQueryLoggingConfiguration",
+		[]interface{}{value},
+	)
+}
+
 func (a *jsiiProxy_ApsWorkspace) PutTags(value interface{}) {
 	if err := a.validatePutTagsParameters(value); err != nil {
 		panic(err)
@@ -900,6 +1007,17 @@ func (a *jsiiProxy_ApsWorkspace) PutTags(value interface{}) {
 	_jsii_.InvokeVoid(
 		a,
 		"putTags",
+		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_ApsWorkspace) PutWorkspaceConfiguration(value *ApsWorkspaceWorkspaceConfiguration) {
+	if err := a.validatePutWorkspaceConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putWorkspaceConfiguration",
 		[]interface{}{value},
 	)
 }
@@ -944,10 +1062,26 @@ func (a *jsiiProxy_ApsWorkspace) ResetOverrideLogicalId() {
 	)
 }
 
+func (a *jsiiProxy_ApsWorkspace) ResetQueryLoggingConfiguration() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetQueryLoggingConfiguration",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_ApsWorkspace) ResetTags() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetTags",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApsWorkspace) ResetWorkspaceConfiguration() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetWorkspaceConfiguration",
 		nil, // no parameters
 	)
 }
@@ -958,6 +1092,32 @@ func (a *jsiiProxy_ApsWorkspace) SynthesizeAttributes() *map[string]interface{} 
 	_jsii_.Invoke(
 		a,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_ApsWorkspace) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		a,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_ApsWorkspace) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

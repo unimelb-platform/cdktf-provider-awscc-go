@@ -73,6 +73,7 @@ type EcsServiceServiceConnectConfigurationOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutLogConfiguration(value *EcsServiceServiceConnectConfigurationLogConfiguration)
 	PutServices(value interface{})
+	ResetEnabled()
 	ResetLogConfiguration()
 	ResetNamespace()
 	ResetServices()
@@ -551,6 +552,14 @@ func (e *jsiiProxy_EcsServiceServiceConnectConfigurationOutputReference) PutServ
 		e,
 		"putServices",
 		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_EcsServiceServiceConnectConfigurationOutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetEnabled",
+		nil, // no parameters
 	)
 }
 

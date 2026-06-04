@@ -80,7 +80,15 @@ func (s *jsiiProxy_SagemakerUserProfileUserSettingsOutputReference) validatePutS
 	return nil
 }
 
+func (s *jsiiProxy_SagemakerUserProfileUserSettingsOutputReference) validatePutStudioWebPortalSettingsParameters(value *SagemakerUserProfileUserSettingsStudioWebPortalSettings) error {
+	return nil
+}
+
 func (s *jsiiProxy_SagemakerUserProfileUserSettingsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_SagemakerUserProfileUserSettingsOutputReference) validateSetAutoMountHomeEfsParameters(val *string) error {
 	return nil
 }
 

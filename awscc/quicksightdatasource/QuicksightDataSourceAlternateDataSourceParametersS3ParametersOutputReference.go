@@ -30,7 +30,7 @@ type QuicksightDataSourceAlternateDataSourceParametersS3ParametersOutputReferenc
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	ManifestFileLocation() QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocationOutputReference
-	ManifestFileLocationInput() *QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocation
+	ManifestFileLocationInput() interface{}
 	RoleArn() *string
 	SetRoleArn(val *string)
 	RoleArnInput() *string
@@ -67,6 +67,7 @@ type QuicksightDataSourceAlternateDataSourceParametersS3ParametersOutputReferenc
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutManifestFileLocation(value *QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocation)
+	ResetManifestFileLocation()
 	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -143,8 +144,8 @@ func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersS3Parameters
 	return returns
 }
 
-func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersS3ParametersOutputReference) ManifestFileLocationInput() *QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocation {
-	var returns *QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocation
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersS3ParametersOutputReference) ManifestFileLocationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"manifestFileLocationInput",
@@ -481,6 +482,14 @@ func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersS3Parameters
 		q,
 		"putManifestFileLocation",
 		[]interface{}{value},
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersS3ParametersOutputReference) ResetManifestFileLocation() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetManifestFileLocation",
+		nil, // no parameters
 	)
 }
 

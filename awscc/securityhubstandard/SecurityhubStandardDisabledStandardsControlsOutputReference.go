@@ -68,6 +68,7 @@ type SecurityhubStandardDisabledStandardsControlsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetReason()
+	ResetStandardsControlArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (s *jsiiProxy_SecurityhubStandardDisabledStandardsControlsOutputReference) 
 	_jsii_.InvokeVoid(
 		s,
 		"resetReason",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SecurityhubStandardDisabledStandardsControlsOutputReference) ResetStandardsControlArn() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStandardsControlArn",
 		nil, // no parameters
 	)
 }

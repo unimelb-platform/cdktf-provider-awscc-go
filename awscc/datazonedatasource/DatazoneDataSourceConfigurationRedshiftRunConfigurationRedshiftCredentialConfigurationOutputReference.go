@@ -27,8 +27,8 @@ type DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialCo
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialConfiguration
-	SetInternalValue(val *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialConfiguration)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	SecretManagerArn() *string
 	SetSecretManagerArn(val *string)
 	SecretManagerArnInput() *string
@@ -64,6 +64,7 @@ type DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialCo
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetSecretManagerArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -119,8 +120,8 @@ func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshi
 	return returns
 }
 
-func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialConfigurationOutputReference) InternalValue() *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialConfiguration {
-	var returns *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialConfiguration
+func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialConfigurationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -219,7 +220,7 @@ func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshi
 	)
 }
 
-func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialConfigurationOutputReference)SetInternalValue(val *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialConfiguration) {
+func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialConfigurationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -447,6 +448,14 @@ func (d *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshi
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialConfigurationOutputReference) ResetSecretManagerArn() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetSecretManagerArn",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

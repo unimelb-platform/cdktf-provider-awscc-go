@@ -60,7 +60,7 @@ func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisOutputRefe
 	return nil
 }
 
-func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisOutputReference) validateSetInternalValueParameters(val *S3BucketAnalyticsConfigurationsStorageClassAnalysis) error {
+func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

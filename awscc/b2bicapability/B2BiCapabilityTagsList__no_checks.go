@@ -4,6 +4,10 @@ package b2bicapability
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (b *jsiiProxy_B2BiCapabilityTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (b *jsiiProxy_B2BiCapabilityTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

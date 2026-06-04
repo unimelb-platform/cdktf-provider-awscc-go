@@ -70,6 +70,9 @@ type IotwirelessWirelessDeviceLoRaWanOtaaV11OutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAppKey()
+	ResetJoinEui()
+	ResetNwkKey()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanOtaaV11OutputReference) Inter
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanOtaaV11OutputReference) ResetAppKey() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetAppKey",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanOtaaV11OutputReference) ResetJoinEui() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetJoinEui",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanOtaaV11OutputReference) ResetNwkKey() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetNwkKey",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanOtaaV11OutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

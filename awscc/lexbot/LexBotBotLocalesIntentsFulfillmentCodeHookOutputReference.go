@@ -70,6 +70,7 @@ type LexBotBotLocalesIntentsFulfillmentCodeHookOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutFulfillmentUpdatesSpecification(value *LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecification)
 	PutPostFulfillmentStatusSpecification(value *LexBotBotLocalesIntentsFulfillmentCodeHookPostFulfillmentStatusSpecification)
+	ResetEnabled()
 	ResetFulfillmentUpdatesSpecification()
 	ResetPostFulfillmentStatusSpecification()
 	// Produce the Token's value at resolution time.
@@ -516,6 +517,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookOutputReference) Pu
 		l,
 		"putPostFulfillmentStatusSpecification",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookOutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetEnabled",
+		nil, // no parameters
 	)
 }
 

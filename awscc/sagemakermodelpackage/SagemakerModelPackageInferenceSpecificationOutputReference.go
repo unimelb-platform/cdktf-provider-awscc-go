@@ -76,7 +76,10 @@ type SagemakerModelPackageInferenceSpecificationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutContainers(value interface{})
+	ResetContainers()
+	ResetSupportedContentTypes()
 	ResetSupportedRealtimeInferenceInstanceTypes()
+	ResetSupportedResponseMimeTypes()
 	ResetSupportedTransformInstanceTypes()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -587,10 +590,34 @@ func (s *jsiiProxy_SagemakerModelPackageInferenceSpecificationOutputReference) P
 	)
 }
 
+func (s *jsiiProxy_SagemakerModelPackageInferenceSpecificationOutputReference) ResetContainers() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetContainers",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackageInferenceSpecificationOutputReference) ResetSupportedContentTypes() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSupportedContentTypes",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerModelPackageInferenceSpecificationOutputReference) ResetSupportedRealtimeInferenceInstanceTypes() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetSupportedRealtimeInferenceInstanceTypes",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackageInferenceSpecificationOutputReference) ResetSupportedResponseMimeTypes() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSupportedResponseMimeTypes",
 		nil, // no parameters
 	)
 }

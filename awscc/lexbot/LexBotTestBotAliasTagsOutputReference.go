@@ -67,6 +67,8 @@ type LexBotTestBotAliasTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (l *jsiiProxy_LexBotTestBotAliasTagsOutputReference) InterpolationForAttrib
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotTestBotAliasTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotTestBotAliasTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotTestBotAliasTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -64,7 +64,7 @@ func (j *jsiiProxy_SagemakerModelExplainabilityJobDefinitionModelExplainabilityJ
 	return nil
 }
 
-func (j *jsiiProxy_SagemakerModelExplainabilityJobDefinitionModelExplainabilityJobInputBatchTransformInputDatasetFormatOutputReference) validateSetInternalValueParameters(val *SagemakerModelExplainabilityJobDefinitionModelExplainabilityJobInputBatchTransformInputDatasetFormat) error {
+func (j *jsiiProxy_SagemakerModelExplainabilityJobDefinitionModelExplainabilityJobInputBatchTransformInputDatasetFormatOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

@@ -1,0 +1,6 @@
+package dataawsccprotonenvironmentaccountconnection
+
+
+type DataAwsccProtonEnvironmentAccountConnectionTags struct {
+}
+

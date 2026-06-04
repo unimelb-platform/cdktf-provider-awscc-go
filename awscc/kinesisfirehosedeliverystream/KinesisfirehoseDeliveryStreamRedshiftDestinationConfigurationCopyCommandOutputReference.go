@@ -36,8 +36,8 @@ type KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommandOut
 	DataTableNameInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommand
-	SetInternalValue(val *KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommand)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -72,6 +72,7 @@ type KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommandOut
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetCopyOptions()
 	ResetDataTableColumns()
+	ResetDataTableName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -187,8 +188,8 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfiguration
 	return returns
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommandOutputReference) InternalValue() *KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommand {
-	var returns *KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommand
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommandOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -300,7 +301,7 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfiguration
 	)
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommandOutputReference)SetInternalValue(val *KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommand) {
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommandOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -531,6 +532,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfiguration
 	_jsii_.InvokeVoid(
 		k,
 		"resetDataTableColumns",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommandOutputReference) ResetDataTableName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetDataTableName",
 		nil, // no parameters
 	)
 }

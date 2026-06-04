@@ -32,6 +32,7 @@ type DataAwsccElasticloadbalancingv2LoadBalancerSubnetMappingsOutputReference in
 	SetInternalValue(val *DataAwsccElasticloadbalancingv2LoadBalancerSubnetMappings)
 	IPv6Address() *string
 	PrivateIPv4Address() *string
+	SourceNatIpv6Prefix() *string
 	SubnetId() *string
 	// Experimental.
 	TerraformAttribute() *string
@@ -155,6 +156,16 @@ func (j *jsiiProxy_DataAwsccElasticloadbalancingv2LoadBalancerSubnetMappingsOutp
 	_jsii_.Get(
 		j,
 		"privateIPv4Address",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccElasticloadbalancingv2LoadBalancerSubnetMappingsOutputReference) SourceNatIpv6Prefix() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"sourceNatIpv6Prefix",
 		&returns,
 	)
 	return returns

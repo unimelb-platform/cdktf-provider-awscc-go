@@ -56,7 +56,15 @@ func (m *jsiiProxy_MedialiveMultiplexprogram) validateInterpolationForAttributeP
 	return nil
 }
 
+func (m *jsiiProxy_MedialiveMultiplexprogram) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_MedialiveMultiplexprogram) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (m *jsiiProxy_MedialiveMultiplexprogram) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -89,10 +97,6 @@ func validateMedialiveMultiplexprogram_IsTerraformElementParameters(x interface{
 }
 
 func validateMedialiveMultiplexprogram_IsTerraformResourceParameters(x interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_MedialiveMultiplexprogram) validateSetChannelIdParameters(val *string) error {
 	return nil
 }
 

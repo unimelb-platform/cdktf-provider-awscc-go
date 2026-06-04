@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccloudtraileventdatastore/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudtrail_event_data_store awscc_cloudtrail_event_data_store}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudtrail_event_data_store awscc_cloudtrail_event_data_store}.
 type DataAwsccCloudtrailEventDataStore interface {
 	cdktf.TerraformDataSource
 	AdvancedEventSelectors() DataAwsccCloudtrailEventDataStoreAdvancedEventSelectorsList
@@ -18,6 +18,7 @@ type DataAwsccCloudtrailEventDataStore interface {
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
+	ContextKeySelectors() DataAwsccCloudtrailEventDataStoreContextKeySelectorsList
 	// Experimental.
 	Count() interface{}
 	// Experimental.
@@ -49,6 +50,7 @@ type DataAwsccCloudtrailEventDataStore interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	MaxEventSize() *string
 	MultiRegionEnabled() cdktf.IResolvable
 	Name() *string
 	// The tree node.
@@ -100,6 +102,10 @@ type DataAwsccCloudtrailEventDataStore interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -149,6 +155,16 @@ func (j *jsiiProxy_DataAwsccCloudtrailEventDataStore) ConstructNodeMetadata() *m
 	_jsii_.Get(
 		j,
 		"constructNodeMetadata",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCloudtrailEventDataStore) ContextKeySelectors() DataAwsccCloudtrailEventDataStoreContextKeySelectorsList {
+	var returns DataAwsccCloudtrailEventDataStoreContextKeySelectorsList
+	_jsii_.Get(
+		j,
+		"contextKeySelectors",
 		&returns,
 	)
 	return returns
@@ -314,6 +330,16 @@ func (j *jsiiProxy_DataAwsccCloudtrailEventDataStore) Lifecycle() *cdktf.Terrafo
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccCloudtrailEventDataStore) MaxEventSize() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"maxEventSize",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccCloudtrailEventDataStore) MultiRegionEnabled() cdktf.IResolvable {
 	var returns cdktf.IResolvable
 	_jsii_.Get(
@@ -455,7 +481,7 @@ func (j *jsiiProxy_DataAwsccCloudtrailEventDataStore) UpdatedTimestamp() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudtrail_event_data_store awscc_cloudtrail_event_data_store} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudtrail_event_data_store awscc_cloudtrail_event_data_store} Data Source.
 func NewDataAwsccCloudtrailEventDataStore(scope constructs.Construct, id *string, config *DataAwsccCloudtrailEventDataStoreConfig) DataAwsccCloudtrailEventDataStore {
 	_init_.Initialize()
 
@@ -473,7 +499,7 @@ func NewDataAwsccCloudtrailEventDataStore(scope constructs.Construct, id *string
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudtrail_event_data_store awscc_cloudtrail_event_data_store} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudtrail_event_data_store awscc_cloudtrail_event_data_store} Data Source.
 func NewDataAwsccCloudtrailEventDataStore_Override(d DataAwsccCloudtrailEventDataStore, scope constructs.Construct, id *string, config *DataAwsccCloudtrailEventDataStoreConfig) {
 	_init_.Initialize()
 
@@ -840,6 +866,32 @@ func (d *jsiiProxy_DataAwsccCloudtrailEventDataStore) SynthesizeAttributes() *ma
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudtrailEventDataStore) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudtrailEventDataStore) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

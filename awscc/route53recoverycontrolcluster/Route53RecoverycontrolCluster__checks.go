@@ -119,6 +119,14 @@ func (r *jsiiProxy_Route53RecoverycontrolCluster) validateInterpolationForAttrib
 	return nil
 }
 
+func (r *jsiiProxy_Route53RecoverycontrolCluster) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (r *jsiiProxy_Route53RecoverycontrolCluster) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (r *jsiiProxy_Route53RecoverycontrolCluster) validateMoveToParameters(moveT
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (r *jsiiProxy_Route53RecoverycontrolCluster) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -358,6 +374,14 @@ func (j *jsiiProxy_Route53RecoverycontrolCluster) validateSetLifecycleParameters
 }
 
 func (j *jsiiProxy_Route53RecoverycontrolCluster) validateSetNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Route53RecoverycontrolCluster) validateSetNetworkTypeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

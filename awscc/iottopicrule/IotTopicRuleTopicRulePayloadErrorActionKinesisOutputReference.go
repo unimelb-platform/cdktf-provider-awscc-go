@@ -71,6 +71,8 @@ type IotTopicRuleTopicRulePayloadErrorActionKinesisOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetPartitionKey()
+	ResetRoleArn()
+	ResetStreamName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -522,6 +524,22 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionKinesisOutputReference
 	_jsii_.InvokeVoid(
 		i,
 		"resetPartitionKey",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionKinesisOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionKinesisOutputReference) ResetStreamName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetStreamName",
 		nil, // no parameters
 	)
 }

@@ -2,11 +2,17 @@ package lakeformationprincipalpermissions
 
 
 type LakeformationPrincipalPermissionsResourceLfTag struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lakeformation_principal_permissions#catalog_id LakeformationPrincipalPermissions#catalog_id}.
-	CatalogId *string `field:"required" json:"catalogId" yaml:"catalogId"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lakeformation_principal_permissions#tag_key LakeformationPrincipalPermissions#tag_key}.
-	TagKey *string `field:"required" json:"tagKey" yaml:"tagKey"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lakeformation_principal_permissions#tag_values LakeformationPrincipalPermissions#tag_values}.
-	TagValues *[]*string `field:"required" json:"tagValues" yaml:"tagValues"`
+	// The identifier for the GLUDC where the location is registered with GLUDC.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lakeformation_principal_permissions#catalog_id LakeformationPrincipalPermissions#catalog_id}
+	CatalogId *string `field:"optional" json:"catalogId" yaml:"catalogId"`
+	// The key-name for the LF-tag.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lakeformation_principal_permissions#tag_key LakeformationPrincipalPermissions#tag_key}
+	TagKey *string `field:"optional" json:"tagKey" yaml:"tagKey"`
+	// A list of possible values for the corresponding ``TagKey`` of an LF-tag key-value pair.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lakeformation_principal_permissions#tag_values LakeformationPrincipalPermissions#tag_values}
+	TagValues *[]*string `field:"optional" json:"tagValues" yaml:"tagValues"`
 }
 

@@ -119,6 +119,14 @@ func (c *jsiiProxy_ConnectHoursOfOperation) validateInterpolationForAttributePar
 	return nil
 }
 
+func (c *jsiiProxy_ConnectHoursOfOperation) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (c *jsiiProxy_ConnectHoursOfOperation) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (c *jsiiProxy_ConnectHoursOfOperation) validateMoveToParameters(moveTarget 
 	return nil
 }
 
+func (c *jsiiProxy_ConnectHoursOfOperation) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (c *jsiiProxy_ConnectHoursOfOperation) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -213,6 +229,37 @@ func (c *jsiiProxy_ConnectHoursOfOperation) validatePutConfigParameters(value in
 	default:
 		if !_jsii_.IsAnonymousProxy(value) {
 			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*ConnectHoursOfOperationConfigA; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (c *jsiiProxy_ConnectHoursOfOperation) validatePutHoursOfOperationOverridesParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*ConnectHoursOfOperationHoursOfOperationOverrides:
+		value := value.(*[]*ConnectHoursOfOperationHoursOfOperationOverrides)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*ConnectHoursOfOperationHoursOfOperationOverrides:
+		value_ := value.([]*ConnectHoursOfOperationHoursOfOperationOverrides)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*ConnectHoursOfOperationHoursOfOperationOverrides; received %#v (a %T)", value, value)
 		}
 	}
 

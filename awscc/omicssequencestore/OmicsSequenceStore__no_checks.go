@@ -56,7 +56,15 @@ func (o *jsiiProxy_OmicsSequenceStore) validateInterpolationForAttributeParamete
 	return nil
 }
 
+func (o *jsiiProxy_OmicsSequenceStore) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (o *jsiiProxy_OmicsSequenceStore) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (o *jsiiProxy_OmicsSequenceStore) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -84,6 +92,10 @@ func validateOmicsSequenceStore_IsTerraformResourceParameters(x interface{}) err
 	return nil
 }
 
+func (j *jsiiProxy_OmicsSequenceStore) validateSetAccessLogLocationParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_OmicsSequenceStore) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }
@@ -93,6 +105,10 @@ func (j *jsiiProxy_OmicsSequenceStore) validateSetCountParameters(val interface{
 }
 
 func (j *jsiiProxy_OmicsSequenceStore) validateSetDescriptionParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_OmicsSequenceStore) validateSetETagAlgorithmFamilyParameters(val *string) error {
 	return nil
 }
 
@@ -108,7 +124,15 @@ func (j *jsiiProxy_OmicsSequenceStore) validateSetNameParameters(val *string) er
 	return nil
 }
 
+func (j *jsiiProxy_OmicsSequenceStore) validateSetPropagatedSetLevelTagsParameters(val *[]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_OmicsSequenceStore) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_OmicsSequenceStore) validateSetS3AccessPolicyParameters(val *string) error {
 	return nil
 }
 

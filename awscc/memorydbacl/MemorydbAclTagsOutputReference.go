@@ -67,6 +67,7 @@ type MemorydbAclTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
 	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (m *jsiiProxy_MemorydbAclTagsOutputReference) InterpolationForAttribute(pro
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_MemorydbAclTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetKey",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_MemorydbAclTagsOutputReference) ResetValue() {

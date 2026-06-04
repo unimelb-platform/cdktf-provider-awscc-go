@@ -56,11 +56,23 @@ func (s *jsiiProxy_StepfunctionsActivity) validateInterpolationForAttributeParam
 	return nil
 }
 
+func (s *jsiiProxy_StepfunctionsActivity) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_StepfunctionsActivity) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (s *jsiiProxy_StepfunctionsActivity) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_StepfunctionsActivity) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (s *jsiiProxy_StepfunctionsActivity) validatePutEncryptionConfigurationParameters(value *StepfunctionsActivityEncryptionConfiguration) error {
 	return nil
 }
 

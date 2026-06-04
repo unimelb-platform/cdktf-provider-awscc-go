@@ -9,14 +9,18 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccekscluster/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/eks_cluster awscc_eks_cluster}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/eks_cluster awscc_eks_cluster}.
 type DataAwsccEksCluster interface {
 	cdktf.TerraformDataSource
+	AccessConfig() DataAwsccEksClusterAccessConfigOutputReference
 	Arn() *string
+	BootstrapSelfManagedAddons() cdktf.IResolvable
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	CertificateAuthorityData() *string
+	ClusterId() *string
 	ClusterSecurityGroupId() *string
+	ComputeConfig() DataAwsccEksClusterComputeConfigOutputReference
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -30,6 +34,7 @@ type DataAwsccEksCluster interface {
 	EncryptionConfig() DataAwsccEksClusterEncryptionConfigList
 	EncryptionConfigKeyArn() *string
 	Endpoint() *string
+	Force() cdktf.IResolvable
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -51,14 +56,17 @@ type DataAwsccEksCluster interface {
 	// The tree node.
 	Node() constructs.Node
 	OpenIdConnectIssuerUrl() *string
+	OutpostConfig() DataAwsccEksClusterOutpostConfigOutputReference
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	RemoteNetworkConfig() DataAwsccEksClusterRemoteNetworkConfigOutputReference
 	ResourcesVpcConfig() DataAwsccEksClusterResourcesVpcConfigOutputReference
 	RoleArn() *string
+	StorageConfig() DataAwsccEksClusterStorageConfigOutputReference
 	Tags() DataAwsccEksClusterTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -66,7 +74,9 @@ type DataAwsccEksCluster interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	UpgradePolicy() DataAwsccEksClusterUpgradePolicyOutputReference
 	Version() *string
+	ZonalShiftConfig() DataAwsccEksClusterZonalShiftConfigOutputReference
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -96,6 +106,10 @@ type DataAwsccEksCluster interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -110,11 +124,31 @@ type jsiiProxy_DataAwsccEksCluster struct {
 	internal.Type__cdktfTerraformDataSource
 }
 
+func (j *jsiiProxy_DataAwsccEksCluster) AccessConfig() DataAwsccEksClusterAccessConfigOutputReference {
+	var returns DataAwsccEksClusterAccessConfigOutputReference
+	_jsii_.Get(
+		j,
+		"accessConfig",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEksCluster) Arn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"arn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEksCluster) BootstrapSelfManagedAddons() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"bootstrapSelfManagedAddons",
 		&returns,
 	)
 	return returns
@@ -140,11 +174,31 @@ func (j *jsiiProxy_DataAwsccEksCluster) CertificateAuthorityData() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEksCluster) ClusterId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"clusterId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEksCluster) ClusterSecurityGroupId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"clusterSecurityGroupId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEksCluster) ComputeConfig() DataAwsccEksClusterComputeConfigOutputReference {
+	var returns DataAwsccEksClusterComputeConfigOutputReference
+	_jsii_.Get(
+		j,
+		"computeConfig",
 		&returns,
 	)
 	return returns
@@ -205,6 +259,16 @@ func (j *jsiiProxy_DataAwsccEksCluster) Endpoint() *string {
 	_jsii_.Get(
 		j,
 		"endpoint",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEksCluster) Force() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"force",
 		&returns,
 	)
 	return returns
@@ -320,6 +384,16 @@ func (j *jsiiProxy_DataAwsccEksCluster) OpenIdConnectIssuerUrl() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEksCluster) OutpostConfig() DataAwsccEksClusterOutpostConfigOutputReference {
+	var returns DataAwsccEksClusterOutpostConfigOutputReference
+	_jsii_.Get(
+		j,
+		"outpostConfig",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEksCluster) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -340,6 +414,16 @@ func (j *jsiiProxy_DataAwsccEksCluster) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEksCluster) RemoteNetworkConfig() DataAwsccEksClusterRemoteNetworkConfigOutputReference {
+	var returns DataAwsccEksClusterRemoteNetworkConfigOutputReference
+	_jsii_.Get(
+		j,
+		"remoteNetworkConfig",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEksCluster) ResourcesVpcConfig() DataAwsccEksClusterResourcesVpcConfigOutputReference {
 	var returns DataAwsccEksClusterResourcesVpcConfigOutputReference
 	_jsii_.Get(
@@ -355,6 +439,16 @@ func (j *jsiiProxy_DataAwsccEksCluster) RoleArn() *string {
 	_jsii_.Get(
 		j,
 		"roleArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEksCluster) StorageConfig() DataAwsccEksClusterStorageConfigOutputReference {
+	var returns DataAwsccEksClusterStorageConfigOutputReference
+	_jsii_.Get(
+		j,
+		"storageConfig",
 		&returns,
 	)
 	return returns
@@ -400,6 +494,16 @@ func (j *jsiiProxy_DataAwsccEksCluster) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEksCluster) UpgradePolicy() DataAwsccEksClusterUpgradePolicyOutputReference {
+	var returns DataAwsccEksClusterUpgradePolicyOutputReference
+	_jsii_.Get(
+		j,
+		"upgradePolicy",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEksCluster) Version() *string {
 	var returns *string
 	_jsii_.Get(
@@ -410,8 +514,18 @@ func (j *jsiiProxy_DataAwsccEksCluster) Version() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEksCluster) ZonalShiftConfig() DataAwsccEksClusterZonalShiftConfigOutputReference {
+	var returns DataAwsccEksClusterZonalShiftConfigOutputReference
+	_jsii_.Get(
+		j,
+		"zonalShiftConfig",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/eks_cluster awscc_eks_cluster} Data Source.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/eks_cluster awscc_eks_cluster} Data Source.
 func NewDataAwsccEksCluster(scope constructs.Construct, id *string, config *DataAwsccEksClusterConfig) DataAwsccEksCluster {
 	_init_.Initialize()
 
@@ -429,7 +543,7 @@ func NewDataAwsccEksCluster(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/eks_cluster awscc_eks_cluster} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/eks_cluster awscc_eks_cluster} Data Source.
 func NewDataAwsccEksCluster_Override(d DataAwsccEksCluster, scope constructs.Construct, id *string, config *DataAwsccEksClusterConfig) {
 	_init_.Initialize()
 
@@ -796,6 +910,32 @@ func (d *jsiiProxy_DataAwsccEksCluster) SynthesizeAttributes() *map[string]inter
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEksCluster) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEksCluster) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

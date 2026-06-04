@@ -26,10 +26,10 @@ type DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutput
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	EnableExecuteCommand() cdktf.IResolvable
 	Environment() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerEnvironmentList
 	EphemeralStorage() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerEphemeralStorageOutputReference
 	ExecutionRoleArn() *string
-	FargatePlatformConfiguration() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerFargatePlatformConfigurationOutputReference
 	// Experimental.
 	Fqn() *string
 	Image() *string
@@ -41,9 +41,9 @@ type DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutput
 	LogConfiguration() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerLogConfigurationOutputReference
 	Memory() *float64
 	MountPoints() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerMountPointsList
-	NetworkConfiguration() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerNetworkConfigurationOutputReference
 	Privileged() cdktf.IResolvable
 	ReadonlyRootFilesystem() cdktf.IResolvable
+	RepositoryCredentials() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerRepositoryCredentialsOutputReference
 	ResourceRequirements() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerResourceRequirementsList
 	RuntimePlatform() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerRuntimePlatformOutputReference
 	Secrets() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerSecretsList
@@ -138,6 +138,16 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesC
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) EnableExecuteCommand() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"enableExecuteCommand",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) Environment() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerEnvironmentList {
 	var returns DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerEnvironmentList
 	_jsii_.Get(
@@ -163,16 +173,6 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesC
 	_jsii_.Get(
 		j,
 		"executionRoleArn",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) FargatePlatformConfiguration() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerFargatePlatformConfigurationOutputReference {
-	var returns DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerFargatePlatformConfigurationOutputReference
-	_jsii_.Get(
-		j,
-		"fargatePlatformConfiguration",
 		&returns,
 	)
 	return returns
@@ -268,16 +268,6 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesC
 	return returns
 }
 
-func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) NetworkConfiguration() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerNetworkConfigurationOutputReference {
-	var returns DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerNetworkConfigurationOutputReference
-	_jsii_.Get(
-		j,
-		"networkConfiguration",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) Privileged() cdktf.IResolvable {
 	var returns cdktf.IResolvable
 	_jsii_.Get(
@@ -293,6 +283,16 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesC
 	_jsii_.Get(
 		j,
 		"readonlyRootFilesystem",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) RepositoryCredentials() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerRepositoryCredentialsOutputReference {
+	var returns DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerRepositoryCredentialsOutputReference
+	_jsii_.Get(
+		j,
+		"repositoryCredentials",
 		&returns,
 	)
 	return returns

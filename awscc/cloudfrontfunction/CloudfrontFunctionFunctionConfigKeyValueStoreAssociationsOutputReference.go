@@ -64,6 +64,7 @@ type CloudfrontFunctionFunctionConfigKeyValueStoreAssociationsOutputReference in
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKeyValueStoreArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (c *jsiiProxy_CloudfrontFunctionFunctionConfigKeyValueStoreAssociationsOutp
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CloudfrontFunctionFunctionConfigKeyValueStoreAssociationsOutputReference) ResetKeyValueStoreArn() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetKeyValueStoreArn",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CloudfrontFunctionFunctionConfigKeyValueStoreAssociationsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

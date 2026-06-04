@@ -44,6 +44,10 @@ func (i *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCer
 	return nil
 }
 
+func (i *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiringCheckOutputReference) validatePutConfigurationParameters(value *IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiringCheckConfiguration) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiringCheckOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

@@ -27,8 +27,8 @@ type QuicksightDataSetPhysicalTableMapRelationalTableInputColumnsOutputReference
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *QuicksightDataSetPhysicalTableMapRelationalTableInputColumns
-	SetInternalValue(val *QuicksightDataSetPhysicalTableMapRelationalTableInputColumns)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -67,6 +67,8 @@ type QuicksightDataSetPhysicalTableMapRelationalTableInputColumnsOutputReference
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_QuicksightDataSetPhysicalTableMapRelationalTableInputColumnsO
 	return returns
 }
 
-func (j *jsiiProxy_QuicksightDataSetPhysicalTableMapRelationalTableInputColumnsOutputReference) InternalValue() *QuicksightDataSetPhysicalTableMapRelationalTableInputColumns {
-	var returns *QuicksightDataSetPhysicalTableMapRelationalTableInputColumns
+func (j *jsiiProxy_QuicksightDataSetPhysicalTableMapRelationalTableInputColumnsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -242,7 +244,7 @@ func (j *jsiiProxy_QuicksightDataSetPhysicalTableMapRelationalTableInputColumnsO
 	)
 }
 
-func (j *jsiiProxy_QuicksightDataSetPhysicalTableMapRelationalTableInputColumnsOutputReference)SetInternalValue(val *QuicksightDataSetPhysicalTableMapRelationalTableInputColumns) {
+func (j *jsiiProxy_QuicksightDataSetPhysicalTableMapRelationalTableInputColumnsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapRelationalTableInputColumnsO
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapRelationalTableInputColumnsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapRelationalTableInputColumnsOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetType",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapRelationalTableInputColumnsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

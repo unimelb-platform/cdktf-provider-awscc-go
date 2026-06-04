@@ -73,6 +73,10 @@ type QuicksightDataSetPhysicalTableMapCustomSqlOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutColumns(value interface{})
+	ResetColumns()
+	ResetDataSourceArn()
+	ResetName()
+	ResetSqlQuery()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -548,6 +552,38 @@ func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapCustomSqlOutputReference) Pu
 		q,
 		"putColumns",
 		[]interface{}{value},
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapCustomSqlOutputReference) ResetColumns() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetColumns",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapCustomSqlOutputReference) ResetDataSourceArn() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDataSourceArn",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapCustomSqlOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapCustomSqlOutputReference) ResetSqlQuery() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetSqlQuery",
+		nil, // no parameters
 	)
 }
 

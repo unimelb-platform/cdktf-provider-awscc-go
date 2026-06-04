@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/quicksighttopic/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/quicksight_topic awscc_quicksight_topic}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/quicksight_topic awscc_quicksight_topic}.
 type QuicksightTopic interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -18,6 +18,8 @@ type QuicksightTopic interface {
 	AwsAccountIdInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	ConfigOptions() QuicksightTopicConfigOptionsOutputReference
+	ConfigOptionsInput() interface{}
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -37,6 +39,9 @@ type QuicksightTopic interface {
 	Description() *string
 	SetDescription(val *string)
 	DescriptionInput() *string
+	FolderArns() *[]*string
+	SetFolderArns(val *[]*string)
+	FolderArnsInput() *[]*string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -101,19 +106,32 @@ type QuicksightTopic interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutConfigOptions(value *QuicksightTopicConfigOptions)
 	PutDataSets(value interface{})
 	ResetAwsAccountId()
+	ResetConfigOptions()
 	ResetDataSets()
 	ResetDescription()
+	ResetFolderArns()
 	ResetName()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -121,6 +139,9 @@ type QuicksightTopic interface {
 	ResetTopicId()
 	ResetUserExperienceVersion()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -170,6 +191,26 @@ func (j *jsiiProxy_QuicksightTopic) CdktfStack() cdktf.TerraformStack {
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightTopic) ConfigOptions() QuicksightTopicConfigOptionsOutputReference {
+	var returns QuicksightTopicConfigOptionsOutputReference
+	_jsii_.Get(
+		j,
+		"configOptions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightTopic) ConfigOptionsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"configOptionsInput",
 		&returns,
 	)
 	return returns
@@ -250,6 +291,26 @@ func (j *jsiiProxy_QuicksightTopic) DescriptionInput() *string {
 	_jsii_.Get(
 		j,
 		"descriptionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightTopic) FolderArns() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"folderArns",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightTopic) FolderArnsInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"folderArnsInput",
 		&returns,
 	)
 	return returns
@@ -436,7 +497,7 @@ func (j *jsiiProxy_QuicksightTopic) UserExperienceVersionInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/quicksight_topic awscc_quicksight_topic} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/quicksight_topic awscc_quicksight_topic} Resource.
 func NewQuicksightTopic(scope constructs.Construct, id *string, config *QuicksightTopicConfig) QuicksightTopic {
 	_init_.Initialize()
 
@@ -454,7 +515,7 @@ func NewQuicksightTopic(scope constructs.Construct, id *string, config *Quicksig
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/quicksight_topic awscc_quicksight_topic} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/quicksight_topic awscc_quicksight_topic} Resource.
 func NewQuicksightTopic_Override(q QuicksightTopic, scope constructs.Construct, id *string, config *QuicksightTopicConfig) {
 	_init_.Initialize()
 
@@ -513,6 +574,17 @@ func (j *jsiiProxy_QuicksightTopic)SetDescription(val *string) {
 	_jsii_.Set(
 		j,
 		"description",
+		val,
+	)
+}
+
+func (j *jsiiProxy_QuicksightTopic)SetFolderArns(val *[]*string) {
+	if err := j.validateSetFolderArnsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"folderArns",
 		val,
 	)
 }
@@ -857,6 +929,19 @@ func (q *jsiiProxy_QuicksightTopic) GetStringMapAttribute(terraformAttribute *st
 	return returns
 }
 
+func (q *jsiiProxy_QuicksightTopic) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		q,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (q *jsiiProxy_QuicksightTopic) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := q.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -884,6 +969,17 @@ func (q *jsiiProxy_QuicksightTopic) InterpolationForAttribute(terraformAttribute
 	return returns
 }
 
+func (q *jsiiProxy_QuicksightTopic) MoveFromId(id *string) {
+	if err := q.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		q,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (q *jsiiProxy_QuicksightTopic) MoveTo(moveTarget *string, index interface{}) {
 	if err := q.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -895,6 +991,17 @@ func (q *jsiiProxy_QuicksightTopic) MoveTo(moveTarget *string, index interface{}
 	)
 }
 
+func (q *jsiiProxy_QuicksightTopic) MoveToId(id *string) {
+	if err := q.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		q,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (q *jsiiProxy_QuicksightTopic) OverrideLogicalId(newLogicalId *string) {
 	if err := q.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -903,6 +1010,17 @@ func (q *jsiiProxy_QuicksightTopic) OverrideLogicalId(newLogicalId *string) {
 		q,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (q *jsiiProxy_QuicksightTopic) PutConfigOptions(value *QuicksightTopicConfigOptions) {
+	if err := q.validatePutConfigOptionsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		q,
+		"putConfigOptions",
+		[]interface{}{value},
 	)
 }
 
@@ -925,6 +1043,14 @@ func (q *jsiiProxy_QuicksightTopic) ResetAwsAccountId() {
 	)
 }
 
+func (q *jsiiProxy_QuicksightTopic) ResetConfigOptions() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetConfigOptions",
+		nil, // no parameters
+	)
+}
+
 func (q *jsiiProxy_QuicksightTopic) ResetDataSets() {
 	_jsii_.InvokeVoid(
 		q,
@@ -937,6 +1063,14 @@ func (q *jsiiProxy_QuicksightTopic) ResetDescription() {
 	_jsii_.InvokeVoid(
 		q,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightTopic) ResetFolderArns() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetFolderArns",
 		nil, // no parameters
 	)
 }
@@ -979,6 +1113,32 @@ func (q *jsiiProxy_QuicksightTopic) SynthesizeAttributes() *map[string]interface
 	_jsii_.Invoke(
 		q,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (q *jsiiProxy_QuicksightTopic) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		q,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (q *jsiiProxy_QuicksightTopic) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		q,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

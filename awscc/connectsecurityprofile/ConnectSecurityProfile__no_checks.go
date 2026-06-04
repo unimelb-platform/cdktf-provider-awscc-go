@@ -56,7 +56,15 @@ func (c *jsiiProxy_ConnectSecurityProfile) validateInterpolationForAttributePara
 	return nil
 }
 
+func (c *jsiiProxy_ConnectSecurityProfile) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_ConnectSecurityProfile) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_ConnectSecurityProfile) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -65,6 +73,10 @@ func (c *jsiiProxy_ConnectSecurityProfile) validateOverrideLogicalIdParameters(n
 }
 
 func (c *jsiiProxy_ConnectSecurityProfile) validatePutAllowedAccessControlTagsParameters(value interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_ConnectSecurityProfile) validatePutApplicationsParameters(value interface{}) error {
 	return nil
 }
 
@@ -88,6 +100,10 @@ func validateConnectSecurityProfile_IsTerraformResourceParameters(x interface{})
 	return nil
 }
 
+func (j *jsiiProxy_ConnectSecurityProfile) validateSetAllowedAccessControlHierarchyGroupIdParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ConnectSecurityProfile) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }
@@ -97,6 +113,10 @@ func (j *jsiiProxy_ConnectSecurityProfile) validateSetCountParameters(val interf
 }
 
 func (j *jsiiProxy_ConnectSecurityProfile) validateSetDescriptionParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ConnectSecurityProfile) validateSetHierarchyRestrictedResourcesParameters(val *[]*string) error {
 	return nil
 }
 

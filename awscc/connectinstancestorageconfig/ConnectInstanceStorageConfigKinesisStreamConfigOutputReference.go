@@ -64,6 +64,7 @@ type ConnectInstanceStorageConfigKinesisStreamConfigOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetStreamArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (c *jsiiProxy_ConnectInstanceStorageConfigKinesisStreamConfigOutputReferenc
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ConnectInstanceStorageConfigKinesisStreamConfigOutputReference) ResetStreamArn() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetStreamArn",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ConnectInstanceStorageConfigKinesisStreamConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

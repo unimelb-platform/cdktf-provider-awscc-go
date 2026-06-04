@@ -4,6 +4,10 @@ package inspectorv2filter
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaSeverityList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaSeverityList) validateGetParameters(index *float64) error {
 	return nil
 }

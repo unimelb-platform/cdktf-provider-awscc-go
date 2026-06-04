@@ -1,0 +1,6 @@
+package dataawsccglobalacceleratorcrossaccountattachment
+
+
+type DataAwsccGlobalacceleratorCrossAccountAttachmentResources struct {
+}
+

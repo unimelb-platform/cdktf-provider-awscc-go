@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccorganizationsorganization/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/organizations_organization awscc_organizations_organization}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/organizations_organization awscc_organizations_organization}.
 type DataAwsccOrganizationsOrganization interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -46,6 +46,7 @@ type DataAwsccOrganizationsOrganization interface {
 	ManagementAccountId() *string
 	// The tree node.
 	Node() constructs.Node
+	OrganizationId() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -88,6 +89,10 @@ type DataAwsccOrganizationsOrganization interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -262,6 +267,16 @@ func (j *jsiiProxy_DataAwsccOrganizationsOrganization) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccOrganizationsOrganization) OrganizationId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"organizationId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccOrganizationsOrganization) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -323,7 +338,7 @@ func (j *jsiiProxy_DataAwsccOrganizationsOrganization) TerraformResourceType() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/organizations_organization awscc_organizations_organization} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/organizations_organization awscc_organizations_organization} Data Source.
 func NewDataAwsccOrganizationsOrganization(scope constructs.Construct, id *string, config *DataAwsccOrganizationsOrganizationConfig) DataAwsccOrganizationsOrganization {
 	_init_.Initialize()
 
@@ -341,7 +356,7 @@ func NewDataAwsccOrganizationsOrganization(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/organizations_organization awscc_organizations_organization} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/organizations_organization awscc_organizations_organization} Data Source.
 func NewDataAwsccOrganizationsOrganization_Override(d DataAwsccOrganizationsOrganization, scope constructs.Construct, id *string, config *DataAwsccOrganizationsOrganizationConfig) {
 	_init_.Initialize()
 
@@ -708,6 +723,32 @@ func (d *jsiiProxy_DataAwsccOrganizationsOrganization) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccOrganizationsOrganization) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccOrganizationsOrganization) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

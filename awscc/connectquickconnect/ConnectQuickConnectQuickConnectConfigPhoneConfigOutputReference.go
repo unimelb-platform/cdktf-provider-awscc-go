@@ -64,6 +64,7 @@ type ConnectQuickConnectQuickConnectConfigPhoneConfigOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPhoneNumber()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (c *jsiiProxy_ConnectQuickConnectQuickConnectConfigPhoneConfigOutputReferen
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ConnectQuickConnectQuickConnectConfigPhoneConfigOutputReference) ResetPhoneNumber() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetPhoneNumber",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ConnectQuickConnectQuickConnectConfigPhoneConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

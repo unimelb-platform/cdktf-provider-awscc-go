@@ -219,6 +219,30 @@ func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputRefere
 	return nil
 }
 
+func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference) validateSetRoleArnParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference) validateSetStatusParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference) validateSetStatusMessageParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

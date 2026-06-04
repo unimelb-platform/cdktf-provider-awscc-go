@@ -72,6 +72,7 @@ type EntityresolutionIdMappingWorkflowIdMappingTechniquesProviderPropertiesOutpu
 	PutIntermediateSourceConfiguration(value *EntityresolutionIdMappingWorkflowIdMappingTechniquesProviderPropertiesIntermediateSourceConfiguration)
 	ResetIntermediateSourceConfiguration()
 	ResetProviderConfiguration()
+	ResetProviderServiceArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (e *jsiiProxy_EntityresolutionIdMappingWorkflowIdMappingTechniquesProviderP
 	_jsii_.InvokeVoid(
 		e,
 		"resetProviderConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EntityresolutionIdMappingWorkflowIdMappingTechniquesProviderPropertiesOutputReference) ResetProviderServiceArn() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetProviderServiceArn",
 		nil, // no parameters
 	)
 }

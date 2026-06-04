@@ -79,6 +79,12 @@ type MediaconnectBridgeOutputsNetworkOutputOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetIpAddress()
+	ResetName()
+	ResetNetworkName()
+	ResetPort()
+	ResetProtocol()
+	ResetTtl()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -617,6 +623,54 @@ func (m *jsiiProxy_MediaconnectBridgeOutputsNetworkOutputOutputReference) Interp
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_MediaconnectBridgeOutputsNetworkOutputOutputReference) ResetIpAddress() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetIpAddress",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectBridgeOutputsNetworkOutputOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectBridgeOutputsNetworkOutputOutputReference) ResetNetworkName() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetNetworkName",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectBridgeOutputsNetworkOutputOutputReference) ResetPort() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetPort",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectBridgeOutputsNetworkOutputOutputReference) ResetProtocol() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetProtocol",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectBridgeOutputsNetworkOutputOutputReference) ResetTtl() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetTtl",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_MediaconnectBridgeOutputsNetworkOutputOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

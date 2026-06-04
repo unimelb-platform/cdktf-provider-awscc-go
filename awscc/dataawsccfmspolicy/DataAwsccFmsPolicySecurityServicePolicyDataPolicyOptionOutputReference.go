@@ -29,6 +29,7 @@ type DataAwsccFmsPolicySecurityServicePolicyDataPolicyOptionOutputReference inte
 	Fqn() *string
 	InternalValue() *DataAwsccFmsPolicySecurityServicePolicyDataPolicyOption
 	SetInternalValue(val *DataAwsccFmsPolicySecurityServicePolicyDataPolicyOption)
+	NetworkAclCommonPolicy() DataAwsccFmsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyOutputReference
 	NetworkFirewallPolicy() DataAwsccFmsPolicySecurityServicePolicyDataPolicyOptionNetworkFirewallPolicyOutputReference
 	// Experimental.
 	TerraformAttribute() *string
@@ -123,6 +124,16 @@ func (j *jsiiProxy_DataAwsccFmsPolicySecurityServicePolicyDataPolicyOptionOutput
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccFmsPolicySecurityServicePolicyDataPolicyOptionOutputReference) NetworkAclCommonPolicy() DataAwsccFmsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyOutputReference {
+	var returns DataAwsccFmsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyOutputReference
+	_jsii_.Get(
+		j,
+		"networkAclCommonPolicy",
 		&returns,
 	)
 	return returns

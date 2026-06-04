@@ -30,7 +30,7 @@ type MskClusterOpenMonitoringOutputReference interface {
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	Prometheus() MskClusterOpenMonitoringPrometheusOutputReference
-	PrometheusInput() *MskClusterOpenMonitoringPrometheus
+	PrometheusInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type MskClusterOpenMonitoringOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutPrometheus(value *MskClusterOpenMonitoringPrometheus)
+	ResetPrometheus()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -139,8 +140,8 @@ func (j *jsiiProxy_MskClusterOpenMonitoringOutputReference) Prometheus() MskClus
 	return returns
 }
 
-func (j *jsiiProxy_MskClusterOpenMonitoringOutputReference) PrometheusInput() *MskClusterOpenMonitoringPrometheus {
-	var returns *MskClusterOpenMonitoringPrometheus
+func (j *jsiiProxy_MskClusterOpenMonitoringOutputReference) PrometheusInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"prometheusInput",
@@ -446,6 +447,14 @@ func (m *jsiiProxy_MskClusterOpenMonitoringOutputReference) PutPrometheus(value 
 		m,
 		"putPrometheus",
 		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_MskClusterOpenMonitoringOutputReference) ResetPrometheus() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetPrometheus",
+		nil, // no parameters
 	)
 }
 

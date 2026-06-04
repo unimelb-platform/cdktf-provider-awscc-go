@@ -76,6 +76,11 @@ type IotTopicRuleTopicRulePayloadErrorActionElasticsearchOutputReference interfa
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEndpoint()
+	ResetId()
+	ResetIndex()
+	ResetRoleArn()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -583,6 +588,46 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionElasticsearchOutputRef
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionElasticsearchOutputReference) ResetEndpoint() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetEndpoint",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionElasticsearchOutputReference) ResetId() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionElasticsearchOutputReference) ResetIndex() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetIndex",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionElasticsearchOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionElasticsearchOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetType",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionElasticsearchOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

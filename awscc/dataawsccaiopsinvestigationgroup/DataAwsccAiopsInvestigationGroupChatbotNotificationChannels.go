@@ -1,0 +1,6 @@
+package dataawsccaiopsinvestigationgroup
+
+
+type DataAwsccAiopsInvestigationGroupChatbotNotificationChannels struct {
+}
+

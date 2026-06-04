@@ -27,8 +27,10 @@ type DataAwsccIotsitewiseAssetModelAssetModelPropertiesOutputReference interface
 	CreationStack() *[]*string
 	DataType() *string
 	DataTypeSpec() *string
+	ExternalId() *string
 	// Experimental.
 	Fqn() *string
+	Id() *string
 	InternalValue() *DataAwsccIotsitewiseAssetModelAssetModelProperties
 	SetInternalValue(val *DataAwsccIotsitewiseAssetModelAssetModelProperties)
 	LogicalId() *string
@@ -132,11 +134,31 @@ func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelPropertiesOutputRefer
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelPropertiesOutputReference) ExternalId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelPropertiesOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelPropertiesOutputReference) Id() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"id",
 		&returns,
 	)
 	return returns

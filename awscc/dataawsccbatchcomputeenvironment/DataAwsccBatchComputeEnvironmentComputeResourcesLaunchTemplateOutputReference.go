@@ -31,6 +31,7 @@ type DataAwsccBatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReferen
 	SetInternalValue(val *DataAwsccBatchComputeEnvironmentComputeResourcesLaunchTemplate)
 	LaunchTemplateId() *string
 	LaunchTemplateName() *string
+	Overrides() DataAwsccBatchComputeEnvironmentComputeResourcesLaunchTemplateOverridesList
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -39,6 +40,7 @@ type DataAwsccBatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReferen
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	UserdataType() *string
 	Version() *string
 	// Experimental.
 	ComputeFqn() *string
@@ -149,6 +151,16 @@ func (j *jsiiProxy_DataAwsccBatchComputeEnvironmentComputeResourcesLaunchTemplat
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccBatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference) Overrides() DataAwsccBatchComputeEnvironmentComputeResourcesLaunchTemplateOverridesList {
+	var returns DataAwsccBatchComputeEnvironmentComputeResourcesLaunchTemplateOverridesList
+	_jsii_.Get(
+		j,
+		"overrides",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccBatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -164,6 +176,16 @@ func (j *jsiiProxy_DataAwsccBatchComputeEnvironmentComputeResourcesLaunchTemplat
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccBatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference) UserdataType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"userdataType",
 		&returns,
 	)
 	return returns

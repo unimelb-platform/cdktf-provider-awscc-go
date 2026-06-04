@@ -27,6 +27,9 @@ type SagemakerDomainDomainSettingsOutputReference interface {
 	CreationStack() *[]*string
 	DockerSettings() SagemakerDomainDomainSettingsDockerSettingsOutputReference
 	DockerSettingsInput() interface{}
+	ExecutionRoleIdentityConfig() *string
+	SetExecutionRoleIdentityConfig(val *string)
+	ExecutionRoleIdentityConfigInput() *string
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -44,6 +47,8 @@ type SagemakerDomainDomainSettingsOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	UnifiedStudioSettings() SagemakerDomainDomainSettingsUnifiedStudioSettingsOutputReference
+	UnifiedStudioSettingsInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -70,9 +75,12 @@ type SagemakerDomainDomainSettingsOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDockerSettings(value *SagemakerDomainDomainSettingsDockerSettings)
 	PutRStudioServerProDomainSettings(value *SagemakerDomainDomainSettingsRStudioServerProDomainSettings)
+	PutUnifiedStudioSettings(value *SagemakerDomainDomainSettingsUnifiedStudioSettings)
 	ResetDockerSettings()
+	ResetExecutionRoleIdentityConfig()
 	ResetRStudioServerProDomainSettings()
 	ResetSecurityGroupIds()
+	ResetUnifiedStudioSettings()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -133,6 +141,26 @@ func (j *jsiiProxy_SagemakerDomainDomainSettingsOutputReference) DockerSettingsI
 	_jsii_.Get(
 		j,
 		"dockerSettingsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerDomainDomainSettingsOutputReference) ExecutionRoleIdentityConfig() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"executionRoleIdentityConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerDomainDomainSettingsOutputReference) ExecutionRoleIdentityConfigInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"executionRoleIdentityConfigInput",
 		&returns,
 	)
 	return returns
@@ -218,6 +246,26 @@ func (j *jsiiProxy_SagemakerDomainDomainSettingsOutputReference) TerraformResour
 	return returns
 }
 
+func (j *jsiiProxy_SagemakerDomainDomainSettingsOutputReference) UnifiedStudioSettings() SagemakerDomainDomainSettingsUnifiedStudioSettingsOutputReference {
+	var returns SagemakerDomainDomainSettingsUnifiedStudioSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"unifiedStudioSettings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerDomainDomainSettingsOutputReference) UnifiedStudioSettingsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"unifiedStudioSettingsInput",
+		&returns,
+	)
+	return returns
+}
+
 
 func NewSagemakerDomainDomainSettingsOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) SagemakerDomainDomainSettingsOutputReference {
 	_init_.Initialize()
@@ -264,6 +312,17 @@ func (j *jsiiProxy_SagemakerDomainDomainSettingsOutputReference)SetComplexObject
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SagemakerDomainDomainSettingsOutputReference)SetExecutionRoleIdentityConfig(val *string) {
+	if err := j.validateSetExecutionRoleIdentityConfigParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"executionRoleIdentityConfig",
 		val,
 	)
 }
@@ -520,10 +579,29 @@ func (s *jsiiProxy_SagemakerDomainDomainSettingsOutputReference) PutRStudioServe
 	)
 }
 
+func (s *jsiiProxy_SagemakerDomainDomainSettingsOutputReference) PutUnifiedStudioSettings(value *SagemakerDomainDomainSettingsUnifiedStudioSettings) {
+	if err := s.validatePutUnifiedStudioSettingsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putUnifiedStudioSettings",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_SagemakerDomainDomainSettingsOutputReference) ResetDockerSettings() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetDockerSettings",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerDomainDomainSettingsOutputReference) ResetExecutionRoleIdentityConfig() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetExecutionRoleIdentityConfig",
 		nil, // no parameters
 	)
 }
@@ -540,6 +618,14 @@ func (s *jsiiProxy_SagemakerDomainDomainSettingsOutputReference) ResetSecurityGr
 	_jsii_.InvokeVoid(
 		s,
 		"resetSecurityGroupIds",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerDomainDomainSettingsOutputReference) ResetUnifiedStudioSettings() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetUnifiedStudioSettings",
 		nil, // no parameters
 	)
 }

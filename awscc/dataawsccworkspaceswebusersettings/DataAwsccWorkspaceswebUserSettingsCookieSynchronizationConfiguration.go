@@ -1,0 +1,6 @@
+package dataawsccworkspaceswebusersettings
+
+
+type DataAwsccWorkspaceswebUserSettingsCookieSynchronizationConfiguration struct {
+}
+

@@ -64,7 +64,7 @@ func (j *jsiiProxy_DatabrewJobProfileConfigurationColumnStatisticsConfigurations
 	return nil
 }
 
-func (j *jsiiProxy_DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatisticsOutputReference) validateSetInternalValueParameters(val *DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatistics) error {
+func (j *jsiiProxy_DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatisticsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

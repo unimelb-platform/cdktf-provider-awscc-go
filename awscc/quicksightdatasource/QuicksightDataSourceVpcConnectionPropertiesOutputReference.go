@@ -64,6 +64,7 @@ type QuicksightDataSourceVpcConnectionPropertiesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetVpcConnectionArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (q *jsiiProxy_QuicksightDataSourceVpcConnectionPropertiesOutputReference) I
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSourceVpcConnectionPropertiesOutputReference) ResetVpcConnectionArn() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetVpcConnectionArn",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSourceVpcConnectionPropertiesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccsagemakermodelqualityjobdefinition/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_model_quality_job_definition awscc_sagemaker_model_quality_job_definition}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_model_quality_job_definition awscc_sagemaker_model_quality_job_definition}.
 type DataAwsccSagemakerModelQualityJobDefinition interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -95,6 +95,10 @@ type DataAwsccSagemakerModelQualityJobDefinition interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -400,7 +404,7 @@ func (j *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinition) TerraformResourc
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_model_quality_job_definition awscc_sagemaker_model_quality_job_definition} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_model_quality_job_definition awscc_sagemaker_model_quality_job_definition} Data Source.
 func NewDataAwsccSagemakerModelQualityJobDefinition(scope constructs.Construct, id *string, config *DataAwsccSagemakerModelQualityJobDefinitionConfig) DataAwsccSagemakerModelQualityJobDefinition {
 	_init_.Initialize()
 
@@ -418,7 +422,7 @@ func NewDataAwsccSagemakerModelQualityJobDefinition(scope constructs.Construct, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_model_quality_job_definition awscc_sagemaker_model_quality_job_definition} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_model_quality_job_definition awscc_sagemaker_model_quality_job_definition} Data Source.
 func NewDataAwsccSagemakerModelQualityJobDefinition_Override(d DataAwsccSagemakerModelQualityJobDefinition, scope constructs.Construct, id *string, config *DataAwsccSagemakerModelQualityJobDefinitionConfig) {
 	_init_.Initialize()
 
@@ -785,6 +789,32 @@ func (d *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinition) SynthesizeAttrib
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinition) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelQualityJobDefinition) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

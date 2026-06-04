@@ -119,6 +119,14 @@ func (l *jsiiProxy_LambdaEventSourceMapping) validateInterpolationForAttributePa
 	return nil
 }
 
+func (l *jsiiProxy_LambdaEventSourceMapping) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (l *jsiiProxy_LambdaEventSourceMapping) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (l *jsiiProxy_LambdaEventSourceMapping) validateMoveToParameters(moveTarget
 	return nil
 }
 
+func (l *jsiiProxy_LambdaEventSourceMapping) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (l *jsiiProxy_LambdaEventSourceMapping) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -222,6 +238,28 @@ func (l *jsiiProxy_LambdaEventSourceMapping) validatePutDocumentDbEventSourceCon
 }
 
 func (l *jsiiProxy_LambdaEventSourceMapping) validatePutFilterCriteriaParameters(value *LambdaEventSourceMappingFilterCriteria) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (l *jsiiProxy_LambdaEventSourceMapping) validatePutMetricsConfigParameters(value *LambdaEventSourceMappingMetricsConfig) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (l *jsiiProxy_LambdaEventSourceMapping) validatePutProvisionedPollerConfigParameters(value *LambdaEventSourceMappingProvisionedPollerConfig) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -290,6 +328,37 @@ func (l *jsiiProxy_LambdaEventSourceMapping) validatePutSourceAccessConfiguratio
 	default:
 		if !_jsii_.IsAnonymousProxy(value) {
 			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*LambdaEventSourceMappingSourceAccessConfigurations; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (l *jsiiProxy_LambdaEventSourceMapping) validatePutTagsParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*LambdaEventSourceMappingTags:
+		value := value.(*[]*LambdaEventSourceMappingTags)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*LambdaEventSourceMappingTags:
+		value_ := value.([]*LambdaEventSourceMappingTags)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*LambdaEventSourceMappingTags; received %#v (a %T)", value, value)
 		}
 	}
 
@@ -491,6 +560,14 @@ func (j *jsiiProxy_LambdaEventSourceMapping) validateSetFunctionNameParameters(v
 }
 
 func (j *jsiiProxy_LambdaEventSourceMapping) validateSetFunctionResponseTypesParameters(val *[]*string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_LambdaEventSourceMapping) validateSetKmsKeyArnParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

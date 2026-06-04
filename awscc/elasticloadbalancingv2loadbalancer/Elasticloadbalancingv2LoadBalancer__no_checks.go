@@ -56,7 +56,15 @@ func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateInterpolationForA
 	return nil
 }
 
+func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -65,6 +73,10 @@ func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateOverrideLogicalId
 }
 
 func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validatePutLoadBalancerAttributesParameters(value interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validatePutMinimumLoadBalancerCapacityParameters(value *Elasticloadbalancingv2LoadBalancerMinimumLoadBalancerCapacity) error {
 	return nil
 }
 
@@ -100,11 +112,19 @@ func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateSetCountParameter
 	return nil
 }
 
+func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateSetEnablePrefixForIpv6SourceNatParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateSetEnforceSecurityGroupInboundRulesOnPrivateLinkTrafficParameters(val *string) error {
 	return nil
 }
 
 func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateSetIpAddressTypeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateSetIpv4IpamPoolIdParameters(val *string) error {
 	return nil
 }
 

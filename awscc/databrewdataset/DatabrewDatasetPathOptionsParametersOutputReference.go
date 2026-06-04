@@ -26,7 +26,7 @@ type DatabrewDatasetPathOptionsParametersOutputReference interface {
 	// Experimental.
 	CreationStack() *[]*string
 	DatasetParameter() DatabrewDatasetPathOptionsParametersDatasetParameterOutputReference
-	DatasetParameterInput() *DatabrewDatasetPathOptionsParametersDatasetParameter
+	DatasetParameterInput() interface{}
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -67,6 +67,8 @@ type DatabrewDatasetPathOptionsParametersOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDatasetParameter(value *DatabrewDatasetPathOptionsParametersDatasetParameter)
+	ResetDatasetParameter()
+	ResetPathParameterName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_DatabrewDatasetPathOptionsParametersOutputReference) DatasetP
 	return returns
 }
 
-func (j *jsiiProxy_DatabrewDatasetPathOptionsParametersOutputReference) DatasetParameterInput() *DatabrewDatasetPathOptionsParametersDatasetParameter {
-	var returns *DatabrewDatasetPathOptionsParametersDatasetParameter
+func (j *jsiiProxy_DatabrewDatasetPathOptionsParametersOutputReference) DatasetParameterInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"datasetParameterInput",
@@ -480,6 +482,22 @@ func (d *jsiiProxy_DatabrewDatasetPathOptionsParametersOutputReference) PutDatas
 		d,
 		"putDatasetParameter",
 		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DatabrewDatasetPathOptionsParametersOutputReference) ResetDatasetParameter() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetDatasetParameter",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatabrewDatasetPathOptionsParametersOutputReference) ResetPathParameterName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetPathParameterName",
+		nil, // no parameters
 	)
 }
 

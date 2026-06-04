@@ -56,7 +56,15 @@ func (c *jsiiProxy_ConnectHoursOfOperation) validateInterpolationForAttributePar
 	return nil
 }
 
+func (c *jsiiProxy_ConnectHoursOfOperation) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_ConnectHoursOfOperation) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_ConnectHoursOfOperation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -65,6 +73,10 @@ func (c *jsiiProxy_ConnectHoursOfOperation) validateOverrideLogicalIdParameters(
 }
 
 func (c *jsiiProxy_ConnectHoursOfOperation) validatePutConfigParameters(value interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_ConnectHoursOfOperation) validatePutHoursOfOperationOverridesParameters(value interface{}) error {
 	return nil
 }
 

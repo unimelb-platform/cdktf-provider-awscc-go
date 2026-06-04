@@ -56,11 +56,23 @@ func (e *jsiiProxy_Ec2Ipam) validateInterpolationForAttributeParameters(terrafor
 	return nil
 }
 
+func (e *jsiiProxy_Ec2Ipam) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2Ipam) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (e *jsiiProxy_Ec2Ipam) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2Ipam) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2Ipam) validatePutDefaultResourceDiscoveryOrganizationalUnitExclusionsParameters(value interface{}) error {
 	return nil
 }
 
@@ -100,7 +112,15 @@ func (j *jsiiProxy_Ec2Ipam) validateSetDescriptionParameters(val *string) error 
 	return nil
 }
 
+func (j *jsiiProxy_Ec2Ipam) validateSetEnablePrivateGuaParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Ec2Ipam) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2Ipam) validateSetMeteredAccountParameters(val *string) error {
 	return nil
 }
 

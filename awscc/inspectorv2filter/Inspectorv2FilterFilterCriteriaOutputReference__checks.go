@@ -121,6 +121,99 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutAw
 	return nil
 }
 
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutCodeVulnerabilityDetectorNameParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*Inspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorName:
+		value := value.(*[]*Inspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorName)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*Inspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorName:
+		value_ := value.([]*Inspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorName)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Inspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorName; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutCodeVulnerabilityDetectorTagsParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*Inspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorTags:
+		value := value.(*[]*Inspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorTags)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*Inspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorTags:
+		value_ := value.([]*Inspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorTags)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Inspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorTags; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutCodeVulnerabilityFilePathParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*Inspectorv2FilterFilterCriteriaCodeVulnerabilityFilePath:
+		value := value.(*[]*Inspectorv2FilterFilterCriteriaCodeVulnerabilityFilePath)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*Inspectorv2FilterFilterCriteriaCodeVulnerabilityFilePath:
+		value_ := value.([]*Inspectorv2FilterFilterCriteriaCodeVulnerabilityFilePath)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Inspectorv2FilterFilterCriteriaCodeVulnerabilityFilePath; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutComponentIdParameters(value interface{}) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
@@ -462,6 +555,68 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutEc
 	return nil
 }
 
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutEpssScoreParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*Inspectorv2FilterFilterCriteriaEpssScore:
+		value := value.(*[]*Inspectorv2FilterFilterCriteriaEpssScore)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*Inspectorv2FilterFilterCriteriaEpssScore:
+		value_ := value.([]*Inspectorv2FilterFilterCriteriaEpssScore)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Inspectorv2FilterFilterCriteriaEpssScore; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutExploitAvailableParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*Inspectorv2FilterFilterCriteriaExploitAvailable:
+		value := value.(*[]*Inspectorv2FilterFilterCriteriaExploitAvailable)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*Inspectorv2FilterFilterCriteriaExploitAvailable:
+		value_ := value.([]*Inspectorv2FilterFilterCriteriaExploitAvailable)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Inspectorv2FilterFilterCriteriaExploitAvailable; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutFindingArnParameters(value interface{}) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
@@ -586,6 +741,37 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutFi
 	return nil
 }
 
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutFixAvailableParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*Inspectorv2FilterFilterCriteriaFixAvailable:
+		value := value.(*[]*Inspectorv2FilterFilterCriteriaFixAvailable)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*Inspectorv2FilterFilterCriteriaFixAvailable:
+		value_ := value.([]*Inspectorv2FilterFilterCriteriaFixAvailable)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Inspectorv2FilterFilterCriteriaFixAvailable; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutInspectorScoreParameters(value interface{}) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
@@ -611,6 +797,161 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutIn
 	default:
 		if !_jsii_.IsAnonymousProxy(value) {
 			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Inspectorv2FilterFilterCriteriaInspectorScore; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutLambdaFunctionExecutionRoleArnParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*Inspectorv2FilterFilterCriteriaLambdaFunctionExecutionRoleArn:
+		value := value.(*[]*Inspectorv2FilterFilterCriteriaLambdaFunctionExecutionRoleArn)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*Inspectorv2FilterFilterCriteriaLambdaFunctionExecutionRoleArn:
+		value_ := value.([]*Inspectorv2FilterFilterCriteriaLambdaFunctionExecutionRoleArn)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Inspectorv2FilterFilterCriteriaLambdaFunctionExecutionRoleArn; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutLambdaFunctionLastModifiedAtParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*Inspectorv2FilterFilterCriteriaLambdaFunctionLastModifiedAt:
+		value := value.(*[]*Inspectorv2FilterFilterCriteriaLambdaFunctionLastModifiedAt)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*Inspectorv2FilterFilterCriteriaLambdaFunctionLastModifiedAt:
+		value_ := value.([]*Inspectorv2FilterFilterCriteriaLambdaFunctionLastModifiedAt)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Inspectorv2FilterFilterCriteriaLambdaFunctionLastModifiedAt; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutLambdaFunctionLayersParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*Inspectorv2FilterFilterCriteriaLambdaFunctionLayers:
+		value := value.(*[]*Inspectorv2FilterFilterCriteriaLambdaFunctionLayers)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*Inspectorv2FilterFilterCriteriaLambdaFunctionLayers:
+		value_ := value.([]*Inspectorv2FilterFilterCriteriaLambdaFunctionLayers)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Inspectorv2FilterFilterCriteriaLambdaFunctionLayers; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutLambdaFunctionNameParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*Inspectorv2FilterFilterCriteriaLambdaFunctionName:
+		value := value.(*[]*Inspectorv2FilterFilterCriteriaLambdaFunctionName)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*Inspectorv2FilterFilterCriteriaLambdaFunctionName:
+		value_ := value.([]*Inspectorv2FilterFilterCriteriaLambdaFunctionName)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Inspectorv2FilterFilterCriteriaLambdaFunctionName; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) validatePutLambdaFunctionRuntimeParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*Inspectorv2FilterFilterCriteriaLambdaFunctionRuntime:
+		value := value.(*[]*Inspectorv2FilterFilterCriteriaLambdaFunctionRuntime)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*Inspectorv2FilterFilterCriteriaLambdaFunctionRuntime:
+		value_ := value.([]*Inspectorv2FilterFilterCriteriaLambdaFunctionRuntime)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Inspectorv2FilterFilterCriteriaLambdaFunctionRuntime; received %#v (a %T)", value, value)
 		}
 	}
 

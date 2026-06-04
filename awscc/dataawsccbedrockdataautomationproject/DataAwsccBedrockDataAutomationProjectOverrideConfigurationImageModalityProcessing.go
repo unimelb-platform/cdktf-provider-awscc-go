@@ -1,0 +1,6 @@
+package dataawsccbedrockdataautomationproject
+
+
+type DataAwsccBedrockDataAutomationProjectOverrideConfigurationImageModalityProcessing struct {
+}
+

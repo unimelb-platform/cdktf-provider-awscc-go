@@ -44,6 +44,10 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfiguratio
 	return nil
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationOutputReference) validatePutBufferingHintsParameters(value *KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationBufferingHints) error {
+	return nil
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationOutputReference) validatePutCloudwatchLoggingOptionsParameters(value *KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationCloudwatchLoggingOptions) error {
 	return nil
 }
@@ -57,6 +61,10 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfiguratio
 }
 
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationOutputReference) validatePutS3ConfigurationParameters(value *KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationS3Configuration) error {
+	return nil
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationOutputReference) validatePutSecretsManagerConfigurationParameters(value *KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationSecretsManagerConfiguration) error {
 	return nil
 }
 

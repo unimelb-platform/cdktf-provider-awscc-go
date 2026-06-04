@@ -1,0 +1,6 @@
+package dataawsccbedrockflowversion
+
+
+type DataAwsccBedrockFlowVersionDefinitionNodesConfigurationPromptSourceConfigurationInlineInferenceConfigurationText struct {
+}
+

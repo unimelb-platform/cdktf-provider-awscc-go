@@ -27,8 +27,8 @@ type CloudwatchMetricStreamStatisticsConfigurationsIncludeMetricsOutputReference
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *CloudwatchMetricStreamStatisticsConfigurationsIncludeMetrics
-	SetInternalValue(val *CloudwatchMetricStreamStatisticsConfigurationsIncludeMetrics)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	MetricName() *string
 	SetMetricName(val *string)
 	MetricNameInput() *string
@@ -67,6 +67,8 @@ type CloudwatchMetricStreamStatisticsConfigurationsIncludeMetricsOutputReference
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetMetricName()
+	ResetNamespace()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_CloudwatchMetricStreamStatisticsConfigurationsIncludeMetricsO
 	return returns
 }
 
-func (j *jsiiProxy_CloudwatchMetricStreamStatisticsConfigurationsIncludeMetricsOutputReference) InternalValue() *CloudwatchMetricStreamStatisticsConfigurationsIncludeMetrics {
-	var returns *CloudwatchMetricStreamStatisticsConfigurationsIncludeMetrics
+func (j *jsiiProxy_CloudwatchMetricStreamStatisticsConfigurationsIncludeMetricsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -242,7 +244,7 @@ func (j *jsiiProxy_CloudwatchMetricStreamStatisticsConfigurationsIncludeMetricsO
 	)
 }
 
-func (j *jsiiProxy_CloudwatchMetricStreamStatisticsConfigurationsIncludeMetricsOutputReference)SetInternalValue(val *CloudwatchMetricStreamStatisticsConfigurationsIncludeMetrics) {
+func (j *jsiiProxy_CloudwatchMetricStreamStatisticsConfigurationsIncludeMetricsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CloudwatchMetricStreamStatisticsConfigurationsIncludeMetricsO
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CloudwatchMetricStreamStatisticsConfigurationsIncludeMetricsOutputReference) ResetMetricName() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetMetricName",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudwatchMetricStreamStatisticsConfigurationsIncludeMetricsOutputReference) ResetNamespace() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetNamespace",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CloudwatchMetricStreamStatisticsConfigurationsIncludeMetricsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

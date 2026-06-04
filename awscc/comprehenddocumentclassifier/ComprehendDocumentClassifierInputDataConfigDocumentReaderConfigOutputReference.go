@@ -70,6 +70,7 @@ type ComprehendDocumentClassifierInputDataConfigDocumentReaderConfigOutputRefere
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDocumentReadAction()
 	ResetDocumentReadMode()
 	ResetFeatureTypes()
 	// Produce the Token's value at resolution time.
@@ -517,6 +518,14 @@ func (c *jsiiProxy_ComprehendDocumentClassifierInputDataConfigDocumentReaderConf
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ComprehendDocumentClassifierInputDataConfigDocumentReaderConfigOutputReference) ResetDocumentReadAction() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetDocumentReadAction",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ComprehendDocumentClassifierInputDataConfigDocumentReaderConfigOutputReference) ResetDocumentReadMode() {

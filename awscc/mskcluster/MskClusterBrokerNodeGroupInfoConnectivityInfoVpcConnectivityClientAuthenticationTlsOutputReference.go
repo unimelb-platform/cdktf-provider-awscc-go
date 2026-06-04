@@ -64,6 +64,7 @@ type MskClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthentic
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEnabled()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (m *jsiiProxy_MskClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityC
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_MskClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationTlsOutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetEnabled",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_MskClusterBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationTlsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

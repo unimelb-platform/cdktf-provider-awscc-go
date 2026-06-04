@@ -70,6 +70,9 @@ type BackupBackupSelectionBackupSelectionListOfTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetConditionKey()
+	ResetConditionType()
+	ResetConditionValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (b *jsiiProxy_BackupBackupSelectionBackupSelectionListOfTagsOutputReference
 	)
 
 	return returns
+}
+
+func (b *jsiiProxy_BackupBackupSelectionBackupSelectionListOfTagsOutputReference) ResetConditionKey() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetConditionKey",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BackupBackupSelectionBackupSelectionListOfTagsOutputReference) ResetConditionType() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetConditionType",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BackupBackupSelectionBackupSelectionListOfTagsOutputReference) ResetConditionValue() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetConditionValue",
+		nil, // no parameters
+	)
 }
 
 func (b *jsiiProxy_BackupBackupSelectionBackupSelectionListOfTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

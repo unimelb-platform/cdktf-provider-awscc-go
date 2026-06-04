@@ -67,6 +67,8 @@ type AmplifyBranchEnvironmentVariablesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (a *jsiiProxy_AmplifyBranchEnvironmentVariablesOutputReference) Interpolati
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AmplifyBranchEnvironmentVariablesOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AmplifyBranchEnvironmentVariablesOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AmplifyBranchEnvironmentVariablesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

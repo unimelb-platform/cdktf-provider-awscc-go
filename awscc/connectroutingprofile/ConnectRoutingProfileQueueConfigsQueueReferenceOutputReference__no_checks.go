@@ -60,7 +60,7 @@ func (j *jsiiProxy_ConnectRoutingProfileQueueConfigsQueueReferenceOutputReferenc
 	return nil
 }
 
-func (j *jsiiProxy_ConnectRoutingProfileQueueConfigsQueueReferenceOutputReference) validateSetInternalValueParameters(val *ConnectRoutingProfileQueueConfigsQueueReference) error {
+func (j *jsiiProxy_ConnectRoutingProfileQueueConfigsQueueReferenceOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

@@ -56,7 +56,15 @@ func (i *jsiiProxy_IotDomainConfiguration) validateInterpolationForAttributePara
 	return nil
 }
 
+func (i *jsiiProxy_IotDomainConfiguration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotDomainConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotDomainConfiguration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -65,6 +73,14 @@ func (i *jsiiProxy_IotDomainConfiguration) validateOverrideLogicalIdParameters(n
 }
 
 func (i *jsiiProxy_IotDomainConfiguration) validatePutAuthorizerConfigParameters(value *IotDomainConfigurationAuthorizerConfig) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotDomainConfiguration) validatePutClientCertificateConfigParameters(value *IotDomainConfigurationClientCertificateConfig) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotDomainConfiguration) validatePutServerCertificateConfigParameters(value *IotDomainConfigurationServerCertificateConfig) error {
 	return nil
 }
 
@@ -89,6 +105,14 @@ func validateIotDomainConfiguration_IsTerraformElementParameters(x interface{}) 
 }
 
 func validateIotDomainConfiguration_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotDomainConfiguration) validateSetApplicationProtocolParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotDomainConfiguration) validateSetAuthenticationTypeParameters(val *string) error {
 	return nil
 }
 

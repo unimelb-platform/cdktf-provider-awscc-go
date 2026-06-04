@@ -83,6 +83,7 @@ type IotSecurityProfileBehaviorsOutputReference interface {
 	ResetExportMetric()
 	ResetMetric()
 	ResetMetricDimension()
+	ResetName()
 	ResetSuppressAlerts()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -652,6 +653,14 @@ func (i *jsiiProxy_IotSecurityProfileBehaviorsOutputReference) ResetMetricDimens
 	_jsii_.InvokeVoid(
 		i,
 		"resetMetricDimension",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotSecurityProfileBehaviorsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetName",
 		nil, // no parameters
 	)
 }

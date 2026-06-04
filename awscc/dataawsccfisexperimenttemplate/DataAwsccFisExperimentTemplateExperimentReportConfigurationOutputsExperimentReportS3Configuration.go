@@ -1,0 +1,6 @@
+package dataawsccfisexperimenttemplate
+
+
+type DataAwsccFisExperimentTemplateExperimentReportConfigurationOutputsExperimentReportS3Configuration struct {
+}
+

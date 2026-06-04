@@ -67,6 +67,8 @@ type DynamodbTableGlobalSecondaryIndexesProvisionedThroughputOutputReference int
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetReadCapacityUnits()
+	ResetWriteCapacityUnits()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesProvisionedThroughputOutpu
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesProvisionedThroughputOutputReference) ResetReadCapacityUnits() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetReadCapacityUnits",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesProvisionedThroughputOutputReference) ResetWriteCapacityUnits() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetWriteCapacityUnits",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesProvisionedThroughputOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

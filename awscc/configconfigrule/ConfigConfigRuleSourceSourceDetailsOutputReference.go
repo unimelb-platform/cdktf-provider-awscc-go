@@ -70,7 +70,9 @@ type ConfigConfigRuleSourceSourceDetailsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEventSource()
 	ResetMaximumExecutionFrequency()
+	ResetMessageType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -518,10 +520,26 @@ func (c *jsiiProxy_ConfigConfigRuleSourceSourceDetailsOutputReference) Interpola
 	return returns
 }
 
+func (c *jsiiProxy_ConfigConfigRuleSourceSourceDetailsOutputReference) ResetEventSource() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetEventSource",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_ConfigConfigRuleSourceSourceDetailsOutputReference) ResetMaximumExecutionFrequency() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetMaximumExecutionFrequency",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConfigConfigRuleSourceSourceDetailsOutputReference) ResetMessageType() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetMessageType",
 		nil, // no parameters
 	)
 }

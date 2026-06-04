@@ -113,6 +113,8 @@ type EcsTaskDefinitionContainerDefinitionsOutputReference interface {
 	RepositoryCredentialsInput() interface{}
 	ResourceRequirements() EcsTaskDefinitionContainerDefinitionsResourceRequirementsList
 	ResourceRequirementsInput() interface{}
+	RestartPolicy() EcsTaskDefinitionContainerDefinitionsRestartPolicyOutputReference
+	RestartPolicyInput() interface{}
 	Secrets() EcsTaskDefinitionContainerDefinitionsSecretsList
 	SecretsInput() interface{}
 	StartTimeout() *float64
@@ -136,6 +138,9 @@ type EcsTaskDefinitionContainerDefinitionsOutputReference interface {
 	User() *string
 	SetUser(val *string)
 	UserInput() *string
+	VersionConsistency() *string
+	SetVersionConsistency(val *string)
+	VersionConsistencyInput() *string
 	VolumesFrom() EcsTaskDefinitionContainerDefinitionsVolumesFromList
 	VolumesFromInput() interface{}
 	WorkingDirectory() *string
@@ -177,6 +182,7 @@ type EcsTaskDefinitionContainerDefinitionsOutputReference interface {
 	PutPortMappings(value interface{})
 	PutRepositoryCredentials(value *EcsTaskDefinitionContainerDefinitionsRepositoryCredentials)
 	PutResourceRequirements(value interface{})
+	PutRestartPolicy(value *EcsTaskDefinitionContainerDefinitionsRestartPolicy)
 	PutSecrets(value interface{})
 	PutSystemControls(value interface{})
 	PutUlimits(value interface{})
@@ -198,6 +204,7 @@ type EcsTaskDefinitionContainerDefinitionsOutputReference interface {
 	ResetFirelensConfiguration()
 	ResetHealthCheck()
 	ResetHostname()
+	ResetImage()
 	ResetInteractive()
 	ResetLinks()
 	ResetLinuxParameters()
@@ -205,18 +212,21 @@ type EcsTaskDefinitionContainerDefinitionsOutputReference interface {
 	ResetMemory()
 	ResetMemoryReservation()
 	ResetMountPoints()
+	ResetName()
 	ResetPortMappings()
 	ResetPrivileged()
 	ResetPseudoTerminal()
 	ResetReadonlyRootFilesystem()
 	ResetRepositoryCredentials()
 	ResetResourceRequirements()
+	ResetRestartPolicy()
 	ResetSecrets()
 	ResetStartTimeout()
 	ResetStopTimeout()
 	ResetSystemControls()
 	ResetUlimits()
 	ResetUser()
+	ResetVersionConsistency()
 	ResetVolumesFrom()
 	ResetWorkingDirectory()
 	// Produce the Token's value at resolution time.
@@ -924,6 +934,26 @@ func (j *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) Resourc
 	return returns
 }
 
+func (j *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) RestartPolicy() EcsTaskDefinitionContainerDefinitionsRestartPolicyOutputReference {
+	var returns EcsTaskDefinitionContainerDefinitionsRestartPolicyOutputReference
+	_jsii_.Get(
+		j,
+		"restartPolicy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) RestartPolicyInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"restartPolicyInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) Secrets() EcsTaskDefinitionContainerDefinitionsSecretsList {
 	var returns EcsTaskDefinitionContainerDefinitionsSecretsList
 	_jsii_.Get(
@@ -1059,6 +1089,26 @@ func (j *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) UserInp
 	_jsii_.Get(
 		j,
 		"userInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) VersionConsistency() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"versionConsistency",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) VersionConsistencyInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"versionConsistencyInput",
 		&returns,
 	)
 	return returns
@@ -1440,6 +1490,17 @@ func (j *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference)SetUser(
 	)
 }
 
+func (j *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference)SetVersionConsistency(val *string) {
+	if err := j.validateSetVersionConsistencyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"versionConsistency",
+		val,
+	)
+}
+
 func (j *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference)SetWorkingDirectory(val *string) {
 	if err := j.validateSetWorkingDirectoryParameters(val); err != nil {
 		panic(err)
@@ -1769,6 +1830,17 @@ func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) PutReso
 	)
 }
 
+func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) PutRestartPolicy(value *EcsTaskDefinitionContainerDefinitionsRestartPolicy) {
+	if err := e.validatePutRestartPolicyParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putRestartPolicy",
+		[]interface{}{value},
+	)
+}
+
 func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) PutSecrets(value interface{}) {
 	if err := e.validatePutSecretsParameters(value); err != nil {
 		panic(err)
@@ -1949,6 +2021,14 @@ func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) ResetHo
 	)
 }
 
+func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) ResetImage() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetImage",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) ResetInteractive() {
 	_jsii_.InvokeVoid(
 		e,
@@ -2005,6 +2085,14 @@ func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) ResetMo
 	)
 }
 
+func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) ResetPortMappings() {
 	_jsii_.InvokeVoid(
 		e,
@@ -2053,6 +2141,14 @@ func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) ResetRe
 	)
 }
 
+func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) ResetRestartPolicy() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetRestartPolicy",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) ResetSecrets() {
 	_jsii_.InvokeVoid(
 		e,
@@ -2097,6 +2193,14 @@ func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) ResetUs
 	_jsii_.InvokeVoid(
 		e,
 		"resetUser",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) ResetVersionConsistency() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetVersionConsistency",
 		nil, // no parameters
 	)
 }

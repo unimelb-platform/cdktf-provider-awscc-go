@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/fmspolicy/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/fms_policy awscc_fms_policy}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/fms_policy awscc_fms_policy}.
 type FmsPolicy interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -57,6 +57,7 @@ type FmsPolicy interface {
 	PolicyDescription() *string
 	SetPolicyDescription(val *string)
 	PolicyDescriptionInput() *string
+	PolicyId() *string
 	PolicyName() *string
 	SetPolicyName(val *string)
 	PolicyNameInput() *string
@@ -79,6 +80,9 @@ type FmsPolicy interface {
 	ResourceSetIds() *[]*string
 	SetResourceSetIds(val *[]*string)
 	ResourceSetIdsInput() *[]*string
+	ResourceTagLogicalOperator() *string
+	SetResourceTagLogicalOperator(val *string)
+	ResourceTagLogicalOperatorInput() *string
 	ResourceTags() FmsPolicyResourceTagsList
 	ResourceTagsInput() interface{}
 	ResourceType() *string
@@ -121,12 +125,22 @@ type FmsPolicy interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -144,11 +158,15 @@ type FmsPolicy interface {
 	ResetPolicyDescription()
 	ResetResourcesCleanUp()
 	ResetResourceSetIds()
+	ResetResourceTagLogicalOperator()
 	ResetResourceTags()
 	ResetResourceType()
 	ResetResourceTypeList()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -383,6 +401,16 @@ func (j *jsiiProxy_FmsPolicy) PolicyDescriptionInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_FmsPolicy) PolicyId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"policyId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_FmsPolicy) PolicyName() *string {
 	var returns *string
 	_jsii_.Get(
@@ -488,6 +516,26 @@ func (j *jsiiProxy_FmsPolicy) ResourceSetIdsInput() *[]*string {
 	_jsii_.Get(
 		j,
 		"resourceSetIdsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FmsPolicy) ResourceTagLogicalOperator() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"resourceTagLogicalOperator",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FmsPolicy) ResourceTagLogicalOperatorInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"resourceTagLogicalOperatorInput",
 		&returns,
 	)
 	return returns
@@ -624,7 +672,7 @@ func (j *jsiiProxy_FmsPolicy) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/fms_policy awscc_fms_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/fms_policy awscc_fms_policy} Resource.
 func NewFmsPolicy(scope constructs.Construct, id *string, config *FmsPolicyConfig) FmsPolicy {
 	_init_.Initialize()
 
@@ -642,7 +690,7 @@ func NewFmsPolicy(scope constructs.Construct, id *string, config *FmsPolicyConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/fms_policy awscc_fms_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/fms_policy awscc_fms_policy} Resource.
 func NewFmsPolicy_Override(f FmsPolicy, scope constructs.Construct, id *string, config *FmsPolicyConfig) {
 	_init_.Initialize()
 
@@ -794,6 +842,17 @@ func (j *jsiiProxy_FmsPolicy)SetResourceSetIds(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"resourceSetIds",
+		val,
+	)
+}
+
+func (j *jsiiProxy_FmsPolicy)SetResourceTagLogicalOperator(val *string) {
+	if err := j.validateSetResourceTagLogicalOperatorParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"resourceTagLogicalOperator",
 		val,
 	)
 }
@@ -1089,6 +1148,19 @@ func (f *jsiiProxy_FmsPolicy) GetStringMapAttribute(terraformAttribute *string) 
 	return returns
 }
 
+func (f *jsiiProxy_FmsPolicy) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		f,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (f *jsiiProxy_FmsPolicy) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := f.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1116,6 +1188,17 @@ func (f *jsiiProxy_FmsPolicy) InterpolationForAttribute(terraformAttribute *stri
 	return returns
 }
 
+func (f *jsiiProxy_FmsPolicy) MoveFromId(id *string) {
+	if err := f.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (f *jsiiProxy_FmsPolicy) MoveTo(moveTarget *string, index interface{}) {
 	if err := f.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1124,6 +1207,17 @@ func (f *jsiiProxy_FmsPolicy) MoveTo(moveTarget *string, index interface{}) {
 		f,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (f *jsiiProxy_FmsPolicy) MoveToId(id *string) {
+	if err := f.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1249,6 +1343,14 @@ func (f *jsiiProxy_FmsPolicy) ResetResourceSetIds() {
 	)
 }
 
+func (f *jsiiProxy_FmsPolicy) ResetResourceTagLogicalOperator() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetResourceTagLogicalOperator",
+		nil, // no parameters
+	)
+}
+
 func (f *jsiiProxy_FmsPolicy) ResetResourceTags() {
 	_jsii_.InvokeVoid(
 		f,
@@ -1287,6 +1389,32 @@ func (f *jsiiProxy_FmsPolicy) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		f,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (f *jsiiProxy_FmsPolicy) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		f,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (f *jsiiProxy_FmsPolicy) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		f,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

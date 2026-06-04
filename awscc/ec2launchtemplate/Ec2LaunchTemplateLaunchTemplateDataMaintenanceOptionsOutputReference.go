@@ -32,9 +32,6 @@ type Ec2LaunchTemplateLaunchTemplateDataMaintenanceOptionsOutputReference interf
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
-	RebootMigration() *string
-	SetRebootMigration(val *string)
-	RebootMigrationInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -68,7 +65,6 @@ type Ec2LaunchTemplateLaunchTemplateDataMaintenanceOptionsOutputReference interf
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetAutoRecovery()
-	ResetRebootMigration()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -149,26 +145,6 @@ func (j *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataMaintenanceOptionsOutputRe
 	_jsii_.Get(
 		j,
 		"internalValue",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataMaintenanceOptionsOutputReference) RebootMigration() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"rebootMigration",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataMaintenanceOptionsOutputReference) RebootMigrationInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"rebootMigrationInput",
 		&returns,
 	)
 	return returns
@@ -262,17 +238,6 @@ func (j *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataMaintenanceOptionsOutputRe
 	_jsii_.Set(
 		j,
 		"internalValue",
-		val,
-	)
-}
-
-func (j *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataMaintenanceOptionsOutputReference)SetRebootMigration(val *string) {
-	if err := j.validateSetRebootMigrationParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"rebootMigration",
 		val,
 	)
 }
@@ -489,14 +454,6 @@ func (e *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataMaintenanceOptionsOutputRe
 	_jsii_.InvokeVoid(
 		e,
 		"resetAutoRecovery",
-		nil, // no parameters
-	)
-}
-
-func (e *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataMaintenanceOptionsOutputReference) ResetRebootMigration() {
-	_jsii_.InvokeVoid(
-		e,
-		"resetRebootMigration",
 		nil, // no parameters
 	)
 }

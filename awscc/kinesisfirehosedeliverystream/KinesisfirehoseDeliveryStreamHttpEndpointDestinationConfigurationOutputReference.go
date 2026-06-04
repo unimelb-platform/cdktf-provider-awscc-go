@@ -30,7 +30,7 @@ type KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputRefe
 	// Experimental.
 	CreationStack() *[]*string
 	EndpointConfiguration() KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointConfigurationOutputReference
-	EndpointConfigurationInput() *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointConfiguration
+	EndpointConfigurationInput() interface{}
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -48,7 +48,9 @@ type KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputRefe
 	SetS3BackupMode(val *string)
 	S3BackupModeInput() *string
 	S3Configuration() KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationS3ConfigurationOutputReference
-	S3ConfigurationInput() *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationS3Configuration
+	S3ConfigurationInput() interface{}
+	SecretsManagerConfiguration() KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference
+	SecretsManagerConfigurationInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -88,13 +90,17 @@ type KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputRefe
 	PutRequestConfiguration(value *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationRequestConfiguration)
 	PutRetryOptions(value *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationRetryOptions)
 	PutS3Configuration(value *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationS3Configuration)
+	PutSecretsManagerConfiguration(value *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfiguration)
 	ResetBufferingHints()
 	ResetCloudwatchLoggingOptions()
+	ResetEndpointConfiguration()
 	ResetProcessingConfiguration()
 	ResetRequestConfiguration()
 	ResetRetryOptions()
 	ResetRoleArn()
 	ResetS3BackupMode()
+	ResetS3Configuration()
+	ResetSecretsManagerConfiguration()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -190,8 +196,8 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigura
 	return returns
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputReference) EndpointConfigurationInput() *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointConfiguration {
-	var returns *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointConfiguration
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputReference) EndpointConfigurationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"endpointConfigurationInput",
@@ -330,11 +336,31 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigura
 	return returns
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputReference) S3ConfigurationInput() *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationS3Configuration {
-	var returns *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationS3Configuration
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputReference) S3ConfigurationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"s3ConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputReference) SecretsManagerConfiguration() KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference {
+	var returns KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"secretsManagerConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputReference) SecretsManagerConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"secretsManagerConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -728,6 +754,17 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigura
 	)
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputReference) PutSecretsManagerConfiguration(value *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfiguration) {
+	if err := k.validatePutSecretsManagerConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"putSecretsManagerConfiguration",
+		[]interface{}{value},
+	)
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputReference) ResetBufferingHints() {
 	_jsii_.InvokeVoid(
 		k,
@@ -740,6 +777,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigura
 	_jsii_.InvokeVoid(
 		k,
 		"resetCloudwatchLoggingOptions",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputReference) ResetEndpointConfiguration() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetEndpointConfiguration",
 		nil, // no parameters
 	)
 }
@@ -780,6 +825,22 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigura
 	_jsii_.InvokeVoid(
 		k,
 		"resetS3BackupMode",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputReference) ResetS3Configuration() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetS3Configuration",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputReference) ResetSecretsManagerConfiguration() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetSecretsManagerConfiguration",
 		nil, // no parameters
 	)
 }

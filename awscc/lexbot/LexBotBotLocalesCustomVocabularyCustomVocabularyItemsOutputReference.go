@@ -27,8 +27,8 @@ type LexBotBotLocalesCustomVocabularyCustomVocabularyItemsOutputReference interf
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotBotLocalesCustomVocabularyCustomVocabularyItems
-	SetInternalValue(val *LexBotBotLocalesCustomVocabularyCustomVocabularyItems)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Phrase() *string
 	SetPhrase(val *string)
 	PhraseInput() *string
@@ -67,6 +67,7 @@ type LexBotBotLocalesCustomVocabularyCustomVocabularyItemsOutputReference interf
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPhrase()
 	ResetWeight()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -123,8 +124,8 @@ func (j *jsiiProxy_LexBotBotLocalesCustomVocabularyCustomVocabularyItemsOutputRe
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesCustomVocabularyCustomVocabularyItemsOutputReference) InternalValue() *LexBotBotLocalesCustomVocabularyCustomVocabularyItems {
-	var returns *LexBotBotLocalesCustomVocabularyCustomVocabularyItems
+func (j *jsiiProxy_LexBotBotLocalesCustomVocabularyCustomVocabularyItemsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -243,7 +244,7 @@ func (j *jsiiProxy_LexBotBotLocalesCustomVocabularyCustomVocabularyItemsOutputRe
 	)
 }
 
-func (j *jsiiProxy_LexBotBotLocalesCustomVocabularyCustomVocabularyItemsOutputReference)SetInternalValue(val *LexBotBotLocalesCustomVocabularyCustomVocabularyItems) {
+func (j *jsiiProxy_LexBotBotLocalesCustomVocabularyCustomVocabularyItemsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -482,6 +483,14 @@ func (l *jsiiProxy_LexBotBotLocalesCustomVocabularyCustomVocabularyItemsOutputRe
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotBotLocalesCustomVocabularyCustomVocabularyItemsOutputReference) ResetPhrase() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetPhrase",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotBotLocalesCustomVocabularyCustomVocabularyItemsOutputReference) ResetWeight() {

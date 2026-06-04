@@ -67,6 +67,8 @@ type BackupFrameworkFrameworkControlsControlInputParametersOutputReference inter
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetParameterName()
+	ResetParameterValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (b *jsiiProxy_BackupFrameworkFrameworkControlsControlInputParametersOutputR
 	)
 
 	return returns
+}
+
+func (b *jsiiProxy_BackupFrameworkFrameworkControlsControlInputParametersOutputReference) ResetParameterName() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetParameterName",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BackupFrameworkFrameworkControlsControlInputParametersOutputReference) ResetParameterValue() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetParameterValue",
+		nil, // no parameters
+	)
 }
 
 func (b *jsiiProxy_BackupFrameworkFrameworkControlsControlInputParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -29,8 +29,8 @@ type CloudwatchAlarmMetricsMetricStatMetricOutputReference interface {
 	DimensionsInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *CloudwatchAlarmMetricsMetricStatMetric
-	SetInternalValue(val *CloudwatchAlarmMetricsMetricStatMetric)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	MetricName() *string
 	SetMetricName(val *string)
 	MetricNameInput() *string
@@ -148,8 +148,8 @@ func (j *jsiiProxy_CloudwatchAlarmMetricsMetricStatMetricOutputReference) Fqn() 
 	return returns
 }
 
-func (j *jsiiProxy_CloudwatchAlarmMetricsMetricStatMetricOutputReference) InternalValue() *CloudwatchAlarmMetricsMetricStatMetric {
-	var returns *CloudwatchAlarmMetricsMetricStatMetric
+func (j *jsiiProxy_CloudwatchAlarmMetricsMetricStatMetricOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -268,7 +268,7 @@ func (j *jsiiProxy_CloudwatchAlarmMetricsMetricStatMetricOutputReference)SetComp
 	)
 }
 
-func (j *jsiiProxy_CloudwatchAlarmMetricsMetricStatMetricOutputReference)SetInternalValue(val *CloudwatchAlarmMetricsMetricStatMetric) {
+func (j *jsiiProxy_CloudwatchAlarmMetricsMetricStatMetricOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

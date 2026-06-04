@@ -28,6 +28,7 @@ type DataAwsccVerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfi
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
+	GroupConfiguration() DataAwsccVerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationGroupConfigurationOutputReference
 	InternalValue() *DataAwsccVerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfiguration
 	SetInternalValue(val *DataAwsccVerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfiguration)
 	// Experimental.
@@ -123,6 +124,16 @@ func (j *jsiiProxy_DataAwsccVerifiedpermissionsIdentitySourceConfigurationCognit
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccVerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationOutputReference) GroupConfiguration() DataAwsccVerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationGroupConfigurationOutputReference {
+	var returns DataAwsccVerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationGroupConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"groupConfiguration",
 		&returns,
 	)
 	return returns

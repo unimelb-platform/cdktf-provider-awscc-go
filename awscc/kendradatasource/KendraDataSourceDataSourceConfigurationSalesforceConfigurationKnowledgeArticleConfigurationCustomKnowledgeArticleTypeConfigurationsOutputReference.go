@@ -73,8 +73,10 @@ type KendraDataSourceDataSourceConfigurationSalesforceConfigurationKnowledgeArti
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutFieldMappings(value interface{})
+	ResetDocumentDataFieldName()
 	ResetDocumentTitleFieldName()
 	ResetFieldMappings()
+	ResetName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -553,6 +555,14 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSalesforceConfiguratio
 	)
 }
 
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSalesforceConfigurationKnowledgeArticleConfigurationCustomKnowledgeArticleTypeConfigurationsOutputReference) ResetDocumentDataFieldName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetDocumentDataFieldName",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSalesforceConfigurationKnowledgeArticleConfigurationCustomKnowledgeArticleTypeConfigurationsOutputReference) ResetDocumentTitleFieldName() {
 	_jsii_.InvokeVoid(
 		k,
@@ -565,6 +575,14 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSalesforceConfiguratio
 	_jsii_.InvokeVoid(
 		k,
 		"resetFieldMappings",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSalesforceConfigurationKnowledgeArticleConfigurationCustomKnowledgeArticleTypeConfigurationsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetName",
 		nil, // no parameters
 	)
 }

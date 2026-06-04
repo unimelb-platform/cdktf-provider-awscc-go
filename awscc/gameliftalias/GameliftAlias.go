@@ -9,9 +9,10 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/gameliftalias/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/gamelift_alias awscc_gamelift_alias}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/gamelift_alias awscc_gamelift_alias}.
 type GameliftAlias interface {
 	cdktf.TerraformResource
+	AliasArn() *string
 	AliasId() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
@@ -62,6 +63,8 @@ type GameliftAlias interface {
 	RawOverrides() interface{}
 	RoutingStrategy() GameliftAliasRoutingStrategyOutputReference
 	RoutingStrategyInput() interface{}
+	Tags() GameliftAliasTagsList
+	TagsInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -92,21 +95,36 @@ type GameliftAlias interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutRoutingStrategy(value *GameliftAliasRoutingStrategy)
+	PutTags(value interface{})
 	ResetDescription()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -119,6 +137,16 @@ type GameliftAlias interface {
 // The jsii proxy struct for GameliftAlias
 type jsiiProxy_GameliftAlias struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_GameliftAlias) AliasArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"aliasArn",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_GameliftAlias) AliasId() *string {
@@ -331,6 +359,26 @@ func (j *jsiiProxy_GameliftAlias) RoutingStrategyInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_GameliftAlias) Tags() GameliftAliasTagsList {
+	var returns GameliftAliasTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_GameliftAlias) TagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_GameliftAlias) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -362,7 +410,7 @@ func (j *jsiiProxy_GameliftAlias) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/gamelift_alias awscc_gamelift_alias} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/gamelift_alias awscc_gamelift_alias} Resource.
 func NewGameliftAlias(scope constructs.Construct, id *string, config *GameliftAliasConfig) GameliftAlias {
 	_init_.Initialize()
 
@@ -380,7 +428,7 @@ func NewGameliftAlias(scope constructs.Construct, id *string, config *GameliftAl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/gamelift_alias awscc_gamelift_alias} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/gamelift_alias awscc_gamelift_alias} Resource.
 func NewGameliftAlias_Override(g GameliftAlias, scope constructs.Construct, id *string, config *GameliftAliasConfig) {
 	_init_.Initialize()
 
@@ -750,6 +798,19 @@ func (g *jsiiProxy_GameliftAlias) GetStringMapAttribute(terraformAttribute *stri
 	return returns
 }
 
+func (g *jsiiProxy_GameliftAlias) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		g,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (g *jsiiProxy_GameliftAlias) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := g.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -777,6 +838,17 @@ func (g *jsiiProxy_GameliftAlias) InterpolationForAttribute(terraformAttribute *
 	return returns
 }
 
+func (g *jsiiProxy_GameliftAlias) MoveFromId(id *string) {
+	if err := g.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		g,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (g *jsiiProxy_GameliftAlias) MoveTo(moveTarget *string, index interface{}) {
 	if err := g.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -785,6 +857,17 @@ func (g *jsiiProxy_GameliftAlias) MoveTo(moveTarget *string, index interface{}) 
 		g,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (g *jsiiProxy_GameliftAlias) MoveToId(id *string) {
+	if err := g.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		g,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -810,6 +893,17 @@ func (g *jsiiProxy_GameliftAlias) PutRoutingStrategy(value *GameliftAliasRouting
 	)
 }
 
+func (g *jsiiProxy_GameliftAlias) PutTags(value interface{}) {
+	if err := g.validatePutTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		g,
+		"putTags",
+		[]interface{}{value},
+	)
+}
+
 func (g *jsiiProxy_GameliftAlias) ResetDescription() {
 	_jsii_.InvokeVoid(
 		g,
@@ -826,12 +920,46 @@ func (g *jsiiProxy_GameliftAlias) ResetOverrideLogicalId() {
 	)
 }
 
+func (g *jsiiProxy_GameliftAlias) ResetTags() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetTags",
+		nil, // no parameters
+	)
+}
+
 func (g *jsiiProxy_GameliftAlias) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		g,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (g *jsiiProxy_GameliftAlias) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		g,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (g *jsiiProxy_GameliftAlias) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		g,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

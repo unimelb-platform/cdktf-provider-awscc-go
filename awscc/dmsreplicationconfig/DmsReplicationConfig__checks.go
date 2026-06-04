@@ -119,6 +119,14 @@ func (d *jsiiProxy_DmsReplicationConfig) validateInterpolationForAttributeParame
 	return nil
 }
 
+func (d *jsiiProxy_DmsReplicationConfig) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (d *jsiiProxy_DmsReplicationConfig) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (d *jsiiProxy_DmsReplicationConfig) validateMoveToParameters(moveTarget *st
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DmsReplicationConfig) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -414,14 +430,6 @@ func (j *jsiiProxy_DmsReplicationConfig) validateSetProvisionersParameters(val *
 	return nil
 }
 
-func (j *jsiiProxy_DmsReplicationConfig) validateSetReplicationConfigArnParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
 func (j *jsiiProxy_DmsReplicationConfig) validateSetReplicationConfigIdentifierParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -495,6 +503,9 @@ func validateNewDmsReplicationConfigParameters(scope constructs.Construct, id *s
 		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
+	if config == nil {
+		return fmt.Errorf("parameter config is required, but nil was provided")
+	}
 	if err := _jsii_.ValidateStruct(config, func() string { return "parameter config" }); err != nil {
 		return err
 	}

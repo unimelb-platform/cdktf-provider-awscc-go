@@ -36,7 +36,7 @@ type ConnectRoutingProfileQueueConfigsOutputReference interface {
 	SetPriority(val *float64)
 	PriorityInput() *float64
 	QueueReference() ConnectRoutingProfileQueueConfigsQueueReferenceOutputReference
-	QueueReferenceInput() *ConnectRoutingProfileQueueConfigsQueueReference
+	QueueReferenceInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -70,6 +70,9 @@ type ConnectRoutingProfileQueueConfigsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutQueueReference(value *ConnectRoutingProfileQueueConfigsQueueReference)
+	ResetDelay()
+	ResetPriority()
+	ResetQueueReference()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -185,8 +188,8 @@ func (j *jsiiProxy_ConnectRoutingProfileQueueConfigsOutputReference) QueueRefere
 	return returns
 }
 
-func (j *jsiiProxy_ConnectRoutingProfileQueueConfigsOutputReference) QueueReferenceInput() *ConnectRoutingProfileQueueConfigsQueueReference {
-	var returns *ConnectRoutingProfileQueueConfigsQueueReference
+func (j *jsiiProxy_ConnectRoutingProfileQueueConfigsOutputReference) QueueReferenceInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"queueReferenceInput",
@@ -514,6 +517,30 @@ func (c *jsiiProxy_ConnectRoutingProfileQueueConfigsOutputReference) PutQueueRef
 		c,
 		"putQueueReference",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_ConnectRoutingProfileQueueConfigsOutputReference) ResetDelay() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetDelay",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConnectRoutingProfileQueueConfigsOutputReference) ResetPriority() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetPriority",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConnectRoutingProfileQueueConfigsOutputReference) ResetQueueReference() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetQueueReference",
+		nil, // no parameters
 	)
 }
 

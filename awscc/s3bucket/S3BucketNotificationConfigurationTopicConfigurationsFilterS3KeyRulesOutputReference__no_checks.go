@@ -56,7 +56,7 @@ func (j *jsiiProxy_S3BucketNotificationConfigurationTopicConfigurationsFilterS3K
 	return nil
 }
 
-func (j *jsiiProxy_S3BucketNotificationConfigurationTopicConfigurationsFilterS3KeyRulesOutputReference) validateSetInternalValueParameters(val *S3BucketNotificationConfigurationTopicConfigurationsFilterS3KeyRules) error {
+func (j *jsiiProxy_S3BucketNotificationConfigurationTopicConfigurationsFilterS3KeyRulesOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

@@ -119,6 +119,14 @@ func (i *jsiiProxy_IotSoftwarePackageVersion) validateInterpolationForAttributeP
 	return nil
 }
 
+func (i *jsiiProxy_IotSoftwarePackageVersion) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (i *jsiiProxy_IotSoftwarePackageVersion) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,9 +188,39 @@ func (i *jsiiProxy_IotSoftwarePackageVersion) validateMoveToParameters(moveTarge
 	return nil
 }
 
+func (i *jsiiProxy_IotSoftwarePackageVersion) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (i *jsiiProxy_IotSoftwarePackageVersion) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_IotSoftwarePackageVersion) validatePutArtifactParameters(value *IotSoftwarePackageVersionArtifact) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_IotSoftwarePackageVersion) validatePutSbomParameters(value *IotSoftwarePackageVersionSbom) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
 	}
 
 	return nil
@@ -422,6 +460,14 @@ func (j *jsiiProxy_IotSoftwarePackageVersion) validateSetProvisionersParameters(
 				return fmt.Errorf("parameter val[%#v] must be one of the allowed types: *cdktf.FileProvisioner, *cdktf.LocalExecProvisioner, *cdktf.RemoteExecProvisioner; received %#v (a %T)", idx_97dfc6, v, v)
 			}
 		}
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_IotSoftwarePackageVersion) validateSetRecipeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil

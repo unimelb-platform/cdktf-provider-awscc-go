@@ -103,7 +103,10 @@ type KendraDataSourceDataSourceConfigurationSharePointConfigurationOutputReferen
 	ResetExclusionPatterns()
 	ResetFieldMappings()
 	ResetInclusionPatterns()
+	ResetSecretArn()
+	ResetSharePointVersion()
 	ResetSslCertificateS3Path()
+	ResetUrls()
 	ResetUseChangeLog()
 	ResetVpcConfiguration()
 	// Produce the Token's value at resolution time.
@@ -880,10 +883,34 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSharePointConfiguratio
 	)
 }
 
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSharePointConfigurationOutputReference) ResetSecretArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetSecretArn",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSharePointConfigurationOutputReference) ResetSharePointVersion() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetSharePointVersion",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSharePointConfigurationOutputReference) ResetSslCertificateS3Path() {
 	_jsii_.InvokeVoid(
 		k,
 		"resetSslCertificateS3Path",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSharePointConfigurationOutputReference) ResetUrls() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetUrls",
 		nil, // no parameters
 	)
 }

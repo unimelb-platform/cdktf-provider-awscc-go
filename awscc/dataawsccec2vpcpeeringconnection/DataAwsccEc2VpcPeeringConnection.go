@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2vpcpeeringconnection/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_vpc_peering_connection awscc_ec2_vpc_peering_connection}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_vpc_peering_connection awscc_ec2_vpc_peering_connection}.
 type DataAwsccEc2VpcPeeringConnection interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -59,6 +59,7 @@ type DataAwsccEc2VpcPeeringConnection interface {
 	// Experimental.
 	TerraformResourceType() *string
 	VpcId() *string
+	VpcPeeringConnectionId() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -88,6 +89,10 @@ type DataAwsccEc2VpcPeeringConnection interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -322,8 +327,18 @@ func (j *jsiiProxy_DataAwsccEc2VpcPeeringConnection) VpcId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2VpcPeeringConnection) VpcPeeringConnectionId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"vpcPeeringConnectionId",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_vpc_peering_connection awscc_ec2_vpc_peering_connection} Data Source.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_vpc_peering_connection awscc_ec2_vpc_peering_connection} Data Source.
 func NewDataAwsccEc2VpcPeeringConnection(scope constructs.Construct, id *string, config *DataAwsccEc2VpcPeeringConnectionConfig) DataAwsccEc2VpcPeeringConnection {
 	_init_.Initialize()
 
@@ -341,7 +356,7 @@ func NewDataAwsccEc2VpcPeeringConnection(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_vpc_peering_connection awscc_ec2_vpc_peering_connection} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_vpc_peering_connection awscc_ec2_vpc_peering_connection} Data Source.
 func NewDataAwsccEc2VpcPeeringConnection_Override(d DataAwsccEc2VpcPeeringConnection, scope constructs.Construct, id *string, config *DataAwsccEc2VpcPeeringConnectionConfig) {
 	_init_.Initialize()
 
@@ -708,6 +723,32 @@ func (d *jsiiProxy_DataAwsccEc2VpcPeeringConnection) SynthesizeAttributes() *map
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2VpcPeeringConnection) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2VpcPeeringConnection) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

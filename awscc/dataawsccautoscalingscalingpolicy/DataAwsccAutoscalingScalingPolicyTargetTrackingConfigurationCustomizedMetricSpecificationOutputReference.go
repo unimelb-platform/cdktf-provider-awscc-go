@@ -31,7 +31,9 @@ type DataAwsccAutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetri
 	InternalValue() *DataAwsccAutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecification
 	SetInternalValue(val *DataAwsccAutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecification)
 	MetricName() *string
+	Metrics() DataAwsccAutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsList
 	Namespace() *string
+	Period() *float64
 	Statistic() *string
 	// Experimental.
 	TerraformAttribute() *string
@@ -151,11 +153,31 @@ func (j *jsiiProxy_DataAwsccAutoscalingScalingPolicyTargetTrackingConfigurationC
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccAutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) Metrics() DataAwsccAutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsList {
+	var returns DataAwsccAutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsList
+	_jsii_.Get(
+		j,
+		"metrics",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccAutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) Namespace() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"namespace",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccAutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) Period() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"period",
 		&returns,
 	)
 	return returns

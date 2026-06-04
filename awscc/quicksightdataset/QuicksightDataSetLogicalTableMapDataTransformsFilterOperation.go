@@ -7,7 +7,7 @@ type QuicksightDataSetLogicalTableMapDataTransformsFilterOperation struct {
 	// Rows for which the expression
 	//             evaluates to true are kept in the dataset.</p>
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/quicksight_data_set#condition_expression QuicksightDataSet#condition_expression}
-	ConditionExpression *string `field:"required" json:"conditionExpression" yaml:"conditionExpression"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/quicksight_data_set#condition_expression QuicksightDataSet#condition_expression}
+	ConditionExpression *string `field:"optional" json:"conditionExpression" yaml:"conditionExpression"`
 }
 

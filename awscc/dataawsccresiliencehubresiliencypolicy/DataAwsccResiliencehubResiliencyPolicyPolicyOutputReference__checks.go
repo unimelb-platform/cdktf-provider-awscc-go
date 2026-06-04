@@ -187,17 +187,13 @@ func (j *jsiiProxy_DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference) 
 	return nil
 }
 
-func validateNewDataAwsccResiliencehubResiliencyPolicyPolicyOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectKey *string) error {
+func validateNewDataAwsccResiliencehubResiliencyPolicyPolicyOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
 	if terraformResource == nil {
 		return fmt.Errorf("parameter terraformResource is required, but nil was provided")
 	}
 
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
-	}
-
-	if complexObjectKey == nil {
-		return fmt.Errorf("parameter complexObjectKey is required, but nil was provided")
 	}
 
 	return nil

@@ -4,6 +4,10 @@ package shieldprotectiongroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (s *jsiiProxy_ShieldProtectionGroupTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_ShieldProtectionGroupTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

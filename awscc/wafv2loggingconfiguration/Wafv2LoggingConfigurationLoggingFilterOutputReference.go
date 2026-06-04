@@ -67,6 +67,8 @@ type Wafv2LoggingConfigurationLoggingFilterOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutFilters(value interface{})
+	ResetDefaultBehavior()
+	ResetFilters()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -480,6 +482,22 @@ func (w *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterOutputReference) PutFil
 		w,
 		"putFilters",
 		[]interface{}{value},
+	)
+}
+
+func (w *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterOutputReference) ResetDefaultBehavior() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetDefaultBehavior",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterOutputReference) ResetFilters() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetFilters",
+		nil, // no parameters
 	)
 }
 

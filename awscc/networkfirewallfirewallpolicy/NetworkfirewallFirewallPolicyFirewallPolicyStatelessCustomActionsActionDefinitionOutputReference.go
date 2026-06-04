@@ -27,8 +27,8 @@ type NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefi
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinition
-	SetInternalValue(val *NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinition)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	PublishMetricAction() NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinitionPublishMetricActionOutputReference
 	PublishMetricActionInput() interface{}
 	// Experimental.
@@ -120,8 +120,8 @@ func (j *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomAct
 	return returns
 }
 
-func (j *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinitionOutputReference) InternalValue() *NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinition {
-	var returns *NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinition
+func (j *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinitionOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -220,7 +220,7 @@ func (j *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomAct
 	)
 }
 
-func (j *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinitionOutputReference)SetInternalValue(val *NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinition) {
+func (j *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinitionOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

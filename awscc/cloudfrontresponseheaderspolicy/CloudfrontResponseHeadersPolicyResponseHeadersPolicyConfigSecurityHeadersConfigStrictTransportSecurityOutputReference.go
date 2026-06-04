@@ -73,7 +73,9 @@ type CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigSecurityHeadersCo
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAccessControlMaxAgeSec()
 	ResetIncludeSubdomains()
+	ResetOverride()
 	ResetPreload()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -553,10 +555,26 @@ func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigSec
 	return returns
 }
 
+func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigSecurityHeadersConfigStrictTransportSecurityOutputReference) ResetAccessControlMaxAgeSec() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAccessControlMaxAgeSec",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigSecurityHeadersConfigStrictTransportSecurityOutputReference) ResetIncludeSubdomains() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetIncludeSubdomains",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigSecurityHeadersConfigStrictTransportSecurityOutputReference) ResetOverride() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetOverride",
 		nil, // no parameters
 	)
 }

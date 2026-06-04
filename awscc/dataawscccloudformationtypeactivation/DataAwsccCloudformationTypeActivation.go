@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccloudformationtypeactivation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudformation_type_activation awscc_cloudformation_type_activation}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudformation_type_activation awscc_cloudformation_type_activation}.
 type DataAwsccCloudformationTypeActivation interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -93,6 +93,10 @@ type DataAwsccCloudformationTypeActivation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -378,7 +382,7 @@ func (j *jsiiProxy_DataAwsccCloudformationTypeActivation) VersionBump() *string 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudformation_type_activation awscc_cloudformation_type_activation} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudformation_type_activation awscc_cloudformation_type_activation} Data Source.
 func NewDataAwsccCloudformationTypeActivation(scope constructs.Construct, id *string, config *DataAwsccCloudformationTypeActivationConfig) DataAwsccCloudformationTypeActivation {
 	_init_.Initialize()
 
@@ -396,7 +400,7 @@ func NewDataAwsccCloudformationTypeActivation(scope constructs.Construct, id *st
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudformation_type_activation awscc_cloudformation_type_activation} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudformation_type_activation awscc_cloudformation_type_activation} Data Source.
 func NewDataAwsccCloudformationTypeActivation_Override(d DataAwsccCloudformationTypeActivation, scope constructs.Construct, id *string, config *DataAwsccCloudformationTypeActivationConfig) {
 	_init_.Initialize()
 
@@ -763,6 +767,32 @@ func (d *jsiiProxy_DataAwsccCloudformationTypeActivation) SynthesizeAttributes()
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudformationTypeActivation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudformationTypeActivation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

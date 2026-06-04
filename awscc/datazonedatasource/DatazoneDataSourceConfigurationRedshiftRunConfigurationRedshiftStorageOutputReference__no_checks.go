@@ -64,7 +64,7 @@ func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshi
 	return nil
 }
 
-func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorageOutputReference) validateSetInternalValueParameters(val *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorage) error {
+func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorageOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

@@ -1,0 +1,6 @@
+package dataawsccodbcloudexadatainfrastructure
+
+
+type DataAwsccOdbCloudExadataInfrastructureCustomerContactsToSendToOci struct {
+}
+

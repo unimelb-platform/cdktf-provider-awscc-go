@@ -76,6 +76,10 @@ func (j *jsiiProxy_Route53ResolverResolverRuleTargetIpsOutputReference) validate
 	return nil
 }
 
+func (j *jsiiProxy_Route53ResolverResolverRuleTargetIpsOutputReference) validateSetServerNameIndicationParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Route53ResolverResolverRuleTargetIpsOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

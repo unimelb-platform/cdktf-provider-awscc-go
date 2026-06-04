@@ -56,7 +56,7 @@ func (j *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationDynamicParameters
 	return nil
 }
 
-func (j *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersValueOutputReference) validateSetInternalValueParameters(val *SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersValue) error {
+func (j *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersValueOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

@@ -39,9 +39,9 @@ type KafkaconnectConnectorCapacityAutoScalingOutputReference interface {
 	SetMinWorkerCount(val *float64)
 	MinWorkerCountInput() *float64
 	ScaleInPolicy() KafkaconnectConnectorCapacityAutoScalingScaleInPolicyOutputReference
-	ScaleInPolicyInput() *KafkaconnectConnectorCapacityAutoScalingScaleInPolicy
+	ScaleInPolicyInput() interface{}
 	ScaleOutPolicy() KafkaconnectConnectorCapacityAutoScalingScaleOutPolicyOutputReference
-	ScaleOutPolicyInput() *KafkaconnectConnectorCapacityAutoScalingScaleOutPolicy
+	ScaleOutPolicyInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -76,6 +76,11 @@ type KafkaconnectConnectorCapacityAutoScalingOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutScaleInPolicy(value *KafkaconnectConnectorCapacityAutoScalingScaleInPolicy)
 	PutScaleOutPolicy(value *KafkaconnectConnectorCapacityAutoScalingScaleOutPolicy)
+	ResetMaxWorkerCount()
+	ResetMcuCount()
+	ResetMinWorkerCount()
+	ResetScaleInPolicy()
+	ResetScaleOutPolicy()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -211,8 +216,8 @@ func (j *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingOutputReference) Scal
 	return returns
 }
 
-func (j *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingOutputReference) ScaleInPolicyInput() *KafkaconnectConnectorCapacityAutoScalingScaleInPolicy {
-	var returns *KafkaconnectConnectorCapacityAutoScalingScaleInPolicy
+func (j *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingOutputReference) ScaleInPolicyInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"scaleInPolicyInput",
@@ -231,8 +236,8 @@ func (j *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingOutputReference) Scal
 	return returns
 }
 
-func (j *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingOutputReference) ScaleOutPolicyInput() *KafkaconnectConnectorCapacityAutoScalingScaleOutPolicy {
-	var returns *KafkaconnectConnectorCapacityAutoScalingScaleOutPolicy
+func (j *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingOutputReference) ScaleOutPolicyInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"scaleOutPolicyInput",
@@ -582,6 +587,46 @@ func (k *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingOutputReference) PutS
 		k,
 		"putScaleOutPolicy",
 		[]interface{}{value},
+	)
+}
+
+func (k *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingOutputReference) ResetMaxWorkerCount() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetMaxWorkerCount",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingOutputReference) ResetMcuCount() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetMcuCount",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingOutputReference) ResetMinWorkerCount() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetMinWorkerCount",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingOutputReference) ResetScaleInPolicy() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetScaleInPolicy",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingOutputReference) ResetScaleOutPolicy() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetScaleOutPolicy",
+		nil, // no parameters
 	)
 }
 

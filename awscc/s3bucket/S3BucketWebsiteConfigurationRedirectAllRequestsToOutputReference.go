@@ -67,6 +67,7 @@ type S3BucketWebsiteConfigurationRedirectAllRequestsToOutputReference interface 
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetHostName()
 	ResetProtocol()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (s *jsiiProxy_S3BucketWebsiteConfigurationRedirectAllRequestsToOutputRefere
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_S3BucketWebsiteConfigurationRedirectAllRequestsToOutputReference) ResetHostName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetHostName",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_S3BucketWebsiteConfigurationRedirectAllRequestsToOutputReference) ResetProtocol() {

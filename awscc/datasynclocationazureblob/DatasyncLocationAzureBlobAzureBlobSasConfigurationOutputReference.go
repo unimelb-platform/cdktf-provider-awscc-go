@@ -64,6 +64,7 @@ type DatasyncLocationAzureBlobAzureBlobSasConfigurationOutputReference interface
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAzureBlobSasToken()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (d *jsiiProxy_DatasyncLocationAzureBlobAzureBlobSasConfigurationOutputRefer
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatasyncLocationAzureBlobAzureBlobSasConfigurationOutputReference) ResetAzureBlobSasToken() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetAzureBlobSasToken",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatasyncLocationAzureBlobAzureBlobSasConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

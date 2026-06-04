@@ -64,6 +64,7 @@ type AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDyn
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetApiToken()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfile
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDynatraceOutputReference) ResetApiToken() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetApiToken",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDynatraceOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

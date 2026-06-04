@@ -68,6 +68,7 @@ type EcsServicePlacementConstraintsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetExpression()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (e *jsiiProxy_EcsServicePlacementConstraintsOutputReference) ResetExpressio
 	_jsii_.InvokeVoid(
 		e,
 		"resetExpression",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcsServicePlacementConstraintsOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetType",
 		nil, // no parameters
 	)
 }

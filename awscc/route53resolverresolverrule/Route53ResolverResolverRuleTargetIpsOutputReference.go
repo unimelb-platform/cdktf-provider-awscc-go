@@ -41,6 +41,9 @@ type Route53ResolverResolverRuleTargetIpsOutputReference interface {
 	Protocol() *string
 	SetProtocol(val *string)
 	ProtocolInput() *string
+	ServerNameIndication() *string
+	SetServerNameIndication(val *string)
+	ServerNameIndicationInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -77,6 +80,7 @@ type Route53ResolverResolverRuleTargetIpsOutputReference interface {
 	ResetIpv6()
 	ResetPort()
 	ResetProtocol()
+	ResetServerNameIndication()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -222,6 +226,26 @@ func (j *jsiiProxy_Route53ResolverResolverRuleTargetIpsOutputReference) Protocol
 	return returns
 }
 
+func (j *jsiiProxy_Route53ResolverResolverRuleTargetIpsOutputReference) ServerNameIndication() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"serverNameIndication",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Route53ResolverResolverRuleTargetIpsOutputReference) ServerNameIndicationInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"serverNameIndicationInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Route53ResolverResolverRuleTargetIpsOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -343,6 +367,17 @@ func (j *jsiiProxy_Route53ResolverResolverRuleTargetIpsOutputReference)SetProtoc
 	_jsii_.Set(
 		j,
 		"protocol",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Route53ResolverResolverRuleTargetIpsOutputReference)SetServerNameIndication(val *string) {
+	if err := j.validateSetServerNameIndicationParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"serverNameIndication",
 		val,
 	)
 }
@@ -583,6 +618,14 @@ func (r *jsiiProxy_Route53ResolverResolverRuleTargetIpsOutputReference) ResetPro
 	_jsii_.InvokeVoid(
 		r,
 		"resetProtocol",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Route53ResolverResolverRuleTargetIpsOutputReference) ResetServerNameIndication() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetServerNameIndication",
 		nil, // no parameters
 	)
 }

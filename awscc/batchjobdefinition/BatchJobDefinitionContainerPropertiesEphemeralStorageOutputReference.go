@@ -64,6 +64,7 @@ type BatchJobDefinitionContainerPropertiesEphemeralStorageOutputReference interf
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetSizeInGiB()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesEphemeralStorageOutputRe
 	)
 
 	return returns
+}
+
+func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesEphemeralStorageOutputReference) ResetSizeInGiB() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetSizeInGiB",
+		nil, // no parameters
+	)
 }
 
 func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesEphemeralStorageOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2egressonlyinternetgateway/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_egress_only_internet_gateway awscc_ec2_egress_only_internet_gateway}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_egress_only_internet_gateway awscc_ec2_egress_only_internet_gateway}.
 type Ec2EgressOnlyInternetGateway interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -28,6 +28,7 @@ type Ec2EgressOnlyInternetGateway interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	EgressOnlyInternetGatewayId() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -53,6 +54,8 @@ type Ec2EgressOnlyInternetGateway interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	Tags() Ec2EgressOnlyInternetGatewayTagsList
+	TagsInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -86,19 +89,34 @@ type Ec2EgressOnlyInternetGateway interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTags(value interface{})
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -158,6 +176,16 @@ func (j *jsiiProxy_Ec2EgressOnlyInternetGateway) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2EgressOnlyInternetGateway) EgressOnlyInternetGatewayId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"egressOnlyInternetGatewayId",
 		&returns,
 	)
 	return returns
@@ -253,6 +281,26 @@ func (j *jsiiProxy_Ec2EgressOnlyInternetGateway) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2EgressOnlyInternetGateway) Tags() Ec2EgressOnlyInternetGatewayTagsList {
+	var returns Ec2EgressOnlyInternetGatewayTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2EgressOnlyInternetGateway) TagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2EgressOnlyInternetGateway) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -304,7 +352,7 @@ func (j *jsiiProxy_Ec2EgressOnlyInternetGateway) VpcIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_egress_only_internet_gateway awscc_ec2_egress_only_internet_gateway} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_egress_only_internet_gateway awscc_ec2_egress_only_internet_gateway} Resource.
 func NewEc2EgressOnlyInternetGateway(scope constructs.Construct, id *string, config *Ec2EgressOnlyInternetGatewayConfig) Ec2EgressOnlyInternetGateway {
 	_init_.Initialize()
 
@@ -322,7 +370,7 @@ func NewEc2EgressOnlyInternetGateway(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_egress_only_internet_gateway awscc_ec2_egress_only_internet_gateway} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_egress_only_internet_gateway awscc_ec2_egress_only_internet_gateway} Resource.
 func NewEc2EgressOnlyInternetGateway_Override(e Ec2EgressOnlyInternetGateway, scope constructs.Construct, id *string, config *Ec2EgressOnlyInternetGatewayConfig) {
 	_init_.Initialize()
 
@@ -681,6 +729,19 @@ func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) GetStringMapAttribute(terraform
 	return returns
 }
 
+func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -708,6 +769,17 @@ func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) InterpolationForAttribute(terra
 	return returns
 }
 
+func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -716,6 +788,17 @@ func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) MoveTo(moveTarget *string, inde
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -730,10 +813,29 @@ func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) OverrideLogicalId(newLogicalId 
 	)
 }
 
+func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) PutTags(value interface{}) {
+	if err := e.validatePutTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putTags",
+		[]interface{}{value},
+	)
+}
+
 func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) ResetTags() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetTags",
 		nil, // no parameters
 	)
 }
@@ -744,6 +846,32 @@ func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

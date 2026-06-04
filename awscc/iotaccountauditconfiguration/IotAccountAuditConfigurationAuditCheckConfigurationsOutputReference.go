@@ -33,6 +33,8 @@ type IotAccountAuditConfigurationAuditCheckConfigurationsOutputReference interfa
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	DeviceCertificateAgeCheck() IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateAgeCheckOutputReference
+	DeviceCertificateAgeCheckInput() interface{}
 	DeviceCertificateExpiringCheck() IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiringCheckOutputReference
 	DeviceCertificateExpiringCheckInput() interface{}
 	DeviceCertificateKeyQualityCheck() IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateKeyQualityCheckOutputReference
@@ -97,6 +99,7 @@ type IotAccountAuditConfigurationAuditCheckConfigurationsOutputReference interfa
 	PutCaCertificateExpiringCheck(value *IotAccountAuditConfigurationAuditCheckConfigurationsCaCertificateExpiringCheck)
 	PutCaCertificateKeyQualityCheck(value *IotAccountAuditConfigurationAuditCheckConfigurationsCaCertificateKeyQualityCheck)
 	PutConflictingClientIdsCheck(value *IotAccountAuditConfigurationAuditCheckConfigurationsConflictingClientIdsCheck)
+	PutDeviceCertificateAgeCheck(value *IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateAgeCheck)
 	PutDeviceCertificateExpiringCheck(value *IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiringCheck)
 	PutDeviceCertificateKeyQualityCheck(value *IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateKeyQualityCheck)
 	PutDeviceCertificateSharedCheck(value *IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateSharedCheck)
@@ -113,6 +116,7 @@ type IotAccountAuditConfigurationAuditCheckConfigurationsOutputReference interfa
 	ResetCaCertificateExpiringCheck()
 	ResetCaCertificateKeyQualityCheck()
 	ResetConflictingClientIdsCheck()
+	ResetDeviceCertificateAgeCheck()
 	ResetDeviceCertificateExpiringCheck()
 	ResetDeviceCertificateKeyQualityCheck()
 	ResetDeviceCertificateSharedCheck()
@@ -245,6 +249,26 @@ func (j *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsOutputRef
 	_jsii_.Get(
 		j,
 		"creationStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsOutputReference) DeviceCertificateAgeCheck() IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateAgeCheckOutputReference {
+	var returns IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateAgeCheckOutputReference
+	_jsii_.Get(
+		j,
+		"deviceCertificateAgeCheck",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsOutputReference) DeviceCertificateAgeCheckInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"deviceCertificateAgeCheckInput",
 		&returns,
 	)
 	return returns
@@ -843,6 +867,17 @@ func (i *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsOutputRef
 	)
 }
 
+func (i *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsOutputReference) PutDeviceCertificateAgeCheck(value *IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateAgeCheck) {
+	if err := i.validatePutDeviceCertificateAgeCheckParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putDeviceCertificateAgeCheck",
+		[]interface{}{value},
+	)
+}
+
 func (i *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsOutputReference) PutDeviceCertificateExpiringCheck(value *IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiringCheck) {
 	if err := i.validatePutDeviceCertificateExpiringCheckParameters(value); err != nil {
 		panic(err)
@@ -1003,6 +1038,14 @@ func (i *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsOutputRef
 	_jsii_.InvokeVoid(
 		i,
 		"resetConflictingClientIdsCheck",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsOutputReference) ResetDeviceCertificateAgeCheck() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetDeviceCertificateAgeCheck",
 		nil, // no parameters
 	)
 }

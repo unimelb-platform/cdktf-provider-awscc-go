@@ -27,8 +27,8 @@ type MskClusterOpenMonitoringPrometheusOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *MskClusterOpenMonitoringPrometheus
-	SetInternalValue(val *MskClusterOpenMonitoringPrometheus)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	JmxExporter() MskClusterOpenMonitoringPrometheusJmxExporterOutputReference
 	JmxExporterInput() interface{}
 	NodeExporter() MskClusterOpenMonitoringPrometheusNodeExporterOutputReference
@@ -124,8 +124,8 @@ func (j *jsiiProxy_MskClusterOpenMonitoringPrometheusOutputReference) Fqn() *str
 	return returns
 }
 
-func (j *jsiiProxy_MskClusterOpenMonitoringPrometheusOutputReference) InternalValue() *MskClusterOpenMonitoringPrometheus {
-	var returns *MskClusterOpenMonitoringPrometheus
+func (j *jsiiProxy_MskClusterOpenMonitoringPrometheusOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -244,7 +244,7 @@ func (j *jsiiProxy_MskClusterOpenMonitoringPrometheusOutputReference)SetComplexO
 	)
 }
 
-func (j *jsiiProxy_MskClusterOpenMonitoringPrometheusOutputReference)SetInternalValue(val *MskClusterOpenMonitoringPrometheus) {
+func (j *jsiiProxy_MskClusterOpenMonitoringPrometheusOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

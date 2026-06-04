@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2dhcpoptionsplural/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_dhcp_options_plural awscc_ec2_dhcp_options_plural}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_dhcp_options_plural awscc_ec2_dhcp_options_plural}.
 type DataAwsccEc2DhcpOptionsPlural interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccEc2DhcpOptionsPlural interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccEc2DhcpOptionsPlural) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_dhcp_options_plural awscc_ec2_dhcp_options_plural} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_dhcp_options_plural awscc_ec2_dhcp_options_plural} Data Source.
 func NewDataAwsccEc2DhcpOptionsPlural(scope constructs.Construct, id *string, config *DataAwsccEc2DhcpOptionsPluralConfig) DataAwsccEc2DhcpOptionsPlural {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccEc2DhcpOptionsPlural(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_dhcp_options_plural awscc_ec2_dhcp_options_plural} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_dhcp_options_plural awscc_ec2_dhcp_options_plural} Data Source.
 func NewDataAwsccEc2DhcpOptionsPlural_Override(d DataAwsccEc2DhcpOptionsPlural, scope constructs.Construct, id *string, config *DataAwsccEc2DhcpOptionsPluralConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccEc2DhcpOptionsPlural) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2DhcpOptionsPlural) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2DhcpOptionsPlural) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -31,6 +31,7 @@ type DataAwsccSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsOutputRe
 	Fqn() *string
 	InternalValue() *DataAwsccSagemakerDomainDefaultUserSettingsKernelGatewayAppSettings
 	SetInternalValue(val *DataAwsccSagemakerDomainDefaultUserSettingsKernelGatewayAppSettings)
+	LifecycleConfigArns() *[]*string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -143,6 +144,16 @@ func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultUserSettingsKernelGatewayAppSe
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultUserSettingsKernelGatewayAppSettingsOutputReference) LifecycleConfigArns() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"lifecycleConfigArns",
 		&returns,
 	)
 	return returns

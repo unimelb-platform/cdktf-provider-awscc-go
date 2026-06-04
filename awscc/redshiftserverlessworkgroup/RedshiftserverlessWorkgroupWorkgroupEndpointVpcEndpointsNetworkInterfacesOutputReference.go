@@ -11,6 +11,8 @@ import (
 type RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference interface {
 	cdktf.ComplexObject
 	AvailabilityZone() *string
+	SetAvailabilityZone(val *string)
+	AvailabilityZoneInput() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -28,11 +30,17 @@ type RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOu
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfaces
-	SetInternalValue(val *RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfaces)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	NetworkInterfaceId() *string
+	SetNetworkInterfaceId(val *string)
+	NetworkInterfaceIdInput() *string
 	PrivateIpAddress() *string
+	SetPrivateIpAddress(val *string)
+	PrivateIpAddressInput() *string
 	SubnetId() *string
+	SetSubnetId(val *string)
+	SubnetIdInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -65,6 +73,10 @@ type RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOu
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAvailabilityZone()
+	ResetNetworkInterfaceId()
+	ResetPrivateIpAddress()
+	ResetSubnetId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -85,6 +97,16 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetwo
 	_jsii_.Get(
 		j,
 		"availabilityZone",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference) AvailabilityZoneInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"availabilityZoneInput",
 		&returns,
 	)
 	return returns
@@ -130,8 +152,8 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetwo
 	return returns
 }
 
-func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference) InternalValue() *RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfaces {
-	var returns *RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfaces
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -150,6 +172,16 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetwo
 	return returns
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference) NetworkInterfaceIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"networkInterfaceIdInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference) PrivateIpAddress() *string {
 	var returns *string
 	_jsii_.Get(
@@ -160,11 +192,31 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetwo
 	return returns
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference) PrivateIpAddressInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"privateIpAddressInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference) SubnetId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"subnetId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference) SubnetIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"subnetIdInput",
 		&returns,
 	)
 	return returns
@@ -218,6 +270,17 @@ func NewRedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterface
 	)
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference)SetAvailabilityZone(val *string) {
+	if err := j.validateSetAvailabilityZoneParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"availabilityZone",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference)SetComplexObjectIndex(val interface{}) {
 	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
 		panic(err)
@@ -240,13 +303,46 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetwo
 	)
 }
 
-func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference)SetInternalValue(val *RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfaces) {
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference)SetNetworkInterfaceId(val *string) {
+	if err := j.validateSetNetworkInterfaceIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"networkInterfaceId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference)SetPrivateIpAddress(val *string) {
+	if err := j.validateSetPrivateIpAddressParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"privateIpAddress",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference)SetSubnetId(val *string) {
+	if err := j.validateSetSubnetIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"subnetId",
 		val,
 	)
 }
@@ -457,6 +553,38 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetwo
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference) ResetAvailabilityZone() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetAvailabilityZone",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference) ResetNetworkInterfaceId() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetNetworkInterfaceId",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference) ResetPrivateIpAddress() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetPrivateIpAddress",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference) ResetSubnetId() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetSubnetId",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

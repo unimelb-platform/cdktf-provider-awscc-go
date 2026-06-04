@@ -64,6 +64,7 @@ type LambdaEventInvokeConfigDestinationConfigOnFailureOutputReference interface 
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDestination()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (l *jsiiProxy_LambdaEventInvokeConfigDestinationConfigOnFailureOutputRefere
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LambdaEventInvokeConfigDestinationConfigOnFailureOutputReference) ResetDestination() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetDestination",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LambdaEventInvokeConfigDestinationConfigOnFailureOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

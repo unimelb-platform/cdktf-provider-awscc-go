@@ -70,6 +70,9 @@ type SesConfigurationSetEventDestinationEventDestinationCloudwatchDestinationDim
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDefaultDimensionValue()
+	ResetDimensionName()
+	ResetDimensionValueSource()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (s *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationCloudwatch
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationCloudwatchDestinationDimensionConfigurationsOutputReference) ResetDefaultDimensionValue() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDefaultDimensionValue",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationCloudwatchDestinationDimensionConfigurationsOutputReference) ResetDimensionName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDimensionName",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationCloudwatchDestinationDimensionConfigurationsOutputReference) ResetDimensionValueSource() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDimensionValueSource",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationCloudwatchDestinationDimensionConfigurationsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

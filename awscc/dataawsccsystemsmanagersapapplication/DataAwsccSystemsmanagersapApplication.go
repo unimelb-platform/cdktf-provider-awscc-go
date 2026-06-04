@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccsystemsmanagersapapplication/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/systemsmanagersap_application awscc_systemsmanagersap_application}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/systemsmanagersap_application awscc_systemsmanagersap_application}.
 type DataAwsccSystemsmanagersapApplication interface {
 	cdktf.TerraformDataSource
 	ApplicationId() *string
@@ -17,6 +17,7 @@ type DataAwsccSystemsmanagersapApplication interface {
 	Arn() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	ComponentsInfo() DataAwsccSystemsmanagersapApplicationComponentsInfoList
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -24,6 +25,7 @@ type DataAwsccSystemsmanagersapApplication interface {
 	// Experimental.
 	SetCount(val interface{})
 	Credentials() DataAwsccSystemsmanagersapApplicationCredentialsList
+	DatabaseArn() *string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -90,6 +92,10 @@ type DataAwsccSystemsmanagersapApplication interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -144,6 +150,16 @@ func (j *jsiiProxy_DataAwsccSystemsmanagersapApplication) CdktfStack() cdktf.Ter
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccSystemsmanagersapApplication) ComponentsInfo() DataAwsccSystemsmanagersapApplicationComponentsInfoList {
+	var returns DataAwsccSystemsmanagersapApplicationComponentsInfoList
+	_jsii_.Get(
+		j,
+		"componentsInfo",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccSystemsmanagersapApplication) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -169,6 +185,16 @@ func (j *jsiiProxy_DataAwsccSystemsmanagersapApplication) Credentials() DataAwsc
 	_jsii_.Get(
 		j,
 		"credentials",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSystemsmanagersapApplication) DatabaseArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseArn",
 		&returns,
 	)
 	return returns
@@ -345,7 +371,7 @@ func (j *jsiiProxy_DataAwsccSystemsmanagersapApplication) TerraformResourceType(
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/systemsmanagersap_application awscc_systemsmanagersap_application} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/systemsmanagersap_application awscc_systemsmanagersap_application} Data Source.
 func NewDataAwsccSystemsmanagersapApplication(scope constructs.Construct, id *string, config *DataAwsccSystemsmanagersapApplicationConfig) DataAwsccSystemsmanagersapApplication {
 	_init_.Initialize()
 
@@ -363,7 +389,7 @@ func NewDataAwsccSystemsmanagersapApplication(scope constructs.Construct, id *st
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/systemsmanagersap_application awscc_systemsmanagersap_application} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/systemsmanagersap_application awscc_systemsmanagersap_application} Data Source.
 func NewDataAwsccSystemsmanagersapApplication_Override(d DataAwsccSystemsmanagersapApplication, scope constructs.Construct, id *string, config *DataAwsccSystemsmanagersapApplicationConfig) {
 	_init_.Initialize()
 
@@ -730,6 +756,32 @@ func (d *jsiiProxy_DataAwsccSystemsmanagersapApplication) SynthesizeAttributes()
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSystemsmanagersapApplication) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSystemsmanagersapApplication) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

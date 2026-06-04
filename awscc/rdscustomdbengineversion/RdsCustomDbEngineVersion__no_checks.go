@@ -56,7 +56,15 @@ func (r *jsiiProxy_RdsCustomDbEngineVersion) validateInterpolationForAttributePa
 	return nil
 }
 
+func (r *jsiiProxy_RdsCustomDbEngineVersion) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RdsCustomDbEngineVersion) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (r *jsiiProxy_RdsCustomDbEngineVersion) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -112,6 +120,10 @@ func (j *jsiiProxy_RdsCustomDbEngineVersion) validateSetEngineVersionParameters(
 	return nil
 }
 
+func (j *jsiiProxy_RdsCustomDbEngineVersion) validateSetImageIdParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_RdsCustomDbEngineVersion) validateSetKmsKeyIdParameters(val *string) error {
 	return nil
 }
@@ -128,7 +140,15 @@ func (j *jsiiProxy_RdsCustomDbEngineVersion) validateSetProvisionersParameters(v
 	return nil
 }
 
+func (j *jsiiProxy_RdsCustomDbEngineVersion) validateSetSourceCustomDbEngineVersionIdentifierParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_RdsCustomDbEngineVersion) validateSetStatusParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_RdsCustomDbEngineVersion) validateSetUseAwsProvidedLatestImageParameters(val interface{}) error {
 	return nil
 }
 

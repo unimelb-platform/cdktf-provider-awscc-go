@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/eksaddon/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/eks_addon awscc_eks_addon}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/eks_addon awscc_eks_addon}.
 type EksAddon interface {
 	cdktf.TerraformResource
 	AddonName() *string
@@ -56,6 +56,8 @@ type EksAddon interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	PodIdentityAssociations() EksAddonPodIdentityAssociationsList
+	PodIdentityAssociationsInput() interface{}
 	PreserveOnDelete() interface{}
 	SetPreserveOnDelete(val interface{})
 	PreserveOnDeleteInput() interface{}
@@ -107,26 +109,41 @@ type EksAddon interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutPodIdentityAssociations(value interface{})
 	PutTags(value interface{})
 	ResetAddonVersion()
 	ResetConfigurationValues()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetPodIdentityAssociations()
 	ResetPreserveOnDelete()
 	ResetResolveConflicts()
 	ResetServiceAccountRoleArn()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -341,6 +358,26 @@ func (j *jsiiProxy_EksAddon) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_EksAddon) PodIdentityAssociations() EksAddonPodIdentityAssociationsList {
+	var returns EksAddonPodIdentityAssociationsList
+	_jsii_.Get(
+		j,
+		"podIdentityAssociations",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EksAddon) PodIdentityAssociationsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"podIdentityAssociationsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_EksAddon) PreserveOnDelete() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -482,7 +519,7 @@ func (j *jsiiProxy_EksAddon) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/eks_addon awscc_eks_addon} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/eks_addon awscc_eks_addon} Resource.
 func NewEksAddon(scope constructs.Construct, id *string, config *EksAddonConfig) EksAddon {
 	_init_.Initialize()
 
@@ -500,7 +537,7 @@ func NewEksAddon(scope constructs.Construct, id *string, config *EksAddonConfig)
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/eks_addon awscc_eks_addon} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/eks_addon awscc_eks_addon} Resource.
 func NewEksAddon_Override(e EksAddon, scope constructs.Construct, id *string, config *EksAddonConfig) {
 	_init_.Initialize()
 
@@ -925,6 +962,19 @@ func (e *jsiiProxy_EksAddon) GetStringMapAttribute(terraformAttribute *string) *
 	return returns
 }
 
+func (e *jsiiProxy_EksAddon) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_EksAddon) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -952,6 +1002,17 @@ func (e *jsiiProxy_EksAddon) InterpolationForAttribute(terraformAttribute *strin
 	return returns
 }
 
+func (e *jsiiProxy_EksAddon) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_EksAddon) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -963,6 +1024,17 @@ func (e *jsiiProxy_EksAddon) MoveTo(moveTarget *string, index interface{}) {
 	)
 }
 
+func (e *jsiiProxy_EksAddon) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_EksAddon) OverrideLogicalId(newLogicalId *string) {
 	if err := e.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -971,6 +1043,17 @@ func (e *jsiiProxy_EksAddon) OverrideLogicalId(newLogicalId *string) {
 		e,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (e *jsiiProxy_EksAddon) PutPodIdentityAssociations(value interface{}) {
+	if err := e.validatePutPodIdentityAssociationsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putPodIdentityAssociations",
+		[]interface{}{value},
 	)
 }
 
@@ -1005,6 +1088,14 @@ func (e *jsiiProxy_EksAddon) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EksAddon) ResetPodIdentityAssociations() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetPodIdentityAssociations",
 		nil, // no parameters
 	)
 }
@@ -1047,6 +1138,32 @@ func (e *jsiiProxy_EksAddon) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_EksAddon) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_EksAddon) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

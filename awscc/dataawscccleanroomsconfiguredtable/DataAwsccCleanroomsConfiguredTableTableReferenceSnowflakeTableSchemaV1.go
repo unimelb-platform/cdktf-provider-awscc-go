@@ -1,0 +1,6 @@
+package dataawscccleanroomsconfiguredtable
+
+
+type DataAwsccCleanroomsConfiguredTableTableReferenceSnowflakeTableSchemaV1 struct {
+}
+

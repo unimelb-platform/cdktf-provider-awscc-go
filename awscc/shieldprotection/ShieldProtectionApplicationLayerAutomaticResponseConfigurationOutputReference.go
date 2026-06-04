@@ -11,7 +11,7 @@ import (
 type ShieldProtectionApplicationLayerAutomaticResponseConfigurationOutputReference interface {
 	cdktf.ComplexObject
 	Action() ShieldProtectionApplicationLayerAutomaticResponseConfigurationActionOutputReference
-	ActionInput() *ShieldProtectionApplicationLayerAutomaticResponseConfigurationAction
+	ActionInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -67,6 +67,8 @@ type ShieldProtectionApplicationLayerAutomaticResponseConfigurationOutputReferen
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAction(value *ShieldProtectionApplicationLayerAutomaticResponseConfigurationAction)
+	ResetAction()
+	ResetStatus()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -92,8 +94,8 @@ func (j *jsiiProxy_ShieldProtectionApplicationLayerAutomaticResponseConfiguratio
 	return returns
 }
 
-func (j *jsiiProxy_ShieldProtectionApplicationLayerAutomaticResponseConfigurationOutputReference) ActionInput() *ShieldProtectionApplicationLayerAutomaticResponseConfigurationAction {
-	var returns *ShieldProtectionApplicationLayerAutomaticResponseConfigurationAction
+func (j *jsiiProxy_ShieldProtectionApplicationLayerAutomaticResponseConfigurationOutputReference) ActionInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"actionInput",
@@ -480,6 +482,22 @@ func (s *jsiiProxy_ShieldProtectionApplicationLayerAutomaticResponseConfiguratio
 		s,
 		"putAction",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_ShieldProtectionApplicationLayerAutomaticResponseConfigurationOutputReference) ResetAction() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetAction",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_ShieldProtectionApplicationLayerAutomaticResponseConfigurationOutputReference) ResetStatus() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStatus",
+		nil, // no parameters
 	)
 }
 

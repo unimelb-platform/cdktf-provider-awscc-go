@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccguarddutydetector/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/guardduty_detector awscc_guardduty_detector}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/guardduty_detector awscc_guardduty_detector}.
 type DataAwsccGuarddutyDetector interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -25,6 +25,7 @@ type DataAwsccGuarddutyDetector interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DetectorId() *string
 	Enable() cdktf.IResolvable
 	Features() DataAwsccGuarddutyDetectorFeaturesList
 	FindingPublishingFrequency() *string
@@ -87,6 +88,10 @@ type DataAwsccGuarddutyDetector interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -146,6 +151,16 @@ func (j *jsiiProxy_DataAwsccGuarddutyDetector) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccGuarddutyDetector) DetectorId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"detectorId",
 		&returns,
 	)
 	return returns
@@ -312,7 +327,7 @@ func (j *jsiiProxy_DataAwsccGuarddutyDetector) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/guardduty_detector awscc_guardduty_detector} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/guardduty_detector awscc_guardduty_detector} Data Source.
 func NewDataAwsccGuarddutyDetector(scope constructs.Construct, id *string, config *DataAwsccGuarddutyDetectorConfig) DataAwsccGuarddutyDetector {
 	_init_.Initialize()
 
@@ -330,7 +345,7 @@ func NewDataAwsccGuarddutyDetector(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/guardduty_detector awscc_guardduty_detector} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/guardduty_detector awscc_guardduty_detector} Data Source.
 func NewDataAwsccGuarddutyDetector_Override(d DataAwsccGuarddutyDetector, scope constructs.Construct, id *string, config *DataAwsccGuarddutyDetectorConfig) {
 	_init_.Initialize()
 
@@ -697,6 +712,32 @@ func (d *jsiiProxy_DataAwsccGuarddutyDetector) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGuarddutyDetector) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGuarddutyDetector) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

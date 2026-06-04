@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/apigatewayv2domainname/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/apigatewayv2_domain_name awscc_apigatewayv2_domain_name}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/apigatewayv2_domain_name awscc_apigatewayv2_domain_name}.
 type Apigatewayv2DomainName interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -30,6 +30,7 @@ type Apigatewayv2DomainName interface {
 	SetDependsOn(val *[]*string)
 	DomainName() *string
 	SetDomainName(val *string)
+	DomainNameArn() *string
 	DomainNameConfigurations() Apigatewayv2DomainNameDomainNameConfigurationsList
 	DomainNameConfigurationsInput() interface{}
 	DomainNameInput() *string
@@ -62,6 +63,9 @@ type Apigatewayv2DomainName interface {
 	RawOverrides() interface{}
 	RegionalDomainName() *string
 	RegionalHostedZoneId() *string
+	RoutingMode() *string
+	SetRoutingMode(val *string)
+	RoutingModeInput() *string
 	Tags() *map[string]*string
 	SetTags(val *map[string]*string)
 	TagsInput() *map[string]*string
@@ -95,12 +99,22 @@ type Apigatewayv2DomainName interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -111,8 +125,12 @@ type Apigatewayv2DomainName interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetRoutingMode()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -182,6 +200,16 @@ func (j *jsiiProxy_Apigatewayv2DomainName) DomainName() *string {
 	_jsii_.Get(
 		j,
 		"domainName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Apigatewayv2DomainName) DomainNameArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"domainNameArn",
 		&returns,
 	)
 	return returns
@@ -347,6 +375,26 @@ func (j *jsiiProxy_Apigatewayv2DomainName) RegionalHostedZoneId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Apigatewayv2DomainName) RoutingMode() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"routingMode",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Apigatewayv2DomainName) RoutingModeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"routingModeInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Apigatewayv2DomainName) Tags() *map[string]*string {
 	var returns *map[string]*string
 	_jsii_.Get(
@@ -398,7 +446,7 @@ func (j *jsiiProxy_Apigatewayv2DomainName) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/apigatewayv2_domain_name awscc_apigatewayv2_domain_name} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/apigatewayv2_domain_name awscc_apigatewayv2_domain_name} Resource.
 func NewApigatewayv2DomainName(scope constructs.Construct, id *string, config *Apigatewayv2DomainNameConfig) Apigatewayv2DomainName {
 	_init_.Initialize()
 
@@ -416,7 +464,7 @@ func NewApigatewayv2DomainName(scope constructs.Construct, id *string, config *A
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/apigatewayv2_domain_name awscc_apigatewayv2_domain_name} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/apigatewayv2_domain_name awscc_apigatewayv2_domain_name} Resource.
 func NewApigatewayv2DomainName_Override(a Apigatewayv2DomainName, scope constructs.Construct, id *string, config *Apigatewayv2DomainNameConfig) {
 	_init_.Initialize()
 
@@ -502,6 +550,17 @@ func (j *jsiiProxy_Apigatewayv2DomainName)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Apigatewayv2DomainName)SetRoutingMode(val *string) {
+	if err := j.validateSetRoutingModeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"routingMode",
 		val,
 	)
 }
@@ -786,6 +845,19 @@ func (a *jsiiProxy_Apigatewayv2DomainName) GetStringMapAttribute(terraformAttrib
 	return returns
 }
 
+func (a *jsiiProxy_Apigatewayv2DomainName) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (a *jsiiProxy_Apigatewayv2DomainName) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := a.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -813,6 +885,17 @@ func (a *jsiiProxy_Apigatewayv2DomainName) InterpolationForAttribute(terraformAt
 	return returns
 }
 
+func (a *jsiiProxy_Apigatewayv2DomainName) MoveFromId(id *string) {
+	if err := a.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (a *jsiiProxy_Apigatewayv2DomainName) MoveTo(moveTarget *string, index interface{}) {
 	if err := a.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -821,6 +904,17 @@ func (a *jsiiProxy_Apigatewayv2DomainName) MoveTo(moveTarget *string, index inte
 		a,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (a *jsiiProxy_Apigatewayv2DomainName) MoveToId(id *string) {
+	if err := a.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -881,6 +975,14 @@ func (a *jsiiProxy_Apigatewayv2DomainName) ResetOverrideLogicalId() {
 	)
 }
 
+func (a *jsiiProxy_Apigatewayv2DomainName) ResetRoutingMode() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetRoutingMode",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_Apigatewayv2DomainName) ResetTags() {
 	_jsii_.InvokeVoid(
 		a,
@@ -895,6 +997,32 @@ func (a *jsiiProxy_Apigatewayv2DomainName) SynthesizeAttributes() *map[string]in
 	_jsii_.Invoke(
 		a,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_Apigatewayv2DomainName) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		a,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_Apigatewayv2DomainName) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

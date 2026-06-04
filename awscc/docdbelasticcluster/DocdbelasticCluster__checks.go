@@ -119,6 +119,14 @@ func (d *jsiiProxy_DocdbelasticCluster) validateInterpolationForAttributeParamet
 	return nil
 }
 
+func (d *jsiiProxy_DocdbelasticCluster) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (d *jsiiProxy_DocdbelasticCluster) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (d *jsiiProxy_DocdbelasticCluster) validateMoveToParameters(moveTarget *str
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DocdbelasticCluster) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -276,6 +292,14 @@ func (j *jsiiProxy_DocdbelasticCluster) validateSetAdminUserPasswordParameters(v
 }
 
 func (j *jsiiProxy_DocdbelasticCluster) validateSetAuthTypeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_DocdbelasticCluster) validateSetBackupRetentionPeriodParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -397,6 +421,14 @@ func (j *jsiiProxy_DocdbelasticCluster) validateSetLifecycleParameters(val *cdkt
 	return nil
 }
 
+func (j *jsiiProxy_DocdbelasticCluster) validateSetPreferredBackupWindowParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_DocdbelasticCluster) validateSetPreferredMaintenanceWindowParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -460,6 +492,14 @@ func (j *jsiiProxy_DocdbelasticCluster) validateSetShardCapacityParameters(val *
 }
 
 func (j *jsiiProxy_DocdbelasticCluster) validateSetShardCountParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_DocdbelasticCluster) validateSetShardInstanceCountParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

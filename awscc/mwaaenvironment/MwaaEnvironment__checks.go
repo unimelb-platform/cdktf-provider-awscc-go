@@ -119,6 +119,14 @@ func (m *jsiiProxy_MwaaEnvironment) validateInterpolationForAttributeParameters(
 	return nil
 }
 
+func (m *jsiiProxy_MwaaEnvironment) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (m *jsiiProxy_MwaaEnvironment) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (m *jsiiProxy_MwaaEnvironment) validateMoveToParameters(moveTarget *string,
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (m *jsiiProxy_MwaaEnvironment) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -404,7 +420,23 @@ func (j *jsiiProxy_MwaaEnvironment) validateSetLifecycleParameters(val *cdktf.Te
 	return nil
 }
 
+func (j *jsiiProxy_MwaaEnvironment) validateSetMaxWebserversParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_MwaaEnvironment) validateSetMaxWorkersParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_MwaaEnvironment) validateSetMinWebserversParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -555,6 +587,14 @@ func (j *jsiiProxy_MwaaEnvironment) validateSetWebserverAccessModeParameters(val
 }
 
 func (j *jsiiProxy_MwaaEnvironment) validateSetWeeklyMaintenanceWindowStartParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_MwaaEnvironment) validateSetWorkerReplacementStrategyParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

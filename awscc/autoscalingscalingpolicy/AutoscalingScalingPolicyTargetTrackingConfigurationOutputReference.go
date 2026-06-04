@@ -76,6 +76,7 @@ type AutoscalingScalingPolicyTargetTrackingConfigurationOutputReference interfac
 	ResetCustomizedMetricSpecification()
 	ResetDisableScaleIn()
 	ResetPredefinedMetricSpecification()
+	ResetTargetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -574,6 +575,14 @@ func (a *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationOutputRefe
 	_jsii_.InvokeVoid(
 		a,
 		"resetPredefinedMetricSpecification",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationOutputReference) ResetTargetValue() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetTargetValue",
 		nil, // no parameters
 	)
 }

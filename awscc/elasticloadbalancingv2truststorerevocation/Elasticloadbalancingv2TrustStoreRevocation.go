@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/elasticloadbalancingv2truststorerevocation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/elasticloadbalancingv2_trust_store_revocation awscc_elasticloadbalancingv2_trust_store_revocation}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/elasticloadbalancingv2_trust_store_revocation awscc_elasticloadbalancingv2_trust_store_revocation}.
 type Elasticloadbalancingv2TrustStoreRevocation interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -90,12 +90,22 @@ type Elasticloadbalancingv2TrustStoreRevocation interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -106,6 +116,9 @@ type Elasticloadbalancingv2TrustStoreRevocation interface {
 	ResetRevocationContents()
 	ResetTrustStoreArn()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -351,7 +364,7 @@ func (j *jsiiProxy_Elasticloadbalancingv2TrustStoreRevocation) TrustStoreRevocat
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/elasticloadbalancingv2_trust_store_revocation awscc_elasticloadbalancingv2_trust_store_revocation} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/elasticloadbalancingv2_trust_store_revocation awscc_elasticloadbalancingv2_trust_store_revocation} Resource.
 func NewElasticloadbalancingv2TrustStoreRevocation(scope constructs.Construct, id *string, config *Elasticloadbalancingv2TrustStoreRevocationConfig) Elasticloadbalancingv2TrustStoreRevocation {
 	_init_.Initialize()
 
@@ -369,7 +382,7 @@ func NewElasticloadbalancingv2TrustStoreRevocation(scope constructs.Construct, i
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/elasticloadbalancingv2_trust_store_revocation awscc_elasticloadbalancingv2_trust_store_revocation} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/elasticloadbalancingv2_trust_store_revocation awscc_elasticloadbalancingv2_trust_store_revocation} Resource.
 func NewElasticloadbalancingv2TrustStoreRevocation_Override(e Elasticloadbalancingv2TrustStoreRevocation, scope constructs.Construct, id *string, config *Elasticloadbalancingv2TrustStoreRevocationConfig) {
 	_init_.Initialize()
 
@@ -728,6 +741,19 @@ func (e *jsiiProxy_Elasticloadbalancingv2TrustStoreRevocation) GetStringMapAttri
 	return returns
 }
 
+func (e *jsiiProxy_Elasticloadbalancingv2TrustStoreRevocation) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Elasticloadbalancingv2TrustStoreRevocation) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -755,6 +781,17 @@ func (e *jsiiProxy_Elasticloadbalancingv2TrustStoreRevocation) InterpolationForA
 	return returns
 }
 
+func (e *jsiiProxy_Elasticloadbalancingv2TrustStoreRevocation) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Elasticloadbalancingv2TrustStoreRevocation) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -763,6 +800,17 @@ func (e *jsiiProxy_Elasticloadbalancingv2TrustStoreRevocation) MoveTo(moveTarget
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Elasticloadbalancingv2TrustStoreRevocation) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -818,6 +866,32 @@ func (e *jsiiProxy_Elasticloadbalancingv2TrustStoreRevocation) SynthesizeAttribu
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Elasticloadbalancingv2TrustStoreRevocation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Elasticloadbalancingv2TrustStoreRevocation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

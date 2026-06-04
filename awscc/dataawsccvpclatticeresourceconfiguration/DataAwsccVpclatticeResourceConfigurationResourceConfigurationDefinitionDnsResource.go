@@ -1,0 +1,6 @@
+package dataawsccvpclatticeresourceconfiguration
+
+
+type DataAwsccVpclatticeResourceConfigurationResourceConfigurationDefinitionDnsResource struct {
+}
+

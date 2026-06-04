@@ -70,6 +70,9 @@ type Route53RecoverycontrolSafetyRuleRuleConfigOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetInverted()
+	ResetThreshold()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (r *jsiiProxy_Route53RecoverycontrolSafetyRuleRuleConfigOutputReference) In
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_Route53RecoverycontrolSafetyRuleRuleConfigOutputReference) ResetInverted() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetInverted",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Route53RecoverycontrolSafetyRuleRuleConfigOutputReference) ResetThreshold() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetThreshold",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Route53RecoverycontrolSafetyRuleRuleConfigOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetType",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_Route53RecoverycontrolSafetyRuleRuleConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

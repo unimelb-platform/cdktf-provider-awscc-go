@@ -44,6 +44,10 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointOutputReference) 
 	return nil
 }
 
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointOutputReference) validatePutVpcEndpointsParameters(value interface{}) error {
+	return nil
+}
+
 func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }
@@ -56,7 +60,7 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointOutputReference) 
 	return nil
 }
 
-func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointOutputReference) validateSetInternalValueParameters(val *RedshiftserverlessWorkgroupWorkgroupEndpoint) error {
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

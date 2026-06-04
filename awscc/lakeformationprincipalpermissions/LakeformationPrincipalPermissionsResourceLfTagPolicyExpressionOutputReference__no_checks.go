@@ -56,7 +56,7 @@ func (j *jsiiProxy_LakeformationPrincipalPermissionsResourceLfTagPolicyExpressio
 	return nil
 }
 
-func (j *jsiiProxy_LakeformationPrincipalPermissionsResourceLfTagPolicyExpressionOutputReference) validateSetInternalValueParameters(val *LakeformationPrincipalPermissionsResourceLfTagPolicyExpression) error {
+func (j *jsiiProxy_LakeformationPrincipalPermissionsResourceLfTagPolicyExpressionOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

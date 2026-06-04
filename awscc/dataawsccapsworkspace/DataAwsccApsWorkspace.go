@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccapsworkspace/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/aps_workspace awscc_aps_workspace}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/aps_workspace awscc_aps_workspace}.
 type DataAwsccApsWorkspace interface {
 	cdktf.TerraformDataSource
 	AlertManagerDefinition() *string
@@ -51,6 +51,7 @@ type DataAwsccApsWorkspace interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	QueryLoggingConfiguration() DataAwsccApsWorkspaceQueryLoggingConfigurationOutputReference
 	// Experimental.
 	RawOverrides() interface{}
 	Tags() DataAwsccApsWorkspaceTagsList
@@ -60,6 +61,7 @@ type DataAwsccApsWorkspace interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	WorkspaceConfiguration() DataAwsccApsWorkspaceWorkspaceConfigurationOutputReference
 	WorkspaceId() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
@@ -90,6 +92,10 @@ type DataAwsccApsWorkspace interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -284,6 +290,16 @@ func (j *jsiiProxy_DataAwsccApsWorkspace) Provider() cdktf.TerraformProvider {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccApsWorkspace) QueryLoggingConfiguration() DataAwsccApsWorkspaceQueryLoggingConfigurationOutputReference {
+	var returns DataAwsccApsWorkspaceQueryLoggingConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"queryLoggingConfiguration",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccApsWorkspace) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -334,6 +350,16 @@ func (j *jsiiProxy_DataAwsccApsWorkspace) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccApsWorkspace) WorkspaceConfiguration() DataAwsccApsWorkspaceWorkspaceConfigurationOutputReference {
+	var returns DataAwsccApsWorkspaceWorkspaceConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"workspaceConfiguration",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccApsWorkspace) WorkspaceId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -345,7 +371,7 @@ func (j *jsiiProxy_DataAwsccApsWorkspace) WorkspaceId() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/aps_workspace awscc_aps_workspace} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/aps_workspace awscc_aps_workspace} Data Source.
 func NewDataAwsccApsWorkspace(scope constructs.Construct, id *string, config *DataAwsccApsWorkspaceConfig) DataAwsccApsWorkspace {
 	_init_.Initialize()
 
@@ -363,7 +389,7 @@ func NewDataAwsccApsWorkspace(scope constructs.Construct, id *string, config *Da
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/aps_workspace awscc_aps_workspace} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/aps_workspace awscc_aps_workspace} Data Source.
 func NewDataAwsccApsWorkspace_Override(d DataAwsccApsWorkspace, scope constructs.Construct, id *string, config *DataAwsccApsWorkspaceConfig) {
 	_init_.Initialize()
 
@@ -730,6 +756,32 @@ func (d *jsiiProxy_DataAwsccApsWorkspace) SynthesizeAttributes() *map[string]int
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApsWorkspace) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApsWorkspace) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

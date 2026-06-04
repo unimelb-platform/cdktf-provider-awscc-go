@@ -119,6 +119,14 @@ func (m *jsiiProxy_MemorydbCluster) validateInterpolationForAttributeParameters(
 	return nil
 }
 
+func (m *jsiiProxy_MemorydbCluster) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (m *jsiiProxy_MemorydbCluster) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (m *jsiiProxy_MemorydbCluster) validateMoveToParameters(moveTarget *string,
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (m *jsiiProxy_MemorydbCluster) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -412,6 +428,14 @@ func (j *jsiiProxy_MemorydbCluster) validateSetDescriptionParameters(val *string
 	return nil
 }
 
+func (j *jsiiProxy_MemorydbCluster) validateSetEngineParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_MemorydbCluster) validateSetEngineVersionParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -421,6 +445,14 @@ func (j *jsiiProxy_MemorydbCluster) validateSetEngineVersionParameters(val *stri
 }
 
 func (j *jsiiProxy_MemorydbCluster) validateSetFinalSnapshotNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_MemorydbCluster) validateSetIpDiscoveryParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -445,6 +477,22 @@ func (j *jsiiProxy_MemorydbCluster) validateSetLifecycleParameters(val *cdktf.Te
 }
 
 func (j *jsiiProxy_MemorydbCluster) validateSetMaintenanceWindowParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_MemorydbCluster) validateSetMultiRegionClusterNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_MemorydbCluster) validateSetNetworkTypeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

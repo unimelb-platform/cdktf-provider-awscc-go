@@ -30,8 +30,8 @@ type SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimesOutputReference int
 	EndTimeInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimes
-	SetInternalValue(val *SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimes)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	StartTime() *string
 	SetStartTime(val *string)
 	StartTimeInput() *string
@@ -67,6 +67,8 @@ type SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimesOutputReference int
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEndTime()
+	ResetStartTime()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -142,8 +144,8 @@ func (j *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimesOutpu
 	return returns
 }
 
-func (j *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimesOutputReference) InternalValue() *SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimes {
-	var returns *SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimes
+func (j *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -253,7 +255,7 @@ func (j *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimesOutpu
 	)
 }
 
-func (j *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimesOutputReference)SetInternalValue(val *SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimes) {
+func (j *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (s *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimesOutpu
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimesOutputReference) ResetEndTime() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetEndTime",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimesOutputReference) ResetStartTime() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStartTime",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

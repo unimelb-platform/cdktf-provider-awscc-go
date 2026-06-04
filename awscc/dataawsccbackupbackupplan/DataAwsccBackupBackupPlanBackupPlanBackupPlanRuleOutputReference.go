@@ -30,6 +30,7 @@ type DataAwsccBackupBackupPlanBackupPlanBackupPlanRuleOutputReference interface 
 	EnableContinuousBackup() cdktf.IResolvable
 	// Experimental.
 	Fqn() *string
+	IndexActions() DataAwsccBackupBackupPlanBackupPlanBackupPlanRuleIndexActionsList
 	InternalValue() *DataAwsccBackupBackupPlanBackupPlanBackupPlanRule
 	SetInternalValue(val *DataAwsccBackupBackupPlanBackupPlanBackupPlanRule)
 	Lifecycle() DataAwsccBackupBackupPlanBackupPlanBackupPlanRuleLifecycleOutputReference
@@ -151,6 +152,16 @@ func (j *jsiiProxy_DataAwsccBackupBackupPlanBackupPlanBackupPlanRuleOutputRefere
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccBackupBackupPlanBackupPlanBackupPlanRuleOutputReference) IndexActions() DataAwsccBackupBackupPlanBackupPlanBackupPlanRuleIndexActionsList {
+	var returns DataAwsccBackupBackupPlanBackupPlanBackupPlanRuleIndexActionsList
+	_jsii_.Get(
+		j,
+		"indexActions",
 		&returns,
 	)
 	return returns

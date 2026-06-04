@@ -29,6 +29,8 @@ type IotfleetwiseCampaignDataDestinationConfigsOutputReference interface {
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	MqttTopicConfig() IotfleetwiseCampaignDataDestinationConfigsMqttTopicConfigOutputReference
+	MqttTopicConfigInput() interface{}
 	S3Config() IotfleetwiseCampaignDataDestinationConfigsS3ConfigOutputReference
 	S3ConfigInput() interface{}
 	// Experimental.
@@ -65,8 +67,10 @@ type IotfleetwiseCampaignDataDestinationConfigsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutMqttTopicConfig(value *IotfleetwiseCampaignDataDestinationConfigsMqttTopicConfig)
 	PutS3Config(value *IotfleetwiseCampaignDataDestinationConfigsS3Config)
 	PutTimestreamConfig(value *IotfleetwiseCampaignDataDestinationConfigsTimestreamConfig)
+	ResetMqttTopicConfig()
 	ResetS3Config()
 	ResetTimestreamConfig()
 	// Produce the Token's value at resolution time.
@@ -129,6 +133,26 @@ func (j *jsiiProxy_IotfleetwiseCampaignDataDestinationConfigsOutputReference) In
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotfleetwiseCampaignDataDestinationConfigsOutputReference) MqttTopicConfig() IotfleetwiseCampaignDataDestinationConfigsMqttTopicConfigOutputReference {
+	var returns IotfleetwiseCampaignDataDestinationConfigsMqttTopicConfigOutputReference
+	_jsii_.Get(
+		j,
+		"mqttTopicConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotfleetwiseCampaignDataDestinationConfigsOutputReference) MqttTopicConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"mqttTopicConfigInput",
 		&returns,
 	)
 	return returns
@@ -463,6 +487,17 @@ func (i *jsiiProxy_IotfleetwiseCampaignDataDestinationConfigsOutputReference) In
 	return returns
 }
 
+func (i *jsiiProxy_IotfleetwiseCampaignDataDestinationConfigsOutputReference) PutMqttTopicConfig(value *IotfleetwiseCampaignDataDestinationConfigsMqttTopicConfig) {
+	if err := i.validatePutMqttTopicConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putMqttTopicConfig",
+		[]interface{}{value},
+	)
+}
+
 func (i *jsiiProxy_IotfleetwiseCampaignDataDestinationConfigsOutputReference) PutS3Config(value *IotfleetwiseCampaignDataDestinationConfigsS3Config) {
 	if err := i.validatePutS3ConfigParameters(value); err != nil {
 		panic(err)
@@ -482,6 +517,14 @@ func (i *jsiiProxy_IotfleetwiseCampaignDataDestinationConfigsOutputReference) Pu
 		i,
 		"putTimestreamConfig",
 		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IotfleetwiseCampaignDataDestinationConfigsOutputReference) ResetMqttTopicConfig() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetMqttTopicConfig",
+		nil, // no parameters
 	)
 }
 

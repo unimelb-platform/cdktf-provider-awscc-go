@@ -68,6 +68,10 @@ func (j *jsiiProxy_SagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsOu
 	return nil
 }
 
+func (j *jsiiProxy_SagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsOutputReference) validateSetLifecycleConfigArnsParameters(val *[]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_SagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

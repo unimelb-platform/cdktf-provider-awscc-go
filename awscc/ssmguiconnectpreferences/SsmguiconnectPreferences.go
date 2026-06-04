@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ssmguiconnectpreferences/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ssmguiconnect_preferences awscc_ssmguiconnect_preferences}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ssmguiconnect_preferences awscc_ssmguiconnect_preferences}.
 type SsmguiconnectPreferences interface {
 	cdktf.TerraformResource
 	AccountId() *string
@@ -19,6 +19,8 @@ type SsmguiconnectPreferences interface {
 	Connection() interface{}
 	// Experimental.
 	SetConnection(val interface{})
+	ConnectionRecordingPreferences() SsmguiconnectPreferencesConnectionRecordingPreferencesOutputReference
+	ConnectionRecordingPreferencesInput() interface{}
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -38,8 +40,6 @@ type SsmguiconnectPreferences interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	IdleConnection() SsmguiconnectPreferencesIdleConnectionList
-	IdleConnectionInput() interface{}
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -86,21 +86,34 @@ type SsmguiconnectPreferences interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutIdleConnection(value interface{})
-	ResetIdleConnection()
+	PutConnectionRecordingPreferences(value *SsmguiconnectPreferencesConnectionRecordingPreferences)
+	ResetConnectionRecordingPreferences()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -140,6 +153,26 @@ func (j *jsiiProxy_SsmguiconnectPreferences) Connection() interface{} {
 	_jsii_.Get(
 		j,
 		"connection",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SsmguiconnectPreferences) ConnectionRecordingPreferences() SsmguiconnectPreferencesConnectionRecordingPreferencesOutputReference {
+	var returns SsmguiconnectPreferencesConnectionRecordingPreferencesOutputReference
+	_jsii_.Get(
+		j,
+		"connectionRecordingPreferences",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SsmguiconnectPreferences) ConnectionRecordingPreferencesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connectionRecordingPreferencesInput",
 		&returns,
 	)
 	return returns
@@ -210,26 +243,6 @@ func (j *jsiiProxy_SsmguiconnectPreferences) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_SsmguiconnectPreferences) IdleConnection() SsmguiconnectPreferencesIdleConnectionList {
-	var returns SsmguiconnectPreferencesIdleConnectionList
-	_jsii_.Get(
-		j,
-		"idleConnection",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_SsmguiconnectPreferences) IdleConnectionInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"idleConnectionInput",
 		&returns,
 	)
 	return returns
@@ -316,7 +329,7 @@ func (j *jsiiProxy_SsmguiconnectPreferences) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ssmguiconnect_preferences awscc_ssmguiconnect_preferences} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ssmguiconnect_preferences awscc_ssmguiconnect_preferences} Resource.
 func NewSsmguiconnectPreferences(scope constructs.Construct, id *string, config *SsmguiconnectPreferencesConfig) SsmguiconnectPreferences {
 	_init_.Initialize()
 
@@ -334,7 +347,7 @@ func NewSsmguiconnectPreferences(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ssmguiconnect_preferences awscc_ssmguiconnect_preferences} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ssmguiconnect_preferences awscc_ssmguiconnect_preferences} Resource.
 func NewSsmguiconnectPreferences_Override(s SsmguiconnectPreferences, scope constructs.Construct, id *string, config *SsmguiconnectPreferencesConfig) {
 	_init_.Initialize()
 
@@ -682,6 +695,19 @@ func (s *jsiiProxy_SsmguiconnectPreferences) GetStringMapAttribute(terraformAttr
 	return returns
 }
 
+func (s *jsiiProxy_SsmguiconnectPreferences) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (s *jsiiProxy_SsmguiconnectPreferences) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := s.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -709,6 +735,17 @@ func (s *jsiiProxy_SsmguiconnectPreferences) InterpolationForAttribute(terraform
 	return returns
 }
 
+func (s *jsiiProxy_SsmguiconnectPreferences) MoveFromId(id *string) {
+	if err := s.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (s *jsiiProxy_SsmguiconnectPreferences) MoveTo(moveTarget *string, index interface{}) {
 	if err := s.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -717,6 +754,17 @@ func (s *jsiiProxy_SsmguiconnectPreferences) MoveTo(moveTarget *string, index in
 		s,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (s *jsiiProxy_SsmguiconnectPreferences) MoveToId(id *string) {
+	if err := s.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -731,21 +779,21 @@ func (s *jsiiProxy_SsmguiconnectPreferences) OverrideLogicalId(newLogicalId *str
 	)
 }
 
-func (s *jsiiProxy_SsmguiconnectPreferences) PutIdleConnection(value interface{}) {
-	if err := s.validatePutIdleConnectionParameters(value); err != nil {
+func (s *jsiiProxy_SsmguiconnectPreferences) PutConnectionRecordingPreferences(value *SsmguiconnectPreferencesConnectionRecordingPreferences) {
+	if err := s.validatePutConnectionRecordingPreferencesParameters(value); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
 		s,
-		"putIdleConnection",
+		"putConnectionRecordingPreferences",
 		[]interface{}{value},
 	)
 }
 
-func (s *jsiiProxy_SsmguiconnectPreferences) ResetIdleConnection() {
+func (s *jsiiProxy_SsmguiconnectPreferences) ResetConnectionRecordingPreferences() {
 	_jsii_.InvokeVoid(
 		s,
-		"resetIdleConnection",
+		"resetConnectionRecordingPreferences",
 		nil, // no parameters
 	)
 }
@@ -764,6 +812,32 @@ func (s *jsiiProxy_SsmguiconnectPreferences) SynthesizeAttributes() *map[string]
 	_jsii_.Invoke(
 		s,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SsmguiconnectPreferences) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		s,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SsmguiconnectPreferences) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

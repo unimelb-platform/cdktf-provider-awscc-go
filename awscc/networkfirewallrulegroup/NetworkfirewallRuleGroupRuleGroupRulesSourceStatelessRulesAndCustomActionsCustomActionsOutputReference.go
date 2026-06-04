@@ -11,7 +11,7 @@ import (
 type NetworkfirewallRuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionsOutputReference interface {
 	cdktf.ComplexObject
 	ActionDefinition() NetworkfirewallRuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionsActionDefinitionOutputReference
-	ActionDefinitionInput() *NetworkfirewallRuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionsActionDefinition
+	ActionDefinitionInput() interface{}
 	ActionName() *string
 	SetActionName(val *string)
 	ActionNameInput() *string
@@ -67,6 +67,8 @@ type NetworkfirewallRuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsC
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutActionDefinition(value *NetworkfirewallRuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionsActionDefinition)
+	ResetActionDefinition()
+	ResetActionName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -92,8 +94,8 @@ func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatelessRulesAnd
 	return returns
 }
 
-func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionsOutputReference) ActionDefinitionInput() *NetworkfirewallRuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionsActionDefinition {
-	var returns *NetworkfirewallRuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionsActionDefinition
+func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionsOutputReference) ActionDefinitionInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"actionDefinitionInput",
@@ -480,6 +482,22 @@ func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatelessRulesAnd
 		n,
 		"putActionDefinition",
 		[]interface{}{value},
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionsOutputReference) ResetActionDefinition() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetActionDefinition",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionsOutputReference) ResetActionName() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetActionName",
+		nil, // no parameters
 	)
 }
 

@@ -11,7 +11,7 @@ import (
 type LexBotTestBotAliasSettingsBotAliasLocaleSettingsOutputReference interface {
 	cdktf.ComplexObject
 	BotAliasLocaleSetting() LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingOutputReference
-	BotAliasLocaleSettingInput() *LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSetting
+	BotAliasLocaleSettingInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -67,6 +67,8 @@ type LexBotTestBotAliasSettingsBotAliasLocaleSettingsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutBotAliasLocaleSetting(value *LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSetting)
+	ResetBotAliasLocaleSetting()
+	ResetLocaleId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -92,8 +94,8 @@ func (j *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsOutputReferen
 	return returns
 }
 
-func (j *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsOutputReference) BotAliasLocaleSettingInput() *LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSetting {
-	var returns *LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSetting
+func (j *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsOutputReference) BotAliasLocaleSettingInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"botAliasLocaleSettingInput",
@@ -480,6 +482,22 @@ func (l *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsOutputReferen
 		l,
 		"putBotAliasLocaleSetting",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsOutputReference) ResetBotAliasLocaleSetting() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetBotAliasLocaleSetting",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsOutputReference) ResetLocaleId() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetLocaleId",
+		nil, // no parameters
 	)
 }
 

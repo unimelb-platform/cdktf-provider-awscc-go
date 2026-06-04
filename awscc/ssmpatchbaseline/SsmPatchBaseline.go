@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ssmpatchbaseline/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ssm_patch_baseline awscc_ssm_patch_baseline}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ssm_patch_baseline awscc_ssm_patch_baseline}.
 type SsmPatchBaseline interface {
 	cdktf.TerraformResource
 	ApprovalRules() SsmPatchBaselineApprovalRulesOutputReference
@@ -68,6 +68,7 @@ type SsmPatchBaseline interface {
 	OperatingSystem() *string
 	SetOperatingSystem(val *string)
 	OperatingSystemInput() *string
+	PatchBaselineId() *string
 	PatchGroups() *[]*string
 	SetPatchGroups(val *[]*string)
 	PatchGroupsInput() *[]*string
@@ -121,12 +122,22 @@ type SsmPatchBaseline interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -151,6 +162,9 @@ type SsmPatchBaseline interface {
 	ResetSources()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -455,6 +469,16 @@ func (j *jsiiProxy_SsmPatchBaseline) OperatingSystemInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_SsmPatchBaseline) PatchBaselineId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"patchBaselineId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SsmPatchBaseline) PatchGroups() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -616,7 +640,7 @@ func (j *jsiiProxy_SsmPatchBaseline) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ssm_patch_baseline awscc_ssm_patch_baseline} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ssm_patch_baseline awscc_ssm_patch_baseline} Resource.
 func NewSsmPatchBaseline(scope constructs.Construct, id *string, config *SsmPatchBaselineConfig) SsmPatchBaseline {
 	_init_.Initialize()
 
@@ -634,7 +658,7 @@ func NewSsmPatchBaseline(scope constructs.Construct, id *string, config *SsmPatc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ssm_patch_baseline awscc_ssm_patch_baseline} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ssm_patch_baseline awscc_ssm_patch_baseline} Resource.
 func NewSsmPatchBaseline_Override(s SsmPatchBaseline, scope constructs.Construct, id *string, config *SsmPatchBaselineConfig) {
 	_init_.Initialize()
 
@@ -1092,6 +1116,19 @@ func (s *jsiiProxy_SsmPatchBaseline) GetStringMapAttribute(terraformAttribute *s
 	return returns
 }
 
+func (s *jsiiProxy_SsmPatchBaseline) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (s *jsiiProxy_SsmPatchBaseline) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := s.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1119,6 +1156,17 @@ func (s *jsiiProxy_SsmPatchBaseline) InterpolationForAttribute(terraformAttribut
 	return returns
 }
 
+func (s *jsiiProxy_SsmPatchBaseline) MoveFromId(id *string) {
+	if err := s.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (s *jsiiProxy_SsmPatchBaseline) MoveTo(moveTarget *string, index interface{}) {
 	if err := s.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1127,6 +1175,17 @@ func (s *jsiiProxy_SsmPatchBaseline) MoveTo(moveTarget *string, index interface{
 		s,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (s *jsiiProxy_SsmPatchBaseline) MoveToId(id *string) {
+	if err := s.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1303,6 +1362,32 @@ func (s *jsiiProxy_SsmPatchBaseline) SynthesizeAttributes() *map[string]interfac
 	_jsii_.Invoke(
 		s,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SsmPatchBaseline) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		s,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SsmPatchBaseline) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

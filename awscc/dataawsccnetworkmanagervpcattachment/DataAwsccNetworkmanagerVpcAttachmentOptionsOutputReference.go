@@ -26,11 +26,13 @@ type DataAwsccNetworkmanagerVpcAttachmentOptionsOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	DnsSupport() cdktf.IResolvable
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataAwsccNetworkmanagerVpcAttachmentOptions
 	SetInternalValue(val *DataAwsccNetworkmanagerVpcAttachmentOptions)
 	Ipv6Support() cdktf.IResolvable
+	SecurityGroupReferencingSupport() cdktf.IResolvable
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -118,6 +120,16 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerVpcAttachmentOptionsOutputReference) C
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccNetworkmanagerVpcAttachmentOptionsOutputReference) DnsSupport() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"dnsSupport",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccNetworkmanagerVpcAttachmentOptionsOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -143,6 +155,16 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerVpcAttachmentOptionsOutputReference) I
 	_jsii_.Get(
 		j,
 		"ipv6Support",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccNetworkmanagerVpcAttachmentOptionsOutputReference) SecurityGroupReferencingSupport() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"securityGroupReferencingSupport",
 		&returns,
 	)
 	return returns

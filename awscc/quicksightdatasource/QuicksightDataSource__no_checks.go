@@ -56,7 +56,15 @@ func (q *jsiiProxy_QuicksightDataSource) validateInterpolationForAttributeParame
 	return nil
 }
 
+func (q *jsiiProxy_QuicksightDataSource) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (q *jsiiProxy_QuicksightDataSource) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (q *jsiiProxy_QuicksightDataSource) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -125,6 +133,10 @@ func (j *jsiiProxy_QuicksightDataSource) validateSetCountParameters(val interfac
 }
 
 func (j *jsiiProxy_QuicksightDataSource) validateSetDataSourceIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_QuicksightDataSource) validateSetFolderArnsParameters(val *[]*string) error {
 	return nil
 }
 

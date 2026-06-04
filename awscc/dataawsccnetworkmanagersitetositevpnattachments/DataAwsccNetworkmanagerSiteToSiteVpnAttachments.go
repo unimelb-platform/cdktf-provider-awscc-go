@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccnetworkmanagersitetositevpnattachments/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_site_to_site_vpn_attachments awscc_networkmanager_site_to_site_vpn_attachments}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_site_to_site_vpn_attachments awscc_networkmanager_site_to_site_vpn_attachments}.
 type DataAwsccNetworkmanagerSiteToSiteVpnAttachments interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccNetworkmanagerSiteToSiteVpnAttachments interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerSiteToSiteVpnAttachments) TerraformRes
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_site_to_site_vpn_attachments awscc_networkmanager_site_to_site_vpn_attachments} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_site_to_site_vpn_attachments awscc_networkmanager_site_to_site_vpn_attachments} Data Source.
 func NewDataAwsccNetworkmanagerSiteToSiteVpnAttachments(scope constructs.Construct, id *string, config *DataAwsccNetworkmanagerSiteToSiteVpnAttachmentsConfig) DataAwsccNetworkmanagerSiteToSiteVpnAttachments {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccNetworkmanagerSiteToSiteVpnAttachments(scope constructs.Constru
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_site_to_site_vpn_attachments awscc_networkmanager_site_to_site_vpn_attachments} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_site_to_site_vpn_attachments awscc_networkmanager_site_to_site_vpn_attachments} Data Source.
 func NewDataAwsccNetworkmanagerSiteToSiteVpnAttachments_Override(d DataAwsccNetworkmanagerSiteToSiteVpnAttachments, scope constructs.Construct, id *string, config *DataAwsccNetworkmanagerSiteToSiteVpnAttachmentsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccNetworkmanagerSiteToSiteVpnAttachments) SynthesizeAt
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkmanagerSiteToSiteVpnAttachments) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkmanagerSiteToSiteVpnAttachments) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

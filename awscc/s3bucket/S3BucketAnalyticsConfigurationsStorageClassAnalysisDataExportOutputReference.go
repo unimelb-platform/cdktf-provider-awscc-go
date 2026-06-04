@@ -26,7 +26,7 @@ type S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportOutputReferenc
 	// Experimental.
 	CreationStack() *[]*string
 	Destination() S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestinationOutputReference
-	DestinationInput() *S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestination
+	DestinationInput() interface{}
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -67,6 +67,8 @@ type S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportOutputReferenc
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDestination(value *S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestination)
+	ResetDestination()
+	ResetOutputSchemaVersion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExport
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportOutputReference) DestinationInput() *S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestination {
-	var returns *S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestination
+func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportOutputReference) DestinationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"destinationInput",
@@ -480,6 +482,22 @@ func (s *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExport
 		s,
 		"putDestination",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportOutputReference) ResetDestination() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDestination",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportOutputReference) ResetOutputSchemaVersion() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOutputSchemaVersion",
+		nil, // no parameters
 	)
 }
 

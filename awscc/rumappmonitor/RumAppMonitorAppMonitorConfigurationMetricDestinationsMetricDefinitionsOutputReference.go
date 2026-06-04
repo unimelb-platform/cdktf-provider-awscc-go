@@ -38,6 +38,9 @@ type RumAppMonitorAppMonitorConfigurationMetricDestinationsMetricDefinitionsOutp
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
+	Namespace() *string
+	SetNamespace(val *string)
+	NamespaceInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -78,6 +81,8 @@ type RumAppMonitorAppMonitorConfigurationMetricDestinationsMetricDefinitionsOutp
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetDimensionKeys()
 	ResetEventPattern()
+	ResetName()
+	ResetNamespace()
 	ResetUnitLabel()
 	ResetValueKey()
 	// Produce the Token's value at resolution time.
@@ -200,6 +205,26 @@ func (j *jsiiProxy_RumAppMonitorAppMonitorConfigurationMetricDestinationsMetricD
 	_jsii_.Get(
 		j,
 		"nameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RumAppMonitorAppMonitorConfigurationMetricDestinationsMetricDefinitionsOutputReference) Namespace() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"namespace",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RumAppMonitorAppMonitorConfigurationMetricDestinationsMetricDefinitionsOutputReference) NamespaceInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"namespaceInput",
 		&returns,
 	)
 	return returns
@@ -355,6 +380,17 @@ func (j *jsiiProxy_RumAppMonitorAppMonitorConfigurationMetricDestinationsMetricD
 	_jsii_.Set(
 		j,
 		"name",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RumAppMonitorAppMonitorConfigurationMetricDestinationsMetricDefinitionsOutputReference)SetNamespace(val *string) {
+	if err := j.validateSetNamespaceParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"namespace",
 		val,
 	)
 }
@@ -601,6 +637,22 @@ func (r *jsiiProxy_RumAppMonitorAppMonitorConfigurationMetricDestinationsMetricD
 	_jsii_.InvokeVoid(
 		r,
 		"resetEventPattern",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RumAppMonitorAppMonitorConfigurationMetricDestinationsMetricDefinitionsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RumAppMonitorAppMonitorConfigurationMetricDestinationsMetricDefinitionsOutputReference) ResetNamespace() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetNamespace",
 		nil, // no parameters
 	)
 }

@@ -10,6 +10,7 @@ import (
 
 type DataAwsccSagemakerDomainDefaultUserSettingsOutputReference interface {
 	cdktf.ComplexObject
+	AutoMountHomeEfs() *string
 	CodeEditorAppSettings() DataAwsccSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsOutputReference
 	// the index of the complex object in a list.
 	// Experimental.
@@ -43,6 +44,7 @@ type DataAwsccSagemakerDomainDefaultUserSettingsOutputReference interface {
 	SharingSettings() DataAwsccSagemakerDomainDefaultUserSettingsSharingSettingsOutputReference
 	SpaceStorageSettings() DataAwsccSagemakerDomainDefaultUserSettingsSpaceStorageSettingsOutputReference
 	StudioWebPortal() *string
+	StudioWebPortalSettings() DataAwsccSagemakerDomainDefaultUserSettingsStudioWebPortalSettingsOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -88,6 +90,16 @@ type DataAwsccSagemakerDomainDefaultUserSettingsOutputReference interface {
 // The jsii proxy struct for DataAwsccSagemakerDomainDefaultUserSettingsOutputReference
 type jsiiProxy_DataAwsccSagemakerDomainDefaultUserSettingsOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultUserSettingsOutputReference) AutoMountHomeEfs() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"autoMountHomeEfs",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultUserSettingsOutputReference) CodeEditorAppSettings() DataAwsccSagemakerDomainDefaultUserSettingsCodeEditorAppSettingsOutputReference {
@@ -275,6 +287,16 @@ func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultUserSettingsOutputReference) S
 	_jsii_.Get(
 		j,
 		"studioWebPortal",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultUserSettingsOutputReference) StudioWebPortalSettings() DataAwsccSagemakerDomainDefaultUserSettingsStudioWebPortalSettingsOutputReference {
+	var returns DataAwsccSagemakerDomainDefaultUserSettingsStudioWebPortalSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"studioWebPortalSettings",
 		&returns,
 	)
 	return returns

@@ -9,10 +9,11 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccapplicationinsightsapplication/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/applicationinsights_application awscc_applicationinsights_application}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/applicationinsights_application awscc_applicationinsights_application}.
 type DataAwsccApplicationinsightsApplication interface {
 	cdktf.TerraformDataSource
 	ApplicationArn() *string
+	AttachMissingPermission() cdktf.IResolvable
 	AutoConfigurationEnabled() cdktf.IResolvable
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
@@ -57,6 +58,7 @@ type DataAwsccApplicationinsightsApplication interface {
 	// Experimental.
 	RawOverrides() interface{}
 	ResourceGroupName() *string
+	SnsNotificationArn() *string
 	Tags() DataAwsccApplicationinsightsApplicationTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -93,6 +95,10 @@ type DataAwsccApplicationinsightsApplication interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -112,6 +118,16 @@ func (j *jsiiProxy_DataAwsccApplicationinsightsApplication) ApplicationArn() *st
 	_jsii_.Get(
 		j,
 		"applicationArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccApplicationinsightsApplication) AttachMissingPermission() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"attachMissingPermission",
 		&returns,
 	)
 	return returns
@@ -337,6 +353,16 @@ func (j *jsiiProxy_DataAwsccApplicationinsightsApplication) ResourceGroupName() 
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccApplicationinsightsApplication) SnsNotificationArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"snsNotificationArn",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccApplicationinsightsApplication) Tags() DataAwsccApplicationinsightsApplicationTagsList {
 	var returns DataAwsccApplicationinsightsApplicationTagsList
 	_jsii_.Get(
@@ -378,7 +404,7 @@ func (j *jsiiProxy_DataAwsccApplicationinsightsApplication) TerraformResourceTyp
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/applicationinsights_application awscc_applicationinsights_application} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/applicationinsights_application awscc_applicationinsights_application} Data Source.
 func NewDataAwsccApplicationinsightsApplication(scope constructs.Construct, id *string, config *DataAwsccApplicationinsightsApplicationConfig) DataAwsccApplicationinsightsApplication {
 	_init_.Initialize()
 
@@ -396,7 +422,7 @@ func NewDataAwsccApplicationinsightsApplication(scope constructs.Construct, id *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/applicationinsights_application awscc_applicationinsights_application} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/applicationinsights_application awscc_applicationinsights_application} Data Source.
 func NewDataAwsccApplicationinsightsApplication_Override(d DataAwsccApplicationinsightsApplication, scope constructs.Construct, id *string, config *DataAwsccApplicationinsightsApplicationConfig) {
 	_init_.Initialize()
 
@@ -763,6 +789,32 @@ func (d *jsiiProxy_DataAwsccApplicationinsightsApplication) SynthesizeAttributes
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApplicationinsightsApplication) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApplicationinsightsApplication) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

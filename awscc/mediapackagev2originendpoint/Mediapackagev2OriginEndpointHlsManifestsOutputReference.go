@@ -45,6 +45,8 @@ type Mediapackagev2OriginEndpointHlsManifestsOutputReference interface {
 	ProgramDateTimeIntervalSecondsInput() *float64
 	ScteHls() Mediapackagev2OriginEndpointHlsManifestsScteHlsOutputReference
 	ScteHlsInput() interface{}
+	StartTag() Mediapackagev2OriginEndpointHlsManifestsStartTagOutputReference
+	StartTagInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -55,6 +57,9 @@ type Mediapackagev2OriginEndpointHlsManifestsOutputReference interface {
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	Url() *string
 	SetUrl(val *string)
+	UrlEncodeChildManifest() interface{}
+	SetUrlEncodeChildManifest(val interface{})
+	UrlEncodeChildManifestInput() interface{}
 	UrlInput() *string
 	// Experimental.
 	ComputeFqn() *string
@@ -82,12 +87,16 @@ type Mediapackagev2OriginEndpointHlsManifestsOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutFilterConfiguration(value *Mediapackagev2OriginEndpointHlsManifestsFilterConfiguration)
 	PutScteHls(value *Mediapackagev2OriginEndpointHlsManifestsScteHls)
+	PutStartTag(value *Mediapackagev2OriginEndpointHlsManifestsStartTag)
 	ResetChildManifestName()
 	ResetFilterConfiguration()
+	ResetManifestName()
 	ResetManifestWindowSeconds()
 	ResetProgramDateTimeIntervalSeconds()
 	ResetScteHls()
+	ResetStartTag()
 	ResetUrl()
+	ResetUrlEncodeChildManifest()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -273,6 +282,26 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) Scte
 	return returns
 }
 
+func (j *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) StartTag() Mediapackagev2OriginEndpointHlsManifestsStartTagOutputReference {
+	var returns Mediapackagev2OriginEndpointHlsManifestsStartTagOutputReference
+	_jsii_.Get(
+		j,
+		"startTag",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) StartTagInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"startTagInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -298,6 +327,26 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) Url(
 	_jsii_.Get(
 		j,
 		"url",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) UrlEncodeChildManifest() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"urlEncodeChildManifest",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) UrlEncodeChildManifestInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"urlEncodeChildManifestInput",
 		&returns,
 	)
 	return returns
@@ -447,6 +496,17 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference)SetUr
 	_jsii_.Set(
 		j,
 		"url",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference)SetUrlEncodeChildManifest(val interface{}) {
+	if err := j.validateSetUrlEncodeChildManifestParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"urlEncodeChildManifest",
 		val,
 	)
 }
@@ -659,6 +719,17 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) PutS
 	)
 }
 
+func (m *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) PutStartTag(value *Mediapackagev2OriginEndpointHlsManifestsStartTag) {
+	if err := m.validatePutStartTagParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putStartTag",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) ResetChildManifestName() {
 	_jsii_.InvokeVoid(
 		m,
@@ -671,6 +742,14 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) Rese
 	_jsii_.InvokeVoid(
 		m,
 		"resetFilterConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) ResetManifestName() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetManifestName",
 		nil, // no parameters
 	)
 }
@@ -699,10 +778,26 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) Rese
 	)
 }
 
+func (m *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) ResetStartTag() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetStartTag",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) ResetUrl() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetUrl",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsOutputReference) ResetUrlEncodeChildManifest() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetUrlEncodeChildManifest",
 		nil, // no parameters
 	)
 }

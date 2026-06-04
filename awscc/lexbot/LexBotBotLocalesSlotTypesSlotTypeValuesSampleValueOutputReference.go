@@ -27,8 +27,8 @@ type LexBotBotLocalesSlotTypesSlotTypeValuesSampleValueOutputReference interface
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotBotLocalesSlotTypesSlotTypeValuesSampleValue
-	SetInternalValue(val *LexBotBotLocalesSlotTypesSlotTypeValuesSampleValue)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type LexBotBotLocalesSlotTypesSlotTypeValuesSampleValueOutputReference interface
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -119,8 +120,8 @@ func (j *jsiiProxy_LexBotBotLocalesSlotTypesSlotTypeValuesSampleValueOutputRefer
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesSlotTypesSlotTypeValuesSampleValueOutputReference) InternalValue() *LexBotBotLocalesSlotTypesSlotTypeValuesSampleValue {
-	var returns *LexBotBotLocalesSlotTypesSlotTypeValuesSampleValue
+func (j *jsiiProxy_LexBotBotLocalesSlotTypesSlotTypeValuesSampleValueOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -219,7 +220,7 @@ func (j *jsiiProxy_LexBotBotLocalesSlotTypesSlotTypeValuesSampleValueOutputRefer
 	)
 }
 
-func (j *jsiiProxy_LexBotBotLocalesSlotTypesSlotTypeValuesSampleValueOutputReference)SetInternalValue(val *LexBotBotLocalesSlotTypesSlotTypeValuesSampleValue) {
+func (j *jsiiProxy_LexBotBotLocalesSlotTypesSlotTypeValuesSampleValueOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -447,6 +448,14 @@ func (l *jsiiProxy_LexBotBotLocalesSlotTypesSlotTypeValuesSampleValueOutputRefer
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotBotLocalesSlotTypesSlotTypeValuesSampleValueOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotBotLocalesSlotTypesSlotTypeValuesSampleValueOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

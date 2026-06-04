@@ -31,8 +31,8 @@ type LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsList
 	Fqn() *string
 	ImageResponseCard() LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessageImageResponseCardOutputReference
 	ImageResponseCardInput() interface{}
-	InternalValue() *LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessage
-	SetInternalValue(val *LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessage)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	PlainTextMessage() LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessagePlainTextMessageOutputReference
 	PlainTextMessageInput() interface{}
 	SsmlMessage() LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessageSsmlMessageOutputReference
@@ -172,8 +172,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMes
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessageOutputReference) InternalValue() *LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessage {
-	var returns *LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessage
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessageOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -292,7 +292,7 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMes
 	)
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessageOutputReference)SetInternalValue(val *LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessage) {
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessageOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

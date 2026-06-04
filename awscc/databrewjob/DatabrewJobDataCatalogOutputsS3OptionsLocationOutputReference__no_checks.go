@@ -64,7 +64,7 @@ func (j *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsLocationOutputReference
 	return nil
 }
 
-func (j *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsLocationOutputReference) validateSetInternalValueParameters(val *DatabrewJobDataCatalogOutputsS3OptionsLocation) error {
+func (j *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsLocationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

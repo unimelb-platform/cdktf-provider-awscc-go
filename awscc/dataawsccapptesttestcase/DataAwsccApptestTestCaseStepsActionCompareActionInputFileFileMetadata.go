@@ -1,0 +1,6 @@
+package dataawsccapptesttestcase
+
+
+type DataAwsccApptestTestCaseStepsActionCompareActionInputFileFileMetadata struct {
+}
+

@@ -67,6 +67,7 @@ type CloudtrailTrailAdvancedEventSelectorsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutFieldSelectors(value interface{})
+	ResetFieldSelectors()
 	ResetName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -481,6 +482,14 @@ func (c *jsiiProxy_CloudtrailTrailAdvancedEventSelectorsOutputReference) PutFiel
 		c,
 		"putFieldSelectors",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CloudtrailTrailAdvancedEventSelectorsOutputReference) ResetFieldSelectors() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetFieldSelectors",
+		nil, // no parameters
 	)
 }
 

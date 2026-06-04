@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscckinesisfirehosedeliverystream/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kinesisfirehose_delivery_stream awscc_kinesisfirehose_delivery_stream}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kinesisfirehose_delivery_stream awscc_kinesisfirehose_delivery_stream}.
 type DataAwsccKinesisfirehoseDeliveryStream interface {
 	cdktf.TerraformDataSource
 	AmazonOpenSearchServerlessDestinationConfiguration() DataAwsccKinesisfirehoseDeliveryStreamAmazonOpenSearchServerlessDestinationConfigurationOutputReference
@@ -23,6 +23,7 @@ type DataAwsccKinesisfirehoseDeliveryStream interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	DatabaseSourceConfiguration() DataAwsccKinesisfirehoseDeliveryStreamDatabaseSourceConfigurationOutputReference
 	DeliveryStreamEncryptionConfigurationInput() DataAwsccKinesisfirehoseDeliveryStreamDeliveryStreamEncryptionConfigurationInputOutputReference
 	DeliveryStreamName() *string
 	DeliveryStreamType() *string
@@ -30,6 +31,7 @@ type DataAwsccKinesisfirehoseDeliveryStream interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DirectPutSourceConfiguration() DataAwsccKinesisfirehoseDeliveryStreamDirectPutSourceConfigurationOutputReference
 	ElasticsearchDestinationConfiguration() DataAwsccKinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationOutputReference
 	ExtendedS3DestinationConfiguration() DataAwsccKinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference
 	// Experimental.
@@ -41,6 +43,7 @@ type DataAwsccKinesisfirehoseDeliveryStream interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	HttpEndpointDestinationConfiguration() DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputReference
+	IcebergDestinationConfiguration() DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationOutputReference
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -98,6 +101,10 @@ type DataAwsccKinesisfirehoseDeliveryStream interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -172,6 +179,16 @@ func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStream) Count() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStream) DatabaseSourceConfiguration() DataAwsccKinesisfirehoseDeliveryStreamDatabaseSourceConfigurationOutputReference {
+	var returns DataAwsccKinesisfirehoseDeliveryStreamDatabaseSourceConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"databaseSourceConfiguration",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStream) DeliveryStreamEncryptionConfigurationInput() DataAwsccKinesisfirehoseDeliveryStreamDeliveryStreamEncryptionConfigurationInputOutputReference {
 	var returns DataAwsccKinesisfirehoseDeliveryStreamDeliveryStreamEncryptionConfigurationInputOutputReference
 	_jsii_.Get(
@@ -207,6 +224,16 @@ func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStream) DependsOn() *[]*strin
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStream) DirectPutSourceConfiguration() DataAwsccKinesisfirehoseDeliveryStreamDirectPutSourceConfigurationOutputReference {
+	var returns DataAwsccKinesisfirehoseDeliveryStreamDirectPutSourceConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"directPutSourceConfiguration",
 		&returns,
 	)
 	return returns
@@ -267,6 +294,16 @@ func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStream) HttpEndpointDestinati
 	_jsii_.Get(
 		j,
 		"httpEndpointDestinationConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStream) IcebergDestinationConfiguration() DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationOutputReference {
+	var returns DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"icebergDestinationConfiguration",
 		&returns,
 	)
 	return returns
@@ -433,7 +470,7 @@ func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStream) TerraformResourceType
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kinesisfirehose_delivery_stream awscc_kinesisfirehose_delivery_stream} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kinesisfirehose_delivery_stream awscc_kinesisfirehose_delivery_stream} Data Source.
 func NewDataAwsccKinesisfirehoseDeliveryStream(scope constructs.Construct, id *string, config *DataAwsccKinesisfirehoseDeliveryStreamConfig) DataAwsccKinesisfirehoseDeliveryStream {
 	_init_.Initialize()
 
@@ -451,7 +488,7 @@ func NewDataAwsccKinesisfirehoseDeliveryStream(scope constructs.Construct, id *s
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kinesisfirehose_delivery_stream awscc_kinesisfirehose_delivery_stream} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kinesisfirehose_delivery_stream awscc_kinesisfirehose_delivery_stream} Data Source.
 func NewDataAwsccKinesisfirehoseDeliveryStream_Override(d DataAwsccKinesisfirehoseDeliveryStream, scope constructs.Construct, id *string, config *DataAwsccKinesisfirehoseDeliveryStreamConfig) {
 	_init_.Initialize()
 
@@ -818,6 +855,32 @@ func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStream) SynthesizeAttributes(
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStream) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStream) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

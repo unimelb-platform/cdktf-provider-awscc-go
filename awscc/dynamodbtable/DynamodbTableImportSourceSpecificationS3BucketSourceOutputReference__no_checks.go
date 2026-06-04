@@ -56,7 +56,7 @@ func (j *jsiiProxy_DynamodbTableImportSourceSpecificationS3BucketSourceOutputRef
 	return nil
 }
 
-func (j *jsiiProxy_DynamodbTableImportSourceSpecificationS3BucketSourceOutputReference) validateSetInternalValueParameters(val *DynamodbTableImportSourceSpecificationS3BucketSource) error {
+func (j *jsiiProxy_DynamodbTableImportSourceSpecificationS3BucketSourceOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

@@ -64,6 +64,7 @@ type EventsRuleTargetsAppSyncParametersOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetGraphQlOperation()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (e *jsiiProxy_EventsRuleTargetsAppSyncParametersOutputReference) Interpolat
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EventsRuleTargetsAppSyncParametersOutputReference) ResetGraphQlOperation() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetGraphQlOperation",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EventsRuleTargetsAppSyncParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

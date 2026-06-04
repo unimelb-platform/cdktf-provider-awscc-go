@@ -1,0 +1,6 @@
+package dataawsccappsyncchannelnamespace
+
+
+type DataAwsccAppsyncChannelNamespaceHandlerConfigsOnPublishIntegration struct {
+}
+

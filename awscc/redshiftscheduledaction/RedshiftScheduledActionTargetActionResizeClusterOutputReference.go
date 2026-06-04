@@ -77,6 +77,7 @@ type RedshiftScheduledActionTargetActionResizeClusterOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetClassic()
+	ResetClusterIdentifier()
 	ResetClusterType()
 	ResetNodeType()
 	ResetNumberOfNodes()
@@ -593,6 +594,14 @@ func (r *jsiiProxy_RedshiftScheduledActionTargetActionResizeClusterOutputReferen
 	_jsii_.InvokeVoid(
 		r,
 		"resetClassic",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RedshiftScheduledActionTargetActionResizeClusterOutputReference) ResetClusterIdentifier() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetClusterIdentifier",
 		nil, // no parameters
 	)
 }

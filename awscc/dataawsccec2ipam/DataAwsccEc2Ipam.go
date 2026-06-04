@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2ipam/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_ipam awscc_ec2_ipam}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_ipam awscc_ec2_ipam}.
 type DataAwsccEc2Ipam interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -23,11 +23,13 @@ type DataAwsccEc2Ipam interface {
 	SetCount(val interface{})
 	DefaultResourceDiscoveryAssociationId() *string
 	DefaultResourceDiscoveryId() *string
+	DefaultResourceDiscoveryOrganizationalUnitExclusions() DataAwsccEc2IpamDefaultResourceDiscoveryOrganizationalUnitExclusionsList
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	Description() *string
+	EnablePrivateGua() cdktf.IResolvable
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -44,6 +46,7 @@ type DataAwsccEc2Ipam interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	MeteredAccount() *string
 	// The tree node.
 	Node() constructs.Node
 	OperatingRegions() DataAwsccEc2IpamOperatingRegionsList
@@ -94,6 +97,10 @@ type DataAwsccEc2Ipam interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -168,6 +175,16 @@ func (j *jsiiProxy_DataAwsccEc2Ipam) DefaultResourceDiscoveryId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2Ipam) DefaultResourceDiscoveryOrganizationalUnitExclusions() DataAwsccEc2IpamDefaultResourceDiscoveryOrganizationalUnitExclusionsList {
+	var returns DataAwsccEc2IpamDefaultResourceDiscoveryOrganizationalUnitExclusionsList
+	_jsii_.Get(
+		j,
+		"defaultResourceDiscoveryOrganizationalUnitExclusions",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2Ipam) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -183,6 +200,16 @@ func (j *jsiiProxy_DataAwsccEc2Ipam) Description() *string {
 	_jsii_.Get(
 		j,
 		"description",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2Ipam) EnablePrivateGua() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"enablePrivateGua",
 		&returns,
 	)
 	return returns
@@ -253,6 +280,16 @@ func (j *jsiiProxy_DataAwsccEc2Ipam) Lifecycle() *cdktf.TerraformResourceLifecyc
 	_jsii_.Get(
 		j,
 		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2Ipam) MeteredAccount() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"meteredAccount",
 		&returns,
 	)
 	return returns
@@ -389,7 +426,7 @@ func (j *jsiiProxy_DataAwsccEc2Ipam) Tier() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_ipam awscc_ec2_ipam} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_ipam awscc_ec2_ipam} Data Source.
 func NewDataAwsccEc2Ipam(scope constructs.Construct, id *string, config *DataAwsccEc2IpamConfig) DataAwsccEc2Ipam {
 	_init_.Initialize()
 
@@ -407,7 +444,7 @@ func NewDataAwsccEc2Ipam(scope constructs.Construct, id *string, config *DataAws
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_ipam awscc_ec2_ipam} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_ipam awscc_ec2_ipam} Data Source.
 func NewDataAwsccEc2Ipam_Override(d DataAwsccEc2Ipam, scope constructs.Construct, id *string, config *DataAwsccEc2IpamConfig) {
 	_init_.Initialize()
 
@@ -774,6 +811,32 @@ func (d *jsiiProxy_DataAwsccEc2Ipam) SynthesizeAttributes() *map[string]interfac
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2Ipam) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2Ipam) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

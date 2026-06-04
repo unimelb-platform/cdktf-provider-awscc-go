@@ -2,9 +2,21 @@ package autoscalingautoscalinggroup
 
 
 type AutoscalingAutoScalingGroupNotificationConfigurations struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/autoscaling_auto_scaling_group#topic_arn AutoscalingAutoScalingGroup#topic_arn}.
-	TopicArn *string `field:"required" json:"topicArn" yaml:"topicArn"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/autoscaling_auto_scaling_group#notification_types AutoscalingAutoScalingGroup#notification_types}.
+	// A list of event types that send a notification.
+	//
+	// Event types can include any of the following types.
+	//   *Allowed values*:
+	//   +   ``autoscaling:EC2_INSTANCE_LAUNCH``
+	//   +   ``autoscaling:EC2_INSTANCE_LAUNCH_ERROR``
+	//   +   ``autoscaling:EC2_INSTANCE_TERMINATE``
+	//   +   ``autoscaling:EC2_INSTANCE_TERMINATE_ERROR``
+	//   +   ``autoscaling:TEST_NOTIFICATION``
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/autoscaling_auto_scaling_group#notification_types AutoscalingAutoScalingGroup#notification_types}
 	NotificationTypes *[]*string `field:"optional" json:"notificationTypes" yaml:"notificationTypes"`
+	// The Amazon Resource Name (ARN) of the Amazon SNS topic.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/autoscaling_auto_scaling_group#topic_arn AutoscalingAutoScalingGroup#topic_arn}
+	TopicArn *string `field:"optional" json:"topicArn" yaml:"topicArn"`
 }
 

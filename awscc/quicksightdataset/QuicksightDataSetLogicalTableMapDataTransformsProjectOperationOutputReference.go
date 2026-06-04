@@ -64,6 +64,7 @@ type QuicksightDataSetLogicalTableMapDataTransformsProjectOperationOutputReferen
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetProjectedColumns()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsProjectOperatio
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsProjectOperationOutputReference) ResetProjectedColumns() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetProjectedColumns",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsProjectOperationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

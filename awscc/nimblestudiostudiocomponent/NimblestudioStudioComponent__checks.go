@@ -119,6 +119,14 @@ func (n *jsiiProxy_NimblestudioStudioComponent) validateInterpolationForAttribut
 	return nil
 }
 
+func (n *jsiiProxy_NimblestudioStudioComponent) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (n *jsiiProxy_NimblestudioStudioComponent) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (n *jsiiProxy_NimblestudioStudioComponent) validateMoveToParameters(moveTar
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (n *jsiiProxy_NimblestudioStudioComponent) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -464,22 +480,6 @@ func (j *jsiiProxy_NimblestudioStudioComponent) validateSetProvisionersParameter
 				return fmt.Errorf("parameter val[%#v] must be one of the allowed types: *cdktf.FileProvisioner, *cdktf.LocalExecProvisioner, *cdktf.RemoteExecProvisioner; received %#v (a %T)", idx_97dfc6, v, v)
 			}
 		}
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_NimblestudioStudioComponent) validateSetRuntimeRoleArnParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_NimblestudioStudioComponent) validateSetSecureInitializationRoleArnParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil

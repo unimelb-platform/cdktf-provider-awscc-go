@@ -10,6 +10,7 @@ import (
 
 type DataAwsccCleanroomsAnalysisTemplateSourceOutputReference interface {
 	cdktf.ComplexObject
+	Artifacts() DataAwsccCleanroomsAnalysisTemplateSourceArtifactsOutputReference
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -75,6 +76,16 @@ type DataAwsccCleanroomsAnalysisTemplateSourceOutputReference interface {
 // The jsii proxy struct for DataAwsccCleanroomsAnalysisTemplateSourceOutputReference
 type jsiiProxy_DataAwsccCleanroomsAnalysisTemplateSourceOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_DataAwsccCleanroomsAnalysisTemplateSourceOutputReference) Artifacts() DataAwsccCleanroomsAnalysisTemplateSourceArtifactsOutputReference {
+	var returns DataAwsccCleanroomsAnalysisTemplateSourceArtifactsOutputReference
+	_jsii_.Get(
+		j,
+		"artifacts",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccCleanroomsAnalysisTemplateSourceOutputReference) ComplexObjectIndex() interface{} {

@@ -72,6 +72,10 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersVolumeM
 	return nil
 }
 
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsOutputReference) validateSetSubPathParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

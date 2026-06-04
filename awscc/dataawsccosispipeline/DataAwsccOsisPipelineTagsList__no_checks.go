@@ -4,6 +4,10 @@ package dataawsccosispipeline
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccOsisPipelineTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccOsisPipelineTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

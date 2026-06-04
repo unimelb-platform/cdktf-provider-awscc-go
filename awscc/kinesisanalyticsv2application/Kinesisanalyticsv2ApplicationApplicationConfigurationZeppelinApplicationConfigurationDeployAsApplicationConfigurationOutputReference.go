@@ -30,7 +30,7 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationCon
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	S3ContentLocation() Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationDeployAsApplicationConfigurationS3ContentLocationOutputReference
-	S3ContentLocationInput() *Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationDeployAsApplicationConfigurationS3ContentLocation
+	S3ContentLocationInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationCon
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutS3ContentLocation(value *Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationDeployAsApplicationConfigurationS3ContentLocation)
+	ResetS3ContentLocation()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -139,8 +140,8 @@ func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelin
 	return returns
 }
 
-func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationDeployAsApplicationConfigurationOutputReference) S3ContentLocationInput() *Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationDeployAsApplicationConfigurationS3ContentLocation {
-	var returns *Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationDeployAsApplicationConfigurationS3ContentLocation
+func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationDeployAsApplicationConfigurationOutputReference) S3ContentLocationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"s3ContentLocationInput",
@@ -446,6 +447,14 @@ func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelin
 		k,
 		"putS3ContentLocation",
 		[]interface{}{value},
+	)
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationDeployAsApplicationConfigurationOutputReference) ResetS3ContentLocation() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetS3ContentLocation",
+		nil, // no parameters
 	)
 }
 

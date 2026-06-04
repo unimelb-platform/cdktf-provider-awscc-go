@@ -41,6 +41,12 @@ type ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteCo
 	JmxPrometheusExporterInput() interface{}
 	Logs() ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsLogsList
 	LogsInput() interface{}
+	NetWeaverPrometheusExporter() ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsNetWeaverPrometheusExporterOutputReference
+	NetWeaverPrometheusExporterInput() interface{}
+	Processes() ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsProcessesList
+	ProcessesInput() interface{}
+	SqlServerPrometheusExporter() ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsSqlServerPrometheusExporterOutputReference
+	SqlServerPrometheusExporterInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -81,6 +87,9 @@ type ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteCo
 	PutHanaPrometheusExporter(value *ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsHanaPrometheusExporter)
 	PutJmxPrometheusExporter(value *ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsJmxPrometheusExporter)
 	PutLogs(value interface{})
+	PutNetWeaverPrometheusExporter(value *ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsNetWeaverPrometheusExporter)
+	PutProcesses(value interface{})
+	PutSqlServerPrometheusExporter(value *ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsSqlServerPrometheusExporter)
 	PutWindowsEvents(value interface{})
 	ResetAlarmMetrics()
 	ResetAlarms()
@@ -88,6 +97,9 @@ type ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteCo
 	ResetHanaPrometheusExporter()
 	ResetJmxPrometheusExporter()
 	ResetLogs()
+	ResetNetWeaverPrometheusExporter()
+	ResetProcesses()
+	ResetSqlServerPrometheusExporter()
 	ResetWindowsEvents()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -269,6 +281,66 @@ func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefa
 	_jsii_.Get(
 		j,
 		"logsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsOutputReference) NetWeaverPrometheusExporter() ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsNetWeaverPrometheusExporterOutputReference {
+	var returns ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsNetWeaverPrometheusExporterOutputReference
+	_jsii_.Get(
+		j,
+		"netWeaverPrometheusExporter",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsOutputReference) NetWeaverPrometheusExporterInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"netWeaverPrometheusExporterInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsOutputReference) Processes() ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsProcessesList {
+	var returns ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsProcessesList
+	_jsii_.Get(
+		j,
+		"processes",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsOutputReference) ProcessesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"processesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsOutputReference) SqlServerPrometheusExporter() ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsSqlServerPrometheusExporterOutputReference {
+	var returns ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsSqlServerPrometheusExporterOutputReference
+	_jsii_.Get(
+		j,
+		"sqlServerPrometheusExporter",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsOutputReference) SqlServerPrometheusExporterInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"sqlServerPrometheusExporterInput",
 		&returns,
 	)
 	return returns
@@ -649,6 +721,39 @@ func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefa
 	)
 }
 
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsOutputReference) PutNetWeaverPrometheusExporter(value *ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsNetWeaverPrometheusExporter) {
+	if err := a.validatePutNetWeaverPrometheusExporterParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putNetWeaverPrometheusExporter",
+		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsOutputReference) PutProcesses(value interface{}) {
+	if err := a.validatePutProcessesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putProcesses",
+		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsOutputReference) PutSqlServerPrometheusExporter(value *ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsSqlServerPrometheusExporter) {
+	if err := a.validatePutSqlServerPrometheusExporterParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putSqlServerPrometheusExporter",
+		[]interface{}{value},
+	)
+}
+
 func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsOutputReference) PutWindowsEvents(value interface{}) {
 	if err := a.validatePutWindowsEventsParameters(value); err != nil {
 		panic(err)
@@ -704,6 +809,30 @@ func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefa
 	_jsii_.InvokeVoid(
 		a,
 		"resetLogs",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsOutputReference) ResetNetWeaverPrometheusExporter() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetNetWeaverPrometheusExporter",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsOutputReference) ResetProcesses() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetProcesses",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsOutputReference) ResetSqlServerPrometheusExporter() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetSqlServerPrometheusExporter",
 		nil, // no parameters
 	)
 }

@@ -27,8 +27,8 @@ type DatapipelinePipelinePipelineObjectsFieldsOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DatapipelinePipelinePipelineObjectsFields
-	SetInternalValue(val *DatapipelinePipelinePipelineObjectsFields)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Key() *string
 	SetKey(val *string)
 	KeyInput() *string
@@ -70,6 +70,7 @@ type DatapipelinePipelinePipelineObjectsFieldsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
 	ResetRefValue()
 	ResetStringValue()
 	// Produce the Token's value at resolution time.
@@ -127,8 +128,8 @@ func (j *jsiiProxy_DatapipelinePipelinePipelineObjectsFieldsOutputReference) Fqn
 	return returns
 }
 
-func (j *jsiiProxy_DatapipelinePipelinePipelineObjectsFieldsOutputReference) InternalValue() *DatapipelinePipelinePipelineObjectsFields {
-	var returns *DatapipelinePipelinePipelineObjectsFields
+func (j *jsiiProxy_DatapipelinePipelinePipelineObjectsFieldsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -267,7 +268,7 @@ func (j *jsiiProxy_DatapipelinePipelinePipelineObjectsFieldsOutputReference)SetC
 	)
 }
 
-func (j *jsiiProxy_DatapipelinePipelinePipelineObjectsFieldsOutputReference)SetInternalValue(val *DatapipelinePipelinePipelineObjectsFields) {
+func (j *jsiiProxy_DatapipelinePipelinePipelineObjectsFieldsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -517,6 +518,14 @@ func (d *jsiiProxy_DatapipelinePipelinePipelineObjectsFieldsOutputReference) Int
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatapipelinePipelinePipelineObjectsFieldsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetKey",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatapipelinePipelinePipelineObjectsFieldsOutputReference) ResetRefValue() {

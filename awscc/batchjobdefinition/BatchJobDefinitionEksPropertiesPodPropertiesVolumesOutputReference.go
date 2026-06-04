@@ -36,6 +36,8 @@ type BatchJobDefinitionEksPropertiesPodPropertiesVolumesOutputReference interfac
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
+	PersistentVolumeClaim() BatchJobDefinitionEksPropertiesPodPropertiesVolumesPersistentVolumeClaimOutputReference
+	PersistentVolumeClaimInput() interface{}
 	Secret() BatchJobDefinitionEksPropertiesPodPropertiesVolumesSecretOutputReference
 	SecretInput() interface{}
 	// Experimental.
@@ -72,9 +74,12 @@ type BatchJobDefinitionEksPropertiesPodPropertiesVolumesOutputReference interfac
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutEmptyDir(value *BatchJobDefinitionEksPropertiesPodPropertiesVolumesEmptyDir)
 	PutHostPath(value *BatchJobDefinitionEksPropertiesPodPropertiesVolumesHostPath)
+	PutPersistentVolumeClaim(value *BatchJobDefinitionEksPropertiesPodPropertiesVolumesPersistentVolumeClaim)
 	PutSecret(value *BatchJobDefinitionEksPropertiesPodPropertiesVolumesSecret)
 	ResetEmptyDir()
 	ResetHostPath()
+	ResetName()
+	ResetPersistentVolumeClaim()
 	ResetSecret()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -196,6 +201,26 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesVolumesOutputRefe
 	_jsii_.Get(
 		j,
 		"nameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesVolumesOutputReference) PersistentVolumeClaim() BatchJobDefinitionEksPropertiesPodPropertiesVolumesPersistentVolumeClaimOutputReference {
+	var returns BatchJobDefinitionEksPropertiesPodPropertiesVolumesPersistentVolumeClaimOutputReference
+	_jsii_.Get(
+		j,
+		"persistentVolumeClaim",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesVolumesOutputReference) PersistentVolumeClaimInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"persistentVolumeClaimInput",
 		&returns,
 	)
 	return returns
@@ -543,6 +568,17 @@ func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesVolumesOutputRefe
 	)
 }
 
+func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesVolumesOutputReference) PutPersistentVolumeClaim(value *BatchJobDefinitionEksPropertiesPodPropertiesVolumesPersistentVolumeClaim) {
+	if err := b.validatePutPersistentVolumeClaimParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"putPersistentVolumeClaim",
+		[]interface{}{value},
+	)
+}
+
 func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesVolumesOutputReference) PutSecret(value *BatchJobDefinitionEksPropertiesPodPropertiesVolumesSecret) {
 	if err := b.validatePutSecretParameters(value); err != nil {
 		panic(err)
@@ -566,6 +602,22 @@ func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesVolumesOutputRefe
 	_jsii_.InvokeVoid(
 		b,
 		"resetHostPath",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesVolumesOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesVolumesOutputReference) ResetPersistentVolumeClaim() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetPersistentVolumeClaim",
 		nil, // no parameters
 	)
 }

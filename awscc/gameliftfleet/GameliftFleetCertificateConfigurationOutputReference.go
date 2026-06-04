@@ -64,6 +64,7 @@ type GameliftFleetCertificateConfigurationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCertificateType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (g *jsiiProxy_GameliftFleetCertificateConfigurationOutputReference) Interpo
 	)
 
 	return returns
+}
+
+func (g *jsiiProxy_GameliftFleetCertificateConfigurationOutputReference) ResetCertificateType() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetCertificateType",
+		nil, // no parameters
+	)
 }
 
 func (g *jsiiProxy_GameliftFleetCertificateConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

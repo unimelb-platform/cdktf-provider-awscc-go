@@ -92,7 +92,15 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurati
 	return nil
 }
 
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference) validateSetCustomTimeZoneParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference) validateSetErrorOutputPrefixParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference) validateSetFileExtensionParameters(val *string) error {
 	return nil
 }
 

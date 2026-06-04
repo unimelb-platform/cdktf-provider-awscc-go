@@ -112,6 +112,37 @@ func (m *jsiiProxy_MediaconnectFlowSourceOutputReference) validatePutGatewayBrid
 	return nil
 }
 
+func (m *jsiiProxy_MediaconnectFlowSourceOutputReference) validatePutMediaStreamSourceConfigurationsParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*MediaconnectFlowSourceMediaStreamSourceConfigurations:
+		value := value.(*[]*MediaconnectFlowSourceMediaStreamSourceConfigurations)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*MediaconnectFlowSourceMediaStreamSourceConfigurations:
+		value_ := value.([]*MediaconnectFlowSourceMediaStreamSourceConfigurations)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*MediaconnectFlowSourceMediaStreamSourceConfigurations; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
 func (m *jsiiProxy_MediaconnectFlowSourceOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	if _context == nil {
 		return fmt.Errorf("parameter _context is required, but nil was provided")
@@ -242,6 +273,14 @@ func (j *jsiiProxy_MediaconnectFlowSourceOutputReference) validateSetMaxBitrateP
 }
 
 func (j *jsiiProxy_MediaconnectFlowSourceOutputReference) validateSetMaxLatencyParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_MediaconnectFlowSourceOutputReference) validateSetMaxSyncBufferParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

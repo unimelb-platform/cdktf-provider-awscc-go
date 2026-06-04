@@ -37,6 +37,8 @@ type DataAwsccMediaconnectFlowSourceOutputReference interface {
 	SetInternalValue(val *DataAwsccMediaconnectFlowSource)
 	MaxBitrate() *float64
 	MaxLatency() *float64
+	MaxSyncBuffer() *float64
+	MediaStreamSourceConfigurations() DataAwsccMediaconnectFlowSourceMediaStreamSourceConfigurationsList
 	MinLatency() *float64
 	Name() *string
 	Protocol() *string
@@ -221,6 +223,26 @@ func (j *jsiiProxy_DataAwsccMediaconnectFlowSourceOutputReference) MaxLatency() 
 	_jsii_.Get(
 		j,
 		"maxLatency",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccMediaconnectFlowSourceOutputReference) MaxSyncBuffer() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxSyncBuffer",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccMediaconnectFlowSourceOutputReference) MediaStreamSourceConfigurations() DataAwsccMediaconnectFlowSourceMediaStreamSourceConfigurationsList {
+	var returns DataAwsccMediaconnectFlowSourceMediaStreamSourceConfigurationsList
+	_jsii_.Get(
+		j,
+		"mediaStreamSourceConfigurations",
 		&returns,
 	)
 	return returns

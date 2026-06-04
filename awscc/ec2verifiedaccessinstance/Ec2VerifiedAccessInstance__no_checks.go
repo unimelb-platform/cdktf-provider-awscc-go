@@ -56,7 +56,15 @@ func (e *jsiiProxy_Ec2VerifiedAccessInstance) validateInterpolationForAttributeP
 	return nil
 }
 
+func (e *jsiiProxy_Ec2VerifiedAccessInstance) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VerifiedAccessInstance) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VerifiedAccessInstance) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -89,6 +97,10 @@ func validateEc2VerifiedAccessInstance_IsTerraformElementParameters(x interface{
 }
 
 func validateEc2VerifiedAccessInstance_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VerifiedAccessInstance) validateSetCidrEndpointsCustomSubDomainParameters(val *string) error {
 	return nil
 }
 

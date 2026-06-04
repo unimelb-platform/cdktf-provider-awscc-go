@@ -32,6 +32,7 @@ type DataAwsccCleanroomsCollaborationMembersOutputReference interface {
 	InternalValue() *DataAwsccCleanroomsCollaborationMembers
 	SetInternalValue(val *DataAwsccCleanroomsCollaborationMembers)
 	MemberAbilities() *[]*string
+	MlMemberAbilities() DataAwsccCleanroomsCollaborationMembersMlMemberAbilitiesOutputReference
 	PaymentConfiguration() DataAwsccCleanroomsCollaborationMembersPaymentConfigurationOutputReference
 	// Experimental.
 	TerraformAttribute() *string
@@ -155,6 +156,16 @@ func (j *jsiiProxy_DataAwsccCleanroomsCollaborationMembersOutputReference) Membe
 	_jsii_.Get(
 		j,
 		"memberAbilities",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCleanroomsCollaborationMembersOutputReference) MlMemberAbilities() DataAwsccCleanroomsCollaborationMembersMlMemberAbilitiesOutputReference {
+	var returns DataAwsccCleanroomsCollaborationMembersMlMemberAbilitiesOutputReference
+	_jsii_.Get(
+		j,
+		"mlMemberAbilities",
 		&returns,
 	)
 	return returns

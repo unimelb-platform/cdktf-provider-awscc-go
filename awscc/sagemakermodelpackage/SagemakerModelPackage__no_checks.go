@@ -56,7 +56,15 @@ func (s *jsiiProxy_SagemakerModelPackage) validateInterpolationForAttributeParam
 	return nil
 }
 
+func (s *jsiiProxy_SagemakerModelPackage) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_SagemakerModelPackage) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (s *jsiiProxy_SagemakerModelPackage) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -84,11 +92,19 @@ func (s *jsiiProxy_SagemakerModelPackage) validatePutMetadataPropertiesParameter
 	return nil
 }
 
+func (s *jsiiProxy_SagemakerModelPackage) validatePutModelCardParameters(value *SagemakerModelPackageModelCard) error {
+	return nil
+}
+
 func (s *jsiiProxy_SagemakerModelPackage) validatePutModelMetricsParameters(value *SagemakerModelPackageModelMetrics) error {
 	return nil
 }
 
 func (s *jsiiProxy_SagemakerModelPackage) validatePutModelPackageStatusDetailsParameters(value *SagemakerModelPackageModelPackageStatusDetails) error {
+	return nil
+}
+
+func (s *jsiiProxy_SagemakerModelPackage) validatePutSecurityConfigParameters(value *SagemakerModelPackageSecurityConfig) error {
 	return nil
 }
 
@@ -185,6 +201,10 @@ func (j *jsiiProxy_SagemakerModelPackage) validateSetSamplePayloadUrlParameters(
 }
 
 func (j *jsiiProxy_SagemakerModelPackage) validateSetSkipModelValidationParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_SagemakerModelPackage) validateSetSourceUriParameters(val *string) error {
 	return nil
 }
 

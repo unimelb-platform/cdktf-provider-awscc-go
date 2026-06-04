@@ -67,6 +67,8 @@ type AppstreamImageBuilderAccessEndpointsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEndpointType()
+	ResetVpceId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (a *jsiiProxy_AppstreamImageBuilderAccessEndpointsOutputReference) Interpol
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AppstreamImageBuilderAccessEndpointsOutputReference) ResetEndpointType() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetEndpointType",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppstreamImageBuilderAccessEndpointsOutputReference) ResetVpceId() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetVpceId",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AppstreamImageBuilderAccessEndpointsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

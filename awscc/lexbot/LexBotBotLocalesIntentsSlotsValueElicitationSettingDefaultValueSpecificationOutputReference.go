@@ -64,6 +64,7 @@ type LexBotBotLocalesIntentsSlotsValueElicitationSettingDefaultValueSpecificatio
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDefaultValueList(value interface{})
+	ResetDefaultValueList()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -446,6 +447,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingDefaultVal
 		l,
 		"putDefaultValueList",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingDefaultValueSpecificationOutputReference) ResetDefaultValueList() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetDefaultValueList",
+		nil, // no parameters
 	)
 }
 

@@ -67,6 +67,8 @@ type ElasticbeanstalkConfigurationTemplateSourceConfigurationOutputReference int
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetApplicationName()
+	ResetTemplateName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (e *jsiiProxy_ElasticbeanstalkConfigurationTemplateSourceConfigurationOutpu
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_ElasticbeanstalkConfigurationTemplateSourceConfigurationOutputReference) ResetApplicationName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetApplicationName",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ElasticbeanstalkConfigurationTemplateSourceConfigurationOutputReference) ResetTemplateName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetTemplateName",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_ElasticbeanstalkConfigurationTemplateSourceConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -56,7 +56,15 @@ func (n *jsiiProxy_NetworkfirewallTlsInspectionConfiguration) validateInterpolat
 	return nil
 }
 
+func (n *jsiiProxy_NetworkfirewallTlsInspectionConfiguration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (n *jsiiProxy_NetworkfirewallTlsInspectionConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (n *jsiiProxy_NetworkfirewallTlsInspectionConfiguration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

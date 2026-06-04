@@ -74,6 +74,7 @@ type MediapackagePackagingConfigurationCmafPackageOutputReference interface {
 	PutEncryption(value *MediapackagePackagingConfigurationCmafPackageEncryption)
 	PutHlsManifests(value interface{})
 	ResetEncryption()
+	ResetHlsManifests()
 	ResetIncludeEncoderConfigurationInSegments()
 	ResetSegmentDurationSeconds()
 	// Produce the Token's value at resolution time.
@@ -558,6 +559,14 @@ func (m *jsiiProxy_MediapackagePackagingConfigurationCmafPackageOutputReference)
 	_jsii_.InvokeVoid(
 		m,
 		"resetEncryption",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediapackagePackagingConfigurationCmafPackageOutputReference) ResetHlsManifests() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetHlsManifests",
 		nil, // no parameters
 	)
 }

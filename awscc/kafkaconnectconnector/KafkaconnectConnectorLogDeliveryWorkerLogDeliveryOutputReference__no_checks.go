@@ -68,7 +68,7 @@ func (j *jsiiProxy_KafkaconnectConnectorLogDeliveryWorkerLogDeliveryOutputRefere
 	return nil
 }
 
-func (j *jsiiProxy_KafkaconnectConnectorLogDeliveryWorkerLogDeliveryOutputReference) validateSetInternalValueParameters(val *KafkaconnectConnectorLogDeliveryWorkerLogDelivery) error {
+func (j *jsiiProxy_KafkaconnectConnectorLogDeliveryWorkerLogDeliveryOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

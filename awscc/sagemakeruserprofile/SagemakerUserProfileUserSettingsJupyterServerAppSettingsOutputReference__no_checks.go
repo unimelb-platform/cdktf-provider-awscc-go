@@ -64,6 +64,10 @@ func (j *jsiiProxy_SagemakerUserProfileUserSettingsJupyterServerAppSettingsOutpu
 	return nil
 }
 
+func (j *jsiiProxy_SagemakerUserProfileUserSettingsJupyterServerAppSettingsOutputReference) validateSetLifecycleConfigArnsParameters(val *[]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_SagemakerUserProfileUserSettingsJupyterServerAppSettingsOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

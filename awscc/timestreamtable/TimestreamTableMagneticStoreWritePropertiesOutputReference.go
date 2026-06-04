@@ -67,6 +67,7 @@ type TimestreamTableMagneticStoreWritePropertiesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMagneticStoreRejectedDataLocation(value *TimestreamTableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation)
+	ResetEnableMagneticStoreWrites()
 	ResetMagneticStoreRejectedDataLocation()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -481,6 +482,14 @@ func (t *jsiiProxy_TimestreamTableMagneticStoreWritePropertiesOutputReference) P
 		t,
 		"putMagneticStoreRejectedDataLocation",
 		[]interface{}{value},
+	)
+}
+
+func (t *jsiiProxy_TimestreamTableMagneticStoreWritePropertiesOutputReference) ResetEnableMagneticStoreWrites() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetEnableMagneticStoreWrites",
+		nil, // no parameters
 	)
 }
 

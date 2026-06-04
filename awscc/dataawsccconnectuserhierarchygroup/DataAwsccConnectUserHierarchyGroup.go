@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccconnectuserhierarchygroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/connect_user_hierarchy_group awscc_connect_user_hierarchy_group}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/connect_user_hierarchy_group awscc_connect_user_hierarchy_group}.
 type DataAwsccConnectUserHierarchyGroup interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -87,6 +87,10 @@ type DataAwsccConnectUserHierarchyGroup interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -312,7 +316,7 @@ func (j *jsiiProxy_DataAwsccConnectUserHierarchyGroup) UserHierarchyGroupArn() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/connect_user_hierarchy_group awscc_connect_user_hierarchy_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/connect_user_hierarchy_group awscc_connect_user_hierarchy_group} Data Source.
 func NewDataAwsccConnectUserHierarchyGroup(scope constructs.Construct, id *string, config *DataAwsccConnectUserHierarchyGroupConfig) DataAwsccConnectUserHierarchyGroup {
 	_init_.Initialize()
 
@@ -330,7 +334,7 @@ func NewDataAwsccConnectUserHierarchyGroup(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/connect_user_hierarchy_group awscc_connect_user_hierarchy_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/connect_user_hierarchy_group awscc_connect_user_hierarchy_group} Data Source.
 func NewDataAwsccConnectUserHierarchyGroup_Override(d DataAwsccConnectUserHierarchyGroup, scope constructs.Construct, id *string, config *DataAwsccConnectUserHierarchyGroupConfig) {
 	_init_.Initialize()
 
@@ -697,6 +701,32 @@ func (d *jsiiProxy_DataAwsccConnectUserHierarchyGroup) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccConnectUserHierarchyGroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccConnectUserHierarchyGroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

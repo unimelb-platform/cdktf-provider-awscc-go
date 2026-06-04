@@ -227,9 +227,25 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingOutputRefe
 	return nil
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingOutputReference) validateSetInternalValueParameters(val *LexBotBotLocalesIntentsSlotsValueElicitationSetting) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *LexBotBotLocalesIntentsSlotsValueElicitationSetting:
+		val := val.(*LexBotBotLocalesIntentsSlotsValueElicitationSetting)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case LexBotBotLocalesIntentsSlotsValueElicitationSetting:
+		val_ := val.(LexBotBotLocalesIntentsSlotsValueElicitationSetting)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *LexBotBotLocalesIntentsSlotsValueElicitationSetting; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

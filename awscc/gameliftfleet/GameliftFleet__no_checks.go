@@ -56,7 +56,15 @@ func (g *jsiiProxy_GameliftFleet) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
+func (g *jsiiProxy_GameliftFleet) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (g *jsiiProxy_GameliftFleet) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (g *jsiiProxy_GameliftFleet) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -89,6 +97,10 @@ func (g *jsiiProxy_GameliftFleet) validatePutRuntimeConfigurationParameters(valu
 }
 
 func (g *jsiiProxy_GameliftFleet) validatePutScalingPoliciesParameters(value interface{}) error {
+	return nil
+}
+
+func (g *jsiiProxy_GameliftFleet) validatePutTagsParameters(value interface{}) error {
 	return nil
 }
 

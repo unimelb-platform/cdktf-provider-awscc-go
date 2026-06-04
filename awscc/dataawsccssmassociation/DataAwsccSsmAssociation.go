@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccssmassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ssm_association awscc_ssm_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ssm_association awscc_ssm_association}.
 type DataAwsccSsmAssociation interface {
 	cdktf.TerraformDataSource
 	ApplyOnlyAtCronInterval() cdktf.IResolvable
@@ -100,6 +100,10 @@ type DataAwsccSsmAssociation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -455,7 +459,7 @@ func (j *jsiiProxy_DataAwsccSsmAssociation) WaitForSuccessTimeoutSeconds() *floa
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ssm_association awscc_ssm_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ssm_association awscc_ssm_association} Data Source.
 func NewDataAwsccSsmAssociation(scope constructs.Construct, id *string, config *DataAwsccSsmAssociationConfig) DataAwsccSsmAssociation {
 	_init_.Initialize()
 
@@ -473,7 +477,7 @@ func NewDataAwsccSsmAssociation(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ssm_association awscc_ssm_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ssm_association awscc_ssm_association} Data Source.
 func NewDataAwsccSsmAssociation_Override(d DataAwsccSsmAssociation, scope constructs.Construct, id *string, config *DataAwsccSsmAssociationConfig) {
 	_init_.Initialize()
 
@@ -840,6 +844,32 @@ func (d *jsiiProxy_DataAwsccSsmAssociation) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSsmAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSsmAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

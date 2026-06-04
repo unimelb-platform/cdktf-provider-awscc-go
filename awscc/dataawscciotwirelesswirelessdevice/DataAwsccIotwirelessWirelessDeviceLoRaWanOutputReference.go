@@ -29,6 +29,7 @@ type DataAwsccIotwirelessWirelessDeviceLoRaWanOutputReference interface {
 	CreationStack() *[]*string
 	DevEui() *string
 	DeviceProfileId() *string
+	FPorts() DataAwsccIotwirelessWirelessDeviceLoRaWanFPortsOutputReference
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataAwsccIotwirelessWirelessDeviceLoRaWan
@@ -148,6 +149,16 @@ func (j *jsiiProxy_DataAwsccIotwirelessWirelessDeviceLoRaWanOutputReference) Dev
 	_jsii_.Get(
 		j,
 		"deviceProfileId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotwirelessWirelessDeviceLoRaWanOutputReference) FPorts() DataAwsccIotwirelessWirelessDeviceLoRaWanFPortsOutputReference {
+	var returns DataAwsccIotwirelessWirelessDeviceLoRaWanFPortsOutputReference
+	_jsii_.Get(
+		j,
+		"fPorts",
 		&returns,
 	)
 	return returns

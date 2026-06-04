@@ -9,19 +9,27 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2capacityreservation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_capacity_reservation awscc_ec2_capacity_reservation}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_capacity_reservation awscc_ec2_capacity_reservation}.
 type DataAwsccEc2CapacityReservation interface {
 	cdktf.TerraformDataSource
 	AvailabilityZone() *string
+	AvailabilityZoneId() *string
 	AvailableInstanceCount() *float64
+	CapacityAllocationSet() DataAwsccEc2CapacityReservationCapacityAllocationSetList
+	CapacityReservationArn() *string
+	CapacityReservationFleetId() *string
+	CapacityReservationId() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	CommitmentInfo() DataAwsccEc2CapacityReservationCommitmentInfoOutputReference
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	CreateDate() *string
+	DeliveryPreference() *string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -52,6 +60,7 @@ type DataAwsccEc2CapacityReservation interface {
 	// The tree node.
 	Node() constructs.Node
 	OutPostArn() *string
+	OwnerId() *string
 	PlacementGroupArn() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
@@ -59,6 +68,9 @@ type DataAwsccEc2CapacityReservation interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	ReservationType() *string
+	StartDate() *string
+	State() *string
 	TagSpecifications() DataAwsccEc2CapacityReservationTagSpecificationsList
 	Tenancy() *string
 	// Experimental.
@@ -68,6 +80,7 @@ type DataAwsccEc2CapacityReservation interface {
 	// Experimental.
 	TerraformResourceType() *string
 	TotalInstanceCount() *float64
+	UnusedReservationBillingOwnerId() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -97,6 +110,10 @@ type DataAwsccEc2CapacityReservation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -121,6 +138,16 @@ func (j *jsiiProxy_DataAwsccEc2CapacityReservation) AvailabilityZone() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2CapacityReservation) AvailabilityZoneId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"availabilityZoneId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2CapacityReservation) AvailableInstanceCount() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -131,11 +158,61 @@ func (j *jsiiProxy_DataAwsccEc2CapacityReservation) AvailableInstanceCount() *fl
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2CapacityReservation) CapacityAllocationSet() DataAwsccEc2CapacityReservationCapacityAllocationSetList {
+	var returns DataAwsccEc2CapacityReservationCapacityAllocationSetList
+	_jsii_.Get(
+		j,
+		"capacityAllocationSet",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2CapacityReservation) CapacityReservationArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"capacityReservationArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2CapacityReservation) CapacityReservationFleetId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"capacityReservationFleetId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2CapacityReservation) CapacityReservationId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"capacityReservationId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2CapacityReservation) CdktfStack() cdktf.TerraformStack {
 	var returns cdktf.TerraformStack
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2CapacityReservation) CommitmentInfo() DataAwsccEc2CapacityReservationCommitmentInfoOutputReference {
+	var returns DataAwsccEc2CapacityReservationCommitmentInfoOutputReference
+	_jsii_.Get(
+		j,
+		"commitmentInfo",
 		&returns,
 	)
 	return returns
@@ -156,6 +233,26 @@ func (j *jsiiProxy_DataAwsccEc2CapacityReservation) Count() interface{} {
 	_jsii_.Get(
 		j,
 		"count",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2CapacityReservation) CreateDate() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"createDate",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2CapacityReservation) DeliveryPreference() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"deliveryPreference",
 		&returns,
 	)
 	return returns
@@ -331,6 +428,16 @@ func (j *jsiiProxy_DataAwsccEc2CapacityReservation) OutPostArn() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2CapacityReservation) OwnerId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ownerId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2CapacityReservation) PlacementGroupArn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -356,6 +463,36 @@ func (j *jsiiProxy_DataAwsccEc2CapacityReservation) RawOverrides() interface{} {
 	_jsii_.Get(
 		j,
 		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2CapacityReservation) ReservationType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"reservationType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2CapacityReservation) StartDate() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"startDate",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2CapacityReservation) State() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"state",
 		&returns,
 	)
 	return returns
@@ -421,8 +558,18 @@ func (j *jsiiProxy_DataAwsccEc2CapacityReservation) TotalInstanceCount() *float6
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2CapacityReservation) UnusedReservationBillingOwnerId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"unusedReservationBillingOwnerId",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_capacity_reservation awscc_ec2_capacity_reservation} Data Source.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_capacity_reservation awscc_ec2_capacity_reservation} Data Source.
 func NewDataAwsccEc2CapacityReservation(scope constructs.Construct, id *string, config *DataAwsccEc2CapacityReservationConfig) DataAwsccEc2CapacityReservation {
 	_init_.Initialize()
 
@@ -440,7 +587,7 @@ func NewDataAwsccEc2CapacityReservation(scope constructs.Construct, id *string, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_capacity_reservation awscc_ec2_capacity_reservation} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_capacity_reservation awscc_ec2_capacity_reservation} Data Source.
 func NewDataAwsccEc2CapacityReservation_Override(d DataAwsccEc2CapacityReservation, scope constructs.Construct, id *string, config *DataAwsccEc2CapacityReservationConfig) {
 	_init_.Initialize()
 
@@ -807,6 +954,32 @@ func (d *jsiiProxy_DataAwsccEc2CapacityReservation) SynthesizeAttributes() *map[
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2CapacityReservation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2CapacityReservation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

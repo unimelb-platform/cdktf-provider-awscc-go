@@ -26,7 +26,7 @@ type S3BucketInventoryConfigurationsOutputReference interface {
 	// Experimental.
 	CreationStack() *[]*string
 	Destination() S3BucketInventoryConfigurationsDestinationOutputReference
-	DestinationInput() *S3BucketInventoryConfigurationsDestination
+	DestinationInput() interface{}
 	Enabled() interface{}
 	SetEnabled(val interface{})
 	EnabledInput() interface{}
@@ -82,8 +82,13 @@ type S3BucketInventoryConfigurationsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDestination(value *S3BucketInventoryConfigurationsDestination)
+	ResetDestination()
+	ResetEnabled()
+	ResetId()
+	ResetIncludedObjectVersions()
 	ResetOptionalFields()
 	ResetPrefix()
+	ResetScheduleFrequency()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -139,8 +144,8 @@ func (j *jsiiProxy_S3BucketInventoryConfigurationsOutputReference) Destination()
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketInventoryConfigurationsOutputReference) DestinationInput() *S3BucketInventoryConfigurationsDestination {
-	var returns *S3BucketInventoryConfigurationsDestination
+func (j *jsiiProxy_S3BucketInventoryConfigurationsOutputReference) DestinationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"destinationInput",
@@ -655,6 +660,38 @@ func (s *jsiiProxy_S3BucketInventoryConfigurationsOutputReference) PutDestinatio
 	)
 }
 
+func (s *jsiiProxy_S3BucketInventoryConfigurationsOutputReference) ResetDestination() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDestination",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketInventoryConfigurationsOutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetEnabled",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketInventoryConfigurationsOutputReference) ResetId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketInventoryConfigurationsOutputReference) ResetIncludedObjectVersions() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetIncludedObjectVersions",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_S3BucketInventoryConfigurationsOutputReference) ResetOptionalFields() {
 	_jsii_.InvokeVoid(
 		s,
@@ -667,6 +704,14 @@ func (s *jsiiProxy_S3BucketInventoryConfigurationsOutputReference) ResetPrefix()
 	_jsii_.InvokeVoid(
 		s,
 		"resetPrefix",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketInventoryConfigurationsOutputReference) ResetScheduleFrequency() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetScheduleFrequency",
 		nil, // no parameters
 	)
 }

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccssmpatchbaseline/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ssm_patch_baseline awscc_ssm_patch_baseline}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ssm_patch_baseline awscc_ssm_patch_baseline}.
 type DataAwsccSsmPatchBaseline interface {
 	cdktf.TerraformDataSource
 	ApprovalRules() DataAwsccSsmPatchBaselineApprovalRulesOutputReference
@@ -50,6 +50,7 @@ type DataAwsccSsmPatchBaseline interface {
 	// The tree node.
 	Node() constructs.Node
 	OperatingSystem() *string
+	PatchBaselineId() *string
 	PatchGroups() *[]*string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
@@ -96,6 +97,10 @@ type DataAwsccSsmPatchBaseline interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -310,6 +315,16 @@ func (j *jsiiProxy_DataAwsccSsmPatchBaseline) OperatingSystem() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccSsmPatchBaseline) PatchBaselineId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"patchBaselineId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccSsmPatchBaseline) PatchGroups() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -411,7 +426,7 @@ func (j *jsiiProxy_DataAwsccSsmPatchBaseline) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ssm_patch_baseline awscc_ssm_patch_baseline} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ssm_patch_baseline awscc_ssm_patch_baseline} Data Source.
 func NewDataAwsccSsmPatchBaseline(scope constructs.Construct, id *string, config *DataAwsccSsmPatchBaselineConfig) DataAwsccSsmPatchBaseline {
 	_init_.Initialize()
 
@@ -429,7 +444,7 @@ func NewDataAwsccSsmPatchBaseline(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ssm_patch_baseline awscc_ssm_patch_baseline} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ssm_patch_baseline awscc_ssm_patch_baseline} Data Source.
 func NewDataAwsccSsmPatchBaseline_Override(d DataAwsccSsmPatchBaseline, scope constructs.Construct, id *string, config *DataAwsccSsmPatchBaselineConfig) {
 	_init_.Initialize()
 
@@ -796,6 +811,32 @@ func (d *jsiiProxy_DataAwsccSsmPatchBaseline) SynthesizeAttributes() *map[string
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSsmPatchBaseline) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSsmPatchBaseline) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

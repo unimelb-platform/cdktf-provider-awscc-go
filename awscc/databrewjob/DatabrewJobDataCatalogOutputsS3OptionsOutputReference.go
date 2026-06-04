@@ -30,7 +30,7 @@ type DatabrewJobDataCatalogOutputsS3OptionsOutputReference interface {
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	Location() DatabrewJobDataCatalogOutputsS3OptionsLocationOutputReference
-	LocationInput() *DatabrewJobDataCatalogOutputsS3OptionsLocation
+	LocationInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type DatabrewJobDataCatalogOutputsS3OptionsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutLocation(value *DatabrewJobDataCatalogOutputsS3OptionsLocation)
+	ResetLocation()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -139,8 +140,8 @@ func (j *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsOutputReference) Locati
 	return returns
 }
 
-func (j *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsOutputReference) LocationInput() *DatabrewJobDataCatalogOutputsS3OptionsLocation {
-	var returns *DatabrewJobDataCatalogOutputsS3OptionsLocation
+func (j *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsOutputReference) LocationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"locationInput",
@@ -446,6 +447,14 @@ func (d *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsOutputReference) PutLoc
 		d,
 		"putLocation",
 		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsOutputReference) ResetLocation() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetLocation",
+		nil, // no parameters
 	)
 }
 

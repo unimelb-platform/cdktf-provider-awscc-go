@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccevidentlylaunch/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/evidently_launch awscc_evidently_launch}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/evidently_launch awscc_evidently_launch}.
 type DataAwsccEvidentlyLaunch interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -92,6 +92,10 @@ type DataAwsccEvidentlyLaunch interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -367,7 +371,7 @@ func (j *jsiiProxy_DataAwsccEvidentlyLaunch) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/evidently_launch awscc_evidently_launch} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/evidently_launch awscc_evidently_launch} Data Source.
 func NewDataAwsccEvidentlyLaunch(scope constructs.Construct, id *string, config *DataAwsccEvidentlyLaunchConfig) DataAwsccEvidentlyLaunch {
 	_init_.Initialize()
 
@@ -385,7 +389,7 @@ func NewDataAwsccEvidentlyLaunch(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/evidently_launch awscc_evidently_launch} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/evidently_launch awscc_evidently_launch} Data Source.
 func NewDataAwsccEvidentlyLaunch_Override(d DataAwsccEvidentlyLaunch, scope constructs.Construct, id *string, config *DataAwsccEvidentlyLaunchConfig) {
 	_init_.Initialize()
 
@@ -752,6 +756,32 @@ func (d *jsiiProxy_DataAwsccEvidentlyLaunch) SynthesizeAttributes() *map[string]
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEvidentlyLaunch) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEvidentlyLaunch) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

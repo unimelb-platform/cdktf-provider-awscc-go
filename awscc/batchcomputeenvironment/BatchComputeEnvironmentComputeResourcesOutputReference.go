@@ -124,11 +124,14 @@ type BatchComputeEnvironmentComputeResourcesOutputReference interface {
 	ResetInstanceRole()
 	ResetInstanceTypes()
 	ResetLaunchTemplate()
+	ResetMaxvCpus()
 	ResetMinvCpus()
 	ResetPlacementGroup()
 	ResetSecurityGroupIds()
 	ResetSpotIamFleetRole()
+	ResetSubnets()
 	ResetTags()
+	ResetType()
 	ResetUpdateToLatestImageVersion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -1114,6 +1117,14 @@ func (b *jsiiProxy_BatchComputeEnvironmentComputeResourcesOutputReference) Reset
 	)
 }
 
+func (b *jsiiProxy_BatchComputeEnvironmentComputeResourcesOutputReference) ResetMaxvCpus() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetMaxvCpus",
+		nil, // no parameters
+	)
+}
+
 func (b *jsiiProxy_BatchComputeEnvironmentComputeResourcesOutputReference) ResetMinvCpus() {
 	_jsii_.InvokeVoid(
 		b,
@@ -1146,10 +1157,26 @@ func (b *jsiiProxy_BatchComputeEnvironmentComputeResourcesOutputReference) Reset
 	)
 }
 
+func (b *jsiiProxy_BatchComputeEnvironmentComputeResourcesOutputReference) ResetSubnets() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetSubnets",
+		nil, // no parameters
+	)
+}
+
 func (b *jsiiProxy_BatchComputeEnvironmentComputeResourcesOutputReference) ResetTags() {
 	_jsii_.InvokeVoid(
 		b,
 		"resetTags",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchComputeEnvironmentComputeResourcesOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetType",
 		nil, // no parameters
 	)
 }

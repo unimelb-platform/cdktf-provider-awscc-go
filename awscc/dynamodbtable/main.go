@@ -41,6 +41,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "globalSecondaryIndexes", GoGetter: "GlobalSecondaryIndexes"},
 			_jsii_.MemberProperty{JsiiProperty: "globalSecondaryIndexesInput", GoGetter: "GlobalSecondaryIndexesInput"},
+			_jsii_.MemberMethod{JsiiMethod: "hasResourceMove", GoMethod: "HasResourceMove"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
 			_jsii_.MemberMethod{JsiiMethod: "importFrom", GoMethod: "ImportFrom"},
 			_jsii_.MemberProperty{JsiiProperty: "importSourceSpecification", GoGetter: "ImportSourceSpecification"},
@@ -53,8 +54,12 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "lifecycle", GoGetter: "Lifecycle"},
 			_jsii_.MemberProperty{JsiiProperty: "localSecondaryIndexes", GoGetter: "LocalSecondaryIndexes"},
 			_jsii_.MemberProperty{JsiiProperty: "localSecondaryIndexesInput", GoGetter: "LocalSecondaryIndexesInput"},
+			_jsii_.MemberMethod{JsiiMethod: "moveFromId", GoMethod: "MoveFromId"},
 			_jsii_.MemberMethod{JsiiMethod: "moveTo", GoMethod: "MoveTo"},
+			_jsii_.MemberMethod{JsiiMethod: "moveToId", GoMethod: "MoveToId"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "onDemandThroughput", GoGetter: "OnDemandThroughput"},
+			_jsii_.MemberProperty{JsiiProperty: "onDemandThroughputInput", GoGetter: "OnDemandThroughputInput"},
 			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
 			_jsii_.MemberProperty{JsiiProperty: "pointInTimeRecoverySpecification", GoGetter: "PointInTimeRecoverySpecification"},
 			_jsii_.MemberProperty{JsiiProperty: "pointInTimeRecoverySpecificationInput", GoGetter: "PointInTimeRecoverySpecificationInput"},
@@ -68,12 +73,15 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "putImportSourceSpecification", GoMethod: "PutImportSourceSpecification"},
 			_jsii_.MemberMethod{JsiiMethod: "putKinesisStreamSpecification", GoMethod: "PutKinesisStreamSpecification"},
 			_jsii_.MemberMethod{JsiiMethod: "putLocalSecondaryIndexes", GoMethod: "PutLocalSecondaryIndexes"},
+			_jsii_.MemberMethod{JsiiMethod: "putOnDemandThroughput", GoMethod: "PutOnDemandThroughput"},
 			_jsii_.MemberMethod{JsiiMethod: "putPointInTimeRecoverySpecification", GoMethod: "PutPointInTimeRecoverySpecification"},
 			_jsii_.MemberMethod{JsiiMethod: "putProvisionedThroughput", GoMethod: "PutProvisionedThroughput"},
+			_jsii_.MemberMethod{JsiiMethod: "putResourcePolicy", GoMethod: "PutResourcePolicy"},
 			_jsii_.MemberMethod{JsiiMethod: "putSseSpecification", GoMethod: "PutSseSpecification"},
 			_jsii_.MemberMethod{JsiiMethod: "putStreamSpecification", GoMethod: "PutStreamSpecification"},
 			_jsii_.MemberMethod{JsiiMethod: "putTags", GoMethod: "PutTags"},
 			_jsii_.MemberMethod{JsiiMethod: "putTimeToLiveSpecification", GoMethod: "PutTimeToLiveSpecification"},
+			_jsii_.MemberMethod{JsiiMethod: "putWarmThroughput", GoMethod: "PutWarmThroughput"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAttributeDefinitions", GoMethod: "ResetAttributeDefinitions"},
 			_jsii_.MemberMethod{JsiiMethod: "resetBillingMode", GoMethod: "ResetBillingMode"},
@@ -83,21 +91,27 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetImportSourceSpecification", GoMethod: "ResetImportSourceSpecification"},
 			_jsii_.MemberMethod{JsiiMethod: "resetKinesisStreamSpecification", GoMethod: "ResetKinesisStreamSpecification"},
 			_jsii_.MemberMethod{JsiiMethod: "resetLocalSecondaryIndexes", GoMethod: "ResetLocalSecondaryIndexes"},
+			_jsii_.MemberMethod{JsiiMethod: "resetOnDemandThroughput", GoMethod: "ResetOnDemandThroughput"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetPointInTimeRecoverySpecification", GoMethod: "ResetPointInTimeRecoverySpecification"},
 			_jsii_.MemberMethod{JsiiMethod: "resetProvisionedThroughput", GoMethod: "ResetProvisionedThroughput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetResourcePolicy", GoMethod: "ResetResourcePolicy"},
 			_jsii_.MemberMethod{JsiiMethod: "resetSseSpecification", GoMethod: "ResetSseSpecification"},
 			_jsii_.MemberMethod{JsiiMethod: "resetStreamSpecification", GoMethod: "ResetStreamSpecification"},
 			_jsii_.MemberMethod{JsiiMethod: "resetTableClass", GoMethod: "ResetTableClass"},
 			_jsii_.MemberMethod{JsiiMethod: "resetTableName", GoMethod: "ResetTableName"},
 			_jsii_.MemberMethod{JsiiMethod: "resetTags", GoMethod: "ResetTags"},
 			_jsii_.MemberMethod{JsiiMethod: "resetTimeToLiveSpecification", GoMethod: "ResetTimeToLiveSpecification"},
+			_jsii_.MemberMethod{JsiiMethod: "resetWarmThroughput", GoMethod: "ResetWarmThroughput"},
+			_jsii_.MemberProperty{JsiiProperty: "resourcePolicy", GoGetter: "ResourcePolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "resourcePolicyInput", GoGetter: "ResourcePolicyInput"},
 			_jsii_.MemberProperty{JsiiProperty: "sseSpecification", GoGetter: "SseSpecification"},
 			_jsii_.MemberProperty{JsiiProperty: "sseSpecificationInput", GoGetter: "SseSpecificationInput"},
 			_jsii_.MemberProperty{JsiiProperty: "streamArn", GoGetter: "StreamArn"},
 			_jsii_.MemberProperty{JsiiProperty: "streamSpecification", GoGetter: "StreamSpecification"},
 			_jsii_.MemberProperty{JsiiProperty: "streamSpecificationInput", GoGetter: "StreamSpecificationInput"},
 			_jsii_.MemberMethod{JsiiMethod: "synthesizeAttributes", GoMethod: "SynthesizeAttributes"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesizeHclAttributes", GoMethod: "SynthesizeHclAttributes"},
 			_jsii_.MemberProperty{JsiiProperty: "tableClass", GoGetter: "TableClass"},
 			_jsii_.MemberProperty{JsiiProperty: "tableClassInput", GoGetter: "TableClassInput"},
 			_jsii_.MemberProperty{JsiiProperty: "tableName", GoGetter: "TableName"},
@@ -109,9 +123,12 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "terraformResourceType", GoGetter: "TerraformResourceType"},
 			_jsii_.MemberProperty{JsiiProperty: "timeToLiveSpecification", GoGetter: "TimeToLiveSpecification"},
 			_jsii_.MemberProperty{JsiiProperty: "timeToLiveSpecificationInput", GoGetter: "TimeToLiveSpecificationInput"},
+			_jsii_.MemberMethod{JsiiMethod: "toHclTerraform", GoMethod: "ToHclTerraform"},
 			_jsii_.MemberMethod{JsiiMethod: "toMetadata", GoMethod: "ToMetadata"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 			_jsii_.MemberMethod{JsiiMethod: "toTerraform", GoMethod: "ToTerraform"},
+			_jsii_.MemberProperty{JsiiProperty: "warmThroughput", GoGetter: "WarmThroughput"},
+			_jsii_.MemberProperty{JsiiProperty: "warmThroughputInput", GoGetter: "WarmThroughputInput"},
 		},
 		func() interface{} {
 			j := jsiiProxy_DynamodbTable{}
@@ -127,6 +144,7 @@ func init() {
 		"awscc.dynamodbTable.DynamodbTableAttributeDefinitionsList",
 		reflect.TypeOf((*DynamodbTableAttributeDefinitionsList)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -169,6 +187,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAttributeName", GoMethod: "ResetAttributeName"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAttributeType", GoMethod: "ResetAttributeType"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
@@ -211,6 +231,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "resetEnabled", GoMethod: "ResetEnabled"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
@@ -253,6 +274,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "resetEnabled", GoMethod: "ResetEnabled"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
@@ -272,6 +294,7 @@ func init() {
 		"awscc.dynamodbTable.DynamodbTableGlobalSecondaryIndexesKeySchemaList",
 		reflect.TypeOf((*DynamodbTableGlobalSecondaryIndexesKeySchemaList)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -314,6 +337,8 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "keyType", GoGetter: "KeyType"},
 			_jsii_.MemberProperty{JsiiProperty: "keyTypeInput", GoGetter: "KeyTypeInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAttributeName", GoMethod: "ResetAttributeName"},
+			_jsii_.MemberMethod{JsiiMethod: "resetKeyType", GoMethod: "ResetKeyType"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
@@ -329,6 +354,7 @@ func init() {
 		"awscc.dynamodbTable.DynamodbTableGlobalSecondaryIndexesList",
 		reflect.TypeOf((*DynamodbTableGlobalSecondaryIndexesList)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -343,6 +369,48 @@ func init() {
 		func() interface{} {
 			j := jsiiProxy_DynamodbTableGlobalSecondaryIndexesList{}
 			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexList)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"awscc.dynamodbTable.DynamodbTableGlobalSecondaryIndexesOnDemandThroughput",
+		reflect.TypeOf((*DynamodbTableGlobalSecondaryIndexesOnDemandThroughput)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"awscc.dynamodbTable.DynamodbTableGlobalSecondaryIndexesOnDemandThroughputOutputReference",
+		reflect.TypeOf((*DynamodbTableGlobalSecondaryIndexesOnDemandThroughputOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "maxReadRequestUnits", GoGetter: "MaxReadRequestUnits"},
+			_jsii_.MemberProperty{JsiiProperty: "maxReadRequestUnitsInput", GoGetter: "MaxReadRequestUnitsInput"},
+			_jsii_.MemberProperty{JsiiProperty: "maxWriteRequestUnits", GoGetter: "MaxWriteRequestUnits"},
+			_jsii_.MemberProperty{JsiiProperty: "maxWriteRequestUnitsInput", GoGetter: "MaxWriteRequestUnitsInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetMaxReadRequestUnits", GoMethod: "ResetMaxReadRequestUnits"},
+			_jsii_.MemberMethod{JsiiMethod: "resetMaxWriteRequestUnits", GoMethod: "ResetMaxWriteRequestUnits"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_DynamodbTableGlobalSecondaryIndexesOnDemandThroughputOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
 			return &j
 		},
 	)
@@ -373,20 +441,31 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "keySchema", GoGetter: "KeySchema"},
 			_jsii_.MemberProperty{JsiiProperty: "keySchemaInput", GoGetter: "KeySchemaInput"},
+			_jsii_.MemberProperty{JsiiProperty: "onDemandThroughput", GoGetter: "OnDemandThroughput"},
+			_jsii_.MemberProperty{JsiiProperty: "onDemandThroughputInput", GoGetter: "OnDemandThroughputInput"},
 			_jsii_.MemberProperty{JsiiProperty: "projection", GoGetter: "Projection"},
 			_jsii_.MemberProperty{JsiiProperty: "projectionInput", GoGetter: "ProjectionInput"},
 			_jsii_.MemberProperty{JsiiProperty: "provisionedThroughput", GoGetter: "ProvisionedThroughput"},
 			_jsii_.MemberProperty{JsiiProperty: "provisionedThroughputInput", GoGetter: "ProvisionedThroughputInput"},
 			_jsii_.MemberMethod{JsiiMethod: "putContributorInsightsSpecification", GoMethod: "PutContributorInsightsSpecification"},
 			_jsii_.MemberMethod{JsiiMethod: "putKeySchema", GoMethod: "PutKeySchema"},
+			_jsii_.MemberMethod{JsiiMethod: "putOnDemandThroughput", GoMethod: "PutOnDemandThroughput"},
 			_jsii_.MemberMethod{JsiiMethod: "putProjection", GoMethod: "PutProjection"},
 			_jsii_.MemberMethod{JsiiMethod: "putProvisionedThroughput", GoMethod: "PutProvisionedThroughput"},
+			_jsii_.MemberMethod{JsiiMethod: "putWarmThroughput", GoMethod: "PutWarmThroughput"},
 			_jsii_.MemberMethod{JsiiMethod: "resetContributorInsightsSpecification", GoMethod: "ResetContributorInsightsSpecification"},
+			_jsii_.MemberMethod{JsiiMethod: "resetIndexName", GoMethod: "ResetIndexName"},
+			_jsii_.MemberMethod{JsiiMethod: "resetKeySchema", GoMethod: "ResetKeySchema"},
+			_jsii_.MemberMethod{JsiiMethod: "resetOnDemandThroughput", GoMethod: "ResetOnDemandThroughput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetProjection", GoMethod: "ResetProjection"},
 			_jsii_.MemberMethod{JsiiMethod: "resetProvisionedThroughput", GoMethod: "ResetProvisionedThroughput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetWarmThroughput", GoMethod: "ResetWarmThroughput"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "warmThroughput", GoGetter: "WarmThroughput"},
+			_jsii_.MemberProperty{JsiiProperty: "warmThroughputInput", GoGetter: "WarmThroughputInput"},
 		},
 		func() interface{} {
 			j := jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference{}
@@ -463,6 +542,8 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "readCapacityUnits", GoGetter: "ReadCapacityUnits"},
 			_jsii_.MemberProperty{JsiiProperty: "readCapacityUnitsInput", GoGetter: "ReadCapacityUnitsInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetReadCapacityUnits", GoMethod: "ResetReadCapacityUnits"},
+			_jsii_.MemberMethod{JsiiMethod: "resetWriteCapacityUnits", GoMethod: "ResetWriteCapacityUnits"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
@@ -472,6 +553,48 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_DynamodbTableGlobalSecondaryIndexesProvisionedThroughputOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"awscc.dynamodbTable.DynamodbTableGlobalSecondaryIndexesWarmThroughput",
+		reflect.TypeOf((*DynamodbTableGlobalSecondaryIndexesWarmThroughput)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"awscc.dynamodbTable.DynamodbTableGlobalSecondaryIndexesWarmThroughputOutputReference",
+		reflect.TypeOf((*DynamodbTableGlobalSecondaryIndexesWarmThroughputOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "readUnitsPerSecond", GoGetter: "ReadUnitsPerSecond"},
+			_jsii_.MemberProperty{JsiiProperty: "readUnitsPerSecondInput", GoGetter: "ReadUnitsPerSecondInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetReadUnitsPerSecond", GoMethod: "ResetReadUnitsPerSecond"},
+			_jsii_.MemberMethod{JsiiMethod: "resetWriteUnitsPerSecond", GoMethod: "ResetWriteUnitsPerSecond"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "writeUnitsPerSecond", GoGetter: "WriteUnitsPerSecond"},
+			_jsii_.MemberProperty{JsiiProperty: "writeUnitsPerSecondInput", GoGetter: "WriteUnitsPerSecondInput"},
+		},
+		func() interface{} {
+			j := jsiiProxy_DynamodbTableGlobalSecondaryIndexesWarmThroughputOutputReference{}
 			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
 			return &j
 		},
@@ -592,7 +715,9 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "putInputFormatOptions", GoMethod: "PutInputFormatOptions"},
 			_jsii_.MemberMethod{JsiiMethod: "putS3BucketSource", GoMethod: "PutS3BucketSource"},
 			_jsii_.MemberMethod{JsiiMethod: "resetInputCompressionType", GoMethod: "ResetInputCompressionType"},
+			_jsii_.MemberMethod{JsiiMethod: "resetInputFormat", GoMethod: "ResetInputFormat"},
 			_jsii_.MemberMethod{JsiiMethod: "resetInputFormatOptions", GoMethod: "ResetInputFormatOptions"},
+			_jsii_.MemberMethod{JsiiMethod: "resetS3BucketSource", GoMethod: "ResetS3BucketSource"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "s3BucketSource", GoGetter: "S3BucketSource"},
 			_jsii_.MemberProperty{JsiiProperty: "s3BucketSourceInput", GoGetter: "S3BucketSourceInput"},
@@ -631,6 +756,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "resetS3Bucket", GoMethod: "ResetS3Bucket"},
 			_jsii_.MemberMethod{JsiiMethod: "resetS3BucketOwner", GoMethod: "ResetS3BucketOwner"},
 			_jsii_.MemberMethod{JsiiMethod: "resetS3KeyPrefix", GoMethod: "ResetS3KeyPrefix"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
@@ -678,6 +804,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberMethod{JsiiMethod: "resetApproximateCreationDateTimePrecision", GoMethod: "ResetApproximateCreationDateTimePrecision"},
+			_jsii_.MemberMethod{JsiiMethod: "resetStreamArn", GoMethod: "ResetStreamArn"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "streamArn", GoGetter: "StreamArn"},
 			_jsii_.MemberProperty{JsiiProperty: "streamArnInput", GoGetter: "StreamArnInput"},
@@ -703,6 +830,7 @@ func init() {
 		"awscc.dynamodbTable.DynamodbTableLocalSecondaryIndexesKeySchemaList",
 		reflect.TypeOf((*DynamodbTableLocalSecondaryIndexesKeySchemaList)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -745,6 +873,8 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "keyType", GoGetter: "KeyType"},
 			_jsii_.MemberProperty{JsiiProperty: "keyTypeInput", GoGetter: "KeyTypeInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAttributeName", GoMethod: "ResetAttributeName"},
+			_jsii_.MemberMethod{JsiiMethod: "resetKeyType", GoMethod: "ResetKeyType"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
@@ -760,6 +890,7 @@ func init() {
 		"awscc.dynamodbTable.DynamodbTableLocalSecondaryIndexesList",
 		reflect.TypeOf((*DynamodbTableLocalSecondaryIndexesList)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -806,6 +937,9 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "projectionInput", GoGetter: "ProjectionInput"},
 			_jsii_.MemberMethod{JsiiMethod: "putKeySchema", GoMethod: "PutKeySchema"},
 			_jsii_.MemberMethod{JsiiMethod: "putProjection", GoMethod: "PutProjection"},
+			_jsii_.MemberMethod{JsiiMethod: "resetIndexName", GoMethod: "ResetIndexName"},
+			_jsii_.MemberMethod{JsiiMethod: "resetKeySchema", GoMethod: "ResetKeySchema"},
+			_jsii_.MemberMethod{JsiiMethod: "resetProjection", GoMethod: "ResetProjection"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
@@ -860,6 +994,48 @@ func init() {
 		},
 	)
 	_jsii_.RegisterStruct(
+		"awscc.dynamodbTable.DynamodbTableOnDemandThroughput",
+		reflect.TypeOf((*DynamodbTableOnDemandThroughput)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"awscc.dynamodbTable.DynamodbTableOnDemandThroughputOutputReference",
+		reflect.TypeOf((*DynamodbTableOnDemandThroughputOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "maxReadRequestUnits", GoGetter: "MaxReadRequestUnits"},
+			_jsii_.MemberProperty{JsiiProperty: "maxReadRequestUnitsInput", GoGetter: "MaxReadRequestUnitsInput"},
+			_jsii_.MemberProperty{JsiiProperty: "maxWriteRequestUnits", GoGetter: "MaxWriteRequestUnits"},
+			_jsii_.MemberProperty{JsiiProperty: "maxWriteRequestUnitsInput", GoGetter: "MaxWriteRequestUnitsInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetMaxReadRequestUnits", GoMethod: "ResetMaxReadRequestUnits"},
+			_jsii_.MemberMethod{JsiiMethod: "resetMaxWriteRequestUnits", GoMethod: "ResetMaxWriteRequestUnits"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_DynamodbTableOnDemandThroughputOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
 		"awscc.dynamodbTable.DynamodbTablePointInTimeRecoverySpecification",
 		reflect.TypeOf((*DynamodbTablePointInTimeRecoverySpecification)(nil)).Elem(),
 	)
@@ -886,7 +1062,10 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "pointInTimeRecoveryEnabled", GoGetter: "PointInTimeRecoveryEnabled"},
 			_jsii_.MemberProperty{JsiiProperty: "pointInTimeRecoveryEnabledInput", GoGetter: "PointInTimeRecoveryEnabledInput"},
+			_jsii_.MemberProperty{JsiiProperty: "recoveryPeriodInDays", GoGetter: "RecoveryPeriodInDays"},
+			_jsii_.MemberProperty{JsiiProperty: "recoveryPeriodInDaysInput", GoGetter: "RecoveryPeriodInDaysInput"},
 			_jsii_.MemberMethod{JsiiMethod: "resetPointInTimeRecoveryEnabled", GoMethod: "ResetPointInTimeRecoveryEnabled"},
+			_jsii_.MemberMethod{JsiiMethod: "resetRecoveryPeriodInDays", GoMethod: "ResetRecoveryPeriodInDays"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
@@ -925,6 +1104,8 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "readCapacityUnits", GoGetter: "ReadCapacityUnits"},
 			_jsii_.MemberProperty{JsiiProperty: "readCapacityUnitsInput", GoGetter: "ReadCapacityUnitsInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetReadCapacityUnits", GoMethod: "ResetReadCapacityUnits"},
+			_jsii_.MemberMethod{JsiiMethod: "resetWriteCapacityUnits", GoMethod: "ResetWriteCapacityUnits"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
@@ -934,6 +1115,45 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_DynamodbTableProvisionedThroughputOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"awscc.dynamodbTable.DynamodbTableResourcePolicy",
+		reflect.TypeOf((*DynamodbTableResourcePolicy)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"awscc.dynamodbTable.DynamodbTableResourcePolicyOutputReference",
+		reflect.TypeOf((*DynamodbTableResourcePolicyOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "policyDocument", GoGetter: "PolicyDocument"},
+			_jsii_.MemberProperty{JsiiProperty: "policyDocumentInput", GoGetter: "PolicyDocumentInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetPolicyDocument", GoMethod: "ResetPolicyDocument"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_DynamodbTableResourcePolicyOutputReference{}
 			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
 			return &j
 		},
@@ -966,6 +1186,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "kmsMasterKeyId", GoGetter: "KmsMasterKeyId"},
 			_jsii_.MemberProperty{JsiiProperty: "kmsMasterKeyIdInput", GoGetter: "KmsMasterKeyIdInput"},
 			_jsii_.MemberMethod{JsiiMethod: "resetKmsMasterKeyId", GoMethod: "ResetKmsMasterKeyId"},
+			_jsii_.MemberMethod{JsiiMethod: "resetSseEnabled", GoMethod: "ResetSseEnabled"},
 			_jsii_.MemberMethod{JsiiMethod: "resetSseType", GoMethod: "ResetSseType"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "sseEnabled", GoGetter: "SseEnabled"},
@@ -1007,7 +1228,12 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "putResourcePolicy", GoMethod: "PutResourcePolicy"},
+			_jsii_.MemberMethod{JsiiMethod: "resetResourcePolicy", GoMethod: "ResetResourcePolicy"},
+			_jsii_.MemberMethod{JsiiMethod: "resetStreamViewType", GoMethod: "ResetStreamViewType"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "resourcePolicy", GoGetter: "ResourcePolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "resourcePolicyInput", GoGetter: "ResourcePolicyInput"},
 			_jsii_.MemberProperty{JsiiProperty: "streamViewType", GoGetter: "StreamViewType"},
 			_jsii_.MemberProperty{JsiiProperty: "streamViewTypeInput", GoGetter: "StreamViewTypeInput"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
@@ -1021,6 +1247,45 @@ func init() {
 		},
 	)
 	_jsii_.RegisterStruct(
+		"awscc.dynamodbTable.DynamodbTableStreamSpecificationResourcePolicy",
+		reflect.TypeOf((*DynamodbTableStreamSpecificationResourcePolicy)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"awscc.dynamodbTable.DynamodbTableStreamSpecificationResourcePolicyOutputReference",
+		reflect.TypeOf((*DynamodbTableStreamSpecificationResourcePolicyOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "policyDocument", GoGetter: "PolicyDocument"},
+			_jsii_.MemberProperty{JsiiProperty: "policyDocumentInput", GoGetter: "PolicyDocumentInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetPolicyDocument", GoMethod: "ResetPolicyDocument"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_DynamodbTableStreamSpecificationResourcePolicyOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
 		"awscc.dynamodbTable.DynamodbTableTags",
 		reflect.TypeOf((*DynamodbTableTags)(nil)).Elem(),
 	)
@@ -1028,6 +1293,7 @@ func init() {
 		"awscc.dynamodbTable.DynamodbTableTagsList",
 		reflect.TypeOf((*DynamodbTableTagsList)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1068,6 +1334,8 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "key", GoGetter: "Key"},
 			_jsii_.MemberProperty{JsiiProperty: "keyInput", GoGetter: "KeyInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetKey", GoMethod: "ResetKey"},
+			_jsii_.MemberMethod{JsiiMethod: "resetValue", GoMethod: "ResetValue"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
@@ -1111,6 +1379,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAttributeName", GoMethod: "ResetAttributeName"},
+			_jsii_.MemberMethod{JsiiMethod: "resetEnabled", GoMethod: "ResetEnabled"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
@@ -1118,6 +1387,48 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_DynamodbTableTimeToLiveSpecificationOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"awscc.dynamodbTable.DynamodbTableWarmThroughput",
+		reflect.TypeOf((*DynamodbTableWarmThroughput)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"awscc.dynamodbTable.DynamodbTableWarmThroughputOutputReference",
+		reflect.TypeOf((*DynamodbTableWarmThroughputOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "readUnitsPerSecond", GoGetter: "ReadUnitsPerSecond"},
+			_jsii_.MemberProperty{JsiiProperty: "readUnitsPerSecondInput", GoGetter: "ReadUnitsPerSecondInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetReadUnitsPerSecond", GoMethod: "ResetReadUnitsPerSecond"},
+			_jsii_.MemberMethod{JsiiMethod: "resetWriteUnitsPerSecond", GoMethod: "ResetWriteUnitsPerSecond"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "writeUnitsPerSecond", GoGetter: "WriteUnitsPerSecond"},
+			_jsii_.MemberProperty{JsiiProperty: "writeUnitsPerSecondInput", GoGetter: "WriteUnitsPerSecondInput"},
+		},
+		func() interface{} {
+			j := jsiiProxy_DynamodbTableWarmThroughputOutputReference{}
 			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
 			return &j
 		},

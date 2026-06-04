@@ -64,6 +64,7 @@ type Ec2IpamResourceDiscoveryOperatingRegionsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetRegionName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (e *jsiiProxy_Ec2IpamResourceDiscoveryOperatingRegionsOutputReference) Inte
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_Ec2IpamResourceDiscoveryOperatingRegionsOutputReference) ResetRegionName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetRegionName",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_Ec2IpamResourceDiscoveryOperatingRegionsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

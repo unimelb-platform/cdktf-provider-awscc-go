@@ -60,6 +60,10 @@ func (i *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsOutputRef
 	return nil
 }
 
+func (i *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsOutputReference) validatePutDeviceCertificateAgeCheckParameters(value *IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateAgeCheck) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsOutputReference) validatePutDeviceCertificateExpiringCheckParameters(value *IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiringCheck) error {
 	return nil
 }

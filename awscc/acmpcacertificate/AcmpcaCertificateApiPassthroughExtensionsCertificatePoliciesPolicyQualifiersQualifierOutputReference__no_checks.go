@@ -60,7 +60,7 @@ func (j *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesP
 	return nil
 }
 
-func (j *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifierOutputReference) validateSetInternalValueParameters(val *AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifier) error {
+func (j *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifierOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

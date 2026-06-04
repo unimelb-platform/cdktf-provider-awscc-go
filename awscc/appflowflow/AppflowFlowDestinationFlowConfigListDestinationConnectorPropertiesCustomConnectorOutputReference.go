@@ -77,6 +77,7 @@ type AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesCustomCon
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutErrorHandlingConfig(value *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesCustomConnectorErrorHandlingConfig)
 	ResetCustomProperties()
+	ResetEntityName()
 	ResetErrorHandlingConfig()
 	ResetIdFieldNames()
 	ResetWriteOperationType()
@@ -593,6 +594,14 @@ func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPrope
 	_jsii_.InvokeVoid(
 		a,
 		"resetCustomProperties",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesCustomConnectorOutputReference) ResetEntityName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetEntityName",
 		nil, // no parameters
 	)
 }

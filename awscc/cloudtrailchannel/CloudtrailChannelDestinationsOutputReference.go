@@ -67,6 +67,8 @@ type CloudtrailChannelDestinationsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetLocation()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CloudtrailChannelDestinationsOutputReference) InterpolationFo
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CloudtrailChannelDestinationsOutputReference) ResetLocation() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetLocation",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudtrailChannelDestinationsOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetType",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CloudtrailChannelDestinationsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

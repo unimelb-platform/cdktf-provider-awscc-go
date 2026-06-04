@@ -1,0 +1,6 @@
+package dataawscclambdaeventsourcemapping
+
+
+type DataAwsccLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigSchemaValidationConfigs struct {
+}
+

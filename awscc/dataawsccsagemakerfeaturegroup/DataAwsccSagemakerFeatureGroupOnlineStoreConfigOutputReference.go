@@ -40,6 +40,7 @@ type DataAwsccSagemakerFeatureGroupOnlineStoreConfigOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	TtlDuration() DataAwsccSagemakerFeatureGroupOnlineStoreConfigTtlDurationOutputReference
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -174,6 +175,16 @@ func (j *jsiiProxy_DataAwsccSagemakerFeatureGroupOnlineStoreConfigOutputReferenc
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerFeatureGroupOnlineStoreConfigOutputReference) TtlDuration() DataAwsccSagemakerFeatureGroupOnlineStoreConfigTtlDurationOutputReference {
+	var returns DataAwsccSagemakerFeatureGroupOnlineStoreConfigTtlDurationOutputReference
+	_jsii_.Get(
+		j,
+		"ttlDuration",
 		&returns,
 	)
 	return returns

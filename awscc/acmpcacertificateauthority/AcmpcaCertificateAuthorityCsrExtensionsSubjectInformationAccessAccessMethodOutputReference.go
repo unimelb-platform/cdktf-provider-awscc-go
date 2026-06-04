@@ -33,8 +33,8 @@ type AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessMethod
 	CustomObjectIdentifierInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessMethod
-	SetInternalValue(val *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessMethod)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -164,8 +164,8 @@ func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAcce
 	return returns
 }
 
-func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessMethodOutputReference) InternalValue() *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessMethod {
-	var returns *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessMethod
+func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessMethodOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -266,7 +266,7 @@ func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAcce
 	)
 }
 
-func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessMethodOutputReference)SetInternalValue(val *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessMethod) {
+func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessMethodOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

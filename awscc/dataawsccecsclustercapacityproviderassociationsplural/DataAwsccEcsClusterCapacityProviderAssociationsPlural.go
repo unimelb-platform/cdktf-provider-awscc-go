@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccecsclustercapacityproviderassociationsplural/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ecs_cluster_capacity_provider_associations_plural awscc_ecs_cluster_capacity_provider_associations_plural}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ecs_cluster_capacity_provider_associations_plural awscc_ecs_cluster_capacity_provider_associations_plural}.
 type DataAwsccEcsClusterCapacityProviderAssociationsPlural interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccEcsClusterCapacityProviderAssociationsPlural interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccEcsClusterCapacityProviderAssociationsPlural) Terraf
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ecs_cluster_capacity_provider_associations_plural awscc_ecs_cluster_capacity_provider_associations_plural} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ecs_cluster_capacity_provider_associations_plural awscc_ecs_cluster_capacity_provider_associations_plural} Data Source.
 func NewDataAwsccEcsClusterCapacityProviderAssociationsPlural(scope constructs.Construct, id *string, config *DataAwsccEcsClusterCapacityProviderAssociationsPluralConfig) DataAwsccEcsClusterCapacityProviderAssociationsPlural {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccEcsClusterCapacityProviderAssociationsPlural(scope constructs.C
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ecs_cluster_capacity_provider_associations_plural awscc_ecs_cluster_capacity_provider_associations_plural} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ecs_cluster_capacity_provider_associations_plural awscc_ecs_cluster_capacity_provider_associations_plural} Data Source.
 func NewDataAwsccEcsClusterCapacityProviderAssociationsPlural_Override(d DataAwsccEcsClusterCapacityProviderAssociationsPlural, scope constructs.Construct, id *string, config *DataAwsccEcsClusterCapacityProviderAssociationsPluralConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccEcsClusterCapacityProviderAssociationsPlural) Synthe
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEcsClusterCapacityProviderAssociationsPlural) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEcsClusterCapacityProviderAssociationsPlural) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

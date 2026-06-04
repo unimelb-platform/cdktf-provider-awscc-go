@@ -1,0 +1,6 @@
+package dataawsccdatasynclocationobjectstorage
+
+
+type DataAwsccDatasyncLocationObjectStorageManagedSecretConfig struct {
+}
+

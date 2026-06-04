@@ -74,6 +74,7 @@ type MedialiveMultiplexprogramMultiplexProgramSettingsOutputReference interface 
 	PutServiceDescriptor(value *MedialiveMultiplexprogramMultiplexProgramSettingsServiceDescriptor)
 	PutVideoSettings(value *MedialiveMultiplexprogramMultiplexProgramSettingsVideoSettings)
 	ResetPreferredChannelPipeline()
+	ResetProgramNumber()
 	ResetServiceDescriptor()
 	ResetVideoSettings()
 	// Produce the Token's value at resolution time.
@@ -558,6 +559,14 @@ func (m *jsiiProxy_MedialiveMultiplexprogramMultiplexProgramSettingsOutputRefere
 	_jsii_.InvokeVoid(
 		m,
 		"resetPreferredChannelPipeline",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MedialiveMultiplexprogramMultiplexProgramSettingsOutputReference) ResetProgramNumber() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetProgramNumber",
 		nil, // no parameters
 	)
 }

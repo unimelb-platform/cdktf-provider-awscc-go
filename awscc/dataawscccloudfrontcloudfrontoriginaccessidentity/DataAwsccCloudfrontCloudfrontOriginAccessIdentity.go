@@ -9,12 +9,13 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccloudfrontcloudfrontoriginaccessidentity/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudfront_cloudfront_origin_access_identity awscc_cloudfront_cloudfront_origin_access_identity}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudfront_cloudfront_origin_access_identity awscc_cloudfront_cloudfront_origin_access_identity}.
 type DataAwsccCloudfrontCloudfrontOriginAccessIdentity interface {
 	cdktf.TerraformDataSource
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	CloudfrontOriginAccessIdentityConfig() DataAwsccCloudfrontCloudfrontOriginAccessIdentityCloudfrontOriginAccessIdentityConfigOutputReference
+	CloudfrontOriginAccessIdentityId() *string
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -84,6 +85,10 @@ type DataAwsccCloudfrontCloudfrontOriginAccessIdentity interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -113,6 +118,16 @@ func (j *jsiiProxy_DataAwsccCloudfrontCloudfrontOriginAccessIdentity) Cloudfront
 	_jsii_.Get(
 		j,
 		"cloudfrontOriginAccessIdentityConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCloudfrontCloudfrontOriginAccessIdentity) CloudfrontOriginAccessIdentityId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"cloudfrontOriginAccessIdentityId",
 		&returns,
 	)
 	return returns
@@ -279,7 +294,7 @@ func (j *jsiiProxy_DataAwsccCloudfrontCloudfrontOriginAccessIdentity) TerraformR
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudfront_cloudfront_origin_access_identity awscc_cloudfront_cloudfront_origin_access_identity} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudfront_cloudfront_origin_access_identity awscc_cloudfront_cloudfront_origin_access_identity} Data Source.
 func NewDataAwsccCloudfrontCloudfrontOriginAccessIdentity(scope constructs.Construct, id *string, config *DataAwsccCloudfrontCloudfrontOriginAccessIdentityConfig) DataAwsccCloudfrontCloudfrontOriginAccessIdentity {
 	_init_.Initialize()
 
@@ -297,7 +312,7 @@ func NewDataAwsccCloudfrontCloudfrontOriginAccessIdentity(scope constructs.Const
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudfront_cloudfront_origin_access_identity awscc_cloudfront_cloudfront_origin_access_identity} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudfront_cloudfront_origin_access_identity awscc_cloudfront_cloudfront_origin_access_identity} Data Source.
 func NewDataAwsccCloudfrontCloudfrontOriginAccessIdentity_Override(d DataAwsccCloudfrontCloudfrontOriginAccessIdentity, scope constructs.Construct, id *string, config *DataAwsccCloudfrontCloudfrontOriginAccessIdentityConfig) {
 	_init_.Initialize()
 
@@ -664,6 +679,32 @@ func (d *jsiiProxy_DataAwsccCloudfrontCloudfrontOriginAccessIdentity) Synthesize
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontCloudfrontOriginAccessIdentity) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontCloudfrontOriginAccessIdentity) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

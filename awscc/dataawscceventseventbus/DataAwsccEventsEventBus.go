@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscceventseventbus/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/events_event_bus awscc_events_event_bus}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/events_event_bus awscc_events_event_bus}.
 type DataAwsccEventsEventBus interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -21,10 +21,12 @@ type DataAwsccEventsEventBus interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	DeadLetterConfig() DataAwsccEventsEventBusDeadLetterConfigOutputReference
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	Description() *string
 	EventSourceName() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
@@ -37,6 +39,7 @@ type DataAwsccEventsEventBus interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	KmsKeyIdentifier() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -87,6 +90,10 @@ type DataAwsccEventsEventBus interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -141,11 +148,31 @@ func (j *jsiiProxy_DataAwsccEventsEventBus) Count() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEventsEventBus) DeadLetterConfig() DataAwsccEventsEventBusDeadLetterConfigOutputReference {
+	var returns DataAwsccEventsEventBusDeadLetterConfigOutputReference
+	_jsii_.Get(
+		j,
+		"deadLetterConfig",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEventsEventBus) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEventsEventBus) Description() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"description",
 		&returns,
 	)
 	return returns
@@ -206,6 +233,16 @@ func (j *jsiiProxy_DataAwsccEventsEventBus) IdInput() *string {
 	_jsii_.Get(
 		j,
 		"idInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEventsEventBus) KmsKeyIdentifier() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kmsKeyIdentifier",
 		&returns,
 	)
 	return returns
@@ -312,7 +349,7 @@ func (j *jsiiProxy_DataAwsccEventsEventBus) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/events_event_bus awscc_events_event_bus} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/events_event_bus awscc_events_event_bus} Data Source.
 func NewDataAwsccEventsEventBus(scope constructs.Construct, id *string, config *DataAwsccEventsEventBusConfig) DataAwsccEventsEventBus {
 	_init_.Initialize()
 
@@ -330,7 +367,7 @@ func NewDataAwsccEventsEventBus(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/events_event_bus awscc_events_event_bus} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/events_event_bus awscc_events_event_bus} Data Source.
 func NewDataAwsccEventsEventBus_Override(d DataAwsccEventsEventBus, scope constructs.Construct, id *string, config *DataAwsccEventsEventBusConfig) {
 	_init_.Initialize()
 
@@ -697,6 +734,32 @@ func (d *jsiiProxy_DataAwsccEventsEventBus) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEventsEventBus) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEventsEventBus) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

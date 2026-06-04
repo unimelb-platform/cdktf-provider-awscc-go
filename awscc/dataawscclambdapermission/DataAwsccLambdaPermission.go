@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscclambdapermission/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lambda_permission awscc_lambda_permission}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lambda_permission awscc_lambda_permission}.
 type DataAwsccLambdaPermission interface {
 	cdktf.TerraformDataSource
 	Action() *string
@@ -45,6 +45,7 @@ type DataAwsccLambdaPermission interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	PermissionId() *string
 	Principal() *string
 	PrincipalOrgId() *string
 	// Experimental.
@@ -90,6 +91,10 @@ type DataAwsccLambdaPermission interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -254,6 +259,16 @@ func (j *jsiiProxy_DataAwsccLambdaPermission) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccLambdaPermission) PermissionId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"permissionId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccLambdaPermission) Principal() *string {
 	var returns *string
 	_jsii_.Get(
@@ -345,7 +360,7 @@ func (j *jsiiProxy_DataAwsccLambdaPermission) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lambda_permission awscc_lambda_permission} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lambda_permission awscc_lambda_permission} Data Source.
 func NewDataAwsccLambdaPermission(scope constructs.Construct, id *string, config *DataAwsccLambdaPermissionConfig) DataAwsccLambdaPermission {
 	_init_.Initialize()
 
@@ -363,7 +378,7 @@ func NewDataAwsccLambdaPermission(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lambda_permission awscc_lambda_permission} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lambda_permission awscc_lambda_permission} Data Source.
 func NewDataAwsccLambdaPermission_Override(d DataAwsccLambdaPermission, scope constructs.Construct, id *string, config *DataAwsccLambdaPermissionConfig) {
 	_init_.Initialize()
 
@@ -730,6 +745,32 @@ func (d *jsiiProxy_DataAwsccLambdaPermission) SynthesizeAttributes() *map[string
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLambdaPermission) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLambdaPermission) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

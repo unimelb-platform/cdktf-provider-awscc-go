@@ -71,6 +71,8 @@ type AmplifyBranchBasicAuthConfigOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetEnableBasicAuth()
+	ResetPassword()
+	ResetUsername()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -522,6 +524,22 @@ func (a *jsiiProxy_AmplifyBranchBasicAuthConfigOutputReference) ResetEnableBasic
 	_jsii_.InvokeVoid(
 		a,
 		"resetEnableBasicAuth",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AmplifyBranchBasicAuthConfigOutputReference) ResetPassword() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetPassword",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AmplifyBranchBasicAuthConfigOutputReference) ResetUsername() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetUsername",
 		nil, // no parameters
 	)
 }

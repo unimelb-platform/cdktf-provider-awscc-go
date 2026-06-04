@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2ec2fleet/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_ec2_fleet awscc_ec2_ec2_fleet}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_ec2_fleet awscc_ec2_ec2_fleet}.
 type DataAwsccEc2Ec2Fleet interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -95,6 +95,10 @@ type DataAwsccEc2Ec2Fleet interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -400,7 +404,7 @@ func (j *jsiiProxy_DataAwsccEc2Ec2Fleet) ValidUntil() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_ec2_fleet awscc_ec2_ec2_fleet} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_ec2_fleet awscc_ec2_ec2_fleet} Data Source.
 func NewDataAwsccEc2Ec2Fleet(scope constructs.Construct, id *string, config *DataAwsccEc2Ec2FleetConfig) DataAwsccEc2Ec2Fleet {
 	_init_.Initialize()
 
@@ -418,7 +422,7 @@ func NewDataAwsccEc2Ec2Fleet(scope constructs.Construct, id *string, config *Dat
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_ec2_fleet awscc_ec2_ec2_fleet} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_ec2_fleet awscc_ec2_ec2_fleet} Data Source.
 func NewDataAwsccEc2Ec2Fleet_Override(d DataAwsccEc2Ec2Fleet, scope constructs.Construct, id *string, config *DataAwsccEc2Ec2FleetConfig) {
 	_init_.Initialize()
 
@@ -785,6 +789,32 @@ func (d *jsiiProxy_DataAwsccEc2Ec2Fleet) SynthesizeAttributes() *map[string]inte
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2Ec2Fleet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2Ec2Fleet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

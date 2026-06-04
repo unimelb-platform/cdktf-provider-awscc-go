@@ -64,6 +64,7 @@ type IotJobTemplateTimeoutConfigOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetInProgressTimeoutInMinutes()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (i *jsiiProxy_IotJobTemplateTimeoutConfigOutputReference) InterpolationForA
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotJobTemplateTimeoutConfigOutputReference) ResetInProgressTimeoutInMinutes() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetInProgressTimeoutInMinutes",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotJobTemplateTimeoutConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

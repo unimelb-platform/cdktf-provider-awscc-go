@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdatasynclocationazureblob/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_azure_blob awscc_datasync_location_azure_blob}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_azure_blob awscc_datasync_location_azure_blob}.
 type DataAwsccDatasyncLocationAzureBlob interface {
 	cdktf.TerraformDataSource
 	AgentArns() *[]*string
@@ -20,12 +20,14 @@ type DataAwsccDatasyncLocationAzureBlob interface {
 	AzureBlobType() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	CmkSecretConfig() DataAwsccDatasyncLocationAzureBlobCmkSecretConfigOutputReference
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	CustomSecretConfig() DataAwsccDatasyncLocationAzureBlobCustomSecretConfigOutputReference
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -47,6 +49,7 @@ type DataAwsccDatasyncLocationAzureBlob interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	LocationArn() *string
 	LocationUri() *string
+	ManagedSecretConfig() DataAwsccDatasyncLocationAzureBlobManagedSecretConfigOutputReference
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
@@ -92,6 +95,10 @@ type DataAwsccDatasyncLocationAzureBlob interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -176,6 +183,16 @@ func (j *jsiiProxy_DataAwsccDatasyncLocationAzureBlob) CdktfStack() cdktf.Terraf
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccDatasyncLocationAzureBlob) CmkSecretConfig() DataAwsccDatasyncLocationAzureBlobCmkSecretConfigOutputReference {
+	var returns DataAwsccDatasyncLocationAzureBlobCmkSecretConfigOutputReference
+	_jsii_.Get(
+		j,
+		"cmkSecretConfig",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccDatasyncLocationAzureBlob) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -191,6 +208,16 @@ func (j *jsiiProxy_DataAwsccDatasyncLocationAzureBlob) Count() interface{} {
 	_jsii_.Get(
 		j,
 		"count",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatasyncLocationAzureBlob) CustomSecretConfig() DataAwsccDatasyncLocationAzureBlobCustomSecretConfigOutputReference {
+	var returns DataAwsccDatasyncLocationAzureBlobCustomSecretConfigOutputReference
+	_jsii_.Get(
+		j,
+		"customSecretConfig",
 		&returns,
 	)
 	return returns
@@ -286,6 +313,16 @@ func (j *jsiiProxy_DataAwsccDatasyncLocationAzureBlob) LocationUri() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccDatasyncLocationAzureBlob) ManagedSecretConfig() DataAwsccDatasyncLocationAzureBlobManagedSecretConfigOutputReference {
+	var returns DataAwsccDatasyncLocationAzureBlobManagedSecretConfigOutputReference
+	_jsii_.Get(
+		j,
+		"managedSecretConfig",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccDatasyncLocationAzureBlob) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -367,7 +404,7 @@ func (j *jsiiProxy_DataAwsccDatasyncLocationAzureBlob) TerraformResourceType() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_azure_blob awscc_datasync_location_azure_blob} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_azure_blob awscc_datasync_location_azure_blob} Data Source.
 func NewDataAwsccDatasyncLocationAzureBlob(scope constructs.Construct, id *string, config *DataAwsccDatasyncLocationAzureBlobConfig) DataAwsccDatasyncLocationAzureBlob {
 	_init_.Initialize()
 
@@ -385,7 +422,7 @@ func NewDataAwsccDatasyncLocationAzureBlob(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_azure_blob awscc_datasync_location_azure_blob} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_azure_blob awscc_datasync_location_azure_blob} Data Source.
 func NewDataAwsccDatasyncLocationAzureBlob_Override(d DataAwsccDatasyncLocationAzureBlob, scope constructs.Construct, id *string, config *DataAwsccDatasyncLocationAzureBlobConfig) {
 	_init_.Initialize()
 
@@ -752,6 +789,32 @@ func (d *jsiiProxy_DataAwsccDatasyncLocationAzureBlob) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatasyncLocationAzureBlob) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatasyncLocationAzureBlob) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

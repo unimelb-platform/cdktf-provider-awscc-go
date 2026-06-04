@@ -56,7 +56,11 @@ func (j *jsiiProxy_CleanroomsAnalysisTemplateSchemaOutputReference) validateSetC
 	return nil
 }
 
-func (j *jsiiProxy_CleanroomsAnalysisTemplateSchemaOutputReference) validateSetInternalValueParameters(val *CleanroomsAnalysisTemplateSchema) error {
+func (j *jsiiProxy_CleanroomsAnalysisTemplateSchemaOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_CleanroomsAnalysisTemplateSchemaOutputReference) validateSetReferencedTablesParameters(val *[]*string) error {
 	return nil
 }
 

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/gameliftfleet/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/gamelift_fleet awscc_gamelift_fleet}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/gamelift_fleet awscc_gamelift_fleet}.
 type GameliftFleet interface {
 	cdktf.TerraformResource
 	AnywhereConfiguration() GameliftFleetAnywhereConfigurationOutputReference
@@ -52,6 +52,7 @@ type GameliftFleet interface {
 	Ec2InstanceType() *string
 	SetEc2InstanceType(val *string)
 	Ec2InstanceTypeInput() *string
+	FleetArn() *string
 	FleetId() *string
 	FleetType() *string
 	SetFleetType(val *string)
@@ -128,6 +129,8 @@ type GameliftFleet interface {
 	ServerLaunchPath() *string
 	SetServerLaunchPath(val *string)
 	ServerLaunchPathInput() *string
+	Tags() GameliftFleetTagsList
+	TagsInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -158,12 +161,22 @@ type GameliftFleet interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -174,6 +187,7 @@ type GameliftFleet interface {
 	PutResourceCreationLimitPolicy(value *GameliftFleetResourceCreationLimitPolicy)
 	PutRuntimeConfiguration(value *GameliftFleetRuntimeConfiguration)
 	PutScalingPolicies(value interface{})
+	PutTags(value interface{})
 	ResetAnywhereConfiguration()
 	ResetApplyCapacity()
 	ResetBuildId()
@@ -203,7 +217,11 @@ type GameliftFleet interface {
 	ResetScriptId()
 	ResetServerLaunchParameters()
 	ResetServerLaunchPath()
+	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -443,6 +461,16 @@ func (j *jsiiProxy_GameliftFleet) Ec2InstanceTypeInput() *string {
 	_jsii_.Get(
 		j,
 		"ec2InstanceTypeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_GameliftFleet) FleetArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fleetArn",
 		&returns,
 	)
 	return returns
@@ -908,6 +936,26 @@ func (j *jsiiProxy_GameliftFleet) ServerLaunchPathInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_GameliftFleet) Tags() GameliftFleetTagsList {
+	var returns GameliftFleetTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_GameliftFleet) TagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_GameliftFleet) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -939,7 +987,7 @@ func (j *jsiiProxy_GameliftFleet) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/gamelift_fleet awscc_gamelift_fleet} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/gamelift_fleet awscc_gamelift_fleet} Resource.
 func NewGameliftFleet(scope constructs.Construct, id *string, config *GameliftFleetConfig) GameliftFleet {
 	_init_.Initialize()
 
@@ -957,7 +1005,7 @@ func NewGameliftFleet(scope constructs.Construct, id *string, config *GameliftFl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/gamelift_fleet awscc_gamelift_fleet} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/gamelift_fleet awscc_gamelift_fleet} Resource.
 func NewGameliftFleet_Override(g GameliftFleet, scope constructs.Construct, id *string, config *GameliftFleetConfig) {
 	_init_.Initialize()
 
@@ -1525,6 +1573,19 @@ func (g *jsiiProxy_GameliftFleet) GetStringMapAttribute(terraformAttribute *stri
 	return returns
 }
 
+func (g *jsiiProxy_GameliftFleet) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		g,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (g *jsiiProxy_GameliftFleet) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := g.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1552,6 +1613,17 @@ func (g *jsiiProxy_GameliftFleet) InterpolationForAttribute(terraformAttribute *
 	return returns
 }
 
+func (g *jsiiProxy_GameliftFleet) MoveFromId(id *string) {
+	if err := g.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		g,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (g *jsiiProxy_GameliftFleet) MoveTo(moveTarget *string, index interface{}) {
 	if err := g.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1560,6 +1632,17 @@ func (g *jsiiProxy_GameliftFleet) MoveTo(moveTarget *string, index interface{}) 
 		g,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (g *jsiiProxy_GameliftFleet) MoveToId(id *string) {
+	if err := g.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		g,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1647,6 +1730,17 @@ func (g *jsiiProxy_GameliftFleet) PutScalingPolicies(value interface{}) {
 	_jsii_.InvokeVoid(
 		g,
 		"putScalingPolicies",
+		[]interface{}{value},
+	)
+}
+
+func (g *jsiiProxy_GameliftFleet) PutTags(value interface{}) {
+	if err := g.validatePutTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		g,
+		"putTags",
 		[]interface{}{value},
 	)
 }
@@ -1867,12 +1961,46 @@ func (g *jsiiProxy_GameliftFleet) ResetServerLaunchPath() {
 	)
 }
 
+func (g *jsiiProxy_GameliftFleet) ResetTags() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetTags",
+		nil, // no parameters
+	)
+}
+
 func (g *jsiiProxy_GameliftFleet) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		g,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (g *jsiiProxy_GameliftFleet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		g,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (g *jsiiProxy_GameliftFleet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		g,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

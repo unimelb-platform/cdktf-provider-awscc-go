@@ -9,13 +9,14 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccodebuildfleet/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codebuild_fleet awscc_codebuild_fleet}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codebuild_fleet awscc_codebuild_fleet}.
 type DataAwsccCodebuildFleet interface {
 	cdktf.TerraformDataSource
 	Arn() *string
 	BaseCapacity() *float64
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	ComputeConfiguration() DataAwsccCodebuildFleetComputeConfigurationOutputReference
 	ComputeType() *string
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
@@ -28,6 +29,9 @@ type DataAwsccCodebuildFleet interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	EnvironmentType() *string
+	FleetProxyConfiguration() DataAwsccCodebuildFleetFleetProxyConfigurationOutputReference
+	FleetServiceRole() *string
+	FleetVpcConfig() DataAwsccCodebuildFleetFleetVpcConfigOutputReference
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -39,6 +43,7 @@ type DataAwsccCodebuildFleet interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	ImageId() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -46,12 +51,14 @@ type DataAwsccCodebuildFleet interface {
 	Name() *string
 	// The tree node.
 	Node() constructs.Node
+	OverflowBehavior() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	ScalingConfiguration() DataAwsccCodebuildFleetScalingConfigurationOutputReference
 	Tags() DataAwsccCodebuildFleetTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -88,6 +95,10 @@ type DataAwsccCodebuildFleet interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -127,6 +138,16 @@ func (j *jsiiProxy_DataAwsccCodebuildFleet) CdktfStack() cdktf.TerraformStack {
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCodebuildFleet) ComputeConfiguration() DataAwsccCodebuildFleetComputeConfigurationOutputReference {
+	var returns DataAwsccCodebuildFleetComputeConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"computeConfiguration",
 		&returns,
 	)
 	return returns
@@ -182,6 +203,36 @@ func (j *jsiiProxy_DataAwsccCodebuildFleet) EnvironmentType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccCodebuildFleet) FleetProxyConfiguration() DataAwsccCodebuildFleetFleetProxyConfigurationOutputReference {
+	var returns DataAwsccCodebuildFleetFleetProxyConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"fleetProxyConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCodebuildFleet) FleetServiceRole() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fleetServiceRole",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCodebuildFleet) FleetVpcConfig() DataAwsccCodebuildFleetFleetVpcConfigOutputReference {
+	var returns DataAwsccCodebuildFleetFleetVpcConfigOutputReference
+	_jsii_.Get(
+		j,
+		"fleetVpcConfig",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccCodebuildFleet) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
@@ -232,6 +283,16 @@ func (j *jsiiProxy_DataAwsccCodebuildFleet) IdInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccCodebuildFleet) ImageId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"imageId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccCodebuildFleet) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -262,6 +323,16 @@ func (j *jsiiProxy_DataAwsccCodebuildFleet) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccCodebuildFleet) OverflowBehavior() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"overflowBehavior",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccCodebuildFleet) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -277,6 +348,16 @@ func (j *jsiiProxy_DataAwsccCodebuildFleet) RawOverrides() interface{} {
 	_jsii_.Get(
 		j,
 		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCodebuildFleet) ScalingConfiguration() DataAwsccCodebuildFleetScalingConfigurationOutputReference {
+	var returns DataAwsccCodebuildFleetScalingConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"scalingConfiguration",
 		&returns,
 	)
 	return returns
@@ -323,7 +404,7 @@ func (j *jsiiProxy_DataAwsccCodebuildFleet) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codebuild_fleet awscc_codebuild_fleet} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codebuild_fleet awscc_codebuild_fleet} Data Source.
 func NewDataAwsccCodebuildFleet(scope constructs.Construct, id *string, config *DataAwsccCodebuildFleetConfig) DataAwsccCodebuildFleet {
 	_init_.Initialize()
 
@@ -341,7 +422,7 @@ func NewDataAwsccCodebuildFleet(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codebuild_fleet awscc_codebuild_fleet} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codebuild_fleet awscc_codebuild_fleet} Data Source.
 func NewDataAwsccCodebuildFleet_Override(d DataAwsccCodebuildFleet, scope constructs.Construct, id *string, config *DataAwsccCodebuildFleetConfig) {
 	_init_.Initialize()
 
@@ -708,6 +789,32 @@ func (d *jsiiProxy_DataAwsccCodebuildFleet) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCodebuildFleet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCodebuildFleet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

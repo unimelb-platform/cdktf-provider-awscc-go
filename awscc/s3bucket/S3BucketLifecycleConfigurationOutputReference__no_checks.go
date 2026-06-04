@@ -72,6 +72,10 @@ func (j *jsiiProxy_S3BucketLifecycleConfigurationOutputReference) validateSetTer
 	return nil
 }
 
+func (j *jsiiProxy_S3BucketLifecycleConfigurationOutputReference) validateSetTransitionDefaultMinimumObjectSizeParameters(val *string) error {
+	return nil
+}
+
 func validateNewS3BucketLifecycleConfigurationOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
 	return nil
 }

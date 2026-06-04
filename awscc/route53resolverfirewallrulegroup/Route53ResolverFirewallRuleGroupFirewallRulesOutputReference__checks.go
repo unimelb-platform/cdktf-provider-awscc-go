@@ -203,7 +203,39 @@ func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference)
 	return nil
 }
 
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) validateSetConfidenceThresholdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) validateSetDnsThreatProtectionParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) validateSetFirewallDomainListIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) validateSetFirewallDomainRedirectionActionParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) validateSetFirewallThreatProtectionIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

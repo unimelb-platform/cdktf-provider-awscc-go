@@ -48,6 +48,10 @@ func (e *jsiiProxy_EntityresolutionIdMappingWorkflowIdMappingTechniquesOutputRef
 	return nil
 }
 
+func (e *jsiiProxy_EntityresolutionIdMappingWorkflowIdMappingTechniquesOutputReference) validatePutRuleBasedPropertiesParameters(value *EntityresolutionIdMappingWorkflowIdMappingTechniquesRuleBasedProperties) error {
+	return nil
+}
+
 func (e *jsiiProxy_EntityresolutionIdMappingWorkflowIdMappingTechniquesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccognitologdeliveryconfiguration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cognito_log_delivery_configuration awscc_cognito_log_delivery_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cognito_log_delivery_configuration awscc_cognito_log_delivery_configuration}.
 type DataAwsccCognitoLogDeliveryConfiguration interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -40,6 +40,7 @@ type DataAwsccCognitoLogDeliveryConfiguration interface {
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	LogConfigurations() DataAwsccCognitoLogDeliveryConfigurationLogConfigurationsList
+	LogDeliveryConfigurationId() *string
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
@@ -84,6 +85,10 @@ type DataAwsccCognitoLogDeliveryConfiguration interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -208,6 +213,16 @@ func (j *jsiiProxy_DataAwsccCognitoLogDeliveryConfiguration) LogConfigurations()
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccCognitoLogDeliveryConfiguration) LogDeliveryConfigurationId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"logDeliveryConfigurationId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccCognitoLogDeliveryConfiguration) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -279,7 +294,7 @@ func (j *jsiiProxy_DataAwsccCognitoLogDeliveryConfiguration) UserPoolId() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cognito_log_delivery_configuration awscc_cognito_log_delivery_configuration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cognito_log_delivery_configuration awscc_cognito_log_delivery_configuration} Data Source.
 func NewDataAwsccCognitoLogDeliveryConfiguration(scope constructs.Construct, id *string, config *DataAwsccCognitoLogDeliveryConfigurationConfig) DataAwsccCognitoLogDeliveryConfiguration {
 	_init_.Initialize()
 
@@ -297,7 +312,7 @@ func NewDataAwsccCognitoLogDeliveryConfiguration(scope constructs.Construct, id 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cognito_log_delivery_configuration awscc_cognito_log_delivery_configuration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cognito_log_delivery_configuration awscc_cognito_log_delivery_configuration} Data Source.
 func NewDataAwsccCognitoLogDeliveryConfiguration_Override(d DataAwsccCognitoLogDeliveryConfiguration, scope constructs.Construct, id *string, config *DataAwsccCognitoLogDeliveryConfigurationConfig) {
 	_init_.Initialize()
 
@@ -664,6 +679,32 @@ func (d *jsiiProxy_DataAwsccCognitoLogDeliveryConfiguration) SynthesizeAttribute
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCognitoLogDeliveryConfiguration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCognitoLogDeliveryConfiguration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

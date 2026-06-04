@@ -29,6 +29,8 @@ type Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference interface 
 	CreationStack() *[]*string
 	Epoch() Inspectorv2FilterFilterCriteriaVulnerablePackagesEpochOutputReference
 	EpochInput() interface{}
+	FilePath() Inspectorv2FilterFilterCriteriaVulnerablePackagesFilePathOutputReference
+	FilePathInput() interface{}
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -37,6 +39,8 @@ type Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference interface 
 	NameInput() interface{}
 	Release() Inspectorv2FilterFilterCriteriaVulnerablePackagesReleaseOutputReference
 	ReleaseInput() interface{}
+	SourceLambdaLayerArn() Inspectorv2FilterFilterCriteriaVulnerablePackagesSourceLambdaLayerArnOutputReference
+	SourceLambdaLayerArnInput() interface{}
 	SourceLayerHash() Inspectorv2FilterFilterCriteriaVulnerablePackagesSourceLayerHashOutputReference
 	SourceLayerHashInput() interface{}
 	// Experimental.
@@ -75,14 +79,18 @@ type Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference interface 
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutArchitecture(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesArchitecture)
 	PutEpoch(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesEpoch)
+	PutFilePath(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesFilePath)
 	PutName(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesName)
 	PutRelease(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesRelease)
+	PutSourceLambdaLayerArn(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesSourceLambdaLayerArn)
 	PutSourceLayerHash(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesSourceLayerHash)
 	PutVersion(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesVersion)
 	ResetArchitecture()
 	ResetEpoch()
+	ResetFilePath()
 	ResetName()
 	ResetRelease()
+	ResetSourceLambdaLayerArn()
 	ResetSourceLayerHash()
 	ResetVersion()
 	// Produce the Token's value at resolution time.
@@ -170,6 +178,26 @@ func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputRefere
 	return returns
 }
 
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) FilePath() Inspectorv2FilterFilterCriteriaVulnerablePackagesFilePathOutputReference {
+	var returns Inspectorv2FilterFilterCriteriaVulnerablePackagesFilePathOutputReference
+	_jsii_.Get(
+		j,
+		"filePath",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) FilePathInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"filePathInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -225,6 +253,26 @@ func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputRefere
 	_jsii_.Get(
 		j,
 		"releaseInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) SourceLambdaLayerArn() Inspectorv2FilterFilterCriteriaVulnerablePackagesSourceLambdaLayerArnOutputReference {
+	var returns Inspectorv2FilterFilterCriteriaVulnerablePackagesSourceLambdaLayerArnOutputReference
+	_jsii_.Get(
+		j,
+		"sourceLambdaLayerArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) SourceLambdaLayerArnInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"sourceLambdaLayerArnInput",
 		&returns,
 	)
 	return returns
@@ -581,6 +629,17 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputRefere
 	)
 }
 
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) PutFilePath(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesFilePath) {
+	if err := i.validatePutFilePathParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putFilePath",
+		[]interface{}{value},
+	)
+}
+
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) PutName(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesName) {
 	if err := i.validatePutNameParameters(value); err != nil {
 		panic(err)
@@ -599,6 +658,17 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputRefere
 	_jsii_.InvokeVoid(
 		i,
 		"putRelease",
+		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) PutSourceLambdaLayerArn(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesSourceLambdaLayerArn) {
+	if err := i.validatePutSourceLambdaLayerArnParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putSourceLambdaLayerArn",
 		[]interface{}{value},
 	)
 }
@@ -641,6 +711,14 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputRefere
 	)
 }
 
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) ResetFilePath() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetFilePath",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) ResetName() {
 	_jsii_.InvokeVoid(
 		i,
@@ -653,6 +731,14 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputRefere
 	_jsii_.InvokeVoid(
 		i,
 		"resetRelease",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) ResetSourceLambdaLayerArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetSourceLambdaLayerArn",
 		nil, // no parameters
 	)
 }

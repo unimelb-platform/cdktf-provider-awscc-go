@@ -17,6 +17,8 @@ type RedshiftserverlessWorkgroupWorkgroupConfigParametersList interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// The attribute on the parent resource this class is referencing.
 	TerraformAttribute() *string
 	SetTerraformAttribute(val *string)
@@ -26,6 +28,11 @@ type RedshiftserverlessWorkgroupWorkgroupConfigParametersList interface {
 	// whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
 	WrapsSet() *bool
 	SetWrapsSet(val *bool)
+	// Creating an iterator for this complex list.
+	//
+	// The list will be converted into a map with the mapKeyAttributeName as the key.
+	// Experimental.
+	AllWithMapKey(mapKeyAttributeName *string) cdktf.DynamicListTerraformIterator
 	// Experimental.
 	ComputeFqn() *string
 	Get(index *float64) RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference
@@ -59,6 +66,16 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersList) Fqn
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersList) InternalValue() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"internalValue",
 		&returns,
 	)
 	return returns
@@ -122,6 +139,17 @@ func NewRedshiftserverlessWorkgroupWorkgroupConfigParametersList_Override(r Reds
 	)
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"internalValue",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersList)SetTerraformAttribute(val *string) {
 	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
 		panic(err)
@@ -153,6 +181,22 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersList)SetW
 		"wrapsSet",
 		val,
 	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersList) AllWithMapKey(mapKeyAttributeName *string) cdktf.DynamicListTerraformIterator {
+	if err := r.validateAllWithMapKeyParameters(mapKeyAttributeName); err != nil {
+		panic(err)
+	}
+	var returns cdktf.DynamicListTerraformIterator
+
+	_jsii_.Invoke(
+		r,
+		"allWithMapKey",
+		[]interface{}{mapKeyAttributeName},
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersList) ComputeFqn() *string {

@@ -1,0 +1,6 @@
+package dataawsccbedrockagentalias
+
+
+type DataAwsccBedrockAgentAliasAgentAliasHistoryEventsRoutingConfiguration struct {
+}
+

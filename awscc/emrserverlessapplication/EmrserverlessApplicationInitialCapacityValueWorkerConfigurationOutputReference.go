@@ -33,8 +33,8 @@ type EmrserverlessApplicationInitialCapacityValueWorkerConfigurationOutputRefere
 	DiskInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *EmrserverlessApplicationInitialCapacityValueWorkerConfiguration
-	SetInternalValue(val *EmrserverlessApplicationInitialCapacityValueWorkerConfiguration)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Memory() *string
 	SetMemory(val *string)
 	MemoryInput() *string
@@ -70,7 +70,9 @@ type EmrserverlessApplicationInitialCapacityValueWorkerConfigurationOutputRefere
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCpu()
 	ResetDisk()
+	ResetMemory()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -166,8 +168,8 @@ func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityValueWorkerConfigurati
 	return returns
 }
 
-func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityValueWorkerConfigurationOutputReference) InternalValue() *EmrserverlessApplicationInitialCapacityValueWorkerConfiguration {
-	var returns *EmrserverlessApplicationInitialCapacityValueWorkerConfiguration
+func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityValueWorkerConfigurationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -288,7 +290,7 @@ func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityValueWorkerConfigurati
 	)
 }
 
-func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityValueWorkerConfigurationOutputReference)SetInternalValue(val *EmrserverlessApplicationInitialCapacityValueWorkerConfiguration) {
+func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityValueWorkerConfigurationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -518,10 +520,26 @@ func (e *jsiiProxy_EmrserverlessApplicationInitialCapacityValueWorkerConfigurati
 	return returns
 }
 
+func (e *jsiiProxy_EmrserverlessApplicationInitialCapacityValueWorkerConfigurationOutputReference) ResetCpu() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetCpu",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EmrserverlessApplicationInitialCapacityValueWorkerConfigurationOutputReference) ResetDisk() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetDisk",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EmrserverlessApplicationInitialCapacityValueWorkerConfigurationOutputReference) ResetMemory() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetMemory",
 		nil, // no parameters
 	)
 }

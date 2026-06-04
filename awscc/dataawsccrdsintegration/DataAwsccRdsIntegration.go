@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccrdsintegration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_integration awscc_rds_integration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_integration awscc_rds_integration}.
 type DataAwsccRdsIntegration interface {
 	cdktf.TerraformDataSource
 	AdditionalEncryptionContext() cdktf.StringMap
@@ -22,10 +22,12 @@ type DataAwsccRdsIntegration interface {
 	// Experimental.
 	SetCount(val interface{})
 	CreateTime() *string
+	DataFilter() *string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	Description() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -90,6 +92,10 @@ type DataAwsccRdsIntegration interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -154,11 +160,31 @@ func (j *jsiiProxy_DataAwsccRdsIntegration) CreateTime() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRdsIntegration) DataFilter() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"dataFilter",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRdsIntegration) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRdsIntegration) Description() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"description",
 		&returns,
 	)
 	return returns
@@ -345,7 +371,7 @@ func (j *jsiiProxy_DataAwsccRdsIntegration) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_integration awscc_rds_integration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_integration awscc_rds_integration} Data Source.
 func NewDataAwsccRdsIntegration(scope constructs.Construct, id *string, config *DataAwsccRdsIntegrationConfig) DataAwsccRdsIntegration {
 	_init_.Initialize()
 
@@ -363,7 +389,7 @@ func NewDataAwsccRdsIntegration(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_integration awscc_rds_integration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_integration awscc_rds_integration} Data Source.
 func NewDataAwsccRdsIntegration_Override(d DataAwsccRdsIntegration, scope constructs.Construct, id *string, config *DataAwsccRdsIntegrationConfig) {
 	_init_.Initialize()
 
@@ -730,6 +756,32 @@ func (d *jsiiProxy_DataAwsccRdsIntegration) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRdsIntegration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRdsIntegration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

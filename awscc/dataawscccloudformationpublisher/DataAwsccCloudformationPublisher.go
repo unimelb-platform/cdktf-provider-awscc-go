@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccloudformationpublisher/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudformation_publisher awscc_cloudformation_publisher}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudformation_publisher awscc_cloudformation_publisher}.
 type DataAwsccCloudformationPublisher interface {
 	cdktf.TerraformDataSource
 	AcceptTermsAndConditions() cdktf.IResolvable
@@ -88,6 +88,10 @@ type DataAwsccCloudformationPublisher interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -323,7 +327,7 @@ func (j *jsiiProxy_DataAwsccCloudformationPublisher) TerraformResourceType() *st
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudformation_publisher awscc_cloudformation_publisher} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudformation_publisher awscc_cloudformation_publisher} Data Source.
 func NewDataAwsccCloudformationPublisher(scope constructs.Construct, id *string, config *DataAwsccCloudformationPublisherConfig) DataAwsccCloudformationPublisher {
 	_init_.Initialize()
 
@@ -341,7 +345,7 @@ func NewDataAwsccCloudformationPublisher(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudformation_publisher awscc_cloudformation_publisher} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudformation_publisher awscc_cloudformation_publisher} Data Source.
 func NewDataAwsccCloudformationPublisher_Override(d DataAwsccCloudformationPublisher, scope constructs.Construct, id *string, config *DataAwsccCloudformationPublisherConfig) {
 	_init_.Initialize()
 
@@ -708,6 +712,32 @@ func (d *jsiiProxy_DataAwsccCloudformationPublisher) SynthesizeAttributes() *map
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudformationPublisher) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudformationPublisher) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

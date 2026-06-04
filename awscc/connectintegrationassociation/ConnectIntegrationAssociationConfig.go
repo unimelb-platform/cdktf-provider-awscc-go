@@ -21,15 +21,15 @@ type ConnectIntegrationAssociationConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Amazon Connect instance identifier.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/connect_integration_association#instance_id ConnectIntegrationAssociation#instance_id}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/connect_integration_association#instance_id ConnectIntegrationAssociation#instance_id}
 	InstanceId *string `field:"required" json:"instanceId" yaml:"instanceId"`
 	// ARN of Integration being associated with the instance.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/connect_integration_association#integration_arn ConnectIntegrationAssociation#integration_arn}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/connect_integration_association#integration_arn ConnectIntegrationAssociation#integration_arn}
 	IntegrationArn *string `field:"required" json:"integrationArn" yaml:"integrationArn"`
 	// Specifies the integration type to be associated with the instance.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/connect_integration_association#integration_type ConnectIntegrationAssociation#integration_type}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/connect_integration_association#integration_type ConnectIntegrationAssociation#integration_type}
 	IntegrationType *string `field:"required" json:"integrationType" yaml:"integrationType"`
 }
 

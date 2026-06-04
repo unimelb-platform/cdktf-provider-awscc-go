@@ -56,7 +56,15 @@ func (l *jsiiProxy_LogsMetricFilter) validateInterpolationForAttributeParameters
 	return nil
 }
 
+func (l *jsiiProxy_LogsMetricFilter) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LogsMetricFilter) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (l *jsiiProxy_LogsMetricFilter) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -81,6 +89,10 @@ func validateLogsMetricFilter_IsTerraformElementParameters(x interface{}) error 
 }
 
 func validateLogsMetricFilter_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_LogsMetricFilter) validateSetApplyOnTransformedLogsParameters(val interface{}) error {
 	return nil
 }
 

@@ -67,6 +67,8 @@ type PipesPipeTargetParametersEcsTaskParametersTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (p *jsiiProxy_PipesPipeTargetParametersEcsTaskParametersTagsOutputReference
 	)
 
 	return returns
+}
+
+func (p *jsiiProxy_PipesPipeTargetParametersEcsTaskParametersTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PipesPipeTargetParametersEcsTaskParametersTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (p *jsiiProxy_PipesPipeTargetParametersEcsTaskParametersTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscckendrafaq/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kendra_faq awscc_kendra_faq}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kendra_faq awscc_kendra_faq}.
 type DataAwsccKendraFaq interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -26,6 +26,7 @@ type DataAwsccKendraFaq interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	Description() *string
+	FaqId() *string
 	FileFormat() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
@@ -39,6 +40,7 @@ type DataAwsccKendraFaq interface {
 	SetId(val *string)
 	IdInput() *string
 	IndexId() *string
+	LanguageCode() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -90,6 +92,10 @@ type DataAwsccKendraFaq interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -164,6 +170,16 @@ func (j *jsiiProxy_DataAwsccKendraFaq) Description() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccKendraFaq) FaqId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"faqId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccKendraFaq) FileFormat() *string {
 	var returns *string
 	_jsii_.Get(
@@ -229,6 +245,16 @@ func (j *jsiiProxy_DataAwsccKendraFaq) IndexId() *string {
 	_jsii_.Get(
 		j,
 		"indexId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccKendraFaq) LanguageCode() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"languageCode",
 		&returns,
 	)
 	return returns
@@ -345,7 +371,7 @@ func (j *jsiiProxy_DataAwsccKendraFaq) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kendra_faq awscc_kendra_faq} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kendra_faq awscc_kendra_faq} Data Source.
 func NewDataAwsccKendraFaq(scope constructs.Construct, id *string, config *DataAwsccKendraFaqConfig) DataAwsccKendraFaq {
 	_init_.Initialize()
 
@@ -363,7 +389,7 @@ func NewDataAwsccKendraFaq(scope constructs.Construct, id *string, config *DataA
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kendra_faq awscc_kendra_faq} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kendra_faq awscc_kendra_faq} Data Source.
 func NewDataAwsccKendraFaq_Override(d DataAwsccKendraFaq, scope constructs.Construct, id *string, config *DataAwsccKendraFaqConfig) {
 	_init_.Initialize()
 
@@ -730,6 +756,32 @@ func (d *jsiiProxy_DataAwsccKendraFaq) SynthesizeAttributes() *map[string]interf
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKendraFaq) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKendraFaq) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

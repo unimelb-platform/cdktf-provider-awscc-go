@@ -98,10 +98,12 @@ type QuicksightTopicDataSetsFiltersOutputReference interface {
 	ResetDateRangeFilter()
 	ResetFilterClass()
 	ResetFilterDescription()
+	ResetFilterName()
 	ResetFilterSynonyms()
 	ResetFilterType()
 	ResetNumericEqualityFilter()
 	ResetNumericRangeFilter()
+	ResetOperandFieldName()
 	ResetRelativeDateFilter()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -830,6 +832,14 @@ func (q *jsiiProxy_QuicksightTopicDataSetsFiltersOutputReference) ResetFilterDes
 	)
 }
 
+func (q *jsiiProxy_QuicksightTopicDataSetsFiltersOutputReference) ResetFilterName() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetFilterName",
+		nil, // no parameters
+	)
+}
+
 func (q *jsiiProxy_QuicksightTopicDataSetsFiltersOutputReference) ResetFilterSynonyms() {
 	_jsii_.InvokeVoid(
 		q,
@@ -858,6 +868,14 @@ func (q *jsiiProxy_QuicksightTopicDataSetsFiltersOutputReference) ResetNumericRa
 	_jsii_.InvokeVoid(
 		q,
 		"resetNumericRangeFilter",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightTopicDataSetsFiltersOutputReference) ResetOperandFieldName() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetOperandFieldName",
 		nil, // no parameters
 	)
 }

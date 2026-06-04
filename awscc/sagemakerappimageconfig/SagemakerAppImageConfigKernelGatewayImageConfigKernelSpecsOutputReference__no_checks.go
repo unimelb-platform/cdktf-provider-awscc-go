@@ -60,7 +60,7 @@ func (j *jsiiProxy_SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecsOut
 	return nil
 }
 
-func (j *jsiiProxy_SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecsOutputReference) validateSetInternalValueParameters(val *SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecs) error {
+func (j *jsiiProxy_SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

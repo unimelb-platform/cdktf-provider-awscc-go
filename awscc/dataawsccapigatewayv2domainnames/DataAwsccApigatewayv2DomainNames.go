@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccapigatewayv2domainnames/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigatewayv2_domain_names awscc_apigatewayv2_domain_names}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigatewayv2_domain_names awscc_apigatewayv2_domain_names}.
 type DataAwsccApigatewayv2DomainNames interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccApigatewayv2DomainNames interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccApigatewayv2DomainNames) TerraformResourceType() *st
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigatewayv2_domain_names awscc_apigatewayv2_domain_names} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigatewayv2_domain_names awscc_apigatewayv2_domain_names} Data Source.
 func NewDataAwsccApigatewayv2DomainNames(scope constructs.Construct, id *string, config *DataAwsccApigatewayv2DomainNamesConfig) DataAwsccApigatewayv2DomainNames {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccApigatewayv2DomainNames(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigatewayv2_domain_names awscc_apigatewayv2_domain_names} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigatewayv2_domain_names awscc_apigatewayv2_domain_names} Data Source.
 func NewDataAwsccApigatewayv2DomainNames_Override(d DataAwsccApigatewayv2DomainNames, scope constructs.Construct, id *string, config *DataAwsccApigatewayv2DomainNamesConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccApigatewayv2DomainNames) SynthesizeAttributes() *map
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApigatewayv2DomainNames) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApigatewayv2DomainNames) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

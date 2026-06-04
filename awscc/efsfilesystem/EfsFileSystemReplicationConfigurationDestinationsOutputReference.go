@@ -41,6 +41,15 @@ type EfsFileSystemReplicationConfigurationDestinationsOutputReference interface 
 	Region() *string
 	SetRegion(val *string)
 	RegionInput() *string
+	RoleArn() *string
+	SetRoleArn(val *string)
+	RoleArnInput() *string
+	Status() *string
+	SetStatus(val *string)
+	StatusInput() *string
+	StatusMessage() *string
+	SetStatusMessage(val *string)
+	StatusMessageInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -77,6 +86,9 @@ type EfsFileSystemReplicationConfigurationDestinationsOutputReference interface 
 	ResetFileSystemId()
 	ResetKmsKeyId()
 	ResetRegion()
+	ResetRoleArn()
+	ResetStatus()
+	ResetStatusMessage()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -222,6 +234,66 @@ func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputRefere
 	return returns
 }
 
+func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference) RoleArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"roleArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference) RoleArnInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"roleArnInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference) Status() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"status",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference) StatusInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"statusInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference) StatusMessage() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"statusMessage",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference) StatusMessageInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"statusMessageInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -343,6 +415,39 @@ func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputRefere
 	_jsii_.Set(
 		j,
 		"region",
+		val,
+	)
+}
+
+func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference)SetRoleArn(val *string) {
+	if err := j.validateSetRoleArnParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"roleArn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference)SetStatus(val *string) {
+	if err := j.validateSetStatusParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"status",
+		val,
+	)
+}
+
+func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference)SetStatusMessage(val *string) {
+	if err := j.validateSetStatusMessageParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"statusMessage",
 		val,
 	)
 }
@@ -583,6 +688,30 @@ func (e *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputRefere
 	_jsii_.InvokeVoid(
 		e,
 		"resetRegion",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference) ResetStatus() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetStatus",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference) ResetStatusMessage() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetStatusMessage",
 		nil, // no parameters
 	)
 }

@@ -56,7 +56,7 @@ func (j *jsiiProxy_GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfigu
 	return nil
 }
 
-func (j *jsiiProxy_GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfigurationOutputReference) validateSetInternalValueParameters(val *GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfiguration) error {
+func (j *jsiiProxy_GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfigurationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

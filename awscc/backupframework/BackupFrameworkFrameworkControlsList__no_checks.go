@@ -4,6 +4,10 @@ package backupframework
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (b *jsiiProxy_BackupFrameworkFrameworkControlsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (b *jsiiProxy_BackupFrameworkFrameworkControlsList) validateGetParameters(index *float64) error {
 	return nil
 }

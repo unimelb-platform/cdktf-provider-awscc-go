@@ -36,8 +36,8 @@ type CloudformationStackSetStackInstancesGroupDeploymentTargetsOutputReference i
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *CloudformationStackSetStackInstancesGroupDeploymentTargets
-	SetInternalValue(val *CloudformationStackSetStackInstancesGroupDeploymentTargets)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	OrganizationalUnitIds() *[]*string
 	SetOrganizationalUnitIds(val *[]*string)
 	OrganizationalUnitIdsInput() *[]*string
@@ -192,8 +192,8 @@ func (j *jsiiProxy_CloudformationStackSetStackInstancesGroupDeploymentTargetsOut
 	return returns
 }
 
-func (j *jsiiProxy_CloudformationStackSetStackInstancesGroupDeploymentTargetsOutputReference) InternalValue() *CloudformationStackSetStackInstancesGroupDeploymentTargets {
-	var returns *CloudformationStackSetStackInstancesGroupDeploymentTargets
+func (j *jsiiProxy_CloudformationStackSetStackInstancesGroupDeploymentTargetsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -325,7 +325,7 @@ func (j *jsiiProxy_CloudformationStackSetStackInstancesGroupDeploymentTargetsOut
 	)
 }
 
-func (j *jsiiProxy_CloudformationStackSetStackInstancesGroupDeploymentTargetsOutputReference)SetInternalValue(val *CloudformationStackSetStackInstancesGroupDeploymentTargets) {
+func (j *jsiiProxy_CloudformationStackSetStackInstancesGroupDeploymentTargetsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

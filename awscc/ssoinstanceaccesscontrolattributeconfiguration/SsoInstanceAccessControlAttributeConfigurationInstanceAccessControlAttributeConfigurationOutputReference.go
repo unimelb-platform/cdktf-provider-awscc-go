@@ -64,6 +64,7 @@ type SsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttribut
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAccessControlAttributes(value interface{})
+	ResetAccessControlAttributes()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -446,6 +447,14 @@ func (s *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationInstanceAccessC
 		s,
 		"putAccessControlAttributes",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationOutputReference) ResetAccessControlAttributes() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetAccessControlAttributes",
+		nil, // no parameters
 	)
 }
 

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/route53recoverycontrolcluster/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/route53recoverycontrol_cluster awscc_route53recoverycontrol_cluster}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/route53recoverycontrol_cluster awscc_route53recoverycontrol_cluster}.
 type Route53RecoverycontrolCluster interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -46,6 +46,9 @@ type Route53RecoverycontrolCluster interface {
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
+	NetworkType() *string
+	SetNetworkType(val *string)
+	NetworkTypeInput() *string
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
@@ -91,21 +94,35 @@ type Route53RecoverycontrolCluster interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutTags(value interface{})
+	ResetNetworkType()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -260,6 +277,26 @@ func (j *jsiiProxy_Route53RecoverycontrolCluster) NameInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Route53RecoverycontrolCluster) NetworkType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"networkType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Route53RecoverycontrolCluster) NetworkTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"networkTypeInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Route53RecoverycontrolCluster) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -361,7 +398,7 @@ func (j *jsiiProxy_Route53RecoverycontrolCluster) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/route53recoverycontrol_cluster awscc_route53recoverycontrol_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/route53recoverycontrol_cluster awscc_route53recoverycontrol_cluster} Resource.
 func NewRoute53RecoverycontrolCluster(scope constructs.Construct, id *string, config *Route53RecoverycontrolClusterConfig) Route53RecoverycontrolCluster {
 	_init_.Initialize()
 
@@ -379,7 +416,7 @@ func NewRoute53RecoverycontrolCluster(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/route53recoverycontrol_cluster awscc_route53recoverycontrol_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/route53recoverycontrol_cluster awscc_route53recoverycontrol_cluster} Resource.
 func NewRoute53RecoverycontrolCluster_Override(r Route53RecoverycontrolCluster, scope constructs.Construct, id *string, config *Route53RecoverycontrolClusterConfig) {
 	_init_.Initialize()
 
@@ -446,6 +483,17 @@ func (j *jsiiProxy_Route53RecoverycontrolCluster)SetName(val *string) {
 	_jsii_.Set(
 		j,
 		"name",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Route53RecoverycontrolCluster)SetNetworkType(val *string) {
+	if err := j.validateSetNetworkTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"networkType",
 		val,
 	)
 }
@@ -738,6 +786,19 @@ func (r *jsiiProxy_Route53RecoverycontrolCluster) GetStringMapAttribute(terrafor
 	return returns
 }
 
+func (r *jsiiProxy_Route53RecoverycontrolCluster) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (r *jsiiProxy_Route53RecoverycontrolCluster) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -765,6 +826,17 @@ func (r *jsiiProxy_Route53RecoverycontrolCluster) InterpolationForAttribute(terr
 	return returns
 }
 
+func (r *jsiiProxy_Route53RecoverycontrolCluster) MoveFromId(id *string) {
+	if err := r.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_Route53RecoverycontrolCluster) MoveTo(moveTarget *string, index interface{}) {
 	if err := r.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -773,6 +845,17 @@ func (r *jsiiProxy_Route53RecoverycontrolCluster) MoveTo(moveTarget *string, ind
 		r,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (r *jsiiProxy_Route53RecoverycontrolCluster) MoveToId(id *string) {
+	if err := r.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -798,6 +881,14 @@ func (r *jsiiProxy_Route53RecoverycontrolCluster) PutTags(value interface{}) {
 	)
 }
 
+func (r *jsiiProxy_Route53RecoverycontrolCluster) ResetNetworkType() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetNetworkType",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_Route53RecoverycontrolCluster) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		r,
@@ -820,6 +911,32 @@ func (r *jsiiProxy_Route53RecoverycontrolCluster) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		r,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_Route53RecoverycontrolCluster) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		r,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_Route53RecoverycontrolCluster) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

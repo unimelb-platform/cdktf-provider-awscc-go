@@ -67,6 +67,7 @@ type KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlCo
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetSeedUrls()
 	ResetWebCrawlerMode()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfiguratio
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationOutputReference) ResetSeedUrls() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetSeedUrls",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationOutputReference) ResetWebCrawlerMode() {

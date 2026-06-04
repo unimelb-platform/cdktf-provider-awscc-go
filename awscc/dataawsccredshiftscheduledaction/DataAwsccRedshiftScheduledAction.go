@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccredshiftscheduledaction/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/redshift_scheduled_action awscc_redshift_scheduled_action}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/redshift_scheduled_action awscc_redshift_scheduled_action}.
 type DataAwsccRedshiftScheduledAction interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -92,6 +92,10 @@ type DataAwsccRedshiftScheduledAction interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -367,7 +371,7 @@ func (j *jsiiProxy_DataAwsccRedshiftScheduledAction) TerraformResourceType() *st
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/redshift_scheduled_action awscc_redshift_scheduled_action} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/redshift_scheduled_action awscc_redshift_scheduled_action} Data Source.
 func NewDataAwsccRedshiftScheduledAction(scope constructs.Construct, id *string, config *DataAwsccRedshiftScheduledActionConfig) DataAwsccRedshiftScheduledAction {
 	_init_.Initialize()
 
@@ -385,7 +389,7 @@ func NewDataAwsccRedshiftScheduledAction(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/redshift_scheduled_action awscc_redshift_scheduled_action} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/redshift_scheduled_action awscc_redshift_scheduled_action} Data Source.
 func NewDataAwsccRedshiftScheduledAction_Override(d DataAwsccRedshiftScheduledAction, scope constructs.Construct, id *string, config *DataAwsccRedshiftScheduledActionConfig) {
 	_init_.Initialize()
 
@@ -752,6 +756,32 @@ func (d *jsiiProxy_DataAwsccRedshiftScheduledAction) SynthesizeAttributes() *map
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRedshiftScheduledAction) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRedshiftScheduledAction) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

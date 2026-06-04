@@ -1,0 +1,6 @@
+package dataawscccodepipelinecustomactiontype
+
+
+type DataAwsccCodepipelineCustomActionTypeOutputArtifactDetails struct {
+}
+

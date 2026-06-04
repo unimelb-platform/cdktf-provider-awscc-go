@@ -13,6 +13,9 @@ type DatabrewDatasetInputS3InputDefinitionOutputReference interface {
 	Bucket() *string
 	SetBucket(val *string)
 	BucketInput() *string
+	BucketOwner() *string
+	SetBucketOwner(val *string)
+	BucketOwnerInput() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -67,6 +70,8 @@ type DatabrewDatasetInputS3InputDefinitionOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucket()
+	ResetBucketOwner()
 	ResetKey()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -98,6 +103,26 @@ func (j *jsiiProxy_DatabrewDatasetInputS3InputDefinitionOutputReference) BucketI
 	_jsii_.Get(
 		j,
 		"bucketInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatabrewDatasetInputS3InputDefinitionOutputReference) BucketOwner() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"bucketOwner",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatabrewDatasetInputS3InputDefinitionOutputReference) BucketOwnerInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"bucketOwnerInput",
 		&returns,
 	)
 	return returns
@@ -228,6 +253,17 @@ func (j *jsiiProxy_DatabrewDatasetInputS3InputDefinitionOutputReference)SetBucke
 	_jsii_.Set(
 		j,
 		"bucket",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DatabrewDatasetInputS3InputDefinitionOutputReference)SetBucketOwner(val *string) {
+	if err := j.validateSetBucketOwnerParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"bucketOwner",
 		val,
 	)
 }
@@ -482,6 +518,22 @@ func (d *jsiiProxy_DatabrewDatasetInputS3InputDefinitionOutputReference) Interpo
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatabrewDatasetInputS3InputDefinitionOutputReference) ResetBucket() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetBucket",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatabrewDatasetInputS3InputDefinitionOutputReference) ResetBucketOwner() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetBucketOwner",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatabrewDatasetInputS3InputDefinitionOutputReference) ResetKey() {

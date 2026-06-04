@@ -71,6 +71,8 @@ type CleanroomsAnalysisTemplateAnalysisParametersOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetDefaultValue()
+	ResetName()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -522,6 +524,22 @@ func (c *jsiiProxy_CleanroomsAnalysisTemplateAnalysisParametersOutputReference) 
 	_jsii_.InvokeVoid(
 		c,
 		"resetDefaultValue",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsAnalysisTemplateAnalysisParametersOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsAnalysisTemplateAnalysisParametersOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetType",
 		nil, // no parameters
 	)
 }

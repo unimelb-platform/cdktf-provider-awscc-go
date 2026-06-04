@@ -68,6 +68,7 @@ type IotJobTemplatePresignedUrlConfigOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetExpiresInSec()
+	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (i *jsiiProxy_IotJobTemplatePresignedUrlConfigOutputReference) ResetExpires
 	_jsii_.InvokeVoid(
 		i,
 		"resetExpiresInSec",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotJobTemplatePresignedUrlConfigOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArn",
 		nil, // no parameters
 	)
 }

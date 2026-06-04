@@ -119,6 +119,14 @@ func (n *jsiiProxy_NimblestudioStreamingImage) validateInterpolationForAttribute
 	return nil
 }
 
+func (n *jsiiProxy_NimblestudioStreamingImage) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (n *jsiiProxy_NimblestudioStreamingImage) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (n *jsiiProxy_NimblestudioStreamingImage) validateMoveToParameters(moveTarg
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (n *jsiiProxy_NimblestudioStreamingImage) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -327,6 +343,22 @@ func (j *jsiiProxy_NimblestudioStreamingImage) validateSetDescriptionParameters(
 }
 
 func (j *jsiiProxy_NimblestudioStreamingImage) validateSetEc2ImageIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_NimblestudioStreamingImage) validateSetEncryptionConfigurationKeyArnParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_NimblestudioStreamingImage) validateSetEncryptionConfigurationKeyTypeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

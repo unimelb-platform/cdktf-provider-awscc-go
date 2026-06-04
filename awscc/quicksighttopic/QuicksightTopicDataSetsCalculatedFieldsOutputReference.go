@@ -49,6 +49,9 @@ type QuicksightTopicDataSetsCalculatedFieldsOutputReference interface {
 	CreationStack() *[]*string
 	DefaultFormatting() QuicksightTopicDataSetsCalculatedFieldsDefaultFormattingOutputReference
 	DefaultFormattingInput() interface{}
+	DisableIndexing() interface{}
+	SetDisableIndexing(val interface{})
+	DisableIndexingInput() interface{}
 	Expression() *string
 	SetExpression(val *string)
 	ExpressionInput() *string
@@ -112,11 +115,14 @@ type QuicksightTopicDataSetsCalculatedFieldsOutputReference interface {
 	ResetAggregation()
 	ResetAllowedAggregations()
 	ResetCalculatedFieldDescription()
+	ResetCalculatedFieldName()
 	ResetCalculatedFieldSynonyms()
 	ResetCellValueSynonyms()
 	ResetColumnDataRole()
 	ResetComparativeOrder()
 	ResetDefaultFormatting()
+	ResetDisableIndexing()
+	ResetExpression()
 	ResetIsIncludedInTopic()
 	ResetNeverAggregateInFilter()
 	ResetNonAdditive()
@@ -343,6 +349,26 @@ func (j *jsiiProxy_QuicksightTopicDataSetsCalculatedFieldsOutputReference) Defau
 	_jsii_.Get(
 		j,
 		"defaultFormattingInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightTopicDataSetsCalculatedFieldsOutputReference) DisableIndexing() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"disableIndexing",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightTopicDataSetsCalculatedFieldsOutputReference) DisableIndexingInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"disableIndexingInput",
 		&returns,
 	)
 	return returns
@@ -640,6 +666,17 @@ func (j *jsiiProxy_QuicksightTopicDataSetsCalculatedFieldsOutputReference)SetCom
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
+		val,
+	)
+}
+
+func (j *jsiiProxy_QuicksightTopicDataSetsCalculatedFieldsOutputReference)SetDisableIndexing(val interface{}) {
+	if err := j.validateSetDisableIndexingParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"disableIndexing",
 		val,
 	)
 }
@@ -997,6 +1034,14 @@ func (q *jsiiProxy_QuicksightTopicDataSetsCalculatedFieldsOutputReference) Reset
 	)
 }
 
+func (q *jsiiProxy_QuicksightTopicDataSetsCalculatedFieldsOutputReference) ResetCalculatedFieldName() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetCalculatedFieldName",
+		nil, // no parameters
+	)
+}
+
 func (q *jsiiProxy_QuicksightTopicDataSetsCalculatedFieldsOutputReference) ResetCalculatedFieldSynonyms() {
 	_jsii_.InvokeVoid(
 		q,
@@ -1033,6 +1078,22 @@ func (q *jsiiProxy_QuicksightTopicDataSetsCalculatedFieldsOutputReference) Reset
 	_jsii_.InvokeVoid(
 		q,
 		"resetDefaultFormatting",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightTopicDataSetsCalculatedFieldsOutputReference) ResetDisableIndexing() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDisableIndexing",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightTopicDataSetsCalculatedFieldsOutputReference) ResetExpression() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetExpression",
 		nil, // no parameters
 	)
 }

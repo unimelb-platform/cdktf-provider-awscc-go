@@ -70,6 +70,8 @@ type ResiliencehubAppEventSubscriptionsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEventType()
+	ResetName()
 	ResetSnsTopicArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -516,6 +518,22 @@ func (r *jsiiProxy_ResiliencehubAppEventSubscriptionsOutputReference) Interpolat
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_ResiliencehubAppEventSubscriptionsOutputReference) ResetEventType() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetEventType",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_ResiliencehubAppEventSubscriptionsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetName",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_ResiliencehubAppEventSubscriptionsOutputReference) ResetSnsTopicArn() {

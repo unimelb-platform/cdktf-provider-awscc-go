@@ -74,6 +74,7 @@ type IotfleetwiseCampaignCollectionSchemeConditionBasedCollectionSchemeOutputRef
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetConditionLanguageVersion()
+	ResetExpression()
 	ResetMinimumTriggerIntervalMs()
 	ResetTriggerMode()
 	// Produce the Token's value at resolution time.
@@ -558,6 +559,14 @@ func (i *jsiiProxy_IotfleetwiseCampaignCollectionSchemeConditionBasedCollectionS
 	_jsii_.InvokeVoid(
 		i,
 		"resetConditionLanguageVersion",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotfleetwiseCampaignCollectionSchemeConditionBasedCollectionSchemeOutputReference) ResetExpression() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetExpression",
 		nil, // no parameters
 	)
 }

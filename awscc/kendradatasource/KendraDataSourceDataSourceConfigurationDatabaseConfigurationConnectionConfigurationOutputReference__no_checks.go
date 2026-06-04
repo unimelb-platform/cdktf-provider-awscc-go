@@ -68,7 +68,7 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationC
 	return nil
 }
 
-func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfigurationOutputReference) validateSetInternalValueParameters(val *KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfiguration) error {
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfigurationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

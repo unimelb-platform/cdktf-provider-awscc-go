@@ -67,6 +67,8 @@ type CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigSecurityHeadersCo
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetContentSecurityPolicy()
+	ResetOverride()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigSec
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigSecurityHeadersConfigContentSecurityPolicyOutputReference) ResetContentSecurityPolicy() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetContentSecurityPolicy",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigSecurityHeadersConfigContentSecurityPolicyOutputReference) ResetOverride() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetOverride",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigSecurityHeadersConfigContentSecurityPolicyOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

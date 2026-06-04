@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccmedialivemultiplex/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/medialive_multiplex awscc_medialive_multiplex}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/medialive_multiplex awscc_medialive_multiplex}.
 type DataAwsccMedialiveMultiplex interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -42,6 +42,7 @@ type DataAwsccMedialiveMultiplex interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	MultiplexId() *string
 	MultiplexSettings() DataAwsccMedialiveMultiplexMultiplexSettingsOutputReference
 	Name() *string
 	// The tree node.
@@ -91,6 +92,10 @@ type DataAwsccMedialiveMultiplex interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -235,6 +240,16 @@ func (j *jsiiProxy_DataAwsccMedialiveMultiplex) Lifecycle() *cdktf.TerraformReso
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccMedialiveMultiplex) MultiplexId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"multiplexId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccMedialiveMultiplex) MultiplexSettings() DataAwsccMedialiveMultiplexMultiplexSettingsOutputReference {
 	var returns DataAwsccMedialiveMultiplexMultiplexSettingsOutputReference
 	_jsii_.Get(
@@ -356,7 +371,7 @@ func (j *jsiiProxy_DataAwsccMedialiveMultiplex) TerraformResourceType() *string 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/medialive_multiplex awscc_medialive_multiplex} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/medialive_multiplex awscc_medialive_multiplex} Data Source.
 func NewDataAwsccMedialiveMultiplex(scope constructs.Construct, id *string, config *DataAwsccMedialiveMultiplexConfig) DataAwsccMedialiveMultiplex {
 	_init_.Initialize()
 
@@ -374,7 +389,7 @@ func NewDataAwsccMedialiveMultiplex(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/medialive_multiplex awscc_medialive_multiplex} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/medialive_multiplex awscc_medialive_multiplex} Data Source.
 func NewDataAwsccMedialiveMultiplex_Override(d DataAwsccMedialiveMultiplex, scope constructs.Construct, id *string, config *DataAwsccMedialiveMultiplexConfig) {
 	_init_.Initialize()
 
@@ -741,6 +756,32 @@ func (d *jsiiProxy_DataAwsccMedialiveMultiplex) SynthesizeAttributes() *map[stri
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMedialiveMultiplex) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMedialiveMultiplex) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

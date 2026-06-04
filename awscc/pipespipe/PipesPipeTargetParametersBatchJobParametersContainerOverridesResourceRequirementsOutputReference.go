@@ -67,6 +67,8 @@ type PipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequir
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetType()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (p *jsiiProxy_PipesPipeTargetParametersBatchJobParametersContainerOverrides
 	)
 
 	return returns
+}
+
+func (p *jsiiProxy_PipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetType",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (p *jsiiProxy_PipesPipeTargetParametersBatchJobParametersContainerOverridesResourceRequirementsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

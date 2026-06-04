@@ -4,6 +4,10 @@ package dataawsccsagemakerpipeline
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccSagemakerPipelineTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccSagemakerPipelineTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

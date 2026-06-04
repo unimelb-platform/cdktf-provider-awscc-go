@@ -70,6 +70,7 @@ type VerifiedpermissionsPolicyDefinitionTemplateLinkedOutputReference interface 
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutPrincipal(value *VerifiedpermissionsPolicyDefinitionTemplateLinkedPrincipal)
 	PutResource(value *VerifiedpermissionsPolicyDefinitionTemplateLinkedResource)
+	ResetPolicyTemplateId()
 	ResetPrincipal()
 	ResetResource()
 	// Produce the Token's value at resolution time.
@@ -516,6 +517,14 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyDefinitionTemplateLinkedOutputRefere
 		v,
 		"putResource",
 		[]interface{}{value},
+	)
+}
+
+func (v *jsiiProxy_VerifiedpermissionsPolicyDefinitionTemplateLinkedOutputReference) ResetPolicyTemplateId() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetPolicyTemplateId",
+		nil, // no parameters
 	)
 }
 

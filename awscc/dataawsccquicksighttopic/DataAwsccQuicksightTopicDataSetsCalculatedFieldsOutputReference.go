@@ -34,6 +34,7 @@ type DataAwsccQuicksightTopicDataSetsCalculatedFieldsOutputReference interface {
 	// Experimental.
 	CreationStack() *[]*string
 	DefaultFormatting() DataAwsccQuicksightTopicDataSetsCalculatedFieldsDefaultFormattingOutputReference
+	DisableIndexing() cdktf.IResolvable
 	Expression() *string
 	// Experimental.
 	Fqn() *string
@@ -207,6 +208,16 @@ func (j *jsiiProxy_DataAwsccQuicksightTopicDataSetsCalculatedFieldsOutputReferen
 	_jsii_.Get(
 		j,
 		"defaultFormatting",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccQuicksightTopicDataSetsCalculatedFieldsOutputReference) DisableIndexing() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"disableIndexing",
 		&returns,
 	)
 	return returns

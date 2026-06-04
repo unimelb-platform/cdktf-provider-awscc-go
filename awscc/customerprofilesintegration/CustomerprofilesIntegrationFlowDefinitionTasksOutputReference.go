@@ -32,8 +32,8 @@ type CustomerprofilesIntegrationFlowDefinitionTasksOutputReference interface {
 	DestinationFieldInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *CustomerprofilesIntegrationFlowDefinitionTasks
-	SetInternalValue(val *CustomerprofilesIntegrationFlowDefinitionTasks)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	SourceFields() *[]*string
 	SetSourceFields(val *[]*string)
 	SourceFieldsInput() *[]*string
@@ -78,7 +78,9 @@ type CustomerprofilesIntegrationFlowDefinitionTasksOutputReference interface {
 	PutTaskProperties(value interface{})
 	ResetConnectorOperator()
 	ResetDestinationField()
+	ResetSourceFields()
 	ResetTaskProperties()
+	ResetTaskType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -174,8 +176,8 @@ func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTasksOutputReference
 	return returns
 }
 
-func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTasksOutputReference) InternalValue() *CustomerprofilesIntegrationFlowDefinitionTasks {
-	var returns *CustomerprofilesIntegrationFlowDefinitionTasks
+func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTasksOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -325,7 +327,7 @@ func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTasksOutputReference
 	)
 }
 
-func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTasksOutputReference)SetInternalValue(val *CustomerprofilesIntegrationFlowDefinitionTasks) {
+func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTasksOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -604,10 +606,26 @@ func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTasksOutputReference
 	)
 }
 
+func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTasksOutputReference) ResetSourceFields() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetSourceFields",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTasksOutputReference) ResetTaskProperties() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetTaskProperties",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTasksOutputReference) ResetTaskType() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetTaskType",
 		nil, // no parameters
 	)
 }

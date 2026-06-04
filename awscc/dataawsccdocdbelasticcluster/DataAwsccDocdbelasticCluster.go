@@ -9,12 +9,13 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdocdbelasticcluster/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/docdbelastic_cluster awscc_docdbelastic_cluster}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/docdbelastic_cluster awscc_docdbelastic_cluster}.
 type DataAwsccDocdbelasticCluster interface {
 	cdktf.TerraformDataSource
 	AdminUserName() *string
 	AdminUserPassword() *string
 	AuthType() *string
+	BackupRetentionPeriod() *float64
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	ClusterArn() *string
@@ -48,6 +49,7 @@ type DataAwsccDocdbelasticCluster interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	PreferredBackupWindow() *string
 	PreferredMaintenanceWindow() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
@@ -57,6 +59,7 @@ type DataAwsccDocdbelasticCluster interface {
 	RawOverrides() interface{}
 	ShardCapacity() *float64
 	ShardCount() *float64
+	ShardInstanceCount() *float64
 	SubnetIds() *[]*string
 	Tags() DataAwsccDocdbelasticClusterTagsList
 	// Experimental.
@@ -95,6 +98,10 @@ type DataAwsccDocdbelasticCluster interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -134,6 +141,16 @@ func (j *jsiiProxy_DataAwsccDocdbelasticCluster) AuthType() *string {
 	_jsii_.Get(
 		j,
 		"authType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDocdbelasticCluster) BackupRetentionPeriod() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"backupRetentionPeriod",
 		&returns,
 	)
 	return returns
@@ -289,6 +306,16 @@ func (j *jsiiProxy_DataAwsccDocdbelasticCluster) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccDocdbelasticCluster) PreferredBackupWindow() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"preferredBackupWindow",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccDocdbelasticCluster) PreferredMaintenanceWindow() *string {
 	var returns *string
 	_jsii_.Get(
@@ -334,6 +361,16 @@ func (j *jsiiProxy_DataAwsccDocdbelasticCluster) ShardCount() *float64 {
 	_jsii_.Get(
 		j,
 		"shardCount",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDocdbelasticCluster) ShardInstanceCount() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"shardInstanceCount",
 		&returns,
 	)
 	return returns
@@ -400,7 +437,7 @@ func (j *jsiiProxy_DataAwsccDocdbelasticCluster) VpcSecurityGroupIds() *[]*strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/docdbelastic_cluster awscc_docdbelastic_cluster} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/docdbelastic_cluster awscc_docdbelastic_cluster} Data Source.
 func NewDataAwsccDocdbelasticCluster(scope constructs.Construct, id *string, config *DataAwsccDocdbelasticClusterConfig) DataAwsccDocdbelasticCluster {
 	_init_.Initialize()
 
@@ -418,7 +455,7 @@ func NewDataAwsccDocdbelasticCluster(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/docdbelastic_cluster awscc_docdbelastic_cluster} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/docdbelastic_cluster awscc_docdbelastic_cluster} Data Source.
 func NewDataAwsccDocdbelasticCluster_Override(d DataAwsccDocdbelasticCluster, scope constructs.Construct, id *string, config *DataAwsccDocdbelasticClusterConfig) {
 	_init_.Initialize()
 
@@ -785,6 +822,32 @@ func (d *jsiiProxy_DataAwsccDocdbelasticCluster) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDocdbelasticCluster) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDocdbelasticCluster) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

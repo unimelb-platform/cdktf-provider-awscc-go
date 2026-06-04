@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2dhcpoptions/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_dhcp_options awscc_ec2_dhcp_options}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_dhcp_options awscc_ec2_dhcp_options}.
 type DataAwsccEc2DhcpOptions interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -38,6 +38,7 @@ type DataAwsccEc2DhcpOptions interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	Ipv6AddressPreferredLeaseTime() *float64
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -89,6 +90,10 @@ type DataAwsccEc2DhcpOptions interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -223,6 +228,16 @@ func (j *jsiiProxy_DataAwsccEc2DhcpOptions) IdInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2DhcpOptions) Ipv6AddressPreferredLeaseTime() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"ipv6AddressPreferredLeaseTime",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2DhcpOptions) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -334,7 +349,7 @@ func (j *jsiiProxy_DataAwsccEc2DhcpOptions) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_dhcp_options awscc_ec2_dhcp_options} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_dhcp_options awscc_ec2_dhcp_options} Data Source.
 func NewDataAwsccEc2DhcpOptions(scope constructs.Construct, id *string, config *DataAwsccEc2DhcpOptionsConfig) DataAwsccEc2DhcpOptions {
 	_init_.Initialize()
 
@@ -352,7 +367,7 @@ func NewDataAwsccEc2DhcpOptions(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_dhcp_options awscc_ec2_dhcp_options} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_dhcp_options awscc_ec2_dhcp_options} Data Source.
 func NewDataAwsccEc2DhcpOptions_Override(d DataAwsccEc2DhcpOptions, scope constructs.Construct, id *string, config *DataAwsccEc2DhcpOptionsConfig) {
 	_init_.Initialize()
 
@@ -719,6 +734,32 @@ func (d *jsiiProxy_DataAwsccEc2DhcpOptions) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2DhcpOptions) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2DhcpOptions) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

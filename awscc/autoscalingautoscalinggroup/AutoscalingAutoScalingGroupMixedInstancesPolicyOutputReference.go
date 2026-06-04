@@ -32,7 +32,7 @@ type AutoscalingAutoScalingGroupMixedInstancesPolicyOutputReference interface {
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	LaunchTemplate() AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOutputReference
-	LaunchTemplateInput() *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
+	LaunchTemplateInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -68,6 +68,7 @@ type AutoscalingAutoScalingGroupMixedInstancesPolicyOutputReference interface {
 	PutInstancesDistribution(value *AutoscalingAutoScalingGroupMixedInstancesPolicyInstancesDistribution)
 	PutLaunchTemplate(value *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate)
 	ResetInstancesDistribution()
+	ResetLaunchTemplate()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -163,8 +164,8 @@ func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyOutputReferenc
 	return returns
 }
 
-func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyOutputReference) LaunchTemplateInput() *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate {
-	var returns *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
+func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyOutputReference) LaunchTemplateInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"launchTemplateInput",
@@ -488,6 +489,14 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyOutputReferenc
 	_jsii_.InvokeVoid(
 		a,
 		"resetInstancesDistribution",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyOutputReference) ResetLaunchTemplate() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetLaunchTemplate",
 		nil, // no parameters
 	)
 }

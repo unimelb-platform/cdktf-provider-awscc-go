@@ -98,6 +98,14 @@ func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputRef
 	return nil
 }
 
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) validateSetAnnotationsParameters(val *map[string]*string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	switch val.(type) {
 	case *string:
@@ -187,7 +195,15 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputRef
 	return nil
 }
 
-func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) validateSetLabelsParameters(val *string) error {
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) validateSetLabelsParameters(val *map[string]*string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) validateSetNamespaceParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

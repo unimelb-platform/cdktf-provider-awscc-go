@@ -38,6 +38,9 @@ type Elasticloadbalancingv2LoadBalancerSubnetMappingsOutputReference interface {
 	PrivateIPv4Address() *string
 	SetPrivateIPv4Address(val *string)
 	PrivateIPv4AddressInput() *string
+	SourceNatIpv6Prefix() *string
+	SetSourceNatIpv6Prefix(val *string)
+	SourceNatIpv6PrefixInput() *string
 	SubnetId() *string
 	SetSubnetId(val *string)
 	SubnetIdInput() *string
@@ -76,6 +79,8 @@ type Elasticloadbalancingv2LoadBalancerSubnetMappingsOutputReference interface {
 	ResetAllocationId()
 	ResetIPv6Address()
 	ResetPrivateIPv4Address()
+	ResetSourceNatIpv6Prefix()
+	ResetSubnetId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -196,6 +201,26 @@ func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancerSubnetMappingsOutputReferen
 	_jsii_.Get(
 		j,
 		"privateIPv4AddressInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancerSubnetMappingsOutputReference) SourceNatIpv6Prefix() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"sourceNatIpv6Prefix",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancerSubnetMappingsOutputReference) SourceNatIpv6PrefixInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"sourceNatIpv6PrefixInput",
 		&returns,
 	)
 	return returns
@@ -331,6 +356,17 @@ func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancerSubnetMappingsOutputReferen
 	_jsii_.Set(
 		j,
 		"privateIPv4Address",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancerSubnetMappingsOutputReference)SetSourceNatIpv6Prefix(val *string) {
+	if err := j.validateSetSourceNatIpv6PrefixParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"sourceNatIpv6Prefix",
 		val,
 	)
 }
@@ -574,6 +610,22 @@ func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancerSubnetMappingsOutputReferen
 	_jsii_.InvokeVoid(
 		e,
 		"resetPrivateIPv4Address",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancerSubnetMappingsOutputReference) ResetSourceNatIpv6Prefix() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetSourceNatIpv6Prefix",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancerSubnetMappingsOutputReference) ResetSubnetId() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetSubnetId",
 		nil, // no parameters
 	)
 }

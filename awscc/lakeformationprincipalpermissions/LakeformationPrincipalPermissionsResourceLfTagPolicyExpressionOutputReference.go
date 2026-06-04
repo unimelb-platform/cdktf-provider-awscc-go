@@ -27,8 +27,8 @@ type LakeformationPrincipalPermissionsResourceLfTagPolicyExpressionOutputReferen
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LakeformationPrincipalPermissionsResourceLfTagPolicyExpression
-	SetInternalValue(val *LakeformationPrincipalPermissionsResourceLfTagPolicyExpression)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	TagKey() *string
 	SetTagKey(val *string)
 	TagKeyInput() *string
@@ -124,8 +124,8 @@ func (j *jsiiProxy_LakeformationPrincipalPermissionsResourceLfTagPolicyExpressio
 	return returns
 }
 
-func (j *jsiiProxy_LakeformationPrincipalPermissionsResourceLfTagPolicyExpressionOutputReference) InternalValue() *LakeformationPrincipalPermissionsResourceLfTagPolicyExpression {
-	var returns *LakeformationPrincipalPermissionsResourceLfTagPolicyExpression
+func (j *jsiiProxy_LakeformationPrincipalPermissionsResourceLfTagPolicyExpressionOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -244,7 +244,7 @@ func (j *jsiiProxy_LakeformationPrincipalPermissionsResourceLfTagPolicyExpressio
 	)
 }
 
-func (j *jsiiProxy_LakeformationPrincipalPermissionsResourceLfTagPolicyExpressionOutputReference)SetInternalValue(val *LakeformationPrincipalPermissionsResourceLfTagPolicyExpression) {
+func (j *jsiiProxy_LakeformationPrincipalPermissionsResourceLfTagPolicyExpressionOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

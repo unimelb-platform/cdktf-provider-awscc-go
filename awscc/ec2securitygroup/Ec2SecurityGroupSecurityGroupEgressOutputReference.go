@@ -91,6 +91,7 @@ type Ec2SecurityGroupSecurityGroupEgressOutputReference interface {
 	ResetDestinationPrefixListId()
 	ResetDestinationSecurityGroupId()
 	ResetFromPort()
+	ResetIpProtocol()
 	ResetToPort()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -738,6 +739,14 @@ func (e *jsiiProxy_Ec2SecurityGroupSecurityGroupEgressOutputReference) ResetFrom
 	_jsii_.InvokeVoid(
 		e,
 		"resetFromPort",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2SecurityGroupSecurityGroupEgressOutputReference) ResetIpProtocol() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetIpProtocol",
 		nil, // no parameters
 	)
 }

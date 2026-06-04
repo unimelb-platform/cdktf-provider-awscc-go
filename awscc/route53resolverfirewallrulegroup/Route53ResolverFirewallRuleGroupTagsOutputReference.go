@@ -67,6 +67,8 @@ type Route53ResolverFirewallRuleGroupTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (r *jsiiProxy_Route53ResolverFirewallRuleGroupTagsOutputReference) Interpol
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_Route53ResolverFirewallRuleGroupTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Route53ResolverFirewallRuleGroupTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_Route53ResolverFirewallRuleGroupTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -64,6 +64,7 @@ type S3BucketCorsConfigurationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutCorsRules(value interface{})
+	ResetCorsRules()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -446,6 +447,14 @@ func (s *jsiiProxy_S3BucketCorsConfigurationOutputReference) PutCorsRules(value 
 		s,
 		"putCorsRules",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_S3BucketCorsConfigurationOutputReference) ResetCorsRules() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetCorsRules",
+		nil, // no parameters
 	)
 }
 

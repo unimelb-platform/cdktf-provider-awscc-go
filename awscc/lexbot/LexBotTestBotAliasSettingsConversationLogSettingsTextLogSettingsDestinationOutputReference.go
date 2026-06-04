@@ -11,7 +11,7 @@ import (
 type LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationOutputReference interface {
 	cdktf.ComplexObject
 	Cloudwatch() LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationCloudwatchOutputReference
-	CloudwatchInput() *LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationCloudwatch
+	CloudwatchInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -29,8 +29,8 @@ type LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestination
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestination
-	SetInternalValue(val *LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestination)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestination
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutCloudwatch(value *LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationCloudwatch)
+	ResetCloudwatch()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -89,8 +90,8 @@ func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSetti
 	return returns
 }
 
-func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationOutputReference) CloudwatchInput() *LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationCloudwatch {
-	var returns *LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationCloudwatch
+func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationOutputReference) CloudwatchInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"cloudwatchInput",
@@ -139,8 +140,8 @@ func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSetti
 	return returns
 }
 
-func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationOutputReference) InternalValue() *LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestination {
-	var returns *LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestination
+func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -219,7 +220,7 @@ func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSetti
 	)
 }
 
-func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationOutputReference)SetInternalValue(val *LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestination) {
+func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -446,6 +447,14 @@ func (l *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSetti
 		l,
 		"putCloudwatch",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationOutputReference) ResetCloudwatch() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetCloudwatch",
+		nil, // no parameters
 	)
 }
 

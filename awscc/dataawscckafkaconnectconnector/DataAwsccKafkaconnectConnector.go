@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscckafkaconnectconnector/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kafkaconnect_connector awscc_kafkaconnect_connector}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kafkaconnect_connector awscc_kafkaconnect_connector}.
 type DataAwsccKafkaconnectConnector interface {
 	cdktf.TerraformDataSource
 	Capacity() DataAwsccKafkaconnectConnectorCapacityOutputReference
@@ -59,6 +59,7 @@ type DataAwsccKafkaconnectConnector interface {
 	// Experimental.
 	RawOverrides() interface{}
 	ServiceExecutionRoleArn() *string
+	Tags() DataAwsccKafkaconnectConnectorTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -95,6 +96,10 @@ type DataAwsccKafkaconnectConnector interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -359,6 +364,16 @@ func (j *jsiiProxy_DataAwsccKafkaconnectConnector) ServiceExecutionRoleArn() *st
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccKafkaconnectConnector) Tags() DataAwsccKafkaconnectConnectorTagsList {
+	var returns DataAwsccKafkaconnectConnectorTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccKafkaconnectConnector) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -400,7 +415,7 @@ func (j *jsiiProxy_DataAwsccKafkaconnectConnector) WorkerConfiguration() DataAws
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kafkaconnect_connector awscc_kafkaconnect_connector} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kafkaconnect_connector awscc_kafkaconnect_connector} Data Source.
 func NewDataAwsccKafkaconnectConnector(scope constructs.Construct, id *string, config *DataAwsccKafkaconnectConnectorConfig) DataAwsccKafkaconnectConnector {
 	_init_.Initialize()
 
@@ -418,7 +433,7 @@ func NewDataAwsccKafkaconnectConnector(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kafkaconnect_connector awscc_kafkaconnect_connector} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kafkaconnect_connector awscc_kafkaconnect_connector} Data Source.
 func NewDataAwsccKafkaconnectConnector_Override(d DataAwsccKafkaconnectConnector, scope constructs.Construct, id *string, config *DataAwsccKafkaconnectConnectorConfig) {
 	_init_.Initialize()
 
@@ -785,6 +800,32 @@ func (d *jsiiProxy_DataAwsccKafkaconnectConnector) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKafkaconnectConnector) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKafkaconnectConnector) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

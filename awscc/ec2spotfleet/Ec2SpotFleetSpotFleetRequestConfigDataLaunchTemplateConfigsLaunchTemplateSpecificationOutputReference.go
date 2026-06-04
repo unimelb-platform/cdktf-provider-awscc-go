@@ -72,6 +72,7 @@ type Ec2SpotFleetSpotFleetRequestConfigDataLaunchTemplateConfigsLaunchTemplateSp
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetLaunchTemplateId()
 	ResetLaunchTemplateName()
+	ResetVersion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchTemplateConfigsLa
 	_jsii_.InvokeVoid(
 		e,
 		"resetLaunchTemplateName",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchTemplateConfigsLaunchTemplateSpecificationOutputReference) ResetVersion() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetVersion",
 		nil, // no parameters
 	)
 }

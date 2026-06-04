@@ -5,8 +5,18 @@ package redshiftserverlessworkgroup
 import (
 	"fmt"
 
+	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
+
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	if mapKeyAttributeName == nil {
+		return fmt.Errorf("parameter mapKeyAttributeName is required, but nil was provided")
+	}
+
+	return nil
+}
 
 func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesList) validateGetParameters(index *float64) error {
 	if index == nil {
@@ -19,6 +29,34 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetwo
 func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesList) validateResolveParameters(_context cdktf.IResolveContext) error {
 	if _context == nil {
 		return fmt.Errorf("parameter _context is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesList) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfaces:
+		val := val.(*[]*RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfaces)
+		for idx_97dfc6, v := range *val {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter val[%#v]", idx_97dfc6) }); err != nil {
+				return err
+			}
+		}
+	case []*RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfaces:
+		val_ := val.([]*RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfaces)
+		val := &val_
+		for idx_97dfc6, v := range *val {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter val[%#v]", idx_97dfc6) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *[]*RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfaces; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

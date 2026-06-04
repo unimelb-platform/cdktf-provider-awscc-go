@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdatabrewdataset/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/databrew_dataset awscc_databrew_dataset}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/databrew_dataset awscc_databrew_dataset}.
 type DataAwsccDatabrewDataset interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -52,6 +52,7 @@ type DataAwsccDatabrewDataset interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	Source() *string
 	Tags() DataAwsccDatabrewDatasetTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -88,6 +89,10 @@ type DataAwsccDatabrewDataset interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -282,6 +287,16 @@ func (j *jsiiProxy_DataAwsccDatabrewDataset) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccDatabrewDataset) Source() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"source",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccDatabrewDataset) Tags() DataAwsccDatabrewDatasetTagsList {
 	var returns DataAwsccDatabrewDatasetTagsList
 	_jsii_.Get(
@@ -323,7 +338,7 @@ func (j *jsiiProxy_DataAwsccDatabrewDataset) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/databrew_dataset awscc_databrew_dataset} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/databrew_dataset awscc_databrew_dataset} Data Source.
 func NewDataAwsccDatabrewDataset(scope constructs.Construct, id *string, config *DataAwsccDatabrewDatasetConfig) DataAwsccDatabrewDataset {
 	_init_.Initialize()
 
@@ -341,7 +356,7 @@ func NewDataAwsccDatabrewDataset(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/databrew_dataset awscc_databrew_dataset} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/databrew_dataset awscc_databrew_dataset} Data Source.
 func NewDataAwsccDatabrewDataset_Override(d DataAwsccDatabrewDataset, scope constructs.Construct, id *string, config *DataAwsccDatabrewDatasetConfig) {
 	_init_.Initialize()
 
@@ -708,6 +723,32 @@ func (d *jsiiProxy_DataAwsccDatabrewDataset) SynthesizeAttributes() *map[string]
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatabrewDataset) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatabrewDataset) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

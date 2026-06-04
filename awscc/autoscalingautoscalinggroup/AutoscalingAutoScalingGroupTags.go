@@ -2,11 +2,19 @@ package autoscalingautoscalinggroup
 
 
 type AutoscalingAutoScalingGroupTags struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/autoscaling_auto_scaling_group#key AutoscalingAutoScalingGroup#key}.
-	Key *string `field:"required" json:"key" yaml:"key"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/autoscaling_auto_scaling_group#propagate_at_launch AutoscalingAutoScalingGroup#propagate_at_launch}.
-	PropagateAtLaunch interface{} `field:"required" json:"propagateAtLaunch" yaml:"propagateAtLaunch"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/autoscaling_auto_scaling_group#value AutoscalingAutoScalingGroup#value}.
-	Value *string `field:"required" json:"value" yaml:"value"`
+	// The tag key.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/autoscaling_auto_scaling_group#key AutoscalingAutoScalingGroup#key}
+	Key *string `field:"optional" json:"key" yaml:"key"`
+	// Set to ``true`` if you want CloudFormation to copy the tag to EC2 instances that are launched as part of the Auto Scaling group.
+	//
+	// Set to ``false`` if you want the tag attached only to the Auto Scaling group and not copied to any instances launched as part of the Auto Scaling group.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/autoscaling_auto_scaling_group#propagate_at_launch AutoscalingAutoScalingGroup#propagate_at_launch}
+	PropagateAtLaunch interface{} `field:"optional" json:"propagateAtLaunch" yaml:"propagateAtLaunch"`
+	// The tag value.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/autoscaling_auto_scaling_group#value AutoscalingAutoScalingGroup#value}
+	Value *string `field:"optional" json:"value" yaml:"value"`
 }
 

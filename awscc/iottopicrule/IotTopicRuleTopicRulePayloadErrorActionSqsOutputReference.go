@@ -70,6 +70,8 @@ type IotTopicRuleTopicRulePayloadErrorActionSqsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetQueueUrl()
+	ResetRoleArn()
 	ResetUseBase64()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -516,6 +518,22 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionSqsOutputReference) In
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionSqsOutputReference) ResetQueueUrl() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetQueueUrl",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionSqsOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArn",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionSqsOutputReference) ResetUseBase64() {

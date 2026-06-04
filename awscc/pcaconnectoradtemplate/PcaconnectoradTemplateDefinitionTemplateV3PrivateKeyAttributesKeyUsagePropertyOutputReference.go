@@ -27,8 +27,8 @@ type PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsagePrope
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsageProperty
-	SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsageProperty)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	PropertyFlags() PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsagePropertyPropertyFlagsOutputReference
 	PropertyFlagsInput() interface{}
 	PropertyType() *string
@@ -124,8 +124,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttribute
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsagePropertyOutputReference) InternalValue() *PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsageProperty {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsageProperty
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsagePropertyOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -244,7 +244,7 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttribute
 	)
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsagePropertyOutputReference)SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsageProperty) {
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsagePropertyOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccognitouserpoolclient/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cognito_user_pool_client awscc_cognito_user_pool_client}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cognito_user_pool_client awscc_cognito_user_pool_client}.
 type DataAwsccCognitoUserPoolClient interface {
 	cdktf.TerraformDataSource
 	AccessTokenValidity() *float64
@@ -67,6 +67,7 @@ type DataAwsccCognitoUserPoolClient interface {
 	// Experimental.
 	RawOverrides() interface{}
 	ReadAttributes() *[]*string
+	RefreshTokenRotation() DataAwsccCognitoUserPoolClientRefreshTokenRotationOutputReference
 	RefreshTokenValidity() *float64
 	SupportedIdentityProviders() *[]*string
 	// Experimental.
@@ -107,6 +108,10 @@ type DataAwsccCognitoUserPoolClient interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -451,6 +456,16 @@ func (j *jsiiProxy_DataAwsccCognitoUserPoolClient) ReadAttributes() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccCognitoUserPoolClient) RefreshTokenRotation() DataAwsccCognitoUserPoolClientRefreshTokenRotationOutputReference {
+	var returns DataAwsccCognitoUserPoolClientRefreshTokenRotationOutputReference
+	_jsii_.Get(
+		j,
+		"refreshTokenRotation",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccCognitoUserPoolClient) RefreshTokenValidity() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -532,7 +547,7 @@ func (j *jsiiProxy_DataAwsccCognitoUserPoolClient) WriteAttributes() *[]*string 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cognito_user_pool_client awscc_cognito_user_pool_client} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cognito_user_pool_client awscc_cognito_user_pool_client} Data Source.
 func NewDataAwsccCognitoUserPoolClient(scope constructs.Construct, id *string, config *DataAwsccCognitoUserPoolClientConfig) DataAwsccCognitoUserPoolClient {
 	_init_.Initialize()
 
@@ -550,7 +565,7 @@ func NewDataAwsccCognitoUserPoolClient(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cognito_user_pool_client awscc_cognito_user_pool_client} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cognito_user_pool_client awscc_cognito_user_pool_client} Data Source.
 func NewDataAwsccCognitoUserPoolClient_Override(d DataAwsccCognitoUserPoolClient, scope constructs.Construct, id *string, config *DataAwsccCognitoUserPoolClientConfig) {
 	_init_.Initialize()
 
@@ -917,6 +932,32 @@ func (d *jsiiProxy_DataAwsccCognitoUserPoolClient) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCognitoUserPoolClient) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCognitoUserPoolClient) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

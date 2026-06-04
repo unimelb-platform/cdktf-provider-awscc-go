@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdatasynclocationobjectstorage/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_object_storage awscc_datasync_location_object_storage}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_object_storage awscc_datasync_location_object_storage}.
 type DataAwsccDatasyncLocationObjectStorage interface {
 	cdktf.TerraformDataSource
 	AccessKey() *string
@@ -17,12 +17,14 @@ type DataAwsccDatasyncLocationObjectStorage interface {
 	BucketName() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	CmkSecretConfig() DataAwsccDatasyncLocationObjectStorageCmkSecretConfigOutputReference
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	CustomSecretConfig() DataAwsccDatasyncLocationObjectStorageCustomSecretConfigOutputReference
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -44,6 +46,7 @@ type DataAwsccDatasyncLocationObjectStorage interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	LocationArn() *string
 	LocationUri() *string
+	ManagedSecretConfig() DataAwsccDatasyncLocationObjectStorageManagedSecretConfigOutputReference
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
@@ -94,6 +97,10 @@ type DataAwsccDatasyncLocationObjectStorage interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -148,6 +155,16 @@ func (j *jsiiProxy_DataAwsccDatasyncLocationObjectStorage) CdktfStack() cdktf.Te
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccDatasyncLocationObjectStorage) CmkSecretConfig() DataAwsccDatasyncLocationObjectStorageCmkSecretConfigOutputReference {
+	var returns DataAwsccDatasyncLocationObjectStorageCmkSecretConfigOutputReference
+	_jsii_.Get(
+		j,
+		"cmkSecretConfig",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccDatasyncLocationObjectStorage) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -163,6 +180,16 @@ func (j *jsiiProxy_DataAwsccDatasyncLocationObjectStorage) Count() interface{} {
 	_jsii_.Get(
 		j,
 		"count",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatasyncLocationObjectStorage) CustomSecretConfig() DataAwsccDatasyncLocationObjectStorageCustomSecretConfigOutputReference {
+	var returns DataAwsccDatasyncLocationObjectStorageCustomSecretConfigOutputReference
+	_jsii_.Get(
+		j,
+		"customSecretConfig",
 		&returns,
 	)
 	return returns
@@ -253,6 +280,16 @@ func (j *jsiiProxy_DataAwsccDatasyncLocationObjectStorage) LocationUri() *string
 	_jsii_.Get(
 		j,
 		"locationUri",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatasyncLocationObjectStorage) ManagedSecretConfig() DataAwsccDatasyncLocationObjectStorageManagedSecretConfigOutputReference {
+	var returns DataAwsccDatasyncLocationObjectStorageManagedSecretConfigOutputReference
+	_jsii_.Get(
+		j,
+		"managedSecretConfig",
 		&returns,
 	)
 	return returns
@@ -389,7 +426,7 @@ func (j *jsiiProxy_DataAwsccDatasyncLocationObjectStorage) TerraformResourceType
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_object_storage awscc_datasync_location_object_storage} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_object_storage awscc_datasync_location_object_storage} Data Source.
 func NewDataAwsccDatasyncLocationObjectStorage(scope constructs.Construct, id *string, config *DataAwsccDatasyncLocationObjectStorageConfig) DataAwsccDatasyncLocationObjectStorage {
 	_init_.Initialize()
 
@@ -407,7 +444,7 @@ func NewDataAwsccDatasyncLocationObjectStorage(scope constructs.Construct, id *s
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_object_storage awscc_datasync_location_object_storage} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_object_storage awscc_datasync_location_object_storage} Data Source.
 func NewDataAwsccDatasyncLocationObjectStorage_Override(d DataAwsccDatasyncLocationObjectStorage, scope constructs.Construct, id *string, config *DataAwsccDatasyncLocationObjectStorageConfig) {
 	_init_.Initialize()
 
@@ -774,6 +811,32 @@ func (d *jsiiProxy_DataAwsccDatasyncLocationObjectStorage) SynthesizeAttributes(
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatasyncLocationObjectStorage) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatasyncLocationObjectStorage) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

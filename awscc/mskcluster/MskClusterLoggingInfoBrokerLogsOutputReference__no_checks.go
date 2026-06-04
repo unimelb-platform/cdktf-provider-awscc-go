@@ -68,7 +68,7 @@ func (j *jsiiProxy_MskClusterLoggingInfoBrokerLogsOutputReference) validateSetCo
 	return nil
 }
 
-func (j *jsiiProxy_MskClusterLoggingInfoBrokerLogsOutputReference) validateSetInternalValueParameters(val *MskClusterLoggingInfoBrokerLogs) error {
+func (j *jsiiProxy_MskClusterLoggingInfoBrokerLogsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

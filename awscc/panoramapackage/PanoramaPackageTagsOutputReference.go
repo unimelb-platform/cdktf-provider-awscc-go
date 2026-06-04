@@ -67,6 +67,8 @@ type PanoramaPackageTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (p *jsiiProxy_PanoramaPackageTagsOutputReference) InterpolationForAttribute
 	)
 
 	return returns
+}
+
+func (p *jsiiProxy_PanoramaPackageTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PanoramaPackageTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (p *jsiiProxy_PanoramaPackageTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

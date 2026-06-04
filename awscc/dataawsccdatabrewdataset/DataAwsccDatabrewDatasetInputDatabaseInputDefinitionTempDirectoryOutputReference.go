@@ -11,6 +11,7 @@ import (
 type DataAwsccDatabrewDatasetInputDatabaseInputDefinitionTempDirectoryOutputReference interface {
 	cdktf.ComplexObject
 	Bucket() *string
+	BucketOwner() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -83,6 +84,16 @@ func (j *jsiiProxy_DataAwsccDatabrewDatasetInputDatabaseInputDefinitionTempDirec
 	_jsii_.Get(
 		j,
 		"bucket",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatabrewDatasetInputDatabaseInputDefinitionTempDirectoryOutputReference) BucketOwner() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"bucketOwner",
 		&returns,
 	)
 	return returns

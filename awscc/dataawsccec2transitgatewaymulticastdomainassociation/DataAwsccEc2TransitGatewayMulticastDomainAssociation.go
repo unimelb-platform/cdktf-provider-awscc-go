@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2transitgatewaymulticastdomainassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_transit_gateway_multicast_domain_association awscc_ec2_transit_gateway_multicast_domain_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_transit_gateway_multicast_domain_association awscc_ec2_transit_gateway_multicast_domain_association}.
 type DataAwsccEc2TransitGatewayMulticastDomainAssociation interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -88,6 +88,10 @@ type DataAwsccEc2TransitGatewayMulticastDomainAssociation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -323,7 +327,7 @@ func (j *jsiiProxy_DataAwsccEc2TransitGatewayMulticastDomainAssociation) Transit
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_transit_gateway_multicast_domain_association awscc_ec2_transit_gateway_multicast_domain_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_transit_gateway_multicast_domain_association awscc_ec2_transit_gateway_multicast_domain_association} Data Source.
 func NewDataAwsccEc2TransitGatewayMulticastDomainAssociation(scope constructs.Construct, id *string, config *DataAwsccEc2TransitGatewayMulticastDomainAssociationConfig) DataAwsccEc2TransitGatewayMulticastDomainAssociation {
 	_init_.Initialize()
 
@@ -341,7 +345,7 @@ func NewDataAwsccEc2TransitGatewayMulticastDomainAssociation(scope constructs.Co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_transit_gateway_multicast_domain_association awscc_ec2_transit_gateway_multicast_domain_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_transit_gateway_multicast_domain_association awscc_ec2_transit_gateway_multicast_domain_association} Data Source.
 func NewDataAwsccEc2TransitGatewayMulticastDomainAssociation_Override(d DataAwsccEc2TransitGatewayMulticastDomainAssociation, scope constructs.Construct, id *string, config *DataAwsccEc2TransitGatewayMulticastDomainAssociationConfig) {
 	_init_.Initialize()
 
@@ -708,6 +712,32 @@ func (d *jsiiProxy_DataAwsccEc2TransitGatewayMulticastDomainAssociation) Synthes
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2TransitGatewayMulticastDomainAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2TransitGatewayMulticastDomainAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -76,6 +76,10 @@ func (j *jsiiProxy_LambdaFunctionCodeOutputReference) validateSetS3ObjectVersion
 	return nil
 }
 
+func (j *jsiiProxy_LambdaFunctionCodeOutputReference) validateSetSourceKmsKeyArnParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_LambdaFunctionCodeOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

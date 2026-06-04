@@ -119,6 +119,14 @@ func (s *jsiiProxy_S3Bucket) validateInterpolationForAttributeParameters(terrafo
 	return nil
 }
 
+func (s *jsiiProxy_S3Bucket) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (s *jsiiProxy_S3Bucket) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (s *jsiiProxy_S3Bucket) validateMoveToParameters(moveTarget *string, index 
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (s *jsiiProxy_S3Bucket) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -326,6 +342,17 @@ func (s *jsiiProxy_S3Bucket) validatePutLifecycleConfigurationParameters(value *
 }
 
 func (s *jsiiProxy_S3Bucket) validatePutLoggingConfigurationParameters(value *S3BucketLoggingConfiguration) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (s *jsiiProxy_S3Bucket) validatePutMetadataTableConfigurationParameters(value *S3BucketMetadataTableConfiguration) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}

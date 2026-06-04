@@ -1,0 +1,6 @@
+package dataawsccdatazonesubscriptiontarget
+
+
+type DataAwsccDatazoneSubscriptionTargetSubscriptionTargetConfig struct {
+}
+

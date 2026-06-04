@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccecscapacityprovider/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ecs_capacity_provider awscc_ecs_capacity_provider}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ecs_capacity_provider awscc_ecs_capacity_provider}.
 type DataAwsccEcsCapacityProvider interface {
 	cdktf.TerraformDataSource
 	AutoScalingGroupProvider() DataAwsccEcsCapacityProviderAutoScalingGroupProviderOutputReference
@@ -85,6 +85,10 @@ type DataAwsccEcsCapacityProvider interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -290,7 +294,7 @@ func (j *jsiiProxy_DataAwsccEcsCapacityProvider) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ecs_capacity_provider awscc_ecs_capacity_provider} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ecs_capacity_provider awscc_ecs_capacity_provider} Data Source.
 func NewDataAwsccEcsCapacityProvider(scope constructs.Construct, id *string, config *DataAwsccEcsCapacityProviderConfig) DataAwsccEcsCapacityProvider {
 	_init_.Initialize()
 
@@ -308,7 +312,7 @@ func NewDataAwsccEcsCapacityProvider(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ecs_capacity_provider awscc_ecs_capacity_provider} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ecs_capacity_provider awscc_ecs_capacity_provider} Data Source.
 func NewDataAwsccEcsCapacityProvider_Override(d DataAwsccEcsCapacityProvider, scope constructs.Construct, id *string, config *DataAwsccEcsCapacityProviderConfig) {
 	_init_.Initialize()
 
@@ -675,6 +679,32 @@ func (d *jsiiProxy_DataAwsccEcsCapacityProvider) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEcsCapacityProvider) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEcsCapacityProvider) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

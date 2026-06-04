@@ -56,7 +56,15 @@ func (d *jsiiProxy_DocdbelasticCluster) validateInterpolationForAttributeParamet
 	return nil
 }
 
+func (d *jsiiProxy_DocdbelasticCluster) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DocdbelasticCluster) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DocdbelasticCluster) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -96,6 +104,10 @@ func (j *jsiiProxy_DocdbelasticCluster) validateSetAuthTypeParameters(val *strin
 	return nil
 }
 
+func (j *jsiiProxy_DocdbelasticCluster) validateSetBackupRetentionPeriodParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_DocdbelasticCluster) validateSetClusterNameParameters(val *string) error {
 	return nil
 }
@@ -116,6 +128,10 @@ func (j *jsiiProxy_DocdbelasticCluster) validateSetLifecycleParameters(val *cdkt
 	return nil
 }
 
+func (j *jsiiProxy_DocdbelasticCluster) validateSetPreferredBackupWindowParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DocdbelasticCluster) validateSetPreferredMaintenanceWindowParameters(val *string) error {
 	return nil
 }
@@ -129,6 +145,10 @@ func (j *jsiiProxy_DocdbelasticCluster) validateSetShardCapacityParameters(val *
 }
 
 func (j *jsiiProxy_DocdbelasticCluster) validateSetShardCountParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_DocdbelasticCluster) validateSetShardInstanceCountParameters(val *float64) error {
 	return nil
 }
 

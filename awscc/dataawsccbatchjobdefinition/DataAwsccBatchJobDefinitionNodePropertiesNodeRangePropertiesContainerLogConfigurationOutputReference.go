@@ -30,7 +30,7 @@ type DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerLogCon
 	InternalValue() *DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerLogConfiguration
 	SetInternalValue(val *DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerLogConfiguration)
 	LogDriver() *string
-	Options() *string
+	Options() cdktf.StringMap
 	SecretOptions() DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerLogConfigurationSecretOptionsList
 	// Experimental.
 	TerraformAttribute() *string
@@ -139,8 +139,8 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesC
 	return returns
 }
 
-func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerLogConfigurationOutputReference) Options() *string {
-	var returns *string
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerLogConfigurationOutputReference) Options() cdktf.StringMap {
+	var returns cdktf.StringMap
 	_jsii_.Get(
 		j,
 		"options",

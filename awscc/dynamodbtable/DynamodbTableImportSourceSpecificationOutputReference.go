@@ -38,7 +38,7 @@ type DynamodbTableImportSourceSpecificationOutputReference interface {
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	S3BucketSource() DynamodbTableImportSourceSpecificationS3BucketSourceOutputReference
-	S3BucketSourceInput() *DynamodbTableImportSourceSpecificationS3BucketSource
+	S3BucketSourceInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -74,7 +74,9 @@ type DynamodbTableImportSourceSpecificationOutputReference interface {
 	PutInputFormatOptions(value *DynamodbTableImportSourceSpecificationInputFormatOptions)
 	PutS3BucketSource(value *DynamodbTableImportSourceSpecificationS3BucketSource)
 	ResetInputCompressionType()
+	ResetInputFormat()
 	ResetInputFormatOptions()
+	ResetS3BucketSource()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -210,8 +212,8 @@ func (j *jsiiProxy_DynamodbTableImportSourceSpecificationOutputReference) S3Buck
 	return returns
 }
 
-func (j *jsiiProxy_DynamodbTableImportSourceSpecificationOutputReference) S3BucketSourceInput() *DynamodbTableImportSourceSpecificationS3BucketSource {
-	var returns *DynamodbTableImportSourceSpecificationS3BucketSource
+func (j *jsiiProxy_DynamodbTableImportSourceSpecificationOutputReference) S3BucketSourceInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"s3BucketSourceInput",
@@ -561,10 +563,26 @@ func (d *jsiiProxy_DynamodbTableImportSourceSpecificationOutputReference) ResetI
 	)
 }
 
+func (d *jsiiProxy_DynamodbTableImportSourceSpecificationOutputReference) ResetInputFormat() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetInputFormat",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DynamodbTableImportSourceSpecificationOutputReference) ResetInputFormatOptions() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetInputFormatOptions",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbTableImportSourceSpecificationOutputReference) ResetS3BucketSource() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetS3BucketSource",
 		nil, // no parameters
 	)
 }

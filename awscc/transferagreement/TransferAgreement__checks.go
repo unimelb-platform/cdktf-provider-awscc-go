@@ -119,6 +119,14 @@ func (t *jsiiProxy_TransferAgreement) validateInterpolationForAttributeParameter
 	return nil
 }
 
+func (t *jsiiProxy_TransferAgreement) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (t *jsiiProxy_TransferAgreement) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,9 +188,28 @@ func (t *jsiiProxy_TransferAgreement) validateMoveToParameters(moveTarget *strin
 	return nil
 }
 
+func (t *jsiiProxy_TransferAgreement) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (t *jsiiProxy_TransferAgreement) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (t *jsiiProxy_TransferAgreement) validatePutCustomDirectoriesParameters(value *TransferAgreementCustomDirectories) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
 	}
 
 	return nil
@@ -373,6 +400,14 @@ func (j *jsiiProxy_TransferAgreement) validateSetDescriptionParameters(val *stri
 	return nil
 }
 
+func (j *jsiiProxy_TransferAgreement) validateSetEnforceMessageSigningParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_TransferAgreement) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 		return err
@@ -390,6 +425,14 @@ func (j *jsiiProxy_TransferAgreement) validateSetLocalProfileIdParameters(val *s
 }
 
 func (j *jsiiProxy_TransferAgreement) validateSetPartnerProfileIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_TransferAgreement) validateSetPreserveFilenameParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

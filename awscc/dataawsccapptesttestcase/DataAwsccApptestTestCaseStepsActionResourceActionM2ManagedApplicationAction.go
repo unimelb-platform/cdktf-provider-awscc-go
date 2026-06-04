@@ -1,0 +1,6 @@
+package dataawsccapptesttestcase
+
+
+type DataAwsccApptestTestCaseStepsActionResourceActionM2ManagedApplicationAction struct {
+}
+

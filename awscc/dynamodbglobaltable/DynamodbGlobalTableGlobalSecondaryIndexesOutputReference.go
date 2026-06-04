@@ -35,7 +35,7 @@ type DynamodbGlobalTableGlobalSecondaryIndexesOutputReference interface {
 	KeySchema() DynamodbGlobalTableGlobalSecondaryIndexesKeySchemaList
 	KeySchemaInput() interface{}
 	Projection() DynamodbGlobalTableGlobalSecondaryIndexesProjectionOutputReference
-	ProjectionInput() *DynamodbGlobalTableGlobalSecondaryIndexesProjection
+	ProjectionInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -44,6 +44,10 @@ type DynamodbGlobalTableGlobalSecondaryIndexesOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	WarmThroughput() DynamodbGlobalTableGlobalSecondaryIndexesWarmThroughputOutputReference
+	WarmThroughputInput() interface{}
+	WriteOnDemandThroughputSettings() DynamodbGlobalTableGlobalSecondaryIndexesWriteOnDemandThroughputSettingsOutputReference
+	WriteOnDemandThroughputSettingsInput() interface{}
 	WriteProvisionedThroughputSettings() DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThroughputSettingsOutputReference
 	WriteProvisionedThroughputSettingsInput() interface{}
 	// Experimental.
@@ -72,7 +76,14 @@ type DynamodbGlobalTableGlobalSecondaryIndexesOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutKeySchema(value interface{})
 	PutProjection(value *DynamodbGlobalTableGlobalSecondaryIndexesProjection)
+	PutWarmThroughput(value *DynamodbGlobalTableGlobalSecondaryIndexesWarmThroughput)
+	PutWriteOnDemandThroughputSettings(value *DynamodbGlobalTableGlobalSecondaryIndexesWriteOnDemandThroughputSettings)
 	PutWriteProvisionedThroughputSettings(value *DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThroughputSettings)
+	ResetIndexName()
+	ResetKeySchema()
+	ResetProjection()
+	ResetWarmThroughput()
+	ResetWriteOnDemandThroughputSettings()
 	ResetWriteProvisionedThroughputSettings()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -189,8 +200,8 @@ func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) Pro
 	return returns
 }
 
-func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) ProjectionInput() *DynamodbGlobalTableGlobalSecondaryIndexesProjection {
-	var returns *DynamodbGlobalTableGlobalSecondaryIndexesProjection
+func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) ProjectionInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"projectionInput",
@@ -214,6 +225,46 @@ func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) Ter
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) WarmThroughput() DynamodbGlobalTableGlobalSecondaryIndexesWarmThroughputOutputReference {
+	var returns DynamodbGlobalTableGlobalSecondaryIndexesWarmThroughputOutputReference
+	_jsii_.Get(
+		j,
+		"warmThroughput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) WarmThroughputInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"warmThroughputInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) WriteOnDemandThroughputSettings() DynamodbGlobalTableGlobalSecondaryIndexesWriteOnDemandThroughputSettingsOutputReference {
+	var returns DynamodbGlobalTableGlobalSecondaryIndexesWriteOnDemandThroughputSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"writeOnDemandThroughputSettings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) WriteOnDemandThroughputSettingsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"writeOnDemandThroughputSettingsInput",
 		&returns,
 	)
 	return returns
@@ -541,6 +592,28 @@ func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) Put
 	)
 }
 
+func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) PutWarmThroughput(value *DynamodbGlobalTableGlobalSecondaryIndexesWarmThroughput) {
+	if err := d.validatePutWarmThroughputParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putWarmThroughput",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) PutWriteOnDemandThroughputSettings(value *DynamodbGlobalTableGlobalSecondaryIndexesWriteOnDemandThroughputSettings) {
+	if err := d.validatePutWriteOnDemandThroughputSettingsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putWriteOnDemandThroughputSettings",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) PutWriteProvisionedThroughputSettings(value *DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThroughputSettings) {
 	if err := d.validatePutWriteProvisionedThroughputSettingsParameters(value); err != nil {
 		panic(err)
@@ -549,6 +622,46 @@ func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) Put
 		d,
 		"putWriteProvisionedThroughputSettings",
 		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) ResetIndexName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetIndexName",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) ResetKeySchema() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetKeySchema",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) ResetProjection() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetProjection",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) ResetWarmThroughput() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetWarmThroughput",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) ResetWriteOnDemandThroughputSettings() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetWriteOnDemandThroughputSettings",
+		nil, // no parameters
 	)
 }
 

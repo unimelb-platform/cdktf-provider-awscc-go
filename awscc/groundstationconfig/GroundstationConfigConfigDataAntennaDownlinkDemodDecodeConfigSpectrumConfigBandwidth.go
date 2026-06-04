@@ -1,0 +1,10 @@
+package groundstationconfig
+
+
+type GroundstationConfigConfigDataAntennaDownlinkDemodDecodeConfigSpectrumConfigBandwidth struct {
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/groundstation_config#units GroundstationConfig#units}.
+	Units *string `field:"optional" json:"units" yaml:"units"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/groundstation_config#value GroundstationConfig#value}.
+	Value *float64 `field:"optional" json:"value" yaml:"value"`
+}
+

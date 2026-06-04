@@ -1,6 +1,0 @@
-package dataawsccbatchjobdefinition
-
-
-type DataAwsccBatchJobDefinitionNodePropertiesNodeRangePropertiesContainerNetworkConfiguration struct {
-}
-

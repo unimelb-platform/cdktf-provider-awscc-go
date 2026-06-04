@@ -1,0 +1,6 @@
+package dataawsccsagemakercluster
+
+
+type DataAwsccSagemakerClusterInstanceGroupsInstanceStorageConfigsEbsVolumeConfig struct {
+}
+

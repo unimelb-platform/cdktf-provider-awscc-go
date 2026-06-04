@@ -10,6 +10,9 @@ import (
 
 type CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference interface {
 	cdktf.ComplexObject
+	AdditionalAnalyses() *string
+	SetAdditionalAnalyses(val *string)
+	AdditionalAnalysesInput() *string
 	AllowedAnalyses() *[]*string
 	SetAllowedAnalyses(val *[]*string)
 	AllowedAnalysesInput() *[]*string
@@ -31,6 +34,11 @@ type CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference interfa
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	DifferentialPrivacy() CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomDifferentialPrivacyOutputReference
+	DifferentialPrivacyInput() interface{}
+	DisallowedOutputColumns() *[]*string
+	SetDisallowedOutputColumns(val *[]*string)
+	DisallowedOutputColumnsInput() *[]*string
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -67,7 +75,12 @@ type CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference interfa
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutDifferentialPrivacy(value *CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomDifferentialPrivacy)
+	ResetAdditionalAnalyses()
+	ResetAllowedAnalyses()
 	ResetAllowedAnalysisProviders()
+	ResetDifferentialPrivacy()
+	ResetDisallowedOutputColumns()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -81,6 +94,26 @@ type CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference interfa
 // The jsii proxy struct for CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference
 type jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) AdditionalAnalyses() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"additionalAnalyses",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) AdditionalAnalysesInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"additionalAnalysesInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) AllowedAnalyses() *[]*string {
@@ -148,6 +181,46 @@ func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputRef
 	_jsii_.Get(
 		j,
 		"creationStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) DifferentialPrivacy() CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomDifferentialPrivacyOutputReference {
+	var returns CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomDifferentialPrivacyOutputReference
+	_jsii_.Get(
+		j,
+		"differentialPrivacy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) DifferentialPrivacyInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"differentialPrivacyInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) DisallowedOutputColumns() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"disallowedOutputColumns",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) DisallowedOutputColumnsInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"disallowedOutputColumnsInput",
 		&returns,
 	)
 	return returns
@@ -221,6 +294,17 @@ func NewCleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference_Over
 	)
 }
 
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference)SetAdditionalAnalyses(val *string) {
+	if err := j.validateSetAdditionalAnalysesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"additionalAnalyses",
+		val,
+	)
+}
+
 func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference)SetAllowedAnalyses(val *[]*string) {
 	if err := j.validateSetAllowedAnalysesParameters(val); err != nil {
 		panic(err)
@@ -261,6 +345,17 @@ func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputRef
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference)SetDisallowedOutputColumns(val *[]*string) {
+	if err := j.validateSetDisallowedOutputColumnsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"disallowedOutputColumns",
 		val,
 	)
 }
@@ -484,10 +579,53 @@ func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputRef
 	return returns
 }
 
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) PutDifferentialPrivacy(value *CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomDifferentialPrivacy) {
+	if err := c.validatePutDifferentialPrivacyParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putDifferentialPrivacy",
+		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) ResetAdditionalAnalyses() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAdditionalAnalyses",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) ResetAllowedAnalyses() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAllowedAnalyses",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) ResetAllowedAnalysisProviders() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetAllowedAnalysisProviders",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) ResetDifferentialPrivacy() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetDifferentialPrivacy",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) ResetDisallowedOutputColumns() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetDisallowedOutputColumns",
 		nil, // no parameters
 	)
 }

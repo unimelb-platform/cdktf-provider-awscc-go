@@ -82,6 +82,7 @@ type EventsRuleTargetsRedshiftDataParametersOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDatabase()
 	ResetDbUser()
 	ResetSecretManagerArn()
 	ResetSql()
@@ -657,6 +658,14 @@ func (e *jsiiProxy_EventsRuleTargetsRedshiftDataParametersOutputReference) Inter
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EventsRuleTargetsRedshiftDataParametersOutputReference) ResetDatabase() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetDatabase",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EventsRuleTargetsRedshiftDataParametersOutputReference) ResetDbUser() {

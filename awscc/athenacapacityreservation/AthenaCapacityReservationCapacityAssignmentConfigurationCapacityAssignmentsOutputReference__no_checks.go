@@ -56,7 +56,7 @@ func (j *jsiiProxy_AthenaCapacityReservationCapacityAssignmentConfigurationCapac
 	return nil
 }
 
-func (j *jsiiProxy_AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignmentsOutputReference) validateSetInternalValueParameters(val *AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignments) error {
+func (j *jsiiProxy_AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignmentsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

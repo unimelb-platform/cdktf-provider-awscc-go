@@ -67,6 +67,7 @@ type KinesisfirehoseDeliveryStreamTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
 	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamTagsOutputReference) Interpolati
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetKey",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamTagsOutputReference) ResetValue() {

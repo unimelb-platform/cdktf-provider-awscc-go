@@ -4,6 +4,10 @@ package dataawsccpanoramaapplicationinstance
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccPanoramaApplicationInstanceTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccPanoramaApplicationInstanceTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

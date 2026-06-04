@@ -44,6 +44,10 @@ func (e *jsiiProxy_Ec2VerifiedAccessEndpointLoadBalancerOptionsOutputReference) 
 	return nil
 }
 
+func (e *jsiiProxy_Ec2VerifiedAccessEndpointLoadBalancerOptionsOutputReference) validatePutPortRangesParameters(value interface{}) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VerifiedAccessEndpointLoadBalancerOptionsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

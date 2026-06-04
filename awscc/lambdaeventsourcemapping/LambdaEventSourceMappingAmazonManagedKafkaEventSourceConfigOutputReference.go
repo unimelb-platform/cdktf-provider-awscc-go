@@ -32,6 +32,8 @@ type LambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigOutputReference 
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	SchemaRegistryConfig() LambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigOutputReference
+	SchemaRegistryConfigInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,7 +66,9 @@ type LambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigOutputReference 
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutSchemaRegistryConfig(value *LambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfig)
 	ResetConsumerGroupId()
+	ResetSchemaRegistryConfig()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -145,6 +149,26 @@ func (j *jsiiProxy_LambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigOu
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigOutputReference) SchemaRegistryConfig() LambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigOutputReference {
+	var returns LambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfigOutputReference
+	_jsii_.Get(
+		j,
+		"schemaRegistryConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigOutputReference) SchemaRegistryConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"schemaRegistryConfigInput",
 		&returns,
 	)
 	return returns
@@ -450,10 +474,29 @@ func (l *jsiiProxy_LambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigOu
 	return returns
 }
 
+func (l *jsiiProxy_LambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigOutputReference) PutSchemaRegistryConfig(value *LambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigSchemaRegistryConfig) {
+	if err := l.validatePutSchemaRegistryConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"putSchemaRegistryConfig",
+		[]interface{}{value},
+	)
+}
+
 func (l *jsiiProxy_LambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigOutputReference) ResetConsumerGroupId() {
 	_jsii_.InvokeVoid(
 		l,
 		"resetConsumerGroupId",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigOutputReference) ResetSchemaRegistryConfig() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetSchemaRegistryConfig",
 		nil, // no parameters
 	)
 }

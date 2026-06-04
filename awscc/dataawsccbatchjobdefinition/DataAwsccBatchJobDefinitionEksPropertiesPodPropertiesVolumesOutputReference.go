@@ -32,6 +32,7 @@ type DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesVolumesOutputReference
 	InternalValue() *DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesVolumes
 	SetInternalValue(val *DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesVolumes)
 	Name() *string
+	PersistentVolumeClaim() DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesVolumesPersistentVolumeClaimOutputReference
 	Secret() DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesVolumesSecretOutputReference
 	// Experimental.
 	TerraformAttribute() *string
@@ -155,6 +156,16 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesVolumesO
 	_jsii_.Get(
 		j,
 		"name",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesVolumesOutputReference) PersistentVolumeClaim() DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesVolumesPersistentVolumeClaimOutputReference {
+	var returns DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesVolumesPersistentVolumeClaimOutputReference
+	_jsii_.Get(
+		j,
+		"persistentVolumeClaim",
 		&returns,
 	)
 	return returns

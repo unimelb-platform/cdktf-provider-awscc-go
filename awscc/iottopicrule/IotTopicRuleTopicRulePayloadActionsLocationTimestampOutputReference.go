@@ -68,6 +68,7 @@ type IotTopicRuleTopicRulePayloadActionsLocationTimestampOutputReference interfa
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetUnit()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsLocationTimestampOutputRef
 	_jsii_.InvokeVoid(
 		i,
 		"resetUnit",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsLocationTimestampOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetValue",
 		nil, // no parameters
 	)
 }

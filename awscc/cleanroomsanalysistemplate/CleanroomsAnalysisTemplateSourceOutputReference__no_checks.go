@@ -44,6 +44,10 @@ func (c *jsiiProxy_CleanroomsAnalysisTemplateSourceOutputReference) validateInte
 	return nil
 }
 
+func (c *jsiiProxy_CleanroomsAnalysisTemplateSourceOutputReference) validatePutArtifactsParameters(value *CleanroomsAnalysisTemplateSourceArtifacts) error {
+	return nil
+}
+
 func (c *jsiiProxy_CleanroomsAnalysisTemplateSourceOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

@@ -44,6 +44,10 @@ func (o *jsiiProxy_OsisPipelineVpcOptionsOutputReference) validateInterpolationF
 	return nil
 }
 
+func (o *jsiiProxy_OsisPipelineVpcOptionsOutputReference) validatePutVpcAttachmentOptionsParameters(value *OsisPipelineVpcOptionsVpcAttachmentOptions) error {
+	return nil
+}
+
 func (o *jsiiProxy_OsisPipelineVpcOptionsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }
@@ -73,6 +77,10 @@ func (j *jsiiProxy_OsisPipelineVpcOptionsOutputReference) validateSetTerraformAt
 }
 
 func (j *jsiiProxy_OsisPipelineVpcOptionsOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func (j *jsiiProxy_OsisPipelineVpcOptionsOutputReference) validateSetVpcEndpointManagementParameters(val *string) error {
 	return nil
 }
 

@@ -2,7 +2,9 @@ package cloudfrontresponseheaderspolicy
 
 
 type CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfig struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudfront_response_headers_policy#items CloudfrontResponseHeadersPolicy#items}.
-	Items interface{} `field:"required" json:"items" yaml:"items"`
+	// The list of HTTP header names.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudfront_response_headers_policy#items CloudfrontResponseHeadersPolicy#items}
+	Items interface{} `field:"optional" json:"items" yaml:"items"`
 }
 

@@ -67,6 +67,8 @@ type LakeformationPrincipalPermissionsResourceDataLocationOutputReference interf
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCatalogId()
+	ResetResourceArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceDataLocationOutputRe
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceDataLocationOutputReference) ResetCatalogId() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetCatalogId",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceDataLocationOutputReference) ResetResourceArn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetResourceArn",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceDataLocationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

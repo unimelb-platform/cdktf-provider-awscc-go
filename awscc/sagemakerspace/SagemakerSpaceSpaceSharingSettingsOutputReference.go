@@ -64,6 +64,7 @@ type SagemakerSpaceSpaceSharingSettingsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetSharingType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_SagemakerSpaceSpaceSharingSettingsOutputReference) Interpolat
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SagemakerSpaceSpaceSharingSettingsOutputReference) ResetSharingType() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSharingType",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SagemakerSpaceSpaceSharingSettingsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

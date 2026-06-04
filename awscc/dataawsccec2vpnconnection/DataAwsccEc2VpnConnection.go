@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2vpnconnection/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_vpn_connection awscc_ec2_vpn_connection}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_vpn_connection awscc_ec2_vpn_connection}.
 type DataAwsccEc2VpnConnection interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -25,6 +25,7 @@ type DataAwsccEc2VpnConnection interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	EnableAcceleration() cdktf.IResolvable
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -40,14 +41,19 @@ type DataAwsccEc2VpnConnection interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	LocalIpv4NetworkCidr() *string
+	LocalIpv6NetworkCidr() *string
 	// The tree node.
 	Node() constructs.Node
+	OutsideIpAddressType() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	RemoteIpv4NetworkCidr() *string
+	RemoteIpv6NetworkCidr() *string
 	StaticRoutesOnly() cdktf.IResolvable
 	Tags() DataAwsccEc2VpnConnectionTagsList
 	// Experimental.
@@ -57,6 +63,8 @@ type DataAwsccEc2VpnConnection interface {
 	// Experimental.
 	TerraformResourceType() *string
 	TransitGatewayId() *string
+	TransportTransitGatewayAttachmentId() *string
+	TunnelInsideIpVersion() *string
 	Type() *string
 	VpnConnectionId() *string
 	VpnGatewayId() *string
@@ -90,6 +98,10 @@ type DataAwsccEc2VpnConnection interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -149,6 +161,16 @@ func (j *jsiiProxy_DataAwsccEc2VpnConnection) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnection) EnableAcceleration() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"enableAcceleration",
 		&returns,
 	)
 	return returns
@@ -214,11 +236,41 @@ func (j *jsiiProxy_DataAwsccEc2VpnConnection) Lifecycle() *cdktf.TerraformResour
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2VpnConnection) LocalIpv4NetworkCidr() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"localIpv4NetworkCidr",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnection) LocalIpv6NetworkCidr() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"localIpv6NetworkCidr",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2VpnConnection) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnection) OutsideIpAddressType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"outsideIpAddressType",
 		&returns,
 	)
 	return returns
@@ -239,6 +291,26 @@ func (j *jsiiProxy_DataAwsccEc2VpnConnection) RawOverrides() interface{} {
 	_jsii_.Get(
 		j,
 		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnection) RemoteIpv4NetworkCidr() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"remoteIpv4NetworkCidr",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnection) RemoteIpv6NetworkCidr() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"remoteIpv6NetworkCidr",
 		&returns,
 	)
 	return returns
@@ -304,6 +376,26 @@ func (j *jsiiProxy_DataAwsccEc2VpnConnection) TransitGatewayId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2VpnConnection) TransportTransitGatewayAttachmentId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"transportTransitGatewayAttachmentId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VpnConnection) TunnelInsideIpVersion() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"tunnelInsideIpVersion",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2VpnConnection) Type() *string {
 	var returns *string
 	_jsii_.Get(
@@ -345,7 +437,7 @@ func (j *jsiiProxy_DataAwsccEc2VpnConnection) VpnTunnelOptionsSpecifications() D
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_vpn_connection awscc_ec2_vpn_connection} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_vpn_connection awscc_ec2_vpn_connection} Data Source.
 func NewDataAwsccEc2VpnConnection(scope constructs.Construct, id *string, config *DataAwsccEc2VpnConnectionConfig) DataAwsccEc2VpnConnection {
 	_init_.Initialize()
 
@@ -363,7 +455,7 @@ func NewDataAwsccEc2VpnConnection(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_vpn_connection awscc_ec2_vpn_connection} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_vpn_connection awscc_ec2_vpn_connection} Data Source.
 func NewDataAwsccEc2VpnConnection_Override(d DataAwsccEc2VpnConnection, scope constructs.Construct, id *string, config *DataAwsccEc2VpnConnectionConfig) {
 	_init_.Initialize()
 
@@ -730,6 +822,32 @@ func (d *jsiiProxy_DataAwsccEc2VpnConnection) SynthesizeAttributes() *map[string
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2VpnConnection) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2VpnConnection) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

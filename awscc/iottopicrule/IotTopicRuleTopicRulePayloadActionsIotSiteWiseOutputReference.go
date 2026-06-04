@@ -67,6 +67,8 @@ type IotTopicRuleTopicRulePayloadActionsIotSiteWiseOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutPutAssetPropertyValueEntries(value interface{})
+	ResetPutAssetPropertyValueEntries()
+	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -480,6 +482,22 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsIotSiteWiseOutputReference
 		i,
 		"putPutAssetPropertyValueEntries",
 		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsIotSiteWiseOutputReference) ResetPutAssetPropertyValueEntries() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetPutAssetPropertyValueEntries",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsIotSiteWiseOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArn",
+		nil, // no parameters
 	)
 }
 

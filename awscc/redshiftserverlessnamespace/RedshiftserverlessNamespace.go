@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/redshiftserverlessnamespace/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/redshiftserverless_namespace awscc_redshiftserverless_namespace}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/redshiftserverless_namespace awscc_redshiftserverless_namespace}.
 type RedshiftserverlessNamespace interface {
 	cdktf.TerraformResource
 	AdminPasswordSecretKmsKeyId() *string
@@ -96,6 +96,8 @@ type RedshiftserverlessNamespace interface {
 	RedshiftIdcApplicationArn() *string
 	SetRedshiftIdcApplicationArn(val *string)
 	RedshiftIdcApplicationArnInput() *string
+	SnapshotCopyConfigurations() RedshiftserverlessNamespaceSnapshotCopyConfigurationsList
+	SnapshotCopyConfigurationsInput() interface{}
 	Tags() RedshiftserverlessNamespaceTagsList
 	TagsInput() interface{}
 	// Experimental.
@@ -128,15 +130,26 @@ type RedshiftserverlessNamespace interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutSnapshotCopyConfigurations(value interface{})
 	PutTags(value interface{})
 	ResetAdminPasswordSecretKmsKeyId()
 	ResetAdminUsername()
@@ -154,8 +167,12 @@ type RedshiftserverlessNamespace interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetRedshiftIdcApplicationArn()
+	ResetSnapshotCopyConfigurations()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -600,6 +617,26 @@ func (j *jsiiProxy_RedshiftserverlessNamespace) RedshiftIdcApplicationArnInput()
 	return returns
 }
 
+func (j *jsiiProxy_RedshiftserverlessNamespace) SnapshotCopyConfigurations() RedshiftserverlessNamespaceSnapshotCopyConfigurationsList {
+	var returns RedshiftserverlessNamespaceSnapshotCopyConfigurationsList
+	_jsii_.Get(
+		j,
+		"snapshotCopyConfigurations",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessNamespace) SnapshotCopyConfigurationsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"snapshotCopyConfigurationsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RedshiftserverlessNamespace) Tags() RedshiftserverlessNamespaceTagsList {
 	var returns RedshiftserverlessNamespaceTagsList
 	_jsii_.Get(
@@ -651,7 +688,7 @@ func (j *jsiiProxy_RedshiftserverlessNamespace) TerraformResourceType() *string 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/redshiftserverless_namespace awscc_redshiftserverless_namespace} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/redshiftserverless_namespace awscc_redshiftserverless_namespace} Resource.
 func NewRedshiftserverlessNamespace(scope constructs.Construct, id *string, config *RedshiftserverlessNamespaceConfig) RedshiftserverlessNamespace {
 	_init_.Initialize()
 
@@ -669,7 +706,7 @@ func NewRedshiftserverlessNamespace(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/redshiftserverless_namespace awscc_redshiftserverless_namespace} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/redshiftserverless_namespace awscc_redshiftserverless_namespace} Resource.
 func NewRedshiftserverlessNamespace_Override(r RedshiftserverlessNamespace, scope constructs.Construct, id *string, config *RedshiftserverlessNamespaceConfig) {
 	_init_.Initialize()
 
@@ -1171,6 +1208,19 @@ func (r *jsiiProxy_RedshiftserverlessNamespace) GetStringMapAttribute(terraformA
 	return returns
 }
 
+func (r *jsiiProxy_RedshiftserverlessNamespace) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (r *jsiiProxy_RedshiftserverlessNamespace) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1198,6 +1248,17 @@ func (r *jsiiProxy_RedshiftserverlessNamespace) InterpolationForAttribute(terraf
 	return returns
 }
 
+func (r *jsiiProxy_RedshiftserverlessNamespace) MoveFromId(id *string) {
+	if err := r.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_RedshiftserverlessNamespace) MoveTo(moveTarget *string, index interface{}) {
 	if err := r.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1209,6 +1270,17 @@ func (r *jsiiProxy_RedshiftserverlessNamespace) MoveTo(moveTarget *string, index
 	)
 }
 
+func (r *jsiiProxy_RedshiftserverlessNamespace) MoveToId(id *string) {
+	if err := r.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_RedshiftserverlessNamespace) OverrideLogicalId(newLogicalId *string) {
 	if err := r.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -1217,6 +1289,17 @@ func (r *jsiiProxy_RedshiftserverlessNamespace) OverrideLogicalId(newLogicalId *
 		r,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessNamespace) PutSnapshotCopyConfigurations(value interface{}) {
+	if err := r.validatePutSnapshotCopyConfigurationsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putSnapshotCopyConfigurations",
+		[]interface{}{value},
 	)
 }
 
@@ -1343,6 +1426,14 @@ func (r *jsiiProxy_RedshiftserverlessNamespace) ResetRedshiftIdcApplicationArn()
 	)
 }
 
+func (r *jsiiProxy_RedshiftserverlessNamespace) ResetSnapshotCopyConfigurations() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetSnapshotCopyConfigurations",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_RedshiftserverlessNamespace) ResetTags() {
 	_jsii_.InvokeVoid(
 		r,
@@ -1357,6 +1448,32 @@ func (r *jsiiProxy_RedshiftserverlessNamespace) SynthesizeAttributes() *map[stri
 	_jsii_.Invoke(
 		r,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RedshiftserverlessNamespace) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		r,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RedshiftserverlessNamespace) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

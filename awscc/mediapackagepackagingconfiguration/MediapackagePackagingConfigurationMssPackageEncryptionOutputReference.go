@@ -30,7 +30,7 @@ type MediapackagePackagingConfigurationMssPackageEncryptionOutputReference inter
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	SpekeKeyProvider() MediapackagePackagingConfigurationMssPackageEncryptionSpekeKeyProviderOutputReference
-	SpekeKeyProviderInput() *MediapackagePackagingConfigurationMssPackageEncryptionSpekeKeyProvider
+	SpekeKeyProviderInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type MediapackagePackagingConfigurationMssPackageEncryptionOutputReference inter
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutSpekeKeyProvider(value *MediapackagePackagingConfigurationMssPackageEncryptionSpekeKeyProvider)
+	ResetSpekeKeyProvider()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -139,8 +140,8 @@ func (j *jsiiProxy_MediapackagePackagingConfigurationMssPackageEncryptionOutputR
 	return returns
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfigurationMssPackageEncryptionOutputReference) SpekeKeyProviderInput() *MediapackagePackagingConfigurationMssPackageEncryptionSpekeKeyProvider {
-	var returns *MediapackagePackagingConfigurationMssPackageEncryptionSpekeKeyProvider
+func (j *jsiiProxy_MediapackagePackagingConfigurationMssPackageEncryptionOutputReference) SpekeKeyProviderInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"spekeKeyProviderInput",
@@ -446,6 +447,14 @@ func (m *jsiiProxy_MediapackagePackagingConfigurationMssPackageEncryptionOutputR
 		m,
 		"putSpekeKeyProvider",
 		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_MediapackagePackagingConfigurationMssPackageEncryptionOutputReference) ResetSpekeKeyProvider() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetSpekeKeyProvider",
+		nil, // no parameters
 	)
 }
 

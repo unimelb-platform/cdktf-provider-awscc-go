@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscctransferagreement/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/transfer_agreement awscc_transfer_agreement}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/transfer_agreement awscc_transfer_agreement}.
 type DataAwsccTransferAgreement interface {
 	cdktf.TerraformDataSource
 	AccessRole() *string
@@ -24,11 +24,13 @@ type DataAwsccTransferAgreement interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	CustomDirectories() DataAwsccTransferAgreementCustomDirectoriesOutputReference
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	Description() *string
+	EnforceMessageSigning() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -48,6 +50,7 @@ type DataAwsccTransferAgreement interface {
 	// The tree node.
 	Node() constructs.Node
 	PartnerProfileId() *string
+	PreserveFilename() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -92,6 +95,10 @@ type DataAwsccTransferAgreement interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -176,6 +183,16 @@ func (j *jsiiProxy_DataAwsccTransferAgreement) Count() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccTransferAgreement) CustomDirectories() DataAwsccTransferAgreementCustomDirectoriesOutputReference {
+	var returns DataAwsccTransferAgreementCustomDirectoriesOutputReference
+	_jsii_.Get(
+		j,
+		"customDirectories",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccTransferAgreement) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -191,6 +208,16 @@ func (j *jsiiProxy_DataAwsccTransferAgreement) Description() *string {
 	_jsii_.Get(
 		j,
 		"description",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccTransferAgreement) EnforceMessageSigning() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"enforceMessageSigning",
 		&returns,
 	)
 	return returns
@@ -286,6 +313,16 @@ func (j *jsiiProxy_DataAwsccTransferAgreement) PartnerProfileId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccTransferAgreement) PreserveFilename() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"preserveFilename",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccTransferAgreement) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -367,7 +404,7 @@ func (j *jsiiProxy_DataAwsccTransferAgreement) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/transfer_agreement awscc_transfer_agreement} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/transfer_agreement awscc_transfer_agreement} Data Source.
 func NewDataAwsccTransferAgreement(scope constructs.Construct, id *string, config *DataAwsccTransferAgreementConfig) DataAwsccTransferAgreement {
 	_init_.Initialize()
 
@@ -385,7 +422,7 @@ func NewDataAwsccTransferAgreement(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/transfer_agreement awscc_transfer_agreement} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/transfer_agreement awscc_transfer_agreement} Data Source.
 func NewDataAwsccTransferAgreement_Override(d DataAwsccTransferAgreement, scope constructs.Construct, id *string, config *DataAwsccTransferAgreementConfig) {
 	_init_.Initialize()
 
@@ -752,6 +789,32 @@ func (d *jsiiProxy_DataAwsccTransferAgreement) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccTransferAgreement) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccTransferAgreement) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

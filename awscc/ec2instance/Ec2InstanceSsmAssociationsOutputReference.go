@@ -68,6 +68,7 @@ type Ec2InstanceSsmAssociationsOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAssociationParameters(value interface{})
 	ResetAssociationParameters()
+	ResetDocumentName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (e *jsiiProxy_Ec2InstanceSsmAssociationsOutputReference) ResetAssociationPa
 	_jsii_.InvokeVoid(
 		e,
 		"resetAssociationParameters",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2InstanceSsmAssociationsOutputReference) ResetDocumentName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetDocumentName",
 		nil, // no parameters
 	)
 }

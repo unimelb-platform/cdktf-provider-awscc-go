@@ -67,6 +67,8 @@ type ComprehendDocumentClassifierVpcConfigOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetSecurityGroupIds()
+	ResetSubnets()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_ComprehendDocumentClassifierVpcConfigOutputReference) Interpo
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ComprehendDocumentClassifierVpcConfigOutputReference) ResetSecurityGroupIds() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetSecurityGroupIds",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ComprehendDocumentClassifierVpcConfigOutputReference) ResetSubnets() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetSubnets",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ComprehendDocumentClassifierVpcConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -67,6 +67,8 @@ type Kinesisanalyticsv2ApplicationTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (k *jsiiProxy_Kinesisanalyticsv2ApplicationTagsOutputReference) Interpolati
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_Kinesisanalyticsv2ApplicationTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

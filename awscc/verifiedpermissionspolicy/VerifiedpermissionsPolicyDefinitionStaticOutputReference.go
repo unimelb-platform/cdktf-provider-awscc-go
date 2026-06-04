@@ -68,6 +68,7 @@ type VerifiedpermissionsPolicyDefinitionStaticOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetDescription()
+	ResetStatement()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyDefinitionStaticOutputReference) Res
 	_jsii_.InvokeVoid(
 		v,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (v *jsiiProxy_VerifiedpermissionsPolicyDefinitionStaticOutputReference) ResetStatement() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetStatement",
 		nil, // no parameters
 	)
 }

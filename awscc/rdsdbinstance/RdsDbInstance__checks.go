@@ -119,6 +119,14 @@ func (r *jsiiProxy_RdsDbInstance) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
+func (r *jsiiProxy_RdsDbInstance) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (r *jsiiProxy_RdsDbInstance) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (r *jsiiProxy_RdsDbInstance) validateMoveToParameters(moveTarget *string, i
 	return nil
 }
 
+func (r *jsiiProxy_RdsDbInstance) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (r *jsiiProxy_RdsDbInstance) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -214,28 +230,6 @@ func (r *jsiiProxy_RdsDbInstance) validatePutAssociatedRolesParameters(value int
 		if !_jsii_.IsAnonymousProxy(value) {
 			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*RdsDbInstanceAssociatedRoles; received %#v (a %T)", value, value)
 		}
-	}
-
-	return nil
-}
-
-func (r *jsiiProxy_RdsDbInstance) validatePutCertificateDetailsParameters(value *RdsDbInstanceCertificateDetails) error {
-	if value == nil {
-		return fmt.Errorf("parameter value is required, but nil was provided")
-	}
-	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
-		return err
-	}
-
-	return nil
-}
-
-func (r *jsiiProxy_RdsDbInstance) validatePutEndpointParameters(value *RdsDbInstanceEndpoint) error {
-	if value == nil {
-		return fmt.Errorf("parameter value is required, but nil was provided")
-	}
-	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
-		return err
 	}
 
 	return nil
@@ -382,7 +376,43 @@ func (j *jsiiProxy_RdsDbInstance) validateSetAllowMajorVersionUpgradeParameters(
 	return nil
 }
 
+func (j *jsiiProxy_RdsDbInstance) validateSetApplyImmediatelyParameters(val interface{}) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+	switch val.(type) {
+	case *bool:
+		// ok
+	case bool:
+		// ok
+	case cdktf.IResolvable:
+		// ok
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: *bool, cdktf.IResolvable; received %#v (a %T)", val, val)
+		}
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_RdsDbInstance) validateSetAutomaticBackupReplicationKmsKeyIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_RdsDbInstance) validateSetAutomaticBackupReplicationRegionParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_RdsDbInstance) validateSetAutomaticBackupReplicationRetentionPeriodParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -419,6 +449,14 @@ func (j *jsiiProxy_RdsDbInstance) validateSetAvailabilityZoneParameters(val *str
 }
 
 func (j *jsiiProxy_RdsDbInstance) validateSetBackupRetentionPeriodParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_RdsDbInstance) validateSetBackupTargetParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -580,6 +618,14 @@ func (j *jsiiProxy_RdsDbInstance) validateSetCustomIamInstanceProfileParameters(
 	return nil
 }
 
+func (j *jsiiProxy_RdsDbInstance) validateSetDatabaseInsightsModeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_RdsDbInstance) validateSetDbClusterIdentifierParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -645,6 +691,14 @@ func (j *jsiiProxy_RdsDbInstance) validateSetDbSnapshotIdentifierParameters(val 
 }
 
 func (j *jsiiProxy_RdsDbInstance) validateSetDbSubnetGroupNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_RdsDbInstance) validateSetDbSystemIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -809,6 +863,14 @@ func (j *jsiiProxy_RdsDbInstance) validateSetEnablePerformanceInsightsParameters
 }
 
 func (j *jsiiProxy_RdsDbInstance) validateSetEngineParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_RdsDbInstance) validateSetEngineLifecycleSupportParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

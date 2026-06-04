@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccconnectinstancestorageconfig/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/connect_instance_storage_config awscc_connect_instance_storage_config}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/connect_instance_storage_config awscc_connect_instance_storage_config}.
 type DataAwsccConnectInstanceStorageConfig interface {
 	cdktf.TerraformDataSource
 	AssociationId() *string
@@ -90,6 +90,10 @@ type DataAwsccConnectInstanceStorageConfig interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -345,7 +349,7 @@ func (j *jsiiProxy_DataAwsccConnectInstanceStorageConfig) TerraformResourceType(
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/connect_instance_storage_config awscc_connect_instance_storage_config} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/connect_instance_storage_config awscc_connect_instance_storage_config} Data Source.
 func NewDataAwsccConnectInstanceStorageConfig(scope constructs.Construct, id *string, config *DataAwsccConnectInstanceStorageConfigConfig) DataAwsccConnectInstanceStorageConfig {
 	_init_.Initialize()
 
@@ -363,7 +367,7 @@ func NewDataAwsccConnectInstanceStorageConfig(scope constructs.Construct, id *st
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/connect_instance_storage_config awscc_connect_instance_storage_config} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/connect_instance_storage_config awscc_connect_instance_storage_config} Data Source.
 func NewDataAwsccConnectInstanceStorageConfig_Override(d DataAwsccConnectInstanceStorageConfig, scope constructs.Construct, id *string, config *DataAwsccConnectInstanceStorageConfigConfig) {
 	_init_.Initialize()
 
@@ -730,6 +734,32 @@ func (d *jsiiProxy_DataAwsccConnectInstanceStorageConfig) SynthesizeAttributes()
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccConnectInstanceStorageConfig) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccConnectInstanceStorageConfig) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

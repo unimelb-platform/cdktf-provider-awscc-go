@@ -56,7 +56,15 @@ func (d *jsiiProxy_DynamodbTable) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
+func (d *jsiiProxy_DynamodbTable) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DynamodbTable) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbTable) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -88,11 +96,19 @@ func (d *jsiiProxy_DynamodbTable) validatePutLocalSecondaryIndexesParameters(val
 	return nil
 }
 
+func (d *jsiiProxy_DynamodbTable) validatePutOnDemandThroughputParameters(value *DynamodbTableOnDemandThroughput) error {
+	return nil
+}
+
 func (d *jsiiProxy_DynamodbTable) validatePutPointInTimeRecoverySpecificationParameters(value *DynamodbTablePointInTimeRecoverySpecification) error {
 	return nil
 }
 
 func (d *jsiiProxy_DynamodbTable) validatePutProvisionedThroughputParameters(value *DynamodbTableProvisionedThroughput) error {
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbTable) validatePutResourcePolicyParameters(value *DynamodbTableResourcePolicy) error {
 	return nil
 }
 
@@ -109,6 +125,10 @@ func (d *jsiiProxy_DynamodbTable) validatePutTagsParameters(value interface{}) e
 }
 
 func (d *jsiiProxy_DynamodbTable) validatePutTimeToLiveSpecificationParameters(value *DynamodbTableTimeToLiveSpecification) error {
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbTable) validatePutWarmThroughputParameters(value *DynamodbTableWarmThroughput) error {
 	return nil
 }
 

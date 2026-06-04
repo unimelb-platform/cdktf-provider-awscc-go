@@ -34,7 +34,9 @@ type DataAwsccRedshiftserverlessWorkgroupWorkgroupOutputReference interface {
 	Fqn() *string
 	InternalValue() *DataAwsccRedshiftserverlessWorkgroupWorkgroup
 	SetInternalValue(val *DataAwsccRedshiftserverlessWorkgroupWorkgroup)
+	MaxCapacity() *float64
 	NamespaceName() *string
+	PricePerformanceTarget() DataAwsccRedshiftserverlessWorkgroupWorkgroupPricePerformanceTargetOutputReference
 	PubliclyAccessible() cdktf.IResolvable
 	SecurityGroupIds() *[]*string
 	Status() *string
@@ -47,6 +49,7 @@ type DataAwsccRedshiftserverlessWorkgroupWorkgroupOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	TrackName() *string
 	WorkgroupArn() *string
 	WorkgroupId() *string
 	WorkgroupName() *string
@@ -189,11 +192,31 @@ func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroupWorkgroupOutputReference)
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroupWorkgroupOutputReference) MaxCapacity() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxCapacity",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroupWorkgroupOutputReference) NamespaceName() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"namespaceName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroupWorkgroupOutputReference) PricePerformanceTarget() DataAwsccRedshiftserverlessWorkgroupWorkgroupPricePerformanceTargetOutputReference {
+	var returns DataAwsccRedshiftserverlessWorkgroupWorkgroupPricePerformanceTargetOutputReference
+	_jsii_.Get(
+		j,
+		"pricePerformanceTarget",
 		&returns,
 	)
 	return returns
@@ -254,6 +277,16 @@ func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroupWorkgroupOutputReference)
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRedshiftserverlessWorkgroupWorkgroupOutputReference) TrackName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"trackName",
 		&returns,
 	)
 	return returns

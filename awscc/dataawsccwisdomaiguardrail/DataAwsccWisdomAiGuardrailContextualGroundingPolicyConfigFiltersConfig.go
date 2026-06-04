@@ -1,0 +1,6 @@
+package dataawsccwisdomaiguardrail
+
+
+type DataAwsccWisdomAiGuardrailContextualGroundingPolicyConfigFiltersConfig struct {
+}
+

@@ -64,6 +64,7 @@ type EfsFileSystemBackupPolicyOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetStatus()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (e *jsiiProxy_EfsFileSystemBackupPolicyOutputReference) InterpolationForAtt
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EfsFileSystemBackupPolicyOutputReference) ResetStatus() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetStatus",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EfsFileSystemBackupPolicyOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

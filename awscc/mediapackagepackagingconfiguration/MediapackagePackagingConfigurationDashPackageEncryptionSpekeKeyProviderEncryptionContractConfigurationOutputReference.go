@@ -67,6 +67,8 @@ type MediapackagePackagingConfigurationDashPackageEncryptionSpekeKeyProviderEncr
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPresetSpeke20Audio()
+	ResetPresetSpeke20Video()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (m *jsiiProxy_MediapackagePackagingConfigurationDashPackageEncryptionSpekeK
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_MediapackagePackagingConfigurationDashPackageEncryptionSpekeKeyProviderEncryptionContractConfigurationOutputReference) ResetPresetSpeke20Audio() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetPresetSpeke20Audio",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediapackagePackagingConfigurationDashPackageEncryptionSpekeKeyProviderEncryptionContractConfigurationOutputReference) ResetPresetSpeke20Video() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetPresetSpeke20Video",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_MediapackagePackagingConfigurationDashPackageEncryptionSpekeKeyProviderEncryptionContractConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

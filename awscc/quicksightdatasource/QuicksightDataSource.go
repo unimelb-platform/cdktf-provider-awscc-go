@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/quicksightdatasource/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/quicksight_data_source awscc_quicksight_data_source}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/quicksight_data_source awscc_quicksight_data_source}.
 type QuicksightDataSource interface {
 	cdktf.TerraformResource
 	AlternateDataSourceParameters() QuicksightDataSourceAlternateDataSourceParametersList
@@ -44,6 +44,9 @@ type QuicksightDataSource interface {
 	SetDependsOn(val *[]*string)
 	ErrorInfo() QuicksightDataSourceErrorInfoOutputReference
 	ErrorInfoInput() interface{}
+	FolderArns() *[]*string
+	SetFolderArns(val *[]*string)
+	FolderArnsInput() *[]*string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -115,12 +118,22 @@ type QuicksightDataSource interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -138,16 +151,18 @@ type QuicksightDataSource interface {
 	ResetDataSourceId()
 	ResetDataSourceParameters()
 	ResetErrorInfo()
-	ResetName()
+	ResetFolderArns()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPermissions()
 	ResetSslProperties()
 	ResetTags()
-	ResetType()
 	ResetVpcConnectionProperties()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -347,6 +362,26 @@ func (j *jsiiProxy_QuicksightDataSource) ErrorInfoInput() interface{} {
 	_jsii_.Get(
 		j,
 		"errorInfoInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSource) FolderArns() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"folderArns",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSource) FolderArnsInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"folderArnsInput",
 		&returns,
 	)
 	return returns
@@ -613,7 +648,7 @@ func (j *jsiiProxy_QuicksightDataSource) VpcConnectionPropertiesInput() interfac
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/quicksight_data_source awscc_quicksight_data_source} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/quicksight_data_source awscc_quicksight_data_source} Resource.
 func NewQuicksightDataSource(scope constructs.Construct, id *string, config *QuicksightDataSourceConfig) QuicksightDataSource {
 	_init_.Initialize()
 
@@ -631,7 +666,7 @@ func NewQuicksightDataSource(scope constructs.Construct, id *string, config *Qui
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/quicksight_data_source awscc_quicksight_data_source} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/quicksight_data_source awscc_quicksight_data_source} Resource.
 func NewQuicksightDataSource_Override(q QuicksightDataSource, scope constructs.Construct, id *string, config *QuicksightDataSourceConfig) {
 	_init_.Initialize()
 
@@ -690,6 +725,17 @@ func (j *jsiiProxy_QuicksightDataSource)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_QuicksightDataSource)SetFolderArns(val *[]*string) {
+	if err := j.validateSetFolderArnsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"folderArns",
 		val,
 	)
 }
@@ -1023,6 +1069,19 @@ func (q *jsiiProxy_QuicksightDataSource) GetStringMapAttribute(terraformAttribut
 	return returns
 }
 
+func (q *jsiiProxy_QuicksightDataSource) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		q,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (q *jsiiProxy_QuicksightDataSource) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := q.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1050,6 +1109,17 @@ func (q *jsiiProxy_QuicksightDataSource) InterpolationForAttribute(terraformAttr
 	return returns
 }
 
+func (q *jsiiProxy_QuicksightDataSource) MoveFromId(id *string) {
+	if err := q.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		q,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (q *jsiiProxy_QuicksightDataSource) MoveTo(moveTarget *string, index interface{}) {
 	if err := q.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1058,6 +1128,17 @@ func (q *jsiiProxy_QuicksightDataSource) MoveTo(moveTarget *string, index interf
 		q,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSource) MoveToId(id *string) {
+	if err := q.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		q,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1208,10 +1289,10 @@ func (q *jsiiProxy_QuicksightDataSource) ResetErrorInfo() {
 	)
 }
 
-func (q *jsiiProxy_QuicksightDataSource) ResetName() {
+func (q *jsiiProxy_QuicksightDataSource) ResetFolderArns() {
 	_jsii_.InvokeVoid(
 		q,
-		"resetName",
+		"resetFolderArns",
 		nil, // no parameters
 	)
 }
@@ -1248,14 +1329,6 @@ func (q *jsiiProxy_QuicksightDataSource) ResetTags() {
 	)
 }
 
-func (q *jsiiProxy_QuicksightDataSource) ResetType() {
-	_jsii_.InvokeVoid(
-		q,
-		"resetType",
-		nil, // no parameters
-	)
-}
-
 func (q *jsiiProxy_QuicksightDataSource) ResetVpcConnectionProperties() {
 	_jsii_.InvokeVoid(
 		q,
@@ -1270,6 +1343,32 @@ func (q *jsiiProxy_QuicksightDataSource) SynthesizeAttributes() *map[string]inte
 	_jsii_.Invoke(
 		q,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSource) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		q,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSource) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		q,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

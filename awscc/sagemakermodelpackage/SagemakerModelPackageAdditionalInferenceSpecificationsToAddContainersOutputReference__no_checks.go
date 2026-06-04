@@ -44,6 +44,10 @@ func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddCo
 	return nil
 }
 
+func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersOutputReference) validatePutModelDataSourceParameters(value *SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersModelDataSource) error {
+	return nil
+}
+
 func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersOutputReference) validatePutModelInputParameters(value *SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersModelInput) error {
 	return nil
 }
@@ -84,7 +88,7 @@ func (j *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddCo
 	return nil
 }
 
-func (j *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersOutputReference) validateSetInternalValueParameters(val *SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainers) error {
+func (j *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

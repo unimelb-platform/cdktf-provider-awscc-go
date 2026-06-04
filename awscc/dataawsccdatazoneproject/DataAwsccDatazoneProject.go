@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdatazoneproject/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datazone_project awscc_datazone_project}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datazone_project awscc_datazone_project}.
 type DataAwsccDatazoneProject interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -29,6 +29,7 @@ type DataAwsccDatazoneProject interface {
 	Description() *string
 	DomainId() *string
 	DomainIdentifier() *string
+	DomainUnitId() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -49,6 +50,10 @@ type DataAwsccDatazoneProject interface {
 	Name() *string
 	// The tree node.
 	Node() constructs.Node
+	ProjectId() *string
+	ProjectProfileId() *string
+	ProjectProfileVersion() *string
+	ProjectStatus() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -61,6 +66,7 @@ type DataAwsccDatazoneProject interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	UserParameters() DataAwsccDatazoneProjectUserParametersList
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -90,6 +96,10 @@ type DataAwsccDatazoneProject interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -189,6 +199,16 @@ func (j *jsiiProxy_DataAwsccDatazoneProject) DomainIdentifier() *string {
 	_jsii_.Get(
 		j,
 		"domainIdentifier",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatazoneProject) DomainUnitId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"domainUnitId",
 		&returns,
 	)
 	return returns
@@ -294,6 +314,46 @@ func (j *jsiiProxy_DataAwsccDatazoneProject) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccDatazoneProject) ProjectId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"projectId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatazoneProject) ProjectProfileId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"projectProfileId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatazoneProject) ProjectProfileVersion() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"projectProfileVersion",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatazoneProject) ProjectStatus() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"projectStatus",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccDatazoneProject) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -344,8 +404,18 @@ func (j *jsiiProxy_DataAwsccDatazoneProject) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccDatazoneProject) UserParameters() DataAwsccDatazoneProjectUserParametersList {
+	var returns DataAwsccDatazoneProjectUserParametersList
+	_jsii_.Get(
+		j,
+		"userParameters",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datazone_project awscc_datazone_project} Data Source.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datazone_project awscc_datazone_project} Data Source.
 func NewDataAwsccDatazoneProject(scope constructs.Construct, id *string, config *DataAwsccDatazoneProjectConfig) DataAwsccDatazoneProject {
 	_init_.Initialize()
 
@@ -363,7 +433,7 @@ func NewDataAwsccDatazoneProject(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datazone_project awscc_datazone_project} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datazone_project awscc_datazone_project} Data Source.
 func NewDataAwsccDatazoneProject_Override(d DataAwsccDatazoneProject, scope constructs.Construct, id *string, config *DataAwsccDatazoneProjectConfig) {
 	_init_.Initialize()
 
@@ -730,6 +800,32 @@ func (d *jsiiProxy_DataAwsccDatazoneProject) SynthesizeAttributes() *map[string]
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatazoneProject) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatazoneProject) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

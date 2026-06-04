@@ -32,8 +32,8 @@ type LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingOutput
 	EnabledInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSetting
-	SetInternalValue(val *LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSetting)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -68,6 +68,7 @@ type LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingOutput
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutCodeHookSpecification(value *LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecification)
 	ResetCodeHookSpecification()
+	ResetEnabled()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -163,8 +164,8 @@ func (j *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocal
 	return returns
 }
 
-func (j *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingOutputReference) InternalValue() *LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSetting {
-	var returns *LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSetting
+func (j *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -254,7 +255,7 @@ func (j *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocal
 	)
 }
 
-func (j *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingOutputReference)SetInternalValue(val *LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSetting) {
+func (j *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -488,6 +489,14 @@ func (l *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocal
 	_jsii_.InvokeVoid(
 		l,
 		"resetCodeHookSpecification",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingOutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetEnabled",
 		nil, // no parameters
 	)
 }

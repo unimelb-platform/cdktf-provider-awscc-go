@@ -32,8 +32,8 @@ type Wafv2LoggingConfigurationLoggingFilterFiltersOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *Wafv2LoggingConfigurationLoggingFilterFilters
-	SetInternalValue(val *Wafv2LoggingConfigurationLoggingFilterFilters)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Requirement() *string
 	SetRequirement(val *string)
 	RequirementInput() *string
@@ -70,6 +70,9 @@ type Wafv2LoggingConfigurationLoggingFilterFiltersOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutConditions(value interface{})
+	ResetBehavior()
+	ResetConditions()
+	ResetRequirement()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -165,8 +168,8 @@ func (j *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersOutputReference)
 	return returns
 }
 
-func (j *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersOutputReference) InternalValue() *Wafv2LoggingConfigurationLoggingFilterFilters {
-	var returns *Wafv2LoggingConfigurationLoggingFilterFilters
+func (j *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -276,7 +279,7 @@ func (j *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersOutputReference)
 	)
 }
 
-func (j *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersOutputReference)SetInternalValue(val *Wafv2LoggingConfigurationLoggingFilterFilters) {
+func (j *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -514,6 +517,30 @@ func (w *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersOutputReference)
 		w,
 		"putConditions",
 		[]interface{}{value},
+	)
+}
+
+func (w *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersOutputReference) ResetBehavior() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetBehavior",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersOutputReference) ResetConditions() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetConditions",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersOutputReference) ResetRequirement() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetRequirement",
+		nil, // no parameters
 	)
 }
 

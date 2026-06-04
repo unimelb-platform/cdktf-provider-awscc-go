@@ -171,9 +171,25 @@ func (j *jsiiProxy_SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecsOut
 	return nil
 }
 
-func (j *jsiiProxy_SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecsOutputReference) validateSetInternalValueParameters(val *SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecs) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecsOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecs:
+		val := val.(*SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecs)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecs:
+		val_ := val.(SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecs)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecs; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

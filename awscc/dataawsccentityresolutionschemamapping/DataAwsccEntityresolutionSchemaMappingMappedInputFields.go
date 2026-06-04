@@ -1,0 +1,6 @@
+package dataawsccentityresolutionschemamapping
+
+
+type DataAwsccEntityresolutionSchemaMappingMappedInputFields struct {
+}
+

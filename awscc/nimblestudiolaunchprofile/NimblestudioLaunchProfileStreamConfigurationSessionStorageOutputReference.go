@@ -67,6 +67,7 @@ type NimblestudioLaunchProfileStreamConfigurationSessionStorageOutputReference i
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutRoot(value *NimblestudioLaunchProfileStreamConfigurationSessionStorageRoot)
+	ResetMode()
 	ResetRoot()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -481,6 +482,14 @@ func (n *jsiiProxy_NimblestudioLaunchProfileStreamConfigurationSessionStorageOut
 		n,
 		"putRoot",
 		[]interface{}{value},
+	)
+}
+
+func (n *jsiiProxy_NimblestudioLaunchProfileStreamConfigurationSessionStorageOutputReference) ResetMode() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetMode",
+		nil, // no parameters
 	)
 }
 

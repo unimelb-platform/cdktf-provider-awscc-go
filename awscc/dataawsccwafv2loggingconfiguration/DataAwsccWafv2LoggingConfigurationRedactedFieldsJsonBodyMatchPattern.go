@@ -1,6 +1,0 @@
-package dataawsccwafv2loggingconfiguration
-
-
-type DataAwsccWafv2LoggingConfigurationRedactedFieldsJsonBodyMatchPattern struct {
-}
-

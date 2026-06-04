@@ -4,6 +4,10 @@ package stepfunctionsactivity
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (s *jsiiProxy_StepfunctionsActivityTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_StepfunctionsActivityTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -9,10 +9,13 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/applicationinsightsapplication/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/applicationinsights_application awscc_applicationinsights_application}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/applicationinsights_application awscc_applicationinsights_application}.
 type ApplicationinsightsApplication interface {
 	cdktf.TerraformResource
 	ApplicationArn() *string
+	AttachMissingPermission() interface{}
+	SetAttachMissingPermission(val interface{})
+	AttachMissingPermissionInput() interface{}
 	AutoConfigurationEnabled() interface{}
 	SetAutoConfigurationEnabled(val interface{})
 	AutoConfigurationEnabledInput() interface{}
@@ -78,6 +81,9 @@ type ApplicationinsightsApplication interface {
 	ResourceGroupName() *string
 	SetResourceGroupName(val *string)
 	ResourceGroupNameInput() *string
+	SnsNotificationArn() *string
+	SetSnsNotificationArn(val *string)
+	SnsNotificationArnInput() *string
 	Tags() ApplicationinsightsApplicationTagsList
 	TagsInput() interface{}
 	// Experimental.
@@ -110,12 +116,22 @@ type ApplicationinsightsApplication interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -123,6 +139,7 @@ type ApplicationinsightsApplication interface {
 	PutCustomComponents(value interface{})
 	PutLogPatternSets(value interface{})
 	PutTags(value interface{})
+	ResetAttachMissingPermission()
 	ResetAutoConfigurationEnabled()
 	ResetComponentMonitoringSettings()
 	ResetCustomComponents()
@@ -134,8 +151,12 @@ type ApplicationinsightsApplication interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetSnsNotificationArn()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -155,6 +176,26 @@ func (j *jsiiProxy_ApplicationinsightsApplication) ApplicationArn() *string {
 	_jsii_.Get(
 		j,
 		"applicationArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApplicationinsightsApplication) AttachMissingPermission() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"attachMissingPermission",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApplicationinsightsApplication) AttachMissingPermissionInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"attachMissingPermissionInput",
 		&returns,
 	)
 	return returns
@@ -480,6 +521,26 @@ func (j *jsiiProxy_ApplicationinsightsApplication) ResourceGroupNameInput() *str
 	return returns
 }
 
+func (j *jsiiProxy_ApplicationinsightsApplication) SnsNotificationArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"snsNotificationArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApplicationinsightsApplication) SnsNotificationArnInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"snsNotificationArnInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ApplicationinsightsApplication) Tags() ApplicationinsightsApplicationTagsList {
 	var returns ApplicationinsightsApplicationTagsList
 	_jsii_.Get(
@@ -531,7 +592,7 @@ func (j *jsiiProxy_ApplicationinsightsApplication) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/applicationinsights_application awscc_applicationinsights_application} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/applicationinsights_application awscc_applicationinsights_application} Resource.
 func NewApplicationinsightsApplication(scope constructs.Construct, id *string, config *ApplicationinsightsApplicationConfig) ApplicationinsightsApplication {
 	_init_.Initialize()
 
@@ -549,7 +610,7 @@ func NewApplicationinsightsApplication(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/applicationinsights_application awscc_applicationinsights_application} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/applicationinsights_application awscc_applicationinsights_application} Resource.
 func NewApplicationinsightsApplication_Override(a ApplicationinsightsApplication, scope constructs.Construct, id *string, config *ApplicationinsightsApplicationConfig) {
 	_init_.Initialize()
 
@@ -557,6 +618,17 @@ func NewApplicationinsightsApplication_Override(a ApplicationinsightsApplication
 		"awscc.applicationinsightsApplication.ApplicationinsightsApplication",
 		[]interface{}{scope, id, config},
 		a,
+	)
+}
+
+func (j *jsiiProxy_ApplicationinsightsApplication)SetAttachMissingPermission(val interface{}) {
+	if err := j.validateSetAttachMissingPermissionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"attachMissingPermission",
+		val,
 	)
 }
 
@@ -690,6 +762,17 @@ func (j *jsiiProxy_ApplicationinsightsApplication)SetResourceGroupName(val *stri
 	_jsii_.Set(
 		j,
 		"resourceGroupName",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ApplicationinsightsApplication)SetSnsNotificationArn(val *string) {
+	if err := j.validateSetSnsNotificationArnParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"snsNotificationArn",
 		val,
 	)
 }
@@ -963,6 +1046,19 @@ func (a *jsiiProxy_ApplicationinsightsApplication) GetStringMapAttribute(terrafo
 	return returns
 }
 
+func (a *jsiiProxy_ApplicationinsightsApplication) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (a *jsiiProxy_ApplicationinsightsApplication) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := a.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -990,6 +1086,17 @@ func (a *jsiiProxy_ApplicationinsightsApplication) InterpolationForAttribute(ter
 	return returns
 }
 
+func (a *jsiiProxy_ApplicationinsightsApplication) MoveFromId(id *string) {
+	if err := a.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (a *jsiiProxy_ApplicationinsightsApplication) MoveTo(moveTarget *string, index interface{}) {
 	if err := a.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -998,6 +1105,17 @@ func (a *jsiiProxy_ApplicationinsightsApplication) MoveTo(moveTarget *string, in
 		a,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplication) MoveToId(id *string) {
+	if err := a.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1053,6 +1171,14 @@ func (a *jsiiProxy_ApplicationinsightsApplication) PutTags(value interface{}) {
 		a,
 		"putTags",
 		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplication) ResetAttachMissingPermission() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetAttachMissingPermission",
+		nil, // no parameters
 	)
 }
 
@@ -1128,6 +1254,14 @@ func (a *jsiiProxy_ApplicationinsightsApplication) ResetOverrideLogicalId() {
 	)
 }
 
+func (a *jsiiProxy_ApplicationinsightsApplication) ResetSnsNotificationArn() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetSnsNotificationArn",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_ApplicationinsightsApplication) ResetTags() {
 	_jsii_.InvokeVoid(
 		a,
@@ -1142,6 +1276,32 @@ func (a *jsiiProxy_ApplicationinsightsApplication) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		a,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplication) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		a,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplication) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

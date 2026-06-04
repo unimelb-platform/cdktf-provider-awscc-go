@@ -70,6 +70,9 @@ type EfsAccessPointRootDirectoryCreationInfoOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetOwnerGid()
+	ResetOwnerUid()
+	ResetPermissions()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (e *jsiiProxy_EfsAccessPointRootDirectoryCreationInfoOutputReference) Inter
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EfsAccessPointRootDirectoryCreationInfoOutputReference) ResetOwnerGid() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetOwnerGid",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EfsAccessPointRootDirectoryCreationInfoOutputReference) ResetOwnerUid() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetOwnerUid",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EfsAccessPointRootDirectoryCreationInfoOutputReference) ResetPermissions() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetPermissions",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EfsAccessPointRootDirectoryCreationInfoOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

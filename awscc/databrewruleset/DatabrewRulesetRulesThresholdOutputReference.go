@@ -72,6 +72,7 @@ type DatabrewRulesetRulesThresholdOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetType()
 	ResetUnit()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (d *jsiiProxy_DatabrewRulesetRulesThresholdOutputReference) ResetUnit() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetUnit",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatabrewRulesetRulesThresholdOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetValue",
 		nil, // no parameters
 	)
 }

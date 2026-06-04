@@ -64,6 +64,7 @@ type SagemakerSpaceOwnershipSettingsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetOwnerUserProfileName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_SagemakerSpaceOwnershipSettingsOutputReference) Interpolation
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SagemakerSpaceOwnershipSettingsOutputReference) ResetOwnerUserProfileName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOwnerUserProfileName",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SagemakerSpaceOwnershipSettingsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

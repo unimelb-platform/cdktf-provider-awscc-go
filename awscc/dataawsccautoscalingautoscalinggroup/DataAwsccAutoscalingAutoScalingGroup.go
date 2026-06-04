@@ -9,12 +9,16 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccautoscalingautoscalinggroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/autoscaling_auto_scaling_group awscc_autoscaling_auto_scaling_group}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/autoscaling_auto_scaling_group awscc_autoscaling_auto_scaling_group}.
 type DataAwsccAutoscalingAutoScalingGroup interface {
 	cdktf.TerraformDataSource
+	AutoScalingGroupArn() *string
 	AutoScalingGroupName() *string
+	AvailabilityZoneDistribution() DataAwsccAutoscalingAutoScalingGroupAvailabilityZoneDistributionOutputReference
+	AvailabilityZoneImpairmentPolicy() DataAwsccAutoscalingAutoScalingGroupAvailabilityZoneImpairmentPolicyOutputReference
 	AvailabilityZones() *[]*string
 	CapacityRebalance() cdktf.IResolvable
+	CapacityReservationSpecification() DataAwsccAutoscalingAutoScalingGroupCapacityReservationSpecificationOutputReference
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -73,6 +77,7 @@ type DataAwsccAutoscalingAutoScalingGroup interface {
 	// Experimental.
 	RawOverrides() interface{}
 	ServiceLinkedRoleArn() *string
+	SkipZonalShiftValidation() cdktf.IResolvable
 	Tags() DataAwsccAutoscalingAutoScalingGroupTagsList
 	TargetGroupArNs() *[]*string
 	TerminationPolicies() *[]*string
@@ -82,6 +87,7 @@ type DataAwsccAutoscalingAutoScalingGroup interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	TrafficSources() DataAwsccAutoscalingAutoScalingGroupTrafficSourcesList
 	VpcZoneIdentifier() *[]*string
 	// Experimental.
 	AddOverride(path *string, value interface{})
@@ -112,6 +118,10 @@ type DataAwsccAutoscalingAutoScalingGroup interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -126,11 +136,41 @@ type jsiiProxy_DataAwsccAutoscalingAutoScalingGroup struct {
 	internal.Type__cdktfTerraformDataSource
 }
 
+func (j *jsiiProxy_DataAwsccAutoscalingAutoScalingGroup) AutoScalingGroupArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"autoScalingGroupArn",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccAutoscalingAutoScalingGroup) AutoScalingGroupName() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"autoScalingGroupName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccAutoscalingAutoScalingGroup) AvailabilityZoneDistribution() DataAwsccAutoscalingAutoScalingGroupAvailabilityZoneDistributionOutputReference {
+	var returns DataAwsccAutoscalingAutoScalingGroupAvailabilityZoneDistributionOutputReference
+	_jsii_.Get(
+		j,
+		"availabilityZoneDistribution",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccAutoscalingAutoScalingGroup) AvailabilityZoneImpairmentPolicy() DataAwsccAutoscalingAutoScalingGroupAvailabilityZoneImpairmentPolicyOutputReference {
+	var returns DataAwsccAutoscalingAutoScalingGroupAvailabilityZoneImpairmentPolicyOutputReference
+	_jsii_.Get(
+		j,
+		"availabilityZoneImpairmentPolicy",
 		&returns,
 	)
 	return returns
@@ -151,6 +191,16 @@ func (j *jsiiProxy_DataAwsccAutoscalingAutoScalingGroup) CapacityRebalance() cdk
 	_jsii_.Get(
 		j,
 		"capacityRebalance",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccAutoscalingAutoScalingGroup) CapacityReservationSpecification() DataAwsccAutoscalingAutoScalingGroupCapacityReservationSpecificationOutputReference {
+	var returns DataAwsccAutoscalingAutoScalingGroupCapacityReservationSpecificationOutputReference
+	_jsii_.Get(
+		j,
+		"capacityReservationSpecification",
 		&returns,
 	)
 	return returns
@@ -516,6 +566,16 @@ func (j *jsiiProxy_DataAwsccAutoscalingAutoScalingGroup) ServiceLinkedRoleArn() 
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccAutoscalingAutoScalingGroup) SkipZonalShiftValidation() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"skipZonalShiftValidation",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccAutoscalingAutoScalingGroup) Tags() DataAwsccAutoscalingAutoScalingGroupTagsList {
 	var returns DataAwsccAutoscalingAutoScalingGroupTagsList
 	_jsii_.Get(
@@ -576,6 +636,16 @@ func (j *jsiiProxy_DataAwsccAutoscalingAutoScalingGroup) TerraformResourceType()
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccAutoscalingAutoScalingGroup) TrafficSources() DataAwsccAutoscalingAutoScalingGroupTrafficSourcesList {
+	var returns DataAwsccAutoscalingAutoScalingGroupTrafficSourcesList
+	_jsii_.Get(
+		j,
+		"trafficSources",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccAutoscalingAutoScalingGroup) VpcZoneIdentifier() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -587,7 +657,7 @@ func (j *jsiiProxy_DataAwsccAutoscalingAutoScalingGroup) VpcZoneIdentifier() *[]
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/autoscaling_auto_scaling_group awscc_autoscaling_auto_scaling_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/autoscaling_auto_scaling_group awscc_autoscaling_auto_scaling_group} Data Source.
 func NewDataAwsccAutoscalingAutoScalingGroup(scope constructs.Construct, id *string, config *DataAwsccAutoscalingAutoScalingGroupConfig) DataAwsccAutoscalingAutoScalingGroup {
 	_init_.Initialize()
 
@@ -605,7 +675,7 @@ func NewDataAwsccAutoscalingAutoScalingGroup(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/autoscaling_auto_scaling_group awscc_autoscaling_auto_scaling_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/autoscaling_auto_scaling_group awscc_autoscaling_auto_scaling_group} Data Source.
 func NewDataAwsccAutoscalingAutoScalingGroup_Override(d DataAwsccAutoscalingAutoScalingGroup, scope constructs.Construct, id *string, config *DataAwsccAutoscalingAutoScalingGroupConfig) {
 	_init_.Initialize()
 
@@ -972,6 +1042,32 @@ func (d *jsiiProxy_DataAwsccAutoscalingAutoScalingGroup) SynthesizeAttributes() 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAutoscalingAutoScalingGroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAutoscalingAutoScalingGroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

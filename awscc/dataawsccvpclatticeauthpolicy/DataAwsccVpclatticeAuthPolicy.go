@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccvpclatticeauthpolicy/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/vpclattice_auth_policy awscc_vpclattice_auth_policy}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/vpclattice_auth_policy awscc_vpclattice_auth_policy}.
 type DataAwsccVpclatticeAuthPolicy interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -85,6 +85,10 @@ type DataAwsccVpclatticeAuthPolicy interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -290,7 +294,7 @@ func (j *jsiiProxy_DataAwsccVpclatticeAuthPolicy) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/vpclattice_auth_policy awscc_vpclattice_auth_policy} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/vpclattice_auth_policy awscc_vpclattice_auth_policy} Data Source.
 func NewDataAwsccVpclatticeAuthPolicy(scope constructs.Construct, id *string, config *DataAwsccVpclatticeAuthPolicyConfig) DataAwsccVpclatticeAuthPolicy {
 	_init_.Initialize()
 
@@ -308,7 +312,7 @@ func NewDataAwsccVpclatticeAuthPolicy(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/vpclattice_auth_policy awscc_vpclattice_auth_policy} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/vpclattice_auth_policy awscc_vpclattice_auth_policy} Data Source.
 func NewDataAwsccVpclatticeAuthPolicy_Override(d DataAwsccVpclatticeAuthPolicy, scope constructs.Construct, id *string, config *DataAwsccVpclatticeAuthPolicyConfig) {
 	_init_.Initialize()
 
@@ -675,6 +679,32 @@ func (d *jsiiProxy_DataAwsccVpclatticeAuthPolicy) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccVpclatticeAuthPolicy) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccVpclatticeAuthPolicy) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

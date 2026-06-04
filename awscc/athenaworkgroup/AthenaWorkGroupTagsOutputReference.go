@@ -67,6 +67,8 @@ type AthenaWorkGroupTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (a *jsiiProxy_AthenaWorkGroupTagsOutputReference) InterpolationForAttribute
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AthenaWorkGroupTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AthenaWorkGroupTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AthenaWorkGroupTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

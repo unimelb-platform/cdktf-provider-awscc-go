@@ -32,6 +32,9 @@ type DatasyncTaskScheduleOutputReference interface {
 	ScheduleExpression() *string
 	SetScheduleExpression(val *string)
 	ScheduleExpressionInput() *string
+	Status() *string
+	SetStatus(val *string)
+	StatusInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +67,8 @@ type DatasyncTaskScheduleOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetScheduleExpression()
+	ResetStatus()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -144,6 +149,26 @@ func (j *jsiiProxy_DatasyncTaskScheduleOutputReference) ScheduleExpressionInput(
 	_jsii_.Get(
 		j,
 		"scheduleExpressionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatasyncTaskScheduleOutputReference) Status() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"status",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatasyncTaskScheduleOutputReference) StatusInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"statusInput",
 		&returns,
 	)
 	return returns
@@ -237,6 +262,17 @@ func (j *jsiiProxy_DatasyncTaskScheduleOutputReference)SetScheduleExpression(val
 	_jsii_.Set(
 		j,
 		"scheduleExpression",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DatasyncTaskScheduleOutputReference)SetStatus(val *string) {
+	if err := j.validateSetStatusParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"status",
 		val,
 	)
 }
@@ -447,6 +483,22 @@ func (d *jsiiProxy_DatasyncTaskScheduleOutputReference) InterpolationForAttribut
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatasyncTaskScheduleOutputReference) ResetScheduleExpression() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetScheduleExpression",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatasyncTaskScheduleOutputReference) ResetStatus() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetStatus",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatasyncTaskScheduleOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

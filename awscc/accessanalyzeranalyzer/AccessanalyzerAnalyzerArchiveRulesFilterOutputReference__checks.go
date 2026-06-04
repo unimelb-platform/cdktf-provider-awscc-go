@@ -199,9 +199,25 @@ func (j *jsiiProxy_AccessanalyzerAnalyzerArchiveRulesFilterOutputReference) vali
 	return nil
 }
 
-func (j *jsiiProxy_AccessanalyzerAnalyzerArchiveRulesFilterOutputReference) validateSetInternalValueParameters(val *AccessanalyzerAnalyzerArchiveRulesFilter) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_AccessanalyzerAnalyzerArchiveRulesFilterOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *AccessanalyzerAnalyzerArchiveRulesFilter:
+		val := val.(*AccessanalyzerAnalyzerArchiveRulesFilter)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case AccessanalyzerAnalyzerArchiveRulesFilter:
+		val_ := val.(AccessanalyzerAnalyzerArchiveRulesFilter)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *AccessanalyzerAnalyzerArchiveRulesFilter; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

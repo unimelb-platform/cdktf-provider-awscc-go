@@ -1,0 +1,6 @@
+package dataawsccsecuritylakesubscribernotification
+
+
+type DataAwsccSecuritylakeSubscriberNotificationNotificationConfigurationHttpsNotificationConfiguration struct {
+}
+

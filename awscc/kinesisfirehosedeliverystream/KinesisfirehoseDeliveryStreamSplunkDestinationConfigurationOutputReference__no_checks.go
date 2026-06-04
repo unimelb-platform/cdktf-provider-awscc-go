@@ -64,6 +64,10 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationOu
 	return nil
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationOutputReference) validatePutSecretsManagerConfigurationParameters(value *KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationSecretsManagerConfiguration) error {
+	return nil
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

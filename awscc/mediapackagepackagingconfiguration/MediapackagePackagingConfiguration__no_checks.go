@@ -56,7 +56,15 @@ func (m *jsiiProxy_MediapackagePackagingConfiguration) validateInterpolationForA
 	return nil
 }
 
+func (m *jsiiProxy_MediapackagePackagingConfiguration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_MediapackagePackagingConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (m *jsiiProxy_MediapackagePackagingConfiguration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -108,11 +116,11 @@ func (j *jsiiProxy_MediapackagePackagingConfiguration) validateSetCountParameter
 	return nil
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfiguration) validateSetIdParameters(val *string) error {
+func (j *jsiiProxy_MediapackagePackagingConfiguration) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfiguration) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
+func (j *jsiiProxy_MediapackagePackagingConfiguration) validateSetPackagingConfigurationIdParameters(val *string) error {
 	return nil
 }
 

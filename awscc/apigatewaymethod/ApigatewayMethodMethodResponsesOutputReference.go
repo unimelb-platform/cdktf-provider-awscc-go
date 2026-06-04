@@ -72,6 +72,7 @@ type ApigatewayMethodMethodResponsesOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetResponseModels()
 	ResetResponseParameters()
+	ResetStatusCode()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (a *jsiiProxy_ApigatewayMethodMethodResponsesOutputReference) ResetResponse
 	_jsii_.InvokeVoid(
 		a,
 		"resetResponseParameters",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApigatewayMethodMethodResponsesOutputReference) ResetStatusCode() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetStatusCode",
 		nil, // no parameters
 	)
 }

@@ -32,6 +32,7 @@ type DataAwsccRumAppMonitorAppMonitorConfigurationMetricDestinationsMetricDefini
 	InternalValue() *DataAwsccRumAppMonitorAppMonitorConfigurationMetricDestinationsMetricDefinitions
 	SetInternalValue(val *DataAwsccRumAppMonitorAppMonitorConfigurationMetricDestinationsMetricDefinitions)
 	Name() *string
+	Namespace() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -156,6 +157,16 @@ func (j *jsiiProxy_DataAwsccRumAppMonitorAppMonitorConfigurationMetricDestinatio
 	_jsii_.Get(
 		j,
 		"name",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRumAppMonitorAppMonitorConfigurationMetricDestinationsMetricDefinitionsOutputReference) Namespace() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"namespace",
 		&returns,
 	)
 	return returns

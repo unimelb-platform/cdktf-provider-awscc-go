@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/rdscustomdbengineversion/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rds_custom_db_engine_version awscc_rds_custom_db_engine_version}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_custom_db_engine_version awscc_rds_custom_db_engine_version}.
 type RdsCustomDbEngineVersion interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -53,6 +53,9 @@ type RdsCustomDbEngineVersion interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
+	ImageId() *string
+	SetImageId(val *string)
+	ImageIdInput() *string
 	KmsKeyId() *string
 	SetKmsKeyId(val *string)
 	KmsKeyIdInput() *string
@@ -75,6 +78,9 @@ type RdsCustomDbEngineVersion interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	SourceCustomDbEngineVersionIdentifier() *string
+	SetSourceCustomDbEngineVersionIdentifier(val *string)
+	SourceCustomDbEngineVersionIdentifierInput() *string
 	Status() *string
 	SetStatus(val *string)
 	StatusInput() *string
@@ -86,6 +92,9 @@ type RdsCustomDbEngineVersion interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	UseAwsProvidedLatestImage() interface{}
+	SetUseAwsProvidedLatestImage(val interface{})
+	UseAwsProvidedLatestImageInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -110,26 +119,43 @@ type RdsCustomDbEngineVersion interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutTags(value interface{})
+	ResetDatabaseInstallationFilesS3BucketName()
 	ResetDatabaseInstallationFilesS3Prefix()
 	ResetDescription()
+	ResetImageId()
 	ResetKmsKeyId()
 	ResetManifest()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetSourceCustomDbEngineVersionIdentifier()
 	ResetStatus()
 	ResetTags()
+	ResetUseAwsProvidedLatestImage()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -344,6 +370,26 @@ func (j *jsiiProxy_RdsCustomDbEngineVersion) Id() *string {
 	return returns
 }
 
+func (j *jsiiProxy_RdsCustomDbEngineVersion) ImageId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"imageId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsCustomDbEngineVersion) ImageIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"imageIdInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RdsCustomDbEngineVersion) KmsKeyId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -434,6 +480,26 @@ func (j *jsiiProxy_RdsCustomDbEngineVersion) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RdsCustomDbEngineVersion) SourceCustomDbEngineVersionIdentifier() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"sourceCustomDbEngineVersionIdentifier",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsCustomDbEngineVersion) SourceCustomDbEngineVersionIdentifierInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"sourceCustomDbEngineVersionIdentifierInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RdsCustomDbEngineVersion) Status() *string {
 	var returns *string
 	_jsii_.Get(
@@ -504,8 +570,28 @@ func (j *jsiiProxy_RdsCustomDbEngineVersion) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_RdsCustomDbEngineVersion) UseAwsProvidedLatestImage() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"useAwsProvidedLatestImage",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rds_custom_db_engine_version awscc_rds_custom_db_engine_version} Resource.
+func (j *jsiiProxy_RdsCustomDbEngineVersion) UseAwsProvidedLatestImageInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"useAwsProvidedLatestImageInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_custom_db_engine_version awscc_rds_custom_db_engine_version} Resource.
 func NewRdsCustomDbEngineVersion(scope constructs.Construct, id *string, config *RdsCustomDbEngineVersionConfig) RdsCustomDbEngineVersion {
 	_init_.Initialize()
 
@@ -523,7 +609,7 @@ func NewRdsCustomDbEngineVersion(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rds_custom_db_engine_version awscc_rds_custom_db_engine_version} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_custom_db_engine_version awscc_rds_custom_db_engine_version} Resource.
 func NewRdsCustomDbEngineVersion_Override(r RdsCustomDbEngineVersion, scope constructs.Construct, id *string, config *RdsCustomDbEngineVersionConfig) {
 	_init_.Initialize()
 
@@ -627,6 +713,17 @@ func (j *jsiiProxy_RdsCustomDbEngineVersion)SetForEach(val cdktf.ITerraformItera
 	)
 }
 
+func (j *jsiiProxy_RdsCustomDbEngineVersion)SetImageId(val *string) {
+	if err := j.validateSetImageIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"imageId",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RdsCustomDbEngineVersion)SetKmsKeyId(val *string) {
 	if err := j.validateSetKmsKeyIdParameters(val); err != nil {
 		panic(err)
@@ -679,6 +776,17 @@ func (j *jsiiProxy_RdsCustomDbEngineVersion)SetProvisioners(val *[]interface{}) 
 	)
 }
 
+func (j *jsiiProxy_RdsCustomDbEngineVersion)SetSourceCustomDbEngineVersionIdentifier(val *string) {
+	if err := j.validateSetSourceCustomDbEngineVersionIdentifierParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"sourceCustomDbEngineVersionIdentifier",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RdsCustomDbEngineVersion)SetStatus(val *string) {
 	if err := j.validateSetStatusParameters(val); err != nil {
 		panic(err)
@@ -686,6 +794,17 @@ func (j *jsiiProxy_RdsCustomDbEngineVersion)SetStatus(val *string) {
 	_jsii_.Set(
 		j,
 		"status",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RdsCustomDbEngineVersion)SetUseAwsProvidedLatestImage(val interface{}) {
+	if err := j.validateSetUseAwsProvidedLatestImageParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"useAwsProvidedLatestImage",
 		val,
 	)
 }
@@ -959,6 +1078,19 @@ func (r *jsiiProxy_RdsCustomDbEngineVersion) GetStringMapAttribute(terraformAttr
 	return returns
 }
 
+func (r *jsiiProxy_RdsCustomDbEngineVersion) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (r *jsiiProxy_RdsCustomDbEngineVersion) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -986,6 +1118,17 @@ func (r *jsiiProxy_RdsCustomDbEngineVersion) InterpolationForAttribute(terraform
 	return returns
 }
 
+func (r *jsiiProxy_RdsCustomDbEngineVersion) MoveFromId(id *string) {
+	if err := r.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_RdsCustomDbEngineVersion) MoveTo(moveTarget *string, index interface{}) {
 	if err := r.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -994,6 +1137,17 @@ func (r *jsiiProxy_RdsCustomDbEngineVersion) MoveTo(moveTarget *string, index in
 		r,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (r *jsiiProxy_RdsCustomDbEngineVersion) MoveToId(id *string) {
+	if err := r.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1019,6 +1173,14 @@ func (r *jsiiProxy_RdsCustomDbEngineVersion) PutTags(value interface{}) {
 	)
 }
 
+func (r *jsiiProxy_RdsCustomDbEngineVersion) ResetDatabaseInstallationFilesS3BucketName() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetDatabaseInstallationFilesS3BucketName",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_RdsCustomDbEngineVersion) ResetDatabaseInstallationFilesS3Prefix() {
 	_jsii_.InvokeVoid(
 		r,
@@ -1031,6 +1193,14 @@ func (r *jsiiProxy_RdsCustomDbEngineVersion) ResetDescription() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RdsCustomDbEngineVersion) ResetImageId() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetImageId",
 		nil, // no parameters
 	)
 }
@@ -1059,6 +1229,14 @@ func (r *jsiiProxy_RdsCustomDbEngineVersion) ResetOverrideLogicalId() {
 	)
 }
 
+func (r *jsiiProxy_RdsCustomDbEngineVersion) ResetSourceCustomDbEngineVersionIdentifier() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetSourceCustomDbEngineVersionIdentifier",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_RdsCustomDbEngineVersion) ResetStatus() {
 	_jsii_.InvokeVoid(
 		r,
@@ -1075,12 +1253,46 @@ func (r *jsiiProxy_RdsCustomDbEngineVersion) ResetTags() {
 	)
 }
 
+func (r *jsiiProxy_RdsCustomDbEngineVersion) ResetUseAwsProvidedLatestImage() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetUseAwsProvidedLatestImage",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_RdsCustomDbEngineVersion) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		r,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RdsCustomDbEngineVersion) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		r,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RdsCustomDbEngineVersion) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

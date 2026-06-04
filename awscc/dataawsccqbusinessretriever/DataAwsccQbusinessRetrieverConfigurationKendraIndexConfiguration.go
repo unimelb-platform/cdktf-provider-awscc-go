@@ -1,0 +1,6 @@
+package dataawsccqbusinessretriever
+
+
+type DataAwsccQbusinessRetrieverConfigurationKendraIndexConfiguration struct {
+}
+

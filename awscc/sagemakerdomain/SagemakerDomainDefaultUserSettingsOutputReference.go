@@ -10,6 +10,9 @@ import (
 
 type SagemakerDomainDefaultUserSettingsOutputReference interface {
 	cdktf.ComplexObject
+	AutoMountHomeEfs() *string
+	SetAutoMountHomeEfs(val *string)
+	AutoMountHomeEfsInput() *string
 	CodeEditorAppSettings() SagemakerDomainDefaultUserSettingsCodeEditorAppSettingsOutputReference
 	CodeEditorAppSettingsInput() interface{}
 	// the index of the complex object in a list.
@@ -61,6 +64,8 @@ type SagemakerDomainDefaultUserSettingsOutputReference interface {
 	StudioWebPortal() *string
 	SetStudioWebPortal(val *string)
 	StudioWebPortalInput() *string
+	StudioWebPortalSettings() SagemakerDomainDefaultUserSettingsStudioWebPortalSettingsOutputReference
+	StudioWebPortalSettingsInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -103,6 +108,8 @@ type SagemakerDomainDefaultUserSettingsOutputReference interface {
 	PutRStudioServerProAppSettings(value *SagemakerDomainDefaultUserSettingsRStudioServerProAppSettings)
 	PutSharingSettings(value *SagemakerDomainDefaultUserSettingsSharingSettings)
 	PutSpaceStorageSettings(value *SagemakerDomainDefaultUserSettingsSpaceStorageSettings)
+	PutStudioWebPortalSettings(value *SagemakerDomainDefaultUserSettingsStudioWebPortalSettings)
+	ResetAutoMountHomeEfs()
 	ResetCodeEditorAppSettings()
 	ResetCustomFileSystemConfigs()
 	ResetCustomPosixUserConfig()
@@ -116,6 +123,7 @@ type SagemakerDomainDefaultUserSettingsOutputReference interface {
 	ResetSharingSettings()
 	ResetSpaceStorageSettings()
 	ResetStudioWebPortal()
+	ResetStudioWebPortalSettings()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -129,6 +137,26 @@ type SagemakerDomainDefaultUserSettingsOutputReference interface {
 // The jsii proxy struct for SagemakerDomainDefaultUserSettingsOutputReference
 type jsiiProxy_SagemakerDomainDefaultUserSettingsOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_SagemakerDomainDefaultUserSettingsOutputReference) AutoMountHomeEfs() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"autoMountHomeEfs",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerDomainDefaultUserSettingsOutputReference) AutoMountHomeEfsInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"autoMountHomeEfsInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_SagemakerDomainDefaultUserSettingsOutputReference) CodeEditorAppSettings() SagemakerDomainDefaultUserSettingsCodeEditorAppSettingsOutputReference {
@@ -461,6 +489,26 @@ func (j *jsiiProxy_SagemakerDomainDefaultUserSettingsOutputReference) StudioWebP
 	return returns
 }
 
+func (j *jsiiProxy_SagemakerDomainDefaultUserSettingsOutputReference) StudioWebPortalSettings() SagemakerDomainDefaultUserSettingsStudioWebPortalSettingsOutputReference {
+	var returns SagemakerDomainDefaultUserSettingsStudioWebPortalSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"studioWebPortalSettings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerDomainDefaultUserSettingsOutputReference) StudioWebPortalSettingsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"studioWebPortalSettingsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SagemakerDomainDefaultUserSettingsOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -506,6 +554,17 @@ func NewSagemakerDomainDefaultUserSettingsOutputReference_Override(s SagemakerDo
 		"awscc.sagemakerDomain.SagemakerDomainDefaultUserSettingsOutputReference",
 		[]interface{}{terraformResource, terraformAttribute},
 		s,
+	)
+}
+
+func (j *jsiiProxy_SagemakerDomainDefaultUserSettingsOutputReference)SetAutoMountHomeEfs(val *string) {
+	if err := j.validateSetAutoMountHomeEfsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"autoMountHomeEfs",
+		val,
 	)
 }
 
@@ -904,6 +963,25 @@ func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsOutputReference) PutSpaceSt
 	)
 }
 
+func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsOutputReference) PutStudioWebPortalSettings(value *SagemakerDomainDefaultUserSettingsStudioWebPortalSettings) {
+	if err := s.validatePutStudioWebPortalSettingsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putStudioWebPortalSettings",
+		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsOutputReference) ResetAutoMountHomeEfs() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetAutoMountHomeEfs",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsOutputReference) ResetCodeEditorAppSettings() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1004,6 +1082,14 @@ func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsOutputReference) ResetStudi
 	_jsii_.InvokeVoid(
 		s,
 		"resetStudioWebPortal",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsOutputReference) ResetStudioWebPortalSettings() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStudioWebPortalSettings",
 		nil, // no parameters
 	)
 }

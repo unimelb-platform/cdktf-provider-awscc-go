@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccapprunnerobservabilityconfiguration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apprunner_observability_configuration awscc_apprunner_observability_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apprunner_observability_configuration awscc_apprunner_observability_configuration}.
 type DataAwsccApprunnerObservabilityConfiguration interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -88,6 +88,10 @@ type DataAwsccApprunnerObservabilityConfiguration interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -323,7 +327,7 @@ func (j *jsiiProxy_DataAwsccApprunnerObservabilityConfiguration) TraceConfigurat
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apprunner_observability_configuration awscc_apprunner_observability_configuration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apprunner_observability_configuration awscc_apprunner_observability_configuration} Data Source.
 func NewDataAwsccApprunnerObservabilityConfiguration(scope constructs.Construct, id *string, config *DataAwsccApprunnerObservabilityConfigurationConfig) DataAwsccApprunnerObservabilityConfiguration {
 	_init_.Initialize()
 
@@ -341,7 +345,7 @@ func NewDataAwsccApprunnerObservabilityConfiguration(scope constructs.Construct,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apprunner_observability_configuration awscc_apprunner_observability_configuration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apprunner_observability_configuration awscc_apprunner_observability_configuration} Data Source.
 func NewDataAwsccApprunnerObservabilityConfiguration_Override(d DataAwsccApprunnerObservabilityConfiguration, scope constructs.Construct, id *string, config *DataAwsccApprunnerObservabilityConfigurationConfig) {
 	_init_.Initialize()
 
@@ -708,6 +712,32 @@ func (d *jsiiProxy_DataAwsccApprunnerObservabilityConfiguration) SynthesizeAttri
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApprunnerObservabilityConfiguration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApprunnerObservabilityConfiguration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

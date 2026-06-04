@@ -62,6 +62,8 @@ type PipesPipeTargetParametersOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	TimestreamParameters() PipesPipeTargetParametersTimestreamParametersOutputReference
+	TimestreamParametersInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -97,6 +99,7 @@ type PipesPipeTargetParametersOutputReference interface {
 	PutSageMakerPipelineParameters(value *PipesPipeTargetParametersSageMakerPipelineParameters)
 	PutSqsQueueParameters(value *PipesPipeTargetParametersSqsQueueParameters)
 	PutStepFunctionStateMachineParameters(value *PipesPipeTargetParametersStepFunctionStateMachineParameters)
+	PutTimestreamParameters(value *PipesPipeTargetParametersTimestreamParameters)
 	ResetBatchJobParameters()
 	ResetCloudwatchLogsParameters()
 	ResetEcsTaskParameters()
@@ -109,6 +112,7 @@ type PipesPipeTargetParametersOutputReference interface {
 	ResetSageMakerPipelineParameters()
 	ResetSqsQueueParameters()
 	ResetStepFunctionStateMachineParameters()
+	ResetTimestreamParameters()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -429,6 +433,26 @@ func (j *jsiiProxy_PipesPipeTargetParametersOutputReference) TerraformResource()
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_PipesPipeTargetParametersOutputReference) TimestreamParameters() PipesPipeTargetParametersTimestreamParametersOutputReference {
+	var returns PipesPipeTargetParametersTimestreamParametersOutputReference
+	_jsii_.Get(
+		j,
+		"timestreamParameters",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_PipesPipeTargetParametersOutputReference) TimestreamParametersInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timestreamParametersInput",
 		&returns,
 	)
 	return returns
@@ -835,6 +859,17 @@ func (p *jsiiProxy_PipesPipeTargetParametersOutputReference) PutStepFunctionStat
 	)
 }
 
+func (p *jsiiProxy_PipesPipeTargetParametersOutputReference) PutTimestreamParameters(value *PipesPipeTargetParametersTimestreamParameters) {
+	if err := p.validatePutTimestreamParametersParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		p,
+		"putTimestreamParameters",
+		[]interface{}{value},
+	)
+}
+
 func (p *jsiiProxy_PipesPipeTargetParametersOutputReference) ResetBatchJobParameters() {
 	_jsii_.InvokeVoid(
 		p,
@@ -927,6 +962,14 @@ func (p *jsiiProxy_PipesPipeTargetParametersOutputReference) ResetStepFunctionSt
 	_jsii_.InvokeVoid(
 		p,
 		"resetStepFunctionStateMachineParameters",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PipesPipeTargetParametersOutputReference) ResetTimestreamParameters() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetTimestreamParameters",
 		nil, // no parameters
 	)
 }

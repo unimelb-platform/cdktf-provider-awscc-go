@@ -27,8 +27,8 @@ type ApplicationinsightsApplicationLogPatternSetsLogPatternsOutputReference inte
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *ApplicationinsightsApplicationLogPatternSetsLogPatterns
-	SetInternalValue(val *ApplicationinsightsApplicationLogPatternSetsLogPatterns)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Pattern() *string
 	SetPattern(val *string)
 	PatternInput() *string
@@ -70,6 +70,9 @@ type ApplicationinsightsApplicationLogPatternSetsLogPatternsOutputReference inte
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPattern()
+	ResetPatternName()
+	ResetRank()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -125,8 +128,8 @@ func (j *jsiiProxy_ApplicationinsightsApplicationLogPatternSetsLogPatternsOutput
 	return returns
 }
 
-func (j *jsiiProxy_ApplicationinsightsApplicationLogPatternSetsLogPatternsOutputReference) InternalValue() *ApplicationinsightsApplicationLogPatternSetsLogPatterns {
-	var returns *ApplicationinsightsApplicationLogPatternSetsLogPatterns
+func (j *jsiiProxy_ApplicationinsightsApplicationLogPatternSetsLogPatternsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -265,7 +268,7 @@ func (j *jsiiProxy_ApplicationinsightsApplicationLogPatternSetsLogPatternsOutput
 	)
 }
 
-func (j *jsiiProxy_ApplicationinsightsApplicationLogPatternSetsLogPatternsOutputReference)SetInternalValue(val *ApplicationinsightsApplicationLogPatternSetsLogPatterns) {
+func (j *jsiiProxy_ApplicationinsightsApplicationLogPatternSetsLogPatternsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -515,6 +518,30 @@ func (a *jsiiProxy_ApplicationinsightsApplicationLogPatternSetsLogPatternsOutput
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationLogPatternSetsLogPatternsOutputReference) ResetPattern() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetPattern",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationLogPatternSetsLogPatternsOutputReference) ResetPatternName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetPatternName",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationLogPatternSetsLogPatternsOutputReference) ResetRank() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetRank",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_ApplicationinsightsApplicationLogPatternSetsLogPatternsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

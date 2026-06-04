@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccappstreamappblock/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appstream_app_block awscc_appstream_app_block}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appstream_app_block awscc_appstream_app_block}.
 type DataAwsccAppstreamAppBlock interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -92,6 +92,10 @@ type DataAwsccAppstreamAppBlock interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -367,7 +371,7 @@ func (j *jsiiProxy_DataAwsccAppstreamAppBlock) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appstream_app_block awscc_appstream_app_block} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appstream_app_block awscc_appstream_app_block} Data Source.
 func NewDataAwsccAppstreamAppBlock(scope constructs.Construct, id *string, config *DataAwsccAppstreamAppBlockConfig) DataAwsccAppstreamAppBlock {
 	_init_.Initialize()
 
@@ -385,7 +389,7 @@ func NewDataAwsccAppstreamAppBlock(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appstream_app_block awscc_appstream_app_block} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appstream_app_block awscc_appstream_app_block} Data Source.
 func NewDataAwsccAppstreamAppBlock_Override(d DataAwsccAppstreamAppBlock, scope constructs.Construct, id *string, config *DataAwsccAppstreamAppBlockConfig) {
 	_init_.Initialize()
 
@@ -752,6 +756,32 @@ func (d *jsiiProxy_DataAwsccAppstreamAppBlock) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppstreamAppBlock) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppstreamAppBlock) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

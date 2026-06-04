@@ -9,12 +9,13 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscclexbot/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lex_bot awscc_lex_bot}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lex_bot awscc_lex_bot}.
 type DataAwsccLexBot interface {
 	cdktf.TerraformDataSource
 	Arn() *string
 	AutoBuildBotLocales() cdktf.IResolvable
 	BotFileS3Location() DataAwsccLexBotBotFileS3LocationOutputReference
+	BotId() *string
 	BotLocales() DataAwsccLexBotBotLocalesList
 	BotTags() DataAwsccLexBotBotTagsList
 	// Experimental.
@@ -94,6 +95,10 @@ type DataAwsccLexBot interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -133,6 +138,16 @@ func (j *jsiiProxy_DataAwsccLexBot) BotFileS3Location() DataAwsccLexBotBotFileS3
 	_jsii_.Get(
 		j,
 		"botFileS3Location",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccLexBot) BotId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"botId",
 		&returns,
 	)
 	return returns
@@ -389,7 +404,7 @@ func (j *jsiiProxy_DataAwsccLexBot) TestBotAliasTags() DataAwsccLexBotTestBotAli
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lex_bot awscc_lex_bot} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lex_bot awscc_lex_bot} Data Source.
 func NewDataAwsccLexBot(scope constructs.Construct, id *string, config *DataAwsccLexBotConfig) DataAwsccLexBot {
 	_init_.Initialize()
 
@@ -407,7 +422,7 @@ func NewDataAwsccLexBot(scope constructs.Construct, id *string, config *DataAwsc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lex_bot awscc_lex_bot} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lex_bot awscc_lex_bot} Data Source.
 func NewDataAwsccLexBot_Override(d DataAwsccLexBot, scope constructs.Construct, id *string, config *DataAwsccLexBotConfig) {
 	_init_.Initialize()
 
@@ -774,6 +789,32 @@ func (d *jsiiProxy_DataAwsccLexBot) SynthesizeAttributes() *map[string]interface
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLexBot) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLexBot) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

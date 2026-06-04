@@ -1,0 +1,6 @@
+package dataawsccworkspaceswebdataprotectionsettings
+
+
+type DataAwsccWorkspaceswebDataProtectionSettingsInlineRedactionConfigurationInlineRedactionPatterns struct {
+}
+

@@ -163,9 +163,25 @@ func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestination
 	return nil
 }
 
-func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3BucketOutputReference) validateSetInternalValueParameters(val *LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3Bucket) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3BucketOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3Bucket:
+		val := val.(*LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3Bucket)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3Bucket:
+		val_ := val.(LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3Bucket)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3Bucket; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

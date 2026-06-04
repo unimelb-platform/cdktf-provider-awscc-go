@@ -67,6 +67,8 @@ type IotsitewiseProjectTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (i *jsiiProxy_IotsitewiseProjectTagsOutputReference) InterpolationForAttrib
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotsitewiseProjectTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseProjectTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotsitewiseProjectTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

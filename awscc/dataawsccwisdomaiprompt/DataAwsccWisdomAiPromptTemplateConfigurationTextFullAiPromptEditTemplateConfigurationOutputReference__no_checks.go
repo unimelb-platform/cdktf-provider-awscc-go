@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawsccwisdomaiprompt
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfigurationOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfigurationOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfigurationOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfigurationOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfigurationOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfigurationOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfigurationOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfigurationOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfigurationOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfigurationOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfigurationOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfigurationOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfigurationOutputReference) validateSetInternalValueParameters(val *DataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfiguration) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfigurationOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfigurationOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfigurationOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

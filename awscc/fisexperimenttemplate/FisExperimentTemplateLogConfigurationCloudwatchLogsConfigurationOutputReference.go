@@ -64,6 +64,7 @@ type FisExperimentTemplateLogConfigurationCloudwatchLogsConfigurationOutputRefer
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetLogGroupArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (f *jsiiProxy_FisExperimentTemplateLogConfigurationCloudwatchLogsConfigurat
 	)
 
 	return returns
+}
+
+func (f *jsiiProxy_FisExperimentTemplateLogConfigurationCloudwatchLogsConfigurationOutputReference) ResetLogGroupArn() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetLogGroupArn",
+		nil, // no parameters
+	)
 }
 
 func (f *jsiiProxy_FisExperimentTemplateLogConfigurationCloudwatchLogsConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

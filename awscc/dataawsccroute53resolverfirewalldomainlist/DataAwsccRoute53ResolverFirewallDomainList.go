@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccroute53resolverfirewalldomainlist/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53resolver_firewall_domain_list awscc_route53resolver_firewall_domain_list}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53resolver_firewall_domain_list awscc_route53resolver_firewall_domain_list}.
 type DataAwsccRoute53ResolverFirewallDomainList interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -30,6 +30,7 @@ type DataAwsccRoute53ResolverFirewallDomainList interface {
 	DomainCount() *float64
 	DomainFileUrl() *string
 	Domains() *[]*string
+	FirewallDomainListId() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -94,6 +95,10 @@ type DataAwsccRoute53ResolverFirewallDomainList interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -203,6 +208,16 @@ func (j *jsiiProxy_DataAwsccRoute53ResolverFirewallDomainList) Domains() *[]*str
 	_jsii_.Get(
 		j,
 		"domains",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRoute53ResolverFirewallDomainList) FirewallDomainListId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"firewallDomainListId",
 		&returns,
 	)
 	return returns
@@ -389,7 +404,7 @@ func (j *jsiiProxy_DataAwsccRoute53ResolverFirewallDomainList) TerraformResource
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53resolver_firewall_domain_list awscc_route53resolver_firewall_domain_list} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53resolver_firewall_domain_list awscc_route53resolver_firewall_domain_list} Data Source.
 func NewDataAwsccRoute53ResolverFirewallDomainList(scope constructs.Construct, id *string, config *DataAwsccRoute53ResolverFirewallDomainListConfig) DataAwsccRoute53ResolverFirewallDomainList {
 	_init_.Initialize()
 
@@ -407,7 +422,7 @@ func NewDataAwsccRoute53ResolverFirewallDomainList(scope constructs.Construct, i
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53resolver_firewall_domain_list awscc_route53resolver_firewall_domain_list} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53resolver_firewall_domain_list awscc_route53resolver_firewall_domain_list} Data Source.
 func NewDataAwsccRoute53ResolverFirewallDomainList_Override(d DataAwsccRoute53ResolverFirewallDomainList, scope constructs.Construct, id *string, config *DataAwsccRoute53ResolverFirewallDomainListConfig) {
 	_init_.Initialize()
 
@@ -774,6 +789,32 @@ func (d *jsiiProxy_DataAwsccRoute53ResolverFirewallDomainList) SynthesizeAttribu
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53ResolverFirewallDomainList) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53ResolverFirewallDomainList) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dynamodbtable/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/dynamodb_table awscc_dynamodb_table}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/dynamodb_table awscc_dynamodb_table}.
 type DynamodbTable interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -65,6 +65,8 @@ type DynamodbTable interface {
 	LocalSecondaryIndexesInput() interface{}
 	// The tree node.
 	Node() constructs.Node
+	OnDemandThroughput() DynamodbTableOnDemandThroughputOutputReference
+	OnDemandThroughputInput() interface{}
 	PointInTimeRecoverySpecification() DynamodbTablePointInTimeRecoverySpecificationOutputReference
 	PointInTimeRecoverySpecificationInput() interface{}
 	// Experimental.
@@ -79,6 +81,8 @@ type DynamodbTable interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	ResourcePolicy() DynamodbTableResourcePolicyOutputReference
+	ResourcePolicyInput() interface{}
 	SseSpecification() DynamodbTableSseSpecificationOutputReference
 	SseSpecificationInput() interface{}
 	StreamArn() *string
@@ -100,6 +104,8 @@ type DynamodbTable interface {
 	TerraformResourceType() *string
 	TimeToLiveSpecification() DynamodbTableTimeToLiveSpecificationOutputReference
 	TimeToLiveSpecificationInput() interface{}
+	WarmThroughput() DynamodbTableWarmThroughputOutputReference
+	WarmThroughputInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -124,12 +130,22 @@ type DynamodbTable interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -139,12 +155,15 @@ type DynamodbTable interface {
 	PutImportSourceSpecification(value *DynamodbTableImportSourceSpecification)
 	PutKinesisStreamSpecification(value *DynamodbTableKinesisStreamSpecification)
 	PutLocalSecondaryIndexes(value interface{})
+	PutOnDemandThroughput(value *DynamodbTableOnDemandThroughput)
 	PutPointInTimeRecoverySpecification(value *DynamodbTablePointInTimeRecoverySpecification)
 	PutProvisionedThroughput(value *DynamodbTableProvisionedThroughput)
+	PutResourcePolicy(value *DynamodbTableResourcePolicy)
 	PutSseSpecification(value *DynamodbTableSseSpecification)
 	PutStreamSpecification(value *DynamodbTableStreamSpecification)
 	PutTags(value interface{})
 	PutTimeToLiveSpecification(value *DynamodbTableTimeToLiveSpecification)
+	PutWarmThroughput(value *DynamodbTableWarmThroughput)
 	ResetAttributeDefinitions()
 	ResetBillingMode()
 	ResetContributorInsightsSpecification()
@@ -153,18 +172,24 @@ type DynamodbTable interface {
 	ResetImportSourceSpecification()
 	ResetKinesisStreamSpecification()
 	ResetLocalSecondaryIndexes()
+	ResetOnDemandThroughput()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPointInTimeRecoverySpecification()
 	ResetProvisionedThroughput()
+	ResetResourcePolicy()
 	ResetSseSpecification()
 	ResetStreamSpecification()
 	ResetTableClass()
 	ResetTableName()
 	ResetTags()
 	ResetTimeToLiveSpecification()
+	ResetWarmThroughput()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -479,6 +504,26 @@ func (j *jsiiProxy_DynamodbTable) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_DynamodbTable) OnDemandThroughput() DynamodbTableOnDemandThroughputOutputReference {
+	var returns DynamodbTableOnDemandThroughputOutputReference
+	_jsii_.Get(
+		j,
+		"onDemandThroughput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbTable) OnDemandThroughputInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onDemandThroughputInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DynamodbTable) PointInTimeRecoverySpecification() DynamodbTablePointInTimeRecoverySpecificationOutputReference {
 	var returns DynamodbTablePointInTimeRecoverySpecificationOutputReference
 	_jsii_.Get(
@@ -544,6 +589,26 @@ func (j *jsiiProxy_DynamodbTable) RawOverrides() interface{} {
 	_jsii_.Get(
 		j,
 		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbTable) ResourcePolicy() DynamodbTableResourcePolicyOutputReference {
+	var returns DynamodbTableResourcePolicyOutputReference
+	_jsii_.Get(
+		j,
+		"resourcePolicy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbTable) ResourcePolicyInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"resourcePolicyInput",
 		&returns,
 	)
 	return returns
@@ -709,8 +774,28 @@ func (j *jsiiProxy_DynamodbTable) TimeToLiveSpecificationInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DynamodbTable) WarmThroughput() DynamodbTableWarmThroughputOutputReference {
+	var returns DynamodbTableWarmThroughputOutputReference
+	_jsii_.Get(
+		j,
+		"warmThroughput",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/dynamodb_table awscc_dynamodb_table} Resource.
+func (j *jsiiProxy_DynamodbTable) WarmThroughputInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"warmThroughputInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/dynamodb_table awscc_dynamodb_table} Resource.
 func NewDynamodbTable(scope constructs.Construct, id *string, config *DynamodbTableConfig) DynamodbTable {
 	_init_.Initialize()
 
@@ -728,7 +813,7 @@ func NewDynamodbTable(scope constructs.Construct, id *string, config *DynamodbTa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/dynamodb_table awscc_dynamodb_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/dynamodb_table awscc_dynamodb_table} Resource.
 func NewDynamodbTable_Override(d DynamodbTable, scope constructs.Construct, id *string, config *DynamodbTableConfig) {
 	_init_.Initialize()
 
@@ -1131,6 +1216,19 @@ func (d *jsiiProxy_DynamodbTable) GetStringMapAttribute(terraformAttribute *stri
 	return returns
 }
 
+func (d *jsiiProxy_DynamodbTable) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (d *jsiiProxy_DynamodbTable) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := d.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1158,6 +1256,17 @@ func (d *jsiiProxy_DynamodbTable) InterpolationForAttribute(terraformAttribute *
 	return returns
 }
 
+func (d *jsiiProxy_DynamodbTable) MoveFromId(id *string) {
+	if err := d.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (d *jsiiProxy_DynamodbTable) MoveTo(moveTarget *string, index interface{}) {
 	if err := d.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1166,6 +1275,17 @@ func (d *jsiiProxy_DynamodbTable) MoveTo(moveTarget *string, index interface{}) 
 		d,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (d *jsiiProxy_DynamodbTable) MoveToId(id *string) {
+	if err := d.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1246,6 +1366,17 @@ func (d *jsiiProxy_DynamodbTable) PutLocalSecondaryIndexes(value interface{}) {
 	)
 }
 
+func (d *jsiiProxy_DynamodbTable) PutOnDemandThroughput(value *DynamodbTableOnDemandThroughput) {
+	if err := d.validatePutOnDemandThroughputParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putOnDemandThroughput",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DynamodbTable) PutPointInTimeRecoverySpecification(value *DynamodbTablePointInTimeRecoverySpecification) {
 	if err := d.validatePutPointInTimeRecoverySpecificationParameters(value); err != nil {
 		panic(err)
@@ -1264,6 +1395,17 @@ func (d *jsiiProxy_DynamodbTable) PutProvisionedThroughput(value *DynamodbTableP
 	_jsii_.InvokeVoid(
 		d,
 		"putProvisionedThroughput",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DynamodbTable) PutResourcePolicy(value *DynamodbTableResourcePolicy) {
+	if err := d.validatePutResourcePolicyParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putResourcePolicy",
 		[]interface{}{value},
 	)
 }
@@ -1308,6 +1450,17 @@ func (d *jsiiProxy_DynamodbTable) PutTimeToLiveSpecification(value *DynamodbTabl
 	_jsii_.InvokeVoid(
 		d,
 		"putTimeToLiveSpecification",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DynamodbTable) PutWarmThroughput(value *DynamodbTableWarmThroughput) {
+	if err := d.validatePutWarmThroughputParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putWarmThroughput",
 		[]interface{}{value},
 	)
 }
@@ -1376,6 +1529,14 @@ func (d *jsiiProxy_DynamodbTable) ResetLocalSecondaryIndexes() {
 	)
 }
 
+func (d *jsiiProxy_DynamodbTable) ResetOnDemandThroughput() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetOnDemandThroughput",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DynamodbTable) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
@@ -1396,6 +1557,14 @@ func (d *jsiiProxy_DynamodbTable) ResetProvisionedThroughput() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetProvisionedThroughput",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbTable) ResetResourcePolicy() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetResourcePolicy",
 		nil, // no parameters
 	)
 }
@@ -1448,12 +1617,46 @@ func (d *jsiiProxy_DynamodbTable) ResetTimeToLiveSpecification() {
 	)
 }
 
+func (d *jsiiProxy_DynamodbTable) ResetWarmThroughput() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetWarmThroughput",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DynamodbTable) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DynamodbTable) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DynamodbTable) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -10,6 +10,7 @@ import (
 
 type DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurationOutputReference interface {
 	cdktf.ComplexObject
+	ClipStartTime() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -78,6 +79,16 @@ type DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurat
 // The jsii proxy struct for DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurationOutputReference
 type jsiiProxy_DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurationOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurationOutputReference) ClipStartTime() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"clipStartTime",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsFilterConfigurationOutputReference) ComplexObjectIndex() interface{} {

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccnetworkfirewallrulegroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkfirewall_rule_group awscc_networkfirewall_rule_group}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkfirewall_rule_group awscc_networkfirewall_rule_group}.
 type DataAwsccNetworkfirewallRuleGroup interface {
 	cdktf.TerraformDataSource
 	Capacity() *float64
@@ -90,6 +90,10 @@ type DataAwsccNetworkfirewallRuleGroup interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -345,7 +349,7 @@ func (j *jsiiProxy_DataAwsccNetworkfirewallRuleGroup) Type() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkfirewall_rule_group awscc_networkfirewall_rule_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkfirewall_rule_group awscc_networkfirewall_rule_group} Data Source.
 func NewDataAwsccNetworkfirewallRuleGroup(scope constructs.Construct, id *string, config *DataAwsccNetworkfirewallRuleGroupConfig) DataAwsccNetworkfirewallRuleGroup {
 	_init_.Initialize()
 
@@ -363,7 +367,7 @@ func NewDataAwsccNetworkfirewallRuleGroup(scope constructs.Construct, id *string
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkfirewall_rule_group awscc_networkfirewall_rule_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkfirewall_rule_group awscc_networkfirewall_rule_group} Data Source.
 func NewDataAwsccNetworkfirewallRuleGroup_Override(d DataAwsccNetworkfirewallRuleGroup, scope constructs.Construct, id *string, config *DataAwsccNetworkfirewallRuleGroupConfig) {
 	_init_.Initialize()
 
@@ -730,6 +734,32 @@ func (d *jsiiProxy_DataAwsccNetworkfirewallRuleGroup) SynthesizeAttributes() *ma
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkfirewallRuleGroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkfirewallRuleGroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

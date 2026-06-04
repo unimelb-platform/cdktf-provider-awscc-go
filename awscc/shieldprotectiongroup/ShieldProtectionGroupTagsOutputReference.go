@@ -67,6 +67,8 @@ type ShieldProtectionGroupTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (s *jsiiProxy_ShieldProtectionGroupTagsOutputReference) InterpolationForAtt
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_ShieldProtectionGroupTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_ShieldProtectionGroupTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_ShieldProtectionGroupTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

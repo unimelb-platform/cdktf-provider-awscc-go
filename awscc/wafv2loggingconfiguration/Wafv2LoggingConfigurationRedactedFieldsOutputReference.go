@@ -29,8 +29,6 @@ type Wafv2LoggingConfigurationRedactedFieldsOutputReference interface {
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
-	JsonBody() Wafv2LoggingConfigurationRedactedFieldsJsonBodyOutputReference
-	JsonBodyInput() interface{}
 	Method() *string
 	SetMethod(val *string)
 	MethodInput() *string
@@ -74,9 +72,7 @@ type Wafv2LoggingConfigurationRedactedFieldsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
-	PutJsonBody(value *Wafv2LoggingConfigurationRedactedFieldsJsonBody)
 	PutSingleHeader(value *Wafv2LoggingConfigurationRedactedFieldsSingleHeader)
-	ResetJsonBody()
 	ResetMethod()
 	ResetQueryString()
 	ResetSingleHeader()
@@ -141,26 +137,6 @@ func (j *jsiiProxy_Wafv2LoggingConfigurationRedactedFieldsOutputReference) Inter
 	_jsii_.Get(
 		j,
 		"internalValue",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Wafv2LoggingConfigurationRedactedFieldsOutputReference) JsonBody() Wafv2LoggingConfigurationRedactedFieldsJsonBodyOutputReference {
-	var returns Wafv2LoggingConfigurationRedactedFieldsJsonBodyOutputReference
-	_jsii_.Get(
-		j,
-		"jsonBody",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Wafv2LoggingConfigurationRedactedFieldsOutputReference) JsonBodyInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"jsonBodyInput",
 		&returns,
 	)
 	return returns
@@ -568,17 +544,6 @@ func (w *jsiiProxy_Wafv2LoggingConfigurationRedactedFieldsOutputReference) Inter
 	return returns
 }
 
-func (w *jsiiProxy_Wafv2LoggingConfigurationRedactedFieldsOutputReference) PutJsonBody(value *Wafv2LoggingConfigurationRedactedFieldsJsonBody) {
-	if err := w.validatePutJsonBodyParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		w,
-		"putJsonBody",
-		[]interface{}{value},
-	)
-}
-
 func (w *jsiiProxy_Wafv2LoggingConfigurationRedactedFieldsOutputReference) PutSingleHeader(value *Wafv2LoggingConfigurationRedactedFieldsSingleHeader) {
 	if err := w.validatePutSingleHeaderParameters(value); err != nil {
 		panic(err)
@@ -587,14 +552,6 @@ func (w *jsiiProxy_Wafv2LoggingConfigurationRedactedFieldsOutputReference) PutSi
 		w,
 		"putSingleHeader",
 		[]interface{}{value},
-	)
-}
-
-func (w *jsiiProxy_Wafv2LoggingConfigurationRedactedFieldsOutputReference) ResetJsonBody() {
-	_jsii_.InvokeVoid(
-		w,
-		"resetJsonBody",
-		nil, // no parameters
 	)
 }
 

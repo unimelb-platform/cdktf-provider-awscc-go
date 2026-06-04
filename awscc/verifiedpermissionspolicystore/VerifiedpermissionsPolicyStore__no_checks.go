@@ -56,7 +56,15 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyStore) validateInterpolationForAttri
 	return nil
 }
 
+func (v *jsiiProxy_VerifiedpermissionsPolicyStore) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (v *jsiiProxy_VerifiedpermissionsPolicyStore) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (v *jsiiProxy_VerifiedpermissionsPolicyStore) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -64,7 +72,15 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyStore) validateOverrideLogicalIdPara
 	return nil
 }
 
+func (v *jsiiProxy_VerifiedpermissionsPolicyStore) validatePutDeletionProtectionParameters(value *VerifiedpermissionsPolicyStoreDeletionProtection) error {
+	return nil
+}
+
 func (v *jsiiProxy_VerifiedpermissionsPolicyStore) validatePutSchemaParameters(value *VerifiedpermissionsPolicyStoreSchema) error {
+	return nil
+}
+
+func (v *jsiiProxy_VerifiedpermissionsPolicyStore) validatePutTagsParameters(value interface{}) error {
 	return nil
 }
 

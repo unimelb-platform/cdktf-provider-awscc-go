@@ -9,11 +9,15 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2verifiedaccessinstance/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_verified_access_instance awscc_ec2_verified_access_instance}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_verified_access_instance awscc_ec2_verified_access_instance}.
 type Ec2VerifiedAccessInstance interface {
 	cdktf.TerraformResource
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	CidrEndpointsCustomSubDomain() *string
+	SetCidrEndpointsCustomSubDomain(val *string)
+	CidrEndpointsCustomSubDomainInput() *string
+	CidrEndpointsCustomSubDomainNameServers() *[]*string
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -101,18 +105,29 @@ type Ec2VerifiedAccessInstance interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutLoggingConfigurations(value *Ec2VerifiedAccessInstanceLoggingConfigurations)
 	PutTags(value interface{})
 	PutVerifiedAccessTrustProviders(value interface{})
+	ResetCidrEndpointsCustomSubDomain()
 	ResetDescription()
 	ResetFipsEnabled()
 	ResetLoggingConfigurations()
@@ -123,6 +138,9 @@ type Ec2VerifiedAccessInstance interface {
 	ResetVerifiedAccessTrustProviderIds()
 	ResetVerifiedAccessTrustProviders()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -142,6 +160,36 @@ func (j *jsiiProxy_Ec2VerifiedAccessInstance) CdktfStack() cdktf.TerraformStack 
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VerifiedAccessInstance) CidrEndpointsCustomSubDomain() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"cidrEndpointsCustomSubDomain",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VerifiedAccessInstance) CidrEndpointsCustomSubDomainInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"cidrEndpointsCustomSubDomainInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VerifiedAccessInstance) CidrEndpointsCustomSubDomainNameServers() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"cidrEndpointsCustomSubDomainNameServers",
 		&returns,
 	)
 	return returns
@@ -458,7 +506,7 @@ func (j *jsiiProxy_Ec2VerifiedAccessInstance) VerifiedAccessTrustProvidersInput(
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_verified_access_instance awscc_ec2_verified_access_instance} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_verified_access_instance awscc_ec2_verified_access_instance} Resource.
 func NewEc2VerifiedAccessInstance(scope constructs.Construct, id *string, config *Ec2VerifiedAccessInstanceConfig) Ec2VerifiedAccessInstance {
 	_init_.Initialize()
 
@@ -476,7 +524,7 @@ func NewEc2VerifiedAccessInstance(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_verified_access_instance awscc_ec2_verified_access_instance} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_verified_access_instance awscc_ec2_verified_access_instance} Resource.
 func NewEc2VerifiedAccessInstance_Override(e Ec2VerifiedAccessInstance, scope constructs.Construct, id *string, config *Ec2VerifiedAccessInstanceConfig) {
 	_init_.Initialize()
 
@@ -484,6 +532,17 @@ func NewEc2VerifiedAccessInstance_Override(e Ec2VerifiedAccessInstance, scope co
 		"awscc.ec2VerifiedAccessInstance.Ec2VerifiedAccessInstance",
 		[]interface{}{scope, id, config},
 		e,
+	)
+}
+
+func (j *jsiiProxy_Ec2VerifiedAccessInstance)SetCidrEndpointsCustomSubDomain(val *string) {
+	if err := j.validateSetCidrEndpointsCustomSubDomainParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"cidrEndpointsCustomSubDomain",
+		val,
 	)
 }
 
@@ -857,6 +916,19 @@ func (e *jsiiProxy_Ec2VerifiedAccessInstance) GetStringMapAttribute(terraformAtt
 	return returns
 }
 
+func (e *jsiiProxy_Ec2VerifiedAccessInstance) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2VerifiedAccessInstance) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -884,6 +956,17 @@ func (e *jsiiProxy_Ec2VerifiedAccessInstance) InterpolationForAttribute(terrafor
 	return returns
 }
 
+func (e *jsiiProxy_Ec2VerifiedAccessInstance) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2VerifiedAccessInstance) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -892,6 +975,17 @@ func (e *jsiiProxy_Ec2VerifiedAccessInstance) MoveTo(moveTarget *string, index i
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Ec2VerifiedAccessInstance) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -936,6 +1030,14 @@ func (e *jsiiProxy_Ec2VerifiedAccessInstance) PutVerifiedAccessTrustProviders(va
 		e,
 		"putVerifiedAccessTrustProviders",
 		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_Ec2VerifiedAccessInstance) ResetCidrEndpointsCustomSubDomain() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetCidrEndpointsCustomSubDomain",
+		nil, // no parameters
 	)
 }
 
@@ -1001,6 +1103,32 @@ func (e *jsiiProxy_Ec2VerifiedAccessInstance) SynthesizeAttributes() *map[string
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2VerifiedAccessInstance) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2VerifiedAccessInstance) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

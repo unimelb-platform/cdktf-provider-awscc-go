@@ -56,11 +56,23 @@ func (n *jsiiProxy_NetworkmanagerTransitGatewayRouteTableAttachment) validateInt
 	return nil
 }
 
+func (n *jsiiProxy_NetworkmanagerTransitGatewayRouteTableAttachment) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (n *jsiiProxy_NetworkmanagerTransitGatewayRouteTableAttachment) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (n *jsiiProxy_NetworkmanagerTransitGatewayRouteTableAttachment) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (n *jsiiProxy_NetworkmanagerTransitGatewayRouteTableAttachment) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (n *jsiiProxy_NetworkmanagerTransitGatewayRouteTableAttachment) validatePutProposedNetworkFunctionGroupChangeParameters(value *NetworkmanagerTransitGatewayRouteTableAttachmentProposedNetworkFunctionGroupChange) error {
 	return nil
 }
 
@@ -97,6 +109,10 @@ func (j *jsiiProxy_NetworkmanagerTransitGatewayRouteTableAttachment) validateSet
 }
 
 func (j *jsiiProxy_NetworkmanagerTransitGatewayRouteTableAttachment) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
+	return nil
+}
+
+func (j *jsiiProxy_NetworkmanagerTransitGatewayRouteTableAttachment) validateSetNetworkFunctionGroupNameParameters(val *string) error {
 	return nil
 }
 

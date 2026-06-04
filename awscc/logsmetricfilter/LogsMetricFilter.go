@@ -9,9 +9,12 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/logsmetricfilter/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_metric_filter awscc_logs_metric_filter}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_metric_filter awscc_logs_metric_filter}.
 type LogsMetricFilter interface {
 	cdktf.TerraformResource
+	ApplyOnTransformedLogs() interface{}
+	SetApplyOnTransformedLogs(val interface{})
+	ApplyOnTransformedLogsInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -94,21 +97,35 @@ type LogsMetricFilter interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutMetricTransformations(value interface{})
+	ResetApplyOnTransformedLogs()
 	ResetFilterName()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -121,6 +138,26 @@ type LogsMetricFilter interface {
 // The jsii proxy struct for LogsMetricFilter
 type jsiiProxy_LogsMetricFilter struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_LogsMetricFilter) ApplyOnTransformedLogs() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"applyOnTransformedLogs",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LogsMetricFilter) ApplyOnTransformedLogsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"applyOnTransformedLogsInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_LogsMetricFilter) CdktfStack() cdktf.TerraformStack {
@@ -374,7 +411,7 @@ func (j *jsiiProxy_LogsMetricFilter) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_metric_filter awscc_logs_metric_filter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_metric_filter awscc_logs_metric_filter} Resource.
 func NewLogsMetricFilter(scope constructs.Construct, id *string, config *LogsMetricFilterConfig) LogsMetricFilter {
 	_init_.Initialize()
 
@@ -392,7 +429,7 @@ func NewLogsMetricFilter(scope constructs.Construct, id *string, config *LogsMet
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_metric_filter awscc_logs_metric_filter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_metric_filter awscc_logs_metric_filter} Resource.
 func NewLogsMetricFilter_Override(l LogsMetricFilter, scope constructs.Construct, id *string, config *LogsMetricFilterConfig) {
 	_init_.Initialize()
 
@@ -400,6 +437,17 @@ func NewLogsMetricFilter_Override(l LogsMetricFilter, scope constructs.Construct
 		"awscc.logsMetricFilter.LogsMetricFilter",
 		[]interface{}{scope, id, config},
 		l,
+	)
+}
+
+func (j *jsiiProxy_LogsMetricFilter)SetApplyOnTransformedLogs(val interface{}) {
+	if err := j.validateSetApplyOnTransformedLogsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"applyOnTransformedLogs",
+		val,
 	)
 }
 
@@ -773,6 +821,19 @@ func (l *jsiiProxy_LogsMetricFilter) GetStringMapAttribute(terraformAttribute *s
 	return returns
 }
 
+func (l *jsiiProxy_LogsMetricFilter) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (l *jsiiProxy_LogsMetricFilter) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := l.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -800,6 +861,17 @@ func (l *jsiiProxy_LogsMetricFilter) InterpolationForAttribute(terraformAttribut
 	return returns
 }
 
+func (l *jsiiProxy_LogsMetricFilter) MoveFromId(id *string) {
+	if err := l.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (l *jsiiProxy_LogsMetricFilter) MoveTo(moveTarget *string, index interface{}) {
 	if err := l.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -808,6 +880,17 @@ func (l *jsiiProxy_LogsMetricFilter) MoveTo(moveTarget *string, index interface{
 		l,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (l *jsiiProxy_LogsMetricFilter) MoveToId(id *string) {
+	if err := l.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -833,6 +916,14 @@ func (l *jsiiProxy_LogsMetricFilter) PutMetricTransformations(value interface{})
 	)
 }
 
+func (l *jsiiProxy_LogsMetricFilter) ResetApplyOnTransformedLogs() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetApplyOnTransformedLogs",
+		nil, // no parameters
+	)
+}
+
 func (l *jsiiProxy_LogsMetricFilter) ResetFilterName() {
 	_jsii_.InvokeVoid(
 		l,
@@ -855,6 +946,32 @@ func (l *jsiiProxy_LogsMetricFilter) SynthesizeAttributes() *map[string]interfac
 	_jsii_.Invoke(
 		l,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LogsMetricFilter) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		l,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LogsMetricFilter) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

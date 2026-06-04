@@ -27,8 +27,8 @@ type KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrlsOutputRef
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrls
-	SetInternalValue(val *KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrls)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	SeedUrlConfiguration() KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationOutputReference
 	SeedUrlConfigurationInput() interface{}
 	SiteMapsConfiguration() KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationOutputReference
@@ -124,8 +124,8 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfiguratio
 	return returns
 }
 
-func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrlsOutputReference) InternalValue() *KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrls {
-	var returns *KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrls
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrlsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -244,7 +244,7 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfiguratio
 	)
 }
 
-func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrlsOutputReference)SetInternalValue(val *KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrls) {
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrlsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

@@ -35,6 +35,8 @@ type BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference interf
 	LaunchTemplateName() *string
 	SetLaunchTemplateName(val *string)
 	LaunchTemplateNameInput() *string
+	Overrides() BatchComputeEnvironmentComputeResourcesLaunchTemplateOverridesList
+	OverridesInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -43,6 +45,9 @@ type BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference interf
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	UserdataType() *string
+	SetUserdataType(val *string)
+	UserdataTypeInput() *string
 	Version() *string
 	SetVersion(val *string)
 	VersionInput() *string
@@ -70,8 +75,11 @@ type BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference interf
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutOverrides(value interface{})
 	ResetLaunchTemplateId()
 	ResetLaunchTemplateName()
+	ResetOverrides()
+	ResetUserdataType()
 	ResetVersion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -178,6 +186,26 @@ func (j *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputRe
 	return returns
 }
 
+func (j *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference) Overrides() BatchComputeEnvironmentComputeResourcesLaunchTemplateOverridesList {
+	var returns BatchComputeEnvironmentComputeResourcesLaunchTemplateOverridesList
+	_jsii_.Get(
+		j,
+		"overrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference) OverridesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"overridesInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -193,6 +221,26 @@ func (j *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputRe
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference) UserdataType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"userdataType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference) UserdataTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"userdataTypeInput",
 		&returns,
 	)
 	return returns
@@ -319,6 +367,17 @@ func (j *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputRe
 	_jsii_.Set(
 		j,
 		"terraformResource",
+		val,
+	)
+}
+
+func (j *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference)SetUserdataType(val *string) {
+	if err := j.validateSetUserdataTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"userdataType",
 		val,
 	)
 }
@@ -520,6 +579,17 @@ func (b *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputRe
 	return returns
 }
 
+func (b *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference) PutOverrides(value interface{}) {
+	if err := b.validatePutOverridesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"putOverrides",
+		[]interface{}{value},
+	)
+}
+
 func (b *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference) ResetLaunchTemplateId() {
 	_jsii_.InvokeVoid(
 		b,
@@ -532,6 +602,22 @@ func (b *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputRe
 	_jsii_.InvokeVoid(
 		b,
 		"resetLaunchTemplateName",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference) ResetOverrides() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetOverrides",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference) ResetUserdataType() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetUserdataType",
 		nil, // no parameters
 	)
 }

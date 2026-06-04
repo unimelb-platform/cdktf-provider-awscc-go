@@ -56,7 +56,15 @@ func (n *jsiiProxy_NimblestudioStudioComponent) validateInterpolationForAttribut
 	return nil
 }
 
+func (n *jsiiProxy_NimblestudioStudioComponent) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (n *jsiiProxy_NimblestudioStudioComponent) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (n *jsiiProxy_NimblestudioStudioComponent) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -117,14 +125,6 @@ func (j *jsiiProxy_NimblestudioStudioComponent) validateSetNameParameters(val *s
 }
 
 func (j *jsiiProxy_NimblestudioStudioComponent) validateSetProvisionersParameters(val *[]interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_NimblestudioStudioComponent) validateSetRuntimeRoleArnParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_NimblestudioStudioComponent) validateSetSecureInitializationRoleArnParameters(val *string) error {
 	return nil
 }
 

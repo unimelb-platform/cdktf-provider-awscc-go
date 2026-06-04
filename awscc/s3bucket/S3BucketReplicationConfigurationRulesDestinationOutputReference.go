@@ -37,8 +37,8 @@ type S3BucketReplicationConfigurationRulesDestinationOutputReference interface {
 	EncryptionConfigurationInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *S3BucketReplicationConfigurationRulesDestination
-	SetInternalValue(val *S3BucketReplicationConfigurationRulesDestination)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Metrics() S3BucketReplicationConfigurationRulesDestinationMetricsOutputReference
 	MetricsInput() interface{}
 	ReplicationTime() S3BucketReplicationConfigurationRulesDestinationReplicationTimeOutputReference
@@ -84,6 +84,7 @@ type S3BucketReplicationConfigurationRulesDestinationOutputReference interface {
 	PutReplicationTime(value *S3BucketReplicationConfigurationRulesDestinationReplicationTime)
 	ResetAccessControlTranslation()
 	ResetAccount()
+	ResetBucket()
 	ResetEncryptionConfiguration()
 	ResetMetrics()
 	ResetReplicationTime()
@@ -223,8 +224,8 @@ func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationOutputReferen
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationOutputReference) InternalValue() *S3BucketReplicationConfigurationRulesDestination {
-	var returns *S3BucketReplicationConfigurationRulesDestination
+func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -385,7 +386,7 @@ func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationOutputReferen
 	)
 }
 
-func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationOutputReference)SetInternalValue(val *S3BucketReplicationConfigurationRulesDestination) {
+func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -671,6 +672,14 @@ func (s *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationOutputReferen
 	_jsii_.InvokeVoid(
 		s,
 		"resetAccount",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationOutputReference) ResetBucket() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetBucket",
 		nil, // no parameters
 	)
 }

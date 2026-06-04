@@ -56,7 +56,7 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidity
 	return nil
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityRenewalPeriodOutputReference) validateSetInternalValueParameters(val *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityRenewalPeriod) error {
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityRenewalPeriodOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

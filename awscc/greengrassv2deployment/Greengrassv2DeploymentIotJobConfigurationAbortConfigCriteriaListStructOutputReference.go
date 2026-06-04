@@ -33,8 +33,8 @@ type Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStructOutpu
 	FailureTypeInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStruct
-	SetInternalValue(val *Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStruct)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	MinNumberOfExecutedThings() *float64
 	SetMinNumberOfExecutedThings(val *float64)
 	MinNumberOfExecutedThingsInput() *float64
@@ -73,6 +73,10 @@ type Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStructOutpu
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAction()
+	ResetFailureType()
+	ResetMinNumberOfExecutedThings()
+	ResetThresholdPercentage()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -168,8 +172,8 @@ func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaL
 	return returns
 }
 
-func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStructOutputReference) InternalValue() *Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStruct {
-	var returns *Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStruct
+func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStructOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -310,7 +314,7 @@ func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaL
 	)
 }
 
-func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStructOutputReference)SetInternalValue(val *Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStruct) {
+func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStructOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -549,6 +553,38 @@ func (g *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaL
 	)
 
 	return returns
+}
+
+func (g *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStructOutputReference) ResetAction() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetAction",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStructOutputReference) ResetFailureType() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetFailureType",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStructOutputReference) ResetMinNumberOfExecutedThings() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetMinNumberOfExecutedThings",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStructOutputReference) ResetThresholdPercentage() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetThresholdPercentage",
+		nil, // no parameters
+	)
 }
 
 func (g *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStructOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

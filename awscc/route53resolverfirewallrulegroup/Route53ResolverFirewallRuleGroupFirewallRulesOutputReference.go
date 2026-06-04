@@ -35,14 +35,26 @@ type Route53ResolverFirewallRuleGroupFirewallRulesOutputReference interface {
 	ComplexObjectIsFromSet() *bool
 	// Experimental.
 	SetComplexObjectIsFromSet(val *bool)
+	ConfidenceThreshold() *string
+	SetConfidenceThreshold(val *string)
+	ConfidenceThresholdInput() *string
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
 	//
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	DnsThreatProtection() *string
+	SetDnsThreatProtection(val *string)
+	DnsThreatProtectionInput() *string
 	FirewallDomainListId() *string
 	SetFirewallDomainListId(val *string)
 	FirewallDomainListIdInput() *string
+	FirewallDomainRedirectionAction() *string
+	SetFirewallDomainRedirectionAction(val *string)
+	FirewallDomainRedirectionActionInput() *string
+	FirewallThreatProtectionId() *string
+	SetFirewallThreatProtectionId(val *string)
+	FirewallThreatProtectionIdInput() *string
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -85,10 +97,17 @@ type Route53ResolverFirewallRuleGroupFirewallRulesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAction()
 	ResetBlockOverrideDnsType()
 	ResetBlockOverrideDomain()
 	ResetBlockOverrideTtl()
 	ResetBlockResponse()
+	ResetConfidenceThreshold()
+	ResetDnsThreatProtection()
+	ResetFirewallDomainListId()
+	ResetFirewallDomainRedirectionAction()
+	ResetFirewallThreatProtectionId()
+	ResetPriority()
 	ResetQtype()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -225,11 +244,51 @@ func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference)
 	return returns
 }
 
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) ConfidenceThreshold() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"confidenceThreshold",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) ConfidenceThresholdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"confidenceThresholdInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) CreationStack() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
 		"creationStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) DnsThreatProtection() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"dnsThreatProtection",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) DnsThreatProtectionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"dnsThreatProtectionInput",
 		&returns,
 	)
 	return returns
@@ -250,6 +309,46 @@ func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference)
 	_jsii_.Get(
 		j,
 		"firewallDomainListIdInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) FirewallDomainRedirectionAction() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"firewallDomainRedirectionAction",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) FirewallDomainRedirectionActionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"firewallDomainRedirectionActionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) FirewallThreatProtectionId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"firewallThreatProtectionId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) FirewallThreatProtectionIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"firewallThreatProtectionIdInput",
 		&returns,
 	)
 	return returns
@@ -440,6 +539,28 @@ func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference)
 	)
 }
 
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference)SetConfidenceThreshold(val *string) {
+	if err := j.validateSetConfidenceThresholdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"confidenceThreshold",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference)SetDnsThreatProtection(val *string) {
+	if err := j.validateSetDnsThreatProtectionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"dnsThreatProtection",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference)SetFirewallDomainListId(val *string) {
 	if err := j.validateSetFirewallDomainListIdParameters(val); err != nil {
 		panic(err)
@@ -447,6 +568,28 @@ func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference)
 	_jsii_.Set(
 		j,
 		"firewallDomainListId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference)SetFirewallDomainRedirectionAction(val *string) {
+	if err := j.validateSetFirewallDomainRedirectionActionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"firewallDomainRedirectionAction",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference)SetFirewallThreatProtectionId(val *string) {
+	if err := j.validateSetFirewallThreatProtectionIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"firewallThreatProtectionId",
 		val,
 	)
 }
@@ -692,6 +835,14 @@ func (r *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference)
 	return returns
 }
 
+func (r *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) ResetAction() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetAction",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) ResetBlockOverrideDnsType() {
 	_jsii_.InvokeVoid(
 		r,
@@ -720,6 +871,54 @@ func (r *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference)
 	_jsii_.InvokeVoid(
 		r,
 		"resetBlockResponse",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) ResetConfidenceThreshold() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetConfidenceThreshold",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) ResetDnsThreatProtection() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetDnsThreatProtection",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) ResetFirewallDomainListId() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetFirewallDomainListId",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) ResetFirewallDomainRedirectionAction() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetFirewallDomainRedirectionAction",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) ResetFirewallThreatProtectionId() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetFirewallThreatProtectionId",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) ResetPriority() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetPriority",
 		nil, // no parameters
 	)
 }

@@ -56,7 +56,15 @@ func (n *jsiiProxy_NimblestudioStreamingImage) validateInterpolationForAttribute
 	return nil
 }
 
+func (n *jsiiProxy_NimblestudioStreamingImage) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (n *jsiiProxy_NimblestudioStreamingImage) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (n *jsiiProxy_NimblestudioStreamingImage) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -93,6 +101,14 @@ func (j *jsiiProxy_NimblestudioStreamingImage) validateSetDescriptionParameters(
 }
 
 func (j *jsiiProxy_NimblestudioStreamingImage) validateSetEc2ImageIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_NimblestudioStreamingImage) validateSetEncryptionConfigurationKeyArnParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_NimblestudioStreamingImage) validateSetEncryptionConfigurationKeyTypeParameters(val *string) error {
 	return nil
 }
 

@@ -1,0 +1,6 @@
+package dataawsccdatazoneconnection
+
+
+type DataAwsccDatazoneConnectionPropsGluePropertiesGlueConnectionInputAuthenticationConfigurationOAuth2Properties struct {
+}
+

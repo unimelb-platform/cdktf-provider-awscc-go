@@ -9,10 +9,11 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccelasticbeanstalkapplicationversion/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticbeanstalk_application_version awscc_elasticbeanstalk_application_version}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticbeanstalk_application_version awscc_elasticbeanstalk_application_version}.
 type DataAwsccElasticbeanstalkApplicationVersion interface {
 	cdktf.TerraformDataSource
 	ApplicationName() *string
+	ApplicationVersionId() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -85,6 +86,10 @@ type DataAwsccElasticbeanstalkApplicationVersion interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -104,6 +109,16 @@ func (j *jsiiProxy_DataAwsccElasticbeanstalkApplicationVersion) ApplicationName(
 	_jsii_.Get(
 		j,
 		"applicationName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccElasticbeanstalkApplicationVersion) ApplicationVersionId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"applicationVersionId",
 		&returns,
 	)
 	return returns
@@ -290,7 +305,7 @@ func (j *jsiiProxy_DataAwsccElasticbeanstalkApplicationVersion) TerraformResourc
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticbeanstalk_application_version awscc_elasticbeanstalk_application_version} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticbeanstalk_application_version awscc_elasticbeanstalk_application_version} Data Source.
 func NewDataAwsccElasticbeanstalkApplicationVersion(scope constructs.Construct, id *string, config *DataAwsccElasticbeanstalkApplicationVersionConfig) DataAwsccElasticbeanstalkApplicationVersion {
 	_init_.Initialize()
 
@@ -308,7 +323,7 @@ func NewDataAwsccElasticbeanstalkApplicationVersion(scope constructs.Construct, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticbeanstalk_application_version awscc_elasticbeanstalk_application_version} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticbeanstalk_application_version awscc_elasticbeanstalk_application_version} Data Source.
 func NewDataAwsccElasticbeanstalkApplicationVersion_Override(d DataAwsccElasticbeanstalkApplicationVersion, scope constructs.Construct, id *string, config *DataAwsccElasticbeanstalkApplicationVersionConfig) {
 	_init_.Initialize()
 
@@ -675,6 +690,32 @@ func (d *jsiiProxy_DataAwsccElasticbeanstalkApplicationVersion) SynthesizeAttrib
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccElasticbeanstalkApplicationVersion) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccElasticbeanstalkApplicationVersion) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

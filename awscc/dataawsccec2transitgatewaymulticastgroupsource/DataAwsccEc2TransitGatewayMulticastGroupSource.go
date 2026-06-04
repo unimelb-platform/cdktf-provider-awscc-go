@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2transitgatewaymulticastgroupsource/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_transit_gateway_multicast_group_source awscc_ec2_transit_gateway_multicast_group_source}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_transit_gateway_multicast_group_source awscc_ec2_transit_gateway_multicast_group_source}.
 type DataAwsccEc2TransitGatewayMulticastGroupSource interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -42,7 +42,6 @@ type DataAwsccEc2TransitGatewayMulticastGroupSource interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
-	MemberType() *string
 	NetworkInterfaceId() *string
 	// The tree node.
 	Node() constructs.Node
@@ -93,6 +92,10 @@ type DataAwsccEc2TransitGatewayMulticastGroupSource interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -237,16 +240,6 @@ func (j *jsiiProxy_DataAwsccEc2TransitGatewayMulticastGroupSource) Lifecycle() *
 	return returns
 }
 
-func (j *jsiiProxy_DataAwsccEc2TransitGatewayMulticastGroupSource) MemberType() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"memberType",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataAwsccEc2TransitGatewayMulticastGroupSource) NetworkInterfaceId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -378,7 +371,7 @@ func (j *jsiiProxy_DataAwsccEc2TransitGatewayMulticastGroupSource) TransitGatewa
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_transit_gateway_multicast_group_source awscc_ec2_transit_gateway_multicast_group_source} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_transit_gateway_multicast_group_source awscc_ec2_transit_gateway_multicast_group_source} Data Source.
 func NewDataAwsccEc2TransitGatewayMulticastGroupSource(scope constructs.Construct, id *string, config *DataAwsccEc2TransitGatewayMulticastGroupSourceConfig) DataAwsccEc2TransitGatewayMulticastGroupSource {
 	_init_.Initialize()
 
@@ -396,7 +389,7 @@ func NewDataAwsccEc2TransitGatewayMulticastGroupSource(scope constructs.Construc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_transit_gateway_multicast_group_source awscc_ec2_transit_gateway_multicast_group_source} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_transit_gateway_multicast_group_source awscc_ec2_transit_gateway_multicast_group_source} Data Source.
 func NewDataAwsccEc2TransitGatewayMulticastGroupSource_Override(d DataAwsccEc2TransitGatewayMulticastGroupSource, scope constructs.Construct, id *string, config *DataAwsccEc2TransitGatewayMulticastGroupSourceConfig) {
 	_init_.Initialize()
 
@@ -763,6 +756,32 @@ func (d *jsiiProxy_DataAwsccEc2TransitGatewayMulticastGroupSource) SynthesizeAtt
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2TransitGatewayMulticastGroupSource) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2TransitGatewayMulticastGroupSource) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccoamlink/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/oam_link awscc_oam_link}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/oam_link awscc_oam_link}.
 type DataAwsccOamLink interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -42,6 +42,7 @@ type DataAwsccOamLink interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	LinkConfiguration() DataAwsccOamLinkLinkConfigurationOutputReference
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
@@ -88,6 +89,10 @@ type DataAwsccOamLink interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -232,6 +237,16 @@ func (j *jsiiProxy_DataAwsccOamLink) Lifecycle() *cdktf.TerraformResourceLifecyc
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccOamLink) LinkConfiguration() DataAwsccOamLinkLinkConfigurationOutputReference {
+	var returns DataAwsccOamLinkLinkConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"linkConfiguration",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccOamLink) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -323,7 +338,7 @@ func (j *jsiiProxy_DataAwsccOamLink) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/oam_link awscc_oam_link} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/oam_link awscc_oam_link} Data Source.
 func NewDataAwsccOamLink(scope constructs.Construct, id *string, config *DataAwsccOamLinkConfig) DataAwsccOamLink {
 	_init_.Initialize()
 
@@ -341,7 +356,7 @@ func NewDataAwsccOamLink(scope constructs.Construct, id *string, config *DataAws
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/oam_link awscc_oam_link} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/oam_link awscc_oam_link} Data Source.
 func NewDataAwsccOamLink_Override(d DataAwsccOamLink, scope constructs.Construct, id *string, config *DataAwsccOamLinkConfig) {
 	_init_.Initialize()
 
@@ -708,6 +723,32 @@ func (d *jsiiProxy_DataAwsccOamLink) SynthesizeAttributes() *map[string]interfac
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccOamLink) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccOamLink) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

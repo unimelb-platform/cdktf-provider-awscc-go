@@ -36,8 +36,8 @@ type NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeaderOutputRefere
 	DirectionInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeader
-	SetInternalValue(val *NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeader)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Protocol() *string
 	SetProtocol(val *string)
 	ProtocolInput() *string
@@ -79,6 +79,12 @@ type NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeaderOutputRefere
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDestination()
+	ResetDestinationPort()
+	ResetDirection()
+	ResetProtocol()
+	ResetSource()
+	ResetSourcePort()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -194,8 +200,8 @@ func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHead
 	return returns
 }
 
-func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeaderOutputReference) InternalValue() *NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeader {
-	var returns *NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeader
+func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeaderOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -367,7 +373,7 @@ func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHead
 	)
 }
 
-func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeaderOutputReference)SetInternalValue(val *NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeader) {
+func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeaderOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -617,6 +623,54 @@ func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHead
 	)
 
 	return returns
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeaderOutputReference) ResetDestination() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetDestination",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeaderOutputReference) ResetDestinationPort() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetDestinationPort",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeaderOutputReference) ResetDirection() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetDirection",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeaderOutputReference) ResetProtocol() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetProtocol",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeaderOutputReference) ResetSource() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetSource",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeaderOutputReference) ResetSourcePort() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetSourcePort",
+		nil, // no parameters
+	)
 }
 
 func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceStatefulRulesHeaderOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

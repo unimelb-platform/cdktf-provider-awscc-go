@@ -1,0 +1,6 @@
+package dataawsccbedrockknowledgebase
+
+
+type DataAwsccBedrockKnowledgeBaseStorageConfigurationNeptuneAnalyticsConfigurationFieldMapping struct {
+}
+

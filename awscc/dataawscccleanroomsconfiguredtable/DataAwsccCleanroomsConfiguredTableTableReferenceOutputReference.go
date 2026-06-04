@@ -10,6 +10,7 @@ import (
 
 type DataAwsccCleanroomsConfiguredTableTableReferenceOutputReference interface {
 	cdktf.ComplexObject
+	Athena() DataAwsccCleanroomsConfiguredTableTableReferenceAthenaOutputReference
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -30,6 +31,7 @@ type DataAwsccCleanroomsConfiguredTableTableReferenceOutputReference interface {
 	Glue() DataAwsccCleanroomsConfiguredTableTableReferenceGlueOutputReference
 	InternalValue() *DataAwsccCleanroomsConfiguredTableTableReference
 	SetInternalValue(val *DataAwsccCleanroomsConfiguredTableTableReference)
+	Snowflake() DataAwsccCleanroomsConfiguredTableTableReferenceSnowflakeOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -75,6 +77,16 @@ type DataAwsccCleanroomsConfiguredTableTableReferenceOutputReference interface {
 // The jsii proxy struct for DataAwsccCleanroomsConfiguredTableTableReferenceOutputReference
 type jsiiProxy_DataAwsccCleanroomsConfiguredTableTableReferenceOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_DataAwsccCleanroomsConfiguredTableTableReferenceOutputReference) Athena() DataAwsccCleanroomsConfiguredTableTableReferenceAthenaOutputReference {
+	var returns DataAwsccCleanroomsConfiguredTableTableReferenceAthenaOutputReference
+	_jsii_.Get(
+		j,
+		"athena",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccCleanroomsConfiguredTableTableReferenceOutputReference) ComplexObjectIndex() interface{} {
@@ -132,6 +144,16 @@ func (j *jsiiProxy_DataAwsccCleanroomsConfiguredTableTableReferenceOutputReferen
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCleanroomsConfiguredTableTableReferenceOutputReference) Snowflake() DataAwsccCleanroomsConfiguredTableTableReferenceSnowflakeOutputReference {
+	var returns DataAwsccCleanroomsConfiguredTableTableReferenceSnowflakeOutputReference
+	_jsii_.Get(
+		j,
+		"snowflake",
 		&returns,
 	)
 	return returns

@@ -67,6 +67,8 @@ type NetworkfirewallFirewallPolicyFirewallPolicyStatelessRuleGroupReferencesOutp
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPriority()
+	ResetResourceArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (n *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessRuleGroup
 	)
 
 	return returns
+}
+
+func (n *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessRuleGroupReferencesOutputReference) ResetPriority() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetPriority",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessRuleGroupReferencesOutputReference) ResetResourceArn() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetResourceArn",
+		nil, // no parameters
+	)
 }
 
 func (n *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessRuleGroupReferencesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

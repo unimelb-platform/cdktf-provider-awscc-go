@@ -9,10 +9,12 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccs3expressdirectorybucket/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/s3express_directory_bucket awscc_s3express_directory_bucket}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/s3express_directory_bucket awscc_s3express_directory_bucket}.
 type DataAwsccS3ExpressDirectoryBucket interface {
 	cdktf.TerraformDataSource
 	Arn() *string
+	AvailabilityZoneName() *string
+	BucketEncryption() DataAwsccS3ExpressDirectoryBucketBucketEncryptionOutputReference
 	BucketName() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
@@ -42,6 +44,7 @@ type DataAwsccS3ExpressDirectoryBucket interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	LifecycleConfiguration() DataAwsccS3ExpressDirectoryBucketLifecycleConfigurationOutputReference
 	LocationName() *string
 	// The tree node.
 	Node() constructs.Node
@@ -86,6 +89,10 @@ type DataAwsccS3ExpressDirectoryBucket interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -105,6 +112,26 @@ func (j *jsiiProxy_DataAwsccS3ExpressDirectoryBucket) Arn() *string {
 	_jsii_.Get(
 		j,
 		"arn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccS3ExpressDirectoryBucket) AvailabilityZoneName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"availabilityZoneName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccS3ExpressDirectoryBucket) BucketEncryption() DataAwsccS3ExpressDirectoryBucketBucketEncryptionOutputReference {
+	var returns DataAwsccS3ExpressDirectoryBucketBucketEncryptionOutputReference
+	_jsii_.Get(
+		j,
+		"bucketEncryption",
 		&returns,
 	)
 	return returns
@@ -230,6 +257,16 @@ func (j *jsiiProxy_DataAwsccS3ExpressDirectoryBucket) Lifecycle() *cdktf.Terrafo
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccS3ExpressDirectoryBucket) LifecycleConfiguration() DataAwsccS3ExpressDirectoryBucketLifecycleConfigurationOutputReference {
+	var returns DataAwsccS3ExpressDirectoryBucketLifecycleConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"lifecycleConfiguration",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccS3ExpressDirectoryBucket) LocationName() *string {
 	var returns *string
 	_jsii_.Get(
@@ -301,7 +338,7 @@ func (j *jsiiProxy_DataAwsccS3ExpressDirectoryBucket) TerraformResourceType() *s
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/s3express_directory_bucket awscc_s3express_directory_bucket} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/s3express_directory_bucket awscc_s3express_directory_bucket} Data Source.
 func NewDataAwsccS3ExpressDirectoryBucket(scope constructs.Construct, id *string, config *DataAwsccS3ExpressDirectoryBucketConfig) DataAwsccS3ExpressDirectoryBucket {
 	_init_.Initialize()
 
@@ -319,7 +356,7 @@ func NewDataAwsccS3ExpressDirectoryBucket(scope constructs.Construct, id *string
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/s3express_directory_bucket awscc_s3express_directory_bucket} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/s3express_directory_bucket awscc_s3express_directory_bucket} Data Source.
 func NewDataAwsccS3ExpressDirectoryBucket_Override(d DataAwsccS3ExpressDirectoryBucket, scope constructs.Construct, id *string, config *DataAwsccS3ExpressDirectoryBucketConfig) {
 	_init_.Initialize()
 
@@ -686,6 +723,32 @@ func (d *jsiiProxy_DataAwsccS3ExpressDirectoryBucket) SynthesizeAttributes() *ma
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccS3ExpressDirectoryBucket) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccS3ExpressDirectoryBucket) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

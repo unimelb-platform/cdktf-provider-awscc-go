@@ -88,6 +88,7 @@ type QuicksightTopicDataSetsOutputReference interface {
 	ResetCalculatedFields()
 	ResetColumns()
 	ResetDataAggregation()
+	ResetDatasetArn()
 	ResetDatasetDescription()
 	ResetDatasetName()
 	ResetFilters()
@@ -714,6 +715,14 @@ func (q *jsiiProxy_QuicksightTopicDataSetsOutputReference) ResetDataAggregation(
 	_jsii_.InvokeVoid(
 		q,
 		"resetDataAggregation",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightTopicDataSetsOutputReference) ResetDatasetArn() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDatasetArn",
 		nil, // no parameters
 	)
 }

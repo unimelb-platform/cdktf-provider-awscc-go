@@ -10,6 +10,7 @@ import (
 
 type DataAwsccSagemakerUserProfileUserSettingsOutputReference interface {
 	cdktf.ComplexObject
+	AutoMountHomeEfs() *string
 	CodeEditorAppSettings() DataAwsccSagemakerUserProfileUserSettingsCodeEditorAppSettingsOutputReference
 	// the index of the complex object in a list.
 	// Experimental.
@@ -42,6 +43,7 @@ type DataAwsccSagemakerUserProfileUserSettingsOutputReference interface {
 	SharingSettings() DataAwsccSagemakerUserProfileUserSettingsSharingSettingsOutputReference
 	SpaceStorageSettings() DataAwsccSagemakerUserProfileUserSettingsSpaceStorageSettingsOutputReference
 	StudioWebPortal() *string
+	StudioWebPortalSettings() DataAwsccSagemakerUserProfileUserSettingsStudioWebPortalSettingsOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -87,6 +89,16 @@ type DataAwsccSagemakerUserProfileUserSettingsOutputReference interface {
 // The jsii proxy struct for DataAwsccSagemakerUserProfileUserSettingsOutputReference
 type jsiiProxy_DataAwsccSagemakerUserProfileUserSettingsOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerUserProfileUserSettingsOutputReference) AutoMountHomeEfs() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"autoMountHomeEfs",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccSagemakerUserProfileUserSettingsOutputReference) CodeEditorAppSettings() DataAwsccSagemakerUserProfileUserSettingsCodeEditorAppSettingsOutputReference {
@@ -264,6 +276,16 @@ func (j *jsiiProxy_DataAwsccSagemakerUserProfileUserSettingsOutputReference) Stu
 	_jsii_.Get(
 		j,
 		"studioWebPortal",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerUserProfileUserSettingsOutputReference) StudioWebPortalSettings() DataAwsccSagemakerUserProfileUserSettingsStudioWebPortalSettingsOutputReference {
+	var returns DataAwsccSagemakerUserProfileUserSettingsStudioWebPortalSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"studioWebPortalSettings",
 		&returns,
 	)
 	return returns

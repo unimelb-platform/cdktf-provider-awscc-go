@@ -30,8 +30,8 @@ type PipesPipeSourceParametersRabbitMqBrokerParametersCredentialsOutputReference
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *PipesPipeSourceParametersRabbitMqBrokerParametersCredentials
-	SetInternalValue(val *PipesPipeSourceParametersRabbitMqBrokerParametersCredentials)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -140,8 +140,8 @@ func (j *jsiiProxy_PipesPipeSourceParametersRabbitMqBrokerParametersCredentialsO
 	return returns
 }
 
-func (j *jsiiProxy_PipesPipeSourceParametersRabbitMqBrokerParametersCredentialsOutputReference) InternalValue() *PipesPipeSourceParametersRabbitMqBrokerParametersCredentials {
-	var returns *PipesPipeSourceParametersRabbitMqBrokerParametersCredentials
+func (j *jsiiProxy_PipesPipeSourceParametersRabbitMqBrokerParametersCredentialsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -231,7 +231,7 @@ func (j *jsiiProxy_PipesPipeSourceParametersRabbitMqBrokerParametersCredentialsO
 	)
 }
 
-func (j *jsiiProxy_PipesPipeSourceParametersRabbitMqBrokerParametersCredentialsOutputReference)SetInternalValue(val *PipesPipeSourceParametersRabbitMqBrokerParametersCredentials) {
+func (j *jsiiProxy_PipesPipeSourceParametersRabbitMqBrokerParametersCredentialsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

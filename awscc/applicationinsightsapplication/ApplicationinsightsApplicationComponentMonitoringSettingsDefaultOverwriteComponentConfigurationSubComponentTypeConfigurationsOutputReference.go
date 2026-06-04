@@ -30,7 +30,7 @@ type ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteCo
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	SubComponentConfigurationDetails() ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsOutputReference
-	SubComponentConfigurationDetailsInput() *ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetails
+	SubComponentConfigurationDetailsInput() interface{}
 	SubComponentType() *string
 	SetSubComponentType(val *string)
 	SubComponentTypeInput() *string
@@ -67,6 +67,8 @@ type ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteCo
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutSubComponentConfigurationDetails(value *ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetails)
+	ResetSubComponentConfigurationDetails()
+	ResetSubComponentType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -142,8 +144,8 @@ func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefa
 	return returns
 }
 
-func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsOutputReference) SubComponentConfigurationDetailsInput() *ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetails {
-	var returns *ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetails
+func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsOutputReference) SubComponentConfigurationDetailsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"subComponentConfigurationDetailsInput",
@@ -480,6 +482,22 @@ func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefa
 		a,
 		"putSubComponentConfigurationDetails",
 		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsOutputReference) ResetSubComponentConfigurationDetails() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetSubComponentConfigurationDetails",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsOutputReference) ResetSubComponentType() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetSubComponentType",
+		nil, // no parameters
 	)
 }
 

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2snapshotblockpublicaccesses/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_snapshot_block_public_accesses awscc_ec2_snapshot_block_public_accesses}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_snapshot_block_public_accesses awscc_ec2_snapshot_block_public_accesses}.
 type DataAwsccEc2SnapshotBlockPublicAccesses interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccEc2SnapshotBlockPublicAccesses interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccEc2SnapshotBlockPublicAccesses) TerraformResourceTyp
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_snapshot_block_public_accesses awscc_ec2_snapshot_block_public_accesses} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_snapshot_block_public_accesses awscc_ec2_snapshot_block_public_accesses} Data Source.
 func NewDataAwsccEc2SnapshotBlockPublicAccesses(scope constructs.Construct, id *string, config *DataAwsccEc2SnapshotBlockPublicAccessesConfig) DataAwsccEc2SnapshotBlockPublicAccesses {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccEc2SnapshotBlockPublicAccesses(scope constructs.Construct, id *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_snapshot_block_public_accesses awscc_ec2_snapshot_block_public_accesses} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_snapshot_block_public_accesses awscc_ec2_snapshot_block_public_accesses} Data Source.
 func NewDataAwsccEc2SnapshotBlockPublicAccesses_Override(d DataAwsccEc2SnapshotBlockPublicAccesses, scope constructs.Construct, id *string, config *DataAwsccEc2SnapshotBlockPublicAccessesConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccEc2SnapshotBlockPublicAccesses) SynthesizeAttributes
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2SnapshotBlockPublicAccesses) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2SnapshotBlockPublicAccesses) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

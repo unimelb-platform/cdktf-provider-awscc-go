@@ -67,6 +67,8 @@ type KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationProcessingConfig
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetParameterName()
+	ResetParameterValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationPr
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) ResetParameterName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetParameterName",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) ResetParameterValue() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetParameterValue",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

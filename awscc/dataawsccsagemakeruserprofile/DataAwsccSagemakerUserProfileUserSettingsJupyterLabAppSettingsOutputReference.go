@@ -10,6 +10,8 @@ import (
 
 type DataAwsccSagemakerUserProfileUserSettingsJupyterLabAppSettingsOutputReference interface {
 	cdktf.ComplexObject
+	AppLifecycleManagement() DataAwsccSagemakerUserProfileUserSettingsJupyterLabAppSettingsAppLifecycleManagementOutputReference
+	BuiltInLifecycleConfigArn() *string
 	CodeRepositories() DataAwsccSagemakerUserProfileUserSettingsJupyterLabAppSettingsCodeRepositoriesList
 	// the index of the complex object in a list.
 	// Experimental.
@@ -78,6 +80,26 @@ type DataAwsccSagemakerUserProfileUserSettingsJupyterLabAppSettingsOutputReferen
 // The jsii proxy struct for DataAwsccSagemakerUserProfileUserSettingsJupyterLabAppSettingsOutputReference
 type jsiiProxy_DataAwsccSagemakerUserProfileUserSettingsJupyterLabAppSettingsOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerUserProfileUserSettingsJupyterLabAppSettingsOutputReference) AppLifecycleManagement() DataAwsccSagemakerUserProfileUserSettingsJupyterLabAppSettingsAppLifecycleManagementOutputReference {
+	var returns DataAwsccSagemakerUserProfileUserSettingsJupyterLabAppSettingsAppLifecycleManagementOutputReference
+	_jsii_.Get(
+		j,
+		"appLifecycleManagement",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerUserProfileUserSettingsJupyterLabAppSettingsOutputReference) BuiltInLifecycleConfigArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"builtInLifecycleConfigArn",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccSagemakerUserProfileUserSettingsJupyterLabAppSettingsOutputReference) CodeRepositories() DataAwsccSagemakerUserProfileUserSettingsJupyterLabAppSettingsCodeRepositoriesList {

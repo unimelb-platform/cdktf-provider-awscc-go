@@ -30,7 +30,7 @@ type QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	ManifestFileLocation() QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersManifestFileLocationOutputReference
-	ManifestFileLocationInput() *QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersManifestFileLocation
+	ManifestFileLocationInput() interface{}
 	RoleArn() *string
 	SetRoleArn(val *string)
 	RoleArnInput() *string
@@ -67,6 +67,7 @@ type QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutManifestFileLocation(value *QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersManifestFileLocation)
+	ResetManifestFileLocation()
 	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -143,8 +144,8 @@ func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSou
 	return returns
 }
 
-func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersOutputReference) ManifestFileLocationInput() *QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersManifestFileLocation {
-	var returns *QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersManifestFileLocation
+func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersOutputReference) ManifestFileLocationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"manifestFileLocationInput",
@@ -481,6 +482,14 @@ func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSou
 		q,
 		"putManifestFileLocation",
 		[]interface{}{value},
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersOutputReference) ResetManifestFileLocation() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetManifestFileLocation",
+		nil, // no parameters
 	)
 }
 

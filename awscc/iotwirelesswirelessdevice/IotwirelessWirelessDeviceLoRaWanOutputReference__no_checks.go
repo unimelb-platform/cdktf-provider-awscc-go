@@ -52,6 +52,10 @@ func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanOutputReference) validatePutA
 	return nil
 }
 
+func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanOutputReference) validatePutFPortsParameters(value *IotwirelessWirelessDeviceLoRaWanFPorts) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanOutputReference) validatePutOtaaV10XParameters(value *IotwirelessWirelessDeviceLoRaWanOtaaV10X) error {
 	return nil
 }

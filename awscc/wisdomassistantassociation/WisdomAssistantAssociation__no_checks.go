@@ -56,7 +56,15 @@ func (w *jsiiProxy_WisdomAssistantAssociation) validateInterpolationForAttribute
 	return nil
 }
 
+func (w *jsiiProxy_WisdomAssistantAssociation) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (w *jsiiProxy_WisdomAssistantAssociation) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (w *jsiiProxy_WisdomAssistantAssociation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

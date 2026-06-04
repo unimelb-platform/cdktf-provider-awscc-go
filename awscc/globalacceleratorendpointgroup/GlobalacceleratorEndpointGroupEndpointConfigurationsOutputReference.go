@@ -75,6 +75,7 @@ type GlobalacceleratorEndpointGroupEndpointConfigurationsOutputReference interfa
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetAttachmentArn()
 	ResetClientIpPreservationEnabled()
+	ResetEndpointId()
 	ResetWeight()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -566,6 +567,14 @@ func (g *jsiiProxy_GlobalacceleratorEndpointGroupEndpointConfigurationsOutputRef
 	_jsii_.InvokeVoid(
 		g,
 		"resetClientIpPreservationEnabled",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GlobalacceleratorEndpointGroupEndpointConfigurationsOutputReference) ResetEndpointId() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetEndpointId",
 		nil, // no parameters
 	)
 }

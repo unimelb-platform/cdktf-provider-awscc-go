@@ -43,6 +43,9 @@ type EntityresolutionIdMappingWorkflowInputSourceConfigOutputReference interface
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	Type() *string
+	SetType(val *string)
+	TypeInput() *string
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -67,6 +70,8 @@ type EntityresolutionIdMappingWorkflowInputSourceConfigOutputReference interface
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetSchemaArn()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -192,6 +197,26 @@ func (j *jsiiProxy_EntityresolutionIdMappingWorkflowInputSourceConfigOutputRefer
 	return returns
 }
 
+func (j *jsiiProxy_EntityresolutionIdMappingWorkflowInputSourceConfigOutputReference) Type() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"type",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EntityresolutionIdMappingWorkflowInputSourceConfigOutputReference) TypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"typeInput",
+		&returns,
+	)
+	return returns
+}
+
 
 func NewEntityresolutionIdMappingWorkflowInputSourceConfigOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) EntityresolutionIdMappingWorkflowInputSourceConfigOutputReference {
 	_init_.Initialize()
@@ -293,6 +318,17 @@ func (j *jsiiProxy_EntityresolutionIdMappingWorkflowInputSourceConfigOutputRefer
 	_jsii_.Set(
 		j,
 		"terraformResource",
+		val,
+	)
+}
+
+func (j *jsiiProxy_EntityresolutionIdMappingWorkflowInputSourceConfigOutputReference)SetType(val *string) {
+	if err := j.validateSetTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"type",
 		val,
 	)
 }
@@ -481,6 +517,22 @@ func (e *jsiiProxy_EntityresolutionIdMappingWorkflowInputSourceConfigOutputRefer
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EntityresolutionIdMappingWorkflowInputSourceConfigOutputReference) ResetSchemaArn() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetSchemaArn",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EntityresolutionIdMappingWorkflowInputSourceConfigOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetType",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EntityresolutionIdMappingWorkflowInputSourceConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

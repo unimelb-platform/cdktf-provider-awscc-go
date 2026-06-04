@@ -64,6 +64,7 @@ type IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEventsActionsRese
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetTimerName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEve
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEventsActionsResetTimerOutputReference) ResetTimerName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTimerName",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEventsActionsResetTimerOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

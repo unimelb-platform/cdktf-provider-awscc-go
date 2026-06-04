@@ -44,6 +44,14 @@ func (c *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) vali
 	return nil
 }
 
+func (c *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) validatePutJobComputeParameters(value *CleanroomsMembershipPaymentConfigurationJobCompute) error {
+	return nil
+}
+
+func (c *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) validatePutMachineLearningParameters(value *CleanroomsMembershipPaymentConfigurationMachineLearning) error {
+	return nil
+}
+
 func (c *jsiiProxy_CleanroomsMembershipPaymentConfigurationOutputReference) validatePutQueryComputeParameters(value *CleanroomsMembershipPaymentConfigurationQueryCompute) error {
 	return nil
 }

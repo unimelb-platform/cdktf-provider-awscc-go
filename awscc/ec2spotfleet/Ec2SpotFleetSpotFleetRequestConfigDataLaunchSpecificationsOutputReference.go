@@ -118,6 +118,7 @@ type Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsOutputReference i
 	ResetBlockDeviceMappings()
 	ResetEbsOptimized()
 	ResetIamInstanceProfile()
+	ResetImageId()
 	ResetInstanceRequirements()
 	ResetInstanceType()
 	ResetKernelId()
@@ -1064,6 +1065,14 @@ func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsOut
 	_jsii_.InvokeVoid(
 		e,
 		"resetIamInstanceProfile",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsOutputReference) ResetImageId() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetImageId",
 		nil, // no parameters
 	)
 }

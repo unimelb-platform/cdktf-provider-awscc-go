@@ -29,6 +29,8 @@ type DataAwsccCleanroomsMembershipPaymentConfigurationOutputReference interface 
 	Fqn() *string
 	InternalValue() *DataAwsccCleanroomsMembershipPaymentConfiguration
 	SetInternalValue(val *DataAwsccCleanroomsMembershipPaymentConfiguration)
+	JobCompute() DataAwsccCleanroomsMembershipPaymentConfigurationJobComputeOutputReference
+	MachineLearning() DataAwsccCleanroomsMembershipPaymentConfigurationMachineLearningOutputReference
 	QueryCompute() DataAwsccCleanroomsMembershipPaymentConfigurationQueryComputeOutputReference
 	// Experimental.
 	TerraformAttribute() *string
@@ -122,6 +124,26 @@ func (j *jsiiProxy_DataAwsccCleanroomsMembershipPaymentConfigurationOutputRefere
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCleanroomsMembershipPaymentConfigurationOutputReference) JobCompute() DataAwsccCleanroomsMembershipPaymentConfigurationJobComputeOutputReference {
+	var returns DataAwsccCleanroomsMembershipPaymentConfigurationJobComputeOutputReference
+	_jsii_.Get(
+		j,
+		"jobCompute",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCleanroomsMembershipPaymentConfigurationOutputReference) MachineLearning() DataAwsccCleanroomsMembershipPaymentConfigurationMachineLearningOutputReference {
+	var returns DataAwsccCleanroomsMembershipPaymentConfigurationMachineLearningOutputReference
+	_jsii_.Get(
+		j,
+		"machineLearning",
 		&returns,
 	)
 	return returns

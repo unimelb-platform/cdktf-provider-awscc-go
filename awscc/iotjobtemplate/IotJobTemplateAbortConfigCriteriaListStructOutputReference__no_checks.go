@@ -64,7 +64,7 @@ func (j *jsiiProxy_IotJobTemplateAbortConfigCriteriaListStructOutputReference) v
 	return nil
 }
 
-func (j *jsiiProxy_IotJobTemplateAbortConfigCriteriaListStructOutputReference) validateSetInternalValueParameters(val *IotJobTemplateAbortConfigCriteriaListStruct) error {
+func (j *jsiiProxy_IotJobTemplateAbortConfigCriteriaListStructOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

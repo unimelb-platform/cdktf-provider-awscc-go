@@ -36,8 +36,8 @@ type CloudtrailTrailAdvancedEventSelectorsFieldSelectorsOutputReference interfac
 	FieldInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *CloudtrailTrailAdvancedEventSelectorsFieldSelectors
-	SetInternalValue(val *CloudtrailTrailAdvancedEventSelectorsFieldSelectors)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	NotEndsWith() *[]*string
 	SetNotEndsWith(val *[]*string)
 	NotEndsWithInput() *[]*string
@@ -84,6 +84,7 @@ type CloudtrailTrailAdvancedEventSelectorsFieldSelectorsOutputReference interfac
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetEndsWith()
 	ResetEqualTo()
+	ResetField()
 	ResetNotEndsWith()
 	ResetNotEquals()
 	ResetNotStartsWith()
@@ -203,8 +204,8 @@ func (j *jsiiProxy_CloudtrailTrailAdvancedEventSelectorsFieldSelectorsOutputRefe
 	return returns
 }
 
-func (j *jsiiProxy_CloudtrailTrailAdvancedEventSelectorsFieldSelectorsOutputReference) InternalValue() *CloudtrailTrailAdvancedEventSelectorsFieldSelectors {
-	var returns *CloudtrailTrailAdvancedEventSelectorsFieldSelectors
+func (j *jsiiProxy_CloudtrailTrailAdvancedEventSelectorsFieldSelectorsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -396,7 +397,7 @@ func (j *jsiiProxy_CloudtrailTrailAdvancedEventSelectorsFieldSelectorsOutputRefe
 	)
 }
 
-func (j *jsiiProxy_CloudtrailTrailAdvancedEventSelectorsFieldSelectorsOutputReference)SetInternalValue(val *CloudtrailTrailAdvancedEventSelectorsFieldSelectors) {
+func (j *jsiiProxy_CloudtrailTrailAdvancedEventSelectorsFieldSelectorsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -671,6 +672,14 @@ func (c *jsiiProxy_CloudtrailTrailAdvancedEventSelectorsFieldSelectorsOutputRefe
 	_jsii_.InvokeVoid(
 		c,
 		"resetEqualTo",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudtrailTrailAdvancedEventSelectorsFieldSelectorsOutputReference) ResetField() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetField",
 		nil, // no parameters
 	)
 }

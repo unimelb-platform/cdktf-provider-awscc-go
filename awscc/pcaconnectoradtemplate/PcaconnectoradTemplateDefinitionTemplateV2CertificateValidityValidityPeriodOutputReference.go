@@ -27,8 +27,8 @@ type PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriod
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriod
-	SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriod)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Period() *float64
 	SetPeriod(val *float64)
 	PeriodInput() *float64
@@ -67,6 +67,8 @@ type PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriod
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPeriod()
+	ResetPeriodType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidity
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriodOutputReference) InternalValue() *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriod {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriod
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriodOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -242,7 +244,7 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidity
 	)
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriodOutputReference)SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriod) {
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriodOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidity
 	)
 
 	return returns
+}
+
+func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriodOutputReference) ResetPeriod() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetPeriod",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriodOutputReference) ResetPeriodType() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetPeriodType",
+		nil, // no parameters
+	)
 }
 
 func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriodOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

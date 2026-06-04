@@ -72,6 +72,7 @@ type ResiliencehubAppPermissionModelOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetCrossAccountRoleArns()
 	ResetInvokerRoleName()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (r *jsiiProxy_ResiliencehubAppPermissionModelOutputReference) ResetInvokerR
 	_jsii_.InvokeVoid(
 		r,
 		"resetInvokerRoleName",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_ResiliencehubAppPermissionModelOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetType",
 		nil, // no parameters
 	)
 }

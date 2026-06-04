@@ -68,6 +68,7 @@ type AutoscalingAutoScalingGroupNotificationConfigurationsOutputReference interf
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetNotificationTypes()
+	ResetTopicArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroupNotificationConfigurationsOutputRe
 	_jsii_.InvokeVoid(
 		a,
 		"resetNotificationTypes",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroupNotificationConfigurationsOutputReference) ResetTopicArn() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetTopicArn",
 		nil, // no parameters
 	)
 }

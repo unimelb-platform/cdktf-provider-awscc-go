@@ -68,6 +68,7 @@ type NimblestudioStudioStudioEncryptionConfigurationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetKeyArn()
+	ResetKeyType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (n *jsiiProxy_NimblestudioStudioStudioEncryptionConfigurationOutputReferenc
 	_jsii_.InvokeVoid(
 		n,
 		"resetKeyArn",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NimblestudioStudioStudioEncryptionConfigurationOutputReference) ResetKeyType() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetKeyType",
 		nil, // no parameters
 	)
 }

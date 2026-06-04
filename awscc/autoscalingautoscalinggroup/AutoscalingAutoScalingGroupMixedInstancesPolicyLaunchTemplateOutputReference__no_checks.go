@@ -64,7 +64,7 @@ func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
 	return nil
 }
 
-func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOutputReference) validateSetInternalValueParameters(val *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate) error {
+func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciotwirelesswirelessdeviceimporttask/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotwireless_wireless_device_import_task awscc_iotwireless_wireless_device_import_task}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotwireless_wireless_device_import_task awscc_iotwireless_wireless_device_import_task}.
 type DataAwsccIotwirelessWirelessDeviceImportTask interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -64,6 +64,7 @@ type DataAwsccIotwirelessWirelessDeviceImportTask interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	WirelessDeviceImportTaskId() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -93,6 +94,10 @@ type DataAwsccIotwirelessWirelessDeviceImportTask interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -377,8 +382,18 @@ func (j *jsiiProxy_DataAwsccIotwirelessWirelessDeviceImportTask) TerraformResour
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccIotwirelessWirelessDeviceImportTask) WirelessDeviceImportTaskId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"wirelessDeviceImportTaskId",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotwireless_wireless_device_import_task awscc_iotwireless_wireless_device_import_task} Data Source.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotwireless_wireless_device_import_task awscc_iotwireless_wireless_device_import_task} Data Source.
 func NewDataAwsccIotwirelessWirelessDeviceImportTask(scope constructs.Construct, id *string, config *DataAwsccIotwirelessWirelessDeviceImportTaskConfig) DataAwsccIotwirelessWirelessDeviceImportTask {
 	_init_.Initialize()
 
@@ -396,7 +411,7 @@ func NewDataAwsccIotwirelessWirelessDeviceImportTask(scope constructs.Construct,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotwireless_wireless_device_import_task awscc_iotwireless_wireless_device_import_task} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotwireless_wireless_device_import_task awscc_iotwireless_wireless_device_import_task} Data Source.
 func NewDataAwsccIotwirelessWirelessDeviceImportTask_Override(d DataAwsccIotwirelessWirelessDeviceImportTask, scope constructs.Construct, id *string, config *DataAwsccIotwirelessWirelessDeviceImportTaskConfig) {
 	_init_.Initialize()
 
@@ -763,6 +778,32 @@ func (d *jsiiProxy_DataAwsccIotwirelessWirelessDeviceImportTask) SynthesizeAttri
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotwirelessWirelessDeviceImportTask) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotwirelessWirelessDeviceImportTask) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

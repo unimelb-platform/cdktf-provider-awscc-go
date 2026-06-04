@@ -174,9 +174,25 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationO
 	return nil
 }
 
-func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsersOutputReference) validateSetInternalValueParameters(val *KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsers) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsersOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsers:
+		val := val.(*KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsers)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsers:
+		val_ := val.(KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsers)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsers; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

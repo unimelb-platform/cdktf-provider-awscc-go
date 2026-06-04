@@ -1,0 +1,6 @@
+package bedrockpromptversion
+
+
+type BedrockPromptVersionVariantsTemplateConfigurationChatToolConfigurationToolsToolSpecInputSchema struct {
+}
+

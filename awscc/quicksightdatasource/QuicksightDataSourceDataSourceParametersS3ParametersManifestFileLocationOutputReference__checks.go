@@ -171,9 +171,25 @@ func (j *jsiiProxy_QuicksightDataSourceDataSourceParametersS3ParametersManifestF
 	return nil
 }
 
-func (j *jsiiProxy_QuicksightDataSourceDataSourceParametersS3ParametersManifestFileLocationOutputReference) validateSetInternalValueParameters(val *QuicksightDataSourceDataSourceParametersS3ParametersManifestFileLocation) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_QuicksightDataSourceDataSourceParametersS3ParametersManifestFileLocationOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *QuicksightDataSourceDataSourceParametersS3ParametersManifestFileLocation:
+		val := val.(*QuicksightDataSourceDataSourceParametersS3ParametersManifestFileLocation)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case QuicksightDataSourceDataSourceParametersS3ParametersManifestFileLocation:
+		val_ := val.(QuicksightDataSourceDataSourceParametersS3ParametersManifestFileLocation)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *QuicksightDataSourceDataSourceParametersS3ParametersManifestFileLocation; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

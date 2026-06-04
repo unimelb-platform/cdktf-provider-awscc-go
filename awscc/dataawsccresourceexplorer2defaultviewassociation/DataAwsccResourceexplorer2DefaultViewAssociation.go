@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccresourceexplorer2defaultviewassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/resourceexplorer2_default_view_association awscc_resourceexplorer2_default_view_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/resourceexplorer2_default_view_association awscc_resourceexplorer2_default_view_association}.
 type DataAwsccResourceexplorer2DefaultViewAssociation interface {
 	cdktf.TerraformDataSource
 	AssociatedAwsPrincipal() *string
@@ -84,6 +84,10 @@ type DataAwsccResourceexplorer2DefaultViewAssociation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -279,7 +283,7 @@ func (j *jsiiProxy_DataAwsccResourceexplorer2DefaultViewAssociation) ViewArn() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/resourceexplorer2_default_view_association awscc_resourceexplorer2_default_view_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/resourceexplorer2_default_view_association awscc_resourceexplorer2_default_view_association} Data Source.
 func NewDataAwsccResourceexplorer2DefaultViewAssociation(scope constructs.Construct, id *string, config *DataAwsccResourceexplorer2DefaultViewAssociationConfig) DataAwsccResourceexplorer2DefaultViewAssociation {
 	_init_.Initialize()
 
@@ -297,7 +301,7 @@ func NewDataAwsccResourceexplorer2DefaultViewAssociation(scope constructs.Constr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/resourceexplorer2_default_view_association awscc_resourceexplorer2_default_view_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/resourceexplorer2_default_view_association awscc_resourceexplorer2_default_view_association} Data Source.
 func NewDataAwsccResourceexplorer2DefaultViewAssociation_Override(d DataAwsccResourceexplorer2DefaultViewAssociation, scope constructs.Construct, id *string, config *DataAwsccResourceexplorer2DefaultViewAssociationConfig) {
 	_init_.Initialize()
 
@@ -664,6 +668,32 @@ func (d *jsiiProxy_DataAwsccResourceexplorer2DefaultViewAssociation) SynthesizeA
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccResourceexplorer2DefaultViewAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccResourceexplorer2DefaultViewAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

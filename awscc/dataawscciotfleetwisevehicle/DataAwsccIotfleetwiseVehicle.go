@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciotfleetwisevehicle/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotfleetwise_vehicle awscc_iotfleetwise_vehicle}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotfleetwise_vehicle awscc_iotfleetwise_vehicle}.
 type DataAwsccIotfleetwiseVehicle interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -55,6 +55,7 @@ type DataAwsccIotfleetwiseVehicle interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	StateTemplates() DataAwsccIotfleetwiseVehicleStateTemplatesList
 	Tags() DataAwsccIotfleetwiseVehicleTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -91,6 +92,10 @@ type DataAwsccIotfleetwiseVehicle interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -315,6 +320,16 @@ func (j *jsiiProxy_DataAwsccIotfleetwiseVehicle) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccIotfleetwiseVehicle) StateTemplates() DataAwsccIotfleetwiseVehicleStateTemplatesList {
+	var returns DataAwsccIotfleetwiseVehicleStateTemplatesList
+	_jsii_.Get(
+		j,
+		"stateTemplates",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccIotfleetwiseVehicle) Tags() DataAwsccIotfleetwiseVehicleTagsList {
 	var returns DataAwsccIotfleetwiseVehicleTagsList
 	_jsii_.Get(
@@ -356,7 +371,7 @@ func (j *jsiiProxy_DataAwsccIotfleetwiseVehicle) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotfleetwise_vehicle awscc_iotfleetwise_vehicle} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotfleetwise_vehicle awscc_iotfleetwise_vehicle} Data Source.
 func NewDataAwsccIotfleetwiseVehicle(scope constructs.Construct, id *string, config *DataAwsccIotfleetwiseVehicleConfig) DataAwsccIotfleetwiseVehicle {
 	_init_.Initialize()
 
@@ -374,7 +389,7 @@ func NewDataAwsccIotfleetwiseVehicle(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotfleetwise_vehicle awscc_iotfleetwise_vehicle} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotfleetwise_vehicle awscc_iotfleetwise_vehicle} Data Source.
 func NewDataAwsccIotfleetwiseVehicle_Override(d DataAwsccIotfleetwiseVehicle, scope constructs.Construct, id *string, config *DataAwsccIotfleetwiseVehicleConfig) {
 	_init_.Initialize()
 
@@ -741,6 +756,32 @@ func (d *jsiiProxy_DataAwsccIotfleetwiseVehicle) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotfleetwiseVehicle) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotfleetwiseVehicle) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

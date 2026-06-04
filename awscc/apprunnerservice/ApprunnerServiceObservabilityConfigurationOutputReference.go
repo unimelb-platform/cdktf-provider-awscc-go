@@ -68,6 +68,7 @@ type ApprunnerServiceObservabilityConfigurationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetObservabilityConfigurationArn()
+	ResetObservabilityEnabled()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (a *jsiiProxy_ApprunnerServiceObservabilityConfigurationOutputReference) Re
 	_jsii_.InvokeVoid(
 		a,
 		"resetObservabilityConfigurationArn",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApprunnerServiceObservabilityConfigurationOutputReference) ResetObservabilityEnabled() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetObservabilityEnabled",
 		nil, // no parameters
 	)
 }

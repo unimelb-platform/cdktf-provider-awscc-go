@@ -79,7 +79,12 @@ type IotTopicRuleTopicRulePayloadErrorActionCloudwatchMetricOutputReference inte
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetMetricName()
+	ResetMetricNamespace()
 	ResetMetricTimestamp()
+	ResetMetricUnit()
+	ResetMetricValue()
+	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -620,10 +625,50 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionCloudwatchMetricOutput
 	return returns
 }
 
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionCloudwatchMetricOutputReference) ResetMetricName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetMetricName",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionCloudwatchMetricOutputReference) ResetMetricNamespace() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetMetricNamespace",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionCloudwatchMetricOutputReference) ResetMetricTimestamp() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetMetricTimestamp",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionCloudwatchMetricOutputReference) ResetMetricUnit() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetMetricUnit",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionCloudwatchMetricOutputReference) ResetMetricValue() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetMetricValue",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionCloudwatchMetricOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArn",
 		nil, // no parameters
 	)
 }

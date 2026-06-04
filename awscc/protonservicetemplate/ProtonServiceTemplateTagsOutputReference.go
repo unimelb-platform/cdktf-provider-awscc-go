@@ -67,6 +67,8 @@ type ProtonServiceTemplateTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (p *jsiiProxy_ProtonServiceTemplateTagsOutputReference) InterpolationForAtt
 	)
 
 	return returns
+}
+
+func (p *jsiiProxy_ProtonServiceTemplateTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_ProtonServiceTemplateTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (p *jsiiProxy_ProtonServiceTemplateTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

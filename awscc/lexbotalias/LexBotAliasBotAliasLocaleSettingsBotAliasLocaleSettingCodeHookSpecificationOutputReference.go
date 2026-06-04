@@ -30,7 +30,7 @@ type LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecification
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	LambdaCodeHook() LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHookOutputReference
-	LambdaCodeHookInput() *LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHook
+	LambdaCodeHookInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecification
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutLambdaCodeHook(value *LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHook)
+	ResetLambdaCodeHook()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -139,8 +140,8 @@ func (j *jsiiProxy_LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHoo
 	return returns
 }
 
-func (j *jsiiProxy_LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationOutputReference) LambdaCodeHookInput() *LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHook {
-	var returns *LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHook
+func (j *jsiiProxy_LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationOutputReference) LambdaCodeHookInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"lambdaCodeHookInput",
@@ -446,6 +447,14 @@ func (l *jsiiProxy_LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHoo
 		l,
 		"putLambdaCodeHook",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationOutputReference) ResetLambdaCodeHook() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetLambdaCodeHook",
+		nil, // no parameters
 	)
 }
 

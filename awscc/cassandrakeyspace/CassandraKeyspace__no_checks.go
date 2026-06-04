@@ -56,7 +56,15 @@ func (c *jsiiProxy_CassandraKeyspace) validateInterpolationForAttributeParameter
 	return nil
 }
 
+func (c *jsiiProxy_CassandraKeyspace) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CassandraKeyspace) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_CassandraKeyspace) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -85,6 +93,10 @@ func validateCassandraKeyspace_IsTerraformElementParameters(x interface{}) error
 }
 
 func validateCassandraKeyspace_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_CassandraKeyspace) validateSetClientSideTimestampsEnabledParameters(val interface{}) error {
 	return nil
 }
 

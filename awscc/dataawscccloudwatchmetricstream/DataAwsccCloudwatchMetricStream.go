@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccloudwatchmetricstream/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudwatch_metric_stream awscc_cloudwatch_metric_stream}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudwatch_metric_stream awscc_cloudwatch_metric_stream}.
 type DataAwsccCloudwatchMetricStream interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -95,6 +95,10 @@ type DataAwsccCloudwatchMetricStream interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -400,7 +404,7 @@ func (j *jsiiProxy_DataAwsccCloudwatchMetricStream) TerraformResourceType() *str
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudwatch_metric_stream awscc_cloudwatch_metric_stream} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudwatch_metric_stream awscc_cloudwatch_metric_stream} Data Source.
 func NewDataAwsccCloudwatchMetricStream(scope constructs.Construct, id *string, config *DataAwsccCloudwatchMetricStreamConfig) DataAwsccCloudwatchMetricStream {
 	_init_.Initialize()
 
@@ -418,7 +422,7 @@ func NewDataAwsccCloudwatchMetricStream(scope constructs.Construct, id *string, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudwatch_metric_stream awscc_cloudwatch_metric_stream} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudwatch_metric_stream awscc_cloudwatch_metric_stream} Data Source.
 func NewDataAwsccCloudwatchMetricStream_Override(d DataAwsccCloudwatchMetricStream, scope constructs.Construct, id *string, config *DataAwsccCloudwatchMetricStreamConfig) {
 	_init_.Initialize()
 
@@ -785,6 +789,32 @@ func (d *jsiiProxy_DataAwsccCloudwatchMetricStream) SynthesizeAttributes() *map[
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudwatchMetricStream) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudwatchMetricStream) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

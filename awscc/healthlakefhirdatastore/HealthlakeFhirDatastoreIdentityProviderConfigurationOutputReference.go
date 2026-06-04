@@ -73,6 +73,7 @@ type HealthlakeFhirDatastoreIdentityProviderConfigurationOutputReference interfa
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAuthorizationStrategy()
 	ResetFineGrainedAuthorizationEnabled()
 	ResetIdpLambdaArn()
 	ResetMetadata()
@@ -552,6 +553,14 @@ func (h *jsiiProxy_HealthlakeFhirDatastoreIdentityProviderConfigurationOutputRef
 	)
 
 	return returns
+}
+
+func (h *jsiiProxy_HealthlakeFhirDatastoreIdentityProviderConfigurationOutputReference) ResetAuthorizationStrategy() {
+	_jsii_.InvokeVoid(
+		h,
+		"resetAuthorizationStrategy",
+		nil, // no parameters
+	)
 }
 
 func (h *jsiiProxy_HealthlakeFhirDatastoreIdentityProviderConfigurationOutputReference) ResetFineGrainedAuthorizationEnabled() {

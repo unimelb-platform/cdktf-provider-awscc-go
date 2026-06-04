@@ -119,6 +119,14 @@ func (r *jsiiProxy_RdsCustomDbEngineVersion) validateInterpolationForAttributePa
 	return nil
 }
 
+func (r *jsiiProxy_RdsCustomDbEngineVersion) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (r *jsiiProxy_RdsCustomDbEngineVersion) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (r *jsiiProxy_RdsCustomDbEngineVersion) validateMoveToParameters(moveTarget
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (r *jsiiProxy_RdsCustomDbEngineVersion) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -389,6 +405,14 @@ func (j *jsiiProxy_RdsCustomDbEngineVersion) validateSetEngineVersionParameters(
 	return nil
 }
 
+func (j *jsiiProxy_RdsCustomDbEngineVersion) validateSetImageIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_RdsCustomDbEngineVersion) validateSetKmsKeyIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -459,9 +483,37 @@ func (j *jsiiProxy_RdsCustomDbEngineVersion) validateSetProvisionersParameters(v
 	return nil
 }
 
+func (j *jsiiProxy_RdsCustomDbEngineVersion) validateSetSourceCustomDbEngineVersionIdentifierParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_RdsCustomDbEngineVersion) validateSetStatusParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_RdsCustomDbEngineVersion) validateSetUseAwsProvidedLatestImageParameters(val interface{}) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+	switch val.(type) {
+	case *bool:
+		// ok
+	case bool:
+		// ok
+	case cdktf.IResolvable:
+		// ok
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: *bool, cdktf.IResolvable; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

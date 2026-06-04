@@ -60,7 +60,7 @@ func (j *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV10XSessionKeysOutputRefer
 	return nil
 }
 
-func (j *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV10XSessionKeysOutputReference) validateSetInternalValueParameters(val *IotwirelessWirelessDeviceLoRaWanAbpV10XSessionKeys) error {
+func (j *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV10XSessionKeysOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

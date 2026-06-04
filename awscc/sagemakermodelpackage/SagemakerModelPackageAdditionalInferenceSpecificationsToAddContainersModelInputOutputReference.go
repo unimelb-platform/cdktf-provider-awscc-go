@@ -64,6 +64,7 @@ type SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersModelI
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDataInputConfig()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddCo
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersModelInputOutputReference) ResetDataInputConfig() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDataInputConfig",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersModelInputOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

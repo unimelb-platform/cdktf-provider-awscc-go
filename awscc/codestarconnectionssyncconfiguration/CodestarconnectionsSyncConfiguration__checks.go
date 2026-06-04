@@ -119,6 +119,14 @@ func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) validateInterpolationFo
 	return nil
 }
 
+func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) validateMoveToParameter
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -388,6 +404,14 @@ func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) validateSetProvisioners
 	return nil
 }
 
+func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) validateSetPublishDeploymentStatusParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) validateSetRepositoryLinkIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -413,6 +437,14 @@ func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) validateSetRoleArnParam
 }
 
 func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) validateSetSyncTypeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) validateSetTriggerResourceUpdateOnParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

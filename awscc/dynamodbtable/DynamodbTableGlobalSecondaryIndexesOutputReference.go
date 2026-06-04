@@ -36,8 +36,10 @@ type DynamodbTableGlobalSecondaryIndexesOutputReference interface {
 	SetInternalValue(val interface{})
 	KeySchema() DynamodbTableGlobalSecondaryIndexesKeySchemaList
 	KeySchemaInput() interface{}
+	OnDemandThroughput() DynamodbTableGlobalSecondaryIndexesOnDemandThroughputOutputReference
+	OnDemandThroughputInput() interface{}
 	Projection() DynamodbTableGlobalSecondaryIndexesProjectionOutputReference
-	ProjectionInput() *DynamodbTableGlobalSecondaryIndexesProjection
+	ProjectionInput() interface{}
 	ProvisionedThroughput() DynamodbTableGlobalSecondaryIndexesProvisionedThroughputOutputReference
 	ProvisionedThroughputInput() interface{}
 	// Experimental.
@@ -48,6 +50,8 @@ type DynamodbTableGlobalSecondaryIndexesOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	WarmThroughput() DynamodbTableGlobalSecondaryIndexesWarmThroughputOutputReference
+	WarmThroughputInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -74,10 +78,17 @@ type DynamodbTableGlobalSecondaryIndexesOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutContributorInsightsSpecification(value *DynamodbTableGlobalSecondaryIndexesContributorInsightsSpecification)
 	PutKeySchema(value interface{})
+	PutOnDemandThroughput(value *DynamodbTableGlobalSecondaryIndexesOnDemandThroughput)
 	PutProjection(value *DynamodbTableGlobalSecondaryIndexesProjection)
 	PutProvisionedThroughput(value *DynamodbTableGlobalSecondaryIndexesProvisionedThroughput)
+	PutWarmThroughput(value *DynamodbTableGlobalSecondaryIndexesWarmThroughput)
 	ResetContributorInsightsSpecification()
+	ResetIndexName()
+	ResetKeySchema()
+	ResetOnDemandThroughput()
+	ResetProjection()
 	ResetProvisionedThroughput()
+	ResetWarmThroughput()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -203,6 +214,26 @@ func (j *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) KeySchema
 	return returns
 }
 
+func (j *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) OnDemandThroughput() DynamodbTableGlobalSecondaryIndexesOnDemandThroughputOutputReference {
+	var returns DynamodbTableGlobalSecondaryIndexesOnDemandThroughputOutputReference
+	_jsii_.Get(
+		j,
+		"onDemandThroughput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) OnDemandThroughputInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onDemandThroughputInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) Projection() DynamodbTableGlobalSecondaryIndexesProjectionOutputReference {
 	var returns DynamodbTableGlobalSecondaryIndexesProjectionOutputReference
 	_jsii_.Get(
@@ -213,8 +244,8 @@ func (j *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) Projectio
 	return returns
 }
 
-func (j *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) ProjectionInput() *DynamodbTableGlobalSecondaryIndexesProjection {
-	var returns *DynamodbTableGlobalSecondaryIndexesProjection
+func (j *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) ProjectionInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"projectionInput",
@@ -258,6 +289,26 @@ func (j *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) Terraform
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) WarmThroughput() DynamodbTableGlobalSecondaryIndexesWarmThroughputOutputReference {
+	var returns DynamodbTableGlobalSecondaryIndexesWarmThroughputOutputReference
+	_jsii_.Get(
+		j,
+		"warmThroughput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) WarmThroughputInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"warmThroughputInput",
 		&returns,
 	)
 	return returns
@@ -565,6 +616,17 @@ func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) PutKeySch
 	)
 }
 
+func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) PutOnDemandThroughput(value *DynamodbTableGlobalSecondaryIndexesOnDemandThroughput) {
+	if err := d.validatePutOnDemandThroughputParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putOnDemandThroughput",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) PutProjection(value *DynamodbTableGlobalSecondaryIndexesProjection) {
 	if err := d.validatePutProjectionParameters(value); err != nil {
 		panic(err)
@@ -587,6 +649,17 @@ func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) PutProvis
 	)
 }
 
+func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) PutWarmThroughput(value *DynamodbTableGlobalSecondaryIndexesWarmThroughput) {
+	if err := d.validatePutWarmThroughputParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putWarmThroughput",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) ResetContributorInsightsSpecification() {
 	_jsii_.InvokeVoid(
 		d,
@@ -595,10 +668,50 @@ func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) ResetCont
 	)
 }
 
+func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) ResetIndexName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetIndexName",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) ResetKeySchema() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetKeySchema",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) ResetOnDemandThroughput() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetOnDemandThroughput",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) ResetProjection() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetProjection",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) ResetProvisionedThroughput() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetProvisionedThroughput",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) ResetWarmThroughput() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetWarmThroughput",
 		nil, // no parameters
 	)
 }

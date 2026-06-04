@@ -10,6 +10,7 @@ import (
 
 type DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutputReference interface {
 	cdktf.ComplexObject
+	AllowPrivilegeEscalation() cdktf.IResolvable
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -79,6 +80,16 @@ type DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityCont
 // The jsii proxy struct for DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutputReference
 type jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutputReference) AllowPrivilegeEscalation() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"allowPrivilegeEscalation",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextOutputReference) ComplexObjectIndex() interface{} {

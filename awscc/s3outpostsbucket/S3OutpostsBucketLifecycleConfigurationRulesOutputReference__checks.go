@@ -209,9 +209,25 @@ func (j *jsiiProxy_S3OutpostsBucketLifecycleConfigurationRulesOutputReference) v
 	return nil
 }
 
-func (j *jsiiProxy_S3OutpostsBucketLifecycleConfigurationRulesOutputReference) validateSetInternalValueParameters(val *S3OutpostsBucketLifecycleConfigurationRules) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_S3OutpostsBucketLifecycleConfigurationRulesOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *S3OutpostsBucketLifecycleConfigurationRules:
+		val := val.(*S3OutpostsBucketLifecycleConfigurationRules)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case S3OutpostsBucketLifecycleConfigurationRules:
+		val_ := val.(S3OutpostsBucketLifecycleConfigurationRules)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *S3OutpostsBucketLifecycleConfigurationRules; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

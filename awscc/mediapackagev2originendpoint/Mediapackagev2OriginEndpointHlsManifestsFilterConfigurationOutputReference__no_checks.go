@@ -48,6 +48,10 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsFilterConfigurationOu
 	return nil
 }
 
+func (j *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsFilterConfigurationOutputReference) validateSetClipStartTimeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Mediapackagev2OriginEndpointHlsManifestsFilterConfigurationOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	return nil
 }

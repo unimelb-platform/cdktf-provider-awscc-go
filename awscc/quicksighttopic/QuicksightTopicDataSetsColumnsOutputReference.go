@@ -52,6 +52,9 @@ type QuicksightTopicDataSetsColumnsOutputReference interface {
 	CreationStack() *[]*string
 	DefaultFormatting() QuicksightTopicDataSetsColumnsDefaultFormattingOutputReference
 	DefaultFormattingInput() interface{}
+	DisableIndexing() interface{}
+	SetDisableIndexing(val interface{})
+	DisableIndexingInput() interface{}
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -115,9 +118,11 @@ type QuicksightTopicDataSetsColumnsOutputReference interface {
 	ResetColumnDataRole()
 	ResetColumnDescription()
 	ResetColumnFriendlyName()
+	ResetColumnName()
 	ResetColumnSynonyms()
 	ResetComparativeOrder()
 	ResetDefaultFormatting()
+	ResetDisableIndexing()
 	ResetIsIncludedInTopic()
 	ResetNeverAggregateInFilter()
 	ResetNonAdditive()
@@ -364,6 +369,26 @@ func (j *jsiiProxy_QuicksightTopicDataSetsColumnsOutputReference) DefaultFormatt
 	_jsii_.Get(
 		j,
 		"defaultFormattingInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightTopicDataSetsColumnsOutputReference) DisableIndexing() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"disableIndexing",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightTopicDataSetsColumnsOutputReference) DisableIndexingInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"disableIndexingInput",
 		&returns,
 	)
 	return returns
@@ -652,6 +677,17 @@ func (j *jsiiProxy_QuicksightTopicDataSetsColumnsOutputReference)SetComplexObjec
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
+		val,
+	)
+}
+
+func (j *jsiiProxy_QuicksightTopicDataSetsColumnsOutputReference)SetDisableIndexing(val interface{}) {
+	if err := j.validateSetDisableIndexingParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"disableIndexing",
 		val,
 	)
 }
@@ -1022,6 +1058,14 @@ func (q *jsiiProxy_QuicksightTopicDataSetsColumnsOutputReference) ResetColumnFri
 	)
 }
 
+func (q *jsiiProxy_QuicksightTopicDataSetsColumnsOutputReference) ResetColumnName() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetColumnName",
+		nil, // no parameters
+	)
+}
+
 func (q *jsiiProxy_QuicksightTopicDataSetsColumnsOutputReference) ResetColumnSynonyms() {
 	_jsii_.InvokeVoid(
 		q,
@@ -1042,6 +1086,14 @@ func (q *jsiiProxy_QuicksightTopicDataSetsColumnsOutputReference) ResetDefaultFo
 	_jsii_.InvokeVoid(
 		q,
 		"resetDefaultFormatting",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightTopicDataSetsColumnsOutputReference) ResetDisableIndexing() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDisableIndexing",
 		nil, // no parameters
 	)
 }

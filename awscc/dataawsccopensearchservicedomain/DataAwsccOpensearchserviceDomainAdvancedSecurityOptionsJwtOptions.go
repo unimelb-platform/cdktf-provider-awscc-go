@@ -1,0 +1,6 @@
+package dataawsccopensearchservicedomain
+
+
+type DataAwsccOpensearchserviceDomainAdvancedSecurityOptionsJwtOptions struct {
+}
+

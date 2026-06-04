@@ -30,8 +30,8 @@ type KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfigurat
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfiguration
-	SetInternalValue(val *KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfiguration)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	RoleArn() *string
 	SetRoleArn(val *string)
 	RoleArnInput() *string
@@ -67,6 +67,8 @@ type KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfigurat
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetConnectivity()
+	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -142,8 +144,8 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthentica
 	return returns
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfigurationOutputReference) InternalValue() *KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfiguration {
-	var returns *KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfiguration
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfigurationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -253,7 +255,7 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthentica
 	)
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfigurationOutputReference)SetInternalValue(val *KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfiguration) {
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfigurationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthentica
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfigurationOutputReference) ResetConnectivity() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetConnectivity",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfigurationOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetRoleArn",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -37,12 +37,20 @@ type CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	TimestampFormat() *string
+	SetTimestampFormat(val *string)
+	TimestampFormatInput() *string
+	TimestampSource() *string
+	SetTimestampSource(val *string)
+	TimestampSourceInput() *string
 	Unit() *string
 	SetUnit(val *string)
 	UnitInput() *string
 	Value() *float64
 	SetValue(val *float64)
 	ValueInput() *float64
+	ValueRange() CustomerprofilesCalculatedAttributeDefinitionConditionsRangeValueRangeOutputReference
+	ValueRangeInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -67,6 +75,12 @@ type CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutValueRange(value *CustomerprofilesCalculatedAttributeDefinitionConditionsRangeValueRange)
+	ResetTimestampFormat()
+	ResetTimestampSource()
+	ResetUnit()
+	ResetValue()
+	ResetValueRange()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -152,6 +166,46 @@ func (j *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeO
 	return returns
 }
 
+func (j *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) TimestampFormat() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"timestampFormat",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) TimestampFormatInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"timestampFormatInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) TimestampSource() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"timestampSource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) TimestampSourceInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"timestampSourceInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) Unit() *string {
 	var returns *string
 	_jsii_.Get(
@@ -187,6 +241,26 @@ func (j *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeO
 	_jsii_.Get(
 		j,
 		"valueInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) ValueRange() CustomerprofilesCalculatedAttributeDefinitionConditionsRangeValueRangeOutputReference {
+	var returns CustomerprofilesCalculatedAttributeDefinitionConditionsRangeValueRangeOutputReference
+	_jsii_.Get(
+		j,
+		"valueRange",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) ValueRangeInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"valueRangeInput",
 		&returns,
 	)
 	return returns
@@ -271,6 +345,28 @@ func (j *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeO
 	_jsii_.Set(
 		j,
 		"terraformResource",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference)SetTimestampFormat(val *string) {
+	if err := j.validateSetTimestampFormatParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"timestampFormat",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference)SetTimestampSource(val *string) {
+	if err := j.validateSetTimestampSourceParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"timestampSource",
 		val,
 	)
 }
@@ -481,6 +577,57 @@ func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeO
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) PutValueRange(value *CustomerprofilesCalculatedAttributeDefinitionConditionsRangeValueRange) {
+	if err := c.validatePutValueRangeParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putValueRange",
+		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) ResetTimestampFormat() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetTimestampFormat",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) ResetTimestampSource() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetTimestampSource",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) ResetUnit() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetUnit",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetValue",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) ResetValueRange() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetValueRange",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

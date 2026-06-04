@@ -30,8 +30,8 @@ type LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestination
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationCloudwatch
-	SetInternalValue(val *LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationCloudwatch)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	LogPrefix() *string
 	SetLogPrefix(val *string)
 	LogPrefixInput() *string
@@ -67,6 +67,8 @@ type LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestination
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCloudwatchLogGroupArn()
+	ResetLogPrefix()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -142,8 +144,8 @@ func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSetti
 	return returns
 }
 
-func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationCloudwatchOutputReference) InternalValue() *LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationCloudwatch {
-	var returns *LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationCloudwatch
+func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationCloudwatchOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -253,7 +255,7 @@ func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSetti
 	)
 }
 
-func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationCloudwatchOutputReference)SetInternalValue(val *LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationCloudwatch) {
+func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationCloudwatchOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (l *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSetti
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationCloudwatchOutputReference) ResetCloudwatchLogGroupArn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetCloudwatchLogGroupArn",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationCloudwatchOutputReference) ResetLogPrefix() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetLogPrefix",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationCloudwatchOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

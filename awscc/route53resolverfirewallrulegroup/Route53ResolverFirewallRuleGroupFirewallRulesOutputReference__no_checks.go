@@ -76,7 +76,23 @@ func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference)
 	return nil
 }
 
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) validateSetConfidenceThresholdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) validateSetDnsThreatProtectionParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) validateSetFirewallDomainListIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) validateSetFirewallDomainRedirectionActionParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupFirewallRulesOutputReference) validateSetFirewallThreatProtectionIdParameters(val *string) error {
 	return nil
 }
 

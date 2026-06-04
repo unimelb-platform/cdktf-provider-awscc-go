@@ -25,12 +25,16 @@ type DataAwsccRoute53ResolverFirewallRuleGroupFirewallRulesOutputReference inter
 	ComplexObjectIsFromSet() *bool
 	// Experimental.
 	SetComplexObjectIsFromSet(val *bool)
+	ConfidenceThreshold() *string
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
 	//
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	DnsThreatProtection() *string
 	FirewallDomainListId() *string
+	FirewallDomainRedirectionAction() *string
+	FirewallThreatProtectionId() *string
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataAwsccRoute53ResolverFirewallRuleGroupFirewallRules
@@ -154,6 +158,16 @@ func (j *jsiiProxy_DataAwsccRoute53ResolverFirewallRuleGroupFirewallRulesOutputR
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRoute53ResolverFirewallRuleGroupFirewallRulesOutputReference) ConfidenceThreshold() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"confidenceThreshold",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRoute53ResolverFirewallRuleGroupFirewallRulesOutputReference) CreationStack() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -164,11 +178,41 @@ func (j *jsiiProxy_DataAwsccRoute53ResolverFirewallRuleGroupFirewallRulesOutputR
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRoute53ResolverFirewallRuleGroupFirewallRulesOutputReference) DnsThreatProtection() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"dnsThreatProtection",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRoute53ResolverFirewallRuleGroupFirewallRulesOutputReference) FirewallDomainListId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"firewallDomainListId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRoute53ResolverFirewallRuleGroupFirewallRulesOutputReference) FirewallDomainRedirectionAction() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"firewallDomainRedirectionAction",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRoute53ResolverFirewallRuleGroupFirewallRulesOutputReference) FirewallThreatProtectionId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"firewallThreatProtectionId",
 		&returns,
 	)
 	return returns

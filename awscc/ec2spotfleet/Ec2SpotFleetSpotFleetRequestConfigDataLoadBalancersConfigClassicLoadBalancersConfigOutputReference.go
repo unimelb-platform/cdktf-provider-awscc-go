@@ -64,6 +64,7 @@ type Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClassicLoadBalance
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutClassicLoadBalancers(value interface{})
+	ResetClassicLoadBalancers()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -446,6 +447,14 @@ func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClas
 		e,
 		"putClassicLoadBalancers",
 		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClassicLoadBalancersConfigOutputReference) ResetClassicLoadBalancers() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetClassicLoadBalancers",
+		nil, // no parameters
 	)
 }
 

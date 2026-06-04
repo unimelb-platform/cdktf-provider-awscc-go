@@ -60,7 +60,7 @@ func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigura
 	return nil
 }
 
-func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationOutputReference) validateSetInternalValueParameters(val *CleanroomsMembershipDefaultResultConfigurationOutputConfiguration) error {
+func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

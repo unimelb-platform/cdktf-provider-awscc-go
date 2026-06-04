@@ -35,6 +35,7 @@ type DataAwsccAthenaWorkGroupWorkGroupConfigurationOutputReference interface {
 	Fqn() *string
 	InternalValue() *DataAwsccAthenaWorkGroupWorkGroupConfiguration
 	SetInternalValue(val *DataAwsccAthenaWorkGroupWorkGroupConfiguration)
+	ManagedQueryResultsConfiguration() DataAwsccAthenaWorkGroupWorkGroupConfigurationManagedQueryResultsConfigurationOutputReference
 	PublishCloudwatchMetricsEnabled() cdktf.IResolvable
 	RequesterPaysEnabled() cdktf.IResolvable
 	ResultConfiguration() DataAwsccAthenaWorkGroupWorkGroupConfigurationResultConfigurationOutputReference
@@ -190,6 +191,16 @@ func (j *jsiiProxy_DataAwsccAthenaWorkGroupWorkGroupConfigurationOutputReference
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccAthenaWorkGroupWorkGroupConfigurationOutputReference) ManagedQueryResultsConfiguration() DataAwsccAthenaWorkGroupWorkGroupConfigurationManagedQueryResultsConfigurationOutputReference {
+	var returns DataAwsccAthenaWorkGroupWorkGroupConfigurationManagedQueryResultsConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"managedQueryResultsConfiguration",
 		&returns,
 	)
 	return returns

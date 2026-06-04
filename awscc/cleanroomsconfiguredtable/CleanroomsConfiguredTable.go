@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/cleanroomsconfiguredtable/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cleanrooms_configured_table awscc_cleanrooms_configured_table}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cleanrooms_configured_table awscc_cleanrooms_configured_table}.
 type CleanroomsConfiguredTable interface {
 	cdktf.TerraformResource
 	AllowedColumns() *[]*string
@@ -69,6 +69,9 @@ type CleanroomsConfiguredTable interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	SelectedAnalysisMethods() *[]*string
+	SetSelectedAnalysisMethods(val *[]*string)
+	SelectedAnalysisMethodsInput() *[]*string
 	TableReference() CleanroomsConfiguredTableTableReferenceOutputReference
 	TableReferenceInput() interface{}
 	Tags() CleanroomsConfiguredTableTagsList
@@ -103,12 +106,22 @@ type CleanroomsConfiguredTable interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -120,8 +133,12 @@ type CleanroomsConfiguredTable interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetSelectedAnalysisMethods()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -396,6 +413,26 @@ func (j *jsiiProxy_CleanroomsConfiguredTable) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_CleanroomsConfiguredTable) SelectedAnalysisMethods() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"selectedAnalysisMethods",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTable) SelectedAnalysisMethodsInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"selectedAnalysisMethodsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_CleanroomsConfiguredTable) TableReference() CleanroomsConfiguredTableTableReferenceOutputReference {
 	var returns CleanroomsConfiguredTableTableReferenceOutputReference
 	_jsii_.Get(
@@ -467,7 +504,7 @@ func (j *jsiiProxy_CleanroomsConfiguredTable) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cleanrooms_configured_table awscc_cleanrooms_configured_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cleanrooms_configured_table awscc_cleanrooms_configured_table} Resource.
 func NewCleanroomsConfiguredTable(scope constructs.Construct, id *string, config *CleanroomsConfiguredTableConfig) CleanroomsConfiguredTable {
 	_init_.Initialize()
 
@@ -485,7 +522,7 @@ func NewCleanroomsConfiguredTable(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cleanrooms_configured_table awscc_cleanrooms_configured_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cleanrooms_configured_table awscc_cleanrooms_configured_table} Resource.
 func NewCleanroomsConfiguredTable_Override(c CleanroomsConfiguredTable, scope constructs.Construct, id *string, config *CleanroomsConfiguredTableConfig) {
 	_init_.Initialize()
 
@@ -604,6 +641,17 @@ func (j *jsiiProxy_CleanroomsConfiguredTable)SetProvisioners(val *[]interface{})
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTable)SetSelectedAnalysisMethods(val *[]*string) {
+	if err := j.validateSetSelectedAnalysisMethodsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"selectedAnalysisMethods",
 		val,
 	)
 }
@@ -877,6 +925,19 @@ func (c *jsiiProxy_CleanroomsConfiguredTable) GetStringMapAttribute(terraformAtt
 	return returns
 }
 
+func (c *jsiiProxy_CleanroomsConfiguredTable) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_CleanroomsConfiguredTable) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -904,6 +965,17 @@ func (c *jsiiProxy_CleanroomsConfiguredTable) InterpolationForAttribute(terrafor
 	return returns
 }
 
+func (c *jsiiProxy_CleanroomsConfiguredTable) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CleanroomsConfiguredTable) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -912,6 +984,17 @@ func (c *jsiiProxy_CleanroomsConfiguredTable) MoveTo(moveTarget *string, index i
 		c,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTable) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -983,6 +1066,14 @@ func (c *jsiiProxy_CleanroomsConfiguredTable) ResetOverrideLogicalId() {
 	)
 }
 
+func (c *jsiiProxy_CleanroomsConfiguredTable) ResetSelectedAnalysisMethods() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetSelectedAnalysisMethods",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CleanroomsConfiguredTable) ResetTags() {
 	_jsii_.InvokeVoid(
 		c,
@@ -997,6 +1088,32 @@ func (c *jsiiProxy_CleanroomsConfiguredTable) SynthesizeAttributes() *map[string
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTable) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTable) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

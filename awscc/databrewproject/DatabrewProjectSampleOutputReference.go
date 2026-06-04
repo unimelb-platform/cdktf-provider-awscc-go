@@ -68,6 +68,7 @@ type DatabrewProjectSampleOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetSize()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (d *jsiiProxy_DatabrewProjectSampleOutputReference) ResetSize() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetSize",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatabrewProjectSampleOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetType",
 		nil, // no parameters
 	)
 }

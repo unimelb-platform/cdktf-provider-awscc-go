@@ -119,6 +119,14 @@ func (m *jsiiProxy_MediaconnectFlow) validateInterpolationForAttributeParameters
 	return nil
 }
 
+func (m *jsiiProxy_MediaconnectFlow) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (m *jsiiProxy_MediaconnectFlow) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,9 +188,59 @@ func (m *jsiiProxy_MediaconnectFlow) validateMoveToParameters(moveTarget *string
 	return nil
 }
 
+func (m *jsiiProxy_MediaconnectFlow) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (m *jsiiProxy_MediaconnectFlow) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (m *jsiiProxy_MediaconnectFlow) validatePutMaintenanceParameters(value *MediaconnectFlowMaintenance) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (m *jsiiProxy_MediaconnectFlow) validatePutMediaStreamsParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*MediaconnectFlowMediaStreams:
+		value := value.(*[]*MediaconnectFlowMediaStreams)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*MediaconnectFlowMediaStreams:
+		value_ := value.([]*MediaconnectFlowMediaStreams)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*MediaconnectFlowMediaStreams; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil
@@ -205,6 +263,48 @@ func (m *jsiiProxy_MediaconnectFlow) validatePutSourceFailoverConfigParameters(v
 	}
 	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
 		return err
+	}
+
+	return nil
+}
+
+func (m *jsiiProxy_MediaconnectFlow) validatePutSourceMonitoringConfigParameters(value *MediaconnectFlowSourceMonitoringConfig) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (m *jsiiProxy_MediaconnectFlow) validatePutVpcInterfacesParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*MediaconnectFlowVpcInterfaces:
+		value := value.(*[]*MediaconnectFlowVpcInterfaces)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*MediaconnectFlowVpcInterfaces:
+		value_ := value.([]*MediaconnectFlowVpcInterfaces)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*MediaconnectFlowVpcInterfaces; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil

@@ -31,6 +31,7 @@ type DataAwsccQuicksightDataSourcePermissionsOutputReference interface {
 	InternalValue() *DataAwsccQuicksightDataSourcePermissions
 	SetInternalValue(val *DataAwsccQuicksightDataSourcePermissions)
 	Principal() *string
+	Resource() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -143,6 +144,16 @@ func (j *jsiiProxy_DataAwsccQuicksightDataSourcePermissionsOutputReference) Prin
 	_jsii_.Get(
 		j,
 		"principal",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccQuicksightDataSourcePermissionsOutputReference) Resource() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"resource",
 		&returns,
 	)
 	return returns

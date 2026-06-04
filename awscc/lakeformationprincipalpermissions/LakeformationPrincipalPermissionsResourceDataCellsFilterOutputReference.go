@@ -73,6 +73,10 @@ type LakeformationPrincipalPermissionsResourceDataCellsFilterOutputReference int
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDatabaseName()
+	ResetName()
+	ResetTableCatalogId()
+	ResetTableName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -549,6 +553,38 @@ func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceDataCellsFilterOutpu
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceDataCellsFilterOutputReference) ResetDatabaseName() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetDatabaseName",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceDataCellsFilterOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceDataCellsFilterOutputReference) ResetTableCatalogId() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetTableCatalogId",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceDataCellsFilterOutputReference) ResetTableName() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetTableName",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceDataCellsFilterOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

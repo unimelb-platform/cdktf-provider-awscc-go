@@ -64,7 +64,7 @@ func (j *jsiiProxy_S3BucketWebsiteConfigurationRoutingRulesRedirectRuleOutputRef
 	return nil
 }
 
-func (j *jsiiProxy_S3BucketWebsiteConfigurationRoutingRulesRedirectRuleOutputReference) validateSetInternalValueParameters(val *S3BucketWebsiteConfigurationRoutingRulesRedirectRule) error {
+func (j *jsiiProxy_S3BucketWebsiteConfigurationRoutingRulesRedirectRuleOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

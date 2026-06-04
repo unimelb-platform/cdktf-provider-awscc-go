@@ -64,6 +64,7 @@ type DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorageRedsh
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetClusterName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (d *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshi
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorageRedshiftClusterSourceOutputReference) ResetClusterName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetClusterName",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorageRedshiftClusterSourceOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

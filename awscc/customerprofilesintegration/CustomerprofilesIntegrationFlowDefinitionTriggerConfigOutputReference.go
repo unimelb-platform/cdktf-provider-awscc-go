@@ -27,8 +27,8 @@ type CustomerprofilesIntegrationFlowDefinitionTriggerConfigOutputReference inter
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *CustomerprofilesIntegrationFlowDefinitionTriggerConfig
-	SetInternalValue(val *CustomerprofilesIntegrationFlowDefinitionTriggerConfig)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -68,6 +68,7 @@ type CustomerprofilesIntegrationFlowDefinitionTriggerConfigOutputReference inter
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutTriggerProperties(value *CustomerprofilesIntegrationFlowDefinitionTriggerConfigTriggerProperties)
 	ResetTriggerProperties()
+	ResetTriggerType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -123,8 +124,8 @@ func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTriggerConfigOutputR
 	return returns
 }
 
-func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTriggerConfigOutputReference) InternalValue() *CustomerprofilesIntegrationFlowDefinitionTriggerConfig {
-	var returns *CustomerprofilesIntegrationFlowDefinitionTriggerConfig
+func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTriggerConfigOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -243,7 +244,7 @@ func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTriggerConfigOutputR
 	)
 }
 
-func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTriggerConfigOutputReference)SetInternalValue(val *CustomerprofilesIntegrationFlowDefinitionTriggerConfig) {
+func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTriggerConfigOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -488,6 +489,14 @@ func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTriggerConfigOutputR
 	_jsii_.InvokeVoid(
 		c,
 		"resetTriggerProperties",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionTriggerConfigOutputReference) ResetTriggerType() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetTriggerType",
 		nil, // no parameters
 	)
 }

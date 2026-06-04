@@ -60,7 +60,7 @@ func (j *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationInstanceAccessC
 	return nil
 }
 
-func (j *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationAccessControlAttributesOutputReference) validateSetInternalValueParameters(val *SsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationAccessControlAttributes) error {
+func (j *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationAccessControlAttributesOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

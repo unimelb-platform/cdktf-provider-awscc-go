@@ -70,6 +70,9 @@ type AppflowFlowMetadataCatalogConfigGlueDataCatalogOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDatabaseName()
+	ResetRoleArn()
+	ResetTablePrefix()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (a *jsiiProxy_AppflowFlowMetadataCatalogConfigGlueDataCatalogOutputReferenc
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AppflowFlowMetadataCatalogConfigGlueDataCatalogOutputReference) ResetDatabaseName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetDatabaseName",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowFlowMetadataCatalogConfigGlueDataCatalogOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowFlowMetadataCatalogConfigGlueDataCatalogOutputReference) ResetTablePrefix() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetTablePrefix",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AppflowFlowMetadataCatalogConfigGlueDataCatalogOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

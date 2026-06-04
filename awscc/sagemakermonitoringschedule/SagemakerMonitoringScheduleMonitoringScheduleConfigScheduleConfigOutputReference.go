@@ -72,6 +72,7 @@ type SagemakerMonitoringScheduleMonitoringScheduleConfigScheduleConfigOutputRefe
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetDataAnalysisEndTime()
 	ResetDataAnalysisStartTime()
+	ResetScheduleExpression()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (s *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigScheduleCo
 	_jsii_.InvokeVoid(
 		s,
 		"resetDataAnalysisStartTime",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigScheduleConfigOutputReference) ResetScheduleExpression() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetScheduleExpression",
 		nil, // no parameters
 	)
 }

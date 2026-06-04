@@ -67,6 +67,8 @@ type IamRolePoliciesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPolicyDocument()
+	ResetPolicyName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (i *jsiiProxy_IamRolePoliciesOutputReference) InterpolationForAttribute(pro
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IamRolePoliciesOutputReference) ResetPolicyDocument() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetPolicyDocument",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IamRolePoliciesOutputReference) ResetPolicyName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetPolicyName",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IamRolePoliciesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -56,6 +56,10 @@ func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutp
 	return nil
 }
 
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference) validateSetAdditionalAnalysesParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference) validateSetAllowedJoinOperatorsParameters(val *[]*string) error {
 	return nil
 }

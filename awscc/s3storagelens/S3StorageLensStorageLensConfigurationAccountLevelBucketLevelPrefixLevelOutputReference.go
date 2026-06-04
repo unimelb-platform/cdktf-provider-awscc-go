@@ -30,7 +30,7 @@ type S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelOutp
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	StorageMetrics() S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetricsOutputReference
-	StorageMetricsInput() *S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetrics
+	StorageMetricsInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelOutp
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutStorageMetrics(value *S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetrics)
+	ResetStorageMetrics()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -139,8 +140,8 @@ func (j *jsiiProxy_S3StorageLensStorageLensConfigurationAccountLevelBucketLevelP
 	return returns
 }
 
-func (j *jsiiProxy_S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelOutputReference) StorageMetricsInput() *S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetrics {
-	var returns *S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetrics
+func (j *jsiiProxy_S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelOutputReference) StorageMetricsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"storageMetricsInput",
@@ -446,6 +447,14 @@ func (s *jsiiProxy_S3StorageLensStorageLensConfigurationAccountLevelBucketLevelP
 		s,
 		"putStorageMetrics",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelOutputReference) ResetStorageMetrics() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStorageMetrics",
+		nil, // no parameters
 	)
 }
 

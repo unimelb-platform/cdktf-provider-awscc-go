@@ -67,6 +67,8 @@ type LocationRouteCalculatorTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (l *jsiiProxy_LocationRouteCalculatorTagsOutputReference) InterpolationForA
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LocationRouteCalculatorTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LocationRouteCalculatorTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LocationRouteCalculatorTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

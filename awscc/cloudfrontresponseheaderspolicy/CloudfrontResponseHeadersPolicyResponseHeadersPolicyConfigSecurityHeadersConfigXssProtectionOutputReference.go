@@ -74,6 +74,8 @@ type CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigSecurityHeadersCo
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetModeBlock()
+	ResetOverride()
+	ResetProtection()
 	ResetReportUri()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -557,6 +559,22 @@ func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigSec
 	_jsii_.InvokeVoid(
 		c,
 		"resetModeBlock",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigSecurityHeadersConfigXssProtectionOutputReference) ResetOverride() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetOverride",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigSecurityHeadersConfigXssProtectionOutputReference) ResetProtection() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetProtection",
 		nil, // no parameters
 	)
 }

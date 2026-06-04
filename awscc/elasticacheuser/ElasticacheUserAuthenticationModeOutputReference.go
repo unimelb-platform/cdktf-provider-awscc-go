@@ -68,6 +68,7 @@ type ElasticacheUserAuthenticationModeOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetPasswords()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (e *jsiiProxy_ElasticacheUserAuthenticationModeOutputReference) ResetPasswo
 	_jsii_.InvokeVoid(
 		e,
 		"resetPasswords",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ElasticacheUserAuthenticationModeOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetType",
 		nil, // no parameters
 	)
 }

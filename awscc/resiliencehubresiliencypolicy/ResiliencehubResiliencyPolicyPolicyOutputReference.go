@@ -10,6 +10,8 @@ import (
 
 type ResiliencehubResiliencyPolicyPolicyOutputReference interface {
 	cdktf.ComplexObject
+	Az() ResiliencehubResiliencyPolicyPolicyAzOutputReference
+	AzInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -27,14 +29,14 @@ type ResiliencehubResiliencyPolicyPolicyOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
+	Hardware() ResiliencehubResiliencyPolicyPolicyHardwareOutputReference
+	HardwareInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
-	RpoInSecs() *float64
-	SetRpoInSecs(val *float64)
-	RpoInSecsInput() *float64
-	RtoInSecs() *float64
-	SetRtoInSecs(val *float64)
-	RtoInSecsInput() *float64
+	Region() ResiliencehubResiliencyPolicyPolicyRegionOutputReference
+	RegionInput() interface{}
+	SoftwareAttribute() ResiliencehubResiliencyPolicyPolicySoftwareOutputReference
+	SoftwareAttributeInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,8 +69,11 @@ type ResiliencehubResiliencyPolicyPolicyOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
-	ResetRpoInSecs()
-	ResetRtoInSecs()
+	PutAz(value *ResiliencehubResiliencyPolicyPolicyAz)
+	PutHardware(value *ResiliencehubResiliencyPolicyPolicyHardware)
+	PutRegion(value *ResiliencehubResiliencyPolicyPolicyRegion)
+	PutSoftwareAttribute(value *ResiliencehubResiliencyPolicyPolicySoftware)
+	ResetRegion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -82,6 +87,26 @@ type ResiliencehubResiliencyPolicyPolicyOutputReference interface {
 // The jsii proxy struct for ResiliencehubResiliencyPolicyPolicyOutputReference
 type jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) Az() ResiliencehubResiliencyPolicyPolicyAzOutputReference {
+	var returns ResiliencehubResiliencyPolicyPolicyAzOutputReference
+	_jsii_.Get(
+		j,
+		"az",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) AzInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"azInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) ComplexObjectIndex() interface{} {
@@ -124,6 +149,26 @@ func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) Fqn() *st
 	return returns
 }
 
+func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) Hardware() ResiliencehubResiliencyPolicyPolicyHardwareOutputReference {
+	var returns ResiliencehubResiliencyPolicyPolicyHardwareOutputReference
+	_jsii_.Get(
+		j,
+		"hardware",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) HardwareInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"hardwareInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) InternalValue() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -134,41 +179,41 @@ func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) InternalV
 	return returns
 }
 
-func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) RpoInSecs() *float64 {
-	var returns *float64
+func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) Region() ResiliencehubResiliencyPolicyPolicyRegionOutputReference {
+	var returns ResiliencehubResiliencyPolicyPolicyRegionOutputReference
 	_jsii_.Get(
 		j,
-		"rpoInSecs",
+		"region",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) RpoInSecsInput() *float64 {
-	var returns *float64
+func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) RegionInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
-		"rpoInSecsInput",
+		"regionInput",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) RtoInSecs() *float64 {
-	var returns *float64
+func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) SoftwareAttribute() ResiliencehubResiliencyPolicyPolicySoftwareOutputReference {
+	var returns ResiliencehubResiliencyPolicyPolicySoftwareOutputReference
 	_jsii_.Get(
 		j,
-		"rtoInSecs",
+		"softwareAttribute",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) RtoInSecsInput() *float64 {
-	var returns *float64
+func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) SoftwareAttributeInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
-		"rtoInSecsInput",
+		"softwareAttributeInput",
 		&returns,
 	)
 	return returns
@@ -195,29 +240,29 @@ func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) Terraform
 }
 
 
-func NewResiliencehubResiliencyPolicyPolicyOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectKey *string) ResiliencehubResiliencyPolicyPolicyOutputReference {
+func NewResiliencehubResiliencyPolicyPolicyOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) ResiliencehubResiliencyPolicyPolicyOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewResiliencehubResiliencyPolicyPolicyOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectKey); err != nil {
+	if err := validateNewResiliencehubResiliencyPolicyPolicyOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
 		panic(err)
 	}
 	j := jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference{}
 
 	_jsii_.Create(
 		"awscc.resiliencehubResiliencyPolicy.ResiliencehubResiliencyPolicyPolicyOutputReference",
-		[]interface{}{terraformResource, terraformAttribute, complexObjectKey},
+		[]interface{}{terraformResource, terraformAttribute},
 		&j,
 	)
 
 	return &j
 }
 
-func NewResiliencehubResiliencyPolicyPolicyOutputReference_Override(r ResiliencehubResiliencyPolicyPolicyOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectKey *string) {
+func NewResiliencehubResiliencyPolicyPolicyOutputReference_Override(r ResiliencehubResiliencyPolicyPolicyOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
 	_init_.Initialize()
 
 	_jsii_.Create(
 		"awscc.resiliencehubResiliencyPolicy.ResiliencehubResiliencyPolicyPolicyOutputReference",
-		[]interface{}{terraformResource, terraformAttribute, complexObjectKey},
+		[]interface{}{terraformResource, terraformAttribute},
 		r,
 	)
 }
@@ -251,28 +296,6 @@ func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference)SetInterna
 	_jsii_.Set(
 		j,
 		"internalValue",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference)SetRpoInSecs(val *float64) {
-	if err := j.validateSetRpoInSecsParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"rpoInSecs",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference)SetRtoInSecs(val *float64) {
-	if err := j.validateSetRtoInSecsParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"rtoInSecs",
 		val,
 	)
 }
@@ -485,18 +508,54 @@ func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) Interpola
 	return returns
 }
 
-func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) ResetRpoInSecs() {
+func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) PutAz(value *ResiliencehubResiliencyPolicyPolicyAz) {
+	if err := r.validatePutAzParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
-		"resetRpoInSecs",
-		nil, // no parameters
+		"putAz",
+		[]interface{}{value},
 	)
 }
 
-func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) ResetRtoInSecs() {
+func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) PutHardware(value *ResiliencehubResiliencyPolicyPolicyHardware) {
+	if err := r.validatePutHardwareParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
-		"resetRtoInSecs",
+		"putHardware",
+		[]interface{}{value},
+	)
+}
+
+func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) PutRegion(value *ResiliencehubResiliencyPolicyPolicyRegion) {
+	if err := r.validatePutRegionParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putRegion",
+		[]interface{}{value},
+	)
+}
+
+func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) PutSoftwareAttribute(value *ResiliencehubResiliencyPolicyPolicySoftware) {
+	if err := r.validatePutSoftwareAttributeParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putSoftwareAttribute",
+		[]interface{}{value},
+	)
+}
+
+func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) ResetRegion() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetRegion",
 		nil, // no parameters
 	)
 }

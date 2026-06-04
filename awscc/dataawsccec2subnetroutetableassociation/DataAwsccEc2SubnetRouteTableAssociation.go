@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2subnetroutetableassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_subnet_route_table_association awscc_ec2_subnet_route_table_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_subnet_route_table_association awscc_ec2_subnet_route_table_association}.
 type DataAwsccEc2SubnetRouteTableAssociation interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -49,6 +49,7 @@ type DataAwsccEc2SubnetRouteTableAssociation interface {
 	RawOverrides() interface{}
 	RouteTableId() *string
 	SubnetId() *string
+	SubnetRouteTableAssociationId() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -84,6 +85,10 @@ type DataAwsccEc2SubnetRouteTableAssociation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -248,6 +253,16 @@ func (j *jsiiProxy_DataAwsccEc2SubnetRouteTableAssociation) SubnetId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2SubnetRouteTableAssociation) SubnetRouteTableAssociationId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"subnetRouteTableAssociationId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2SubnetRouteTableAssociation) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -279,7 +294,7 @@ func (j *jsiiProxy_DataAwsccEc2SubnetRouteTableAssociation) TerraformResourceTyp
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_subnet_route_table_association awscc_ec2_subnet_route_table_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_subnet_route_table_association awscc_ec2_subnet_route_table_association} Data Source.
 func NewDataAwsccEc2SubnetRouteTableAssociation(scope constructs.Construct, id *string, config *DataAwsccEc2SubnetRouteTableAssociationConfig) DataAwsccEc2SubnetRouteTableAssociation {
 	_init_.Initialize()
 
@@ -297,7 +312,7 @@ func NewDataAwsccEc2SubnetRouteTableAssociation(scope constructs.Construct, id *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_subnet_route_table_association awscc_ec2_subnet_route_table_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_subnet_route_table_association awscc_ec2_subnet_route_table_association} Data Source.
 func NewDataAwsccEc2SubnetRouteTableAssociation_Override(d DataAwsccEc2SubnetRouteTableAssociation, scope constructs.Construct, id *string, config *DataAwsccEc2SubnetRouteTableAssociationConfig) {
 	_init_.Initialize()
 
@@ -664,6 +679,32 @@ func (d *jsiiProxy_DataAwsccEc2SubnetRouteTableAssociation) SynthesizeAttributes
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2SubnetRouteTableAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2SubnetRouteTableAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

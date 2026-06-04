@@ -71,6 +71,7 @@ type IoteventsAlarmModelAlarmEventActionsAlarmActionsSqsOutputReference interfac
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutPayload(value *IoteventsAlarmModelAlarmEventActionsAlarmActionsSqsPayload)
 	ResetPayload()
+	ResetQueueUrl()
 	ResetUseBase64()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -523,6 +524,14 @@ func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsSqsOutputRefe
 	_jsii_.InvokeVoid(
 		i,
 		"resetPayload",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsSqsOutputReference) ResetQueueUrl() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetQueueUrl",
 		nil, // no parameters
 	)
 }

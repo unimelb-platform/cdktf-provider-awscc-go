@@ -21,11 +21,11 @@ type IvsStreamKeyConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Channel ARN for the stream.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ivs_stream_key#channel_arn IvsStreamKey#channel_arn}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ivs_stream_key#channel_arn IvsStreamKey#channel_arn}
 	ChannelArn *string `field:"required" json:"channelArn" yaml:"channelArn"`
 	// A list of key-value pairs that contain metadata for the asset model.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ivs_stream_key#tags IvsStreamKey#tags}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ivs_stream_key#tags IvsStreamKey#tags}
 	Tags interface{} `field:"optional" json:"tags" yaml:"tags"`
 }
 

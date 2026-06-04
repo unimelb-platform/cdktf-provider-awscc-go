@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/chatbotslackchannelconfiguration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/chatbot_slack_channel_configuration awscc_chatbot_slack_channel_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/chatbot_slack_channel_configuration awscc_chatbot_slack_channel_configuration}.
 type ChatbotSlackChannelConfiguration interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -28,6 +28,9 @@ type ChatbotSlackChannelConfiguration interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	CustomizationResourceArns() *[]*string
+	SetCustomizationResourceArns(val *[]*string)
+	CustomizationResourceArnsInput() *[]*string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -75,6 +78,8 @@ type ChatbotSlackChannelConfiguration interface {
 	SnsTopicArns() *[]*string
 	SetSnsTopicArns(val *[]*string)
 	SnsTopicArnsInput() *[]*string
+	Tags() ChatbotSlackChannelConfigurationTagsList
+	TagsInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -108,23 +113,39 @@ type ChatbotSlackChannelConfiguration interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTags(value interface{})
+	ResetCustomizationResourceArns()
 	ResetGuardrailPolicies()
 	ResetLoggingLevel()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetSnsTopicArns()
+	ResetTags()
 	ResetUserRoleRequired()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -204,6 +225,26 @@ func (j *jsiiProxy_ChatbotSlackChannelConfiguration) Count() interface{} {
 	_jsii_.Get(
 		j,
 		"count",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ChatbotSlackChannelConfiguration) CustomizationResourceArns() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"customizationResourceArns",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ChatbotSlackChannelConfiguration) CustomizationResourceArnsInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"customizationResourceArnsInput",
 		&returns,
 	)
 	return returns
@@ -429,6 +470,26 @@ func (j *jsiiProxy_ChatbotSlackChannelConfiguration) SnsTopicArnsInput() *[]*str
 	return returns
 }
 
+func (j *jsiiProxy_ChatbotSlackChannelConfiguration) Tags() ChatbotSlackChannelConfigurationTagsList {
+	var returns ChatbotSlackChannelConfigurationTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ChatbotSlackChannelConfiguration) TagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ChatbotSlackChannelConfiguration) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -480,7 +541,7 @@ func (j *jsiiProxy_ChatbotSlackChannelConfiguration) UserRoleRequiredInput() int
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/chatbot_slack_channel_configuration awscc_chatbot_slack_channel_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/chatbot_slack_channel_configuration awscc_chatbot_slack_channel_configuration} Resource.
 func NewChatbotSlackChannelConfiguration(scope constructs.Construct, id *string, config *ChatbotSlackChannelConfigurationConfig) ChatbotSlackChannelConfiguration {
 	_init_.Initialize()
 
@@ -498,7 +559,7 @@ func NewChatbotSlackChannelConfiguration(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/chatbot_slack_channel_configuration awscc_chatbot_slack_channel_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/chatbot_slack_channel_configuration awscc_chatbot_slack_channel_configuration} Resource.
 func NewChatbotSlackChannelConfiguration_Override(c ChatbotSlackChannelConfiguration, scope constructs.Construct, id *string, config *ChatbotSlackChannelConfigurationConfig) {
 	_init_.Initialize()
 
@@ -538,6 +599,17 @@ func (j *jsiiProxy_ChatbotSlackChannelConfiguration)SetCount(val interface{}) {
 	_jsii_.Set(
 		j,
 		"count",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ChatbotSlackChannelConfiguration)SetCustomizationResourceArns(val *[]*string) {
+	if err := j.validateSetCustomizationResourceArnsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"customizationResourceArns",
 		val,
 	)
 }
@@ -934,6 +1006,19 @@ func (c *jsiiProxy_ChatbotSlackChannelConfiguration) GetStringMapAttribute(terra
 	return returns
 }
 
+func (c *jsiiProxy_ChatbotSlackChannelConfiguration) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_ChatbotSlackChannelConfiguration) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -961,6 +1046,17 @@ func (c *jsiiProxy_ChatbotSlackChannelConfiguration) InterpolationForAttribute(t
 	return returns
 }
 
+func (c *jsiiProxy_ChatbotSlackChannelConfiguration) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_ChatbotSlackChannelConfiguration) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -972,6 +1068,17 @@ func (c *jsiiProxy_ChatbotSlackChannelConfiguration) MoveTo(moveTarget *string, 
 	)
 }
 
+func (c *jsiiProxy_ChatbotSlackChannelConfiguration) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_ChatbotSlackChannelConfiguration) OverrideLogicalId(newLogicalId *string) {
 	if err := c.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -980,6 +1087,25 @@ func (c *jsiiProxy_ChatbotSlackChannelConfiguration) OverrideLogicalId(newLogica
 		c,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (c *jsiiProxy_ChatbotSlackChannelConfiguration) PutTags(value interface{}) {
+	if err := c.validatePutTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putTags",
+		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_ChatbotSlackChannelConfiguration) ResetCustomizationResourceArns() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetCustomizationResourceArns",
+		nil, // no parameters
 	)
 }
 
@@ -1015,6 +1141,14 @@ func (c *jsiiProxy_ChatbotSlackChannelConfiguration) ResetSnsTopicArns() {
 	)
 }
 
+func (c *jsiiProxy_ChatbotSlackChannelConfiguration) ResetTags() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetTags",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_ChatbotSlackChannelConfiguration) ResetUserRoleRequired() {
 	_jsii_.InvokeVoid(
 		c,
@@ -1029,6 +1163,32 @@ func (c *jsiiProxy_ChatbotSlackChannelConfiguration) SynthesizeAttributes() *map
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_ChatbotSlackChannelConfiguration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_ChatbotSlackChannelConfiguration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

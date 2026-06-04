@@ -94,6 +94,7 @@ type MediaconnectFlowSourceDecryptionAOutputReference interface {
 	ResetKeyType()
 	ResetRegion()
 	ResetResourceId()
+	ResetRoleArn()
 	ResetSecretArn()
 	ResetUrl()
 	// Produce the Token's value at resolution time.
@@ -773,6 +774,14 @@ func (m *jsiiProxy_MediaconnectFlowSourceDecryptionAOutputReference) ResetResour
 	_jsii_.InvokeVoid(
 		m,
 		"resetResourceId",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectFlowSourceDecryptionAOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetRoleArn",
 		nil, // no parameters
 	)
 }

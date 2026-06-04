@@ -67,6 +67,8 @@ type Route53HostedZoneVpCsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetVpcId()
+	ResetVpcRegion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (r *jsiiProxy_Route53HostedZoneVpCsOutputReference) InterpolationForAttribu
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_Route53HostedZoneVpCsOutputReference) ResetVpcId() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetVpcId",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Route53HostedZoneVpCsOutputReference) ResetVpcRegion() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetVpcRegion",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_Route53HostedZoneVpCsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

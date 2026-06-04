@@ -29,6 +29,7 @@ type DataAwsccSesConfigurationSetDeliveryOptionsOutputReference interface {
 	Fqn() *string
 	InternalValue() *DataAwsccSesConfigurationSetDeliveryOptions
 	SetInternalValue(val *DataAwsccSesConfigurationSetDeliveryOptions)
+	MaxDeliverySeconds() *float64
 	SendingPoolName() *string
 	// Experimental.
 	TerraformAttribute() *string
@@ -123,6 +124,16 @@ func (j *jsiiProxy_DataAwsccSesConfigurationSetDeliveryOptionsOutputReference) I
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSesConfigurationSetDeliveryOptionsOutputReference) MaxDeliverySeconds() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxDeliverySeconds",
 		&returns,
 	)
 	return returns

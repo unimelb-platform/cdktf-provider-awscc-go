@@ -45,6 +45,8 @@ type SagemakerFeatureGroupOnlineStoreConfigOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	TtlDuration() SagemakerFeatureGroupOnlineStoreConfigTtlDurationOutputReference
+	TtlDurationInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -70,9 +72,11 @@ type SagemakerFeatureGroupOnlineStoreConfigOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutSecurityConfig(value *SagemakerFeatureGroupOnlineStoreConfigSecurityConfig)
+	PutTtlDuration(value *SagemakerFeatureGroupOnlineStoreConfigTtlDuration)
 	ResetEnableOnlineStore()
 	ResetSecurityConfig()
 	ResetStorageType()
+	ResetTtlDuration()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -213,6 +217,26 @@ func (j *jsiiProxy_SagemakerFeatureGroupOnlineStoreConfigOutputReference) Terraf
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerFeatureGroupOnlineStoreConfigOutputReference) TtlDuration() SagemakerFeatureGroupOnlineStoreConfigTtlDurationOutputReference {
+	var returns SagemakerFeatureGroupOnlineStoreConfigTtlDurationOutputReference
+	_jsii_.Get(
+		j,
+		"ttlDuration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerFeatureGroupOnlineStoreConfigOutputReference) TtlDurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"ttlDurationInput",
 		&returns,
 	)
 	return returns
@@ -520,6 +544,17 @@ func (s *jsiiProxy_SagemakerFeatureGroupOnlineStoreConfigOutputReference) PutSec
 	)
 }
 
+func (s *jsiiProxy_SagemakerFeatureGroupOnlineStoreConfigOutputReference) PutTtlDuration(value *SagemakerFeatureGroupOnlineStoreConfigTtlDuration) {
+	if err := s.validatePutTtlDurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putTtlDuration",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_SagemakerFeatureGroupOnlineStoreConfigOutputReference) ResetEnableOnlineStore() {
 	_jsii_.InvokeVoid(
 		s,
@@ -540,6 +575,14 @@ func (s *jsiiProxy_SagemakerFeatureGroupOnlineStoreConfigOutputReference) ResetS
 	_jsii_.InvokeVoid(
 		s,
 		"resetStorageType",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerFeatureGroupOnlineStoreConfigOutputReference) ResetTtlDuration() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTtlDuration",
 		nil, // no parameters
 	)
 }

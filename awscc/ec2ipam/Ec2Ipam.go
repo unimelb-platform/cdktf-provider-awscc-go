@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2ipam/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_ipam awscc_ec2_ipam}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_ipam awscc_ec2_ipam}.
 type Ec2Ipam interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -27,6 +27,8 @@ type Ec2Ipam interface {
 	SetCount(val interface{})
 	DefaultResourceDiscoveryAssociationId() *string
 	DefaultResourceDiscoveryId() *string
+	DefaultResourceDiscoveryOrganizationalUnitExclusions() Ec2IpamDefaultResourceDiscoveryOrganizationalUnitExclusionsList
+	DefaultResourceDiscoveryOrganizationalUnitExclusionsInput() interface{}
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -34,6 +36,9 @@ type Ec2Ipam interface {
 	Description() *string
 	SetDescription(val *string)
 	DescriptionInput() *string
+	EnablePrivateGua() interface{}
+	SetEnablePrivateGua(val interface{})
+	EnablePrivateGuaInput() interface{}
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -48,6 +53,9 @@ type Ec2Ipam interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	MeteredAccount() *string
+	SetMeteredAccount(val *string)
+	MeteredAccountInput() *string
 	// The tree node.
 	Node() constructs.Node
 	OperatingRegions() Ec2IpamOperatingRegionsList
@@ -101,18 +109,32 @@ type Ec2Ipam interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutDefaultResourceDiscoveryOrganizationalUnitExclusions(value interface{})
 	PutOperatingRegions(value interface{})
 	PutTags(value interface{})
+	ResetDefaultResourceDiscoveryOrganizationalUnitExclusions()
 	ResetDescription()
+	ResetEnablePrivateGua()
+	ResetMeteredAccount()
 	ResetOperatingRegions()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -120,6 +142,9 @@ type Ec2Ipam interface {
 	ResetTags()
 	ResetTier()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -204,6 +229,26 @@ func (j *jsiiProxy_Ec2Ipam) DefaultResourceDiscoveryId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2Ipam) DefaultResourceDiscoveryOrganizationalUnitExclusions() Ec2IpamDefaultResourceDiscoveryOrganizationalUnitExclusionsList {
+	var returns Ec2IpamDefaultResourceDiscoveryOrganizationalUnitExclusionsList
+	_jsii_.Get(
+		j,
+		"defaultResourceDiscoveryOrganizationalUnitExclusions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2Ipam) DefaultResourceDiscoveryOrganizationalUnitExclusionsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"defaultResourceDiscoveryOrganizationalUnitExclusionsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2Ipam) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -229,6 +274,26 @@ func (j *jsiiProxy_Ec2Ipam) DescriptionInput() *string {
 	_jsii_.Get(
 		j,
 		"descriptionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2Ipam) EnablePrivateGua() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enablePrivateGua",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2Ipam) EnablePrivateGuaInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enablePrivateGuaInput",
 		&returns,
 	)
 	return returns
@@ -289,6 +354,26 @@ func (j *jsiiProxy_Ec2Ipam) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	_jsii_.Get(
 		j,
 		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2Ipam) MeteredAccount() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"meteredAccount",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2Ipam) MeteredAccountInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"meteredAccountInput",
 		&returns,
 	)
 	return returns
@@ -465,7 +550,7 @@ func (j *jsiiProxy_Ec2Ipam) TierInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_ipam awscc_ec2_ipam} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_ipam awscc_ec2_ipam} Resource.
 func NewEc2Ipam(scope constructs.Construct, id *string, config *Ec2IpamConfig) Ec2Ipam {
 	_init_.Initialize()
 
@@ -483,7 +568,7 @@ func NewEc2Ipam(scope constructs.Construct, id *string, config *Ec2IpamConfig) E
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_ipam awscc_ec2_ipam} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_ipam awscc_ec2_ipam} Resource.
 func NewEc2Ipam_Override(e Ec2Ipam, scope constructs.Construct, id *string, config *Ec2IpamConfig) {
 	_init_.Initialize()
 
@@ -535,6 +620,17 @@ func (j *jsiiProxy_Ec2Ipam)SetDescription(val *string) {
 	)
 }
 
+func (j *jsiiProxy_Ec2Ipam)SetEnablePrivateGua(val interface{}) {
+	if err := j.validateSetEnablePrivateGuaParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enablePrivateGua",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Ec2Ipam)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
@@ -550,6 +646,17 @@ func (j *jsiiProxy_Ec2Ipam)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
 	_jsii_.Set(
 		j,
 		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2Ipam)SetMeteredAccount(val *string) {
+	if err := j.validateSetMeteredAccountParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"meteredAccount",
 		val,
 	)
 }
@@ -853,6 +960,19 @@ func (e *jsiiProxy_Ec2Ipam) GetStringMapAttribute(terraformAttribute *string) *m
 	return returns
 }
 
+func (e *jsiiProxy_Ec2Ipam) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2Ipam) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -880,6 +1000,17 @@ func (e *jsiiProxy_Ec2Ipam) InterpolationForAttribute(terraformAttribute *string
 	return returns
 }
 
+func (e *jsiiProxy_Ec2Ipam) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2Ipam) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -891,6 +1022,17 @@ func (e *jsiiProxy_Ec2Ipam) MoveTo(moveTarget *string, index interface{}) {
 	)
 }
 
+func (e *jsiiProxy_Ec2Ipam) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2Ipam) OverrideLogicalId(newLogicalId *string) {
 	if err := e.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -899,6 +1041,17 @@ func (e *jsiiProxy_Ec2Ipam) OverrideLogicalId(newLogicalId *string) {
 		e,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (e *jsiiProxy_Ec2Ipam) PutDefaultResourceDiscoveryOrganizationalUnitExclusions(value interface{}) {
+	if err := e.validatePutDefaultResourceDiscoveryOrganizationalUnitExclusionsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putDefaultResourceDiscoveryOrganizationalUnitExclusions",
+		[]interface{}{value},
 	)
 }
 
@@ -924,10 +1077,34 @@ func (e *jsiiProxy_Ec2Ipam) PutTags(value interface{}) {
 	)
 }
 
+func (e *jsiiProxy_Ec2Ipam) ResetDefaultResourceDiscoveryOrganizationalUnitExclusions() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetDefaultResourceDiscoveryOrganizationalUnitExclusions",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_Ec2Ipam) ResetDescription() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2Ipam) ResetEnablePrivateGua() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetEnablePrivateGua",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2Ipam) ResetMeteredAccount() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetMeteredAccount",
 		nil, // no parameters
 	)
 }
@@ -970,6 +1147,32 @@ func (e *jsiiProxy_Ec2Ipam) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2Ipam) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2Ipam) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

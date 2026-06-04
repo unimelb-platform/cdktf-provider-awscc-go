@@ -70,6 +70,7 @@ type MediaconnectBridgeSourceFailoverConfigOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutSourcePriority(value *MediaconnectBridgeSourceFailoverConfigSourcePriority)
+	ResetFailoverMode()
 	ResetSourcePriority()
 	ResetState()
 	// Produce the Token's value at resolution time.
@@ -516,6 +517,14 @@ func (m *jsiiProxy_MediaconnectBridgeSourceFailoverConfigOutputReference) PutSou
 		m,
 		"putSourcePriority",
 		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_MediaconnectBridgeSourceFailoverConfigOutputReference) ResetFailoverMode() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetFailoverMode",
+		nil, // no parameters
 	)
 }
 

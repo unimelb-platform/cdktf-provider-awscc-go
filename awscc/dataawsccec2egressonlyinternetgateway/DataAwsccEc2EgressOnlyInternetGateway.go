@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2egressonlyinternetgateway/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_egress_only_internet_gateway awscc_ec2_egress_only_internet_gateway}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_egress_only_internet_gateway awscc_ec2_egress_only_internet_gateway}.
 type DataAwsccEc2EgressOnlyInternetGateway interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -24,6 +24,7 @@ type DataAwsccEc2EgressOnlyInternetGateway interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	EgressOnlyInternetGatewayId() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -47,6 +48,7 @@ type DataAwsccEc2EgressOnlyInternetGateway interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	Tags() DataAwsccEc2EgressOnlyInternetGatewayTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -83,6 +85,10 @@ type DataAwsccEc2EgressOnlyInternetGateway interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -132,6 +138,16 @@ func (j *jsiiProxy_DataAwsccEc2EgressOnlyInternetGateway) DependsOn() *[]*string
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2EgressOnlyInternetGateway) EgressOnlyInternetGatewayId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"egressOnlyInternetGatewayId",
 		&returns,
 	)
 	return returns
@@ -227,6 +243,16 @@ func (j *jsiiProxy_DataAwsccEc2EgressOnlyInternetGateway) RawOverrides() interfa
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2EgressOnlyInternetGateway) Tags() DataAwsccEc2EgressOnlyInternetGatewayTagsList {
+	var returns DataAwsccEc2EgressOnlyInternetGatewayTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2EgressOnlyInternetGateway) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -268,7 +294,7 @@ func (j *jsiiProxy_DataAwsccEc2EgressOnlyInternetGateway) VpcId() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_egress_only_internet_gateway awscc_ec2_egress_only_internet_gateway} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_egress_only_internet_gateway awscc_ec2_egress_only_internet_gateway} Data Source.
 func NewDataAwsccEc2EgressOnlyInternetGateway(scope constructs.Construct, id *string, config *DataAwsccEc2EgressOnlyInternetGatewayConfig) DataAwsccEc2EgressOnlyInternetGateway {
 	_init_.Initialize()
 
@@ -286,7 +312,7 @@ func NewDataAwsccEc2EgressOnlyInternetGateway(scope constructs.Construct, id *st
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_egress_only_internet_gateway awscc_ec2_egress_only_internet_gateway} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_egress_only_internet_gateway awscc_ec2_egress_only_internet_gateway} Data Source.
 func NewDataAwsccEc2EgressOnlyInternetGateway_Override(d DataAwsccEc2EgressOnlyInternetGateway, scope constructs.Construct, id *string, config *DataAwsccEc2EgressOnlyInternetGatewayConfig) {
 	_init_.Initialize()
 
@@ -653,6 +679,32 @@ func (d *jsiiProxy_DataAwsccEc2EgressOnlyInternetGateway) SynthesizeAttributes()
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2EgressOnlyInternetGateway) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2EgressOnlyInternetGateway) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

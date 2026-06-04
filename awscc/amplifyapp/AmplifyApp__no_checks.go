@@ -56,7 +56,15 @@ func (a *jsiiProxy_AmplifyApp) validateInterpolationForAttributeParameters(terra
 	return nil
 }
 
+func (a *jsiiProxy_AmplifyApp) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_AmplifyApp) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (a *jsiiProxy_AmplifyApp) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -72,11 +80,19 @@ func (a *jsiiProxy_AmplifyApp) validatePutBasicAuthConfigParameters(value *Ampli
 	return nil
 }
 
+func (a *jsiiProxy_AmplifyApp) validatePutCacheConfigParameters(value *AmplifyAppCacheConfig) error {
+	return nil
+}
+
 func (a *jsiiProxy_AmplifyApp) validatePutCustomRulesParameters(value interface{}) error {
 	return nil
 }
 
 func (a *jsiiProxy_AmplifyApp) validatePutEnvironmentVariablesParameters(value interface{}) error {
+	return nil
+}
+
+func (a *jsiiProxy_AmplifyApp) validatePutJobConfigParameters(value *AmplifyAppJobConfig) error {
 	return nil
 }
 
@@ -105,6 +121,10 @@ func (j *jsiiProxy_AmplifyApp) validateSetAccessTokenParameters(val *string) err
 }
 
 func (j *jsiiProxy_AmplifyApp) validateSetBuildSpecParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_AmplifyApp) validateSetComputeRoleArnParameters(val *string) error {
 	return nil
 }
 

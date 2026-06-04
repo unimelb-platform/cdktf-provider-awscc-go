@@ -11,6 +11,9 @@ import (
 type DataAwsccInspectorv2FilterFilterCriteriaOutputReference interface {
 	cdktf.ComplexObject
 	AwsAccountId() DataAwsccInspectorv2FilterFilterCriteriaAwsAccountIdList
+	CodeVulnerabilityDetectorName() DataAwsccInspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorNameList
+	CodeVulnerabilityDetectorTags() DataAwsccInspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorTagsList
+	CodeVulnerabilityFilePath() DataAwsccInspectorv2FilterFilterCriteriaCodeVulnerabilityFilePathList
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -37,15 +40,23 @@ type DataAwsccInspectorv2FilterFilterCriteriaOutputReference interface {
 	EcrImageRegistry() DataAwsccInspectorv2FilterFilterCriteriaEcrImageRegistryList
 	EcrImageRepositoryName() DataAwsccInspectorv2FilterFilterCriteriaEcrImageRepositoryNameList
 	EcrImageTags() DataAwsccInspectorv2FilterFilterCriteriaEcrImageTagsList
+	EpssScore() DataAwsccInspectorv2FilterFilterCriteriaEpssScoreList
+	ExploitAvailable() DataAwsccInspectorv2FilterFilterCriteriaExploitAvailableList
 	FindingArn() DataAwsccInspectorv2FilterFilterCriteriaFindingArnList
 	FindingStatus() DataAwsccInspectorv2FilterFilterCriteriaFindingStatusList
 	FindingType() DataAwsccInspectorv2FilterFilterCriteriaFindingTypeList
 	FirstObservedAt() DataAwsccInspectorv2FilterFilterCriteriaFirstObservedAtList
+	FixAvailable() DataAwsccInspectorv2FilterFilterCriteriaFixAvailableList
 	// Experimental.
 	Fqn() *string
 	InspectorScore() DataAwsccInspectorv2FilterFilterCriteriaInspectorScoreList
 	InternalValue() *DataAwsccInspectorv2FilterFilterCriteria
 	SetInternalValue(val *DataAwsccInspectorv2FilterFilterCriteria)
+	LambdaFunctionExecutionRoleArn() DataAwsccInspectorv2FilterFilterCriteriaLambdaFunctionExecutionRoleArnList
+	LambdaFunctionLastModifiedAt() DataAwsccInspectorv2FilterFilterCriteriaLambdaFunctionLastModifiedAtList
+	LambdaFunctionLayers() DataAwsccInspectorv2FilterFilterCriteriaLambdaFunctionLayersList
+	LambdaFunctionName() DataAwsccInspectorv2FilterFilterCriteriaLambdaFunctionNameList
+	LambdaFunctionRuntime() DataAwsccInspectorv2FilterFilterCriteriaLambdaFunctionRuntimeList
 	LastObservedAt() DataAwsccInspectorv2FilterFilterCriteriaLastObservedAtList
 	NetworkProtocol() DataAwsccInspectorv2FilterFilterCriteriaNetworkProtocolList
 	PortRange() DataAwsccInspectorv2FilterFilterCriteriaPortRangeList
@@ -112,6 +123,36 @@ func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaOutputReference) AwsA
 	_jsii_.Get(
 		j,
 		"awsAccountId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaOutputReference) CodeVulnerabilityDetectorName() DataAwsccInspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorNameList {
+	var returns DataAwsccInspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorNameList
+	_jsii_.Get(
+		j,
+		"codeVulnerabilityDetectorName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaOutputReference) CodeVulnerabilityDetectorTags() DataAwsccInspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorTagsList {
+	var returns DataAwsccInspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorTagsList
+	_jsii_.Get(
+		j,
+		"codeVulnerabilityDetectorTags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaOutputReference) CodeVulnerabilityFilePath() DataAwsccInspectorv2FilterFilterCriteriaCodeVulnerabilityFilePathList {
+	var returns DataAwsccInspectorv2FilterFilterCriteriaCodeVulnerabilityFilePathList
+	_jsii_.Get(
+		j,
+		"codeVulnerabilityFilePath",
 		&returns,
 	)
 	return returns
@@ -257,6 +298,26 @@ func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaOutputReference) EcrI
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaOutputReference) EpssScore() DataAwsccInspectorv2FilterFilterCriteriaEpssScoreList {
+	var returns DataAwsccInspectorv2FilterFilterCriteriaEpssScoreList
+	_jsii_.Get(
+		j,
+		"epssScore",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaOutputReference) ExploitAvailable() DataAwsccInspectorv2FilterFilterCriteriaExploitAvailableList {
+	var returns DataAwsccInspectorv2FilterFilterCriteriaExploitAvailableList
+	_jsii_.Get(
+		j,
+		"exploitAvailable",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaOutputReference) FindingArn() DataAwsccInspectorv2FilterFilterCriteriaFindingArnList {
 	var returns DataAwsccInspectorv2FilterFilterCriteriaFindingArnList
 	_jsii_.Get(
@@ -297,6 +358,16 @@ func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaOutputReference) Firs
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaOutputReference) FixAvailable() DataAwsccInspectorv2FilterFilterCriteriaFixAvailableList {
+	var returns DataAwsccInspectorv2FilterFilterCriteriaFixAvailableList
+	_jsii_.Get(
+		j,
+		"fixAvailable",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -322,6 +393,56 @@ func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaOutputReference) Inte
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaOutputReference) LambdaFunctionExecutionRoleArn() DataAwsccInspectorv2FilterFilterCriteriaLambdaFunctionExecutionRoleArnList {
+	var returns DataAwsccInspectorv2FilterFilterCriteriaLambdaFunctionExecutionRoleArnList
+	_jsii_.Get(
+		j,
+		"lambdaFunctionExecutionRoleArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaOutputReference) LambdaFunctionLastModifiedAt() DataAwsccInspectorv2FilterFilterCriteriaLambdaFunctionLastModifiedAtList {
+	var returns DataAwsccInspectorv2FilterFilterCriteriaLambdaFunctionLastModifiedAtList
+	_jsii_.Get(
+		j,
+		"lambdaFunctionLastModifiedAt",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaOutputReference) LambdaFunctionLayers() DataAwsccInspectorv2FilterFilterCriteriaLambdaFunctionLayersList {
+	var returns DataAwsccInspectorv2FilterFilterCriteriaLambdaFunctionLayersList
+	_jsii_.Get(
+		j,
+		"lambdaFunctionLayers",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaOutputReference) LambdaFunctionName() DataAwsccInspectorv2FilterFilterCriteriaLambdaFunctionNameList {
+	var returns DataAwsccInspectorv2FilterFilterCriteriaLambdaFunctionNameList
+	_jsii_.Get(
+		j,
+		"lambdaFunctionName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaOutputReference) LambdaFunctionRuntime() DataAwsccInspectorv2FilterFilterCriteriaLambdaFunctionRuntimeList {
+	var returns DataAwsccInspectorv2FilterFilterCriteriaLambdaFunctionRuntimeList
+	_jsii_.Get(
+		j,
+		"lambdaFunctionRuntime",
 		&returns,
 	)
 	return returns

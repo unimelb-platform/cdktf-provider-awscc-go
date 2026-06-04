@@ -28,6 +28,9 @@ type BatchJobDefinitionContainerPropertiesOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	EnableExecuteCommand() interface{}
+	SetEnableExecuteCommand(val interface{})
+	EnableExecuteCommandInput() interface{}
 	Environment() BatchJobDefinitionContainerPropertiesEnvironmentList
 	EnvironmentInput() interface{}
 	EphemeralStorage() BatchJobDefinitionContainerPropertiesEphemeralStorageOutputReference
@@ -42,9 +45,6 @@ type BatchJobDefinitionContainerPropertiesOutputReference interface {
 	Image() *string
 	SetImage(val *string)
 	ImageInput() *string
-	InstanceType() *string
-	SetInstanceType(val *string)
-	InstanceTypeInput() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	JobRoleArn() *string
@@ -67,6 +67,8 @@ type BatchJobDefinitionContainerPropertiesOutputReference interface {
 	ReadonlyRootFilesystem() interface{}
 	SetReadonlyRootFilesystem(val interface{})
 	ReadonlyRootFilesystemInput() interface{}
+	RepositoryCredentials() BatchJobDefinitionContainerPropertiesRepositoryCredentialsOutputReference
+	RepositoryCredentialsInput() interface{}
 	ResourceRequirements() BatchJobDefinitionContainerPropertiesResourceRequirementsList
 	ResourceRequirementsInput() interface{}
 	RuntimePlatform() BatchJobDefinitionContainerPropertiesRuntimePlatformOutputReference
@@ -122,17 +124,19 @@ type BatchJobDefinitionContainerPropertiesOutputReference interface {
 	PutLogConfiguration(value *BatchJobDefinitionContainerPropertiesLogConfiguration)
 	PutMountPoints(value interface{})
 	PutNetworkConfiguration(value *BatchJobDefinitionContainerPropertiesNetworkConfiguration)
+	PutRepositoryCredentials(value *BatchJobDefinitionContainerPropertiesRepositoryCredentials)
 	PutResourceRequirements(value interface{})
 	PutRuntimePlatform(value *BatchJobDefinitionContainerPropertiesRuntimePlatform)
 	PutSecrets(value interface{})
 	PutUlimits(value interface{})
 	PutVolumes(value interface{})
 	ResetCommand()
+	ResetEnableExecuteCommand()
 	ResetEnvironment()
 	ResetEphemeralStorage()
 	ResetExecutionRoleArn()
 	ResetFargatePlatformConfiguration()
-	ResetInstanceType()
+	ResetImage()
 	ResetJobRoleArn()
 	ResetLinuxParameters()
 	ResetLogConfiguration()
@@ -141,6 +145,7 @@ type BatchJobDefinitionContainerPropertiesOutputReference interface {
 	ResetNetworkConfiguration()
 	ResetPrivileged()
 	ResetReadonlyRootFilesystem()
+	ResetRepositoryCredentials()
 	ResetResourceRequirements()
 	ResetRuntimePlatform()
 	ResetSecrets()
@@ -208,6 +213,26 @@ func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) Creatio
 	_jsii_.Get(
 		j,
 		"creationStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) EnableExecuteCommand() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableExecuteCommand",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) EnableExecuteCommandInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableExecuteCommandInput",
 		&returns,
 	)
 	return returns
@@ -318,26 +343,6 @@ func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) ImageIn
 	_jsii_.Get(
 		j,
 		"imageInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) InstanceType() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"instanceType",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) InstanceTypeInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"instanceTypeInput",
 		&returns,
 	)
 	return returns
@@ -508,6 +513,26 @@ func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) Readonl
 	_jsii_.Get(
 		j,
 		"readonlyRootFilesystemInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) RepositoryCredentials() BatchJobDefinitionContainerPropertiesRepositoryCredentialsOutputReference {
+	var returns BatchJobDefinitionContainerPropertiesRepositoryCredentialsOutputReference
+	_jsii_.Get(
+		j,
+		"repositoryCredentials",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) RepositoryCredentialsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"repositoryCredentialsInput",
 		&returns,
 	)
 	return returns
@@ -734,6 +759,17 @@ func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference)SetCompl
 	)
 }
 
+func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference)SetEnableExecuteCommand(val interface{}) {
+	if err := j.validateSetEnableExecuteCommandParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enableExecuteCommand",
+		val,
+	)
+}
+
 func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference)SetExecutionRoleArn(val *string) {
 	if err := j.validateSetExecutionRoleArnParameters(val); err != nil {
 		panic(err)
@@ -752,17 +788,6 @@ func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference)SetImage
 	_jsii_.Set(
 		j,
 		"image",
-		val,
-	)
-}
-
-func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference)SetInstanceType(val *string) {
-	if err := j.validateSetInstanceTypeParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"instanceType",
 		val,
 	)
 }
@@ -1129,6 +1154,17 @@ func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) PutNetw
 	)
 }
 
+func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) PutRepositoryCredentials(value *BatchJobDefinitionContainerPropertiesRepositoryCredentials) {
+	if err := b.validatePutRepositoryCredentialsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"putRepositoryCredentials",
+		[]interface{}{value},
+	)
+}
+
 func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) PutResourceRequirements(value interface{}) {
 	if err := b.validatePutResourceRequirementsParameters(value); err != nil {
 		panic(err)
@@ -1192,6 +1228,14 @@ func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) ResetCo
 	)
 }
 
+func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) ResetEnableExecuteCommand() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetEnableExecuteCommand",
+		nil, // no parameters
+	)
+}
+
 func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) ResetEnvironment() {
 	_jsii_.InvokeVoid(
 		b,
@@ -1224,10 +1268,10 @@ func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) ResetFa
 	)
 }
 
-func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) ResetInstanceType() {
+func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) ResetImage() {
 	_jsii_.InvokeVoid(
 		b,
-		"resetInstanceType",
+		"resetImage",
 		nil, // no parameters
 	)
 }
@@ -1292,6 +1336,14 @@ func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) ResetRe
 	_jsii_.InvokeVoid(
 		b,
 		"resetReadonlyRootFilesystem",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesOutputReference) ResetRepositoryCredentials() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetRepositoryCredentials",
 		nil, // no parameters
 	)
 }

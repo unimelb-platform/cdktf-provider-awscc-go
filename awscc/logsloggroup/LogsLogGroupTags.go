@@ -2,13 +2,9 @@ package logsloggroup
 
 
 type LogsLogGroupTags struct {
-	// The key name of the tag.
-	//
-	// You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., :, /, =, +, - and
-	Key *string `field:"required" json:"key" yaml:"key"`
-	// The value for the tag.
-	//
-	// You can specify a value that is 0 to 256 Unicode characters in length. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., :, /, =, +, - and
-	Value *string `field:"required" json:"value" yaml:"value"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_log_group#key LogsLogGroup#key}.
+	Key *string `field:"optional" json:"key" yaml:"key"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_log_group#value LogsLogGroup#value}.
+	Value *string `field:"optional" json:"value" yaml:"value"`
 }
 

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/networkfirewallfirewall/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/networkfirewall_firewall awscc_networkfirewall_firewall}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/networkfirewall_firewall awscc_networkfirewall_firewall}.
 type NetworkfirewallFirewall interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -34,6 +34,9 @@ type NetworkfirewallFirewall interface {
 	Description() *string
 	SetDescription(val *string)
 	DescriptionInput() *string
+	EnabledAnalysisTypes() *[]*string
+	SetEnabledAnalysisTypes(val *[]*string)
+	EnabledAnalysisTypesInput() *[]*string
 	EndpointIds() *[]*string
 	FirewallArn() *string
 	FirewallId() *string
@@ -111,12 +114,22 @@ type NetworkfirewallFirewall interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -124,6 +137,7 @@ type NetworkfirewallFirewall interface {
 	PutTags(value interface{})
 	ResetDeleteProtection()
 	ResetDescription()
+	ResetEnabledAnalysisTypes()
 	ResetFirewallPolicyChangeProtection()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -131,6 +145,9 @@ type NetworkfirewallFirewall interface {
 	ResetSubnetChangeProtection()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -230,6 +247,26 @@ func (j *jsiiProxy_NetworkfirewallFirewall) DescriptionInput() *string {
 	_jsii_.Get(
 		j,
 		"descriptionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_NetworkfirewallFirewall) EnabledAnalysisTypes() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"enabledAnalysisTypes",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_NetworkfirewallFirewall) EnabledAnalysisTypesInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"enabledAnalysisTypesInput",
 		&returns,
 	)
 	return returns
@@ -526,7 +563,7 @@ func (j *jsiiProxy_NetworkfirewallFirewall) VpcIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/networkfirewall_firewall awscc_networkfirewall_firewall} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/networkfirewall_firewall awscc_networkfirewall_firewall} Resource.
 func NewNetworkfirewallFirewall(scope constructs.Construct, id *string, config *NetworkfirewallFirewallConfig) NetworkfirewallFirewall {
 	_init_.Initialize()
 
@@ -544,7 +581,7 @@ func NewNetworkfirewallFirewall(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/networkfirewall_firewall awscc_networkfirewall_firewall} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/networkfirewall_firewall awscc_networkfirewall_firewall} Resource.
 func NewNetworkfirewallFirewall_Override(n NetworkfirewallFirewall, scope constructs.Construct, id *string, config *NetworkfirewallFirewallConfig) {
 	_init_.Initialize()
 
@@ -603,6 +640,17 @@ func (j *jsiiProxy_NetworkfirewallFirewall)SetDescription(val *string) {
 	_jsii_.Set(
 		j,
 		"description",
+		val,
+	)
+}
+
+func (j *jsiiProxy_NetworkfirewallFirewall)SetEnabledAnalysisTypes(val *[]*string) {
+	if err := j.validateSetEnabledAnalysisTypesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enabledAnalysisTypes",
 		val,
 	)
 }
@@ -969,6 +1017,19 @@ func (n *jsiiProxy_NetworkfirewallFirewall) GetStringMapAttribute(terraformAttri
 	return returns
 }
 
+func (n *jsiiProxy_NetworkfirewallFirewall) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		n,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (n *jsiiProxy_NetworkfirewallFirewall) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := n.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -996,6 +1057,17 @@ func (n *jsiiProxy_NetworkfirewallFirewall) InterpolationForAttribute(terraformA
 	return returns
 }
 
+func (n *jsiiProxy_NetworkfirewallFirewall) MoveFromId(id *string) {
+	if err := n.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		n,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (n *jsiiProxy_NetworkfirewallFirewall) MoveTo(moveTarget *string, index interface{}) {
 	if err := n.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1004,6 +1076,17 @@ func (n *jsiiProxy_NetworkfirewallFirewall) MoveTo(moveTarget *string, index int
 		n,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallFirewall) MoveToId(id *string) {
+	if err := n.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		n,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1056,6 +1139,14 @@ func (n *jsiiProxy_NetworkfirewallFirewall) ResetDescription() {
 	)
 }
 
+func (n *jsiiProxy_NetworkfirewallFirewall) ResetEnabledAnalysisTypes() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetEnabledAnalysisTypes",
+		nil, // no parameters
+	)
+}
+
 func (n *jsiiProxy_NetworkfirewallFirewall) ResetFirewallPolicyChangeProtection() {
 	_jsii_.InvokeVoid(
 		n,
@@ -1094,6 +1185,32 @@ func (n *jsiiProxy_NetworkfirewallFirewall) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		n,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (n *jsiiProxy_NetworkfirewallFirewall) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		n,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (n *jsiiProxy_NetworkfirewallFirewall) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		n,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

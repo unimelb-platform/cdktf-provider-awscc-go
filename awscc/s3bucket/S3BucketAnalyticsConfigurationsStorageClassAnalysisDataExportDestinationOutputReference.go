@@ -36,8 +36,8 @@ type S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestinationOut
 	FormatInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestination
-	SetInternalValue(val *S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestination)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Prefix() *string
 	SetPrefix(val *string)
 	PrefixInput() *string
@@ -74,6 +74,8 @@ type S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestinationOut
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetBucketAccountId()
+	ResetBucketArn()
+	ResetFormat()
 	ResetPrefix()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -190,8 +192,8 @@ func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExport
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestinationOutputReference) InternalValue() *S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestination {
-	var returns *S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestination
+func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestinationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -323,7 +325,7 @@ func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExport
 	)
 }
 
-func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestinationOutputReference)SetInternalValue(val *S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestination) {
+func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestinationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -557,6 +559,22 @@ func (s *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExport
 	_jsii_.InvokeVoid(
 		s,
 		"resetBucketAccountId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestinationOutputReference) ResetBucketArn() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetBucketArn",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestinationOutputReference) ResetFormat() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetFormat",
 		nil, // no parameters
 	)
 }

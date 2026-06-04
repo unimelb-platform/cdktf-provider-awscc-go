@@ -64,6 +64,7 @@ type LexBotTestBotAliasSettingsSentimentAnalysisSettingsOutputReference interfac
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDetectSentiment()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (l *jsiiProxy_LexBotTestBotAliasSettingsSentimentAnalysisSettingsOutputRefe
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotTestBotAliasSettingsSentimentAnalysisSettingsOutputReference) ResetDetectSentiment() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetDetectSentiment",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotTestBotAliasSettingsSentimentAnalysisSettingsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -35,13 +35,13 @@ type SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionO
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	MonitoringAppSpecification() SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringAppSpecificationOutputReference
-	MonitoringAppSpecificationInput() *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringAppSpecification
+	MonitoringAppSpecificationInput() interface{}
 	MonitoringInputs() SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringInputsList
 	MonitoringInputsInput() interface{}
 	MonitoringOutputConfig() SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigOutputReference
-	MonitoringOutputConfigInput() *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfig
+	MonitoringOutputConfigInput() interface{}
 	MonitoringResources() SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringResourcesOutputReference
-	MonitoringResourcesInput() *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringResources
+	MonitoringResourcesInput() interface{}
 	NetworkConfig() SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionNetworkConfigOutputReference
 	NetworkConfigInput() interface{}
 	RoleArn() *string
@@ -90,7 +90,12 @@ type SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionO
 	PutStoppingCondition(value *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionStoppingCondition)
 	ResetBaselineConfig()
 	ResetEnvironment()
+	ResetMonitoringAppSpecification()
+	ResetMonitoringInputs()
+	ResetMonitoringOutputConfig()
+	ResetMonitoringResources()
 	ResetNetworkConfig()
+	ResetRoleArn()
 	ResetStoppingCondition()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -207,8 +212,8 @@ func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoring
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionOutputReference) MonitoringAppSpecificationInput() *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringAppSpecification {
-	var returns *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringAppSpecification
+func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionOutputReference) MonitoringAppSpecificationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"monitoringAppSpecificationInput",
@@ -247,8 +252,8 @@ func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoring
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionOutputReference) MonitoringOutputConfigInput() *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfig {
-	var returns *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfig
+func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionOutputReference) MonitoringOutputConfigInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"monitoringOutputConfigInput",
@@ -267,8 +272,8 @@ func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoring
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionOutputReference) MonitoringResourcesInput() *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringResources {
-	var returns *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringResources
+func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionOutputReference) MonitoringResourcesInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"monitoringResourcesInput",
@@ -741,10 +746,50 @@ func (s *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoring
 	)
 }
 
+func (s *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionOutputReference) ResetMonitoringAppSpecification() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetMonitoringAppSpecification",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionOutputReference) ResetMonitoringInputs() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetMonitoringInputs",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionOutputReference) ResetMonitoringOutputConfig() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetMonitoringOutputConfig",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionOutputReference) ResetMonitoringResources() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetMonitoringResources",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionOutputReference) ResetNetworkConfig() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetNetworkConfig",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetRoleArn",
 		nil, // no parameters
 	)
 }

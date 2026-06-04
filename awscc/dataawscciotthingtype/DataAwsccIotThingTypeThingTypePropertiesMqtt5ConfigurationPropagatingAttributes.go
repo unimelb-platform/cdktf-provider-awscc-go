@@ -1,0 +1,6 @@
+package dataawscciotthingtype
+
+
+type DataAwsccIotThingTypeThingTypePropertiesMqtt5ConfigurationPropagatingAttributes struct {
+}
+

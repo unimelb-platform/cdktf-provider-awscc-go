@@ -30,8 +30,8 @@ type Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethodOutputReferenc
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethod
-	SetInternalValue(val *Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethod)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -144,8 +144,8 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethod
 	return returns
 }
 
-func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethodOutputReference) InternalValue() *Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethod {
-	var returns *Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethod
+func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethodOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -255,7 +255,7 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethod
 	)
 }
 
-func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethodOutputReference)SetInternalValue(val *Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethod) {
+func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethodOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

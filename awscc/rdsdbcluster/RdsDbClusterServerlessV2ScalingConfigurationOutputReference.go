@@ -35,6 +35,9 @@ type RdsDbClusterServerlessV2ScalingConfigurationOutputReference interface {
 	MinCapacity() *float64
 	SetMinCapacity(val *float64)
 	MinCapacityInput() *float64
+	SecondsUntilAutoPause() *float64
+	SetSecondsUntilAutoPause(val *float64)
+	SecondsUntilAutoPauseInput() *float64
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -69,6 +72,7 @@ type RdsDbClusterServerlessV2ScalingConfigurationOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetMaxCapacity()
 	ResetMinCapacity()
+	ResetSecondsUntilAutoPause()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -174,6 +178,26 @@ func (j *jsiiProxy_RdsDbClusterServerlessV2ScalingConfigurationOutputReference) 
 	return returns
 }
 
+func (j *jsiiProxy_RdsDbClusterServerlessV2ScalingConfigurationOutputReference) SecondsUntilAutoPause() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"secondsUntilAutoPause",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsDbClusterServerlessV2ScalingConfigurationOutputReference) SecondsUntilAutoPauseInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"secondsUntilAutoPauseInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RdsDbClusterServerlessV2ScalingConfigurationOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -273,6 +297,17 @@ func (j *jsiiProxy_RdsDbClusterServerlessV2ScalingConfigurationOutputReference)S
 	_jsii_.Set(
 		j,
 		"minCapacity",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RdsDbClusterServerlessV2ScalingConfigurationOutputReference)SetSecondsUntilAutoPause(val *float64) {
+	if err := j.validateSetSecondsUntilAutoPauseParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"secondsUntilAutoPause",
 		val,
 	)
 }
@@ -497,6 +532,14 @@ func (r *jsiiProxy_RdsDbClusterServerlessV2ScalingConfigurationOutputReference) 
 	_jsii_.InvokeVoid(
 		r,
 		"resetMinCapacity",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RdsDbClusterServerlessV2ScalingConfigurationOutputReference) ResetSecondsUntilAutoPause() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetSecondsUntilAutoPause",
 		nil, // no parameters
 	)
 }

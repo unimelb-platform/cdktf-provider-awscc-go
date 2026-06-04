@@ -70,6 +70,9 @@ type NetworkfirewallRuleGroupRuleGroupRulesSourceRulesSourceListStructOutputRefe
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetGeneratedRulesType()
+	ResetTargets()
+	ResetTargetTypes()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceRulesSourceListSt
 	)
 
 	return returns
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceRulesSourceListStructOutputReference) ResetGeneratedRulesType() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetGeneratedRulesType",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceRulesSourceListStructOutputReference) ResetTargets() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetTargets",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceRulesSourceListStructOutputReference) ResetTargetTypes() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetTargetTypes",
+		nil, // no parameters
+	)
 }
 
 func (n *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceRulesSourceListStructOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -30,8 +30,8 @@ type ConnectRoutingProfileQueueConfigsQueueReferenceOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *ConnectRoutingProfileQueueConfigsQueueReference
-	SetInternalValue(val *ConnectRoutingProfileQueueConfigsQueueReference)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	QueueArn() *string
 	SetQueueArn(val *string)
 	QueueArnInput() *string
@@ -67,6 +67,8 @@ type ConnectRoutingProfileQueueConfigsQueueReferenceOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetChannel()
+	ResetQueueArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -142,8 +144,8 @@ func (j *jsiiProxy_ConnectRoutingProfileQueueConfigsQueueReferenceOutputReferenc
 	return returns
 }
 
-func (j *jsiiProxy_ConnectRoutingProfileQueueConfigsQueueReferenceOutputReference) InternalValue() *ConnectRoutingProfileQueueConfigsQueueReference {
-	var returns *ConnectRoutingProfileQueueConfigsQueueReference
+func (j *jsiiProxy_ConnectRoutingProfileQueueConfigsQueueReferenceOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -253,7 +255,7 @@ func (j *jsiiProxy_ConnectRoutingProfileQueueConfigsQueueReferenceOutputReferenc
 	)
 }
 
-func (j *jsiiProxy_ConnectRoutingProfileQueueConfigsQueueReferenceOutputReference)SetInternalValue(val *ConnectRoutingProfileQueueConfigsQueueReference) {
+func (j *jsiiProxy_ConnectRoutingProfileQueueConfigsQueueReferenceOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_ConnectRoutingProfileQueueConfigsQueueReferenceOutputReferenc
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ConnectRoutingProfileQueueConfigsQueueReferenceOutputReference) ResetChannel() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetChannel",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConnectRoutingProfileQueueConfigsQueueReferenceOutputReference) ResetQueueArn() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetQueueArn",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ConnectRoutingProfileQueueConfigsQueueReferenceOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2transitgatewaymulticastgroupsource/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_transit_gateway_multicast_group_source awscc_ec2_transit_gateway_multicast_group_source}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_transit_gateway_multicast_group_source awscc_ec2_transit_gateway_multicast_group_source}.
 type Ec2TransitGatewayMulticastGroupSource interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -46,7 +46,6 @@ type Ec2TransitGatewayMulticastGroupSource interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
-	MemberType() *string
 	NetworkInterfaceId() *string
 	SetNetworkInterfaceId(val *string)
 	NetworkInterfaceIdInput() *string
@@ -100,12 +99,22 @@ type Ec2TransitGatewayMulticastGroupSource interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -113,6 +122,9 @@ type Ec2TransitGatewayMulticastGroupSource interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -262,16 +274,6 @@ func (j *jsiiProxy_Ec2TransitGatewayMulticastGroupSource) Lifecycle() *cdktf.Ter
 	_jsii_.Get(
 		j,
 		"lifecycle",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Ec2TransitGatewayMulticastGroupSource) MemberType() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"memberType",
 		&returns,
 	)
 	return returns
@@ -438,7 +440,7 @@ func (j *jsiiProxy_Ec2TransitGatewayMulticastGroupSource) TransitGatewayMulticas
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_transit_gateway_multicast_group_source awscc_ec2_transit_gateway_multicast_group_source} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_transit_gateway_multicast_group_source awscc_ec2_transit_gateway_multicast_group_source} Resource.
 func NewEc2TransitGatewayMulticastGroupSource(scope constructs.Construct, id *string, config *Ec2TransitGatewayMulticastGroupSourceConfig) Ec2TransitGatewayMulticastGroupSource {
 	_init_.Initialize()
 
@@ -456,7 +458,7 @@ func NewEc2TransitGatewayMulticastGroupSource(scope constructs.Construct, id *st
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_transit_gateway_multicast_group_source awscc_ec2_transit_gateway_multicast_group_source} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_transit_gateway_multicast_group_source awscc_ec2_transit_gateway_multicast_group_source} Resource.
 func NewEc2TransitGatewayMulticastGroupSource_Override(e Ec2TransitGatewayMulticastGroupSource, scope constructs.Construct, id *string, config *Ec2TransitGatewayMulticastGroupSourceConfig) {
 	_init_.Initialize()
 
@@ -837,6 +839,19 @@ func (e *jsiiProxy_Ec2TransitGatewayMulticastGroupSource) GetStringMapAttribute(
 	return returns
 }
 
+func (e *jsiiProxy_Ec2TransitGatewayMulticastGroupSource) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2TransitGatewayMulticastGroupSource) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -864,6 +879,17 @@ func (e *jsiiProxy_Ec2TransitGatewayMulticastGroupSource) InterpolationForAttrib
 	return returns
 }
 
+func (e *jsiiProxy_Ec2TransitGatewayMulticastGroupSource) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2TransitGatewayMulticastGroupSource) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -872,6 +898,17 @@ func (e *jsiiProxy_Ec2TransitGatewayMulticastGroupSource) MoveTo(moveTarget *str
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Ec2TransitGatewayMulticastGroupSource) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -900,6 +937,32 @@ func (e *jsiiProxy_Ec2TransitGatewayMulticastGroupSource) SynthesizeAttributes()
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2TransitGatewayMulticastGroupSource) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2TransitGatewayMulticastGroupSource) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

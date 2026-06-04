@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/route53resolverresolverqueryloggingconfigassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/route53resolver_resolver_query_logging_config_association awscc_route53resolver_resolver_query_logging_config_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/route53resolver_resolver_query_logging_config_association awscc_route53resolver_resolver_query_logging_config_association}.
 type Route53ResolverResolverQueryLoggingConfigAssociation interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -59,6 +59,7 @@ type Route53ResolverResolverQueryLoggingConfigAssociation interface {
 	ResolverQueryLogConfigId() *string
 	SetResolverQueryLogConfigId(val *string)
 	ResolverQueryLogConfigIdInput() *string
+	ResolverQueryLoggingConfigAssociationId() *string
 	ResourceId() *string
 	SetResourceId(val *string)
 	ResourceIdInput() *string
@@ -93,12 +94,22 @@ type Route53ResolverResolverQueryLoggingConfigAssociation interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -108,6 +119,9 @@ type Route53ResolverResolverQueryLoggingConfigAssociation interface {
 	ResetResolverQueryLogConfigId()
 	ResetResourceId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -312,6 +326,16 @@ func (j *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) Resolve
 	return returns
 }
 
+func (j *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) ResolverQueryLoggingConfigAssociationId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"resolverQueryLoggingConfigAssociationId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) ResourceId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -373,7 +397,7 @@ func (j *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) Terrafo
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/route53resolver_resolver_query_logging_config_association awscc_route53resolver_resolver_query_logging_config_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/route53resolver_resolver_query_logging_config_association awscc_route53resolver_resolver_query_logging_config_association} Resource.
 func NewRoute53ResolverResolverQueryLoggingConfigAssociation(scope constructs.Construct, id *string, config *Route53ResolverResolverQueryLoggingConfigAssociationConfig) Route53ResolverResolverQueryLoggingConfigAssociation {
 	_init_.Initialize()
 
@@ -391,7 +415,7 @@ func NewRoute53ResolverResolverQueryLoggingConfigAssociation(scope constructs.Co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/route53resolver_resolver_query_logging_config_association awscc_route53resolver_resolver_query_logging_config_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/route53resolver_resolver_query_logging_config_association awscc_route53resolver_resolver_query_logging_config_association} Resource.
 func NewRoute53ResolverResolverQueryLoggingConfigAssociation_Override(r Route53ResolverResolverQueryLoggingConfigAssociation, scope constructs.Construct, id *string, config *Route53ResolverResolverQueryLoggingConfigAssociationConfig) {
 	_init_.Initialize()
 
@@ -761,6 +785,19 @@ func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) GetStri
 	return returns
 }
 
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -788,6 +825,17 @@ func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) Interpo
 	return returns
 }
 
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) MoveFromId(id *string) {
+	if err := r.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) MoveTo(moveTarget *string, index interface{}) {
 	if err := r.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -796,6 +844,17 @@ func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) MoveTo(
 		r,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) MoveToId(id *string) {
+	if err := r.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -840,6 +899,32 @@ func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) Synthes
 	_jsii_.Invoke(
 		r,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		r,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

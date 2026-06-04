@@ -163,6 +163,14 @@ func (j *jsiiProxy_DatazoneDomainSingleSignOnOutputReference) validateSetComplex
 	return nil
 }
 
+func (j *jsiiProxy_DatazoneDomainSingleSignOnOutputReference) validateSetIdcInstanceArnParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_DatazoneDomainSingleSignOnOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	switch val.(type) {
 	case cdktf.IResolvable:

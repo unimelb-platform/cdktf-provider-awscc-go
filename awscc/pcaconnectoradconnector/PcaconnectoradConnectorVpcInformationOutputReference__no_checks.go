@@ -60,6 +60,10 @@ func (j *jsiiProxy_PcaconnectoradConnectorVpcInformationOutputReference) validat
 	return nil
 }
 
+func (j *jsiiProxy_PcaconnectoradConnectorVpcInformationOutputReference) validateSetIpAddressTypeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_PcaconnectoradConnectorVpcInformationOutputReference) validateSetSecurityGroupIdsParameters(val *[]*string) error {
 	return nil
 }

@@ -9,14 +9,20 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2customergateway/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_customer_gateway awscc_ec2_customer_gateway}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_customer_gateway awscc_ec2_customer_gateway}.
 type Ec2CustomerGateway interface {
 	cdktf.TerraformResource
 	BgpAsn() *float64
 	SetBgpAsn(val *float64)
+	BgpAsnExtended() *float64
+	SetBgpAsnExtended(val *float64)
+	BgpAsnExtendedInput() *float64
 	BgpAsnInput() *float64
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	CertificateArn() *string
+	SetCertificateArn(val *string)
+	CertificateArnInput() *string
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -98,23 +104,38 @@ type Ec2CustomerGateway interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutTags(value interface{})
 	ResetBgpAsn()
+	ResetBgpAsnExtended()
+	ResetCertificateArn()
 	ResetDeviceName()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -139,6 +160,26 @@ func (j *jsiiProxy_Ec2CustomerGateway) BgpAsn() *float64 {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2CustomerGateway) BgpAsnExtended() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"bgpAsnExtended",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2CustomerGateway) BgpAsnExtendedInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"bgpAsnExtendedInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2CustomerGateway) BgpAsnInput() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -154,6 +195,26 @@ func (j *jsiiProxy_Ec2CustomerGateway) CdktfStack() cdktf.TerraformStack {
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2CustomerGateway) CertificateArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"certificateArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2CustomerGateway) CertificateArnInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"certificateArnInput",
 		&returns,
 	)
 	return returns
@@ -410,7 +471,7 @@ func (j *jsiiProxy_Ec2CustomerGateway) TypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_customer_gateway awscc_ec2_customer_gateway} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_customer_gateway awscc_ec2_customer_gateway} Resource.
 func NewEc2CustomerGateway(scope constructs.Construct, id *string, config *Ec2CustomerGatewayConfig) Ec2CustomerGateway {
 	_init_.Initialize()
 
@@ -428,7 +489,7 @@ func NewEc2CustomerGateway(scope constructs.Construct, id *string, config *Ec2Cu
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_customer_gateway awscc_ec2_customer_gateway} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_customer_gateway awscc_ec2_customer_gateway} Resource.
 func NewEc2CustomerGateway_Override(e Ec2CustomerGateway, scope constructs.Construct, id *string, config *Ec2CustomerGatewayConfig) {
 	_init_.Initialize()
 
@@ -446,6 +507,28 @@ func (j *jsiiProxy_Ec2CustomerGateway)SetBgpAsn(val *float64) {
 	_jsii_.Set(
 		j,
 		"bgpAsn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2CustomerGateway)SetBgpAsnExtended(val *float64) {
+	if err := j.validateSetBgpAsnExtendedParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"bgpAsnExtended",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2CustomerGateway)SetCertificateArn(val *string) {
+	if err := j.validateSetCertificateArnParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"certificateArn",
 		val,
 	)
 }
@@ -820,6 +903,19 @@ func (e *jsiiProxy_Ec2CustomerGateway) GetStringMapAttribute(terraformAttribute 
 	return returns
 }
 
+func (e *jsiiProxy_Ec2CustomerGateway) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2CustomerGateway) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -847,6 +943,17 @@ func (e *jsiiProxy_Ec2CustomerGateway) InterpolationForAttribute(terraformAttrib
 	return returns
 }
 
+func (e *jsiiProxy_Ec2CustomerGateway) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2CustomerGateway) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -855,6 +962,17 @@ func (e *jsiiProxy_Ec2CustomerGateway) MoveTo(moveTarget *string, index interfac
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Ec2CustomerGateway) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -884,6 +1002,22 @@ func (e *jsiiProxy_Ec2CustomerGateway) ResetBgpAsn() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetBgpAsn",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2CustomerGateway) ResetBgpAsnExtended() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetBgpAsnExtended",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2CustomerGateway) ResetCertificateArn() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetCertificateArn",
 		nil, // no parameters
 	)
 }
@@ -918,6 +1052,32 @@ func (e *jsiiProxy_Ec2CustomerGateway) SynthesizeAttributes() *map[string]interf
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2CustomerGateway) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2CustomerGateway) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

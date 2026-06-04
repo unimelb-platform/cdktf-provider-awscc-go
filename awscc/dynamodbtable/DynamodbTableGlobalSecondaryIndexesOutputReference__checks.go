@@ -132,6 +132,17 @@ func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) validateP
 	return nil
 }
 
+func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) validatePutOnDemandThroughputParameters(value *DynamodbTableGlobalSecondaryIndexesOnDemandThroughput) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) validatePutProjectionParameters(value *DynamodbTableGlobalSecondaryIndexesProjection) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
@@ -144,6 +155,17 @@ func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) validateP
 }
 
 func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) validatePutProvisionedThroughputParameters(value *DynamodbTableGlobalSecondaryIndexesProvisionedThroughput) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) validatePutWarmThroughputParameters(value *DynamodbTableGlobalSecondaryIndexesWarmThroughput) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccssmresourcedatasync/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ssm_resource_data_sync awscc_ssm_resource_data_sync}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ssm_resource_data_sync awscc_ssm_resource_data_sync}.
 type DataAwsccSsmResourceDataSync interface {
 	cdktf.TerraformDataSource
 	BucketName() *string
@@ -91,6 +91,10 @@ type DataAwsccSsmResourceDataSync interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -356,7 +360,7 @@ func (j *jsiiProxy_DataAwsccSsmResourceDataSync) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ssm_resource_data_sync awscc_ssm_resource_data_sync} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ssm_resource_data_sync awscc_ssm_resource_data_sync} Data Source.
 func NewDataAwsccSsmResourceDataSync(scope constructs.Construct, id *string, config *DataAwsccSsmResourceDataSyncConfig) DataAwsccSsmResourceDataSync {
 	_init_.Initialize()
 
@@ -374,7 +378,7 @@ func NewDataAwsccSsmResourceDataSync(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ssm_resource_data_sync awscc_ssm_resource_data_sync} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ssm_resource_data_sync awscc_ssm_resource_data_sync} Data Source.
 func NewDataAwsccSsmResourceDataSync_Override(d DataAwsccSsmResourceDataSync, scope constructs.Construct, id *string, config *DataAwsccSsmResourceDataSyncConfig) {
 	_init_.Initialize()
 
@@ -741,6 +745,32 @@ func (d *jsiiProxy_DataAwsccSsmResourceDataSync) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSsmResourceDataSync) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSsmResourceDataSync) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

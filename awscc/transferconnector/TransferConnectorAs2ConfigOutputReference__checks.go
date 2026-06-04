@@ -251,6 +251,14 @@ func (j *jsiiProxy_TransferConnectorAs2ConfigOutputReference) validateSetPartner
 	return nil
 }
 
+func (j *jsiiProxy_TransferConnectorAs2ConfigOutputReference) validateSetPreserveContentTypeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_TransferConnectorAs2ConfigOutputReference) validateSetSigningAlgorithmParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

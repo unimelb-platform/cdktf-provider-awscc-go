@@ -48,6 +48,10 @@ func (e *jsiiProxy_EcsClusterConfigurationOutputReference) validatePutExecuteCom
 	return nil
 }
 
+func (e *jsiiProxy_EcsClusterConfigurationOutputReference) validatePutManagedStorageConfigurationParameters(value *EcsClusterConfigurationManagedStorageConfiguration) error {
+	return nil
+}
+
 func (e *jsiiProxy_EcsClusterConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

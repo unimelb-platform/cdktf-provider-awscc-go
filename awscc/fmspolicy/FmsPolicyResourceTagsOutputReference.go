@@ -67,6 +67,7 @@ type FmsPolicyResourceTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
 	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (f *jsiiProxy_FmsPolicyResourceTagsOutputReference) InterpolationForAttribu
 	)
 
 	return returns
+}
+
+func (f *jsiiProxy_FmsPolicyResourceTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetKey",
+		nil, // no parameters
+	)
 }
 
 func (f *jsiiProxy_FmsPolicyResourceTagsOutputReference) ResetValue() {

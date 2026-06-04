@@ -27,8 +27,8 @@ type SagemakerModelPackageValidationSpecificationValidationProfilesOutputReferen
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *SagemakerModelPackageValidationSpecificationValidationProfiles
-	SetInternalValue(val *SagemakerModelPackageValidationSpecificationValidationProfiles)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	ProfileName() *string
 	SetProfileName(val *string)
 	ProfileNameInput() *string
@@ -41,7 +41,7 @@ type SagemakerModelPackageValidationSpecificationValidationProfilesOutputReferen
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	TransformJobDefinition() SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionOutputReference
-	TransformJobDefinitionInput() *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinition
+	TransformJobDefinitionInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -67,6 +67,8 @@ type SagemakerModelPackageValidationSpecificationValidationProfilesOutputReferen
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutTransformJobDefinition(value *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinition)
+	ResetProfileName()
+	ResetTransformJobDefinition()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesOutputReference) InternalValue() *SagemakerModelPackageValidationSpecificationValidationProfiles {
-	var returns *SagemakerModelPackageValidationSpecificationValidationProfiles
+func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -182,8 +184,8 @@ func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesOutputReference) TransformJobDefinitionInput() *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinition {
-	var returns *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinition
+func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesOutputReference) TransformJobDefinitionInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"transformJobDefinitionInput",
@@ -242,7 +244,7 @@ func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 	)
 }
 
-func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesOutputReference)SetInternalValue(val *SagemakerModelPackageValidationSpecificationValidationProfiles) {
+func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -480,6 +482,22 @@ func (s *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 		s,
 		"putTransformJobDefinition",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesOutputReference) ResetProfileName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetProfileName",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesOutputReference) ResetTransformJobDefinition() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTransformJobDefinition",
+		nil, // no parameters
 	)
 }
 

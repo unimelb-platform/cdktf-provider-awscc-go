@@ -56,7 +56,15 @@ func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) validateInterpolationFo
 	return nil
 }
 
+func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_CodestarconnectionsSyncConfiguration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -104,6 +112,10 @@ func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) validateSetProvisioners
 	return nil
 }
 
+func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) validateSetPublishDeploymentStatusParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) validateSetRepositoryLinkIdParameters(val *string) error {
 	return nil
 }
@@ -117,6 +129,10 @@ func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) validateSetRoleArnParam
 }
 
 func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) validateSetSyncTypeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_CodestarconnectionsSyncConfiguration) validateSetTriggerResourceUpdateOnParameters(val *string) error {
 	return nil
 }
 

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/kinesisfirehosedeliverystream/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/kinesisfirehose_delivery_stream awscc_kinesisfirehose_delivery_stream}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/kinesisfirehose_delivery_stream awscc_kinesisfirehose_delivery_stream}.
 type KinesisfirehoseDeliveryStream interface {
 	cdktf.TerraformResource
 	AmazonOpenSearchServerlessDestinationConfiguration() KinesisfirehoseDeliveryStreamAmazonOpenSearchServerlessDestinationConfigurationOutputReference
@@ -29,6 +29,8 @@ type KinesisfirehoseDeliveryStream interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	DatabaseSourceConfiguration() KinesisfirehoseDeliveryStreamDatabaseSourceConfigurationOutputReference
+	DatabaseSourceConfigurationInput() interface{}
 	DeliveryStreamEncryptionConfigurationInput() KinesisfirehoseDeliveryStreamDeliveryStreamEncryptionConfigurationInputOutputReference
 	DeliveryStreamEncryptionConfigurationInputInput() interface{}
 	DeliveryStreamName() *string
@@ -41,6 +43,8 @@ type KinesisfirehoseDeliveryStream interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DirectPutSourceConfiguration() KinesisfirehoseDeliveryStreamDirectPutSourceConfigurationOutputReference
+	DirectPutSourceConfigurationInput() interface{}
 	ElasticsearchDestinationConfiguration() KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationOutputReference
 	ElasticsearchDestinationConfigurationInput() interface{}
 	ExtendedS3DestinationConfiguration() KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference
@@ -55,6 +59,8 @@ type KinesisfirehoseDeliveryStream interface {
 	FriendlyUniqueId() *string
 	HttpEndpointDestinationConfiguration() KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputReference
 	HttpEndpointDestinationConfigurationInput() interface{}
+	IcebergDestinationConfiguration() KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationOutputReference
+	IcebergDestinationConfigurationInput() interface{}
 	Id() *string
 	KinesisStreamSourceConfiguration() KinesisfirehoseDeliveryStreamKinesisStreamSourceConfigurationOutputReference
 	KinesisStreamSourceConfigurationInput() interface{}
@@ -116,21 +122,34 @@ type KinesisfirehoseDeliveryStream interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutAmazonOpenSearchServerlessDestinationConfiguration(value *KinesisfirehoseDeliveryStreamAmazonOpenSearchServerlessDestinationConfiguration)
 	PutAmazonopensearchserviceDestinationConfiguration(value *KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfiguration)
+	PutDatabaseSourceConfiguration(value *KinesisfirehoseDeliveryStreamDatabaseSourceConfiguration)
 	PutDeliveryStreamEncryptionConfigurationInput(value *KinesisfirehoseDeliveryStreamDeliveryStreamEncryptionConfigurationInput)
+	PutDirectPutSourceConfiguration(value *KinesisfirehoseDeliveryStreamDirectPutSourceConfiguration)
 	PutElasticsearchDestinationConfiguration(value *KinesisfirehoseDeliveryStreamElasticsearchDestinationConfiguration)
 	PutExtendedS3DestinationConfiguration(value *KinesisfirehoseDeliveryStreamExtendedS3DestinationConfiguration)
 	PutHttpEndpointDestinationConfiguration(value *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfiguration)
+	PutIcebergDestinationConfiguration(value *KinesisfirehoseDeliveryStreamIcebergDestinationConfiguration)
 	PutKinesisStreamSourceConfiguration(value *KinesisfirehoseDeliveryStreamKinesisStreamSourceConfiguration)
 	PutMskSourceConfiguration(value *KinesisfirehoseDeliveryStreamMskSourceConfiguration)
 	PutRedshiftDestinationConfiguration(value *KinesisfirehoseDeliveryStreamRedshiftDestinationConfiguration)
@@ -140,12 +159,15 @@ type KinesisfirehoseDeliveryStream interface {
 	PutTags(value interface{})
 	ResetAmazonOpenSearchServerlessDestinationConfiguration()
 	ResetAmazonopensearchserviceDestinationConfiguration()
+	ResetDatabaseSourceConfiguration()
 	ResetDeliveryStreamEncryptionConfigurationInput()
 	ResetDeliveryStreamName()
 	ResetDeliveryStreamType()
+	ResetDirectPutSourceConfiguration()
 	ResetElasticsearchDestinationConfiguration()
 	ResetExtendedS3DestinationConfiguration()
 	ResetHttpEndpointDestinationConfiguration()
+	ResetIcebergDestinationConfiguration()
 	ResetKinesisStreamSourceConfiguration()
 	ResetMskSourceConfiguration()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -157,6 +179,9 @@ type KinesisfirehoseDeliveryStream interface {
 	ResetSplunkDestinationConfiguration()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -261,6 +286,26 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStream) Count() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_KinesisfirehoseDeliveryStream) DatabaseSourceConfiguration() KinesisfirehoseDeliveryStreamDatabaseSourceConfigurationOutputReference {
+	var returns KinesisfirehoseDeliveryStreamDatabaseSourceConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"databaseSourceConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStream) DatabaseSourceConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"databaseSourceConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_KinesisfirehoseDeliveryStream) DeliveryStreamEncryptionConfigurationInput() KinesisfirehoseDeliveryStreamDeliveryStreamEncryptionConfigurationInputOutputReference {
 	var returns KinesisfirehoseDeliveryStreamDeliveryStreamEncryptionConfigurationInputOutputReference
 	_jsii_.Get(
@@ -326,6 +371,26 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStream) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStream) DirectPutSourceConfiguration() KinesisfirehoseDeliveryStreamDirectPutSourceConfigurationOutputReference {
+	var returns KinesisfirehoseDeliveryStreamDirectPutSourceConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"directPutSourceConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStream) DirectPutSourceConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"directPutSourceConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -416,6 +481,26 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStream) HttpEndpointDestinationConfigu
 	_jsii_.Get(
 		j,
 		"httpEndpointDestinationConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStream) IcebergDestinationConfiguration() KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationOutputReference {
+	var returns KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"icebergDestinationConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStream) IcebergDestinationConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"icebergDestinationConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -652,7 +737,7 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStream) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/kinesisfirehose_delivery_stream awscc_kinesisfirehose_delivery_stream} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/kinesisfirehose_delivery_stream awscc_kinesisfirehose_delivery_stream} Resource.
 func NewKinesisfirehoseDeliveryStream(scope constructs.Construct, id *string, config *KinesisfirehoseDeliveryStreamConfig) KinesisfirehoseDeliveryStream {
 	_init_.Initialize()
 
@@ -670,7 +755,7 @@ func NewKinesisfirehoseDeliveryStream(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/kinesisfirehose_delivery_stream awscc_kinesisfirehose_delivery_stream} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/kinesisfirehose_delivery_stream awscc_kinesisfirehose_delivery_stream} Resource.
 func NewKinesisfirehoseDeliveryStream_Override(k KinesisfirehoseDeliveryStream, scope constructs.Construct, id *string, config *KinesisfirehoseDeliveryStreamConfig) {
 	_init_.Initialize()
 
@@ -1040,6 +1125,19 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStream) GetStringMapAttribute(terrafor
 	return returns
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		k,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStream) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := k.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1067,6 +1165,17 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStream) InterpolationForAttribute(terr
 	return returns
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) MoveFromId(id *string) {
+	if err := k.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStream) MoveTo(moveTarget *string, index interface{}) {
 	if err := k.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1075,6 +1184,17 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStream) MoveTo(moveTarget *string, ind
 		k,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) MoveToId(id *string) {
+	if err := k.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1111,6 +1231,17 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStream) PutAmazonopensearchserviceDest
 	)
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) PutDatabaseSourceConfiguration(value *KinesisfirehoseDeliveryStreamDatabaseSourceConfiguration) {
+	if err := k.validatePutDatabaseSourceConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"putDatabaseSourceConfiguration",
+		[]interface{}{value},
+	)
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStream) PutDeliveryStreamEncryptionConfigurationInput(value *KinesisfirehoseDeliveryStreamDeliveryStreamEncryptionConfigurationInput) {
 	if err := k.validatePutDeliveryStreamEncryptionConfigurationInputParameters(value); err != nil {
 		panic(err)
@@ -1118,6 +1249,17 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStream) PutDeliveryStreamEncryptionCon
 	_jsii_.InvokeVoid(
 		k,
 		"putDeliveryStreamEncryptionConfigurationInput",
+		[]interface{}{value},
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) PutDirectPutSourceConfiguration(value *KinesisfirehoseDeliveryStreamDirectPutSourceConfiguration) {
+	if err := k.validatePutDirectPutSourceConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"putDirectPutSourceConfiguration",
 		[]interface{}{value},
 	)
 }
@@ -1151,6 +1293,17 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStream) PutHttpEndpointDestinationConf
 	_jsii_.InvokeVoid(
 		k,
 		"putHttpEndpointDestinationConfiguration",
+		[]interface{}{value},
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) PutIcebergDestinationConfiguration(value *KinesisfirehoseDeliveryStreamIcebergDestinationConfiguration) {
+	if err := k.validatePutIcebergDestinationConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"putIcebergDestinationConfiguration",
 		[]interface{}{value},
 	)
 }
@@ -1248,6 +1401,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStream) ResetAmazonopensearchserviceDe
 	)
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) ResetDatabaseSourceConfiguration() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetDatabaseSourceConfiguration",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStream) ResetDeliveryStreamEncryptionConfigurationInput() {
 	_jsii_.InvokeVoid(
 		k,
@@ -1272,6 +1433,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStream) ResetDeliveryStreamType() {
 	)
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) ResetDirectPutSourceConfiguration() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetDirectPutSourceConfiguration",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStream) ResetElasticsearchDestinationConfiguration() {
 	_jsii_.InvokeVoid(
 		k,
@@ -1292,6 +1461,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStream) ResetHttpEndpointDestinationCo
 	_jsii_.InvokeVoid(
 		k,
 		"resetHttpEndpointDestinationConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) ResetIcebergDestinationConfiguration() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetIcebergDestinationConfiguration",
 		nil, // no parameters
 	)
 }
@@ -1366,6 +1543,32 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStream) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		k,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		k,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		k,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

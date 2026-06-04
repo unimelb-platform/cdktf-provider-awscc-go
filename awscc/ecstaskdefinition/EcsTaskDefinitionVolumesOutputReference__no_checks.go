@@ -52,6 +52,10 @@ func (e *jsiiProxy_EcsTaskDefinitionVolumesOutputReference) validatePutEfsVolume
 	return nil
 }
 
+func (e *jsiiProxy_EcsTaskDefinitionVolumesOutputReference) validatePutFsxWindowsFileServerVolumeConfigurationParameters(value *EcsTaskDefinitionVolumesFsxWindowsFileServerVolumeConfiguration) error {
+	return nil
+}
+
 func (e *jsiiProxy_EcsTaskDefinitionVolumesOutputReference) validatePutHostParameters(value *EcsTaskDefinitionVolumesHost) error {
 	return nil
 }

@@ -52,10 +52,6 @@ func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerO
 	return nil
 }
 
-func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) validatePutFargatePlatformConfigurationParameters(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerFargatePlatformConfiguration) error {
-	return nil
-}
-
 func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) validatePutLinuxParametersParameters(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerLinuxParameters) error {
 	return nil
 }
@@ -68,7 +64,7 @@ func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerO
 	return nil
 }
 
-func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) validatePutNetworkConfigurationParameters(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerNetworkConfiguration) error {
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) validatePutRepositoryCredentialsParameters(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerRepositoryCredentials) error {
 	return nil
 }
 
@@ -105,6 +101,10 @@ func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerO
 }
 
 func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) validateSetEnableExecuteCommandParameters(val interface{}) error {
 	return nil
 }
 

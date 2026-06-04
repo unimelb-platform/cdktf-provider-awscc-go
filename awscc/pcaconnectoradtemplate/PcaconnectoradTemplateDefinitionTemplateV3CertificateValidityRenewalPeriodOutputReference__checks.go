@@ -163,9 +163,25 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3CertificateValidity
 	return nil
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3CertificateValidityRenewalPeriodOutputReference) validateSetInternalValueParameters(val *PcaconnectoradTemplateDefinitionTemplateV3CertificateValidityRenewalPeriod) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3CertificateValidityRenewalPeriodOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *PcaconnectoradTemplateDefinitionTemplateV3CertificateValidityRenewalPeriod:
+		val := val.(*PcaconnectoradTemplateDefinitionTemplateV3CertificateValidityRenewalPeriod)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case PcaconnectoradTemplateDefinitionTemplateV3CertificateValidityRenewalPeriod:
+		val_ := val.(PcaconnectoradTemplateDefinitionTemplateV3CertificateValidityRenewalPeriod)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *PcaconnectoradTemplateDefinitionTemplateV3CertificateValidityRenewalPeriod; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

@@ -32,7 +32,7 @@ type DatabrewJobProfileConfigurationColumnStatisticsConfigurationsOutputReferenc
 	Selectors() DatabrewJobProfileConfigurationColumnStatisticsConfigurationsSelectorsList
 	SelectorsInput() interface{}
 	Statistics() DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatisticsOutputReference
-	StatisticsInput() *DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatistics
+	StatisticsInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -68,6 +68,7 @@ type DatabrewJobProfileConfigurationColumnStatisticsConfigurationsOutputReferenc
 	PutSelectors(value interface{})
 	PutStatistics(value *DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatistics)
 	ResetSelectors()
+	ResetStatistics()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -163,8 +164,8 @@ func (j *jsiiProxy_DatabrewJobProfileConfigurationColumnStatisticsConfigurations
 	return returns
 }
 
-func (j *jsiiProxy_DatabrewJobProfileConfigurationColumnStatisticsConfigurationsOutputReference) StatisticsInput() *DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatistics {
-	var returns *DatabrewJobProfileConfigurationColumnStatisticsConfigurationsStatistics
+func (j *jsiiProxy_DatabrewJobProfileConfigurationColumnStatisticsConfigurationsOutputReference) StatisticsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"statisticsInput",
@@ -488,6 +489,14 @@ func (d *jsiiProxy_DatabrewJobProfileConfigurationColumnStatisticsConfigurations
 	_jsii_.InvokeVoid(
 		d,
 		"resetSelectors",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatabrewJobProfileConfigurationColumnStatisticsConfigurationsOutputReference) ResetStatistics() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetStatistics",
 		nil, // no parameters
 	)
 }

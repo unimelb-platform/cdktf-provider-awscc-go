@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/iotwirelesswirelessdevice/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iotwireless_wireless_device awscc_iotwireless_wireless_device}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iotwireless_wireless_device awscc_iotwireless_wireless_device}.
 type IotwirelessWirelessDevice interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -58,6 +58,9 @@ type IotwirelessWirelessDevice interface {
 	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
+	Positioning() *string
+	SetPositioning(val *string)
+	PositioningInput() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -83,6 +86,7 @@ type IotwirelessWirelessDevice interface {
 	Type() *string
 	SetType(val *string)
 	TypeInput() *string
+	WirelessDeviceId() *string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -107,12 +111,22 @@ type IotwirelessWirelessDevice interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -125,9 +139,13 @@ type IotwirelessWirelessDevice interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetPositioning()
 	ResetTags()
 	ResetThingArn()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -362,6 +380,26 @@ func (j *jsiiProxy_IotwirelessWirelessDevice) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_IotwirelessWirelessDevice) Positioning() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"positioning",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotwirelessWirelessDevice) PositioningInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"positioningInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_IotwirelessWirelessDevice) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -492,8 +530,18 @@ func (j *jsiiProxy_IotwirelessWirelessDevice) TypeInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_IotwirelessWirelessDevice) WirelessDeviceId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"wirelessDeviceId",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iotwireless_wireless_device awscc_iotwireless_wireless_device} Resource.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iotwireless_wireless_device awscc_iotwireless_wireless_device} Resource.
 func NewIotwirelessWirelessDevice(scope constructs.Construct, id *string, config *IotwirelessWirelessDeviceConfig) IotwirelessWirelessDevice {
 	_init_.Initialize()
 
@@ -511,7 +559,7 @@ func NewIotwirelessWirelessDevice(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iotwireless_wireless_device awscc_iotwireless_wireless_device} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iotwireless_wireless_device awscc_iotwireless_wireless_device} Resource.
 func NewIotwirelessWirelessDevice_Override(i IotwirelessWirelessDevice, scope constructs.Construct, id *string, config *IotwirelessWirelessDeviceConfig) {
 	_init_.Initialize()
 
@@ -611,6 +659,17 @@ func (j *jsiiProxy_IotwirelessWirelessDevice)SetName(val *string) {
 	_jsii_.Set(
 		j,
 		"name",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IotwirelessWirelessDevice)SetPositioning(val *string) {
+	if err := j.validateSetPositioningParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"positioning",
 		val,
 	)
 }
@@ -925,6 +984,19 @@ func (i *jsiiProxy_IotwirelessWirelessDevice) GetStringMapAttribute(terraformAtt
 	return returns
 }
 
+func (i *jsiiProxy_IotwirelessWirelessDevice) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (i *jsiiProxy_IotwirelessWirelessDevice) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := i.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -952,6 +1024,17 @@ func (i *jsiiProxy_IotwirelessWirelessDevice) InterpolationForAttribute(terrafor
 	return returns
 }
 
+func (i *jsiiProxy_IotwirelessWirelessDevice) MoveFromId(id *string) {
+	if err := i.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (i *jsiiProxy_IotwirelessWirelessDevice) MoveTo(moveTarget *string, index interface{}) {
 	if err := i.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -960,6 +1043,17 @@ func (i *jsiiProxy_IotwirelessWirelessDevice) MoveTo(moveTarget *string, index i
 		i,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (i *jsiiProxy_IotwirelessWirelessDevice) MoveToId(id *string) {
+	if err := i.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1036,6 +1130,14 @@ func (i *jsiiProxy_IotwirelessWirelessDevice) ResetOverrideLogicalId() {
 	)
 }
 
+func (i *jsiiProxy_IotwirelessWirelessDevice) ResetPositioning() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetPositioning",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IotwirelessWirelessDevice) ResetTags() {
 	_jsii_.InvokeVoid(
 		i,
@@ -1058,6 +1160,32 @@ func (i *jsiiProxy_IotwirelessWirelessDevice) SynthesizeAttributes() *map[string
 	_jsii_.Invoke(
 		i,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IotwirelessWirelessDevice) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		i,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IotwirelessWirelessDevice) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

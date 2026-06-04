@@ -119,6 +119,14 @@ func (s *jsiiProxy_SsmguiconnectPreferences) validateInterpolationForAttributePa
 	return nil
 }
 
+func (s *jsiiProxy_SsmguiconnectPreferences) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (s *jsiiProxy_SsmguiconnectPreferences) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (s *jsiiProxy_SsmguiconnectPreferences) validateMoveToParameters(moveTarget
 	return nil
 }
 
+func (s *jsiiProxy_SsmguiconnectPreferences) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (s *jsiiProxy_SsmguiconnectPreferences) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -188,32 +204,12 @@ func (s *jsiiProxy_SsmguiconnectPreferences) validateOverrideLogicalIdParameters
 	return nil
 }
 
-func (s *jsiiProxy_SsmguiconnectPreferences) validatePutIdleConnectionParameters(value interface{}) error {
+func (s *jsiiProxy_SsmguiconnectPreferences) validatePutConnectionRecordingPreferencesParameters(value *SsmguiconnectPreferencesConnectionRecordingPreferences) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
-	switch value.(type) {
-	case cdktf.IResolvable:
-		// ok
-	case *[]*SsmguiconnectPreferencesIdleConnection:
-		value := value.(*[]*SsmguiconnectPreferencesIdleConnection)
-		for idx_cd4240, v := range *value {
-			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
-				return err
-			}
-		}
-	case []*SsmguiconnectPreferencesIdleConnection:
-		value_ := value.([]*SsmguiconnectPreferencesIdleConnection)
-		value := &value_
-		for idx_cd4240, v := range *value {
-			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
-				return err
-			}
-		}
-	default:
-		if !_jsii_.IsAnonymousProxy(value) {
-			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*SsmguiconnectPreferencesIdleConnection; received %#v (a %T)", value, value)
-		}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
 	}
 
 	return nil

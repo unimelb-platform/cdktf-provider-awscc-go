@@ -70,7 +70,9 @@ type MediaconnectBridgeSourcesFlowSourceOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutFlowVpcInterfaceAttachment(value *MediaconnectBridgeSourcesFlowSourceFlowVpcInterfaceAttachment)
+	ResetFlowArn()
 	ResetFlowVpcInterfaceAttachment()
+	ResetName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -518,10 +520,26 @@ func (m *jsiiProxy_MediaconnectBridgeSourcesFlowSourceOutputReference) PutFlowVp
 	)
 }
 
+func (m *jsiiProxy_MediaconnectBridgeSourcesFlowSourceOutputReference) ResetFlowArn() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetFlowArn",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_MediaconnectBridgeSourcesFlowSourceOutputReference) ResetFlowVpcInterfaceAttachment() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetFlowVpcInterfaceAttachment",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectBridgeSourcesFlowSourceOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetName",
 		nil, // no parameters
 	)
 }

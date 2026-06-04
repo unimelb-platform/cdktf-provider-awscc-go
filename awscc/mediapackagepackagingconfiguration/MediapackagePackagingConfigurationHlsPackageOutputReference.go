@@ -77,6 +77,7 @@ type MediapackagePackagingConfigurationHlsPackageOutputReference interface {
 	PutEncryption(value *MediapackagePackagingConfigurationHlsPackageEncryption)
 	PutHlsManifests(value interface{})
 	ResetEncryption()
+	ResetHlsManifests()
 	ResetIncludeDvbSubtitles()
 	ResetSegmentDurationSeconds()
 	ResetUseAudioRenditionGroup()
@@ -593,6 +594,14 @@ func (m *jsiiProxy_MediapackagePackagingConfigurationHlsPackageOutputReference) 
 	_jsii_.InvokeVoid(
 		m,
 		"resetEncryption",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediapackagePackagingConfigurationHlsPackageOutputReference) ResetHlsManifests() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetHlsManifests",
 		nil, // no parameters
 	)
 }

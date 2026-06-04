@@ -67,6 +67,8 @@ type EcrReplicationConfigurationReplicationConfigurationRulesRepositoryFiltersOu
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetFilter()
+	ResetFilterType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (e *jsiiProxy_EcrReplicationConfigurationReplicationConfigurationRulesRepos
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EcrReplicationConfigurationReplicationConfigurationRulesRepositoryFiltersOutputReference) ResetFilter() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetFilter",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcrReplicationConfigurationReplicationConfigurationRulesRepositoryFiltersOutputReference) ResetFilterType() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetFilterType",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EcrReplicationConfigurationReplicationConfigurationRulesRepositoryFiltersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

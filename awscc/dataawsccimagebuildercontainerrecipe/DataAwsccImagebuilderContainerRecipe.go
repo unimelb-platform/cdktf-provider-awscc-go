@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccimagebuildercontainerrecipe/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/imagebuilder_container_recipe awscc_imagebuilder_container_recipe}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/imagebuilder_container_recipe awscc_imagebuilder_container_recipe}.
 type DataAwsccImagebuilderContainerRecipe interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -98,6 +98,10 @@ type DataAwsccImagebuilderContainerRecipe interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -433,7 +437,7 @@ func (j *jsiiProxy_DataAwsccImagebuilderContainerRecipe) WorkingDirectory() *str
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/imagebuilder_container_recipe awscc_imagebuilder_container_recipe} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/imagebuilder_container_recipe awscc_imagebuilder_container_recipe} Data Source.
 func NewDataAwsccImagebuilderContainerRecipe(scope constructs.Construct, id *string, config *DataAwsccImagebuilderContainerRecipeConfig) DataAwsccImagebuilderContainerRecipe {
 	_init_.Initialize()
 
@@ -451,7 +455,7 @@ func NewDataAwsccImagebuilderContainerRecipe(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/imagebuilder_container_recipe awscc_imagebuilder_container_recipe} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/imagebuilder_container_recipe awscc_imagebuilder_container_recipe} Data Source.
 func NewDataAwsccImagebuilderContainerRecipe_Override(d DataAwsccImagebuilderContainerRecipe, scope constructs.Construct, id *string, config *DataAwsccImagebuilderContainerRecipeConfig) {
 	_init_.Initialize()
 
@@ -818,6 +822,32 @@ func (d *jsiiProxy_DataAwsccImagebuilderContainerRecipe) SynthesizeAttributes() 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccImagebuilderContainerRecipe) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccImagebuilderContainerRecipe) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

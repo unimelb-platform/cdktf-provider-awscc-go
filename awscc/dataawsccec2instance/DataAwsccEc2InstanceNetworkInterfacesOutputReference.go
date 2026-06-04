@@ -30,6 +30,7 @@ type DataAwsccEc2InstanceNetworkInterfacesOutputReference interface {
 	DeleteOnTermination() cdktf.IResolvable
 	Description() *string
 	DeviceIndex() *string
+	EnaSrdSpecification() DataAwsccEc2InstanceNetworkInterfacesEnaSrdSpecificationOutputReference
 	// Experimental.
 	Fqn() *string
 	GroupSet() *[]*string
@@ -164,6 +165,16 @@ func (j *jsiiProxy_DataAwsccEc2InstanceNetworkInterfacesOutputReference) DeviceI
 	_jsii_.Get(
 		j,
 		"deviceIndex",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2InstanceNetworkInterfacesOutputReference) EnaSrdSpecification() DataAwsccEc2InstanceNetworkInterfacesEnaSrdSpecificationOutputReference {
+	var returns DataAwsccEc2InstanceNetworkInterfacesEnaSrdSpecificationOutputReference
+	_jsii_.Get(
+		j,
+		"enaSrdSpecification",
 		&returns,
 	)
 	return returns

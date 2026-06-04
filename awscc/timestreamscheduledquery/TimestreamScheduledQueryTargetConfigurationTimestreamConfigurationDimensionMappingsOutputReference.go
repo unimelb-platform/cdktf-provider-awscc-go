@@ -30,8 +30,8 @@ type TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationDimension
 	DimensionValueTypeInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationDimensionMappings
-	SetInternalValue(val *TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationDimensionMappings)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -67,6 +67,8 @@ type TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationDimension
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDimensionValueType()
+	ResetName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -142,8 +144,8 @@ func (j *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigur
 	return returns
 }
 
-func (j *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationDimensionMappingsOutputReference) InternalValue() *TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationDimensionMappings {
-	var returns *TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationDimensionMappings
+func (j *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationDimensionMappingsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -253,7 +255,7 @@ func (j *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigur
 	)
 }
 
-func (j *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationDimensionMappingsOutputReference)SetInternalValue(val *TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationDimensionMappings) {
+func (j *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationDimensionMappingsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigur
 	)
 
 	return returns
+}
+
+func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationDimensionMappingsOutputReference) ResetDimensionValueType() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetDimensionValueType",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationDimensionMappingsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetName",
+		nil, // no parameters
+	)
 }
 
 func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationDimensionMappingsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

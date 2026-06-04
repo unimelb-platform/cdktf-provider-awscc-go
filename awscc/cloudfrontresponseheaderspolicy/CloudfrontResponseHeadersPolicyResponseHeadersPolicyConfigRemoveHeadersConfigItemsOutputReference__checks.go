@@ -171,9 +171,25 @@ func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRem
 	return nil
 }
 
-func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItemsOutputReference) validateSetInternalValueParameters(val *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItems) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItemsOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItems:
+		val := val.(*CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItems)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItems:
+		val_ := val.(CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItems)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItems; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

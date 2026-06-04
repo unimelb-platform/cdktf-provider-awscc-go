@@ -56,7 +56,15 @@ func (c *jsiiProxy_ConnectTrafficDistributionGroup) validateInterpolationForAttr
 	return nil
 }
 
+func (c *jsiiProxy_ConnectTrafficDistributionGroup) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_ConnectTrafficDistributionGroup) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_ConnectTrafficDistributionGroup) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

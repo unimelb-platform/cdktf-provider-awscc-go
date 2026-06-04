@@ -90,6 +90,50 @@ func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validateI
 	return nil
 }
 
+func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validatePutAzParameters(value *ResiliencehubResiliencyPolicyPolicyAz) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validatePutHardwareParameters(value *ResiliencehubResiliencyPolicyPolicyHardware) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validatePutRegionParameters(value *ResiliencehubResiliencyPolicyPolicyRegion) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validatePutSoftwareAttributeParameters(value *ResiliencehubResiliencyPolicyPolicySoftware) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (r *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	if _context == nil {
 		return fmt.Errorf("parameter _context is required, but nil was provided")
@@ -187,22 +231,6 @@ func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validateS
 	return nil
 }
 
-func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validateSetRpoInSecsParameters(val *float64) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validateSetRtoInSecsParameters(val *float64) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
 func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -219,17 +247,13 @@ func (j *jsiiProxy_ResiliencehubResiliencyPolicyPolicyOutputReference) validateS
 	return nil
 }
 
-func validateNewResiliencehubResiliencyPolicyPolicyOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectKey *string) error {
+func validateNewResiliencehubResiliencyPolicyPolicyOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
 	if terraformResource == nil {
 		return fmt.Errorf("parameter terraformResource is required, but nil was provided")
 	}
 
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
-	}
-
-	if complexObjectKey == nil {
-		return fmt.Errorf("parameter complexObjectKey is required, but nil was provided")
 	}
 
 	return nil

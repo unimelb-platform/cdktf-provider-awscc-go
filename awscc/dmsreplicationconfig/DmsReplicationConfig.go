@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dmsreplicationconfig/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/dms_replication_config awscc_dms_replication_config}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/dms_replication_config awscc_dms_replication_config}.
 type DmsReplicationConfig interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -56,8 +56,6 @@ type DmsReplicationConfig interface {
 	// Experimental.
 	RawOverrides() interface{}
 	ReplicationConfigArn() *string
-	SetReplicationConfigArn(val *string)
-	ReplicationConfigArnInput() *string
 	ReplicationConfigIdentifier() *string
 	SetReplicationConfigIdentifier(val *string)
 	ReplicationConfigIdentifierInput() *string
@@ -114,32 +112,38 @@ type DmsReplicationConfig interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutComputeConfig(value *DmsReplicationConfigComputeConfig)
 	PutTags(value interface{})
-	ResetComputeConfig()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
-	ResetReplicationConfigArn()
-	ResetReplicationConfigIdentifier()
 	ResetReplicationSettings()
-	ResetReplicationType()
 	ResetResourceIdentifier()
-	ResetSourceEndpointArn()
 	ResetSupplementalSettings()
-	ResetTableMappings()
 	ResetTags()
-	ResetTargetEndpointArn()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -319,16 +323,6 @@ func (j *jsiiProxy_DmsReplicationConfig) ReplicationConfigArn() *string {
 	_jsii_.Get(
 		j,
 		"replicationConfigArn",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DmsReplicationConfig) ReplicationConfigArnInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"replicationConfigArnInput",
 		&returns,
 	)
 	return returns
@@ -545,7 +539,7 @@ func (j *jsiiProxy_DmsReplicationConfig) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/dms_replication_config awscc_dms_replication_config} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/dms_replication_config awscc_dms_replication_config} Resource.
 func NewDmsReplicationConfig(scope constructs.Construct, id *string, config *DmsReplicationConfigConfig) DmsReplicationConfig {
 	_init_.Initialize()
 
@@ -563,7 +557,7 @@ func NewDmsReplicationConfig(scope constructs.Construct, id *string, config *Dms
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/dms_replication_config awscc_dms_replication_config} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/dms_replication_config awscc_dms_replication_config} Resource.
 func NewDmsReplicationConfig_Override(d DmsReplicationConfig, scope constructs.Construct, id *string, config *DmsReplicationConfigConfig) {
 	_init_.Initialize()
 
@@ -638,17 +632,6 @@ func (j *jsiiProxy_DmsReplicationConfig)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
-		val,
-	)
-}
-
-func (j *jsiiProxy_DmsReplicationConfig)SetReplicationConfigArn(val *string) {
-	if err := j.validateSetReplicationConfigArnParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"replicationConfigArn",
 		val,
 	)
 }
@@ -1010,6 +993,19 @@ func (d *jsiiProxy_DmsReplicationConfig) GetStringMapAttribute(terraformAttribut
 	return returns
 }
 
+func (d *jsiiProxy_DmsReplicationConfig) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (d *jsiiProxy_DmsReplicationConfig) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := d.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1037,6 +1033,17 @@ func (d *jsiiProxy_DmsReplicationConfig) InterpolationForAttribute(terraformAttr
 	return returns
 }
 
+func (d *jsiiProxy_DmsReplicationConfig) MoveFromId(id *string) {
+	if err := d.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (d *jsiiProxy_DmsReplicationConfig) MoveTo(moveTarget *string, index interface{}) {
 	if err := d.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1045,6 +1052,17 @@ func (d *jsiiProxy_DmsReplicationConfig) MoveTo(moveTarget *string, index interf
 		d,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (d *jsiiProxy_DmsReplicationConfig) MoveToId(id *string) {
+	if err := d.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1081,34 +1099,10 @@ func (d *jsiiProxy_DmsReplicationConfig) PutTags(value interface{}) {
 	)
 }
 
-func (d *jsiiProxy_DmsReplicationConfig) ResetComputeConfig() {
-	_jsii_.InvokeVoid(
-		d,
-		"resetComputeConfig",
-		nil, // no parameters
-	)
-}
-
 func (d *jsiiProxy_DmsReplicationConfig) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetOverrideLogicalId",
-		nil, // no parameters
-	)
-}
-
-func (d *jsiiProxy_DmsReplicationConfig) ResetReplicationConfigArn() {
-	_jsii_.InvokeVoid(
-		d,
-		"resetReplicationConfigArn",
-		nil, // no parameters
-	)
-}
-
-func (d *jsiiProxy_DmsReplicationConfig) ResetReplicationConfigIdentifier() {
-	_jsii_.InvokeVoid(
-		d,
-		"resetReplicationConfigIdentifier",
 		nil, // no parameters
 	)
 }
@@ -1121,26 +1115,10 @@ func (d *jsiiProxy_DmsReplicationConfig) ResetReplicationSettings() {
 	)
 }
 
-func (d *jsiiProxy_DmsReplicationConfig) ResetReplicationType() {
-	_jsii_.InvokeVoid(
-		d,
-		"resetReplicationType",
-		nil, // no parameters
-	)
-}
-
 func (d *jsiiProxy_DmsReplicationConfig) ResetResourceIdentifier() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetResourceIdentifier",
-		nil, // no parameters
-	)
-}
-
-func (d *jsiiProxy_DmsReplicationConfig) ResetSourceEndpointArn() {
-	_jsii_.InvokeVoid(
-		d,
-		"resetSourceEndpointArn",
 		nil, // no parameters
 	)
 }
@@ -1153,26 +1131,10 @@ func (d *jsiiProxy_DmsReplicationConfig) ResetSupplementalSettings() {
 	)
 }
 
-func (d *jsiiProxy_DmsReplicationConfig) ResetTableMappings() {
-	_jsii_.InvokeVoid(
-		d,
-		"resetTableMappings",
-		nil, // no parameters
-	)
-}
-
 func (d *jsiiProxy_DmsReplicationConfig) ResetTags() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetTags",
-		nil, // no parameters
-	)
-}
-
-func (d *jsiiProxy_DmsReplicationConfig) ResetTargetEndpointArn() {
-	_jsii_.InvokeVoid(
-		d,
-		"resetTargetEndpointArn",
 		nil, // no parameters
 	)
 }
@@ -1183,6 +1145,32 @@ func (d *jsiiProxy_DmsReplicationConfig) SynthesizeAttributes() *map[string]inte
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DmsReplicationConfig) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DmsReplicationConfig) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

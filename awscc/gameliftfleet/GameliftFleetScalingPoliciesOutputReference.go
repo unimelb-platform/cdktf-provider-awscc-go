@@ -100,6 +100,8 @@ type GameliftFleetScalingPoliciesOutputReference interface {
 	ResetComparisonOperator()
 	ResetEvaluationPeriods()
 	ResetLocation()
+	ResetMetricName()
+	ResetName()
 	ResetPolicyType()
 	ResetScalingAdjustment()
 	ResetScalingAdjustmentType()
@@ -853,6 +855,22 @@ func (g *jsiiProxy_GameliftFleetScalingPoliciesOutputReference) ResetLocation() 
 	_jsii_.InvokeVoid(
 		g,
 		"resetLocation",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GameliftFleetScalingPoliciesOutputReference) ResetMetricName() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetMetricName",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GameliftFleetScalingPoliciesOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetName",
 		nil, // no parameters
 	)
 }

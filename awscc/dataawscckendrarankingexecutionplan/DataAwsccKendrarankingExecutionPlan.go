@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscckendrarankingexecutionplan/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kendraranking_execution_plan awscc_kendraranking_execution_plan}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kendraranking_execution_plan awscc_kendraranking_execution_plan}.
 type DataAwsccKendrarankingExecutionPlan interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -27,6 +27,7 @@ type DataAwsccKendrarankingExecutionPlan interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	Description() *string
+	ExecutionPlanId() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -87,6 +88,10 @@ type DataAwsccKendrarankingExecutionPlan interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -166,6 +171,16 @@ func (j *jsiiProxy_DataAwsccKendrarankingExecutionPlan) Description() *string {
 	_jsii_.Get(
 		j,
 		"description",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccKendrarankingExecutionPlan) ExecutionPlanId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"executionPlanId",
 		&returns,
 	)
 	return returns
@@ -312,7 +327,7 @@ func (j *jsiiProxy_DataAwsccKendrarankingExecutionPlan) TerraformResourceType() 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kendraranking_execution_plan awscc_kendraranking_execution_plan} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kendraranking_execution_plan awscc_kendraranking_execution_plan} Data Source.
 func NewDataAwsccKendrarankingExecutionPlan(scope constructs.Construct, id *string, config *DataAwsccKendrarankingExecutionPlanConfig) DataAwsccKendrarankingExecutionPlan {
 	_init_.Initialize()
 
@@ -330,7 +345,7 @@ func NewDataAwsccKendrarankingExecutionPlan(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kendraranking_execution_plan awscc_kendraranking_execution_plan} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kendraranking_execution_plan awscc_kendraranking_execution_plan} Data Source.
 func NewDataAwsccKendrarankingExecutionPlan_Override(d DataAwsccKendrarankingExecutionPlan, scope constructs.Construct, id *string, config *DataAwsccKendrarankingExecutionPlanConfig) {
 	_init_.Initialize()
 
@@ -697,6 +712,32 @@ func (d *jsiiProxy_DataAwsccKendrarankingExecutionPlan) SynthesizeAttributes() *
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKendrarankingExecutionPlan) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKendrarankingExecutionPlan) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

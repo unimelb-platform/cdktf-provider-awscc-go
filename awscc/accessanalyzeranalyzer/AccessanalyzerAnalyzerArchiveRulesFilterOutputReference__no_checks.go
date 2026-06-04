@@ -68,7 +68,7 @@ func (j *jsiiProxy_AccessanalyzerAnalyzerArchiveRulesFilterOutputReference) vali
 	return nil
 }
 
-func (j *jsiiProxy_AccessanalyzerAnalyzerArchiveRulesFilterOutputReference) validateSetInternalValueParameters(val *AccessanalyzerAnalyzerArchiveRulesFilter) error {
+func (j *jsiiProxy_AccessanalyzerAnalyzerArchiveRulesFilterOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

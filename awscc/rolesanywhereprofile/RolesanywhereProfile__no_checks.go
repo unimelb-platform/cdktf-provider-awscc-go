@@ -56,11 +56,23 @@ func (r *jsiiProxy_RolesanywhereProfile) validateInterpolationForAttributeParame
 	return nil
 }
 
+func (r *jsiiProxy_RolesanywhereProfile) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RolesanywhereProfile) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (r *jsiiProxy_RolesanywhereProfile) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RolesanywhereProfile) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (r *jsiiProxy_RolesanywhereProfile) validatePutAttributeMappingsParameters(value interface{}) error {
 	return nil
 }
 
@@ -81,6 +93,10 @@ func validateRolesanywhereProfile_IsTerraformElementParameters(x interface{}) er
 }
 
 func validateRolesanywhereProfile_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RolesanywhereProfile) validateSetAcceptRoleSessionNameParameters(val interface{}) error {
 	return nil
 }
 

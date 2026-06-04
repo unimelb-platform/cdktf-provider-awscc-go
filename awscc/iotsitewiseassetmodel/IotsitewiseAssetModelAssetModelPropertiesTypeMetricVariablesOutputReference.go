@@ -27,8 +27,8 @@ type IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesOutputReference
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariables
-	SetInternalValue(val *IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariables)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -41,7 +41,7 @@ type IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesOutputReference
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	Value() IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference
-	ValueInput() *IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValue
+	ValueInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -67,6 +67,8 @@ type IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesOutputReference
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutValue(value *IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValue)
+	ResetName()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesO
 	return returns
 }
 
-func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesOutputReference) InternalValue() *IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariables {
-	var returns *IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariables
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -182,8 +184,8 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesO
 	return returns
 }
 
-func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesOutputReference) ValueInput() *IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValue {
-	var returns *IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValue
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesOutputReference) ValueInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"valueInput",
@@ -242,7 +244,7 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesO
 	)
 }
 
-func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesOutputReference)SetInternalValue(val *IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariables) {
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -480,6 +482,22 @@ func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesO
 		i,
 		"putValue",
 		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetValue",
+		nil, // no parameters
 	)
 }
 

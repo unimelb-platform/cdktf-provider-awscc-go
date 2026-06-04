@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccinspectorresourcegroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/inspector_resource_group awscc_inspector_resource_group}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/inspector_resource_group awscc_inspector_resource_group}.
 type DataAwsccInspectorResourceGroup interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -84,6 +84,10 @@ type DataAwsccInspectorResourceGroup interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -279,7 +283,7 @@ func (j *jsiiProxy_DataAwsccInspectorResourceGroup) TerraformResourceType() *str
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/inspector_resource_group awscc_inspector_resource_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/inspector_resource_group awscc_inspector_resource_group} Data Source.
 func NewDataAwsccInspectorResourceGroup(scope constructs.Construct, id *string, config *DataAwsccInspectorResourceGroupConfig) DataAwsccInspectorResourceGroup {
 	_init_.Initialize()
 
@@ -297,7 +301,7 @@ func NewDataAwsccInspectorResourceGroup(scope constructs.Construct, id *string, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/inspector_resource_group awscc_inspector_resource_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/inspector_resource_group awscc_inspector_resource_group} Data Source.
 func NewDataAwsccInspectorResourceGroup_Override(d DataAwsccInspectorResourceGroup, scope constructs.Construct, id *string, config *DataAwsccInspectorResourceGroupConfig) {
 	_init_.Initialize()
 
@@ -664,6 +668,32 @@ func (d *jsiiProxy_DataAwsccInspectorResourceGroup) SynthesizeAttributes() *map[
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccInspectorResourceGroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccInspectorResourceGroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -64,6 +64,7 @@ type M2EnvironmentHighAvailabilityConfigOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDesiredCapacity()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (m *jsiiProxy_M2EnvironmentHighAvailabilityConfigOutputReference) Interpola
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_M2EnvironmentHighAvailabilityConfigOutputReference) ResetDesiredCapacity() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetDesiredCapacity",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_M2EnvironmentHighAvailabilityConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

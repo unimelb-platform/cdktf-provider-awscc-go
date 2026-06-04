@@ -68,6 +68,7 @@ type BillingconductorCustomLineItemCustomLineItemChargeDetailsPercentageOutputRe
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetChildAssociatedResources()
+	ResetPercentageValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (b *jsiiProxy_BillingconductorCustomLineItemCustomLineItemChargeDetailsPerc
 	_jsii_.InvokeVoid(
 		b,
 		"resetChildAssociatedResources",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BillingconductorCustomLineItemCustomLineItemChargeDetailsPercentageOutputReference) ResetPercentageValue() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetPercentageValue",
 		nil, // no parameters
 	)
 }

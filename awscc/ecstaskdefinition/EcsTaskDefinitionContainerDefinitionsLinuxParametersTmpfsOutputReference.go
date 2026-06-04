@@ -72,6 +72,7 @@ type EcsTaskDefinitionContainerDefinitionsLinuxParametersTmpfsOutputReference in
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetContainerPath()
 	ResetMountOptions()
+	ResetSize()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsLinuxParametersTmpfsOutp
 	_jsii_.InvokeVoid(
 		e,
 		"resetMountOptions",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsLinuxParametersTmpfsOutputReference) ResetSize() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetSize",
 		nil, // no parameters
 	)
 }

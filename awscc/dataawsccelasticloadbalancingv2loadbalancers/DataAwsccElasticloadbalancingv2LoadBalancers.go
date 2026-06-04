@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccelasticloadbalancingv2loadbalancers/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticloadbalancingv2_load_balancers awscc_elasticloadbalancingv2_load_balancers}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticloadbalancingv2_load_balancers awscc_elasticloadbalancingv2_load_balancers}.
 type DataAwsccElasticloadbalancingv2LoadBalancers interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccElasticloadbalancingv2LoadBalancers interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccElasticloadbalancingv2LoadBalancers) TerraformResour
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticloadbalancingv2_load_balancers awscc_elasticloadbalancingv2_load_balancers} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticloadbalancingv2_load_balancers awscc_elasticloadbalancingv2_load_balancers} Data Source.
 func NewDataAwsccElasticloadbalancingv2LoadBalancers(scope constructs.Construct, id *string, config *DataAwsccElasticloadbalancingv2LoadBalancersConfig) DataAwsccElasticloadbalancingv2LoadBalancers {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccElasticloadbalancingv2LoadBalancers(scope constructs.Construct,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticloadbalancingv2_load_balancers awscc_elasticloadbalancingv2_load_balancers} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticloadbalancingv2_load_balancers awscc_elasticloadbalancingv2_load_balancers} Data Source.
 func NewDataAwsccElasticloadbalancingv2LoadBalancers_Override(d DataAwsccElasticloadbalancingv2LoadBalancers, scope constructs.Construct, id *string, config *DataAwsccElasticloadbalancingv2LoadBalancersConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccElasticloadbalancingv2LoadBalancers) SynthesizeAttri
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccElasticloadbalancingv2LoadBalancers) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccElasticloadbalancingv2LoadBalancers) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

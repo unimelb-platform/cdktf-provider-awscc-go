@@ -56,7 +56,15 @@ func (k *jsiiProxy_KinesisvideoSignalingChannel) validateInterpolationForAttribu
 	return nil
 }
 
+func (k *jsiiProxy_KinesisvideoSignalingChannel) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (k *jsiiProxy_KinesisvideoSignalingChannel) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (k *jsiiProxy_KinesisvideoSignalingChannel) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -26,8 +26,10 @@ type DataAwsccIotsitewiseAssetAssetPropertiesOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	ExternalId() *string
 	// Experimental.
 	Fqn() *string
+	Id() *string
 	InternalValue() *DataAwsccIotsitewiseAssetAssetProperties
 	SetInternalValue(val *DataAwsccIotsitewiseAssetAssetProperties)
 	LogicalId() *string
@@ -120,11 +122,31 @@ func (j *jsiiProxy_DataAwsccIotsitewiseAssetAssetPropertiesOutputReference) Crea
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccIotsitewiseAssetAssetPropertiesOutputReference) ExternalId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccIotsitewiseAssetAssetPropertiesOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotsitewiseAssetAssetPropertiesOutputReference) Id() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"id",
 		&returns,
 	)
 	return returns

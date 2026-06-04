@@ -35,6 +35,9 @@ type KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputRefere
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	CustomTimeZone() *string
+	SetCustomTimeZone(val *string)
+	CustomTimeZoneInput() *string
 	DataFormatConversionConfiguration() KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationDataFormatConversionConfigurationOutputReference
 	DataFormatConversionConfigurationInput() interface{}
 	DynamicPartitioningConfiguration() KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationDynamicPartitioningConfigurationOutputReference
@@ -44,6 +47,9 @@ type KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputRefere
 	ErrorOutputPrefix() *string
 	SetErrorOutputPrefix(val *string)
 	ErrorOutputPrefixInput() *string
+	FileExtension() *string
+	SetFileExtension(val *string)
+	FileExtensionInput() *string
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -100,15 +106,19 @@ type KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputRefere
 	PutEncryptionConfiguration(value *KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationEncryptionConfiguration)
 	PutProcessingConfiguration(value *KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationProcessingConfiguration)
 	PutS3BackupConfiguration(value *KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationS3BackupConfiguration)
+	ResetBucketArn()
 	ResetBufferingHints()
 	ResetCloudwatchLoggingOptions()
 	ResetCompressionFormat()
+	ResetCustomTimeZone()
 	ResetDataFormatConversionConfiguration()
 	ResetDynamicPartitioningConfiguration()
 	ResetEncryptionConfiguration()
 	ResetErrorOutputPrefix()
+	ResetFileExtension()
 	ResetPrefix()
 	ResetProcessingConfiguration()
+	ResetRoleArn()
 	ResetS3BackupConfiguration()
 	ResetS3BackupMode()
 	// Produce the Token's value at resolution time.
@@ -236,6 +246,26 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurati
 	return returns
 }
 
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference) CustomTimeZone() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"customTimeZone",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference) CustomTimeZoneInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"customTimeZoneInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference) DataFormatConversionConfiguration() KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationDataFormatConversionConfigurationOutputReference {
 	var returns KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationDataFormatConversionConfigurationOutputReference
 	_jsii_.Get(
@@ -311,6 +341,26 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurati
 	_jsii_.Get(
 		j,
 		"errorOutputPrefixInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference) FileExtension() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fileExtension",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference) FileExtensionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fileExtensionInput",
 		&returns,
 	)
 	return returns
@@ -528,6 +578,17 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurati
 	)
 }
 
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference)SetCustomTimeZone(val *string) {
+	if err := j.validateSetCustomTimeZoneParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"customTimeZone",
+		val,
+	)
+}
+
 func (j *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference)SetErrorOutputPrefix(val *string) {
 	if err := j.validateSetErrorOutputPrefixParameters(val); err != nil {
 		panic(err)
@@ -535,6 +596,17 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurati
 	_jsii_.Set(
 		j,
 		"errorOutputPrefix",
+		val,
+	)
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference)SetFileExtension(val *string) {
+	if err := j.validateSetFileExtensionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"fileExtension",
 		val,
 	)
 }
@@ -868,6 +940,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurati
 	)
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference) ResetBucketArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetBucketArn",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference) ResetBufferingHints() {
 	_jsii_.InvokeVoid(
 		k,
@@ -888,6 +968,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurati
 	_jsii_.InvokeVoid(
 		k,
 		"resetCompressionFormat",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference) ResetCustomTimeZone() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetCustomTimeZone",
 		nil, // no parameters
 	)
 }
@@ -924,6 +1012,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurati
 	)
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference) ResetFileExtension() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetFileExtension",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference) ResetPrefix() {
 	_jsii_.InvokeVoid(
 		k,
@@ -936,6 +1032,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurati
 	_jsii_.InvokeVoid(
 		k,
 		"resetProcessingConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetRoleArn",
 		nil, // no parameters
 	)
 }

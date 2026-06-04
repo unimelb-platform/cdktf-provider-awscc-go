@@ -67,6 +67,7 @@ type WisdomKnowledgeBaseSourceConfigurationAppIntegrationsOutputReference interf
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAppIntegrationArn()
 	ResetObjectFields()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (w *jsiiProxy_WisdomKnowledgeBaseSourceConfigurationAppIntegrationsOutputRe
 	)
 
 	return returns
+}
+
+func (w *jsiiProxy_WisdomKnowledgeBaseSourceConfigurationAppIntegrationsOutputReference) ResetAppIntegrationArn() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetAppIntegrationArn",
+		nil, // no parameters
+	)
 }
 
 func (w *jsiiProxy_WisdomKnowledgeBaseSourceConfigurationAppIntegrationsOutputReference) ResetObjectFields() {

@@ -39,7 +39,7 @@ type CustomerprofilesIntegrationFlowDefinitionOutputReference interface {
 	SetKmsArn(val *string)
 	KmsArnInput() *string
 	SourceFlowConfig() CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutputReference
-	SourceFlowConfigInput() *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfig
+	SourceFlowConfigInput() interface{}
 	Tasks() CustomerprofilesIntegrationFlowDefinitionTasksList
 	TasksInput() interface{}
 	// Experimental.
@@ -51,7 +51,7 @@ type CustomerprofilesIntegrationFlowDefinitionOutputReference interface {
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	TriggerConfig() CustomerprofilesIntegrationFlowDefinitionTriggerConfigOutputReference
-	TriggerConfigInput() *CustomerprofilesIntegrationFlowDefinitionTriggerConfig
+	TriggerConfigInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -80,6 +80,11 @@ type CustomerprofilesIntegrationFlowDefinitionOutputReference interface {
 	PutTasks(value interface{})
 	PutTriggerConfig(value *CustomerprofilesIntegrationFlowDefinitionTriggerConfig)
 	ResetDescription()
+	ResetFlowName()
+	ResetKmsArn()
+	ResetSourceFlowConfig()
+	ResetTasks()
+	ResetTriggerConfig()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -215,8 +220,8 @@ func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionOutputReference) Sou
 	return returns
 }
 
-func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionOutputReference) SourceFlowConfigInput() *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfig {
-	var returns *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfig
+func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionOutputReference) SourceFlowConfigInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"sourceFlowConfigInput",
@@ -275,8 +280,8 @@ func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionOutputReference) Tri
 	return returns
 }
 
-func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionOutputReference) TriggerConfigInput() *CustomerprofilesIntegrationFlowDefinitionTriggerConfig {
-	var returns *CustomerprofilesIntegrationFlowDefinitionTriggerConfig
+func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionOutputReference) TriggerConfigInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"triggerConfigInput",
@@ -624,6 +629,46 @@ func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionOutputReference) Res
 	_jsii_.InvokeVoid(
 		c,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionOutputReference) ResetFlowName() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetFlowName",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionOutputReference) ResetKmsArn() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetKmsArn",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionOutputReference) ResetSourceFlowConfig() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetSourceFlowConfig",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionOutputReference) ResetTasks() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetTasks",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionOutputReference) ResetTriggerConfig() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetTriggerConfig",
 		nil, // no parameters
 	)
 }

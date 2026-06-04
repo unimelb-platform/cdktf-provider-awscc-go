@@ -27,8 +27,8 @@ type S3BucketOwnershipControlsRulesOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *S3BucketOwnershipControlsRules
-	SetInternalValue(val *S3BucketOwnershipControlsRules)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	ObjectOwnership() *string
 	SetObjectOwnership(val *string)
 	ObjectOwnershipInput() *string
@@ -120,8 +120,8 @@ func (j *jsiiProxy_S3BucketOwnershipControlsRulesOutputReference) Fqn() *string 
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketOwnershipControlsRulesOutputReference) InternalValue() *S3BucketOwnershipControlsRules {
-	var returns *S3BucketOwnershipControlsRules
+func (j *jsiiProxy_S3BucketOwnershipControlsRulesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -220,7 +220,7 @@ func (j *jsiiProxy_S3BucketOwnershipControlsRulesOutputReference)SetComplexObjec
 	)
 }
 
-func (j *jsiiProxy_S3BucketOwnershipControlsRulesOutputReference)SetInternalValue(val *S3BucketOwnershipControlsRules) {
+func (j *jsiiProxy_S3BucketOwnershipControlsRulesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

@@ -56,7 +56,15 @@ func (f *jsiiProxy_FmsPolicy) validateInterpolationForAttributeParameters(terraf
 	return nil
 }
 
+func (f *jsiiProxy_FmsPolicy) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (f *jsiiProxy_FmsPolicy) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (f *jsiiProxy_FmsPolicy) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -141,6 +149,10 @@ func (j *jsiiProxy_FmsPolicy) validateSetResourcesCleanUpParameters(val interfac
 }
 
 func (j *jsiiProxy_FmsPolicy) validateSetResourceSetIdsParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_FmsPolicy) validateSetResourceTagLogicalOperatorParameters(val *string) error {
 	return nil
 }
 

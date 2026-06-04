@@ -56,11 +56,31 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroup) validateInterpolationForAttribut
 	return nil
 }
 
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_AutoscalingAutoScalingGroup) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_AutoscalingAutoScalingGroup) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) validatePutAvailabilityZoneDistributionParameters(value *AutoscalingAutoScalingGroupAvailabilityZoneDistribution) error {
+	return nil
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) validatePutAvailabilityZoneImpairmentPolicyParameters(value *AutoscalingAutoScalingGroupAvailabilityZoneImpairmentPolicy) error {
+	return nil
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) validatePutCapacityReservationSpecificationParameters(value *AutoscalingAutoScalingGroupCapacityReservationSpecification) error {
 	return nil
 }
 
@@ -93,6 +113,10 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroup) validatePutNotificationConfigura
 }
 
 func (a *jsiiProxy_AutoscalingAutoScalingGroup) validatePutTagsParameters(value interface{}) error {
+	return nil
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroup) validatePutTrafficSourcesParameters(value interface{}) error {
 	return nil
 }
 
@@ -201,6 +225,10 @@ func (j *jsiiProxy_AutoscalingAutoScalingGroup) validateSetProvisionersParameter
 }
 
 func (j *jsiiProxy_AutoscalingAutoScalingGroup) validateSetServiceLinkedRoleArnParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_AutoscalingAutoScalingGroup) validateSetSkipZonalShiftValidationParameters(val interface{}) error {
 	return nil
 }
 

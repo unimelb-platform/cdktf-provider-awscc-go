@@ -119,6 +119,14 @@ func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateInterpolationForA
 	return nil
 }
 
+func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateMoveToParameters(
 	return nil
 }
 
+func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -214,6 +230,17 @@ func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validatePutLoadBalancerAt
 		if !_jsii_.IsAnonymousProxy(value) {
 			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Elasticloadbalancingv2LoadBalancerLoadBalancerAttributes; received %#v (a %T)", value, value)
 		}
+	}
+
+	return nil
+}
+
+func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validatePutMinimumLoadBalancerCapacityParameters(value *Elasticloadbalancingv2LoadBalancerMinimumLoadBalancerCapacity) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
 	}
 
 	return nil
@@ -411,6 +438,14 @@ func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateSetCountParameter
 	return nil
 }
 
+func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateSetEnablePrefixForIpv6SourceNatParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateSetEnforceSecurityGroupInboundRulesOnPrivateLinkTrafficParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -420,6 +455,14 @@ func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateSetEnforceSecurit
 }
 
 func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateSetIpAddressTypeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) validateSetIpv4IpamPoolIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

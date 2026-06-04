@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccekspodidentityassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/eks_pod_identity_association awscc_eks_pod_identity_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/eks_pod_identity_association awscc_eks_pod_identity_association}.
 type DataAwsccEksPodIdentityAssociation interface {
 	cdktf.TerraformDataSource
 	AssociationArn() *string
@@ -27,6 +27,8 @@ type DataAwsccEksPodIdentityAssociation interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DisableSessionTags() cdktf.IResolvable
+	ExternalId() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -54,6 +56,7 @@ type DataAwsccEksPodIdentityAssociation interface {
 	RoleArn() *string
 	ServiceAccount() *string
 	Tags() DataAwsccEksPodIdentityAssociationTagsList
+	TargetRoleArn() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -89,6 +92,10 @@ type DataAwsccEksPodIdentityAssociation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -168,6 +175,26 @@ func (j *jsiiProxy_DataAwsccEksPodIdentityAssociation) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEksPodIdentityAssociation) DisableSessionTags() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"disableSessionTags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEksPodIdentityAssociation) ExternalId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalId",
 		&returns,
 	)
 	return returns
@@ -303,6 +330,16 @@ func (j *jsiiProxy_DataAwsccEksPodIdentityAssociation) Tags() DataAwsccEksPodIde
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEksPodIdentityAssociation) TargetRoleArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"targetRoleArn",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEksPodIdentityAssociation) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -334,7 +371,7 @@ func (j *jsiiProxy_DataAwsccEksPodIdentityAssociation) TerraformResourceType() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/eks_pod_identity_association awscc_eks_pod_identity_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/eks_pod_identity_association awscc_eks_pod_identity_association} Data Source.
 func NewDataAwsccEksPodIdentityAssociation(scope constructs.Construct, id *string, config *DataAwsccEksPodIdentityAssociationConfig) DataAwsccEksPodIdentityAssociation {
 	_init_.Initialize()
 
@@ -352,7 +389,7 @@ func NewDataAwsccEksPodIdentityAssociation(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/eks_pod_identity_association awscc_eks_pod_identity_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/eks_pod_identity_association awscc_eks_pod_identity_association} Data Source.
 func NewDataAwsccEksPodIdentityAssociation_Override(d DataAwsccEksPodIdentityAssociation, scope constructs.Construct, id *string, config *DataAwsccEksPodIdentityAssociationConfig) {
 	_init_.Initialize()
 
@@ -719,6 +756,32 @@ func (d *jsiiProxy_DataAwsccEksPodIdentityAssociation) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEksPodIdentityAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEksPodIdentityAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

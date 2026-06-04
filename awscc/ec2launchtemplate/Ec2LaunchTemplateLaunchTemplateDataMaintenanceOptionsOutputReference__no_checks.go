@@ -64,10 +64,6 @@ func (j *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataMaintenanceOptionsOutputRe
 	return nil
 }
 
-func (j *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataMaintenanceOptionsOutputReference) validateSetRebootMigrationParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataMaintenanceOptionsOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

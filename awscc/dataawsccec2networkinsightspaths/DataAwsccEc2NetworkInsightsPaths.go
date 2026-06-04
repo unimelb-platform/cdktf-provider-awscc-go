@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2networkinsightspaths/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_network_insights_paths awscc_ec2_network_insights_paths}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_network_insights_paths awscc_ec2_network_insights_paths}.
 type DataAwsccEc2NetworkInsightsPaths interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccEc2NetworkInsightsPaths interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccEc2NetworkInsightsPaths) TerraformResourceType() *st
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_network_insights_paths awscc_ec2_network_insights_paths} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_network_insights_paths awscc_ec2_network_insights_paths} Data Source.
 func NewDataAwsccEc2NetworkInsightsPaths(scope constructs.Construct, id *string, config *DataAwsccEc2NetworkInsightsPathsConfig) DataAwsccEc2NetworkInsightsPaths {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccEc2NetworkInsightsPaths(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_network_insights_paths awscc_ec2_network_insights_paths} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_network_insights_paths awscc_ec2_network_insights_paths} Data Source.
 func NewDataAwsccEc2NetworkInsightsPaths_Override(d DataAwsccEc2NetworkInsightsPaths, scope constructs.Construct, id *string, config *DataAwsccEc2NetworkInsightsPathsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccEc2NetworkInsightsPaths) SynthesizeAttributes() *map
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2NetworkInsightsPaths) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2NetworkInsightsPaths) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

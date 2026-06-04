@@ -26,7 +26,7 @@ type DatabrewJobDatabaseOutputsOutputReference interface {
 	// Experimental.
 	CreationStack() *[]*string
 	DatabaseOptions() DatabrewJobDatabaseOutputsDatabaseOptionsOutputReference
-	DatabaseOptionsInput() *DatabrewJobDatabaseOutputsDatabaseOptions
+	DatabaseOptionsInput() interface{}
 	DatabaseOutputMode() *string
 	SetDatabaseOutputMode(val *string)
 	DatabaseOutputModeInput() *string
@@ -70,7 +70,9 @@ type DatabrewJobDatabaseOutputsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDatabaseOptions(value *DatabrewJobDatabaseOutputsDatabaseOptions)
+	ResetDatabaseOptions()
 	ResetDatabaseOutputMode()
+	ResetGlueConnectionName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -126,8 +128,8 @@ func (j *jsiiProxy_DatabrewJobDatabaseOutputsOutputReference) DatabaseOptions() 
 	return returns
 }
 
-func (j *jsiiProxy_DatabrewJobDatabaseOutputsOutputReference) DatabaseOptionsInput() *DatabrewJobDatabaseOutputsDatabaseOptions {
-	var returns *DatabrewJobDatabaseOutputsDatabaseOptions
+func (j *jsiiProxy_DatabrewJobDatabaseOutputsOutputReference) DatabaseOptionsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"databaseOptionsInput",
@@ -518,10 +520,26 @@ func (d *jsiiProxy_DatabrewJobDatabaseOutputsOutputReference) PutDatabaseOptions
 	)
 }
 
+func (d *jsiiProxy_DatabrewJobDatabaseOutputsOutputReference) ResetDatabaseOptions() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetDatabaseOptions",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DatabrewJobDatabaseOutputsOutputReference) ResetDatabaseOutputMode() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetDatabaseOutputMode",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatabrewJobDatabaseOutputsOutputReference) ResetGlueConnectionName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetGlueConnectionName",
 		nil, // no parameters
 	)
 }

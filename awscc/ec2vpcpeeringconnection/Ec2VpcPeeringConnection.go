@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2vpcpeeringconnection/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_vpc_peering_connection awscc_ec2_vpc_peering_connection}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_vpc_peering_connection awscc_ec2_vpc_peering_connection}.
 type Ec2VpcPeeringConnection interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -76,6 +76,7 @@ type Ec2VpcPeeringConnection interface {
 	VpcId() *string
 	SetVpcId(val *string)
 	VpcIdInput() *string
+	VpcPeeringConnectionId() *string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -100,12 +101,22 @@ type Ec2VpcPeeringConnection interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -118,6 +129,9 @@ type Ec2VpcPeeringConnection interface {
 	ResetPeerRoleArn()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -422,8 +436,18 @@ func (j *jsiiProxy_Ec2VpcPeeringConnection) VpcIdInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2VpcPeeringConnection) VpcPeeringConnectionId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"vpcPeeringConnectionId",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_vpc_peering_connection awscc_ec2_vpc_peering_connection} Resource.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_vpc_peering_connection awscc_ec2_vpc_peering_connection} Resource.
 func NewEc2VpcPeeringConnection(scope constructs.Construct, id *string, config *Ec2VpcPeeringConnectionConfig) Ec2VpcPeeringConnection {
 	_init_.Initialize()
 
@@ -441,7 +465,7 @@ func NewEc2VpcPeeringConnection(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_vpc_peering_connection awscc_ec2_vpc_peering_connection} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_vpc_peering_connection awscc_ec2_vpc_peering_connection} Resource.
 func NewEc2VpcPeeringConnection_Override(e Ec2VpcPeeringConnection, scope constructs.Construct, id *string, config *Ec2VpcPeeringConnectionConfig) {
 	_init_.Initialize()
 
@@ -844,6 +868,19 @@ func (e *jsiiProxy_Ec2VpcPeeringConnection) GetStringMapAttribute(terraformAttri
 	return returns
 }
 
+func (e *jsiiProxy_Ec2VpcPeeringConnection) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2VpcPeeringConnection) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -871,6 +908,17 @@ func (e *jsiiProxy_Ec2VpcPeeringConnection) InterpolationForAttribute(terraformA
 	return returns
 }
 
+func (e *jsiiProxy_Ec2VpcPeeringConnection) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2VpcPeeringConnection) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -879,6 +927,17 @@ func (e *jsiiProxy_Ec2VpcPeeringConnection) MoveTo(moveTarget *string, index int
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Ec2VpcPeeringConnection) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -950,6 +1009,32 @@ func (e *jsiiProxy_Ec2VpcPeeringConnection) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2VpcPeeringConnection) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2VpcPeeringConnection) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

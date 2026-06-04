@@ -64,6 +64,7 @@ type Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetIpv6Address()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNet
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesIpv6AddressesOutputReference) ResetIpv6Address() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetIpv6Address",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesIpv6AddressesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

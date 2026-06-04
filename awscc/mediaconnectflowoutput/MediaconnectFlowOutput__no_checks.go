@@ -56,7 +56,15 @@ func (m *jsiiProxy_MediaconnectFlowOutput) validateInterpolationForAttributePara
 	return nil
 }
 
+func (m *jsiiProxy_MediaconnectFlowOutput) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_MediaconnectFlowOutput) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (m *jsiiProxy_MediaconnectFlowOutput) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -65,6 +73,10 @@ func (m *jsiiProxy_MediaconnectFlowOutput) validateOverrideLogicalIdParameters(n
 }
 
 func (m *jsiiProxy_MediaconnectFlowOutput) validatePutEncryptionParameters(value *MediaconnectFlowOutputEncryption) error {
+	return nil
+}
+
+func (m *jsiiProxy_MediaconnectFlowOutput) validatePutMediaStreamOutputConfigurationsParameters(value interface{}) error {
 	return nil
 }
 
@@ -125,6 +137,18 @@ func (j *jsiiProxy_MediaconnectFlowOutput) validateSetMinLatencyParameters(val *
 }
 
 func (j *jsiiProxy_MediaconnectFlowOutput) validateSetNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_MediaconnectFlowOutput) validateSetNdiProgramNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_MediaconnectFlowOutput) validateSetNdiSpeedHqQualityParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_MediaconnectFlowOutput) validateSetOutputStatusParameters(val *string) error {
 	return nil
 }
 

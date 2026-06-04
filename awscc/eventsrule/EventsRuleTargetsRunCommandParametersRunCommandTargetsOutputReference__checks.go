@@ -163,9 +163,25 @@ func (j *jsiiProxy_EventsRuleTargetsRunCommandParametersRunCommandTargetsOutputR
 	return nil
 }
 
-func (j *jsiiProxy_EventsRuleTargetsRunCommandParametersRunCommandTargetsOutputReference) validateSetInternalValueParameters(val *EventsRuleTargetsRunCommandParametersRunCommandTargets) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_EventsRuleTargetsRunCommandParametersRunCommandTargetsOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *EventsRuleTargetsRunCommandParametersRunCommandTargets:
+		val := val.(*EventsRuleTargetsRunCommandParametersRunCommandTargets)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case EventsRuleTargetsRunCommandParametersRunCommandTargets:
+		val_ := val.(EventsRuleTargetsRunCommandParametersRunCommandTargets)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *EventsRuleTargetsRunCommandParametersRunCommandTargets; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

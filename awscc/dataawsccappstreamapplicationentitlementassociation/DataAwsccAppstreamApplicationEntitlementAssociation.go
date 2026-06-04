@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccappstreamapplicationentitlementassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appstream_application_entitlement_association awscc_appstream_application_entitlement_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appstream_application_entitlement_association awscc_appstream_application_entitlement_association}.
 type DataAwsccAppstreamApplicationEntitlementAssociation interface {
 	cdktf.TerraformDataSource
 	ApplicationIdentifier() *string
@@ -85,6 +85,10 @@ type DataAwsccAppstreamApplicationEntitlementAssociation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -290,7 +294,7 @@ func (j *jsiiProxy_DataAwsccAppstreamApplicationEntitlementAssociation) Terrafor
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appstream_application_entitlement_association awscc_appstream_application_entitlement_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appstream_application_entitlement_association awscc_appstream_application_entitlement_association} Data Source.
 func NewDataAwsccAppstreamApplicationEntitlementAssociation(scope constructs.Construct, id *string, config *DataAwsccAppstreamApplicationEntitlementAssociationConfig) DataAwsccAppstreamApplicationEntitlementAssociation {
 	_init_.Initialize()
 
@@ -308,7 +312,7 @@ func NewDataAwsccAppstreamApplicationEntitlementAssociation(scope constructs.Con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appstream_application_entitlement_association awscc_appstream_application_entitlement_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appstream_application_entitlement_association awscc_appstream_application_entitlement_association} Data Source.
 func NewDataAwsccAppstreamApplicationEntitlementAssociation_Override(d DataAwsccAppstreamApplicationEntitlementAssociation, scope constructs.Construct, id *string, config *DataAwsccAppstreamApplicationEntitlementAssociationConfig) {
 	_init_.Initialize()
 
@@ -675,6 +679,32 @@ func (d *jsiiProxy_DataAwsccAppstreamApplicationEntitlementAssociation) Synthesi
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppstreamApplicationEntitlementAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppstreamApplicationEntitlementAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

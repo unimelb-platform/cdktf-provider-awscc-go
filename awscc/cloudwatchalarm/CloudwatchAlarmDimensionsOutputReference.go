@@ -67,6 +67,8 @@ type CloudwatchAlarmDimensionsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CloudwatchAlarmDimensionsOutputReference) InterpolationForAtt
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CloudwatchAlarmDimensionsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudwatchAlarmDimensionsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CloudwatchAlarmDimensionsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

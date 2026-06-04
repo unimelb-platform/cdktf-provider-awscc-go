@@ -30,8 +30,8 @@ type KafkaconnectConnectorCapacityAutoScalingScaleInPolicyOutputReference interf
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *KafkaconnectConnectorCapacityAutoScalingScaleInPolicy
-	SetInternalValue(val *KafkaconnectConnectorCapacityAutoScalingScaleInPolicy)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type KafkaconnectConnectorCapacityAutoScalingScaleInPolicyOutputReference interf
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCpuUtilizationPercentage()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -139,8 +140,8 @@ func (j *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingScaleInPolicyOutputRe
 	return returns
 }
 
-func (j *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingScaleInPolicyOutputReference) InternalValue() *KafkaconnectConnectorCapacityAutoScalingScaleInPolicy {
-	var returns *KafkaconnectConnectorCapacityAutoScalingScaleInPolicy
+func (j *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingScaleInPolicyOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -230,7 +231,7 @@ func (j *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingScaleInPolicyOutputRe
 	)
 }
 
-func (j *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingScaleInPolicyOutputReference)SetInternalValue(val *KafkaconnectConnectorCapacityAutoScalingScaleInPolicy) {
+func (j *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingScaleInPolicyOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -447,6 +448,14 @@ func (k *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingScaleInPolicyOutputRe
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingScaleInPolicyOutputReference) ResetCpuUtilizationPercentage() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetCpuUtilizationPercentage",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KafkaconnectConnectorCapacityAutoScalingScaleInPolicyOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

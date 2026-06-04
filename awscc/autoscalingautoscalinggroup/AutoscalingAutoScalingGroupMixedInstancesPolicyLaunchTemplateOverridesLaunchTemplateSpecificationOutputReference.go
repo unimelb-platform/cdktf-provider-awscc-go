@@ -72,6 +72,7 @@ type AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesLaunc
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetLaunchTemplateId()
 	ResetLaunchTemplateName()
+	ResetVersion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
 	_jsii_.InvokeVoid(
 		a,
 		"resetLaunchTemplateName",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesLaunchTemplateSpecificationOutputReference) ResetVersion() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetVersion",
 		nil, // no parameters
 	)
 }

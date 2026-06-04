@@ -67,6 +67,8 @@ type CassandraTableRegularColumnsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetColumnName()
+	ResetColumnType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CassandraTableRegularColumnsOutputReference) InterpolationFor
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CassandraTableRegularColumnsOutputReference) ResetColumnName() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetColumnName",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CassandraTableRegularColumnsOutputReference) ResetColumnType() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetColumnType",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CassandraTableRegularColumnsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

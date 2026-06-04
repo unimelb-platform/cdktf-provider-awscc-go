@@ -56,11 +56,23 @@ func (n *jsiiProxy_NetworkmanagerSiteToSiteVpnAttachment) validateInterpolationF
 	return nil
 }
 
+func (n *jsiiProxy_NetworkmanagerSiteToSiteVpnAttachment) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (n *jsiiProxy_NetworkmanagerSiteToSiteVpnAttachment) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (n *jsiiProxy_NetworkmanagerSiteToSiteVpnAttachment) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (n *jsiiProxy_NetworkmanagerSiteToSiteVpnAttachment) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (n *jsiiProxy_NetworkmanagerSiteToSiteVpnAttachment) validatePutProposedNetworkFunctionGroupChangeParameters(value *NetworkmanagerSiteToSiteVpnAttachmentProposedNetworkFunctionGroupChange) error {
 	return nil
 }
 
@@ -101,6 +113,10 @@ func (j *jsiiProxy_NetworkmanagerSiteToSiteVpnAttachment) validateSetCountParame
 }
 
 func (j *jsiiProxy_NetworkmanagerSiteToSiteVpnAttachment) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
+	return nil
+}
+
+func (j *jsiiProxy_NetworkmanagerSiteToSiteVpnAttachment) validateSetNetworkFunctionGroupNameParameters(val *string) error {
 	return nil
 }
 

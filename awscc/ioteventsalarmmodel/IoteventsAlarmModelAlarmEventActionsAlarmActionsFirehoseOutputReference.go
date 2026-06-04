@@ -70,6 +70,7 @@ type IoteventsAlarmModelAlarmEventActionsAlarmActionsFirehoseOutputReference int
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutPayload(value *IoteventsAlarmModelAlarmEventActionsAlarmActionsFirehosePayload)
+	ResetDeliveryStreamName()
 	ResetPayload()
 	ResetSeparator()
 	// Produce the Token's value at resolution time.
@@ -516,6 +517,14 @@ func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsFirehoseOutpu
 		i,
 		"putPayload",
 		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsFirehoseOutputReference) ResetDeliveryStreamName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetDeliveryStreamName",
+		nil, // no parameters
 	)
 }
 

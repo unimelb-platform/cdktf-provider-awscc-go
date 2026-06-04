@@ -171,9 +171,25 @@ func (j *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimesOutpu
 	return nil
 }
 
-func (j *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimesOutputReference) validateSetInternalValueParameters(val *SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimes) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimesOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimes:
+		val := val.(*SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimes)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimes:
+		val_ := val.(SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimes)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *SsmcontactsRotationRecurrenceShiftCoveragesCoverageTimes; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

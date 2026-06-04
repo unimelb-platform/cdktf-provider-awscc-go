@@ -30,7 +30,7 @@ type CloudwatchAlarmMetricsMetricStatOutputReference interface {
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	Metric() CloudwatchAlarmMetricsMetricStatMetricOutputReference
-	MetricInput() *CloudwatchAlarmMetricsMetricStatMetric
+	MetricInput() interface{}
 	Period() *float64
 	SetPeriod(val *float64)
 	PeriodInput() *float64
@@ -73,6 +73,9 @@ type CloudwatchAlarmMetricsMetricStatOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMetric(value *CloudwatchAlarmMetricsMetricStatMetric)
+	ResetMetric()
+	ResetPeriod()
+	ResetStat()
 	ResetUnit()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -149,8 +152,8 @@ func (j *jsiiProxy_CloudwatchAlarmMetricsMetricStatOutputReference) Metric() Clo
 	return returns
 }
 
-func (j *jsiiProxy_CloudwatchAlarmMetricsMetricStatOutputReference) MetricInput() *CloudwatchAlarmMetricsMetricStatMetric {
-	var returns *CloudwatchAlarmMetricsMetricStatMetric
+func (j *jsiiProxy_CloudwatchAlarmMetricsMetricStatOutputReference) MetricInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"metricInput",
@@ -549,6 +552,30 @@ func (c *jsiiProxy_CloudwatchAlarmMetricsMetricStatOutputReference) PutMetric(va
 		c,
 		"putMetric",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CloudwatchAlarmMetricsMetricStatOutputReference) ResetMetric() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetMetric",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudwatchAlarmMetricsMetricStatOutputReference) ResetPeriod() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetPeriod",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudwatchAlarmMetricsMetricStatOutputReference) ResetStat() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetStat",
+		nil, // no parameters
 	)
 }
 

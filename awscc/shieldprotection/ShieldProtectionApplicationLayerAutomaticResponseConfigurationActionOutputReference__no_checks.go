@@ -64,7 +64,7 @@ func (j *jsiiProxy_ShieldProtectionApplicationLayerAutomaticResponseConfiguratio
 	return nil
 }
 
-func (j *jsiiProxy_ShieldProtectionApplicationLayerAutomaticResponseConfigurationActionOutputReference) validateSetInternalValueParameters(val *ShieldProtectionApplicationLayerAutomaticResponseConfigurationAction) error {
+func (j *jsiiProxy_ShieldProtectionApplicationLayerAutomaticResponseConfigurationActionOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

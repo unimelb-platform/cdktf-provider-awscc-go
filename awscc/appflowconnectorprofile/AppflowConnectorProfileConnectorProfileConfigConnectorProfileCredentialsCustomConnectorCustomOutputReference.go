@@ -68,6 +68,7 @@ type AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCus
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetCredentialsMap()
+	ResetCustomAuthenticationType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfile
 	_jsii_.InvokeVoid(
 		a,
 		"resetCredentialsMap",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorCustomOutputReference) ResetCustomAuthenticationType() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetCustomAuthenticationType",
 		nil, // no parameters
 	)
 }

@@ -67,6 +67,8 @@ type GroundstationDataflowEndpointGroupTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (g *jsiiProxy_GroundstationDataflowEndpointGroupTagsOutputReference) Interp
 	)
 
 	return returns
+}
+
+func (g *jsiiProxy_GroundstationDataflowEndpointGroupTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GroundstationDataflowEndpointGroupTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (g *jsiiProxy_GroundstationDataflowEndpointGroupTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

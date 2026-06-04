@@ -90,6 +90,28 @@ func (c *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputRefer
 	return nil
 }
 
+func (c *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputReference) validatePutJobComputeParameters(value *CleanroomsCollaborationMembersPaymentConfigurationJobCompute) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (c *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputReference) validatePutMachineLearningParameters(value *CleanroomsCollaborationMembersPaymentConfigurationMachineLearning) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (c *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputReference) validatePutQueryComputeParameters(value *CleanroomsCollaborationMembersPaymentConfigurationQueryCompute) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")

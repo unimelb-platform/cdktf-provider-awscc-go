@@ -67,6 +67,8 @@ type LexBotBotLocalesIntentsSlotPrioritiesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPriority()
+	ResetSlotName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsSlotPrioritiesOutputReference) Interpo
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotPrioritiesOutputReference) ResetPriority() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetPriority",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotPrioritiesOutputReference) ResetSlotName() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetSlotName",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotBotLocalesIntentsSlotPrioritiesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

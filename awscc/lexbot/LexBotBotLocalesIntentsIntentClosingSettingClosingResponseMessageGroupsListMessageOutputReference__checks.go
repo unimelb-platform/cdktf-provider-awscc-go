@@ -207,9 +207,25 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMes
 	return nil
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessageOutputReference) validateSetInternalValueParameters(val *LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessage) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessageOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessage:
+		val := val.(*LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessage)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessage:
+		val_ := val.(LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessage)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListMessage; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

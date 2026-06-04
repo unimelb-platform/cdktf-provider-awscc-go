@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/snstopicinlinepolicy/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/sns_topic_inline_policy awscc_sns_topic_inline_policy}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/sns_topic_inline_policy awscc_sns_topic_inline_policy}.
 type SnsTopicInlinePolicy interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -89,12 +89,22 @@ type SnsTopicInlinePolicy interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -102,6 +112,9 @@ type SnsTopicInlinePolicy interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -327,7 +340,7 @@ func (j *jsiiProxy_SnsTopicInlinePolicy) TopicArnInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/sns_topic_inline_policy awscc_sns_topic_inline_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/sns_topic_inline_policy awscc_sns_topic_inline_policy} Resource.
 func NewSnsTopicInlinePolicy(scope constructs.Construct, id *string, config *SnsTopicInlinePolicyConfig) SnsTopicInlinePolicy {
 	_init_.Initialize()
 
@@ -345,7 +358,7 @@ func NewSnsTopicInlinePolicy(scope constructs.Construct, id *string, config *Sns
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/sns_topic_inline_policy awscc_sns_topic_inline_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/sns_topic_inline_policy awscc_sns_topic_inline_policy} Resource.
 func NewSnsTopicInlinePolicy_Override(s SnsTopicInlinePolicy, scope constructs.Construct, id *string, config *SnsTopicInlinePolicyConfig) {
 	_init_.Initialize()
 
@@ -715,6 +728,19 @@ func (s *jsiiProxy_SnsTopicInlinePolicy) GetStringMapAttribute(terraformAttribut
 	return returns
 }
 
+func (s *jsiiProxy_SnsTopicInlinePolicy) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (s *jsiiProxy_SnsTopicInlinePolicy) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := s.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -742,6 +768,17 @@ func (s *jsiiProxy_SnsTopicInlinePolicy) InterpolationForAttribute(terraformAttr
 	return returns
 }
 
+func (s *jsiiProxy_SnsTopicInlinePolicy) MoveFromId(id *string) {
+	if err := s.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (s *jsiiProxy_SnsTopicInlinePolicy) MoveTo(moveTarget *string, index interface{}) {
 	if err := s.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -750,6 +787,17 @@ func (s *jsiiProxy_SnsTopicInlinePolicy) MoveTo(moveTarget *string, index interf
 		s,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (s *jsiiProxy_SnsTopicInlinePolicy) MoveToId(id *string) {
+	if err := s.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -778,6 +826,32 @@ func (s *jsiiProxy_SnsTopicInlinePolicy) SynthesizeAttributes() *map[string]inte
 	_jsii_.Invoke(
 		s,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SnsTopicInlinePolicy) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		s,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SnsTopicInlinePolicy) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

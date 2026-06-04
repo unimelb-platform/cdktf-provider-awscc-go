@@ -56,7 +56,15 @@ func (s *jsiiProxy_SagemakerDomain) validateInterpolationForAttributeParameters(
 	return nil
 }
 
+func (s *jsiiProxy_SagemakerDomain) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_SagemakerDomain) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (s *jsiiProxy_SagemakerDomain) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -133,6 +141,10 @@ func (j *jsiiProxy_SagemakerDomain) validateSetProvisionersParameters(val *[]int
 }
 
 func (j *jsiiProxy_SagemakerDomain) validateSetSubnetIdsParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_SagemakerDomain) validateSetTagPropagationParameters(val *string) error {
 	return nil
 }
 

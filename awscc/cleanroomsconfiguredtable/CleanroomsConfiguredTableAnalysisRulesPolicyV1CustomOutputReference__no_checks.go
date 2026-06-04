@@ -44,7 +44,15 @@ func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputRef
 	return nil
 }
 
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) validatePutDifferentialPrivacyParameters(value *CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomDifferentialPrivacy) error {
+	return nil
+}
+
 func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) validateSetAdditionalAnalysesParameters(val *string) error {
 	return nil
 }
 
@@ -61,6 +69,10 @@ func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputRef
 }
 
 func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) validateSetDisallowedOutputColumnsParameters(val *[]*string) error {
 	return nil
 }
 

@@ -36,8 +36,8 @@ type CloudtrailEventDataStoreAdvancedEventSelectorsFieldSelectorsOutputReference
 	FieldInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *CloudtrailEventDataStoreAdvancedEventSelectorsFieldSelectors
-	SetInternalValue(val *CloudtrailEventDataStoreAdvancedEventSelectorsFieldSelectors)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	NotEndsWith() *[]*string
 	SetNotEndsWith(val *[]*string)
 	NotEndsWithInput() *[]*string
@@ -84,6 +84,7 @@ type CloudtrailEventDataStoreAdvancedEventSelectorsFieldSelectorsOutputReference
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetEndsWith()
 	ResetEqualTo()
+	ResetField()
 	ResetNotEndsWith()
 	ResetNotEquals()
 	ResetNotStartsWith()
@@ -203,8 +204,8 @@ func (j *jsiiProxy_CloudtrailEventDataStoreAdvancedEventSelectorsFieldSelectorsO
 	return returns
 }
 
-func (j *jsiiProxy_CloudtrailEventDataStoreAdvancedEventSelectorsFieldSelectorsOutputReference) InternalValue() *CloudtrailEventDataStoreAdvancedEventSelectorsFieldSelectors {
-	var returns *CloudtrailEventDataStoreAdvancedEventSelectorsFieldSelectors
+func (j *jsiiProxy_CloudtrailEventDataStoreAdvancedEventSelectorsFieldSelectorsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -396,7 +397,7 @@ func (j *jsiiProxy_CloudtrailEventDataStoreAdvancedEventSelectorsFieldSelectorsO
 	)
 }
 
-func (j *jsiiProxy_CloudtrailEventDataStoreAdvancedEventSelectorsFieldSelectorsOutputReference)SetInternalValue(val *CloudtrailEventDataStoreAdvancedEventSelectorsFieldSelectors) {
+func (j *jsiiProxy_CloudtrailEventDataStoreAdvancedEventSelectorsFieldSelectorsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -671,6 +672,14 @@ func (c *jsiiProxy_CloudtrailEventDataStoreAdvancedEventSelectorsFieldSelectorsO
 	_jsii_.InvokeVoid(
 		c,
 		"resetEqualTo",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudtrailEventDataStoreAdvancedEventSelectorsFieldSelectorsOutputReference) ResetField() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetField",
 		nil, // no parameters
 	)
 }

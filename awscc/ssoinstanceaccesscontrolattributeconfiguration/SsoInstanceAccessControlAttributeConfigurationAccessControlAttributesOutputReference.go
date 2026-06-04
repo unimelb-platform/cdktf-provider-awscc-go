@@ -41,7 +41,7 @@ type SsoInstanceAccessControlAttributeConfigurationAccessControlAttributesOutput
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	Value() SsoInstanceAccessControlAttributeConfigurationAccessControlAttributesValueOutputReference
-	ValueInput() *SsoInstanceAccessControlAttributeConfigurationAccessControlAttributesValue
+	ValueInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -67,6 +67,8 @@ type SsoInstanceAccessControlAttributeConfigurationAccessControlAttributesOutput
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutValue(value *SsoInstanceAccessControlAttributeConfigurationAccessControlAttributesValue)
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -182,8 +184,8 @@ func (j *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationAccessControlAt
 	return returns
 }
 
-func (j *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationAccessControlAttributesOutputReference) ValueInput() *SsoInstanceAccessControlAttributeConfigurationAccessControlAttributesValue {
-	var returns *SsoInstanceAccessControlAttributeConfigurationAccessControlAttributesValue
+func (j *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationAccessControlAttributesOutputReference) ValueInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"valueInput",
@@ -480,6 +482,22 @@ func (s *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationAccessControlAt
 		s,
 		"putValue",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationAccessControlAttributesOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SsoInstanceAccessControlAttributeConfigurationAccessControlAttributesOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetValue",
+		nil, // no parameters
 	)
 }
 

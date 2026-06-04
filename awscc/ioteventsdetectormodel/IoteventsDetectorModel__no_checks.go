@@ -56,7 +56,15 @@ func (i *jsiiProxy_IoteventsDetectorModel) validateInterpolationForAttributePara
 	return nil
 }
 
+func (i *jsiiProxy_IoteventsDetectorModel) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IoteventsDetectorModel) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_IoteventsDetectorModel) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

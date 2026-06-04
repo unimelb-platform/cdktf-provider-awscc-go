@@ -70,6 +70,7 @@ type Inspectorv2FilterFilterCriteriaResourceTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetComparison()
 	ResetKey()
 	ResetValue()
 	// Produce the Token's value at resolution time.
@@ -517,6 +518,14 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaResourceTagsOutputReference) I
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaResourceTagsOutputReference) ResetComparison() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetComparison",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaResourceTagsOutputReference) ResetKey() {

@@ -27,11 +27,13 @@ type DataAwsccCognitoLogDeliveryConfigurationLogConfigurationsOutputReference in
 	// Experimental.
 	CreationStack() *[]*string
 	EventSource() *string
+	FirehoseConfiguration() DataAwsccCognitoLogDeliveryConfigurationLogConfigurationsFirehoseConfigurationOutputReference
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataAwsccCognitoLogDeliveryConfigurationLogConfigurations
 	SetInternalValue(val *DataAwsccCognitoLogDeliveryConfigurationLogConfigurations)
 	LogLevel() *string
+	S3Configuration() DataAwsccCognitoLogDeliveryConfigurationLogConfigurationsS3ConfigurationOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -129,6 +131,16 @@ func (j *jsiiProxy_DataAwsccCognitoLogDeliveryConfigurationLogConfigurationsOutp
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccCognitoLogDeliveryConfigurationLogConfigurationsOutputReference) FirehoseConfiguration() DataAwsccCognitoLogDeliveryConfigurationLogConfigurationsFirehoseConfigurationOutputReference {
+	var returns DataAwsccCognitoLogDeliveryConfigurationLogConfigurationsFirehoseConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"firehoseConfiguration",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccCognitoLogDeliveryConfigurationLogConfigurationsOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -154,6 +166,16 @@ func (j *jsiiProxy_DataAwsccCognitoLogDeliveryConfigurationLogConfigurationsOutp
 	_jsii_.Get(
 		j,
 		"logLevel",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCognitoLogDeliveryConfigurationLogConfigurationsOutputReference) S3Configuration() DataAwsccCognitoLogDeliveryConfigurationLogConfigurationsS3ConfigurationOutputReference {
+	var returns DataAwsccCognitoLogDeliveryConfigurationLogConfigurationsS3ConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"s3Configuration",
 		&returns,
 	)
 	return returns

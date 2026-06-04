@@ -60,7 +60,7 @@ func (j *jsiiProxy_B2BiCapabilityConfigurationEdiInputLocationOutputReference) v
 	return nil
 }
 
-func (j *jsiiProxy_B2BiCapabilityConfigurationEdiInputLocationOutputReference) validateSetInternalValueParameters(val *B2BiCapabilityConfigurationEdiInputLocation) error {
+func (j *jsiiProxy_B2BiCapabilityConfigurationEdiInputLocationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccamplifybranch/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/amplify_branch awscc_amplify_branch}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/amplify_branch awscc_amplify_branch}.
 type DataAwsccAmplifyBranch interface {
 	cdktf.TerraformDataSource
 	AppId() *string
@@ -20,6 +20,7 @@ type DataAwsccAmplifyBranch interface {
 	BuildSpec() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	ComputeRoleArn() *string
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -34,6 +35,7 @@ type DataAwsccAmplifyBranch interface {
 	EnableAutoBuild() cdktf.IResolvable
 	EnablePerformanceMode() cdktf.IResolvable
 	EnablePullRequestPreview() cdktf.IResolvable
+	EnableSkewProtection() cdktf.IResolvable
 	EnvironmentVariables() DataAwsccAmplifyBranchEnvironmentVariablesList
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
@@ -97,6 +99,10 @@ type DataAwsccAmplifyBranch interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -181,6 +187,16 @@ func (j *jsiiProxy_DataAwsccAmplifyBranch) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccAmplifyBranch) ComputeRoleArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"computeRoleArn",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccAmplifyBranch) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -246,6 +262,16 @@ func (j *jsiiProxy_DataAwsccAmplifyBranch) EnablePullRequestPreview() cdktf.IRes
 	_jsii_.Get(
 		j,
 		"enablePullRequestPreview",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccAmplifyBranch) EnableSkewProtection() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"enableSkewProtection",
 		&returns,
 	)
 	return returns
@@ -422,7 +448,7 @@ func (j *jsiiProxy_DataAwsccAmplifyBranch) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/amplify_branch awscc_amplify_branch} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/amplify_branch awscc_amplify_branch} Data Source.
 func NewDataAwsccAmplifyBranch(scope constructs.Construct, id *string, config *DataAwsccAmplifyBranchConfig) DataAwsccAmplifyBranch {
 	_init_.Initialize()
 
@@ -440,7 +466,7 @@ func NewDataAwsccAmplifyBranch(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/amplify_branch awscc_amplify_branch} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/amplify_branch awscc_amplify_branch} Data Source.
 func NewDataAwsccAmplifyBranch_Override(d DataAwsccAmplifyBranch, scope constructs.Construct, id *string, config *DataAwsccAmplifyBranchConfig) {
 	_init_.Initialize()
 
@@ -807,6 +833,32 @@ func (d *jsiiProxy_DataAwsccAmplifyBranch) SynthesizeAttributes() *map[string]in
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAmplifyBranch) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAmplifyBranch) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

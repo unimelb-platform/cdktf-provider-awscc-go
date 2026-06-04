@@ -34,6 +34,8 @@ type EcsTaskDefinitionVolumesOutputReference interface {
 	EfsVolumeConfigurationInput() interface{}
 	// Experimental.
 	Fqn() *string
+	FsxWindowsFileServerVolumeConfiguration() EcsTaskDefinitionVolumesFsxWindowsFileServerVolumeConfigurationOutputReference
+	FsxWindowsFileServerVolumeConfigurationInput() interface{}
 	Host() EcsTaskDefinitionVolumesHostOutputReference
 	HostInput() interface{}
 	InternalValue() interface{}
@@ -75,10 +77,12 @@ type EcsTaskDefinitionVolumesOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDockerVolumeConfiguration(value *EcsTaskDefinitionVolumesDockerVolumeConfiguration)
 	PutEfsVolumeConfiguration(value *EcsTaskDefinitionVolumesEfsVolumeConfiguration)
+	PutFsxWindowsFileServerVolumeConfiguration(value *EcsTaskDefinitionVolumesFsxWindowsFileServerVolumeConfiguration)
 	PutHost(value *EcsTaskDefinitionVolumesHost)
 	ResetConfiguredAtLaunch()
 	ResetDockerVolumeConfiguration()
 	ResetEfsVolumeConfiguration()
+	ResetFsxWindowsFileServerVolumeConfiguration()
 	ResetHost()
 	ResetName()
 	// Produce the Token's value at resolution time.
@@ -191,6 +195,26 @@ func (j *jsiiProxy_EcsTaskDefinitionVolumesOutputReference) Fqn() *string {
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EcsTaskDefinitionVolumesOutputReference) FsxWindowsFileServerVolumeConfiguration() EcsTaskDefinitionVolumesFsxWindowsFileServerVolumeConfigurationOutputReference {
+	var returns EcsTaskDefinitionVolumesFsxWindowsFileServerVolumeConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"fsxWindowsFileServerVolumeConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EcsTaskDefinitionVolumesOutputReference) FsxWindowsFileServerVolumeConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"fsxWindowsFileServerVolumeConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -579,6 +603,17 @@ func (e *jsiiProxy_EcsTaskDefinitionVolumesOutputReference) PutEfsVolumeConfigur
 	)
 }
 
+func (e *jsiiProxy_EcsTaskDefinitionVolumesOutputReference) PutFsxWindowsFileServerVolumeConfiguration(value *EcsTaskDefinitionVolumesFsxWindowsFileServerVolumeConfiguration) {
+	if err := e.validatePutFsxWindowsFileServerVolumeConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putFsxWindowsFileServerVolumeConfiguration",
+		[]interface{}{value},
+	)
+}
+
 func (e *jsiiProxy_EcsTaskDefinitionVolumesOutputReference) PutHost(value *EcsTaskDefinitionVolumesHost) {
 	if err := e.validatePutHostParameters(value); err != nil {
 		panic(err)
@@ -610,6 +645,14 @@ func (e *jsiiProxy_EcsTaskDefinitionVolumesOutputReference) ResetEfsVolumeConfig
 	_jsii_.InvokeVoid(
 		e,
 		"resetEfsVolumeConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcsTaskDefinitionVolumesOutputReference) ResetFsxWindowsFileServerVolumeConfiguration() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetFsxWindowsFileServerVolumeConfiguration",
 		nil, // no parameters
 	)
 }

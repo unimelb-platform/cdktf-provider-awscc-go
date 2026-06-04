@@ -67,6 +67,8 @@ type DatasyncLocationAzureBlobTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (d *jsiiProxy_DatasyncLocationAzureBlobTagsOutputReference) InterpolationFo
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatasyncLocationAzureBlobTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatasyncLocationAzureBlobTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatasyncLocationAzureBlobTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -72,6 +72,7 @@ type NetworkfirewallFirewallPolicyFirewallPolicyStatefulRuleGroupReferencesOutpu
 	PutOverride(value *NetworkfirewallFirewallPolicyFirewallPolicyStatefulRuleGroupReferencesOverride)
 	ResetOverride()
 	ResetPriority()
+	ResetResourceArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (n *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatefulRuleGroupR
 	_jsii_.InvokeVoid(
 		n,
 		"resetPriority",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatefulRuleGroupReferencesOutputReference) ResetResourceArn() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetResourceArn",
 		nil, // no parameters
 	)
 }

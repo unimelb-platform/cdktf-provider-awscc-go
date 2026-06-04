@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccnetworkmanagertransitgatewayroutetableattachment/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_transit_gateway_route_table_attachment awscc_networkmanager_transit_gateway_route_table_attachment}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_transit_gateway_route_table_attachment awscc_networkmanager_transit_gateway_route_table_attachment}.
 type DataAwsccNetworkmanagerTransitGatewayRouteTableAttachment interface {
 	cdktf.TerraformDataSource
 	AttachmentId() *string
@@ -46,10 +46,12 @@ type DataAwsccNetworkmanagerTransitGatewayRouteTableAttachment interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	NetworkFunctionGroupName() *string
 	// The tree node.
 	Node() constructs.Node
 	OwnerAccountId() *string
 	PeeringId() *string
+	ProposedNetworkFunctionGroupChange() DataAwsccNetworkmanagerTransitGatewayRouteTableAttachmentProposedNetworkFunctionGroupChangeOutputReference
 	ProposedSegmentChange() DataAwsccNetworkmanagerTransitGatewayRouteTableAttachmentProposedSegmentChangeOutputReference
 	// Experimental.
 	Provider() cdktf.TerraformProvider
@@ -98,6 +100,10 @@ type DataAwsccNetworkmanagerTransitGatewayRouteTableAttachment interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -282,6 +288,16 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerTransitGatewayRouteTableAttachment) Li
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccNetworkmanagerTransitGatewayRouteTableAttachment) NetworkFunctionGroupName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"networkFunctionGroupName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccNetworkmanagerTransitGatewayRouteTableAttachment) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -307,6 +323,16 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerTransitGatewayRouteTableAttachment) Pe
 	_jsii_.Get(
 		j,
 		"peeringId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccNetworkmanagerTransitGatewayRouteTableAttachment) ProposedNetworkFunctionGroupChange() DataAwsccNetworkmanagerTransitGatewayRouteTableAttachmentProposedNetworkFunctionGroupChangeOutputReference {
+	var returns DataAwsccNetworkmanagerTransitGatewayRouteTableAttachmentProposedNetworkFunctionGroupChangeOutputReference
+	_jsii_.Get(
+		j,
+		"proposedNetworkFunctionGroupChange",
 		&returns,
 	)
 	return returns
@@ -433,7 +459,7 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerTransitGatewayRouteTableAttachment) Up
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_transit_gateway_route_table_attachment awscc_networkmanager_transit_gateway_route_table_attachment} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_transit_gateway_route_table_attachment awscc_networkmanager_transit_gateway_route_table_attachment} Data Source.
 func NewDataAwsccNetworkmanagerTransitGatewayRouteTableAttachment(scope constructs.Construct, id *string, config *DataAwsccNetworkmanagerTransitGatewayRouteTableAttachmentConfig) DataAwsccNetworkmanagerTransitGatewayRouteTableAttachment {
 	_init_.Initialize()
 
@@ -451,7 +477,7 @@ func NewDataAwsccNetworkmanagerTransitGatewayRouteTableAttachment(scope construc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_transit_gateway_route_table_attachment awscc_networkmanager_transit_gateway_route_table_attachment} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_transit_gateway_route_table_attachment awscc_networkmanager_transit_gateway_route_table_attachment} Data Source.
 func NewDataAwsccNetworkmanagerTransitGatewayRouteTableAttachment_Override(d DataAwsccNetworkmanagerTransitGatewayRouteTableAttachment, scope constructs.Construct, id *string, config *DataAwsccNetworkmanagerTransitGatewayRouteTableAttachmentConfig) {
 	_init_.Initialize()
 
@@ -818,6 +844,32 @@ func (d *jsiiProxy_DataAwsccNetworkmanagerTransitGatewayRouteTableAttachment) Sy
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkmanagerTransitGatewayRouteTableAttachment) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkmanagerTransitGatewayRouteTableAttachment) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

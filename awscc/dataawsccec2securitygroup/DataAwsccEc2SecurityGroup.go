@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2securitygroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_security_group awscc_ec2_security_group}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_security_group awscc_ec2_security_group}.
 type DataAwsccEc2SecurityGroup interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -51,6 +51,7 @@ type DataAwsccEc2SecurityGroup interface {
 	// Experimental.
 	RawOverrides() interface{}
 	SecurityGroupEgress() DataAwsccEc2SecurityGroupSecurityGroupEgressList
+	SecurityGroupId() *string
 	SecurityGroupIngress() DataAwsccEc2SecurityGroupSecurityGroupIngressList
 	Tags() DataAwsccEc2SecurityGroupTagsList
 	// Experimental.
@@ -89,6 +90,10 @@ type DataAwsccEc2SecurityGroup interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -273,6 +278,16 @@ func (j *jsiiProxy_DataAwsccEc2SecurityGroup) SecurityGroupEgress() DataAwsccEc2
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2SecurityGroup) SecurityGroupId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"securityGroupId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2SecurityGroup) SecurityGroupIngress() DataAwsccEc2SecurityGroupSecurityGroupIngressList {
 	var returns DataAwsccEc2SecurityGroupSecurityGroupIngressList
 	_jsii_.Get(
@@ -334,7 +349,7 @@ func (j *jsiiProxy_DataAwsccEc2SecurityGroup) VpcId() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_security_group awscc_ec2_security_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_security_group awscc_ec2_security_group} Data Source.
 func NewDataAwsccEc2SecurityGroup(scope constructs.Construct, id *string, config *DataAwsccEc2SecurityGroupConfig) DataAwsccEc2SecurityGroup {
 	_init_.Initialize()
 
@@ -352,7 +367,7 @@ func NewDataAwsccEc2SecurityGroup(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_security_group awscc_ec2_security_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_security_group awscc_ec2_security_group} Data Source.
 func NewDataAwsccEc2SecurityGroup_Override(d DataAwsccEc2SecurityGroup, scope constructs.Construct, id *string, config *DataAwsccEc2SecurityGroupConfig) {
 	_init_.Initialize()
 
@@ -719,6 +734,32 @@ func (d *jsiiProxy_DataAwsccEc2SecurityGroup) SynthesizeAttributes() *map[string
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2SecurityGroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2SecurityGroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

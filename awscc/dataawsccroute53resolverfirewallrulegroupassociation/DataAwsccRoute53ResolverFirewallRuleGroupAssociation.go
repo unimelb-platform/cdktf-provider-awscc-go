@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccroute53resolverfirewallrulegroupassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53resolver_firewall_rule_group_association awscc_route53resolver_firewall_rule_group_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53resolver_firewall_rule_group_association awscc_route53resolver_firewall_rule_group_association}.
 type DataAwsccRoute53ResolverFirewallRuleGroupAssociation interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -27,6 +27,7 @@ type DataAwsccRoute53ResolverFirewallRuleGroupAssociation interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	FirewallRuleGroupAssociationId() *string
 	FirewallRuleGroupId() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
@@ -95,6 +96,10 @@ type DataAwsccRoute53ResolverFirewallRuleGroupAssociation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -174,6 +179,16 @@ func (j *jsiiProxy_DataAwsccRoute53ResolverFirewallRuleGroupAssociation) Depends
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRoute53ResolverFirewallRuleGroupAssociation) FirewallRuleGroupAssociationId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"firewallRuleGroupAssociationId",
 		&returns,
 	)
 	return returns
@@ -400,7 +415,7 @@ func (j *jsiiProxy_DataAwsccRoute53ResolverFirewallRuleGroupAssociation) VpcId()
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53resolver_firewall_rule_group_association awscc_route53resolver_firewall_rule_group_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53resolver_firewall_rule_group_association awscc_route53resolver_firewall_rule_group_association} Data Source.
 func NewDataAwsccRoute53ResolverFirewallRuleGroupAssociation(scope constructs.Construct, id *string, config *DataAwsccRoute53ResolverFirewallRuleGroupAssociationConfig) DataAwsccRoute53ResolverFirewallRuleGroupAssociation {
 	_init_.Initialize()
 
@@ -418,7 +433,7 @@ func NewDataAwsccRoute53ResolverFirewallRuleGroupAssociation(scope constructs.Co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53resolver_firewall_rule_group_association awscc_route53resolver_firewall_rule_group_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53resolver_firewall_rule_group_association awscc_route53resolver_firewall_rule_group_association} Data Source.
 func NewDataAwsccRoute53ResolverFirewallRuleGroupAssociation_Override(d DataAwsccRoute53ResolverFirewallRuleGroupAssociation, scope constructs.Construct, id *string, config *DataAwsccRoute53ResolverFirewallRuleGroupAssociationConfig) {
 	_init_.Initialize()
 
@@ -785,6 +800,32 @@ func (d *jsiiProxy_DataAwsccRoute53ResolverFirewallRuleGroupAssociation) Synthes
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53ResolverFirewallRuleGroupAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53ResolverFirewallRuleGroupAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

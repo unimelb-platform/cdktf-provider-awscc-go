@@ -30,8 +30,8 @@ type DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScali
 	DisableScaleInInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration
-	SetInternalValue(val *DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	ScaleInCooldown() *float64
 	SetScaleInCooldown(val *float64)
 	ScaleInCooldownInput() *float64
@@ -76,6 +76,7 @@ type DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScali
 	ResetDisableScaleIn()
 	ResetScaleInCooldown()
 	ResetScaleOutCooldown()
+	ResetTargetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -151,8 +152,8 @@ func (j *jsiiProxy_DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCap
 	return returns
 }
 
-func (j *jsiiProxy_DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfigurationOutputReference) InternalValue() *DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration {
-	var returns *DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration
+func (j *jsiiProxy_DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfigurationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -302,7 +303,7 @@ func (j *jsiiProxy_DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCap
 	)
 }
 
-func (j *jsiiProxy_DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfigurationOutputReference)SetInternalValue(val *DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration) {
+func (j *jsiiProxy_DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfigurationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -574,6 +575,14 @@ func (d *jsiiProxy_DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCap
 	_jsii_.InvokeVoid(
 		d,
 		"resetScaleOutCooldown",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfigurationOutputReference) ResetTargetValue() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetTargetValue",
 		nil, // no parameters
 	)
 }

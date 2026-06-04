@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdynamodbglobaltable/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/dynamodb_global_table awscc_dynamodb_global_table}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/dynamodb_global_table awscc_dynamodb_global_table}.
 type DataAwsccDynamodbGlobalTable interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -36,6 +36,7 @@ type DataAwsccDynamodbGlobalTable interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	GlobalSecondaryIndexes() DataAwsccDynamodbGlobalTableGlobalSecondaryIndexesList
+	GlobalTableWitnesses() DataAwsccDynamodbGlobalTableGlobalTableWitnessesList
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -45,6 +46,7 @@ type DataAwsccDynamodbGlobalTable interface {
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	LocalSecondaryIndexes() DataAwsccDynamodbGlobalTableLocalSecondaryIndexesList
+	MultiRegionConsistency() *string
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
@@ -66,6 +68,8 @@ type DataAwsccDynamodbGlobalTable interface {
 	// Experimental.
 	TerraformResourceType() *string
 	TimeToLiveSpecification() DataAwsccDynamodbGlobalTableTimeToLiveSpecificationOutputReference
+	WarmThroughput() DataAwsccDynamodbGlobalTableWarmThroughputOutputReference
+	WriteOnDemandThroughputSettings() DataAwsccDynamodbGlobalTableWriteOnDemandThroughputSettingsOutputReference
 	WriteProvisionedThroughputSettings() DataAwsccDynamodbGlobalTableWriteProvisionedThroughputSettingsOutputReference
 	// Experimental.
 	AddOverride(path *string, value interface{})
@@ -96,6 +100,10 @@ type DataAwsccDynamodbGlobalTable interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -220,6 +228,16 @@ func (j *jsiiProxy_DataAwsccDynamodbGlobalTable) GlobalSecondaryIndexes() DataAw
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccDynamodbGlobalTable) GlobalTableWitnesses() DataAwsccDynamodbGlobalTableGlobalTableWitnessesList {
+	var returns DataAwsccDynamodbGlobalTableGlobalTableWitnessesList
+	_jsii_.Get(
+		j,
+		"globalTableWitnesses",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccDynamodbGlobalTable) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -265,6 +283,16 @@ func (j *jsiiProxy_DataAwsccDynamodbGlobalTable) LocalSecondaryIndexes() DataAws
 	_jsii_.Get(
 		j,
 		"localSecondaryIndexes",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDynamodbGlobalTable) MultiRegionConsistency() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"multiRegionConsistency",
 		&returns,
 	)
 	return returns
@@ -400,6 +428,26 @@ func (j *jsiiProxy_DataAwsccDynamodbGlobalTable) TimeToLiveSpecification() DataA
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccDynamodbGlobalTable) WarmThroughput() DataAwsccDynamodbGlobalTableWarmThroughputOutputReference {
+	var returns DataAwsccDynamodbGlobalTableWarmThroughputOutputReference
+	_jsii_.Get(
+		j,
+		"warmThroughput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDynamodbGlobalTable) WriteOnDemandThroughputSettings() DataAwsccDynamodbGlobalTableWriteOnDemandThroughputSettingsOutputReference {
+	var returns DataAwsccDynamodbGlobalTableWriteOnDemandThroughputSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"writeOnDemandThroughputSettings",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccDynamodbGlobalTable) WriteProvisionedThroughputSettings() DataAwsccDynamodbGlobalTableWriteProvisionedThroughputSettingsOutputReference {
 	var returns DataAwsccDynamodbGlobalTableWriteProvisionedThroughputSettingsOutputReference
 	_jsii_.Get(
@@ -411,7 +459,7 @@ func (j *jsiiProxy_DataAwsccDynamodbGlobalTable) WriteProvisionedThroughputSetti
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/dynamodb_global_table awscc_dynamodb_global_table} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/dynamodb_global_table awscc_dynamodb_global_table} Data Source.
 func NewDataAwsccDynamodbGlobalTable(scope constructs.Construct, id *string, config *DataAwsccDynamodbGlobalTableConfig) DataAwsccDynamodbGlobalTable {
 	_init_.Initialize()
 
@@ -429,7 +477,7 @@ func NewDataAwsccDynamodbGlobalTable(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/dynamodb_global_table awscc_dynamodb_global_table} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/dynamodb_global_table awscc_dynamodb_global_table} Data Source.
 func NewDataAwsccDynamodbGlobalTable_Override(d DataAwsccDynamodbGlobalTable, scope constructs.Construct, id *string, config *DataAwsccDynamodbGlobalTableConfig) {
 	_init_.Initialize()
 
@@ -796,6 +844,32 @@ func (d *jsiiProxy_DataAwsccDynamodbGlobalTable) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDynamodbGlobalTable) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDynamodbGlobalTable) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

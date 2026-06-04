@@ -56,7 +56,15 @@ func (e *jsiiProxy_Ec2Subnet) validateInterpolationForAttributeParameters(terraf
 	return nil
 }
 
+func (e *jsiiProxy_Ec2Subnet) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2Subnet) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2Subnet) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -116,6 +124,10 @@ func (j *jsiiProxy_Ec2Subnet) validateSetEnableDns64Parameters(val interface{}) 
 	return nil
 }
 
+func (j *jsiiProxy_Ec2Subnet) validateSetEnableLniAtDeviceIndexParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_Ec2Subnet) validateSetIpv4IpamPoolIdParameters(val *string) error {
 	return nil
 }
@@ -125,10 +137,6 @@ func (j *jsiiProxy_Ec2Subnet) validateSetIpv4NetmaskLengthParameters(val *float6
 }
 
 func (j *jsiiProxy_Ec2Subnet) validateSetIpv6CidrBlockParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_Ec2Subnet) validateSetIpv6CidrBlocksParameters(val *[]*string) error {
 	return nil
 }
 

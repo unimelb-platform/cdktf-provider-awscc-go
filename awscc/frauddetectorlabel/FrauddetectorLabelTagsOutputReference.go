@@ -67,6 +67,8 @@ type FrauddetectorLabelTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (f *jsiiProxy_FrauddetectorLabelTagsOutputReference) InterpolationForAttrib
 	)
 
 	return returns
+}
+
+func (f *jsiiProxy_FrauddetectorLabelTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (f *jsiiProxy_FrauddetectorLabelTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (f *jsiiProxy_FrauddetectorLabelTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

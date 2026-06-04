@@ -31,6 +31,7 @@ type DataAwsccEntityresolutionIdMappingWorkflowIdMappingTechniquesOutputReferenc
 	InternalValue() *DataAwsccEntityresolutionIdMappingWorkflowIdMappingTechniques
 	SetInternalValue(val *DataAwsccEntityresolutionIdMappingWorkflowIdMappingTechniques)
 	ProviderProperties() DataAwsccEntityresolutionIdMappingWorkflowIdMappingTechniquesProviderPropertiesOutputReference
+	RuleBasedProperties() DataAwsccEntityresolutionIdMappingWorkflowIdMappingTechniquesRuleBasedPropertiesOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -143,6 +144,16 @@ func (j *jsiiProxy_DataAwsccEntityresolutionIdMappingWorkflowIdMappingTechniques
 	_jsii_.Get(
 		j,
 		"providerProperties",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEntityresolutionIdMappingWorkflowIdMappingTechniquesOutputReference) RuleBasedProperties() DataAwsccEntityresolutionIdMappingWorkflowIdMappingTechniquesRuleBasedPropertiesOutputReference {
+	var returns DataAwsccEntityresolutionIdMappingWorkflowIdMappingTechniquesRuleBasedPropertiesOutputReference
+	_jsii_.Get(
+		j,
+		"ruleBasedProperties",
 		&returns,
 	)
 	return returns
