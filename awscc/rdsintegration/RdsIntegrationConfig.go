@@ -19,31 +19,41 @@ type RdsIntegrationConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// The Amazon Resource Name (ARN) of the Aurora DB cluster to use as the source for replication.
+	// The Amazon Resource Name (ARN) of the database to use as the source for replication.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rds_integration#source_arn RdsIntegration#source_arn}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_integration#source_arn RdsIntegration#source_arn}
 	SourceArn *string `field:"required" json:"sourceArn" yaml:"sourceArn"`
 	// The ARN of the Redshift data warehouse to use as the target for replication.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rds_integration#target_arn RdsIntegration#target_arn}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_integration#target_arn RdsIntegration#target_arn}
 	TargetArn *string `field:"required" json:"targetArn" yaml:"targetArn"`
-	// An optional set of non-secret key–value pairs that contains additional contextual information about the data.
+	// An optional set of non-secret key?value pairs that contains additional contextual information about the data. For more information, see [Encryption context](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context) in the *Key Management Service Developer Guide*.  You can only include this parameter if you specify the ``KMSKeyId`` parameter.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rds_integration#additional_encryption_context RdsIntegration#additional_encryption_context}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_integration#additional_encryption_context RdsIntegration#additional_encryption_context}
 	AdditionalEncryptionContext *map[string]*string `field:"optional" json:"additionalEncryptionContext" yaml:"additionalEncryptionContext"`
+	// Data filters for the integration.
+	//
+	// These filters determine which tables from the source database are sent to the target Amazon Redshift data warehouse.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_integration#data_filter RdsIntegration#data_filter}
+	DataFilter *string `field:"optional" json:"dataFilter" yaml:"dataFilter"`
+	// A description of the integration.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_integration#description RdsIntegration#description}
+	Description *string `field:"optional" json:"description" yaml:"description"`
 	// The name of the integration.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rds_integration#integration_name RdsIntegration#integration_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_integration#integration_name RdsIntegration#integration_name}
 	IntegrationName *string `field:"optional" json:"integrationName" yaml:"integrationName"`
-	// An optional AWS Key Management System (AWS KMS) key ARN for the key used to to encrypt the integration.
+	// The AWS Key Management System (AWS KMS) key identifier for the key to use to encrypt the integration.
 	//
-	// The resource accepts the key ID and the key ARN forms. The key ID form can be used if the KMS key is owned by te same account. If the KMS key belongs to a different account than the calling account, the full key ARN must be specified. Do not use the key alias or the key alias ARN as this will cause a false drift of the resource.
+	// If you don't specify an encryption key, RDS uses a default AWS owned key.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rds_integration#kms_key_id RdsIntegration#kms_key_id}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_integration#kms_key_id RdsIntegration#kms_key_id}
 	KmsKeyId *string `field:"optional" json:"kmsKeyId" yaml:"kmsKeyId"`
-	// An array of key-value pairs to apply to this resource.
+	// A list of tags. For more information, see [Tagging Amazon RDS Resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html) in the *Amazon RDS User Guide.*.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rds_integration#tags RdsIntegration#tags}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_integration#tags RdsIntegration#tags}
 	Tags interface{} `field:"optional" json:"tags" yaml:"tags"`
 }
 

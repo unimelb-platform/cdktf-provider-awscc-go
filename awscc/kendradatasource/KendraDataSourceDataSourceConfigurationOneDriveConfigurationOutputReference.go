@@ -41,7 +41,7 @@ type KendraDataSourceDataSourceConfigurationOneDriveConfigurationOutputReference
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	OneDriveUsers() KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsersOutputReference
-	OneDriveUsersInput() *KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsers
+	OneDriveUsersInput() interface{}
 	SecretArn() *string
 	SetSecretArn(val *string)
 	SecretArnInput() *string
@@ -86,6 +86,9 @@ type KendraDataSourceDataSourceConfigurationOneDriveConfigurationOutputReference
 	ResetExclusionPatterns()
 	ResetFieldMappings()
 	ResetInclusionPatterns()
+	ResetOneDriveUsers()
+	ResetSecretArn()
+	ResetTenantDomain()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -241,8 +244,8 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationO
 	return returns
 }
 
-func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationOutputReference) OneDriveUsersInput() *KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsers {
-	var returns *KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsers
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationOutputReference) OneDriveUsersInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"oneDriveUsersInput",
@@ -685,6 +688,30 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationO
 	_jsii_.InvokeVoid(
 		k,
 		"resetInclusionPatterns",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationOutputReference) ResetOneDriveUsers() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetOneDriveUsers",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationOutputReference) ResetSecretArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetSecretArn",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationOutputReference) ResetTenantDomain() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetTenantDomain",
 		nil, // no parameters
 	)
 }

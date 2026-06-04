@@ -2,11 +2,19 @@ package ecstaskdefinition
 
 
 type EcsTaskDefinitionContainerDefinitionsLinuxParametersTmpfs struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ecs_task_definition#size EcsTaskDefinition#size}.
-	Size *float64 `field:"required" json:"size" yaml:"size"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ecs_task_definition#container_path EcsTaskDefinition#container_path}.
+	// The absolute file path where the tmpfs volume is to be mounted.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ecs_task_definition#container_path EcsTaskDefinition#container_path}
 	ContainerPath *string `field:"optional" json:"containerPath" yaml:"containerPath"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ecs_task_definition#mount_options EcsTaskDefinition#mount_options}.
+	// The list of tmpfs volume mount options.
+	//
+	// Valid values: ``"defaults" | "ro" | "rw" | "suid" | "nosuid" | "dev" | "nodev" | "exec" | "noexec" | "sync" | "async" | "dirsync" | "remount" | "mand" | "nomand" | "atime" | "noatime" | "diratime" | "nodiratime" | "bind" | "rbind" | "unbindable" | "runbindable" | "private" | "rprivate" | "shared" | "rshared" | "slave" | "rslave" | "relatime" | "norelatime" | "strictatime" | "nostrictatime" | "mode" | "uid" | "gid" | "nr_inodes" | "nr_blocks" | "mpol"``
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ecs_task_definition#mount_options EcsTaskDefinition#mount_options}
 	MountOptions *[]*string `field:"optional" json:"mountOptions" yaml:"mountOptions"`
+	// The maximum size (in MiB) of the tmpfs volume.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ecs_task_definition#size EcsTaskDefinition#size}
+	Size *float64 `field:"optional" json:"size" yaml:"size"`
 }
 

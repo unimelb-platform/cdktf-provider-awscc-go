@@ -68,6 +68,7 @@ type CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolicyConfigTraffic
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutSessionStickinessConfig(value *CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolicyConfigTrafficConfigSingleWeightConfigSessionStickinessConfig)
 	ResetSessionStickinessConfig()
+	ResetWeight()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (c *jsiiProxy_CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolic
 	_jsii_.InvokeVoid(
 		c,
 		"resetSessionStickinessConfig",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolicyConfigTrafficConfigSingleWeightConfigOutputReference) ResetWeight() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetWeight",
 		nil, // no parameters
 	)
 }

@@ -70,7 +70,9 @@ type KendraDataSourceDataSourceConfigurationSharePointConfigurationFieldMappings
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDataSourceFieldName()
 	ResetDateFieldFormat()
+	ResetIndexFieldName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -518,10 +520,26 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSharePointConfiguratio
 	return returns
 }
 
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSharePointConfigurationFieldMappingsOutputReference) ResetDataSourceFieldName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetDataSourceFieldName",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSharePointConfigurationFieldMappingsOutputReference) ResetDateFieldFormat() {
 	_jsii_.InvokeVoid(
 		k,
 		"resetDateFieldFormat",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSharePointConfigurationFieldMappingsOutputReference) ResetIndexFieldName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetIndexFieldName",
 		nil, // no parameters
 	)
 }

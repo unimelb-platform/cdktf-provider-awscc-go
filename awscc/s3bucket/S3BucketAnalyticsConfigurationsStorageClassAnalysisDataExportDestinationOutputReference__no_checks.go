@@ -68,7 +68,7 @@ func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExport
 	return nil
 }
 
-func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestinationOutputReference) validateSetInternalValueParameters(val *S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestination) error {
+func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestinationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

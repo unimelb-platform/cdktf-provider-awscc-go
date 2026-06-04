@@ -60,7 +60,7 @@ func (j *jsiiProxy_PipesPipeSourceParametersActiveMqBrokerParametersCredentialsO
 	return nil
 }
 
-func (j *jsiiProxy_PipesPipeSourceParametersActiveMqBrokerParametersCredentialsOutputReference) validateSetInternalValueParameters(val *PipesPipeSourceParametersActiveMqBrokerParametersCredentials) error {
+func (j *jsiiProxy_PipesPipeSourceParametersActiveMqBrokerParametersCredentialsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

@@ -64,6 +64,7 @@ type ApprunnerServiceNetworkConfigurationIngressConfigurationOutputReference int
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetIsPubliclyAccessible()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (a *jsiiProxy_ApprunnerServiceNetworkConfigurationIngressConfigurationOutpu
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_ApprunnerServiceNetworkConfigurationIngressConfigurationOutputReference) ResetIsPubliclyAccessible() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetIsPubliclyAccessible",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_ApprunnerServiceNetworkConfigurationIngressConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

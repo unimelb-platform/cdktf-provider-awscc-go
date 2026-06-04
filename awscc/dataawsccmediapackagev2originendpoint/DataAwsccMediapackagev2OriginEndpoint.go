@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccmediapackagev2originendpoint/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediapackagev2_origin_endpoint awscc_mediapackagev2_origin_endpoint}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediapackagev2_origin_endpoint awscc_mediapackagev2_origin_endpoint}.
 type DataAwsccMediapackagev2OriginEndpoint interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -25,11 +25,14 @@ type DataAwsccMediapackagev2OriginEndpoint interface {
 	// Experimental.
 	SetCount(val interface{})
 	CreatedAt() *string
+	DashManifests() DataAwsccMediapackagev2OriginEndpointDashManifestsList
+	DashManifestUrls() *[]*string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	Description() *string
+	ForceEndpointErrorConfiguration() DataAwsccMediapackagev2OriginEndpointForceEndpointErrorConfigurationOutputReference
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -39,6 +42,7 @@ type DataAwsccMediapackagev2OriginEndpoint interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	HlsManifests() DataAwsccMediapackagev2OriginEndpointHlsManifestsList
+	HlsManifestUrls() *[]*string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -47,6 +51,7 @@ type DataAwsccMediapackagev2OriginEndpoint interface {
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	LowLatencyHlsManifests() DataAwsccMediapackagev2OriginEndpointLowLatencyHlsManifestsList
+	LowLatencyHlsManifestUrls() *[]*string
 	ModifiedAt() *string
 	// The tree node.
 	Node() constructs.Node
@@ -95,6 +100,10 @@ type DataAwsccMediapackagev2OriginEndpoint interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -189,6 +198,26 @@ func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpoint) CreatedAt() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpoint) DashManifests() DataAwsccMediapackagev2OriginEndpointDashManifestsList {
+	var returns DataAwsccMediapackagev2OriginEndpointDashManifestsList
+	_jsii_.Get(
+		j,
+		"dashManifests",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpoint) DashManifestUrls() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"dashManifestUrls",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpoint) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -204,6 +233,16 @@ func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpoint) Description() *string 
 	_jsii_.Get(
 		j,
 		"description",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpoint) ForceEndpointErrorConfiguration() DataAwsccMediapackagev2OriginEndpointForceEndpointErrorConfigurationOutputReference {
+	var returns DataAwsccMediapackagev2OriginEndpointForceEndpointErrorConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"forceEndpointErrorConfiguration",
 		&returns,
 	)
 	return returns
@@ -249,6 +288,16 @@ func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpoint) HlsManifests() DataAws
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpoint) HlsManifestUrls() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"hlsManifestUrls",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpoint) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -284,6 +333,16 @@ func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpoint) LowLatencyHlsManifests
 	_jsii_.Get(
 		j,
 		"lowLatencyHlsManifests",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpoint) LowLatencyHlsManifestUrls() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"lowLatencyHlsManifestUrls",
 		&returns,
 	)
 	return returns
@@ -400,7 +459,7 @@ func (j *jsiiProxy_DataAwsccMediapackagev2OriginEndpoint) TerraformResourceType(
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediapackagev2_origin_endpoint awscc_mediapackagev2_origin_endpoint} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediapackagev2_origin_endpoint awscc_mediapackagev2_origin_endpoint} Data Source.
 func NewDataAwsccMediapackagev2OriginEndpoint(scope constructs.Construct, id *string, config *DataAwsccMediapackagev2OriginEndpointConfig) DataAwsccMediapackagev2OriginEndpoint {
 	_init_.Initialize()
 
@@ -418,7 +477,7 @@ func NewDataAwsccMediapackagev2OriginEndpoint(scope constructs.Construct, id *st
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediapackagev2_origin_endpoint awscc_mediapackagev2_origin_endpoint} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediapackagev2_origin_endpoint awscc_mediapackagev2_origin_endpoint} Data Source.
 func NewDataAwsccMediapackagev2OriginEndpoint_Override(d DataAwsccMediapackagev2OriginEndpoint, scope constructs.Construct, id *string, config *DataAwsccMediapackagev2OriginEndpointConfig) {
 	_init_.Initialize()
 
@@ -785,6 +844,32 @@ func (d *jsiiProxy_DataAwsccMediapackagev2OriginEndpoint) SynthesizeAttributes()
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMediapackagev2OriginEndpoint) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMediapackagev2OriginEndpoint) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

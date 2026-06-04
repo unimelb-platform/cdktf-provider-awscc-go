@@ -18,6 +18,7 @@ type DataAwsccEc2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutputRefer
 	AllowedInstanceTypes() *[]*string
 	BareMetal() *string
 	BaselineEbsBandwidthMbps() DataAwsccEc2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbpsOutputReference
+	BaselinePerformanceFactors() DataAwsccEc2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselinePerformanceFactorsOutputReference
 	BurstablePerformance() *string
 	// the index of the complex object in a list.
 	// Experimental.
@@ -175,6 +176,16 @@ func (j *jsiiProxy_DataAwsccEc2LaunchTemplateLaunchTemplateDataInstanceRequireme
 	_jsii_.Get(
 		j,
 		"baselineEbsBandwidthMbps",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutputReference) BaselinePerformanceFactors() DataAwsccEc2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselinePerformanceFactorsOutputReference {
+	var returns DataAwsccEc2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselinePerformanceFactorsOutputReference
+	_jsii_.Get(
+		j,
+		"baselinePerformanceFactors",
 		&returns,
 	)
 	return returns

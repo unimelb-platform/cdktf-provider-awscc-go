@@ -56,7 +56,7 @@ func (j *jsiiProxy_DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMapO
 	return nil
 }
 
-func (j *jsiiProxy_DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMapOutputReference) validateSetInternalValueParameters(val *DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMap) error {
+func (j *jsiiProxy_DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMapOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

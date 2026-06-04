@@ -31,6 +31,8 @@ type Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequireme
 	BareMetalInput() *string
 	BaselineEbsBandwidthMbps() Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsBaselineEbsBandwidthMbpsOutputReference
 	BaselineEbsBandwidthMbpsInput() interface{}
+	BaselinePerformanceFactors() Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsBaselinePerformanceFactorsOutputReference
+	BaselinePerformanceFactorsInput() interface{}
 	BurstablePerformance() *string
 	SetBurstablePerformance(val *string)
 	BurstablePerformanceInput() *string
@@ -68,6 +70,9 @@ type Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequireme
 	LocalStorageTypes() *[]*string
 	SetLocalStorageTypes(val *[]*string)
 	LocalStorageTypesInput() *[]*string
+	MaxSpotPriceAsPercentageOfOptimalOnDemandPrice() *float64
+	SetMaxSpotPriceAsPercentageOfOptimalOnDemandPrice(val *float64)
+	MaxSpotPriceAsPercentageOfOptimalOnDemandPriceInput() *float64
 	MemoryGiBPerVCpu() Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsMemoryGiBPerVCpuOutputReference
 	MemoryGiBPerVCpuInput() interface{}
 	MemoryMiB() Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsMemoryMiBOutputReference
@@ -124,6 +129,7 @@ type Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequireme
 	PutAcceleratorCount(value *Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsAcceleratorCount)
 	PutAcceleratorTotalMemoryMiB(value *Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsAcceleratorTotalMemoryMiB)
 	PutBaselineEbsBandwidthMbps(value *Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsBaselineEbsBandwidthMbps)
+	PutBaselinePerformanceFactors(value *Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsBaselinePerformanceFactors)
 	PutMemoryGiBPerVCpu(value *Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsMemoryGiBPerVCpu)
 	PutMemoryMiB(value *Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsMemoryMiB)
 	PutNetworkBandwidthGbps(value *Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsNetworkBandwidthGbps)
@@ -138,12 +144,14 @@ type Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequireme
 	ResetAllowedInstanceTypes()
 	ResetBareMetal()
 	ResetBaselineEbsBandwidthMbps()
+	ResetBaselinePerformanceFactors()
 	ResetBurstablePerformance()
 	ResetCpuManufacturers()
 	ResetExcludedInstanceTypes()
 	ResetInstanceGenerations()
 	ResetLocalStorage()
 	ResetLocalStorageTypes()
+	ResetMaxSpotPriceAsPercentageOfOptimalOnDemandPrice()
 	ResetMemoryGiBPerVCpu()
 	ResetMemoryMiB()
 	ResetNetworkBandwidthGbps()
@@ -328,6 +336,26 @@ func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsIns
 	return returns
 }
 
+func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsOutputReference) BaselinePerformanceFactors() Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsBaselinePerformanceFactorsOutputReference {
+	var returns Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsBaselinePerformanceFactorsOutputReference
+	_jsii_.Get(
+		j,
+		"baselinePerformanceFactors",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsOutputReference) BaselinePerformanceFactorsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"baselinePerformanceFactorsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsOutputReference) BurstablePerformance() *string {
 	var returns *string
 	_jsii_.Get(
@@ -493,6 +521,26 @@ func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsIns
 	_jsii_.Get(
 		j,
 		"localStorageTypesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsOutputReference) MaxSpotPriceAsPercentageOfOptimalOnDemandPrice() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxSpotPriceAsPercentageOfOptimalOnDemandPrice",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsOutputReference) MaxSpotPriceAsPercentageOfOptimalOnDemandPriceInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxSpotPriceAsPercentageOfOptimalOnDemandPriceInput",
 		&returns,
 	)
 	return returns
@@ -880,6 +928,17 @@ func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsIns
 	)
 }
 
+func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsOutputReference)SetMaxSpotPriceAsPercentageOfOptimalOnDemandPrice(val *float64) {
+	if err := j.validateSetMaxSpotPriceAsPercentageOfOptimalOnDemandPriceParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"maxSpotPriceAsPercentageOfOptimalOnDemandPrice",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsOutputReference)SetOnDemandMaxPricePercentageOverLowestPrice(val *float64) {
 	if err := j.validateSetOnDemandMaxPricePercentageOverLowestPriceParameters(val); err != nil {
 		panic(err)
@@ -1154,6 +1213,17 @@ func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsIns
 	)
 }
 
+func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsOutputReference) PutBaselinePerformanceFactors(value *Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsBaselinePerformanceFactors) {
+	if err := e.validatePutBaselinePerformanceFactorsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putBaselinePerformanceFactors",
+		[]interface{}{value},
+	)
+}
+
 func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsOutputReference) PutMemoryGiBPerVCpu(value *Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsMemoryGiBPerVCpu) {
 	if err := e.validatePutMemoryGiBPerVCpuParameters(value); err != nil {
 		panic(err)
@@ -1284,6 +1354,14 @@ func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsIns
 	)
 }
 
+func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsOutputReference) ResetBaselinePerformanceFactors() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetBaselinePerformanceFactors",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsOutputReference) ResetBurstablePerformance() {
 	_jsii_.InvokeVoid(
 		e,
@@ -1328,6 +1406,14 @@ func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsIns
 	_jsii_.InvokeVoid(
 		e,
 		"resetLocalStorageTypes",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsInstanceRequirementsOutputReference) ResetMaxSpotPriceAsPercentageOfOptimalOnDemandPrice() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetMaxSpotPriceAsPercentageOfOptimalOnDemandPrice",
 		nil, // no parameters
 	)
 }

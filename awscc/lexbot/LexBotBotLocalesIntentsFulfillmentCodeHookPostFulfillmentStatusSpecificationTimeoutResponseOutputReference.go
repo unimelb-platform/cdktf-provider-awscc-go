@@ -68,6 +68,7 @@ type LexBotBotLocalesIntentsFulfillmentCodeHookPostFulfillmentStatusSpecificatio
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMessageGroupsList(value interface{})
 	ResetAllowInterrupt()
+	ResetMessageGroupsList()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookPostFulfillmentStat
 	_jsii_.InvokeVoid(
 		l,
 		"resetAllowInterrupt",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseOutputReference) ResetMessageGroupsList() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMessageGroupsList",
 		nil, // no parameters
 	)
 }

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccodegurureviewerrepositoryassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codegurureviewer_repository_association awscc_codegurureviewer_repository_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codegurureviewer_repository_association awscc_codegurureviewer_repository_association}.
 type DataAwsccCodegurureviewerRepositoryAssociation interface {
 	cdktf.TerraformDataSource
 	AssociationArn() *string
@@ -89,6 +89,10 @@ type DataAwsccCodegurureviewerRepositoryAssociation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -334,7 +338,7 @@ func (j *jsiiProxy_DataAwsccCodegurureviewerRepositoryAssociation) Type() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codegurureviewer_repository_association awscc_codegurureviewer_repository_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codegurureviewer_repository_association awscc_codegurureviewer_repository_association} Data Source.
 func NewDataAwsccCodegurureviewerRepositoryAssociation(scope constructs.Construct, id *string, config *DataAwsccCodegurureviewerRepositoryAssociationConfig) DataAwsccCodegurureviewerRepositoryAssociation {
 	_init_.Initialize()
 
@@ -352,7 +356,7 @@ func NewDataAwsccCodegurureviewerRepositoryAssociation(scope constructs.Construc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codegurureviewer_repository_association awscc_codegurureviewer_repository_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codegurureviewer_repository_association awscc_codegurureviewer_repository_association} Data Source.
 func NewDataAwsccCodegurureviewerRepositoryAssociation_Override(d DataAwsccCodegurureviewerRepositoryAssociation, scope constructs.Construct, id *string, config *DataAwsccCodegurureviewerRepositoryAssociationConfig) {
 	_init_.Initialize()
 
@@ -719,6 +723,32 @@ func (d *jsiiProxy_DataAwsccCodegurureviewerRepositoryAssociation) SynthesizeAtt
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCodegurureviewerRepositoryAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCodegurureviewerRepositoryAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

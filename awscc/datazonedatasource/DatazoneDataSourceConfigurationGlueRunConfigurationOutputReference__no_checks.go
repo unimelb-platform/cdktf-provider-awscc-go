@@ -52,6 +52,14 @@ func (d *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationOutputRefe
 	return nil
 }
 
+func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference) validateSetAutoImportDataQualityResultParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference) validateSetCatalogNameParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	return nil
 }

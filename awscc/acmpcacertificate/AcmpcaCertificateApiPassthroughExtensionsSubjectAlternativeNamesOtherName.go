@@ -2,11 +2,13 @@ package acmpcacertificate
 
 
 type AcmpcaCertificateApiPassthroughExtensionsSubjectAlternativeNamesOtherName struct {
-	// String that contains X.509 ObjectIdentifier information.
+	// Specifies an OID.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/acmpca_certificate#type_id AcmpcaCertificate#type_id}
-	TypeId *string `field:"required" json:"typeId" yaml:"typeId"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/acmpca_certificate#value AcmpcaCertificate#value}.
-	Value *string `field:"required" json:"value" yaml:"value"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/acmpca_certificate#type_id AcmpcaCertificate#type_id}
+	TypeId *string `field:"optional" json:"typeId" yaml:"typeId"`
+	// Specifies an OID value.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/acmpca_certificate#value AcmpcaCertificate#value}
+	Value *string `field:"optional" json:"value" yaml:"value"`
 }
 

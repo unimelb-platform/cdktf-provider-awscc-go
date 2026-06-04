@@ -32,6 +32,9 @@ type SagemakerSpaceSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecOutputRe
 	InstanceTypeInput() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	LifecycleConfigArn() *string
+	SetLifecycleConfigArn(val *string)
+	LifecycleConfigArnInput() *string
 	SageMakerImageArn() *string
 	SetSageMakerImageArn(val *string)
 	SageMakerImageArnInput() *string
@@ -71,6 +74,7 @@ type SagemakerSpaceSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecOutputRe
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetInstanceType()
+	ResetLifecycleConfigArn()
 	ResetSageMakerImageArn()
 	ResetSageMakerImageVersionArn()
 	// Produce the Token's value at resolution time.
@@ -153,6 +157,26 @@ func (j *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsDefaultResour
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecOutputReference) LifecycleConfigArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"lifecycleConfigArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecOutputReference) LifecycleConfigArnInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"lifecycleConfigArnInput",
 		&returns,
 	)
 	return returns
@@ -286,6 +310,17 @@ func (j *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsDefaultResour
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecOutputReference)SetLifecycleConfigArn(val *string) {
+	if err := j.validateSetLifecycleConfigArnParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"lifecycleConfigArn",
 		val,
 	)
 }
@@ -524,6 +559,14 @@ func (s *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsDefaultResour
 	_jsii_.InvokeVoid(
 		s,
 		"resetInstanceType",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecOutputReference) ResetLifecycleConfigArn() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetLifecycleConfigArn",
 		nil, // no parameters
 	)
 }

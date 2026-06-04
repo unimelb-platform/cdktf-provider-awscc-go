@@ -56,7 +56,7 @@ func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPrope
 	return nil
 }
 
-func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigOutputReference) validateSetInternalValueParameters(val *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfig) error {
+func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

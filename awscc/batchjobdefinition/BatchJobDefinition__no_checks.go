@@ -56,7 +56,15 @@ func (b *jsiiProxy_BatchJobDefinition) validateInterpolationForAttributeParamete
 	return nil
 }
 
+func (b *jsiiProxy_BatchJobDefinition) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (b *jsiiProxy_BatchJobDefinition) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (b *jsiiProxy_BatchJobDefinition) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -64,7 +72,15 @@ func (b *jsiiProxy_BatchJobDefinition) validateOverrideLogicalIdParameters(newLo
 	return nil
 }
 
+func (b *jsiiProxy_BatchJobDefinition) validatePutConsumableResourcePropertiesParameters(value *BatchJobDefinitionConsumableResourceProperties) error {
+	return nil
+}
+
 func (b *jsiiProxy_BatchJobDefinition) validatePutContainerPropertiesParameters(value *BatchJobDefinitionContainerProperties) error {
+	return nil
+}
+
+func (b *jsiiProxy_BatchJobDefinition) validatePutEcsPropertiesParameters(value *BatchJobDefinitionEcsProperties) error {
 	return nil
 }
 
@@ -116,7 +132,7 @@ func (j *jsiiProxy_BatchJobDefinition) validateSetLifecycleParameters(val *cdktf
 	return nil
 }
 
-func (j *jsiiProxy_BatchJobDefinition) validateSetParametersParameters(val *string) error {
+func (j *jsiiProxy_BatchJobDefinition) validateSetParametersParameters(val *map[string]*string) error {
 	return nil
 }
 
@@ -136,7 +152,7 @@ func (j *jsiiProxy_BatchJobDefinition) validateSetSchedulingPriorityParameters(v
 	return nil
 }
 
-func (j *jsiiProxy_BatchJobDefinition) validateSetTagsParameters(val *string) error {
+func (j *jsiiProxy_BatchJobDefinition) validateSetTagsParameters(val *map[string]*string) error {
 	return nil
 }
 

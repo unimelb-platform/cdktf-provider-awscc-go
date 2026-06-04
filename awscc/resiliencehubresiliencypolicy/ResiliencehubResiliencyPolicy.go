@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/resiliencehubresiliencypolicy/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/resiliencehub_resiliency_policy awscc_resiliencehub_resiliency_policy}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/resiliencehub_resiliency_policy awscc_resiliencehub_resiliency_policy}.
 type ResiliencehubResiliencyPolicy interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -46,7 +46,7 @@ type ResiliencehubResiliencyPolicy interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
-	Policy() ResiliencehubResiliencyPolicyPolicyMap
+	Policy() ResiliencehubResiliencyPolicyPolicyOutputReference
 	PolicyArn() *string
 	PolicyDescription() *string
 	SetPolicyDescription(val *string)
@@ -101,16 +101,26 @@ type ResiliencehubResiliencyPolicy interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutPolicy(value interface{})
+	PutPolicy(value *ResiliencehubResiliencyPolicyPolicy)
 	ResetDataLocationConstraint()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -118,6 +128,9 @@ type ResiliencehubResiliencyPolicy interface {
 	ResetPolicyDescription()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -262,8 +275,8 @@ func (j *jsiiProxy_ResiliencehubResiliencyPolicy) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_ResiliencehubResiliencyPolicy) Policy() ResiliencehubResiliencyPolicyPolicyMap {
-	var returns ResiliencehubResiliencyPolicyPolicyMap
+func (j *jsiiProxy_ResiliencehubResiliencyPolicy) Policy() ResiliencehubResiliencyPolicyPolicyOutputReference {
+	var returns ResiliencehubResiliencyPolicyPolicyOutputReference
 	_jsii_.Get(
 		j,
 		"policy",
@@ -433,7 +446,7 @@ func (j *jsiiProxy_ResiliencehubResiliencyPolicy) TierInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/resiliencehub_resiliency_policy awscc_resiliencehub_resiliency_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/resiliencehub_resiliency_policy awscc_resiliencehub_resiliency_policy} Resource.
 func NewResiliencehubResiliencyPolicy(scope constructs.Construct, id *string, config *ResiliencehubResiliencyPolicyConfig) ResiliencehubResiliencyPolicy {
 	_init_.Initialize()
 
@@ -451,7 +464,7 @@ func NewResiliencehubResiliencyPolicy(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/resiliencehub_resiliency_policy awscc_resiliencehub_resiliency_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/resiliencehub_resiliency_policy awscc_resiliencehub_resiliency_policy} Resource.
 func NewResiliencehubResiliencyPolicy_Override(r ResiliencehubResiliencyPolicy, scope constructs.Construct, id *string, config *ResiliencehubResiliencyPolicyConfig) {
 	_init_.Initialize()
 
@@ -854,6 +867,19 @@ func (r *jsiiProxy_ResiliencehubResiliencyPolicy) GetStringMapAttribute(terrafor
 	return returns
 }
 
+func (r *jsiiProxy_ResiliencehubResiliencyPolicy) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (r *jsiiProxy_ResiliencehubResiliencyPolicy) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -881,6 +907,17 @@ func (r *jsiiProxy_ResiliencehubResiliencyPolicy) InterpolationForAttribute(terr
 	return returns
 }
 
+func (r *jsiiProxy_ResiliencehubResiliencyPolicy) MoveFromId(id *string) {
+	if err := r.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_ResiliencehubResiliencyPolicy) MoveTo(moveTarget *string, index interface{}) {
 	if err := r.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -889,6 +926,17 @@ func (r *jsiiProxy_ResiliencehubResiliencyPolicy) MoveTo(moveTarget *string, ind
 		r,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (r *jsiiProxy_ResiliencehubResiliencyPolicy) MoveToId(id *string) {
+	if err := r.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -903,7 +951,7 @@ func (r *jsiiProxy_ResiliencehubResiliencyPolicy) OverrideLogicalId(newLogicalId
 	)
 }
 
-func (r *jsiiProxy_ResiliencehubResiliencyPolicy) PutPolicy(value interface{}) {
+func (r *jsiiProxy_ResiliencehubResiliencyPolicy) PutPolicy(value *ResiliencehubResiliencyPolicyPolicy) {
 	if err := r.validatePutPolicyParameters(value); err != nil {
 		panic(err)
 	}
@@ -952,6 +1000,32 @@ func (r *jsiiProxy_ResiliencehubResiliencyPolicy) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		r,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_ResiliencehubResiliencyPolicy) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		r,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_ResiliencehubResiliencyPolicy) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

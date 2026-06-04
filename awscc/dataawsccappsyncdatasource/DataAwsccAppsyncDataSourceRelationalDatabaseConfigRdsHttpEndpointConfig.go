@@ -1,0 +1,6 @@
+package dataawsccappsyncdatasource
+
+
+type DataAwsccAppsyncDataSourceRelationalDatabaseConfigRdsHttpEndpointConfig struct {
+}
+

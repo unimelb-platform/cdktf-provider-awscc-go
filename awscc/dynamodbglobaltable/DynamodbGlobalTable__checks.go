@@ -119,6 +119,14 @@ func (d *jsiiProxy_DynamodbGlobalTable) validateInterpolationForAttributeParamet
 	return nil
 }
 
+func (d *jsiiProxy_DynamodbGlobalTable) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (d *jsiiProxy_DynamodbGlobalTable) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (d *jsiiProxy_DynamodbGlobalTable) validateMoveToParameters(moveTarget *str
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbGlobalTable) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -244,6 +260,37 @@ func (d *jsiiProxy_DynamodbGlobalTable) validatePutGlobalSecondaryIndexesParamet
 	default:
 		if !_jsii_.IsAnonymousProxy(value) {
 			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*DynamodbGlobalTableGlobalSecondaryIndexes; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbGlobalTable) validatePutGlobalTableWitnessesParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*DynamodbGlobalTableGlobalTableWitnesses:
+		value := value.(*[]*DynamodbGlobalTableGlobalTableWitnesses)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*DynamodbGlobalTableGlobalTableWitnesses:
+		value_ := value.([]*DynamodbGlobalTableGlobalTableWitnesses)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*DynamodbGlobalTableGlobalTableWitnesses; received %#v (a %T)", value, value)
 		}
 	}
 
@@ -366,6 +413,28 @@ func (d *jsiiProxy_DynamodbGlobalTable) validatePutStreamSpecificationParameters
 }
 
 func (d *jsiiProxy_DynamodbGlobalTable) validatePutTimeToLiveSpecificationParameters(value *DynamodbGlobalTableTimeToLiveSpecification) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbGlobalTable) validatePutWarmThroughputParameters(value *DynamodbGlobalTableWarmThroughput) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbGlobalTable) validatePutWriteOnDemandThroughputSettingsParameters(value *DynamodbGlobalTableWriteOnDemandThroughputSettings) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -528,6 +597,14 @@ func (j *jsiiProxy_DynamodbGlobalTable) validateSetCountParameters(val interface
 func (j *jsiiProxy_DynamodbGlobalTable) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 		return err
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_DynamodbGlobalTable) validateSetMultiRegionConsistencyParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil

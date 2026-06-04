@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccapigatewayrestapi/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigateway_rest_api awscc_apigateway_rest_api}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigateway_rest_api awscc_apigateway_rest_api}.
 type DataAwsccApigatewayRestApi interface {
 	cdktf.TerraformDataSource
 	ApiKeySourceType() *string
@@ -99,6 +99,10 @@ type DataAwsccApigatewayRestApi interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -444,7 +448,7 @@ func (j *jsiiProxy_DataAwsccApigatewayRestApi) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigateway_rest_api awscc_apigateway_rest_api} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigateway_rest_api awscc_apigateway_rest_api} Data Source.
 func NewDataAwsccApigatewayRestApi(scope constructs.Construct, id *string, config *DataAwsccApigatewayRestApiConfig) DataAwsccApigatewayRestApi {
 	_init_.Initialize()
 
@@ -462,7 +466,7 @@ func NewDataAwsccApigatewayRestApi(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigateway_rest_api awscc_apigateway_rest_api} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigateway_rest_api awscc_apigateway_rest_api} Data Source.
 func NewDataAwsccApigatewayRestApi_Override(d DataAwsccApigatewayRestApi, scope constructs.Construct, id *string, config *DataAwsccApigatewayRestApiConfig) {
 	_init_.Initialize()
 
@@ -829,6 +833,32 @@ func (d *jsiiProxy_DataAwsccApigatewayRestApi) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApigatewayRestApi) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApigatewayRestApi) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

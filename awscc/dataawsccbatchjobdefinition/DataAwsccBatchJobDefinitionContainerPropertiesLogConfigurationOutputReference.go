@@ -30,7 +30,7 @@ type DataAwsccBatchJobDefinitionContainerPropertiesLogConfigurationOutputReferen
 	InternalValue() *DataAwsccBatchJobDefinitionContainerPropertiesLogConfiguration
 	SetInternalValue(val *DataAwsccBatchJobDefinitionContainerPropertiesLogConfiguration)
 	LogDriver() *string
-	Options() *string
+	Options() cdktf.StringMap
 	SecretOptions() DataAwsccBatchJobDefinitionContainerPropertiesLogConfigurationSecretOptionsList
 	// Experimental.
 	TerraformAttribute() *string
@@ -139,8 +139,8 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinitionContainerPropertiesLogConfiguratio
 	return returns
 }
 
-func (j *jsiiProxy_DataAwsccBatchJobDefinitionContainerPropertiesLogConfigurationOutputReference) Options() *string {
-	var returns *string
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionContainerPropertiesLogConfigurationOutputReference) Options() cdktf.StringMap {
+	var returns cdktf.StringMap
 	_jsii_.Get(
 		j,
 		"options",

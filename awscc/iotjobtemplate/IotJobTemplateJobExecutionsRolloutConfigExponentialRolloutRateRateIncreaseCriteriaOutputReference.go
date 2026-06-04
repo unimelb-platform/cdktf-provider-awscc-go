@@ -27,8 +27,8 @@ type IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateRateIncreaseC
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateRateIncreaseCriteria
-	SetInternalValue(val *IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateRateIncreaseCriteria)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	NumberOfNotifiedThings() *float64
 	SetNumberOfNotifiedThings(val *float64)
 	NumberOfNotifiedThingsInput() *float64
@@ -124,8 +124,8 @@ func (j *jsiiProxy_IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRat
 	return returns
 }
 
-func (j *jsiiProxy_IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateRateIncreaseCriteriaOutputReference) InternalValue() *IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateRateIncreaseCriteria {
-	var returns *IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateRateIncreaseCriteria
+func (j *jsiiProxy_IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateRateIncreaseCriteriaOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -244,7 +244,7 @@ func (j *jsiiProxy_IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRat
 	)
 }
 
-func (j *jsiiProxy_IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateRateIncreaseCriteriaOutputReference)SetInternalValue(val *IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateRateIncreaseCriteria) {
+func (j *jsiiProxy_IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateRateIncreaseCriteriaOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

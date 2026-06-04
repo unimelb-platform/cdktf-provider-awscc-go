@@ -10,6 +10,9 @@ import (
 
 type QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference interface {
 	cdktf.ComplexObject
+	AuthenticationType() *string
+	SetAuthenticationType(val *string)
+	AuthenticationTypeInput() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -27,6 +30,9 @@ type QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputR
 	CreationStack() *[]*string
 	Database() *string
 	SetDatabase(val *string)
+	DatabaseAccessControlRole() *string
+	SetDatabaseAccessControlRole(val *string)
+	DatabaseAccessControlRoleInput() *string
 	DatabaseInput() *string
 	// Experimental.
 	Fqn() *string
@@ -35,6 +41,8 @@ type QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputR
 	HostInput() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	OAuthParameters() QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOAuthParametersOutputReference
+	OAuthParametersInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -70,6 +78,13 @@ type QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputR
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutOAuthParameters(value *QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOAuthParameters)
+	ResetAuthenticationType()
+	ResetDatabase()
+	ResetDatabaseAccessControlRole()
+	ResetHost()
+	ResetOAuthParameters()
+	ResetWarehouse()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -83,6 +98,26 @@ type QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputR
 // The jsii proxy struct for QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference
 type jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference) AuthenticationType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"authenticationType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference) AuthenticationTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"authenticationTypeInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference) ComplexObjectIndex() interface{} {
@@ -120,6 +155,26 @@ func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakePar
 	_jsii_.Get(
 		j,
 		"database",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference) DatabaseAccessControlRole() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseAccessControlRole",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference) DatabaseAccessControlRoleInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseAccessControlRoleInput",
 		&returns,
 	)
 	return returns
@@ -170,6 +225,26 @@ func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakePar
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference) OAuthParameters() QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOAuthParametersOutputReference {
+	var returns QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOAuthParametersOutputReference
+	_jsii_.Get(
+		j,
+		"oAuthParameters",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference) OAuthParametersInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"oAuthParametersInput",
 		&returns,
 	)
 	return returns
@@ -243,6 +318,17 @@ func NewQuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutp
 	)
 }
 
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference)SetAuthenticationType(val *string) {
+	if err := j.validateSetAuthenticationTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"authenticationType",
+		val,
+	)
+}
+
 func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference)SetComplexObjectIndex(val interface{}) {
 	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
 		panic(err)
@@ -272,6 +358,17 @@ func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakePar
 	_jsii_.Set(
 		j,
 		"database",
+		val,
+	)
+}
+
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference)SetDatabaseAccessControlRole(val *string) {
+	if err := j.validateSetDatabaseAccessControlRoleParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"databaseAccessControlRole",
 		val,
 	)
 }
@@ -515,6 +612,65 @@ func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakePar
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference) PutOAuthParameters(value *QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOAuthParameters) {
+	if err := q.validatePutOAuthParametersParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		q,
+		"putOAuthParameters",
+		[]interface{}{value},
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference) ResetAuthenticationType() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetAuthenticationType",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference) ResetDatabase() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDatabase",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference) ResetDatabaseAccessControlRole() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDatabaseAccessControlRole",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference) ResetHost() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetHost",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference) ResetOAuthParameters() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetOAuthParameters",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference) ResetWarehouse() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetWarehouse",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSnowflakeParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

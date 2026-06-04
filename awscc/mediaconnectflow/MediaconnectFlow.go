@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/mediaconnectflow/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediaconnect_flow awscc_mediaconnect_flow}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediaconnect_flow awscc_mediaconnect_flow}.
 type MediaconnectFlow interface {
 	cdktf.TerraformResource
 	AvailabilityZone() *string
@@ -31,6 +31,7 @@ type MediaconnectFlow interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	EgressIp() *string
 	FlowArn() *string
 	FlowAvailabilityZone() *string
 	// Experimental.
@@ -46,6 +47,10 @@ type MediaconnectFlow interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	Maintenance() MediaconnectFlowMaintenanceOutputReference
+	MaintenanceInput() interface{}
+	MediaStreams() MediaconnectFlowMediaStreamsList
+	MediaStreamsInput() interface{}
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -65,12 +70,16 @@ type MediaconnectFlow interface {
 	SourceFailoverConfig() MediaconnectFlowSourceFailoverConfigOutputReference
 	SourceFailoverConfigInput() interface{}
 	SourceInput() interface{}
+	SourceMonitoringConfig() MediaconnectFlowSourceMonitoringConfigOutputReference
+	SourceMonitoringConfigInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	VpcInterfaces() MediaconnectFlowVpcInterfacesList
+	VpcInterfacesInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -95,23 +104,44 @@ type MediaconnectFlow interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutMaintenance(value *MediaconnectFlowMaintenance)
+	PutMediaStreams(value interface{})
 	PutSource(value *MediaconnectFlowSource)
 	PutSourceFailoverConfig(value *MediaconnectFlowSourceFailoverConfig)
+	PutSourceMonitoringConfig(value *MediaconnectFlowSourceMonitoringConfig)
+	PutVpcInterfaces(value interface{})
 	ResetAvailabilityZone()
+	ResetMaintenance()
+	ResetMediaStreams()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetSourceFailoverConfig()
+	ResetSourceMonitoringConfig()
+	ResetVpcInterfaces()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -196,6 +226,16 @@ func (j *jsiiProxy_MediaconnectFlow) DependsOn() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_MediaconnectFlow) EgressIp() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"egressIp",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_MediaconnectFlow) FlowArn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -261,6 +301,46 @@ func (j *jsiiProxy_MediaconnectFlow) Lifecycle() *cdktf.TerraformResourceLifecyc
 	_jsii_.Get(
 		j,
 		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediaconnectFlow) Maintenance() MediaconnectFlowMaintenanceOutputReference {
+	var returns MediaconnectFlowMaintenanceOutputReference
+	_jsii_.Get(
+		j,
+		"maintenance",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediaconnectFlow) MaintenanceInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"maintenanceInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediaconnectFlow) MediaStreams() MediaconnectFlowMediaStreamsList {
+	var returns MediaconnectFlowMediaStreamsList
+	_jsii_.Get(
+		j,
+		"mediaStreams",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediaconnectFlow) MediaStreamsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"mediaStreamsInput",
 		&returns,
 	)
 	return returns
@@ -366,6 +446,26 @@ func (j *jsiiProxy_MediaconnectFlow) SourceInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_MediaconnectFlow) SourceMonitoringConfig() MediaconnectFlowSourceMonitoringConfigOutputReference {
+	var returns MediaconnectFlowSourceMonitoringConfigOutputReference
+	_jsii_.Get(
+		j,
+		"sourceMonitoringConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediaconnectFlow) SourceMonitoringConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"sourceMonitoringConfigInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_MediaconnectFlow) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -396,8 +496,28 @@ func (j *jsiiProxy_MediaconnectFlow) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_MediaconnectFlow) VpcInterfaces() MediaconnectFlowVpcInterfacesList {
+	var returns MediaconnectFlowVpcInterfacesList
+	_jsii_.Get(
+		j,
+		"vpcInterfaces",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediaconnect_flow awscc_mediaconnect_flow} Resource.
+func (j *jsiiProxy_MediaconnectFlow) VpcInterfacesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"vpcInterfacesInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediaconnect_flow awscc_mediaconnect_flow} Resource.
 func NewMediaconnectFlow(scope constructs.Construct, id *string, config *MediaconnectFlowConfig) MediaconnectFlow {
 	_init_.Initialize()
 
@@ -415,7 +535,7 @@ func NewMediaconnectFlow(scope constructs.Construct, id *string, config *Mediaco
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediaconnect_flow awscc_mediaconnect_flow} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediaconnect_flow awscc_mediaconnect_flow} Resource.
 func NewMediaconnectFlow_Override(m MediaconnectFlow, scope constructs.Construct, id *string, config *MediaconnectFlowConfig) {
 	_init_.Initialize()
 
@@ -785,6 +905,19 @@ func (m *jsiiProxy_MediaconnectFlow) GetStringMapAttribute(terraformAttribute *s
 	return returns
 }
 
+func (m *jsiiProxy_MediaconnectFlow) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (m *jsiiProxy_MediaconnectFlow) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -812,6 +945,17 @@ func (m *jsiiProxy_MediaconnectFlow) InterpolationForAttribute(terraformAttribut
 	return returns
 }
 
+func (m *jsiiProxy_MediaconnectFlow) MoveFromId(id *string) {
+	if err := m.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_MediaconnectFlow) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -823,6 +967,17 @@ func (m *jsiiProxy_MediaconnectFlow) MoveTo(moveTarget *string, index interface{
 	)
 }
 
+func (m *jsiiProxy_MediaconnectFlow) MoveToId(id *string) {
+	if err := m.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_MediaconnectFlow) OverrideLogicalId(newLogicalId *string) {
 	if err := m.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -831,6 +986,28 @@ func (m *jsiiProxy_MediaconnectFlow) OverrideLogicalId(newLogicalId *string) {
 		m,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (m *jsiiProxy_MediaconnectFlow) PutMaintenance(value *MediaconnectFlowMaintenance) {
+	if err := m.validatePutMaintenanceParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putMaintenance",
+		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_MediaconnectFlow) PutMediaStreams(value interface{}) {
+	if err := m.validatePutMediaStreamsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putMediaStreams",
+		[]interface{}{value},
 	)
 }
 
@@ -856,10 +1033,48 @@ func (m *jsiiProxy_MediaconnectFlow) PutSourceFailoverConfig(value *Mediaconnect
 	)
 }
 
+func (m *jsiiProxy_MediaconnectFlow) PutSourceMonitoringConfig(value *MediaconnectFlowSourceMonitoringConfig) {
+	if err := m.validatePutSourceMonitoringConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putSourceMonitoringConfig",
+		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_MediaconnectFlow) PutVpcInterfaces(value interface{}) {
+	if err := m.validatePutVpcInterfacesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putVpcInterfaces",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_MediaconnectFlow) ResetAvailabilityZone() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetAvailabilityZone",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectFlow) ResetMaintenance() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMaintenance",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectFlow) ResetMediaStreams() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMediaStreams",
 		nil, // no parameters
 	)
 }
@@ -880,12 +1095,54 @@ func (m *jsiiProxy_MediaconnectFlow) ResetSourceFailoverConfig() {
 	)
 }
 
+func (m *jsiiProxy_MediaconnectFlow) ResetSourceMonitoringConfig() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetSourceMonitoringConfig",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectFlow) ResetVpcInterfaces() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetVpcInterfaces",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_MediaconnectFlow) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		m,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MediaconnectFlow) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		m,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MediaconnectFlow) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

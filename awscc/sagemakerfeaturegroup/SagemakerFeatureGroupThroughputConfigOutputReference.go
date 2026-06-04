@@ -72,6 +72,7 @@ type SagemakerFeatureGroupThroughputConfigOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetProvisionedReadCapacityUnits()
 	ResetProvisionedWriteCapacityUnits()
+	ResetThroughputMode()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (s *jsiiProxy_SagemakerFeatureGroupThroughputConfigOutputReference) ResetPr
 	_jsii_.InvokeVoid(
 		s,
 		"resetProvisionedWriteCapacityUnits",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerFeatureGroupThroughputConfigOutputReference) ResetThroughputMode() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetThroughputMode",
 		nil, // no parameters
 	)
 }

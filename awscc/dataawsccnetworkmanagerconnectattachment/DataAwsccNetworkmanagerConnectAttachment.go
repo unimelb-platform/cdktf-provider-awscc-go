@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccnetworkmanagerconnectattachment/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_connect_attachment awscc_networkmanager_connect_attachment}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_connect_attachment awscc_networkmanager_connect_attachment}.
 type DataAwsccNetworkmanagerConnectAttachment interface {
 	cdktf.TerraformDataSource
 	AttachmentId() *string
@@ -46,10 +46,12 @@ type DataAwsccNetworkmanagerConnectAttachment interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	NetworkFunctionGroupName() *string
 	// The tree node.
 	Node() constructs.Node
 	Options() DataAwsccNetworkmanagerConnectAttachmentOptionsOutputReference
 	OwnerAccountId() *string
+	ProposedNetworkFunctionGroupChange() DataAwsccNetworkmanagerConnectAttachmentProposedNetworkFunctionGroupChangeOutputReference
 	ProposedSegmentChange() DataAwsccNetworkmanagerConnectAttachmentProposedSegmentChangeOutputReference
 	// Experimental.
 	Provider() cdktf.TerraformProvider
@@ -98,6 +100,10 @@ type DataAwsccNetworkmanagerConnectAttachment interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -282,6 +288,16 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerConnectAttachment) Lifecycle() *cdktf.
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccNetworkmanagerConnectAttachment) NetworkFunctionGroupName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"networkFunctionGroupName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccNetworkmanagerConnectAttachment) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -307,6 +323,16 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerConnectAttachment) OwnerAccountId() *s
 	_jsii_.Get(
 		j,
 		"ownerAccountId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccNetworkmanagerConnectAttachment) ProposedNetworkFunctionGroupChange() DataAwsccNetworkmanagerConnectAttachmentProposedNetworkFunctionGroupChangeOutputReference {
+	var returns DataAwsccNetworkmanagerConnectAttachmentProposedNetworkFunctionGroupChangeOutputReference
+	_jsii_.Get(
+		j,
+		"proposedNetworkFunctionGroupChange",
 		&returns,
 	)
 	return returns
@@ -433,7 +459,7 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerConnectAttachment) UpdatedAt() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_connect_attachment awscc_networkmanager_connect_attachment} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_connect_attachment awscc_networkmanager_connect_attachment} Data Source.
 func NewDataAwsccNetworkmanagerConnectAttachment(scope constructs.Construct, id *string, config *DataAwsccNetworkmanagerConnectAttachmentConfig) DataAwsccNetworkmanagerConnectAttachment {
 	_init_.Initialize()
 
@@ -451,7 +477,7 @@ func NewDataAwsccNetworkmanagerConnectAttachment(scope constructs.Construct, id 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_connect_attachment awscc_networkmanager_connect_attachment} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_connect_attachment awscc_networkmanager_connect_attachment} Data Source.
 func NewDataAwsccNetworkmanagerConnectAttachment_Override(d DataAwsccNetworkmanagerConnectAttachment, scope constructs.Construct, id *string, config *DataAwsccNetworkmanagerConnectAttachmentConfig) {
 	_init_.Initialize()
 
@@ -818,6 +844,32 @@ func (d *jsiiProxy_DataAwsccNetworkmanagerConnectAttachment) SynthesizeAttribute
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkmanagerConnectAttachment) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkmanagerConnectAttachment) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

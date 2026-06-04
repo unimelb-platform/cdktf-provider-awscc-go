@@ -1,0 +1,6 @@
+package dataawsccworkspaceswebuseraccessloggingsettings
+
+
+type DataAwsccWorkspaceswebUserAccessLoggingSettingsTags struct {
+}
+

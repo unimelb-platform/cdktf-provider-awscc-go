@@ -64,6 +64,7 @@ type EventsRuleTargetsRunCommandParametersOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutRunCommandTargets(value interface{})
+	ResetRunCommandTargets()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -446,6 +447,14 @@ func (e *jsiiProxy_EventsRuleTargetsRunCommandParametersOutputReference) PutRunC
 		e,
 		"putRunCommandTargets",
 		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_EventsRuleTargetsRunCommandParametersOutputReference) ResetRunCommandTargets() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetRunCommandTargets",
+		nil, // no parameters
 	)
 }
 

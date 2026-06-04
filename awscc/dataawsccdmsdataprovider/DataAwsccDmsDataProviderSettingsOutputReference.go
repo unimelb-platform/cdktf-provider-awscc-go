@@ -25,14 +25,20 @@ type DataAwsccDmsDataProviderSettingsOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	DocDbSettings() DataAwsccDmsDataProviderSettingsDocDbSettingsOutputReference
 	// Experimental.
 	Fqn() *string
+	IbmDb2LuwSettings() DataAwsccDmsDataProviderSettingsIbmDb2LuwSettingsOutputReference
+	IbmDb2ZOsSettings() DataAwsccDmsDataProviderSettingsIbmDb2ZOsSettingsOutputReference
 	InternalValue() *DataAwsccDmsDataProviderSettings
 	SetInternalValue(val *DataAwsccDmsDataProviderSettings)
+	MariaDbSettings() DataAwsccDmsDataProviderSettingsMariaDbSettingsOutputReference
 	MicrosoftSqlServerSettings() DataAwsccDmsDataProviderSettingsMicrosoftSqlServerSettingsOutputReference
+	MongoDbSettings() DataAwsccDmsDataProviderSettingsMongoDbSettingsOutputReference
 	MySqlSettings() DataAwsccDmsDataProviderSettingsMySqlSettingsOutputReference
 	OracleSettings() DataAwsccDmsDataProviderSettingsOracleSettingsOutputReference
 	PostgreSqlSettings() DataAwsccDmsDataProviderSettingsPostgreSqlSettingsOutputReference
+	RedshiftSettings() DataAwsccDmsDataProviderSettingsRedshiftSettingsOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -110,11 +116,41 @@ func (j *jsiiProxy_DataAwsccDmsDataProviderSettingsOutputReference) CreationStac
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccDmsDataProviderSettingsOutputReference) DocDbSettings() DataAwsccDmsDataProviderSettingsDocDbSettingsOutputReference {
+	var returns DataAwsccDmsDataProviderSettingsDocDbSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"docDbSettings",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccDmsDataProviderSettingsOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDmsDataProviderSettingsOutputReference) IbmDb2LuwSettings() DataAwsccDmsDataProviderSettingsIbmDb2LuwSettingsOutputReference {
+	var returns DataAwsccDmsDataProviderSettingsIbmDb2LuwSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"ibmDb2LuwSettings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDmsDataProviderSettingsOutputReference) IbmDb2ZOsSettings() DataAwsccDmsDataProviderSettingsIbmDb2ZOsSettingsOutputReference {
+	var returns DataAwsccDmsDataProviderSettingsIbmDb2ZOsSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"ibmDb2ZOsSettings",
 		&returns,
 	)
 	return returns
@@ -130,11 +166,31 @@ func (j *jsiiProxy_DataAwsccDmsDataProviderSettingsOutputReference) InternalValu
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccDmsDataProviderSettingsOutputReference) MariaDbSettings() DataAwsccDmsDataProviderSettingsMariaDbSettingsOutputReference {
+	var returns DataAwsccDmsDataProviderSettingsMariaDbSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"mariaDbSettings",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccDmsDataProviderSettingsOutputReference) MicrosoftSqlServerSettings() DataAwsccDmsDataProviderSettingsMicrosoftSqlServerSettingsOutputReference {
 	var returns DataAwsccDmsDataProviderSettingsMicrosoftSqlServerSettingsOutputReference
 	_jsii_.Get(
 		j,
 		"microsoftSqlServerSettings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDmsDataProviderSettingsOutputReference) MongoDbSettings() DataAwsccDmsDataProviderSettingsMongoDbSettingsOutputReference {
+	var returns DataAwsccDmsDataProviderSettingsMongoDbSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"mongoDbSettings",
 		&returns,
 	)
 	return returns
@@ -165,6 +221,16 @@ func (j *jsiiProxy_DataAwsccDmsDataProviderSettingsOutputReference) PostgreSqlSe
 	_jsii_.Get(
 		j,
 		"postgreSqlSettings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDmsDataProviderSettingsOutputReference) RedshiftSettings() DataAwsccDmsDataProviderSettingsRedshiftSettingsOutputReference {
+	var returns DataAwsccDmsDataProviderSettingsRedshiftSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"redshiftSettings",
 		&returns,
 	)
 	return returns

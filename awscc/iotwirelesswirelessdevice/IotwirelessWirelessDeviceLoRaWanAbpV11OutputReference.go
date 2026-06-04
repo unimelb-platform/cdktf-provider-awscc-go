@@ -33,7 +33,7 @@ type IotwirelessWirelessDeviceLoRaWanAbpV11OutputReference interface {
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	SessionKeys() IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeysOutputReference
-	SessionKeysInput() *IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeys
+	SessionKeysInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,6 +67,8 @@ type IotwirelessWirelessDeviceLoRaWanAbpV11OutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutSessionKeys(value *IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeys)
+	ResetDevAddr()
+	ResetSessionKeys()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -162,8 +164,8 @@ func (j *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV11OutputReference) Sessio
 	return returns
 }
 
-func (j *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV11OutputReference) SessionKeysInput() *IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeys {
-	var returns *IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeys
+func (j *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV11OutputReference) SessionKeysInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"sessionKeysInput",
@@ -480,6 +482,22 @@ func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV11OutputReference) PutSes
 		i,
 		"putSessionKeys",
 		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV11OutputReference) ResetDevAddr() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetDevAddr",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV11OutputReference) ResetSessionKeys() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetSessionKeys",
+		nil, // no parameters
 	)
 }
 

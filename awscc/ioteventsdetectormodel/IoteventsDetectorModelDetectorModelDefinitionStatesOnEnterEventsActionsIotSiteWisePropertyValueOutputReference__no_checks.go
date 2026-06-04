@@ -64,7 +64,7 @@ func (j *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnEnterEve
 	return nil
 }
 
-func (j *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnEnterEventsActionsIotSiteWisePropertyValueOutputReference) validateSetInternalValueParameters(val *IoteventsDetectorModelDetectorModelDefinitionStatesOnEnterEventsActionsIotSiteWisePropertyValue) error {
+func (j *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnEnterEventsActionsIotSiteWisePropertyValueOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

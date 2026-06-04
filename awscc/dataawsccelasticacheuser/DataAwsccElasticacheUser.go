@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccelasticacheuser/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticache_user awscc_elasticache_user}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticache_user awscc_elasticache_user}.
 type DataAwsccElasticacheUser interface {
 	cdktf.TerraformDataSource
 	AccessString() *string
@@ -92,6 +92,10 @@ type DataAwsccElasticacheUser interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -367,7 +371,7 @@ func (j *jsiiProxy_DataAwsccElasticacheUser) UserName() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticache_user awscc_elasticache_user} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticache_user awscc_elasticache_user} Data Source.
 func NewDataAwsccElasticacheUser(scope constructs.Construct, id *string, config *DataAwsccElasticacheUserConfig) DataAwsccElasticacheUser {
 	_init_.Initialize()
 
@@ -385,7 +389,7 @@ func NewDataAwsccElasticacheUser(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticache_user awscc_elasticache_user} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticache_user awscc_elasticache_user} Data Source.
 func NewDataAwsccElasticacheUser_Override(d DataAwsccElasticacheUser, scope constructs.Construct, id *string, config *DataAwsccElasticacheUserConfig) {
 	_init_.Initialize()
 
@@ -752,6 +756,32 @@ func (d *jsiiProxy_DataAwsccElasticacheUser) SynthesizeAttributes() *map[string]
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccElasticacheUser) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccElasticacheUser) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

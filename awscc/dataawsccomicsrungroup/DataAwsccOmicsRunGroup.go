@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccomicsrungroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/omics_run_group awscc_omics_run_group}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/omics_run_group awscc_omics_run_group}.
 type DataAwsccOmicsRunGroup interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -54,6 +54,7 @@ type DataAwsccOmicsRunGroup interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	RunGroupId() *string
 	Tags() cdktf.StringMap
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -90,6 +91,10 @@ type DataAwsccOmicsRunGroup interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -304,6 +309,16 @@ func (j *jsiiProxy_DataAwsccOmicsRunGroup) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccOmicsRunGroup) RunGroupId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"runGroupId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccOmicsRunGroup) Tags() cdktf.StringMap {
 	var returns cdktf.StringMap
 	_jsii_.Get(
@@ -345,7 +360,7 @@ func (j *jsiiProxy_DataAwsccOmicsRunGroup) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/omics_run_group awscc_omics_run_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/omics_run_group awscc_omics_run_group} Data Source.
 func NewDataAwsccOmicsRunGroup(scope constructs.Construct, id *string, config *DataAwsccOmicsRunGroupConfig) DataAwsccOmicsRunGroup {
 	_init_.Initialize()
 
@@ -363,7 +378,7 @@ func NewDataAwsccOmicsRunGroup(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/omics_run_group awscc_omics_run_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/omics_run_group awscc_omics_run_group} Data Source.
 func NewDataAwsccOmicsRunGroup_Override(d DataAwsccOmicsRunGroup, scope constructs.Construct, id *string, config *DataAwsccOmicsRunGroupConfig) {
 	_init_.Initialize()
 
@@ -730,6 +745,32 @@ func (d *jsiiProxy_DataAwsccOmicsRunGroup) SynthesizeAttributes() *map[string]in
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccOmicsRunGroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccOmicsRunGroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

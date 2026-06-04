@@ -9,12 +9,13 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2subnet/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_subnet awscc_ec2_subnet}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_subnet awscc_ec2_subnet}.
 type DataAwsccEc2Subnet interface {
 	cdktf.TerraformDataSource
 	AssignIpv6AddressOnCreation() cdktf.IResolvable
 	AvailabilityZone() *string
 	AvailabilityZoneId() *string
+	BlockPublicAccessStates() DataAwsccEc2SubnetBlockPublicAccessStatesOutputReference
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	CidrBlock() *string
@@ -29,6 +30,7 @@ type DataAwsccEc2Subnet interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	EnableDns64() cdktf.IResolvable
+	EnableLniAtDeviceIndex() *float64
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -101,6 +103,10 @@ type DataAwsccEc2Subnet interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -140,6 +146,16 @@ func (j *jsiiProxy_DataAwsccEc2Subnet) AvailabilityZoneId() *string {
 	_jsii_.Get(
 		j,
 		"availabilityZoneId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2Subnet) BlockPublicAccessStates() DataAwsccEc2SubnetBlockPublicAccessStatesOutputReference {
+	var returns DataAwsccEc2SubnetBlockPublicAccessStatesOutputReference
+	_jsii_.Get(
+		j,
+		"blockPublicAccessStates",
 		&returns,
 	)
 	return returns
@@ -200,6 +216,16 @@ func (j *jsiiProxy_DataAwsccEc2Subnet) EnableDns64() cdktf.IResolvable {
 	_jsii_.Get(
 		j,
 		"enableDns64",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2Subnet) EnableLniAtDeviceIndex() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"enableLniAtDeviceIndex",
 		&returns,
 	)
 	return returns
@@ -466,7 +492,7 @@ func (j *jsiiProxy_DataAwsccEc2Subnet) VpcId() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_subnet awscc_ec2_subnet} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_subnet awscc_ec2_subnet} Data Source.
 func NewDataAwsccEc2Subnet(scope constructs.Construct, id *string, config *DataAwsccEc2SubnetConfig) DataAwsccEc2Subnet {
 	_init_.Initialize()
 
@@ -484,7 +510,7 @@ func NewDataAwsccEc2Subnet(scope constructs.Construct, id *string, config *DataA
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_subnet awscc_ec2_subnet} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_subnet awscc_ec2_subnet} Data Source.
 func NewDataAwsccEc2Subnet_Override(d DataAwsccEc2Subnet, scope constructs.Construct, id *string, config *DataAwsccEc2SubnetConfig) {
 	_init_.Initialize()
 
@@ -851,6 +877,32 @@ func (d *jsiiProxy_DataAwsccEc2Subnet) SynthesizeAttributes() *map[string]interf
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2Subnet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2Subnet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

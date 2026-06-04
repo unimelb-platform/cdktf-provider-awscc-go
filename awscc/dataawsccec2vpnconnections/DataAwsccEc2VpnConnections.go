@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2vpnconnections/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_vpn_connections awscc_ec2_vpn_connections}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_vpn_connections awscc_ec2_vpn_connections}.
 type DataAwsccEc2VpnConnections interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccEc2VpnConnections interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccEc2VpnConnections) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_vpn_connections awscc_ec2_vpn_connections} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_vpn_connections awscc_ec2_vpn_connections} Data Source.
 func NewDataAwsccEc2VpnConnections(scope constructs.Construct, id *string, config *DataAwsccEc2VpnConnectionsConfig) DataAwsccEc2VpnConnections {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccEc2VpnConnections(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_vpn_connections awscc_ec2_vpn_connections} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_vpn_connections awscc_ec2_vpn_connections} Data Source.
 func NewDataAwsccEc2VpnConnections_Override(d DataAwsccEc2VpnConnections, scope constructs.Construct, id *string, config *DataAwsccEc2VpnConnectionsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccEc2VpnConnections) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2VpnConnections) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2VpnConnections) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

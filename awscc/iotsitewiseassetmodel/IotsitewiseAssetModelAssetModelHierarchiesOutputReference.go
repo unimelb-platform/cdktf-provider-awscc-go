@@ -28,8 +28,14 @@ type IotsitewiseAssetModelAssetModelHierarchiesOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	ExternalId() *string
+	SetExternalId(val *string)
+	ExternalIdInput() *string
 	// Experimental.
 	Fqn() *string
+	Id() *string
+	SetId(val *string)
+	IdInput() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	LogicalId() *string
@@ -70,6 +76,11 @@ type IotsitewiseAssetModelAssetModelHierarchiesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetChildAssetModelId()
+	ResetExternalId()
+	ResetId()
+	ResetLogicalId()
+	ResetName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -135,11 +146,51 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) Cr
 	return returns
 }
 
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) ExternalId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) ExternalIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalIdInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) Id() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"id",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) IdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"idInput",
 		&returns,
 	)
 	return returns
@@ -272,6 +323,28 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference)Set
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference)SetExternalId(val *string) {
+	if err := j.validateSetExternalIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"externalId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"id",
 		val,
 	)
 }
@@ -515,6 +588,46 @@ func (i *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) In
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) ResetChildAssetModelId() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetChildAssetModelId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) ResetExternalId() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetExternalId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) ResetId() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) ResetLogicalId() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetName",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

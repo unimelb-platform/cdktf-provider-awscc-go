@@ -119,6 +119,14 @@ func (e *jsiiProxy_EcsTaskSet) validateInterpolationForAttributeParameters(terra
 	return nil
 }
 
+func (e *jsiiProxy_EcsTaskSet) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_EcsTaskSet) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,9 +188,48 @@ func (e *jsiiProxy_EcsTaskSet) validateMoveToParameters(moveTarget *string, inde
 	return nil
 }
 
+func (e *jsiiProxy_EcsTaskSet) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_EcsTaskSet) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (e *jsiiProxy_EcsTaskSet) validatePutCapacityProviderStrategyParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*EcsTaskSetCapacityProviderStrategy:
+		value := value.(*[]*EcsTaskSetCapacityProviderStrategy)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*EcsTaskSetCapacityProviderStrategy:
+		value_ := value.([]*EcsTaskSetCapacityProviderStrategy)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*EcsTaskSetCapacityProviderStrategy; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil
@@ -266,6 +313,37 @@ func (e *jsiiProxy_EcsTaskSet) validatePutServiceRegistriesParameters(value inte
 	default:
 		if !_jsii_.IsAnonymousProxy(value) {
 			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*EcsTaskSetServiceRegistries; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (e *jsiiProxy_EcsTaskSet) validatePutTagsParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*EcsTaskSetTags:
+		value := value.(*[]*EcsTaskSetTags)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*EcsTaskSetTags:
+		value_ := value.([]*EcsTaskSetTags)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*EcsTaskSetTags; received %#v (a %T)", value, value)
 		}
 	}
 

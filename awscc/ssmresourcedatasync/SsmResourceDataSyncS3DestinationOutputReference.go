@@ -76,8 +76,11 @@ type SsmResourceDataSyncS3DestinationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucketName()
 	ResetBucketPrefix()
+	ResetBucketRegion()
 	ResetKmsKeyArn()
+	ResetSyncFormat()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -587,6 +590,14 @@ func (s *jsiiProxy_SsmResourceDataSyncS3DestinationOutputReference) Interpolatio
 	return returns
 }
 
+func (s *jsiiProxy_SsmResourceDataSyncS3DestinationOutputReference) ResetBucketName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetBucketName",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SsmResourceDataSyncS3DestinationOutputReference) ResetBucketPrefix() {
 	_jsii_.InvokeVoid(
 		s,
@@ -595,10 +606,26 @@ func (s *jsiiProxy_SsmResourceDataSyncS3DestinationOutputReference) ResetBucketP
 	)
 }
 
+func (s *jsiiProxy_SsmResourceDataSyncS3DestinationOutputReference) ResetBucketRegion() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetBucketRegion",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SsmResourceDataSyncS3DestinationOutputReference) ResetKmsKeyArn() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetKmsKeyArn",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SsmResourceDataSyncS3DestinationOutputReference) ResetSyncFormat() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSyncFormat",
 		nil, // no parameters
 	)
 }

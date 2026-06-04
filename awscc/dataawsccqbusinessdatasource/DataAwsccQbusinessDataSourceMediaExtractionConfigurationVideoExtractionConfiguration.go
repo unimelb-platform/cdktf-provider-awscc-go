@@ -1,0 +1,6 @@
+package dataawsccqbusinessdatasource
+
+
+type DataAwsccQbusinessDataSourceMediaExtractionConfigurationVideoExtractionConfiguration struct {
+}
+

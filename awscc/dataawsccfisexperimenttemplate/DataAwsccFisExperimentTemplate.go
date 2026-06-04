@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccfisexperimenttemplate/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/fis_experiment_template awscc_fis_experiment_template}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/fis_experiment_template awscc_fis_experiment_template}.
 type DataAwsccFisExperimentTemplate interface {
 	cdktf.TerraformDataSource
 	Actions() DataAwsccFisExperimentTemplateActionsMap
@@ -27,6 +27,8 @@ type DataAwsccFisExperimentTemplate interface {
 	SetDependsOn(val *[]*string)
 	Description() *string
 	ExperimentOptions() DataAwsccFisExperimentTemplateExperimentOptionsOutputReference
+	ExperimentReportConfiguration() DataAwsccFisExperimentTemplateExperimentReportConfigurationOutputReference
+	ExperimentTemplateId() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -90,6 +92,10 @@ type DataAwsccFisExperimentTemplate interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -169,6 +175,26 @@ func (j *jsiiProxy_DataAwsccFisExperimentTemplate) ExperimentOptions() DataAwscc
 	_jsii_.Get(
 		j,
 		"experimentOptions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccFisExperimentTemplate) ExperimentReportConfiguration() DataAwsccFisExperimentTemplateExperimentReportConfigurationOutputReference {
+	var returns DataAwsccFisExperimentTemplateExperimentReportConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"experimentReportConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccFisExperimentTemplate) ExperimentTemplateId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"experimentTemplateId",
 		&returns,
 	)
 	return returns
@@ -345,7 +371,7 @@ func (j *jsiiProxy_DataAwsccFisExperimentTemplate) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/fis_experiment_template awscc_fis_experiment_template} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/fis_experiment_template awscc_fis_experiment_template} Data Source.
 func NewDataAwsccFisExperimentTemplate(scope constructs.Construct, id *string, config *DataAwsccFisExperimentTemplateConfig) DataAwsccFisExperimentTemplate {
 	_init_.Initialize()
 
@@ -363,7 +389,7 @@ func NewDataAwsccFisExperimentTemplate(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/fis_experiment_template awscc_fis_experiment_template} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/fis_experiment_template awscc_fis_experiment_template} Data Source.
 func NewDataAwsccFisExperimentTemplate_Override(d DataAwsccFisExperimentTemplate, scope constructs.Construct, id *string, config *DataAwsccFisExperimentTemplateConfig) {
 	_init_.Initialize()
 
@@ -730,6 +756,32 @@ func (d *jsiiProxy_DataAwsccFisExperimentTemplate) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccFisExperimentTemplate) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccFisExperimentTemplate) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

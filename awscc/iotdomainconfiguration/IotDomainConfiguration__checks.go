@@ -119,6 +119,14 @@ func (i *jsiiProxy_IotDomainConfiguration) validateInterpolationForAttributePara
 	return nil
 }
 
+func (i *jsiiProxy_IotDomainConfiguration) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (i *jsiiProxy_IotDomainConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (i *jsiiProxy_IotDomainConfiguration) validateMoveToParameters(moveTarget *
 	return nil
 }
 
+func (i *jsiiProxy_IotDomainConfiguration) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (i *jsiiProxy_IotDomainConfiguration) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -189,6 +205,28 @@ func (i *jsiiProxy_IotDomainConfiguration) validateOverrideLogicalIdParameters(n
 }
 
 func (i *jsiiProxy_IotDomainConfiguration) validatePutAuthorizerConfigParameters(value *IotDomainConfigurationAuthorizerConfig) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_IotDomainConfiguration) validatePutClientCertificateConfigParameters(value *IotDomainConfigurationClientCertificateConfig) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_IotDomainConfiguration) validatePutServerCertificateConfigParameters(value *IotDomainConfigurationServerCertificateConfig) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -276,6 +314,22 @@ func validateIotDomainConfiguration_IsTerraformElementParameters(x interface{}) 
 func validateIotDomainConfiguration_IsTerraformResourceParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_IotDomainConfiguration) validateSetApplicationProtocolParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_IotDomainConfiguration) validateSetAuthenticationTypeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil

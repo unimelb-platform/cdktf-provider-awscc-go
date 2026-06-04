@@ -67,6 +67,8 @@ type AccessanalyzerAnalyzerArchiveRulesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutFilter(value interface{})
+	ResetFilter()
+	ResetRuleName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -480,6 +482,22 @@ func (a *jsiiProxy_AccessanalyzerAnalyzerArchiveRulesOutputReference) PutFilter(
 		a,
 		"putFilter",
 		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_AccessanalyzerAnalyzerArchiveRulesOutputReference) ResetFilter() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetFilter",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AccessanalyzerAnalyzerArchiveRulesOutputReference) ResetRuleName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetRuleName",
+		nil, // no parameters
 	)
 }
 

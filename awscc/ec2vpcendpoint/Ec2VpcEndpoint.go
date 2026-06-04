@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2vpcendpoint/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_vpc_endpoint awscc_ec2_vpc_endpoint}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_vpc_endpoint awscc_ec2_vpc_endpoint}.
 type Ec2VpcEndpoint interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -30,6 +30,8 @@ type Ec2VpcEndpoint interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	DnsEntries() *[]*string
+	DnsOptions() Ec2VpcEndpointDnsOptionsOutputReference
+	DnsOptionsInput() interface{}
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -39,6 +41,9 @@ type Ec2VpcEndpoint interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
+	IpAddressType() *string
+	SetIpAddressType(val *string)
+	IpAddressTypeInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -62,6 +67,9 @@ type Ec2VpcEndpoint interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	ResourceConfigurationArn() *string
+	SetResourceConfigurationArn(val *string)
+	ResourceConfigurationArnInput() *string
 	RouteTableIds() *[]*string
 	SetRouteTableIds(val *[]*string)
 	RouteTableIdsInput() *[]*string
@@ -71,15 +79,24 @@ type Ec2VpcEndpoint interface {
 	ServiceName() *string
 	SetServiceName(val *string)
 	ServiceNameInput() *string
+	ServiceNetworkArn() *string
+	SetServiceNetworkArn(val *string)
+	ServiceNetworkArnInput() *string
+	ServiceRegion() *string
+	SetServiceRegion(val *string)
+	ServiceRegionInput() *string
 	SubnetIds() *[]*string
 	SetSubnetIds(val *[]*string)
 	SubnetIdsInput() *[]*string
+	Tags() Ec2VpcEndpointTagsList
+	TagsInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	VpcEndpointId() *string
 	VpcEndpointType() *string
 	SetVpcEndpointType(val *string)
 	VpcEndpointTypeInput() *string
@@ -110,25 +127,47 @@ type Ec2VpcEndpoint interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutDnsOptions(value *Ec2VpcEndpointDnsOptions)
+	PutTags(value interface{})
+	ResetDnsOptions()
+	ResetIpAddressType()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPolicyDocument()
 	ResetPrivateDnsEnabled()
+	ResetResourceConfigurationArn()
 	ResetRouteTableIds()
 	ResetSecurityGroupIds()
+	ResetServiceName()
+	ResetServiceNetworkArn()
+	ResetServiceRegion()
 	ResetSubnetIds()
+	ResetTags()
 	ResetVpcEndpointType()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -213,6 +252,26 @@ func (j *jsiiProxy_Ec2VpcEndpoint) DnsEntries() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2VpcEndpoint) DnsOptions() Ec2VpcEndpointDnsOptionsOutputReference {
+	var returns Ec2VpcEndpointDnsOptionsOutputReference
+	_jsii_.Get(
+		j,
+		"dnsOptions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpcEndpoint) DnsOptionsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"dnsOptionsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2VpcEndpoint) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
@@ -248,6 +307,26 @@ func (j *jsiiProxy_Ec2VpcEndpoint) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpcEndpoint) IpAddressType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipAddressType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpcEndpoint) IpAddressTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipAddressTypeInput",
 		&returns,
 	)
 	return returns
@@ -353,6 +432,26 @@ func (j *jsiiProxy_Ec2VpcEndpoint) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2VpcEndpoint) ResourceConfigurationArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"resourceConfigurationArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpcEndpoint) ResourceConfigurationArnInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"resourceConfigurationArnInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2VpcEndpoint) RouteTableIds() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -413,6 +512,46 @@ func (j *jsiiProxy_Ec2VpcEndpoint) ServiceNameInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2VpcEndpoint) ServiceNetworkArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"serviceNetworkArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpcEndpoint) ServiceNetworkArnInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"serviceNetworkArnInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpcEndpoint) ServiceRegion() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"serviceRegion",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpcEndpoint) ServiceRegionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"serviceRegionInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2VpcEndpoint) SubnetIds() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -428,6 +567,26 @@ func (j *jsiiProxy_Ec2VpcEndpoint) SubnetIdsInput() *[]*string {
 	_jsii_.Get(
 		j,
 		"subnetIdsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpcEndpoint) Tags() Ec2VpcEndpointTagsList {
+	var returns Ec2VpcEndpointTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpcEndpoint) TagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tagsInput",
 		&returns,
 	)
 	return returns
@@ -458,6 +617,16 @@ func (j *jsiiProxy_Ec2VpcEndpoint) TerraformResourceType() *string {
 	_jsii_.Get(
 		j,
 		"terraformResourceType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2VpcEndpoint) VpcEndpointId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"vpcEndpointId",
 		&returns,
 	)
 	return returns
@@ -504,7 +673,7 @@ func (j *jsiiProxy_Ec2VpcEndpoint) VpcIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_vpc_endpoint awscc_ec2_vpc_endpoint} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_vpc_endpoint awscc_ec2_vpc_endpoint} Resource.
 func NewEc2VpcEndpoint(scope constructs.Construct, id *string, config *Ec2VpcEndpointConfig) Ec2VpcEndpoint {
 	_init_.Initialize()
 
@@ -522,7 +691,7 @@ func NewEc2VpcEndpoint(scope constructs.Construct, id *string, config *Ec2VpcEnd
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_vpc_endpoint awscc_ec2_vpc_endpoint} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_vpc_endpoint awscc_ec2_vpc_endpoint} Resource.
 func NewEc2VpcEndpoint_Override(e Ec2VpcEndpoint, scope constructs.Construct, id *string, config *Ec2VpcEndpointConfig) {
 	_init_.Initialize()
 
@@ -567,6 +736,17 @@ func (j *jsiiProxy_Ec2VpcEndpoint)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2VpcEndpoint)SetIpAddressType(val *string) {
+	if err := j.validateSetIpAddressTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ipAddressType",
 		val,
 	)
 }
@@ -623,6 +803,17 @@ func (j *jsiiProxy_Ec2VpcEndpoint)SetProvisioners(val *[]interface{}) {
 	)
 }
 
+func (j *jsiiProxy_Ec2VpcEndpoint)SetResourceConfigurationArn(val *string) {
+	if err := j.validateSetResourceConfigurationArnParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"resourceConfigurationArn",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Ec2VpcEndpoint)SetRouteTableIds(val *[]*string) {
 	if err := j.validateSetRouteTableIdsParameters(val); err != nil {
 		panic(err)
@@ -652,6 +843,28 @@ func (j *jsiiProxy_Ec2VpcEndpoint)SetServiceName(val *string) {
 	_jsii_.Set(
 		j,
 		"serviceName",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2VpcEndpoint)SetServiceNetworkArn(val *string) {
+	if err := j.validateSetServiceNetworkArnParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"serviceNetworkArn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2VpcEndpoint)SetServiceRegion(val *string) {
+	if err := j.validateSetServiceRegionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"serviceRegion",
 		val,
 	)
 }
@@ -958,6 +1171,19 @@ func (e *jsiiProxy_Ec2VpcEndpoint) GetStringMapAttribute(terraformAttribute *str
 	return returns
 }
 
+func (e *jsiiProxy_Ec2VpcEndpoint) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2VpcEndpoint) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -985,6 +1211,17 @@ func (e *jsiiProxy_Ec2VpcEndpoint) InterpolationForAttribute(terraformAttribute 
 	return returns
 }
 
+func (e *jsiiProxy_Ec2VpcEndpoint) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2VpcEndpoint) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -996,6 +1233,17 @@ func (e *jsiiProxy_Ec2VpcEndpoint) MoveTo(moveTarget *string, index interface{})
 	)
 }
 
+func (e *jsiiProxy_Ec2VpcEndpoint) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2VpcEndpoint) OverrideLogicalId(newLogicalId *string) {
 	if err := e.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -1004,6 +1252,44 @@ func (e *jsiiProxy_Ec2VpcEndpoint) OverrideLogicalId(newLogicalId *string) {
 		e,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (e *jsiiProxy_Ec2VpcEndpoint) PutDnsOptions(value *Ec2VpcEndpointDnsOptions) {
+	if err := e.validatePutDnsOptionsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putDnsOptions",
+		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_Ec2VpcEndpoint) PutTags(value interface{}) {
+	if err := e.validatePutTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putTags",
+		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_Ec2VpcEndpoint) ResetDnsOptions() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetDnsOptions",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2VpcEndpoint) ResetIpAddressType() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetIpAddressType",
+		nil, // no parameters
 	)
 }
 
@@ -1031,6 +1317,14 @@ func (e *jsiiProxy_Ec2VpcEndpoint) ResetPrivateDnsEnabled() {
 	)
 }
 
+func (e *jsiiProxy_Ec2VpcEndpoint) ResetResourceConfigurationArn() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetResourceConfigurationArn",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_Ec2VpcEndpoint) ResetRouteTableIds() {
 	_jsii_.InvokeVoid(
 		e,
@@ -1047,10 +1341,42 @@ func (e *jsiiProxy_Ec2VpcEndpoint) ResetSecurityGroupIds() {
 	)
 }
 
+func (e *jsiiProxy_Ec2VpcEndpoint) ResetServiceName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetServiceName",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2VpcEndpoint) ResetServiceNetworkArn() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetServiceNetworkArn",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2VpcEndpoint) ResetServiceRegion() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetServiceRegion",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_Ec2VpcEndpoint) ResetSubnetIds() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetSubnetIds",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2VpcEndpoint) ResetTags() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetTags",
 		nil, // no parameters
 	)
 }
@@ -1069,6 +1395,32 @@ func (e *jsiiProxy_Ec2VpcEndpoint) SynthesizeAttributes() *map[string]interface{
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2VpcEndpoint) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2VpcEndpoint) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

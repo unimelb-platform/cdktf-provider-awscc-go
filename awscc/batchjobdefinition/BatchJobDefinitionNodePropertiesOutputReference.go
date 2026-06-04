@@ -70,6 +70,9 @@ type BatchJobDefinitionNodePropertiesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutNodeRangeProperties(value interface{})
+	ResetMainNode()
+	ResetNodeRangeProperties()
+	ResetNumNodes()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -514,6 +517,30 @@ func (b *jsiiProxy_BatchJobDefinitionNodePropertiesOutputReference) PutNodeRange
 		b,
 		"putNodeRangeProperties",
 		[]interface{}{value},
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesOutputReference) ResetMainNode() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetMainNode",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesOutputReference) ResetNodeRangeProperties() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetNodeRangeProperties",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesOutputReference) ResetNumNodes() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetNumNodes",
+		nil, // no parameters
 	)
 }
 

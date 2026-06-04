@@ -185,9 +185,25 @@ func (j *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransfor
 	return nil
 }
 
-func (j *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputDatasetFormatOutputReference) validateSetInternalValueParameters(val *SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputDatasetFormat) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputDatasetFormatOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputDatasetFormat:
+		val := val.(*SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputDatasetFormat)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputDatasetFormat:
+		val_ := val.(SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputDatasetFormat)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputDatasetFormat; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

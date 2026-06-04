@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccglobalacceleratorlistener/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/globalaccelerator_listener awscc_globalaccelerator_listener}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/globalaccelerator_listener awscc_globalaccelerator_listener}.
 type DataAwsccGlobalacceleratorListener interface {
 	cdktf.TerraformDataSource
 	AcceleratorArn() *string
@@ -87,6 +87,10 @@ type DataAwsccGlobalacceleratorListener interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -312,7 +316,7 @@ func (j *jsiiProxy_DataAwsccGlobalacceleratorListener) TerraformResourceType() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/globalaccelerator_listener awscc_globalaccelerator_listener} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/globalaccelerator_listener awscc_globalaccelerator_listener} Data Source.
 func NewDataAwsccGlobalacceleratorListener(scope constructs.Construct, id *string, config *DataAwsccGlobalacceleratorListenerConfig) DataAwsccGlobalacceleratorListener {
 	_init_.Initialize()
 
@@ -330,7 +334,7 @@ func NewDataAwsccGlobalacceleratorListener(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/globalaccelerator_listener awscc_globalaccelerator_listener} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/globalaccelerator_listener awscc_globalaccelerator_listener} Data Source.
 func NewDataAwsccGlobalacceleratorListener_Override(d DataAwsccGlobalacceleratorListener, scope constructs.Construct, id *string, config *DataAwsccGlobalacceleratorListenerConfig) {
 	_init_.Initialize()
 
@@ -697,6 +701,32 @@ func (d *jsiiProxy_DataAwsccGlobalacceleratorListener) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGlobalacceleratorListener) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGlobalacceleratorListener) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

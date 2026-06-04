@@ -31,6 +31,9 @@ type SagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsOutputReference 
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	LifecycleConfigArns() *[]*string
+	SetLifecycleConfigArns(val *[]*string)
+	LifecycleConfigArnsInput() *[]*string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -65,6 +68,7 @@ type SagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsOutputReference 
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDefaultResourceSpec(value *SagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpec)
 	ResetDefaultResourceSpec()
+	ResetLifecycleConfigArns()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -150,6 +154,26 @@ func (j *jsiiProxy_SagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsOu
 	return returns
 }
 
+func (j *jsiiProxy_SagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsOutputReference) LifecycleConfigArns() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"lifecycleConfigArns",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsOutputReference) LifecycleConfigArnsInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"lifecycleConfigArnsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -227,6 +251,17 @@ func (j *jsiiProxy_SagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsOu
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsOutputReference)SetLifecycleConfigArns(val *[]*string) {
+	if err := j.validateSetLifecycleConfigArnsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"lifecycleConfigArns",
 		val,
 	)
 }
@@ -454,6 +489,14 @@ func (s *jsiiProxy_SagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsOu
 	_jsii_.InvokeVoid(
 		s,
 		"resetDefaultResourceSpec",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsOutputReference) ResetLifecycleConfigArns() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetLifecycleConfigArns",
 		nil, // no parameters
 	)
 }

@@ -9,13 +9,14 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccbatchjobdefinition/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/batch_job_definition awscc_batch_job_definition}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/batch_job_definition awscc_batch_job_definition}.
 type DataAwsccBatchJobDefinition interface {
 	cdktf.TerraformDataSource
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
+	ConsumableResourceProperties() DataAwsccBatchJobDefinitionConsumableResourcePropertiesOutputReference
 	ContainerProperties() DataAwsccBatchJobDefinitionContainerPropertiesOutputReference
 	// Experimental.
 	Count() interface{}
@@ -25,6 +26,7 @@ type DataAwsccBatchJobDefinition interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	EcsProperties() DataAwsccBatchJobDefinitionEcsPropertiesOutputReference
 	EksProperties() DataAwsccBatchJobDefinitionEksPropertiesOutputReference
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
@@ -37,6 +39,7 @@ type DataAwsccBatchJobDefinition interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	JobDefinitionArn() *string
 	JobDefinitionName() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
@@ -45,7 +48,7 @@ type DataAwsccBatchJobDefinition interface {
 	// The tree node.
 	Node() constructs.Node
 	NodeProperties() DataAwsccBatchJobDefinitionNodePropertiesOutputReference
-	Parameters() *string
+	Parameters() cdktf.StringMap
 	PlatformCapabilities() *[]*string
 	PropagateTags() cdktf.IResolvable
 	// Experimental.
@@ -56,7 +59,7 @@ type DataAwsccBatchJobDefinition interface {
 	RawOverrides() interface{}
 	RetryStrategy() DataAwsccBatchJobDefinitionRetryStrategyOutputReference
 	SchedulingPriority() *float64
-	Tags() *string
+	Tags() cdktf.StringMap
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -94,6 +97,10 @@ type DataAwsccBatchJobDefinition interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -128,6 +135,16 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinition) ConstructNodeMetadata() *map[str
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccBatchJobDefinition) ConsumableResourceProperties() DataAwsccBatchJobDefinitionConsumableResourcePropertiesOutputReference {
+	var returns DataAwsccBatchJobDefinitionConsumableResourcePropertiesOutputReference
+	_jsii_.Get(
+		j,
+		"consumableResourceProperties",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccBatchJobDefinition) ContainerProperties() DataAwsccBatchJobDefinitionContainerPropertiesOutputReference {
 	var returns DataAwsccBatchJobDefinitionContainerPropertiesOutputReference
 	_jsii_.Get(
@@ -153,6 +170,16 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinition) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccBatchJobDefinition) EcsProperties() DataAwsccBatchJobDefinitionEcsPropertiesOutputReference {
+	var returns DataAwsccBatchJobDefinitionEcsPropertiesOutputReference
+	_jsii_.Get(
+		j,
+		"ecsProperties",
 		&returns,
 	)
 	return returns
@@ -218,6 +245,16 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinition) IdInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccBatchJobDefinition) JobDefinitionArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"jobDefinitionArn",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccBatchJobDefinition) JobDefinitionName() *string {
 	var returns *string
 	_jsii_.Get(
@@ -258,8 +295,8 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinition) NodeProperties() DataAwsccBatchJ
 	return returns
 }
 
-func (j *jsiiProxy_DataAwsccBatchJobDefinition) Parameters() *string {
-	var returns *string
+func (j *jsiiProxy_DataAwsccBatchJobDefinition) Parameters() cdktf.StringMap {
+	var returns cdktf.StringMap
 	_jsii_.Get(
 		j,
 		"parameters",
@@ -328,8 +365,8 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinition) SchedulingPriority() *float64 {
 	return returns
 }
 
-func (j *jsiiProxy_DataAwsccBatchJobDefinition) Tags() *string {
-	var returns *string
+func (j *jsiiProxy_DataAwsccBatchJobDefinition) Tags() cdktf.StringMap {
+	var returns cdktf.StringMap
 	_jsii_.Get(
 		j,
 		"tags",
@@ -389,7 +426,7 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinition) Type() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/batch_job_definition awscc_batch_job_definition} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/batch_job_definition awscc_batch_job_definition} Data Source.
 func NewDataAwsccBatchJobDefinition(scope constructs.Construct, id *string, config *DataAwsccBatchJobDefinitionConfig) DataAwsccBatchJobDefinition {
 	_init_.Initialize()
 
@@ -407,7 +444,7 @@ func NewDataAwsccBatchJobDefinition(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/batch_job_definition awscc_batch_job_definition} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/batch_job_definition awscc_batch_job_definition} Data Source.
 func NewDataAwsccBatchJobDefinition_Override(d DataAwsccBatchJobDefinition, scope constructs.Construct, id *string, config *DataAwsccBatchJobDefinitionConfig) {
 	_init_.Initialize()
 
@@ -774,6 +811,32 @@ func (d *jsiiProxy_DataAwsccBatchJobDefinition) SynthesizeAttributes() *map[stri
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccBatchJobDefinition) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccBatchJobDefinition) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

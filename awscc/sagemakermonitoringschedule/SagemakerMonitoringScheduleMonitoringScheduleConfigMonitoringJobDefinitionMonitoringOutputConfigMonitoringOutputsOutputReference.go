@@ -27,10 +27,10 @@ type SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionM
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigMonitoringOutputs
-	SetInternalValue(val *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigMonitoringOutputs)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	S3Output() SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigMonitoringOutputsS3OutputOutputReference
-	S3OutputInput() *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigMonitoringOutputsS3Output
+	S3OutputInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionM
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutS3Output(value *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigMonitoringOutputsS3Output)
+	ResetS3Output()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -119,8 +120,8 @@ func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoring
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigMonitoringOutputsOutputReference) InternalValue() *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigMonitoringOutputs {
-	var returns *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigMonitoringOutputs
+func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigMonitoringOutputsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -139,8 +140,8 @@ func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoring
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigMonitoringOutputsOutputReference) S3OutputInput() *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigMonitoringOutputsS3Output {
-	var returns *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigMonitoringOutputsS3Output
+func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigMonitoringOutputsOutputReference) S3OutputInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"s3OutputInput",
@@ -219,7 +220,7 @@ func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoring
 	)
 }
 
-func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigMonitoringOutputsOutputReference)SetInternalValue(val *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigMonitoringOutputs) {
+func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigMonitoringOutputsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -446,6 +447,14 @@ func (s *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoring
 		s,
 		"putS3Output",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigMonitoringOutputsOutputReference) ResetS3Output() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetS3Output",
+		nil, // no parameters
 	)
 }
 

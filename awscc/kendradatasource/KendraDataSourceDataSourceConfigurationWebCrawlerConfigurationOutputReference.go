@@ -60,7 +60,7 @@ type KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationOutputReferen
 	SetUrlInclusionPatterns(val *[]*string)
 	UrlInclusionPatternsInput() *[]*string
 	Urls() KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrlsOutputReference
-	UrlsInput() *KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrls
+	UrlsInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -96,6 +96,7 @@ type KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationOutputReferen
 	ResetProxyConfiguration()
 	ResetUrlExclusionPatterns()
 	ResetUrlInclusionPatterns()
+	ResetUrls()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -351,8 +352,8 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfiguratio
 	return returns
 }
 
-func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationOutputReference) UrlsInput() *KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrls {
-	var returns *KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrls
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationOutputReference) UrlsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"urlsInput",
@@ -789,6 +790,14 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfiguratio
 	_jsii_.InvokeVoid(
 		k,
 		"resetUrlInclusionPatterns",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationOutputReference) ResetUrls() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetUrls",
 		nil, // no parameters
 	)
 }

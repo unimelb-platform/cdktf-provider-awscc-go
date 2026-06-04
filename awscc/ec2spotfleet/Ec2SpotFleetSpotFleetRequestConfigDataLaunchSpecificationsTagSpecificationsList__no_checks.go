@@ -4,6 +4,10 @@ package ec2spotfleet
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsTagSpecificationsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsTagSpecificationsList) validateGetParameters(index *float64) error {
 	return nil
 }

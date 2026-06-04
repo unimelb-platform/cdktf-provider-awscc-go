@@ -2,9 +2,13 @@ package ec2instance
 
 
 type Ec2InstanceVolumes struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_instance#device Ec2Instance#device}.
-	Device *string `field:"required" json:"device" yaml:"device"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_instance#volume_id Ec2Instance#volume_id}.
-	VolumeId *string `field:"required" json:"volumeId" yaml:"volumeId"`
+	// The device name (for example, /dev/sdh or xvdh).
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_instance#device Ec2Instance#device}
+	Device *string `field:"optional" json:"device" yaml:"device"`
+	// The ID of the EBS volume. The volume and instance must be within the same Availability Zone.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_instance#volume_id Ec2Instance#volume_id}
+	VolumeId *string `field:"optional" json:"volumeId" yaml:"volumeId"`
 }
 

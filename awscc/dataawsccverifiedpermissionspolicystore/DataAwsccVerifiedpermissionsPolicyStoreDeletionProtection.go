@@ -1,0 +1,6 @@
+package dataawsccverifiedpermissionspolicystore
+
+
+type DataAwsccVerifiedpermissionsPolicyStoreDeletionProtection struct {
+}
+

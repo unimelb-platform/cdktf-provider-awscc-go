@@ -10,6 +10,7 @@ import (
 
 type DataAwsccSagemakerInferenceComponentSpecificationOutputReference interface {
 	cdktf.ComplexObject
+	BaseInferenceComponentName() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -78,6 +79,16 @@ type DataAwsccSagemakerInferenceComponentSpecificationOutputReference interface 
 // The jsii proxy struct for DataAwsccSagemakerInferenceComponentSpecificationOutputReference
 type jsiiProxy_DataAwsccSagemakerInferenceComponentSpecificationOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerInferenceComponentSpecificationOutputReference) BaseInferenceComponentName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"baseInferenceComponentName",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccSagemakerInferenceComponentSpecificationOutputReference) ComplexObjectIndex() interface{} {

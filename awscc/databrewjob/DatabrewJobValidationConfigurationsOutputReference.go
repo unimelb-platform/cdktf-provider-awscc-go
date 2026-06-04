@@ -67,6 +67,7 @@ type DatabrewJobValidationConfigurationsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetRulesetArn()
 	ResetValidationMode()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (d *jsiiProxy_DatabrewJobValidationConfigurationsOutputReference) Interpola
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatabrewJobValidationConfigurationsOutputReference) ResetRulesetArn() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetRulesetArn",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatabrewJobValidationConfigurationsOutputReference) ResetValidationMode() {

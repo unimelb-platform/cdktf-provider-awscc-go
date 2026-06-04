@@ -64,6 +64,7 @@ type IotfleetwiseCampaignCollectionSchemeTimeBasedCollectionSchemeOutputReferenc
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPeriodMs()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (i *jsiiProxy_IotfleetwiseCampaignCollectionSchemeTimeBasedCollectionScheme
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotfleetwiseCampaignCollectionSchemeTimeBasedCollectionSchemeOutputReference) ResetPeriodMs() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetPeriodMs",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotfleetwiseCampaignCollectionSchemeTimeBasedCollectionSchemeOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

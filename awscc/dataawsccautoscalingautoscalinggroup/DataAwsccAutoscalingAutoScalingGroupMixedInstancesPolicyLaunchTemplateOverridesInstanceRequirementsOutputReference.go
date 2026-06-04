@@ -18,6 +18,7 @@ type DataAwsccAutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverr
 	AllowedInstanceTypes() *[]*string
 	BareMetal() *string
 	BaselineEbsBandwidthMbps() DataAwsccAutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselineEbsBandwidthMbpsOutputReference
+	BaselinePerformanceFactors() DataAwsccAutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsOutputReference
 	BurstablePerformance() *string
 	// the index of the complex object in a list.
 	// Experimental.
@@ -175,6 +176,16 @@ func (j *jsiiProxy_DataAwsccAutoscalingAutoScalingGroupMixedInstancesPolicyLaunc
 	_jsii_.Get(
 		j,
 		"baselineEbsBandwidthMbps",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccAutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsOutputReference) BaselinePerformanceFactors() DataAwsccAutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsOutputReference {
+	var returns DataAwsccAutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsOutputReference
+	_jsii_.Get(
+		j,
+		"baselinePerformanceFactors",
 		&returns,
 	)
 	return returns

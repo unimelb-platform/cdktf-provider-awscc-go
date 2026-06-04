@@ -119,6 +119,14 @@ func (d *jsiiProxy_DatazoneDomain) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
+func (d *jsiiProxy_DatazoneDomain) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (d *jsiiProxy_DatazoneDomain) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (d *jsiiProxy_DatazoneDomain) validateMoveToParameters(moveTarget *string, 
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DatazoneDomain) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -376,6 +392,14 @@ func (j *jsiiProxy_DatazoneDomain) validateSetDomainExecutionRoleParameters(val 
 	return nil
 }
 
+func (j *jsiiProxy_DatazoneDomain) validateSetDomainVersionParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_DatazoneDomain) validateSetKmsKeyIdentifierParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -441,6 +465,14 @@ func (j *jsiiProxy_DatazoneDomain) validateSetProvisionersParameters(val *[]inte
 				return fmt.Errorf("parameter val[%#v] must be one of the allowed types: *cdktf.FileProvisioner, *cdktf.LocalExecProvisioner, *cdktf.RemoteExecProvisioner; received %#v (a %T)", idx_97dfc6, v, v)
 			}
 		}
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_DatazoneDomain) validateSetServiceRoleParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil

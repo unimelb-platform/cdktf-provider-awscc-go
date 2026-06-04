@@ -80,7 +80,11 @@ type QuicksightDataSetLogicalTableMapSourceJoinInstructionOutputReference interf
 	PutLeftJoinKeyProperties(value *QuicksightDataSetLogicalTableMapSourceJoinInstructionLeftJoinKeyProperties)
 	PutRightJoinKeyProperties(value *QuicksightDataSetLogicalTableMapSourceJoinInstructionRightJoinKeyProperties)
 	ResetLeftJoinKeyProperties()
+	ResetLeftOperand()
+	ResetOnClause()
 	ResetRightJoinKeyProperties()
+	ResetRightOperand()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -629,10 +633,42 @@ func (q *jsiiProxy_QuicksightDataSetLogicalTableMapSourceJoinInstructionOutputRe
 	)
 }
 
+func (q *jsiiProxy_QuicksightDataSetLogicalTableMapSourceJoinInstructionOutputReference) ResetLeftOperand() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetLeftOperand",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetLogicalTableMapSourceJoinInstructionOutputReference) ResetOnClause() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetOnClause",
+		nil, // no parameters
+	)
+}
+
 func (q *jsiiProxy_QuicksightDataSetLogicalTableMapSourceJoinInstructionOutputReference) ResetRightJoinKeyProperties() {
 	_jsii_.InvokeVoid(
 		q,
 		"resetRightJoinKeyProperties",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetLogicalTableMapSourceJoinInstructionOutputReference) ResetRightOperand() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetRightOperand",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetLogicalTableMapSourceJoinInstructionOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetType",
 		nil, // no parameters
 	)
 }

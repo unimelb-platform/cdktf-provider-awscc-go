@@ -30,7 +30,7 @@ type CleanroomsConfiguredTableAnalysisRulesOutputReference interface {
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	Policy() CleanroomsConfiguredTableAnalysisRulesPolicyOutputReference
-	PolicyInput() *CleanroomsConfiguredTableAnalysisRulesPolicy
+	PolicyInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,6 +67,8 @@ type CleanroomsConfiguredTableAnalysisRulesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutPolicy(value *CleanroomsConfiguredTableAnalysisRulesPolicy)
+	ResetPolicy()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -142,8 +144,8 @@ func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesOutputReference) Policy
 	return returns
 }
 
-func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesOutputReference) PolicyInput() *CleanroomsConfiguredTableAnalysisRulesPolicy {
-	var returns *CleanroomsConfiguredTableAnalysisRulesPolicy
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesOutputReference) PolicyInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"policyInput",
@@ -480,6 +482,22 @@ func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesOutputReference) PutPol
 		c,
 		"putPolicy",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesOutputReference) ResetPolicy() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetPolicy",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetType",
+		nil, // no parameters
 	)
 }
 

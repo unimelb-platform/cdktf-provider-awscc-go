@@ -64,6 +64,7 @@ type OsisPipelineLogPublishingOptionsCloudwatchLogDestinationOutputReference int
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetLogGroup()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (o *jsiiProxy_OsisPipelineLogPublishingOptionsCloudwatchLogDestinationOutpu
 	)
 
 	return returns
+}
+
+func (o *jsiiProxy_OsisPipelineLogPublishingOptionsCloudwatchLogDestinationOutputReference) ResetLogGroup() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetLogGroup",
+		nil, // no parameters
+	)
 }
 
 func (o *jsiiProxy_OsisPipelineLogPublishingOptionsCloudwatchLogDestinationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

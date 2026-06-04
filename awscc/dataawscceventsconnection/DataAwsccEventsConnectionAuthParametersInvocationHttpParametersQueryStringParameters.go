@@ -1,0 +1,6 @@
+package dataawscceventsconnection
+
+
+type DataAwsccEventsConnectionAuthParametersInvocationHttpParametersQueryStringParameters struct {
+}
+

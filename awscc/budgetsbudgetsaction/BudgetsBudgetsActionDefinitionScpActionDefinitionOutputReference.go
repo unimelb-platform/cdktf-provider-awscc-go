@@ -67,6 +67,8 @@ type BudgetsBudgetsActionDefinitionScpActionDefinitionOutputReference interface 
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPolicyId()
+	ResetTargetIds()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (b *jsiiProxy_BudgetsBudgetsActionDefinitionScpActionDefinitionOutputRefere
 	)
 
 	return returns
+}
+
+func (b *jsiiProxy_BudgetsBudgetsActionDefinitionScpActionDefinitionOutputReference) ResetPolicyId() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetPolicyId",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BudgetsBudgetsActionDefinitionScpActionDefinitionOutputReference) ResetTargetIds() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetTargetIds",
+		nil, // no parameters
+	)
 }
 
 func (b *jsiiProxy_BudgetsBudgetsActionDefinitionScpActionDefinitionOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

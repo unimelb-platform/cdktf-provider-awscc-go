@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccbillingconductorbillinggroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/billingconductor_billing_group awscc_billingconductor_billing_group}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/billingconductor_billing_group awscc_billingconductor_billing_group}.
 type DataAwsccBillingconductorBillingGroup interface {
 	cdktf.TerraformDataSource
 	AccountGrouping() DataAwsccBillingconductorBillingGroupAccountGroupingOutputReference
@@ -94,6 +94,10 @@ type DataAwsccBillingconductorBillingGroup interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -389,7 +393,7 @@ func (j *jsiiProxy_DataAwsccBillingconductorBillingGroup) TerraformResourceType(
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/billingconductor_billing_group awscc_billingconductor_billing_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/billingconductor_billing_group awscc_billingconductor_billing_group} Data Source.
 func NewDataAwsccBillingconductorBillingGroup(scope constructs.Construct, id *string, config *DataAwsccBillingconductorBillingGroupConfig) DataAwsccBillingconductorBillingGroup {
 	_init_.Initialize()
 
@@ -407,7 +411,7 @@ func NewDataAwsccBillingconductorBillingGroup(scope constructs.Construct, id *st
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/billingconductor_billing_group awscc_billingconductor_billing_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/billingconductor_billing_group awscc_billingconductor_billing_group} Data Source.
 func NewDataAwsccBillingconductorBillingGroup_Override(d DataAwsccBillingconductorBillingGroup, scope constructs.Construct, id *string, config *DataAwsccBillingconductorBillingGroupConfig) {
 	_init_.Initialize()
 
@@ -774,6 +778,32 @@ func (d *jsiiProxy_DataAwsccBillingconductorBillingGroup) SynthesizeAttributes()
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccBillingconductorBillingGroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccBillingconductorBillingGroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

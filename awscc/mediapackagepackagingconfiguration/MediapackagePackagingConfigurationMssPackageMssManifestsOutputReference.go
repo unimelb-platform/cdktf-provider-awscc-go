@@ -27,8 +27,8 @@ type MediapackagePackagingConfigurationMssPackageMssManifestsOutputReference int
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *MediapackagePackagingConfigurationMssPackageMssManifests
-	SetInternalValue(val *MediapackagePackagingConfigurationMssPackageMssManifests)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	ManifestName() *string
 	SetManifestName(val *string)
 	ManifestNameInput() *string
@@ -124,8 +124,8 @@ func (j *jsiiProxy_MediapackagePackagingConfigurationMssPackageMssManifestsOutpu
 	return returns
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfigurationMssPackageMssManifestsOutputReference) InternalValue() *MediapackagePackagingConfigurationMssPackageMssManifests {
-	var returns *MediapackagePackagingConfigurationMssPackageMssManifests
+func (j *jsiiProxy_MediapackagePackagingConfigurationMssPackageMssManifestsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -244,7 +244,7 @@ func (j *jsiiProxy_MediapackagePackagingConfigurationMssPackageMssManifestsOutpu
 	)
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfigurationMssPackageMssManifestsOutputReference)SetInternalValue(val *MediapackagePackagingConfigurationMssPackageMssManifests) {
+func (j *jsiiProxy_MediapackagePackagingConfigurationMssPackageMssManifestsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

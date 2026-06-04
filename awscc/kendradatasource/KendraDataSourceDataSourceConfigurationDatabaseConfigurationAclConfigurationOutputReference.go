@@ -64,6 +64,7 @@ type KendraDataSourceDataSourceConfigurationDatabaseConfigurationAclConfiguratio
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAllowedGroupsColumnName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationA
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationAclConfigurationOutputReference) ResetAllowedGroupsColumnName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetAllowedGroupsColumnName",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationAclConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

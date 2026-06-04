@@ -64,6 +64,7 @@ type BillingconductorCustomLineItemCustomLineItemChargeDetailsFlatOutputReferenc
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetChargeValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (b *jsiiProxy_BillingconductorCustomLineItemCustomLineItemChargeDetailsFlat
 	)
 
 	return returns
+}
+
+func (b *jsiiProxy_BillingconductorCustomLineItemCustomLineItemChargeDetailsFlatOutputReference) ResetChargeValue() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetChargeValue",
+		nil, // no parameters
+	)
 }
 
 func (b *jsiiProxy_BillingconductorCustomLineItemCustomLineItemChargeDetailsFlatOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

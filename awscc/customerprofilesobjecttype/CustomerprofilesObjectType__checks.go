@@ -119,6 +119,14 @@ func (c *jsiiProxy_CustomerprofilesObjectType) validateInterpolationForAttribute
 	return nil
 }
 
+func (c *jsiiProxy_CustomerprofilesObjectType) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (c *jsiiProxy_CustomerprofilesObjectType) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (c *jsiiProxy_CustomerprofilesObjectType) validateMoveToParameters(moveTarg
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (c *jsiiProxy_CustomerprofilesObjectType) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -466,6 +482,14 @@ func (j *jsiiProxy_CustomerprofilesObjectType) validateSetExpirationDaysParamete
 func (j *jsiiProxy_CustomerprofilesObjectType) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 		return err
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_CustomerprofilesObjectType) validateSetMaxProfileObjectCountParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil

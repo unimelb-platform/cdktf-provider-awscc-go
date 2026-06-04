@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccapigatewaydocumentationpart/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigateway_documentation_part awscc_apigateway_documentation_part}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigateway_documentation_part awscc_apigateway_documentation_part}.
 type DataAwsccApigatewayDocumentationPart interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -86,6 +86,10 @@ type DataAwsccApigatewayDocumentationPart interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -301,7 +305,7 @@ func (j *jsiiProxy_DataAwsccApigatewayDocumentationPart) TerraformResourceType()
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigateway_documentation_part awscc_apigateway_documentation_part} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigateway_documentation_part awscc_apigateway_documentation_part} Data Source.
 func NewDataAwsccApigatewayDocumentationPart(scope constructs.Construct, id *string, config *DataAwsccApigatewayDocumentationPartConfig) DataAwsccApigatewayDocumentationPart {
 	_init_.Initialize()
 
@@ -319,7 +323,7 @@ func NewDataAwsccApigatewayDocumentationPart(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigateway_documentation_part awscc_apigateway_documentation_part} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigateway_documentation_part awscc_apigateway_documentation_part} Data Source.
 func NewDataAwsccApigatewayDocumentationPart_Override(d DataAwsccApigatewayDocumentationPart, scope constructs.Construct, id *string, config *DataAwsccApigatewayDocumentationPartConfig) {
 	_init_.Initialize()
 
@@ -686,6 +690,32 @@ func (d *jsiiProxy_DataAwsccApigatewayDocumentationPart) SynthesizeAttributes() 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApigatewayDocumentationPart) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApigatewayDocumentationPart) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

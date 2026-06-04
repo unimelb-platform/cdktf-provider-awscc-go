@@ -187,9 +187,25 @@ func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExport
 	return nil
 }
 
-func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestinationOutputReference) validateSetInternalValueParameters(val *S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestination) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestinationOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestination:
+		val := val.(*S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestination)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestination:
+		val_ := val.(S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestination)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *S3BucketAnalyticsConfigurationsStorageClassAnalysisDataExportDestination; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

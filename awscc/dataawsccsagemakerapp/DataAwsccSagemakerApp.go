@@ -9,12 +9,13 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccsagemakerapp/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_app awscc_sagemaker_app}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_app awscc_sagemaker_app}.
 type DataAwsccSagemakerApp interface {
 	cdktf.TerraformDataSource
 	AppArn() *string
 	AppName() *string
 	AppType() *string
+	BuiltInLifecycleConfigArn() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -51,6 +52,7 @@ type DataAwsccSagemakerApp interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	RecoveryMode() cdktf.IResolvable
 	ResourceSpec() DataAwsccSagemakerAppResourceSpecOutputReference
 	Tags() DataAwsccSagemakerAppTagsList
 	// Experimental.
@@ -89,6 +91,10 @@ type DataAwsccSagemakerApp interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -128,6 +134,16 @@ func (j *jsiiProxy_DataAwsccSagemakerApp) AppType() *string {
 	_jsii_.Get(
 		j,
 		"appType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerApp) BuiltInLifecycleConfigArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"builtInLifecycleConfigArn",
 		&returns,
 	)
 	return returns
@@ -273,6 +289,16 @@ func (j *jsiiProxy_DataAwsccSagemakerApp) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccSagemakerApp) RecoveryMode() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"recoveryMode",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccSagemakerApp) ResourceSpec() DataAwsccSagemakerAppResourceSpecOutputReference {
 	var returns DataAwsccSagemakerAppResourceSpecOutputReference
 	_jsii_.Get(
@@ -334,7 +360,7 @@ func (j *jsiiProxy_DataAwsccSagemakerApp) UserProfileName() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_app awscc_sagemaker_app} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_app awscc_sagemaker_app} Data Source.
 func NewDataAwsccSagemakerApp(scope constructs.Construct, id *string, config *DataAwsccSagemakerAppConfig) DataAwsccSagemakerApp {
 	_init_.Initialize()
 
@@ -352,7 +378,7 @@ func NewDataAwsccSagemakerApp(scope constructs.Construct, id *string, config *Da
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_app awscc_sagemaker_app} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_app awscc_sagemaker_app} Data Source.
 func NewDataAwsccSagemakerApp_Override(d DataAwsccSagemakerApp, scope constructs.Construct, id *string, config *DataAwsccSagemakerAppConfig) {
 	_init_.Initialize()
 
@@ -719,6 +745,32 @@ func (d *jsiiProxy_DataAwsccSagemakerApp) SynthesizeAttributes() *map[string]int
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerApp) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerApp) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

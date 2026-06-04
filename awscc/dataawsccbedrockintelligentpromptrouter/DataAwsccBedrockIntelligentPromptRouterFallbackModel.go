@@ -1,0 +1,6 @@
+package dataawsccbedrockintelligentpromptrouter
+
+
+type DataAwsccBedrockIntelligentPromptRouterFallbackModel struct {
+}
+

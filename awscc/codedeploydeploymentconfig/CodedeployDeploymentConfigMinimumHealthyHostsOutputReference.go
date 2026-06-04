@@ -67,6 +67,8 @@ type CodedeployDeploymentConfigMinimumHealthyHostsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetType()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CodedeployDeploymentConfigMinimumHealthyHostsOutputReference)
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CodedeployDeploymentConfigMinimumHealthyHostsOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetType",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CodedeployDeploymentConfigMinimumHealthyHostsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CodedeployDeploymentConfigMinimumHealthyHostsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

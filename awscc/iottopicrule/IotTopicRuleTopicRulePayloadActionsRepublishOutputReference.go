@@ -75,6 +75,8 @@ type IotTopicRuleTopicRulePayloadActionsRepublishOutputReference interface {
 	PutHeaders(value *IotTopicRuleTopicRulePayloadActionsRepublishHeaders)
 	ResetHeaders()
 	ResetQos()
+	ResetRoleArn()
+	ResetTopic()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -565,6 +567,22 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsRepublishOutputReference) 
 	_jsii_.InvokeVoid(
 		i,
 		"resetQos",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsRepublishOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsRepublishOutputReference) ResetTopic() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTopic",
 		nil, // no parameters
 	)
 }

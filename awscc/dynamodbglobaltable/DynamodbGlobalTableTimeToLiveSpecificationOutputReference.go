@@ -68,6 +68,7 @@ type DynamodbGlobalTableTimeToLiveSpecificationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetAttributeName()
+	ResetEnabled()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (d *jsiiProxy_DynamodbGlobalTableTimeToLiveSpecificationOutputReference) Re
 	_jsii_.InvokeVoid(
 		d,
 		"resetAttributeName",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableTimeToLiveSpecificationOutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetEnabled",
 		nil, // no parameters
 	)
 }

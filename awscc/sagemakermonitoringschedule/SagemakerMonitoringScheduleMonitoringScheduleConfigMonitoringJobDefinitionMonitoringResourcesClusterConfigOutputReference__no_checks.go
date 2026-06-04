@@ -64,7 +64,7 @@ func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoring
 	return nil
 }
 
-func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringResourcesClusterConfigOutputReference) validateSetInternalValueParameters(val *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringResourcesClusterConfig) error {
+func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringResourcesClusterConfigOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/mediapackagev2channelgroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediapackagev2_channel_group awscc_mediapackagev2_channel_group}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediapackagev2_channel_group awscc_mediapackagev2_channel_group}.
 type Mediapackagev2ChannelGroup interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -95,23 +95,35 @@ type Mediapackagev2ChannelGroup interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutTags(value interface{})
-	ResetChannelGroupName()
 	ResetDescription()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -397,7 +409,7 @@ func (j *jsiiProxy_Mediapackagev2ChannelGroup) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediapackagev2_channel_group awscc_mediapackagev2_channel_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediapackagev2_channel_group awscc_mediapackagev2_channel_group} Resource.
 func NewMediapackagev2ChannelGroup(scope constructs.Construct, id *string, config *Mediapackagev2ChannelGroupConfig) Mediapackagev2ChannelGroup {
 	_init_.Initialize()
 
@@ -415,7 +427,7 @@ func NewMediapackagev2ChannelGroup(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediapackagev2_channel_group awscc_mediapackagev2_channel_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediapackagev2_channel_group awscc_mediapackagev2_channel_group} Resource.
 func NewMediapackagev2ChannelGroup_Override(m Mediapackagev2ChannelGroup, scope constructs.Construct, id *string, config *Mediapackagev2ChannelGroupConfig) {
 	_init_.Initialize()
 
@@ -785,6 +797,19 @@ func (m *jsiiProxy_Mediapackagev2ChannelGroup) GetStringMapAttribute(terraformAt
 	return returns
 }
 
+func (m *jsiiProxy_Mediapackagev2ChannelGroup) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (m *jsiiProxy_Mediapackagev2ChannelGroup) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -812,6 +837,17 @@ func (m *jsiiProxy_Mediapackagev2ChannelGroup) InterpolationForAttribute(terrafo
 	return returns
 }
 
+func (m *jsiiProxy_Mediapackagev2ChannelGroup) MoveFromId(id *string) {
+	if err := m.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_Mediapackagev2ChannelGroup) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -820,6 +856,17 @@ func (m *jsiiProxy_Mediapackagev2ChannelGroup) MoveTo(moveTarget *string, index 
 		m,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (m *jsiiProxy_Mediapackagev2ChannelGroup) MoveToId(id *string) {
+	if err := m.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -842,14 +889,6 @@ func (m *jsiiProxy_Mediapackagev2ChannelGroup) PutTags(value interface{}) {
 		m,
 		"putTags",
 		[]interface{}{value},
-	)
-}
-
-func (m *jsiiProxy_Mediapackagev2ChannelGroup) ResetChannelGroupName() {
-	_jsii_.InvokeVoid(
-		m,
-		"resetChannelGroupName",
-		nil, // no parameters
 	)
 }
 
@@ -883,6 +922,32 @@ func (m *jsiiProxy_Mediapackagev2ChannelGroup) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		m,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_Mediapackagev2ChannelGroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		m,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_Mediapackagev2ChannelGroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

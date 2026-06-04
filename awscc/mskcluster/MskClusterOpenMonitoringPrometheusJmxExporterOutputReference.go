@@ -64,6 +64,7 @@ type MskClusterOpenMonitoringPrometheusJmxExporterOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEnabledInBroker()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (m *jsiiProxy_MskClusterOpenMonitoringPrometheusJmxExporterOutputReference)
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_MskClusterOpenMonitoringPrometheusJmxExporterOutputReference) ResetEnabledInBroker() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetEnabledInBroker",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_MskClusterOpenMonitoringPrometheusJmxExporterOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

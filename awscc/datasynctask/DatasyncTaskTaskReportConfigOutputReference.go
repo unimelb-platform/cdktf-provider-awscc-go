@@ -26,7 +26,7 @@ type DatasyncTaskTaskReportConfigOutputReference interface {
 	// Experimental.
 	CreationStack() *[]*string
 	Destination() DatasyncTaskTaskReportConfigDestinationOutputReference
-	DestinationInput() *DatasyncTaskTaskReportConfigDestination
+	DestinationInput() interface{}
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -76,7 +76,9 @@ type DatasyncTaskTaskReportConfigOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDestination(value *DatasyncTaskTaskReportConfigDestination)
 	PutOverrides(value *DatasyncTaskTaskReportConfigOverrides)
+	ResetDestination()
 	ResetObjectVersionIds()
+	ResetOutputType()
 	ResetOverrides()
 	ResetReportLevel()
 	// Produce the Token's value at resolution time.
@@ -134,8 +136,8 @@ func (j *jsiiProxy_DatasyncTaskTaskReportConfigOutputReference) Destination() Da
 	return returns
 }
 
-func (j *jsiiProxy_DatasyncTaskTaskReportConfigOutputReference) DestinationInput() *DatasyncTaskTaskReportConfigDestination {
-	var returns *DatasyncTaskTaskReportConfigDestination
+func (j *jsiiProxy_DatasyncTaskTaskReportConfigOutputReference) DestinationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"destinationInput",
@@ -588,10 +590,26 @@ func (d *jsiiProxy_DatasyncTaskTaskReportConfigOutputReference) PutOverrides(val
 	)
 }
 
+func (d *jsiiProxy_DatasyncTaskTaskReportConfigOutputReference) ResetDestination() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetDestination",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DatasyncTaskTaskReportConfigOutputReference) ResetObjectVersionIds() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetObjectVersionIds",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatasyncTaskTaskReportConfigOutputReference) ResetOutputType() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetOutputType",
 		nil, // no parameters
 	)
 }

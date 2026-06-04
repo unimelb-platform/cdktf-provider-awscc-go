@@ -1,0 +1,6 @@
+package dataawsccworkspacesinstancesworkspaceinstance
+
+
+type DataAwsccWorkspacesinstancesWorkspaceInstanceManagedInstanceMonitoring struct {
+}
+

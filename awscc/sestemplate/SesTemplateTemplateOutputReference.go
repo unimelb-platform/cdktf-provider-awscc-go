@@ -74,6 +74,7 @@ type SesTemplateTemplateOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetHtmlPart()
+	ResetSubjectPart()
 	ResetTemplateName()
 	ResetTextPart()
 	// Produce the Token's value at resolution time.
@@ -558,6 +559,14 @@ func (s *jsiiProxy_SesTemplateTemplateOutputReference) ResetHtmlPart() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetHtmlPart",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SesTemplateTemplateOutputReference) ResetSubjectPart() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSubjectPart",
 		nil, // no parameters
 	)
 }

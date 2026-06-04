@@ -67,6 +67,8 @@ type AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocati
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetNameAssigner()
+	ResetPartyName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (a *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAcce
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocationEdiPartyNameOutputReference) ResetNameAssigner() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetNameAssigner",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocationEdiPartyNameOutputReference) ResetPartyName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetPartyName",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocationEdiPartyNameOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccs3storagelensgroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/s3_storage_lens_group awscc_s3_storage_lens_group}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/s3_storage_lens_group awscc_s3_storage_lens_group}.
 type DataAwsccS3StorageLensGroup interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -86,6 +86,10 @@ type DataAwsccS3StorageLensGroup interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -301,7 +305,7 @@ func (j *jsiiProxy_DataAwsccS3StorageLensGroup) TerraformResourceType() *string 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/s3_storage_lens_group awscc_s3_storage_lens_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/s3_storage_lens_group awscc_s3_storage_lens_group} Data Source.
 func NewDataAwsccS3StorageLensGroup(scope constructs.Construct, id *string, config *DataAwsccS3StorageLensGroupConfig) DataAwsccS3StorageLensGroup {
 	_init_.Initialize()
 
@@ -319,7 +323,7 @@ func NewDataAwsccS3StorageLensGroup(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/s3_storage_lens_group awscc_s3_storage_lens_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/s3_storage_lens_group awscc_s3_storage_lens_group} Data Source.
 func NewDataAwsccS3StorageLensGroup_Override(d DataAwsccS3StorageLensGroup, scope constructs.Construct, id *string, config *DataAwsccS3StorageLensGroupConfig) {
 	_init_.Initialize()
 
@@ -686,6 +690,32 @@ func (d *jsiiProxy_DataAwsccS3StorageLensGroup) SynthesizeAttributes() *map[stri
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccS3StorageLensGroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccS3StorageLensGroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

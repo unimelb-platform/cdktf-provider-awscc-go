@@ -27,8 +27,8 @@ type IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindowOutputReference in
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindow
-	SetInternalValue(val *IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindow)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -120,8 +120,8 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindowOutp
 	return returns
 }
 
-func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindowOutputReference) InternalValue() *IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindow {
-	var returns *IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindow
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindowOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -220,7 +220,7 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindowOutp
 	)
 }
 
-func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindowOutputReference)SetInternalValue(val *IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindow) {
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindowOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

@@ -79,9 +79,12 @@ type IotTopicRuleTopicRulePayloadErrorActionKafkaOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutHeaders(value interface{})
+	ResetClientProperties()
+	ResetDestinationArn()
 	ResetHeaders()
 	ResetKey()
 	ResetPartition()
+	ResetTopic()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -622,6 +625,22 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionKafkaOutputReference) 
 	)
 }
 
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionKafkaOutputReference) ResetClientProperties() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetClientProperties",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionKafkaOutputReference) ResetDestinationArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetDestinationArn",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionKafkaOutputReference) ResetHeaders() {
 	_jsii_.InvokeVoid(
 		i,
@@ -642,6 +661,14 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionKafkaOutputReference) 
 	_jsii_.InvokeVoid(
 		i,
 		"resetPartition",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionKafkaOutputReference) ResetTopic() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTopic",
 		nil, // no parameters
 	)
 }

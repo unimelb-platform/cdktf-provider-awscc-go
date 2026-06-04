@@ -77,6 +77,8 @@ type LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationOutpu
 	PutMessageGroupsList(value interface{})
 	PutPromptAttemptsSpecification(value interface{})
 	ResetAllowInterrupt()
+	ResetMaxRetries()
+	ResetMessageGroupsList()
 	ResetMessageSelectionStrategy()
 	ResetPromptAttemptsSpecification()
 	// Produce the Token's value at resolution time.
@@ -592,6 +594,22 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpec
 	_jsii_.InvokeVoid(
 		l,
 		"resetAllowInterrupt",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationOutputReference) ResetMaxRetries() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMaxRetries",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationOutputReference) ResetMessageGroupsList() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMessageGroupsList",
 		nil, // no parameters
 	)
 }

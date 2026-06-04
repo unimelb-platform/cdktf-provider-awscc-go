@@ -64,6 +64,10 @@ func (j *jsiiProxy_GroundstationMissionProfileStreamsKmsKeyOutputReference) vali
 	return nil
 }
 
+func (j *jsiiProxy_GroundstationMissionProfileStreamsKmsKeyOutputReference) validateSetKmsAliasNameParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_GroundstationMissionProfileStreamsKmsKeyOutputReference) validateSetKmsKeyArnParameters(val *string) error {
 	return nil
 }

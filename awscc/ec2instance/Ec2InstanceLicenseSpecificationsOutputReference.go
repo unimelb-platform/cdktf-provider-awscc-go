@@ -64,6 +64,7 @@ type Ec2InstanceLicenseSpecificationsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetLicenseConfigurationArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (e *jsiiProxy_Ec2InstanceLicenseSpecificationsOutputReference) Interpolatio
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_Ec2InstanceLicenseSpecificationsOutputReference) ResetLicenseConfigurationArn() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetLicenseConfigurationArn",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_Ec2InstanceLicenseSpecificationsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

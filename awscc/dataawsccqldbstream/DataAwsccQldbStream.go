@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccqldbstream/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/qldb_stream awscc_qldb_stream}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/qldb_stream awscc_qldb_stream}.
 type DataAwsccQldbStream interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -53,6 +53,7 @@ type DataAwsccQldbStream interface {
 	// Experimental.
 	RawOverrides() interface{}
 	RoleArn() *string
+	StreamId() *string
 	StreamName() *string
 	Tags() DataAwsccQldbStreamTagsList
 	// Experimental.
@@ -90,6 +91,10 @@ type DataAwsccQldbStream interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -294,6 +299,16 @@ func (j *jsiiProxy_DataAwsccQldbStream) RoleArn() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccQldbStream) StreamId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"streamId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccQldbStream) StreamName() *string {
 	var returns *string
 	_jsii_.Get(
@@ -345,7 +360,7 @@ func (j *jsiiProxy_DataAwsccQldbStream) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/qldb_stream awscc_qldb_stream} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/qldb_stream awscc_qldb_stream} Data Source.
 func NewDataAwsccQldbStream(scope constructs.Construct, id *string, config *DataAwsccQldbStreamConfig) DataAwsccQldbStream {
 	_init_.Initialize()
 
@@ -363,7 +378,7 @@ func NewDataAwsccQldbStream(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/qldb_stream awscc_qldb_stream} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/qldb_stream awscc_qldb_stream} Data Source.
 func NewDataAwsccQldbStream_Override(d DataAwsccQldbStream, scope constructs.Construct, id *string, config *DataAwsccQldbStreamConfig) {
 	_init_.Initialize()
 
@@ -730,6 +745,32 @@ func (d *jsiiProxy_DataAwsccQldbStream) SynthesizeAttributes() *map[string]inter
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccQldbStream) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccQldbStream) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -70,6 +70,7 @@ type IoteventsDetectorModelDetectorModelDefinitionStatesOnEnterEventsActionsFire
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutPayload(value *IoteventsDetectorModelDetectorModelDefinitionStatesOnEnterEventsActionsFirehosePayload)
+	ResetDeliveryStreamName()
 	ResetPayload()
 	ResetSeparator()
 	// Produce the Token's value at resolution time.
@@ -516,6 +517,14 @@ func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnEnterEve
 		i,
 		"putPayload",
 		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnEnterEventsActionsFirehoseOutputReference) ResetDeliveryStreamName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetDeliveryStreamName",
+		nil, // no parameters
 	)
 }
 

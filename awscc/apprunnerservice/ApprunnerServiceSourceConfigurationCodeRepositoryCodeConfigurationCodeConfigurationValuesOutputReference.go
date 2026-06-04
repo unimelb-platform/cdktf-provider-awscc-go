@@ -81,6 +81,7 @@ type ApprunnerServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfi
 	PutRuntimeEnvironmentVariables(value interface{})
 	ResetBuildCommand()
 	ResetPort()
+	ResetRuntime()
 	ResetRuntimeEnvironmentSecrets()
 	ResetRuntimeEnvironmentVariables()
 	ResetStartCommand()
@@ -636,6 +637,14 @@ func (a *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositoryCodeConfigur
 	_jsii_.InvokeVoid(
 		a,
 		"resetPort",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesOutputReference) ResetRuntime() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetRuntime",
 		nil, // no parameters
 	)
 }

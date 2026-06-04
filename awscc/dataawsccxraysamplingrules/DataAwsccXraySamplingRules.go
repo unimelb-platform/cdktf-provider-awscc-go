@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccxraysamplingrules/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/xray_sampling_rules awscc_xray_sampling_rules}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/xray_sampling_rules awscc_xray_sampling_rules}.
 type DataAwsccXraySamplingRules interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccXraySamplingRules interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccXraySamplingRules) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/xray_sampling_rules awscc_xray_sampling_rules} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/xray_sampling_rules awscc_xray_sampling_rules} Data Source.
 func NewDataAwsccXraySamplingRules(scope constructs.Construct, id *string, config *DataAwsccXraySamplingRulesConfig) DataAwsccXraySamplingRules {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccXraySamplingRules(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/xray_sampling_rules awscc_xray_sampling_rules} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/xray_sampling_rules awscc_xray_sampling_rules} Data Source.
 func NewDataAwsccXraySamplingRules_Override(d DataAwsccXraySamplingRules, scope constructs.Construct, id *string, config *DataAwsccXraySamplingRulesConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccXraySamplingRules) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccXraySamplingRules) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccXraySamplingRules) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

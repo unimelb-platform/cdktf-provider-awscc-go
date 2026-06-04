@@ -30,6 +30,7 @@ type DataAwsccLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigOutputRef
 	Fqn() *string
 	InternalValue() *DataAwsccLambdaEventSourceMappingSelfManagedKafkaEventSourceConfig
 	SetInternalValue(val *DataAwsccLambdaEventSourceMappingSelfManagedKafkaEventSourceConfig)
+	SchemaRegistryConfig() DataAwsccLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -132,6 +133,16 @@ func (j *jsiiProxy_DataAwsccLambdaEventSourceMappingSelfManagedKafkaEventSourceC
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigOutputReference) SchemaRegistryConfig() DataAwsccLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigOutputReference {
+	var returns DataAwsccLambdaEventSourceMappingSelfManagedKafkaEventSourceConfigSchemaRegistryConfigOutputReference
+	_jsii_.Get(
+		j,
+		"schemaRegistryConfig",
 		&returns,
 	)
 	return returns

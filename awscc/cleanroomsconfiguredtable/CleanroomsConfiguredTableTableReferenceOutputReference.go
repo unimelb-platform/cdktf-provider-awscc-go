@@ -10,6 +10,8 @@ import (
 
 type CleanroomsConfiguredTableTableReferenceOutputReference interface {
 	cdktf.ComplexObject
+	Athena() CleanroomsConfiguredTableTableReferenceAthenaOutputReference
+	AthenaInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -31,6 +33,8 @@ type CleanroomsConfiguredTableTableReferenceOutputReference interface {
 	GlueInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	Snowflake() CleanroomsConfiguredTableTableReferenceSnowflakeOutputReference
+	SnowflakeInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -63,7 +67,12 @@ type CleanroomsConfiguredTableTableReferenceOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutAthena(value *CleanroomsConfiguredTableTableReferenceAthena)
 	PutGlue(value *CleanroomsConfiguredTableTableReferenceGlue)
+	PutSnowflake(value *CleanroomsConfiguredTableTableReferenceSnowflake)
+	ResetAthena()
+	ResetGlue()
+	ResetSnowflake()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -77,6 +86,26 @@ type CleanroomsConfiguredTableTableReferenceOutputReference interface {
 // The jsii proxy struct for CleanroomsConfiguredTableTableReferenceOutputReference
 type jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference) Athena() CleanroomsConfiguredTableTableReferenceAthenaOutputReference {
+	var returns CleanroomsConfiguredTableTableReferenceAthenaOutputReference
+	_jsii_.Get(
+		j,
+		"athena",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference) AthenaInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"athenaInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference) ComplexObjectIndex() interface{} {
@@ -144,6 +173,26 @@ func (j *jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference) Inter
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference) Snowflake() CleanroomsConfiguredTableTableReferenceSnowflakeOutputReference {
+	var returns CleanroomsConfiguredTableTableReferenceSnowflakeOutputReference
+	_jsii_.Get(
+		j,
+		"snowflake",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference) SnowflakeInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"snowflakeInput",
 		&returns,
 	)
 	return returns
@@ -438,6 +487,17 @@ func (c *jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference) Inter
 	return returns
 }
 
+func (c *jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference) PutAthena(value *CleanroomsConfiguredTableTableReferenceAthena) {
+	if err := c.validatePutAthenaParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putAthena",
+		[]interface{}{value},
+	)
+}
+
 func (c *jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference) PutGlue(value *CleanroomsConfiguredTableTableReferenceGlue) {
 	if err := c.validatePutGlueParameters(value); err != nil {
 		panic(err)
@@ -446,6 +506,41 @@ func (c *jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference) PutGl
 		c,
 		"putGlue",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference) PutSnowflake(value *CleanroomsConfiguredTableTableReferenceSnowflake) {
+	if err := c.validatePutSnowflakeParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putSnowflake",
+		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference) ResetAthena() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAthena",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference) ResetGlue() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetGlue",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableTableReferenceOutputReference) ResetSnowflake() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetSnowflake",
+		nil, // no parameters
 	)
 }
 

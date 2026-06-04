@@ -1,0 +1,6 @@
+package workspacesinstancesworkspaceinstance
+
+
+type WorkspacesinstancesWorkspaceInstanceEc2ManagedInstance struct {
+}
+

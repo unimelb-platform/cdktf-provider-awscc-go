@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/cleanroomsanalysistemplate/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cleanrooms_analysis_template awscc_cleanrooms_analysis_template}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cleanrooms_analysis_template awscc_cleanrooms_analysis_template}.
 type CleanroomsAnalysisTemplate interface {
 	cdktf.TerraformResource
 	AnalysisParameters() CleanroomsAnalysisTemplateAnalysisParametersList
@@ -73,8 +73,11 @@ type CleanroomsAnalysisTemplate interface {
 	// Experimental.
 	RawOverrides() interface{}
 	Schema() CleanroomsAnalysisTemplateSchemaOutputReference
+	SchemaInput() interface{}
 	Source() CleanroomsAnalysisTemplateSourceOutputReference
 	SourceInput() interface{}
+	SourceMetadata() CleanroomsAnalysisTemplateSourceMetadataOutputReference
+	SourceMetadataInput() interface{}
 	Tags() CleanroomsAnalysisTemplateTagsList
 	TagsInput() interface{}
 	// Experimental.
@@ -107,25 +110,42 @@ type CleanroomsAnalysisTemplate interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutAnalysisParameters(value interface{})
+	PutSchema(value *CleanroomsAnalysisTemplateSchema)
 	PutSource(value *CleanroomsAnalysisTemplateSource)
+	PutSourceMetadata(value *CleanroomsAnalysisTemplateSourceMetadata)
 	PutTags(value interface{})
 	ResetAnalysisParameters()
 	ResetDescription()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetSchema()
+	ResetSourceMetadata()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -440,6 +460,16 @@ func (j *jsiiProxy_CleanroomsAnalysisTemplate) Schema() CleanroomsAnalysisTempla
 	return returns
 }
 
+func (j *jsiiProxy_CleanroomsAnalysisTemplate) SchemaInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"schemaInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_CleanroomsAnalysisTemplate) Source() CleanroomsAnalysisTemplateSourceOutputReference {
 	var returns CleanroomsAnalysisTemplateSourceOutputReference
 	_jsii_.Get(
@@ -455,6 +485,26 @@ func (j *jsiiProxy_CleanroomsAnalysisTemplate) SourceInput() interface{} {
 	_jsii_.Get(
 		j,
 		"sourceInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsAnalysisTemplate) SourceMetadata() CleanroomsAnalysisTemplateSourceMetadataOutputReference {
+	var returns CleanroomsAnalysisTemplateSourceMetadataOutputReference
+	_jsii_.Get(
+		j,
+		"sourceMetadata",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsAnalysisTemplate) SourceMetadataInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"sourceMetadataInput",
 		&returns,
 	)
 	return returns
@@ -511,7 +561,7 @@ func (j *jsiiProxy_CleanroomsAnalysisTemplate) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cleanrooms_analysis_template awscc_cleanrooms_analysis_template} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cleanrooms_analysis_template awscc_cleanrooms_analysis_template} Resource.
 func NewCleanroomsAnalysisTemplate(scope constructs.Construct, id *string, config *CleanroomsAnalysisTemplateConfig) CleanroomsAnalysisTemplate {
 	_init_.Initialize()
 
@@ -529,7 +579,7 @@ func NewCleanroomsAnalysisTemplate(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cleanrooms_analysis_template awscc_cleanrooms_analysis_template} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cleanrooms_analysis_template awscc_cleanrooms_analysis_template} Resource.
 func NewCleanroomsAnalysisTemplate_Override(c CleanroomsAnalysisTemplate, scope constructs.Construct, id *string, config *CleanroomsAnalysisTemplateConfig) {
 	_init_.Initialize()
 
@@ -921,6 +971,19 @@ func (c *jsiiProxy_CleanroomsAnalysisTemplate) GetStringMapAttribute(terraformAt
 	return returns
 }
 
+func (c *jsiiProxy_CleanroomsAnalysisTemplate) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_CleanroomsAnalysisTemplate) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -948,6 +1011,17 @@ func (c *jsiiProxy_CleanroomsAnalysisTemplate) InterpolationForAttribute(terrafo
 	return returns
 }
 
+func (c *jsiiProxy_CleanroomsAnalysisTemplate) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CleanroomsAnalysisTemplate) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -956,6 +1030,17 @@ func (c *jsiiProxy_CleanroomsAnalysisTemplate) MoveTo(moveTarget *string, index 
 		c,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (c *jsiiProxy_CleanroomsAnalysisTemplate) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -981,6 +1066,17 @@ func (c *jsiiProxy_CleanroomsAnalysisTemplate) PutAnalysisParameters(value inter
 	)
 }
 
+func (c *jsiiProxy_CleanroomsAnalysisTemplate) PutSchema(value *CleanroomsAnalysisTemplateSchema) {
+	if err := c.validatePutSchemaParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putSchema",
+		[]interface{}{value},
+	)
+}
+
 func (c *jsiiProxy_CleanroomsAnalysisTemplate) PutSource(value *CleanroomsAnalysisTemplateSource) {
 	if err := c.validatePutSourceParameters(value); err != nil {
 		panic(err)
@@ -988,6 +1084,17 @@ func (c *jsiiProxy_CleanroomsAnalysisTemplate) PutSource(value *CleanroomsAnalys
 	_jsii_.InvokeVoid(
 		c,
 		"putSource",
+		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CleanroomsAnalysisTemplate) PutSourceMetadata(value *CleanroomsAnalysisTemplateSourceMetadata) {
+	if err := c.validatePutSourceMetadataParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putSourceMetadata",
 		[]interface{}{value},
 	)
 }
@@ -1027,6 +1134,22 @@ func (c *jsiiProxy_CleanroomsAnalysisTemplate) ResetOverrideLogicalId() {
 	)
 }
 
+func (c *jsiiProxy_CleanroomsAnalysisTemplate) ResetSchema() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetSchema",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsAnalysisTemplate) ResetSourceMetadata() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetSourceMetadata",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CleanroomsAnalysisTemplate) ResetTags() {
 	_jsii_.InvokeVoid(
 		c,
@@ -1041,6 +1164,32 @@ func (c *jsiiProxy_CleanroomsAnalysisTemplate) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CleanroomsAnalysisTemplate) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CleanroomsAnalysisTemplate) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

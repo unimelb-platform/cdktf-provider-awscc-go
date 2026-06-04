@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciamrolepolicy/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iam_role_policy awscc_iam_role_policy}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iam_role_policy awscc_iam_role_policy}.
 type DataAwsccIamRolePolicy interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -85,6 +85,10 @@ type DataAwsccIamRolePolicy interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -290,7 +294,7 @@ func (j *jsiiProxy_DataAwsccIamRolePolicy) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iam_role_policy awscc_iam_role_policy} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iam_role_policy awscc_iam_role_policy} Data Source.
 func NewDataAwsccIamRolePolicy(scope constructs.Construct, id *string, config *DataAwsccIamRolePolicyConfig) DataAwsccIamRolePolicy {
 	_init_.Initialize()
 
@@ -308,7 +312,7 @@ func NewDataAwsccIamRolePolicy(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iam_role_policy awscc_iam_role_policy} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iam_role_policy awscc_iam_role_policy} Data Source.
 func NewDataAwsccIamRolePolicy_Override(d DataAwsccIamRolePolicy, scope constructs.Construct, id *string, config *DataAwsccIamRolePolicyConfig) {
 	_init_.Initialize()
 
@@ -675,6 +679,32 @@ func (d *jsiiProxy_DataAwsccIamRolePolicy) SynthesizeAttributes() *map[string]in
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIamRolePolicy) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIamRolePolicy) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

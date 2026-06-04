@@ -33,8 +33,8 @@ type PcaconnectoradTemplateDefinitionTemplateV2ExtensionsKeyUsageUsageFlagsOutpu
 	DigitalSignatureInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *PcaconnectoradTemplateDefinitionTemplateV2ExtensionsKeyUsageUsageFlags
-	SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV2ExtensionsKeyUsageUsageFlags)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	KeyAgreement() interface{}
 	SetKeyAgreement(val interface{})
 	KeyAgreementInput() interface{}
@@ -176,8 +176,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2ExtensionsKeyUsageU
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2ExtensionsKeyUsageUsageFlagsOutputReference) InternalValue() *PcaconnectoradTemplateDefinitionTemplateV2ExtensionsKeyUsageUsageFlags {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV2ExtensionsKeyUsageUsageFlags
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2ExtensionsKeyUsageUsageFlagsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -338,7 +338,7 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2ExtensionsKeyUsageU
 	)
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2ExtensionsKeyUsageUsageFlagsOutputReference)SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV2ExtensionsKeyUsageUsageFlags) {
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2ExtensionsKeyUsageUsageFlagsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

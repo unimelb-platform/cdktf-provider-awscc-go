@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccapigatewayv2route/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigatewayv2_route awscc_apigatewayv2_route}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigatewayv2_route awscc_apigatewayv2_route}.
 type DataAwsccApigatewayv2Route interface {
 	cdktf.TerraformDataSource
 	ApiId() *string
@@ -95,6 +95,10 @@ type DataAwsccApigatewayv2Route interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -400,7 +404,7 @@ func (j *jsiiProxy_DataAwsccApigatewayv2Route) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigatewayv2_route awscc_apigatewayv2_route} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigatewayv2_route awscc_apigatewayv2_route} Data Source.
 func NewDataAwsccApigatewayv2Route(scope constructs.Construct, id *string, config *DataAwsccApigatewayv2RouteConfig) DataAwsccApigatewayv2Route {
 	_init_.Initialize()
 
@@ -418,7 +422,7 @@ func NewDataAwsccApigatewayv2Route(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigatewayv2_route awscc_apigatewayv2_route} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigatewayv2_route awscc_apigatewayv2_route} Data Source.
 func NewDataAwsccApigatewayv2Route_Override(d DataAwsccApigatewayv2Route, scope constructs.Construct, id *string, config *DataAwsccApigatewayv2RouteConfig) {
 	_init_.Initialize()
 
@@ -785,6 +789,32 @@ func (d *jsiiProxy_DataAwsccApigatewayv2Route) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApigatewayv2Route) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApigatewayv2Route) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

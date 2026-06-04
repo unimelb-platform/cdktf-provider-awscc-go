@@ -33,6 +33,8 @@ type DatazoneDataSourceConfigurationOutputReference interface {
 	SetInternalValue(val interface{})
 	RedshiftRunConfiguration() DatazoneDataSourceConfigurationRedshiftRunConfigurationOutputReference
 	RedshiftRunConfigurationInput() interface{}
+	SageMakerRunConfiguration() DatazoneDataSourceConfigurationSageMakerRunConfigurationOutputReference
+	SageMakerRunConfigurationInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,8 +69,10 @@ type DatazoneDataSourceConfigurationOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutGlueRunConfiguration(value *DatazoneDataSourceConfigurationGlueRunConfiguration)
 	PutRedshiftRunConfiguration(value *DatazoneDataSourceConfigurationRedshiftRunConfiguration)
+	PutSageMakerRunConfiguration(value *DatazoneDataSourceConfigurationSageMakerRunConfiguration)
 	ResetGlueRunConfiguration()
 	ResetRedshiftRunConfiguration()
+	ResetSageMakerRunConfiguration()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -169,6 +173,26 @@ func (j *jsiiProxy_DatazoneDataSourceConfigurationOutputReference) RedshiftRunCo
 	_jsii_.Get(
 		j,
 		"redshiftRunConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneDataSourceConfigurationOutputReference) SageMakerRunConfiguration() DatazoneDataSourceConfigurationSageMakerRunConfigurationOutputReference {
+	var returns DatazoneDataSourceConfigurationSageMakerRunConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"sageMakerRunConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneDataSourceConfigurationOutputReference) SageMakerRunConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"sageMakerRunConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -485,6 +509,17 @@ func (d *jsiiProxy_DatazoneDataSourceConfigurationOutputReference) PutRedshiftRu
 	)
 }
 
+func (d *jsiiProxy_DatazoneDataSourceConfigurationOutputReference) PutSageMakerRunConfiguration(value *DatazoneDataSourceConfigurationSageMakerRunConfiguration) {
+	if err := d.validatePutSageMakerRunConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putSageMakerRunConfiguration",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DatazoneDataSourceConfigurationOutputReference) ResetGlueRunConfiguration() {
 	_jsii_.InvokeVoid(
 		d,
@@ -497,6 +532,14 @@ func (d *jsiiProxy_DatazoneDataSourceConfigurationOutputReference) ResetRedshift
 	_jsii_.InvokeVoid(
 		d,
 		"resetRedshiftRunConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatazoneDataSourceConfigurationOutputReference) ResetSageMakerRunConfiguration() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetSageMakerRunConfiguration",
 		nil, // no parameters
 	)
 }

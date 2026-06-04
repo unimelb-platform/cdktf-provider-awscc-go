@@ -64,6 +64,7 @@ type Ec2InstanceElasticGpuSpecificationsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (e *jsiiProxy_Ec2InstanceElasticGpuSpecificationsOutputReference) Interpola
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_Ec2InstanceElasticGpuSpecificationsOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetType",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_Ec2InstanceElasticGpuSpecificationsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

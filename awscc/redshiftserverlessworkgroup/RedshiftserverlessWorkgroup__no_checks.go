@@ -56,7 +56,15 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroup) validateInterpolationForAttribut
 	return nil
 }
 
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RedshiftserverlessWorkgroup) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -68,7 +76,15 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroup) validatePutConfigParametersParam
 	return nil
 }
 
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) validatePutPricePerformanceTargetParameters(value *RedshiftserverlessWorkgroupPricePerformanceTarget) error {
+	return nil
+}
+
 func (r *jsiiProxy_RedshiftserverlessWorkgroup) validatePutTagsParameters(value interface{}) error {
+	return nil
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) validatePutWorkgroupParameters(value *RedshiftserverlessWorkgroupWorkgroup) error {
 	return nil
 }
 
@@ -108,6 +124,10 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetLifecycleParameters(v
 	return nil
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetMaxCapacityParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetNamespaceNameParameters(val *string) error {
 	return nil
 }
@@ -124,11 +144,31 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetPubliclyAccessiblePar
 	return nil
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetRecoveryPointIdParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetSecurityGroupIdsParameters(val *[]*string) error {
 	return nil
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetSnapshotArnParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetSnapshotNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetSnapshotOwnerAccountParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetSubnetIdsParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetTrackNameParameters(val *string) error {
 	return nil
 }
 

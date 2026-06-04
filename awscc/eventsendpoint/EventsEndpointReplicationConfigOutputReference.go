@@ -64,6 +64,7 @@ type EventsEndpointReplicationConfigOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetState()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (e *jsiiProxy_EventsEndpointReplicationConfigOutputReference) Interpolation
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EventsEndpointReplicationConfigOutputReference) ResetState() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetState",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EventsEndpointReplicationConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

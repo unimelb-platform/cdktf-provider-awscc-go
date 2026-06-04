@@ -79,7 +79,12 @@ type IotTopicRuleTopicRulePayloadErrorActionLocationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutTimestamp(value *IotTopicRuleTopicRulePayloadErrorActionLocationTimestamp)
+	ResetDeviceId()
+	ResetLatitude()
+	ResetLongitude()
+	ResetRoleArn()
 	ResetTimestamp()
+	ResetTrackerName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -620,10 +625,50 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionLocationOutputReferenc
 	)
 }
 
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionLocationOutputReference) ResetDeviceId() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetDeviceId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionLocationOutputReference) ResetLatitude() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetLatitude",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionLocationOutputReference) ResetLongitude() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetLongitude",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionLocationOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionLocationOutputReference) ResetTimestamp() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetTimestamp",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionLocationOutputReference) ResetTrackerName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTrackerName",
 		nil, // no parameters
 	)
 }

@@ -33,6 +33,9 @@ type DataAwsccEfsFileSystemReplicationConfigurationDestinationsOutputReference i
 	SetInternalValue(val *DataAwsccEfsFileSystemReplicationConfigurationDestinations)
 	KmsKeyId() *string
 	Region() *string
+	RoleArn() *string
+	Status() *string
+	StatusMessage() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -165,6 +168,36 @@ func (j *jsiiProxy_DataAwsccEfsFileSystemReplicationConfigurationDestinationsOut
 	_jsii_.Get(
 		j,
 		"region",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEfsFileSystemReplicationConfigurationDestinationsOutputReference) RoleArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"roleArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEfsFileSystemReplicationConfigurationDestinationsOutputReference) Status() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"status",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEfsFileSystemReplicationConfigurationDestinationsOutputReference) StatusMessage() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"statusMessage",
 		&returns,
 	)
 	return returns

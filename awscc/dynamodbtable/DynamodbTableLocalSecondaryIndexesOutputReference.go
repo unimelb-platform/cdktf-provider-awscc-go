@@ -35,7 +35,7 @@ type DynamodbTableLocalSecondaryIndexesOutputReference interface {
 	KeySchema() DynamodbTableLocalSecondaryIndexesKeySchemaList
 	KeySchemaInput() interface{}
 	Projection() DynamodbTableLocalSecondaryIndexesProjectionOutputReference
-	ProjectionInput() *DynamodbTableLocalSecondaryIndexesProjection
+	ProjectionInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -70,6 +70,9 @@ type DynamodbTableLocalSecondaryIndexesOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutKeySchema(value interface{})
 	PutProjection(value *DynamodbTableLocalSecondaryIndexesProjection)
+	ResetIndexName()
+	ResetKeySchema()
+	ResetProjection()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -185,8 +188,8 @@ func (j *jsiiProxy_DynamodbTableLocalSecondaryIndexesOutputReference) Projection
 	return returns
 }
 
-func (j *jsiiProxy_DynamodbTableLocalSecondaryIndexesOutputReference) ProjectionInput() *DynamodbTableLocalSecondaryIndexesProjection {
-	var returns *DynamodbTableLocalSecondaryIndexesProjection
+func (j *jsiiProxy_DynamodbTableLocalSecondaryIndexesOutputReference) ProjectionInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"projectionInput",
@@ -514,6 +517,30 @@ func (d *jsiiProxy_DynamodbTableLocalSecondaryIndexesOutputReference) PutProject
 		d,
 		"putProjection",
 		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DynamodbTableLocalSecondaryIndexesOutputReference) ResetIndexName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetIndexName",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbTableLocalSecondaryIndexesOutputReference) ResetKeySchema() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetKeySchema",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbTableLocalSecondaryIndexesOutputReference) ResetProjection() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetProjection",
+		nil, // no parameters
 	)
 }
 

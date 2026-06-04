@@ -10,6 +10,8 @@ import (
 
 type DataAwsccSagemakerUserProfileUserSettingsCodeEditorAppSettingsOutputReference interface {
 	cdktf.ComplexObject
+	AppLifecycleManagement() DataAwsccSagemakerUserProfileUserSettingsCodeEditorAppSettingsAppLifecycleManagementOutputReference
+	BuiltInLifecycleConfigArn() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -25,6 +27,7 @@ type DataAwsccSagemakerUserProfileUserSettingsCodeEditorAppSettingsOutputReferen
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	CustomImages() DataAwsccSagemakerUserProfileUserSettingsCodeEditorAppSettingsCustomImagesList
 	DefaultResourceSpec() DataAwsccSagemakerUserProfileUserSettingsCodeEditorAppSettingsDefaultResourceSpecOutputReference
 	// Experimental.
 	Fqn() *string
@@ -78,6 +81,26 @@ type jsiiProxy_DataAwsccSagemakerUserProfileUserSettingsCodeEditorAppSettingsOut
 	internal.Type__cdktfComplexObject
 }
 
+func (j *jsiiProxy_DataAwsccSagemakerUserProfileUserSettingsCodeEditorAppSettingsOutputReference) AppLifecycleManagement() DataAwsccSagemakerUserProfileUserSettingsCodeEditorAppSettingsAppLifecycleManagementOutputReference {
+	var returns DataAwsccSagemakerUserProfileUserSettingsCodeEditorAppSettingsAppLifecycleManagementOutputReference
+	_jsii_.Get(
+		j,
+		"appLifecycleManagement",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerUserProfileUserSettingsCodeEditorAppSettingsOutputReference) BuiltInLifecycleConfigArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"builtInLifecycleConfigArn",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccSagemakerUserProfileUserSettingsCodeEditorAppSettingsOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -103,6 +126,16 @@ func (j *jsiiProxy_DataAwsccSagemakerUserProfileUserSettingsCodeEditorAppSetting
 	_jsii_.Get(
 		j,
 		"creationStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerUserProfileUserSettingsCodeEditorAppSettingsOutputReference) CustomImages() DataAwsccSagemakerUserProfileUserSettingsCodeEditorAppSettingsCustomImagesList {
+	var returns DataAwsccSagemakerUserProfileUserSettingsCodeEditorAppSettingsCustomImagesList
+	_jsii_.Get(
+		j,
+		"customImages",
 		&returns,
 	)
 	return returns

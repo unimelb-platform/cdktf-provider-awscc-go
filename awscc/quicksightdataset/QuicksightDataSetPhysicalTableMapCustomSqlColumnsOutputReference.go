@@ -27,8 +27,8 @@ type QuicksightDataSetPhysicalTableMapCustomSqlColumnsOutputReference interface 
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *QuicksightDataSetPhysicalTableMapCustomSqlColumns
-	SetInternalValue(val *QuicksightDataSetPhysicalTableMapCustomSqlColumns)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -67,6 +67,8 @@ type QuicksightDataSetPhysicalTableMapCustomSqlColumnsOutputReference interface 
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_QuicksightDataSetPhysicalTableMapCustomSqlColumnsOutputRefere
 	return returns
 }
 
-func (j *jsiiProxy_QuicksightDataSetPhysicalTableMapCustomSqlColumnsOutputReference) InternalValue() *QuicksightDataSetPhysicalTableMapCustomSqlColumns {
-	var returns *QuicksightDataSetPhysicalTableMapCustomSqlColumns
+func (j *jsiiProxy_QuicksightDataSetPhysicalTableMapCustomSqlColumnsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -242,7 +244,7 @@ func (j *jsiiProxy_QuicksightDataSetPhysicalTableMapCustomSqlColumnsOutputRefere
 	)
 }
 
-func (j *jsiiProxy_QuicksightDataSetPhysicalTableMapCustomSqlColumnsOutputReference)SetInternalValue(val *QuicksightDataSetPhysicalTableMapCustomSqlColumns) {
+func (j *jsiiProxy_QuicksightDataSetPhysicalTableMapCustomSqlColumnsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapCustomSqlColumnsOutputRefere
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapCustomSqlColumnsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapCustomSqlColumnsOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetType",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapCustomSqlColumnsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

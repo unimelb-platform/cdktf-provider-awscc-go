@@ -48,6 +48,10 @@ func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputRef
 	return nil
 }
 
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) validateSetAnnotationsParameters(val *map[string]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	return nil
 }
@@ -60,7 +64,11 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputRef
 	return nil
 }
 
-func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) validateSetLabelsParameters(val *string) error {
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) validateSetLabelsParameters(val *map[string]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) validateSetNamespaceParameters(val *string) error {
 	return nil
 }
 

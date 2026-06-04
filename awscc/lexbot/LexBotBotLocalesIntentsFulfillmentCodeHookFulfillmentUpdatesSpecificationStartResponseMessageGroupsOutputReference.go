@@ -27,10 +27,10 @@ type LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationSt
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroups
-	SetInternalValue(val *LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroups)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Message() LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupsMessageOutputReference
-	MessageInput() *LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupsMessage
+	MessageInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,6 +67,7 @@ type LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationSt
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMessage(value *LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupsMessage)
 	PutVariations(value interface{})
+	ResetMessage()
 	ResetVariations()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -123,8 +124,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesS
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupsOutputReference) InternalValue() *LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroups {
-	var returns *LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroups
+func (j *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -143,8 +144,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesS
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupsOutputReference) MessageInput() *LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupsMessage {
-	var returns *LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupsMessage
+func (j *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupsOutputReference) MessageInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"messageInput",
@@ -243,7 +244,7 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesS
 	)
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupsOutputReference)SetInternalValue(val *LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroups) {
+func (j *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +482,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesS
 		l,
 		"putVariations",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupsOutputReference) ResetMessage() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMessage",
+		nil, // no parameters
 	)
 }
 

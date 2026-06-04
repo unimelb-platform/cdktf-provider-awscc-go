@@ -92,6 +92,7 @@ type PipesPipeSourceParametersDynamoDbStreamParametersOutputReference interface 
 	ResetMaximumRetryAttempts()
 	ResetOnPartialBatchItemFailure()
 	ResetParallelizationFactor()
+	ResetStartingPosition()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -746,6 +747,14 @@ func (p *jsiiProxy_PipesPipeSourceParametersDynamoDbStreamParametersOutputRefere
 	_jsii_.InvokeVoid(
 		p,
 		"resetParallelizationFactor",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PipesPipeSourceParametersDynamoDbStreamParametersOutputReference) ResetStartingPosition() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetStartingPosition",
 		nil, // no parameters
 	)
 }

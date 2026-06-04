@@ -76,8 +76,11 @@ type LakeformationPrincipalPermissionsResourceTableWithColumnsOutputReference in
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutColumnWildcard(value *LakeformationPrincipalPermissionsResourceTableWithColumnsColumnWildcard)
+	ResetCatalogId()
 	ResetColumnNames()
 	ResetColumnWildcard()
+	ResetDatabaseName()
+	ResetName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -587,6 +590,14 @@ func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceTableWithColumnsOutp
 	)
 }
 
+func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceTableWithColumnsOutputReference) ResetCatalogId() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetCatalogId",
+		nil, // no parameters
+	)
+}
+
 func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceTableWithColumnsOutputReference) ResetColumnNames() {
 	_jsii_.InvokeVoid(
 		l,
@@ -599,6 +610,22 @@ func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceTableWithColumnsOutp
 	_jsii_.InvokeVoid(
 		l,
 		"resetColumnWildcard",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceTableWithColumnsOutputReference) ResetDatabaseName() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetDatabaseName",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceTableWithColumnsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetName",
 		nil, // no parameters
 	)
 }

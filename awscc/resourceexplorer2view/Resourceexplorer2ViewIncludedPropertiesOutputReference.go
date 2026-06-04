@@ -64,6 +64,7 @@ type Resourceexplorer2ViewIncludedPropertiesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (r *jsiiProxy_Resourceexplorer2ViewIncludedPropertiesOutputReference) Inter
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_Resourceexplorer2ViewIncludedPropertiesOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetName",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_Resourceexplorer2ViewIncludedPropertiesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

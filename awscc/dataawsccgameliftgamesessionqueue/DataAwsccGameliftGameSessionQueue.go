@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccgameliftgamesessionqueue/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/gamelift_game_session_queue awscc_gamelift_game_session_queue}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/gamelift_game_session_queue awscc_gamelift_game_session_queue}.
 type DataAwsccGameliftGameSessionQueue interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -92,6 +92,10 @@ type DataAwsccGameliftGameSessionQueue interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -367,7 +371,7 @@ func (j *jsiiProxy_DataAwsccGameliftGameSessionQueue) TimeoutInSeconds() *float6
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/gamelift_game_session_queue awscc_gamelift_game_session_queue} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/gamelift_game_session_queue awscc_gamelift_game_session_queue} Data Source.
 func NewDataAwsccGameliftGameSessionQueue(scope constructs.Construct, id *string, config *DataAwsccGameliftGameSessionQueueConfig) DataAwsccGameliftGameSessionQueue {
 	_init_.Initialize()
 
@@ -385,7 +389,7 @@ func NewDataAwsccGameliftGameSessionQueue(scope constructs.Construct, id *string
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/gamelift_game_session_queue awscc_gamelift_game_session_queue} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/gamelift_game_session_queue awscc_gamelift_game_session_queue} Data Source.
 func NewDataAwsccGameliftGameSessionQueue_Override(d DataAwsccGameliftGameSessionQueue, scope constructs.Construct, id *string, config *DataAwsccGameliftGameSessionQueueConfig) {
 	_init_.Initialize()
 
@@ -752,6 +756,32 @@ func (d *jsiiProxy_DataAwsccGameliftGameSessionQueue) SynthesizeAttributes() *ma
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGameliftGameSessionQueue) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGameliftGameSessionQueue) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

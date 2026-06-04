@@ -68,6 +68,7 @@ type KafkaconnectConnectorLogDeliveryWorkerLogDeliveryFirehoseOutputReference in
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetDeliveryStream()
+	ResetEnabled()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (k *jsiiProxy_KafkaconnectConnectorLogDeliveryWorkerLogDeliveryFirehoseOutp
 	_jsii_.InvokeVoid(
 		k,
 		"resetDeliveryStream",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KafkaconnectConnectorLogDeliveryWorkerLogDeliveryFirehoseOutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetEnabled",
 		nil, // no parameters
 	)
 }

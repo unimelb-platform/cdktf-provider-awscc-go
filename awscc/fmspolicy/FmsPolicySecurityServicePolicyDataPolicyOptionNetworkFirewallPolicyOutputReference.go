@@ -64,6 +64,7 @@ type FmsPolicySecurityServicePolicyDataPolicyOptionNetworkFirewallPolicyOutputRe
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetFirewallDeploymentModel()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (f *jsiiProxy_FmsPolicySecurityServicePolicyDataPolicyOptionNetworkFirewall
 	)
 
 	return returns
+}
+
+func (f *jsiiProxy_FmsPolicySecurityServicePolicyDataPolicyOptionNetworkFirewallPolicyOutputReference) ResetFirewallDeploymentModel() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetFirewallDeploymentModel",
+		nil, // no parameters
+	)
 }
 
 func (f *jsiiProxy_FmsPolicySecurityServicePolicyDataPolicyOptionNetworkFirewallPolicyOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

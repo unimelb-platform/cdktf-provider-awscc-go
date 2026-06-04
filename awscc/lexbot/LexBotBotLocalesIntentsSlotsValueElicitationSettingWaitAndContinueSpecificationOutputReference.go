@@ -21,7 +21,7 @@ type LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecifica
 	// Experimental.
 	SetComplexObjectIsFromSet(val *bool)
 	ContinueResponse() LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationContinueResponseOutputReference
-	ContinueResponseInput() *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationContinueResponse
+	ContinueResponseInput() interface{}
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
 	//
 	// If this returns an empty array the stack will not be attached.
@@ -45,7 +45,7 @@ type LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecifica
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	WaitingResponse() LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationWaitingResponseOutputReference
-	WaitingResponseInput() *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationWaitingResponse
+	WaitingResponseInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -73,8 +73,10 @@ type LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecifica
 	PutContinueResponse(value *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationContinueResponse)
 	PutStillWaitingResponse(value *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponse)
 	PutWaitingResponse(value *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationWaitingResponse)
+	ResetContinueResponse()
 	ResetIsActive()
 	ResetStillWaitingResponse()
+	ResetWaitingResponse()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -120,8 +122,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndCon
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationOutputReference) ContinueResponseInput() *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationContinueResponse {
-	var returns *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationContinueResponse
+func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationOutputReference) ContinueResponseInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"continueResponseInput",
@@ -230,8 +232,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndCon
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationOutputReference) WaitingResponseInput() *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationWaitingResponse {
-	var returns *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationWaitingResponse
+func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationOutputReference) WaitingResponseInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"waitingResponseInput",
@@ -553,6 +555,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndCon
 	)
 }
 
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationOutputReference) ResetContinueResponse() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetContinueResponse",
+		nil, // no parameters
+	)
+}
+
 func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationOutputReference) ResetIsActive() {
 	_jsii_.InvokeVoid(
 		l,
@@ -565,6 +575,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndCon
 	_jsii_.InvokeVoid(
 		l,
 		"resetStillWaitingResponse",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationOutputReference) ResetWaitingResponse() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetWaitingResponse",
 		nil, // no parameters
 	)
 }

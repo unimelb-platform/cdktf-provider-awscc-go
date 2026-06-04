@@ -77,6 +77,7 @@ type AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCus
 	PutCustom(value *AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorCustom)
 	PutOauth2(value *AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2)
 	ResetApiKey()
+	ResetAuthenticationType()
 	ResetBasic()
 	ResetCustom()
 	ResetOauth2()
@@ -593,6 +594,14 @@ func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfile
 	_jsii_.InvokeVoid(
 		a,
 		"resetApiKey",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOutputReference) ResetAuthenticationType() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetAuthenticationType",
 		nil, // no parameters
 	)
 }

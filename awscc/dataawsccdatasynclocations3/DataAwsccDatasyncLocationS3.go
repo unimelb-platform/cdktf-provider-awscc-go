@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdatasynclocations3/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_s3 awscc_datasync_location_s3}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_s3 awscc_datasync_location_s3}.
 type DataAwsccDatasyncLocationS3 interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -89,6 +89,10 @@ type DataAwsccDatasyncLocationS3 interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -334,7 +338,7 @@ func (j *jsiiProxy_DataAwsccDatasyncLocationS3) TerraformResourceType() *string 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_s3 awscc_datasync_location_s3} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_s3 awscc_datasync_location_s3} Data Source.
 func NewDataAwsccDatasyncLocationS3(scope constructs.Construct, id *string, config *DataAwsccDatasyncLocationS3Config) DataAwsccDatasyncLocationS3 {
 	_init_.Initialize()
 
@@ -352,7 +356,7 @@ func NewDataAwsccDatasyncLocationS3(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_s3 awscc_datasync_location_s3} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_s3 awscc_datasync_location_s3} Data Source.
 func NewDataAwsccDatasyncLocationS3_Override(d DataAwsccDatasyncLocationS3, scope constructs.Construct, id *string, config *DataAwsccDatasyncLocationS3Config) {
 	_init_.Initialize()
 
@@ -719,6 +723,32 @@ func (d *jsiiProxy_DataAwsccDatasyncLocationS3) SynthesizeAttributes() *map[stri
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatasyncLocationS3) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatasyncLocationS3) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -29,7 +29,7 @@ type PipesPipeSourceParametersActiveMqBrokerParametersOutputReference interface 
 	// Experimental.
 	CreationStack() *[]*string
 	Credentials() PipesPipeSourceParametersActiveMqBrokerParametersCredentialsOutputReference
-	CredentialsInput() *PipesPipeSourceParametersActiveMqBrokerParametersCredentials
+	CredentialsInput() interface{}
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -74,7 +74,9 @@ type PipesPipeSourceParametersActiveMqBrokerParametersOutputReference interface 
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutCredentials(value *PipesPipeSourceParametersActiveMqBrokerParametersCredentials)
 	ResetBatchSize()
+	ResetCredentials()
 	ResetMaximumBatchingWindowInSeconds()
+	ResetQueueName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -150,8 +152,8 @@ func (j *jsiiProxy_PipesPipeSourceParametersActiveMqBrokerParametersOutputRefere
 	return returns
 }
 
-func (j *jsiiProxy_PipesPipeSourceParametersActiveMqBrokerParametersOutputReference) CredentialsInput() *PipesPipeSourceParametersActiveMqBrokerParametersCredentials {
-	var returns *PipesPipeSourceParametersActiveMqBrokerParametersCredentials
+func (j *jsiiProxy_PipesPipeSourceParametersActiveMqBrokerParametersOutputReference) CredentialsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"credentialsInput",
@@ -561,10 +563,26 @@ func (p *jsiiProxy_PipesPipeSourceParametersActiveMqBrokerParametersOutputRefere
 	)
 }
 
+func (p *jsiiProxy_PipesPipeSourceParametersActiveMqBrokerParametersOutputReference) ResetCredentials() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetCredentials",
+		nil, // no parameters
+	)
+}
+
 func (p *jsiiProxy_PipesPipeSourceParametersActiveMqBrokerParametersOutputReference) ResetMaximumBatchingWindowInSeconds() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetMaximumBatchingWindowInSeconds",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PipesPipeSourceParametersActiveMqBrokerParametersOutputReference) ResetQueueName() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetQueueName",
 		nil, // no parameters
 	)
 }

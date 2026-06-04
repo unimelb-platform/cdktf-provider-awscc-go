@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/redshiftserverlessworkgroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/redshiftserverless_workgroup awscc_redshiftserverless_workgroup}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/redshiftserverless_workgroup awscc_redshiftserverless_workgroup}.
 type RedshiftserverlessWorkgroup interface {
 	cdktf.TerraformResource
 	BaseCapacity() *float64
@@ -49,6 +49,9 @@ type RedshiftserverlessWorkgroup interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	MaxCapacity() *float64
+	SetMaxCapacity(val *float64)
+	MaxCapacityInput() *float64
 	NamespaceName() *string
 	SetNamespaceName(val *string)
 	NamespaceNameInput() *string
@@ -57,6 +60,8 @@ type RedshiftserverlessWorkgroup interface {
 	Port() *float64
 	SetPort(val *float64)
 	PortInput() *float64
+	PricePerformanceTarget() RedshiftserverlessWorkgroupPricePerformanceTargetOutputReference
+	PricePerformanceTargetInput() interface{}
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -70,9 +75,21 @@ type RedshiftserverlessWorkgroup interface {
 	PubliclyAccessibleInput() interface{}
 	// Experimental.
 	RawOverrides() interface{}
+	RecoveryPointId() *string
+	SetRecoveryPointId(val *string)
+	RecoveryPointIdInput() *string
 	SecurityGroupIds() *[]*string
 	SetSecurityGroupIds(val *[]*string)
 	SecurityGroupIdsInput() *[]*string
+	SnapshotArn() *string
+	SetSnapshotArn(val *string)
+	SnapshotArnInput() *string
+	SnapshotName() *string
+	SetSnapshotName(val *string)
+	SnapshotNameInput() *string
+	SnapshotOwnerAccount() *string
+	SetSnapshotOwnerAccount(val *string)
+	SnapshotOwnerAccountInput() *string
 	SubnetIds() *[]*string
 	SetSubnetIds(val *[]*string)
 	SubnetIdsInput() *[]*string
@@ -84,7 +101,11 @@ type RedshiftserverlessWorkgroup interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	TrackName() *string
+	SetTrackName(val *string)
+	TrackNameInput() *string
 	Workgroup() RedshiftserverlessWorkgroupWorkgroupOutputReference
+	WorkgroupInput() interface{}
 	WorkgroupName() *string
 	SetWorkgroupName(val *string)
 	WorkgroupNameInput() *string
@@ -112,30 +133,53 @@ type RedshiftserverlessWorkgroup interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutConfigParameters(value interface{})
+	PutPricePerformanceTarget(value *RedshiftserverlessWorkgroupPricePerformanceTarget)
 	PutTags(value interface{})
+	PutWorkgroup(value *RedshiftserverlessWorkgroupWorkgroup)
 	ResetBaseCapacity()
 	ResetConfigParameters()
 	ResetEnhancedVpcRouting()
+	ResetMaxCapacity()
 	ResetNamespaceName()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPort()
+	ResetPricePerformanceTarget()
 	ResetPubliclyAccessible()
+	ResetRecoveryPointId()
 	ResetSecurityGroupIds()
+	ResetSnapshotArn()
+	ResetSnapshotName()
+	ResetSnapshotOwnerAccount()
 	ResetSubnetIds()
 	ResetTags()
+	ResetTrackName()
+	ResetWorkgroup()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -310,6 +354,26 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroup) Lifecycle() *cdktf.TerraformReso
 	return returns
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) MaxCapacity() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxCapacity",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) MaxCapacityInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxCapacityInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroup) NamespaceName() *string {
 	var returns *string
 	_jsii_.Get(
@@ -355,6 +419,26 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroup) PortInput() *float64 {
 	_jsii_.Get(
 		j,
 		"portInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) PricePerformanceTarget() RedshiftserverlessWorkgroupPricePerformanceTargetOutputReference {
+	var returns RedshiftserverlessWorkgroupPricePerformanceTargetOutputReference
+	_jsii_.Get(
+		j,
+		"pricePerformanceTarget",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) PricePerformanceTargetInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"pricePerformanceTargetInput",
 		&returns,
 	)
 	return returns
@@ -410,6 +494,26 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroup) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) RecoveryPointId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"recoveryPointId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) RecoveryPointIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"recoveryPointIdInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroup) SecurityGroupIds() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -425,6 +529,66 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroup) SecurityGroupIdsInput() *[]*stri
 	_jsii_.Get(
 		j,
 		"securityGroupIdsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) SnapshotArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"snapshotArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) SnapshotArnInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"snapshotArnInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) SnapshotName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"snapshotName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) SnapshotNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"snapshotNameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) SnapshotOwnerAccount() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"snapshotOwnerAccount",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) SnapshotOwnerAccountInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"snapshotOwnerAccountInput",
 		&returns,
 	)
 	return returns
@@ -500,11 +664,41 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroup) TerraformResourceType() *string 
 	return returns
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) TrackName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"trackName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) TrackNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"trackNameInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroup) Workgroup() RedshiftserverlessWorkgroupWorkgroupOutputReference {
 	var returns RedshiftserverlessWorkgroupWorkgroupOutputReference
 	_jsii_.Get(
 		j,
 		"workgroup",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) WorkgroupInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"workgroupInput",
 		&returns,
 	)
 	return returns
@@ -531,7 +725,7 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroup) WorkgroupNameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/redshiftserverless_workgroup awscc_redshiftserverless_workgroup} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/redshiftserverless_workgroup awscc_redshiftserverless_workgroup} Resource.
 func NewRedshiftserverlessWorkgroup(scope constructs.Construct, id *string, config *RedshiftserverlessWorkgroupConfig) RedshiftserverlessWorkgroup {
 	_init_.Initialize()
 
@@ -549,7 +743,7 @@ func NewRedshiftserverlessWorkgroup(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/redshiftserverless_workgroup awscc_redshiftserverless_workgroup} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/redshiftserverless_workgroup awscc_redshiftserverless_workgroup} Resource.
 func NewRedshiftserverlessWorkgroup_Override(r RedshiftserverlessWorkgroup, scope constructs.Construct, id *string, config *RedshiftserverlessWorkgroupConfig) {
 	_init_.Initialize()
 
@@ -631,6 +825,17 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroup)SetLifecycle(val *cdktf.Terraform
 	)
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroup)SetMaxCapacity(val *float64) {
+	if err := j.validateSetMaxCapacityParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"maxCapacity",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroup)SetNamespaceName(val *string) {
 	if err := j.validateSetNamespaceNameParameters(val); err != nil {
 		panic(err)
@@ -683,6 +888,17 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroup)SetPubliclyAccessible(val interfa
 	)
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroup)SetRecoveryPointId(val *string) {
+	if err := j.validateSetRecoveryPointIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"recoveryPointId",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroup)SetSecurityGroupIds(val *[]*string) {
 	if err := j.validateSetSecurityGroupIdsParameters(val); err != nil {
 		panic(err)
@@ -694,6 +910,39 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroup)SetSecurityGroupIds(val *[]*strin
 	)
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroup)SetSnapshotArn(val *string) {
+	if err := j.validateSetSnapshotArnParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"snapshotArn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup)SetSnapshotName(val *string) {
+	if err := j.validateSetSnapshotNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"snapshotName",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup)SetSnapshotOwnerAccount(val *string) {
+	if err := j.validateSetSnapshotOwnerAccountParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"snapshotOwnerAccount",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroup)SetSubnetIds(val *[]*string) {
 	if err := j.validateSetSubnetIdsParameters(val); err != nil {
 		panic(err)
@@ -701,6 +950,17 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroup)SetSubnetIds(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"subnetIds",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup)SetTrackName(val *string) {
+	if err := j.validateSetTrackNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"trackName",
 		val,
 	)
 }
@@ -985,6 +1245,19 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroup) GetStringMapAttribute(terraformA
 	return returns
 }
 
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (r *jsiiProxy_RedshiftserverlessWorkgroup) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1012,6 +1285,17 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroup) InterpolationForAttribute(terraf
 	return returns
 }
 
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) MoveFromId(id *string) {
+	if err := r.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_RedshiftserverlessWorkgroup) MoveTo(moveTarget *string, index interface{}) {
 	if err := r.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1020,6 +1304,17 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroup) MoveTo(moveTarget *string, index
 		r,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) MoveToId(id *string) {
+	if err := r.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1045,6 +1340,17 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroup) PutConfigParameters(value interf
 	)
 }
 
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) PutPricePerformanceTarget(value *RedshiftserverlessWorkgroupPricePerformanceTarget) {
+	if err := r.validatePutPricePerformanceTargetParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putPricePerformanceTarget",
+		[]interface{}{value},
+	)
+}
+
 func (r *jsiiProxy_RedshiftserverlessWorkgroup) PutTags(value interface{}) {
 	if err := r.validatePutTagsParameters(value); err != nil {
 		panic(err)
@@ -1052,6 +1358,17 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroup) PutTags(value interface{}) {
 	_jsii_.InvokeVoid(
 		r,
 		"putTags",
+		[]interface{}{value},
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) PutWorkgroup(value *RedshiftserverlessWorkgroupWorkgroup) {
+	if err := r.validatePutWorkgroupParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putWorkgroup",
 		[]interface{}{value},
 	)
 }
@@ -1080,6 +1397,14 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroup) ResetEnhancedVpcRouting() {
 	)
 }
 
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) ResetMaxCapacity() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetMaxCapacity",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_RedshiftserverlessWorkgroup) ResetNamespaceName() {
 	_jsii_.InvokeVoid(
 		r,
@@ -1104,6 +1429,14 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroup) ResetPort() {
 	)
 }
 
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) ResetPricePerformanceTarget() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetPricePerformanceTarget",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_RedshiftserverlessWorkgroup) ResetPubliclyAccessible() {
 	_jsii_.InvokeVoid(
 		r,
@@ -1112,10 +1445,42 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroup) ResetPubliclyAccessible() {
 	)
 }
 
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) ResetRecoveryPointId() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetRecoveryPointId",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_RedshiftserverlessWorkgroup) ResetSecurityGroupIds() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetSecurityGroupIds",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) ResetSnapshotArn() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetSnapshotArn",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) ResetSnapshotName() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetSnapshotName",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) ResetSnapshotOwnerAccount() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetSnapshotOwnerAccount",
 		nil, // no parameters
 	)
 }
@@ -1136,12 +1501,54 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroup) ResetTags() {
 	)
 }
 
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) ResetTrackName() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetTrackName",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) ResetWorkgroup() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetWorkgroup",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_RedshiftserverlessWorkgroup) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		r,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		r,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

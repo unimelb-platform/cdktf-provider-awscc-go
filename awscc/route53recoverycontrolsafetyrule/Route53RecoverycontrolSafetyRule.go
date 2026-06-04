@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/route53recoverycontrolsafetyrule/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/route53recoverycontrol_safety_rule awscc_route53recoverycontrol_safety_rule}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/route53recoverycontrol_safety_rule awscc_route53recoverycontrol_safety_rule}.
 type Route53RecoverycontrolSafetyRule interface {
 	cdktf.TerraformResource
 	AssertionRule() Route53RecoverycontrolSafetyRuleAssertionRuleOutputReference
@@ -99,12 +99,22 @@ type Route53RecoverycontrolSafetyRule interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -122,6 +132,9 @@ type Route53RecoverycontrolSafetyRule interface {
 	ResetRuleConfig()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -447,7 +460,7 @@ func (j *jsiiProxy_Route53RecoverycontrolSafetyRule) TerraformResourceType() *st
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/route53recoverycontrol_safety_rule awscc_route53recoverycontrol_safety_rule} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/route53recoverycontrol_safety_rule awscc_route53recoverycontrol_safety_rule} Resource.
 func NewRoute53RecoverycontrolSafetyRule(scope constructs.Construct, id *string, config *Route53RecoverycontrolSafetyRuleConfig) Route53RecoverycontrolSafetyRule {
 	_init_.Initialize()
 
@@ -465,7 +478,7 @@ func NewRoute53RecoverycontrolSafetyRule(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/route53recoverycontrol_safety_rule awscc_route53recoverycontrol_safety_rule} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/route53recoverycontrol_safety_rule awscc_route53recoverycontrol_safety_rule} Resource.
 func NewRoute53RecoverycontrolSafetyRule_Override(r Route53RecoverycontrolSafetyRule, scope constructs.Construct, id *string, config *Route53RecoverycontrolSafetyRuleConfig) {
 	_init_.Initialize()
 
@@ -835,6 +848,19 @@ func (r *jsiiProxy_Route53RecoverycontrolSafetyRule) GetStringMapAttribute(terra
 	return returns
 }
 
+func (r *jsiiProxy_Route53RecoverycontrolSafetyRule) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (r *jsiiProxy_Route53RecoverycontrolSafetyRule) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -862,6 +888,17 @@ func (r *jsiiProxy_Route53RecoverycontrolSafetyRule) InterpolationForAttribute(t
 	return returns
 }
 
+func (r *jsiiProxy_Route53RecoverycontrolSafetyRule) MoveFromId(id *string) {
+	if err := r.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_Route53RecoverycontrolSafetyRule) MoveTo(moveTarget *string, index interface{}) {
 	if err := r.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -870,6 +907,17 @@ func (r *jsiiProxy_Route53RecoverycontrolSafetyRule) MoveTo(moveTarget *string, 
 		r,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (r *jsiiProxy_Route53RecoverycontrolSafetyRule) MoveToId(id *string) {
+	if err := r.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -990,6 +1038,32 @@ func (r *jsiiProxy_Route53RecoverycontrolSafetyRule) SynthesizeAttributes() *map
 	_jsii_.Invoke(
 		r,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_Route53RecoverycontrolSafetyRule) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		r,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_Route53RecoverycontrolSafetyRule) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

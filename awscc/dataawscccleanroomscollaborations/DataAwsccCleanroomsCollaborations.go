@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccleanroomscollaborations/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cleanrooms_collaborations awscc_cleanrooms_collaborations}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cleanrooms_collaborations awscc_cleanrooms_collaborations}.
 type DataAwsccCleanroomsCollaborations interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccCleanroomsCollaborations interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccCleanroomsCollaborations) TerraformResourceType() *s
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cleanrooms_collaborations awscc_cleanrooms_collaborations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cleanrooms_collaborations awscc_cleanrooms_collaborations} Data Source.
 func NewDataAwsccCleanroomsCollaborations(scope constructs.Construct, id *string, config *DataAwsccCleanroomsCollaborationsConfig) DataAwsccCleanroomsCollaborations {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccCleanroomsCollaborations(scope constructs.Construct, id *string
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cleanrooms_collaborations awscc_cleanrooms_collaborations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cleanrooms_collaborations awscc_cleanrooms_collaborations} Data Source.
 func NewDataAwsccCleanroomsCollaborations_Override(d DataAwsccCleanroomsCollaborations, scope constructs.Construct, id *string, config *DataAwsccCleanroomsCollaborationsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccCleanroomsCollaborations) SynthesizeAttributes() *ma
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCleanroomsCollaborations) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCleanroomsCollaborations) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -67,6 +67,8 @@ type QuicksightThemePermissionsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetActions()
+	ResetPrincipal()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (q *jsiiProxy_QuicksightThemePermissionsOutputReference) InterpolationForAt
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightThemePermissionsOutputReference) ResetActions() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetActions",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightThemePermissionsOutputReference) ResetPrincipal() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetPrincipal",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightThemePermissionsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

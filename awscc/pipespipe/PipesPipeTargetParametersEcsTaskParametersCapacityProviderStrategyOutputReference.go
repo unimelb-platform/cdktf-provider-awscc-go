@@ -71,6 +71,7 @@ type PipesPipeTargetParametersEcsTaskParametersCapacityProviderStrategyOutputRef
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetBase()
+	ResetCapacityProvider()
 	ResetWeight()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -523,6 +524,14 @@ func (p *jsiiProxy_PipesPipeTargetParametersEcsTaskParametersCapacityProviderStr
 	_jsii_.InvokeVoid(
 		p,
 		"resetBase",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PipesPipeTargetParametersEcsTaskParametersCapacityProviderStrategyOutputReference) ResetCapacityProvider() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetCapacityProvider",
 		nil, // no parameters
 	)
 }

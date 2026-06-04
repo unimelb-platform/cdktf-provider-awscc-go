@@ -64,6 +64,7 @@ type MediatailorChannelTimeShiftConfigurationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetMaxTimeDelaySeconds()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (m *jsiiProxy_MediatailorChannelTimeShiftConfigurationOutputReference) Inte
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_MediatailorChannelTimeShiftConfigurationOutputReference) ResetMaxTimeDelaySeconds() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMaxTimeDelaySeconds",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_MediatailorChannelTimeShiftConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

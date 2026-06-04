@@ -39,6 +39,9 @@ type S3BucketLifecycleConfigurationOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	TransitionDefaultMinimumObjectSize() *string
+	SetTransitionDefaultMinimumObjectSize(val *string)
+	TransitionDefaultMinimumObjectSizeInput() *string
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -64,6 +67,8 @@ type S3BucketLifecycleConfigurationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutRules(value interface{})
+	ResetRules()
+	ResetTransitionDefaultMinimumObjectSize()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -169,6 +174,26 @@ func (j *jsiiProxy_S3BucketLifecycleConfigurationOutputReference) TerraformResou
 	return returns
 }
 
+func (j *jsiiProxy_S3BucketLifecycleConfigurationOutputReference) TransitionDefaultMinimumObjectSize() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"transitionDefaultMinimumObjectSize",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_S3BucketLifecycleConfigurationOutputReference) TransitionDefaultMinimumObjectSizeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"transitionDefaultMinimumObjectSizeInput",
+		&returns,
+	)
+	return returns
+}
+
 
 func NewS3BucketLifecycleConfigurationOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) S3BucketLifecycleConfigurationOutputReference {
 	_init_.Initialize()
@@ -248,6 +273,17 @@ func (j *jsiiProxy_S3BucketLifecycleConfigurationOutputReference)SetTerraformRes
 	_jsii_.Set(
 		j,
 		"terraformResource",
+		val,
+	)
+}
+
+func (j *jsiiProxy_S3BucketLifecycleConfigurationOutputReference)SetTransitionDefaultMinimumObjectSize(val *string) {
+	if err := j.validateSetTransitionDefaultMinimumObjectSizeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"transitionDefaultMinimumObjectSize",
 		val,
 	)
 }
@@ -446,6 +482,22 @@ func (s *jsiiProxy_S3BucketLifecycleConfigurationOutputReference) PutRules(value
 		s,
 		"putRules",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_S3BucketLifecycleConfigurationOutputReference) ResetRules() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetRules",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketLifecycleConfigurationOutputReference) ResetTransitionDefaultMinimumObjectSize() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTransitionDefaultMinimumObjectSize",
+		nil, // no parameters
 	)
 }
 

@@ -56,7 +56,15 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputRef
 	return nil
 }
 
-func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference) validateSetInternalValueParameters(val *RedshiftserverlessWorkgroupWorkgroupConfigParameters) error {
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference) validateSetParameterKeyParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupConfigParametersOutputReference) validateSetParameterValueParameters(val *string) error {
 	return nil
 }
 

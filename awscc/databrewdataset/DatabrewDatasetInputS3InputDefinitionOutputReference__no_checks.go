@@ -52,6 +52,10 @@ func (j *jsiiProxy_DatabrewDatasetInputS3InputDefinitionOutputReference) validat
 	return nil
 }
 
+func (j *jsiiProxy_DatabrewDatasetInputS3InputDefinitionOutputReference) validateSetBucketOwnerParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DatabrewDatasetInputS3InputDefinitionOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	return nil
 }

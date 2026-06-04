@@ -80,6 +80,7 @@ type AppflowFlowSourceFlowConfigSourceConnectorPropertiesVeevaOutputReference in
 	ResetIncludeAllVersions()
 	ResetIncludeRenditions()
 	ResetIncludeSourceFiles()
+	ResetObject()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -617,6 +618,14 @@ func (a *jsiiProxy_AppflowFlowSourceFlowConfigSourceConnectorPropertiesVeevaOutp
 	_jsii_.InvokeVoid(
 		a,
 		"resetIncludeSourceFiles",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowFlowSourceFlowConfigSourceConnectorPropertiesVeevaOutputReference) ResetObject() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetObject",
 		nil, // no parameters
 	)
 }

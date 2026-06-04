@@ -60,7 +60,7 @@ func (j *jsiiProxy_LexBotAliasConversationLogSettingsTextLogSettingsDestinationO
 	return nil
 }
 
-func (j *jsiiProxy_LexBotAliasConversationLogSettingsTextLogSettingsDestinationOutputReference) validateSetInternalValueParameters(val *LexBotAliasConversationLogSettingsTextLogSettingsDestination) error {
+func (j *jsiiProxy_LexBotAliasConversationLogSettingsTextLogSettingsDestinationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

@@ -30,6 +30,7 @@ type DataAwsccSagemakerAppResourceSpecOutputReference interface {
 	InstanceType() *string
 	InternalValue() *DataAwsccSagemakerAppResourceSpec
 	SetInternalValue(val *DataAwsccSagemakerAppResourceSpec)
+	LifecycleConfigArn() *string
 	SageMakerImageArn() *string
 	SageMakerImageVersionArn() *string
 	// Experimental.
@@ -134,6 +135,16 @@ func (j *jsiiProxy_DataAwsccSagemakerAppResourceSpecOutputReference) InternalVal
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerAppResourceSpecOutputReference) LifecycleConfigArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"lifecycleConfigArn",
 		&returns,
 	)
 	return returns

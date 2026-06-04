@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccredshiftclusterparametergroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/redshift_cluster_parameter_group awscc_redshift_cluster_parameter_group}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/redshift_cluster_parameter_group awscc_redshift_cluster_parameter_group}.
 type DataAwsccRedshiftClusterParameterGroup interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -87,6 +87,10 @@ type DataAwsccRedshiftClusterParameterGroup interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -312,7 +316,7 @@ func (j *jsiiProxy_DataAwsccRedshiftClusterParameterGroup) TerraformResourceType
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/redshift_cluster_parameter_group awscc_redshift_cluster_parameter_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/redshift_cluster_parameter_group awscc_redshift_cluster_parameter_group} Data Source.
 func NewDataAwsccRedshiftClusterParameterGroup(scope constructs.Construct, id *string, config *DataAwsccRedshiftClusterParameterGroupConfig) DataAwsccRedshiftClusterParameterGroup {
 	_init_.Initialize()
 
@@ -330,7 +334,7 @@ func NewDataAwsccRedshiftClusterParameterGroup(scope constructs.Construct, id *s
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/redshift_cluster_parameter_group awscc_redshift_cluster_parameter_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/redshift_cluster_parameter_group awscc_redshift_cluster_parameter_group} Data Source.
 func NewDataAwsccRedshiftClusterParameterGroup_Override(d DataAwsccRedshiftClusterParameterGroup, scope constructs.Construct, id *string, config *DataAwsccRedshiftClusterParameterGroupConfig) {
 	_init_.Initialize()
 
@@ -697,6 +701,32 @@ func (d *jsiiProxy_DataAwsccRedshiftClusterParameterGroup) SynthesizeAttributes(
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRedshiftClusterParameterGroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRedshiftClusterParameterGroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

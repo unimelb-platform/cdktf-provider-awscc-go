@@ -70,6 +70,9 @@ type QuicksightDataSourceAlternateDataSourceParametersSqlServerParametersOutputR
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDatabase()
+	ResetHost()
+	ResetPort()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSqlServerPar
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSqlServerParametersOutputReference) ResetDatabase() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDatabase",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSqlServerParametersOutputReference) ResetHost() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetHost",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSqlServerParametersOutputReference) ResetPort() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetPort",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersSqlServerParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

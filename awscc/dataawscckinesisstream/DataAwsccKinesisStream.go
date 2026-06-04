@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscckinesisstream/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kinesis_stream awscc_kinesis_stream}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kinesis_stream awscc_kinesis_stream}.
 type DataAwsccKinesisStream interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -25,6 +25,7 @@ type DataAwsccKinesisStream interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DesiredShardLevelMetrics() *[]*string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -89,6 +90,10 @@ type DataAwsccKinesisStream interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -148,6 +153,16 @@ func (j *jsiiProxy_DataAwsccKinesisStream) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccKinesisStream) DesiredShardLevelMetrics() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"desiredShardLevelMetrics",
 		&returns,
 	)
 	return returns
@@ -334,7 +349,7 @@ func (j *jsiiProxy_DataAwsccKinesisStream) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kinesis_stream awscc_kinesis_stream} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kinesis_stream awscc_kinesis_stream} Data Source.
 func NewDataAwsccKinesisStream(scope constructs.Construct, id *string, config *DataAwsccKinesisStreamConfig) DataAwsccKinesisStream {
 	_init_.Initialize()
 
@@ -352,7 +367,7 @@ func NewDataAwsccKinesisStream(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kinesis_stream awscc_kinesis_stream} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kinesis_stream awscc_kinesis_stream} Data Source.
 func NewDataAwsccKinesisStream_Override(d DataAwsccKinesisStream, scope constructs.Construct, id *string, config *DataAwsccKinesisStreamConfig) {
 	_init_.Initialize()
 
@@ -719,6 +734,32 @@ func (d *jsiiProxy_DataAwsccKinesisStream) SynthesizeAttributes() *map[string]in
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKinesisStream) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKinesisStream) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

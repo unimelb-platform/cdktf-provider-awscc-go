@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdatazoneenvironmentblueprintconfiguration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datazone_environment_blueprint_configuration awscc_datazone_environment_blueprint_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datazone_environment_blueprint_configuration awscc_datazone_environment_blueprint_configuration}.
 type DataAwsccDatazoneEnvironmentBlueprintConfiguration interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -30,6 +30,7 @@ type DataAwsccDatazoneEnvironmentBlueprintConfiguration interface {
 	EnabledRegions() *[]*string
 	EnvironmentBlueprintId() *string
 	EnvironmentBlueprintIdentifier() *string
+	EnvironmentRolePermissionBoundary() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -52,6 +53,7 @@ type DataAwsccDatazoneEnvironmentBlueprintConfiguration interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	ProvisioningConfigurations() DataAwsccDatazoneEnvironmentBlueprintConfigurationProvisioningConfigurationsList
 	ProvisioningRoleArn() *string
 	// Experimental.
 	RawOverrides() interface{}
@@ -92,6 +94,10 @@ type DataAwsccDatazoneEnvironmentBlueprintConfiguration interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -206,6 +212,16 @@ func (j *jsiiProxy_DataAwsccDatazoneEnvironmentBlueprintConfiguration) Environme
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccDatazoneEnvironmentBlueprintConfiguration) EnvironmentRolePermissionBoundary() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"environmentRolePermissionBoundary",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccDatazoneEnvironmentBlueprintConfiguration) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
@@ -296,6 +312,16 @@ func (j *jsiiProxy_DataAwsccDatazoneEnvironmentBlueprintConfiguration) Provider(
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccDatazoneEnvironmentBlueprintConfiguration) ProvisioningConfigurations() DataAwsccDatazoneEnvironmentBlueprintConfigurationProvisioningConfigurationsList {
+	var returns DataAwsccDatazoneEnvironmentBlueprintConfigurationProvisioningConfigurationsList
+	_jsii_.Get(
+		j,
+		"provisioningConfigurations",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccDatazoneEnvironmentBlueprintConfiguration) ProvisioningRoleArn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -367,7 +393,7 @@ func (j *jsiiProxy_DataAwsccDatazoneEnvironmentBlueprintConfiguration) UpdatedAt
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datazone_environment_blueprint_configuration awscc_datazone_environment_blueprint_configuration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datazone_environment_blueprint_configuration awscc_datazone_environment_blueprint_configuration} Data Source.
 func NewDataAwsccDatazoneEnvironmentBlueprintConfiguration(scope constructs.Construct, id *string, config *DataAwsccDatazoneEnvironmentBlueprintConfigurationConfig) DataAwsccDatazoneEnvironmentBlueprintConfiguration {
 	_init_.Initialize()
 
@@ -385,7 +411,7 @@ func NewDataAwsccDatazoneEnvironmentBlueprintConfiguration(scope constructs.Cons
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datazone_environment_blueprint_configuration awscc_datazone_environment_blueprint_configuration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datazone_environment_blueprint_configuration awscc_datazone_environment_blueprint_configuration} Data Source.
 func NewDataAwsccDatazoneEnvironmentBlueprintConfiguration_Override(d DataAwsccDatazoneEnvironmentBlueprintConfiguration, scope constructs.Construct, id *string, config *DataAwsccDatazoneEnvironmentBlueprintConfigurationConfig) {
 	_init_.Initialize()
 
@@ -752,6 +778,32 @@ func (d *jsiiProxy_DataAwsccDatazoneEnvironmentBlueprintConfiguration) Synthesiz
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatazoneEnvironmentBlueprintConfiguration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatazoneEnvironmentBlueprintConfiguration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

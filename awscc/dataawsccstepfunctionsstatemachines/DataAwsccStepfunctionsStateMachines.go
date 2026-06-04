@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccstepfunctionsstatemachines/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/stepfunctions_state_machines awscc_stepfunctions_state_machines}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/stepfunctions_state_machines awscc_stepfunctions_state_machines}.
 type DataAwsccStepfunctionsStateMachines interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccStepfunctionsStateMachines interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccStepfunctionsStateMachines) TerraformResourceType() 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/stepfunctions_state_machines awscc_stepfunctions_state_machines} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/stepfunctions_state_machines awscc_stepfunctions_state_machines} Data Source.
 func NewDataAwsccStepfunctionsStateMachines(scope constructs.Construct, id *string, config *DataAwsccStepfunctionsStateMachinesConfig) DataAwsccStepfunctionsStateMachines {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccStepfunctionsStateMachines(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/stepfunctions_state_machines awscc_stepfunctions_state_machines} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/stepfunctions_state_machines awscc_stepfunctions_state_machines} Data Source.
 func NewDataAwsccStepfunctionsStateMachines_Override(d DataAwsccStepfunctionsStateMachines, scope constructs.Construct, id *string, config *DataAwsccStepfunctionsStateMachinesConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccStepfunctionsStateMachines) SynthesizeAttributes() *
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccStepfunctionsStateMachines) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccStepfunctionsStateMachines) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

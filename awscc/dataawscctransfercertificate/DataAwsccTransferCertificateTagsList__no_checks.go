@@ -4,6 +4,10 @@ package dataawscctransfercertificate
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccTransferCertificateTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccTransferCertificateTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

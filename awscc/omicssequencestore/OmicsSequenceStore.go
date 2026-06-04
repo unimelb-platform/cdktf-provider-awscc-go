@@ -9,9 +9,12 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/omicssequencestore/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/omics_sequence_store awscc_omics_sequence_store}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/omics_sequence_store awscc_omics_sequence_store}.
 type OmicsSequenceStore interface {
 	cdktf.TerraformResource
+	AccessLogLocation() *string
+	SetAccessLogLocation(val *string)
+	AccessLogLocationInput() *string
 	Arn() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
@@ -33,6 +36,9 @@ type OmicsSequenceStore interface {
 	Description() *string
 	SetDescription(val *string)
 	DescriptionInput() *string
+	ETagAlgorithmFamily() *string
+	SetETagAlgorithmFamily(val *string)
+	ETagAlgorithmFamilyInput() *string
 	FallbackLocation() *string
 	SetFallbackLocation(val *string)
 	FallbackLocationInput() *string
@@ -54,6 +60,9 @@ type OmicsSequenceStore interface {
 	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
+	PropagatedSetLevelTags() *[]*string
+	SetPropagatedSetLevelTags(val *[]*string)
+	PropagatedSetLevelTagsInput() *[]*string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -64,9 +73,16 @@ type OmicsSequenceStore interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	S3AccessPointArn() *string
+	S3AccessPolicy() *string
+	SetS3AccessPolicy(val *string)
+	S3AccessPolicyInput() *string
+	S3Uri() *string
 	SequenceStoreId() *string
 	SseConfig() OmicsSequenceStoreSseConfigOutputReference
 	SseConfigInput() interface{}
+	Status() *string
+	StatusMessage() *string
 	Tags() *map[string]*string
 	SetTags(val *map[string]*string)
 	TagsInput() *map[string]*string
@@ -76,6 +92,7 @@ type OmicsSequenceStore interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	UpdateTime() *string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -100,24 +117,41 @@ type OmicsSequenceStore interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutSseConfig(value *OmicsSequenceStoreSseConfig)
+	ResetAccessLogLocation()
 	ResetDescription()
+	ResetETagAlgorithmFamily()
 	ResetFallbackLocation()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetPropagatedSetLevelTags()
+	ResetS3AccessPolicy()
 	ResetSseConfig()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -130,6 +164,26 @@ type OmicsSequenceStore interface {
 // The jsii proxy struct for OmicsSequenceStore
 type jsiiProxy_OmicsSequenceStore struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_OmicsSequenceStore) AccessLogLocation() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"accessLogLocation",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OmicsSequenceStore) AccessLogLocationInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"accessLogLocationInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_OmicsSequenceStore) Arn() *string {
@@ -217,6 +271,26 @@ func (j *jsiiProxy_OmicsSequenceStore) DescriptionInput() *string {
 	_jsii_.Get(
 		j,
 		"descriptionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OmicsSequenceStore) ETagAlgorithmFamily() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"eTagAlgorithmFamily",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OmicsSequenceStore) ETagAlgorithmFamilyInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"eTagAlgorithmFamilyInput",
 		&returns,
 	)
 	return returns
@@ -322,6 +396,26 @@ func (j *jsiiProxy_OmicsSequenceStore) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_OmicsSequenceStore) PropagatedSetLevelTags() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"propagatedSetLevelTags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OmicsSequenceStore) PropagatedSetLevelTagsInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"propagatedSetLevelTagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_OmicsSequenceStore) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -352,6 +446,46 @@ func (j *jsiiProxy_OmicsSequenceStore) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_OmicsSequenceStore) S3AccessPointArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"s3AccessPointArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OmicsSequenceStore) S3AccessPolicy() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"s3AccessPolicy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OmicsSequenceStore) S3AccessPolicyInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"s3AccessPolicyInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OmicsSequenceStore) S3Uri() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"s3Uri",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_OmicsSequenceStore) SequenceStoreId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -377,6 +511,26 @@ func (j *jsiiProxy_OmicsSequenceStore) SseConfigInput() interface{} {
 	_jsii_.Get(
 		j,
 		"sseConfigInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OmicsSequenceStore) Status() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"status",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OmicsSequenceStore) StatusMessage() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"statusMessage",
 		&returns,
 	)
 	return returns
@@ -432,8 +586,18 @@ func (j *jsiiProxy_OmicsSequenceStore) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_OmicsSequenceStore) UpdateTime() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"updateTime",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/omics_sequence_store awscc_omics_sequence_store} Resource.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/omics_sequence_store awscc_omics_sequence_store} Resource.
 func NewOmicsSequenceStore(scope constructs.Construct, id *string, config *OmicsSequenceStoreConfig) OmicsSequenceStore {
 	_init_.Initialize()
 
@@ -451,7 +615,7 @@ func NewOmicsSequenceStore(scope constructs.Construct, id *string, config *Omics
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/omics_sequence_store awscc_omics_sequence_store} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/omics_sequence_store awscc_omics_sequence_store} Resource.
 func NewOmicsSequenceStore_Override(o OmicsSequenceStore, scope constructs.Construct, id *string, config *OmicsSequenceStoreConfig) {
 	_init_.Initialize()
 
@@ -459,6 +623,17 @@ func NewOmicsSequenceStore_Override(o OmicsSequenceStore, scope constructs.Const
 		"awscc.omicsSequenceStore.OmicsSequenceStore",
 		[]interface{}{scope, id, config},
 		o,
+	)
+}
+
+func (j *jsiiProxy_OmicsSequenceStore)SetAccessLogLocation(val *string) {
+	if err := j.validateSetAccessLogLocationParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"accessLogLocation",
+		val,
 	)
 }
 
@@ -499,6 +674,17 @@ func (j *jsiiProxy_OmicsSequenceStore)SetDescription(val *string) {
 	_jsii_.Set(
 		j,
 		"description",
+		val,
+	)
+}
+
+func (j *jsiiProxy_OmicsSequenceStore)SetETagAlgorithmFamily(val *string) {
+	if err := j.validateSetETagAlgorithmFamilyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"eTagAlgorithmFamily",
 		val,
 	)
 }
@@ -544,6 +730,17 @@ func (j *jsiiProxy_OmicsSequenceStore)SetName(val *string) {
 	)
 }
 
+func (j *jsiiProxy_OmicsSequenceStore)SetPropagatedSetLevelTags(val *[]*string) {
+	if err := j.validateSetPropagatedSetLevelTagsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"propagatedSetLevelTags",
+		val,
+	)
+}
+
 func (j *jsiiProxy_OmicsSequenceStore)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
@@ -559,6 +756,17 @@ func (j *jsiiProxy_OmicsSequenceStore)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_OmicsSequenceStore)SetS3AccessPolicy(val *string) {
+	if err := j.validateSetS3AccessPolicyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"s3AccessPolicy",
 		val,
 	)
 }
@@ -843,6 +1051,19 @@ func (o *jsiiProxy_OmicsSequenceStore) GetStringMapAttribute(terraformAttribute 
 	return returns
 }
 
+func (o *jsiiProxy_OmicsSequenceStore) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		o,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (o *jsiiProxy_OmicsSequenceStore) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := o.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -870,6 +1091,17 @@ func (o *jsiiProxy_OmicsSequenceStore) InterpolationForAttribute(terraformAttrib
 	return returns
 }
 
+func (o *jsiiProxy_OmicsSequenceStore) MoveFromId(id *string) {
+	if err := o.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (o *jsiiProxy_OmicsSequenceStore) MoveTo(moveTarget *string, index interface{}) {
 	if err := o.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -878,6 +1110,17 @@ func (o *jsiiProxy_OmicsSequenceStore) MoveTo(moveTarget *string, index interfac
 		o,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (o *jsiiProxy_OmicsSequenceStore) MoveToId(id *string) {
+	if err := o.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -903,10 +1146,26 @@ func (o *jsiiProxy_OmicsSequenceStore) PutSseConfig(value *OmicsSequenceStoreSse
 	)
 }
 
+func (o *jsiiProxy_OmicsSequenceStore) ResetAccessLogLocation() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetAccessLogLocation",
+		nil, // no parameters
+	)
+}
+
 func (o *jsiiProxy_OmicsSequenceStore) ResetDescription() {
 	_jsii_.InvokeVoid(
 		o,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OmicsSequenceStore) ResetETagAlgorithmFamily() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetETagAlgorithmFamily",
 		nil, // no parameters
 	)
 }
@@ -923,6 +1182,22 @@ func (o *jsiiProxy_OmicsSequenceStore) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		o,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OmicsSequenceStore) ResetPropagatedSetLevelTags() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetPropagatedSetLevelTags",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OmicsSequenceStore) ResetS3AccessPolicy() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetS3AccessPolicy",
 		nil, // no parameters
 	)
 }
@@ -949,6 +1224,32 @@ func (o *jsiiProxy_OmicsSequenceStore) SynthesizeAttributes() *map[string]interf
 	_jsii_.Invoke(
 		o,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (o *jsiiProxy_OmicsSequenceStore) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		o,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (o *jsiiProxy_OmicsSequenceStore) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		o,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

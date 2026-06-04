@@ -25,6 +25,7 @@ type DataAwsccIotfleetwiseCampaignSignalsToCollectOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	DataPartitionId() *string
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataAwsccIotfleetwiseCampaignSignalsToCollect
@@ -104,6 +105,16 @@ func (j *jsiiProxy_DataAwsccIotfleetwiseCampaignSignalsToCollectOutputReference)
 	_jsii_.Get(
 		j,
 		"creationStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotfleetwiseCampaignSignalsToCollectOutputReference) DataPartitionId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"dataPartitionId",
 		&returns,
 	)
 	return returns

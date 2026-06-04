@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscclicensemanagergrant/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/licensemanager_grant awscc_licensemanager_grant}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/licensemanager_grant awscc_licensemanager_grant}.
 type DataAwsccLicensemanagerGrant interface {
 	cdktf.TerraformDataSource
 	AllowedOperations() *[]*string
@@ -90,6 +90,10 @@ type DataAwsccLicensemanagerGrant interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -345,7 +349,7 @@ func (j *jsiiProxy_DataAwsccLicensemanagerGrant) Version() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/licensemanager_grant awscc_licensemanager_grant} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/licensemanager_grant awscc_licensemanager_grant} Data Source.
 func NewDataAwsccLicensemanagerGrant(scope constructs.Construct, id *string, config *DataAwsccLicensemanagerGrantConfig) DataAwsccLicensemanagerGrant {
 	_init_.Initialize()
 
@@ -363,7 +367,7 @@ func NewDataAwsccLicensemanagerGrant(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/licensemanager_grant awscc_licensemanager_grant} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/licensemanager_grant awscc_licensemanager_grant} Data Source.
 func NewDataAwsccLicensemanagerGrant_Override(d DataAwsccLicensemanagerGrant, scope constructs.Construct, id *string, config *DataAwsccLicensemanagerGrantConfig) {
 	_init_.Initialize()
 
@@ -730,6 +734,32 @@ func (d *jsiiProxy_DataAwsccLicensemanagerGrant) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLicensemanagerGrant) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLicensemanagerGrant) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

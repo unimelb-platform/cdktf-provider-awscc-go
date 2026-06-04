@@ -30,6 +30,7 @@ type DataAwsccVerifiedpermissionsIdentitySourceConfigurationOutputReference inte
 	Fqn() *string
 	InternalValue() *DataAwsccVerifiedpermissionsIdentitySourceConfiguration
 	SetInternalValue(val *DataAwsccVerifiedpermissionsIdentitySourceConfiguration)
+	OpenIdConnectConfiguration() DataAwsccVerifiedpermissionsIdentitySourceConfigurationOpenIdConnectConfigurationOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -132,6 +133,16 @@ func (j *jsiiProxy_DataAwsccVerifiedpermissionsIdentitySourceConfigurationOutput
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccVerifiedpermissionsIdentitySourceConfigurationOutputReference) OpenIdConnectConfiguration() DataAwsccVerifiedpermissionsIdentitySourceConfigurationOpenIdConnectConfigurationOutputReference {
+	var returns DataAwsccVerifiedpermissionsIdentitySourceConfigurationOpenIdConnectConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"openIdConnectConfiguration",
 		&returns,
 	)
 	return returns

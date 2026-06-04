@@ -64,6 +64,7 @@ type SagemakerModelPackageSourceAlgorithmSpecificationOutputReference interface 
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutSourceAlgorithms(value interface{})
+	ResetSourceAlgorithms()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -446,6 +447,14 @@ func (s *jsiiProxy_SagemakerModelPackageSourceAlgorithmSpecificationOutputRefere
 		s,
 		"putSourceAlgorithms",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackageSourceAlgorithmSpecificationOutputReference) ResetSourceAlgorithms() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSourceAlgorithms",
+		nil, // no parameters
 	)
 }
 

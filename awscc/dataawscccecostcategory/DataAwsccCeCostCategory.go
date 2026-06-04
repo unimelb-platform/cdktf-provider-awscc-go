@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccecostcategory/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ce_cost_category awscc_ce_cost_category}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ce_cost_category awscc_ce_cost_category}.
 type DataAwsccCeCostCategory interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -54,6 +54,7 @@ type DataAwsccCeCostCategory interface {
 	Rules() *string
 	RuleVersion() *string
 	SplitChargeRules() *string
+	Tags() DataAwsccCeCostCategoryTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -89,6 +90,10 @@ type DataAwsccCeCostCategory interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -303,6 +308,16 @@ func (j *jsiiProxy_DataAwsccCeCostCategory) SplitChargeRules() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccCeCostCategory) Tags() DataAwsccCeCostCategoryTagsList {
+	var returns DataAwsccCeCostCategoryTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccCeCostCategory) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -334,7 +349,7 @@ func (j *jsiiProxy_DataAwsccCeCostCategory) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ce_cost_category awscc_ce_cost_category} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ce_cost_category awscc_ce_cost_category} Data Source.
 func NewDataAwsccCeCostCategory(scope constructs.Construct, id *string, config *DataAwsccCeCostCategoryConfig) DataAwsccCeCostCategory {
 	_init_.Initialize()
 
@@ -352,7 +367,7 @@ func NewDataAwsccCeCostCategory(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ce_cost_category awscc_ce_cost_category} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ce_cost_category awscc_ce_cost_category} Data Source.
 func NewDataAwsccCeCostCategory_Override(d DataAwsccCeCostCategory, scope constructs.Construct, id *string, config *DataAwsccCeCostCategoryConfig) {
 	_init_.Initialize()
 
@@ -719,6 +734,32 @@ func (d *jsiiProxy_DataAwsccCeCostCategory) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCeCostCategory) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCeCostCategory) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

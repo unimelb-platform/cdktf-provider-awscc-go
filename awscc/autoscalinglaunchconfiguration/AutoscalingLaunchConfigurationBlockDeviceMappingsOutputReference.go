@@ -73,6 +73,7 @@ type AutoscalingLaunchConfigurationBlockDeviceMappingsOutputReference interface 
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutEbs(value *AutoscalingLaunchConfigurationBlockDeviceMappingsEbs)
+	ResetDeviceName()
 	ResetEbs()
 	ResetNoDevice()
 	ResetVirtualName()
@@ -551,6 +552,14 @@ func (a *jsiiProxy_AutoscalingLaunchConfigurationBlockDeviceMappingsOutputRefere
 		a,
 		"putEbs",
 		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_AutoscalingLaunchConfigurationBlockDeviceMappingsOutputReference) ResetDeviceName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetDeviceName",
+		nil, // no parameters
 	)
 }
 

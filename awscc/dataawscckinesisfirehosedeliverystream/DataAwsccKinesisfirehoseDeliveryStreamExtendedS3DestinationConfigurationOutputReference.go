@@ -29,10 +29,12 @@ type DataAwsccKinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOut
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	CustomTimeZone() *string
 	DataFormatConversionConfiguration() DataAwsccKinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationDataFormatConversionConfigurationOutputReference
 	DynamicPartitioningConfiguration() DataAwsccKinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationDynamicPartitioningConfigurationOutputReference
 	EncryptionConfiguration() DataAwsccKinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationEncryptionConfigurationOutputReference
 	ErrorOutputPrefix() *string
+	FileExtension() *string
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataAwsccKinesisfirehoseDeliveryStreamExtendedS3DestinationConfiguration
@@ -159,6 +161,16 @@ func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamExtendedS3DestinationCo
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference) CustomTimeZone() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"customTimeZone",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference) DataFormatConversionConfiguration() DataAwsccKinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationDataFormatConversionConfigurationOutputReference {
 	var returns DataAwsccKinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationDataFormatConversionConfigurationOutputReference
 	_jsii_.Get(
@@ -194,6 +206,16 @@ func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamExtendedS3DestinationCo
 	_jsii_.Get(
 		j,
 		"errorOutputPrefix",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamExtendedS3DestinationConfigurationOutputReference) FileExtension() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fileExtension",
 		&returns,
 	)
 	return returns

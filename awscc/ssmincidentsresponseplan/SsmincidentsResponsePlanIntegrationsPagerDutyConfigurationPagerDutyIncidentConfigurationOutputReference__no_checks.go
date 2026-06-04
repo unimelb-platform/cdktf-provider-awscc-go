@@ -56,7 +56,7 @@ func (j *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPag
 	return nil
 }
 
-func (j *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfigurationOutputReference) validateSetInternalValueParameters(val *SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfiguration) error {
+func (j *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfigurationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

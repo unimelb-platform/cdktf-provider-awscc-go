@@ -9,11 +9,12 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccbackupbackupselection/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/backup_backup_selection awscc_backup_backup_selection}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/backup_backup_selection awscc_backup_backup_selection}.
 type DataAwsccBackupBackupSelection interface {
 	cdktf.TerraformDataSource
 	BackupPlanId() *string
 	BackupSelection() DataAwsccBackupBackupSelectionBackupSelectionOutputReference
+	BackupSelectionId() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -85,6 +86,10 @@ type DataAwsccBackupBackupSelection interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -114,6 +119,16 @@ func (j *jsiiProxy_DataAwsccBackupBackupSelection) BackupSelection() DataAwsccBa
 	_jsii_.Get(
 		j,
 		"backupSelection",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccBackupBackupSelection) BackupSelectionId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"backupSelectionId",
 		&returns,
 	)
 	return returns
@@ -290,7 +305,7 @@ func (j *jsiiProxy_DataAwsccBackupBackupSelection) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/backup_backup_selection awscc_backup_backup_selection} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/backup_backup_selection awscc_backup_backup_selection} Data Source.
 func NewDataAwsccBackupBackupSelection(scope constructs.Construct, id *string, config *DataAwsccBackupBackupSelectionConfig) DataAwsccBackupBackupSelection {
 	_init_.Initialize()
 
@@ -308,7 +323,7 @@ func NewDataAwsccBackupBackupSelection(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/backup_backup_selection awscc_backup_backup_selection} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/backup_backup_selection awscc_backup_backup_selection} Data Source.
 func NewDataAwsccBackupBackupSelection_Override(d DataAwsccBackupBackupSelection, scope constructs.Construct, id *string, config *DataAwsccBackupBackupSelectionConfig) {
 	_init_.Initialize()
 
@@ -675,6 +690,32 @@ func (d *jsiiProxy_DataAwsccBackupBackupSelection) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccBackupBackupSelection) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccBackupBackupSelection) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

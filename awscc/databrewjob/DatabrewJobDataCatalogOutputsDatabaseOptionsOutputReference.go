@@ -67,6 +67,7 @@ type DatabrewJobDataCatalogOutputsDatabaseOptionsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutTempDirectory(value *DatabrewJobDataCatalogOutputsDatabaseOptionsTempDirectory)
+	ResetTableName()
 	ResetTempDirectory()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -481,6 +482,14 @@ func (d *jsiiProxy_DatabrewJobDataCatalogOutputsDatabaseOptionsOutputReference) 
 		d,
 		"putTempDirectory",
 		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DatabrewJobDataCatalogOutputsDatabaseOptionsOutputReference) ResetTableName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetTableName",
+		nil, // no parameters
 	)
 }
 

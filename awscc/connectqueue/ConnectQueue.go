@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/connectqueue/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/connect_queue awscc_connect_queue}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/connect_queue awscc_connect_queue}.
 type ConnectQueue interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -60,6 +60,8 @@ type ConnectQueue interface {
 	Node() constructs.Node
 	OutboundCallerConfig() ConnectQueueOutboundCallerConfigOutputReference
 	OutboundCallerConfigInput() interface{}
+	OutboundEmailConfig() ConnectQueueOutboundEmailConfigOutputReference
+	OutboundEmailConfigInput() interface{}
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -110,20 +112,32 @@ type ConnectQueue interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutOutboundCallerConfig(value *ConnectQueueOutboundCallerConfig)
+	PutOutboundEmailConfig(value *ConnectQueueOutboundEmailConfig)
 	PutTags(value interface{})
 	ResetDescription()
 	ResetMaxContacts()
 	ResetOutboundCallerConfig()
+	ResetOutboundEmailConfig()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -131,6 +145,9 @@ type ConnectQueue interface {
 	ResetStatus()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -375,6 +392,26 @@ func (j *jsiiProxy_ConnectQueue) OutboundCallerConfigInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_ConnectQueue) OutboundEmailConfig() ConnectQueueOutboundEmailConfigOutputReference {
+	var returns ConnectQueueOutboundEmailConfigOutputReference
+	_jsii_.Get(
+		j,
+		"outboundEmailConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ConnectQueue) OutboundEmailConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"outboundEmailConfigInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ConnectQueue) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -516,7 +553,7 @@ func (j *jsiiProxy_ConnectQueue) Type() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/connect_queue awscc_connect_queue} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/connect_queue awscc_connect_queue} Resource.
 func NewConnectQueue(scope constructs.Construct, id *string, config *ConnectQueueConfig) ConnectQueue {
 	_init_.Initialize()
 
@@ -534,7 +571,7 @@ func NewConnectQueue(scope constructs.Construct, id *string, config *ConnectQueu
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/connect_queue awscc_connect_queue} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/connect_queue awscc_connect_queue} Resource.
 func NewConnectQueue_Override(c ConnectQueue, scope constructs.Construct, id *string, config *ConnectQueueConfig) {
 	_init_.Initialize()
 
@@ -959,6 +996,19 @@ func (c *jsiiProxy_ConnectQueue) GetStringMapAttribute(terraformAttribute *strin
 	return returns
 }
 
+func (c *jsiiProxy_ConnectQueue) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_ConnectQueue) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -986,6 +1036,17 @@ func (c *jsiiProxy_ConnectQueue) InterpolationForAttribute(terraformAttribute *s
 	return returns
 }
 
+func (c *jsiiProxy_ConnectQueue) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_ConnectQueue) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -994,6 +1055,17 @@ func (c *jsiiProxy_ConnectQueue) MoveTo(moveTarget *string, index interface{}) {
 		c,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (c *jsiiProxy_ConnectQueue) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1015,6 +1087,17 @@ func (c *jsiiProxy_ConnectQueue) PutOutboundCallerConfig(value *ConnectQueueOutb
 	_jsii_.InvokeVoid(
 		c,
 		"putOutboundCallerConfig",
+		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_ConnectQueue) PutOutboundEmailConfig(value *ConnectQueueOutboundEmailConfig) {
+	if err := c.validatePutOutboundEmailConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putOutboundEmailConfig",
 		[]interface{}{value},
 	)
 }
@@ -1050,6 +1133,14 @@ func (c *jsiiProxy_ConnectQueue) ResetOutboundCallerConfig() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetOutboundCallerConfig",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConnectQueue) ResetOutboundEmailConfig() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetOutboundEmailConfig",
 		nil, // no parameters
 	)
 }
@@ -1092,6 +1183,32 @@ func (c *jsiiProxy_ConnectQueue) SynthesizeAttributes() *map[string]interface{} 
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_ConnectQueue) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_ConnectQueue) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

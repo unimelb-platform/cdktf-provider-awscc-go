@@ -32,6 +32,7 @@ type DataAwsccCleanroomsMembershipDefaultResultConfigurationOutputConfigurationS
 	SetInternalValue(val *DataAwsccCleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3)
 	KeyPrefix() *string
 	ResultFormat() *string
+	SingleFileOutput() cdktf.IResolvable
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -154,6 +155,16 @@ func (j *jsiiProxy_DataAwsccCleanroomsMembershipDefaultResultConfigurationOutput
 	_jsii_.Get(
 		j,
 		"resultFormat",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference) SingleFileOutput() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"singleFileOutput",
 		&returns,
 	)
 	return returns

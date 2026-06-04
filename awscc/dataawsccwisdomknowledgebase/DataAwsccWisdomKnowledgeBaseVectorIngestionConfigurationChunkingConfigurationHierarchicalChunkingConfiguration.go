@@ -1,0 +1,6 @@
+package dataawsccwisdomknowledgebase
+
+
+type DataAwsccWisdomKnowledgeBaseVectorIngestionConfigurationChunkingConfigurationHierarchicalChunkingConfiguration struct {
+}
+

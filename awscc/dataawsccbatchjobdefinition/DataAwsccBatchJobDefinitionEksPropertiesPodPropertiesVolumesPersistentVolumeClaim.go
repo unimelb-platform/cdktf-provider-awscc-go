@@ -1,0 +1,6 @@
+package dataawsccbatchjobdefinition
+
+
+type DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesVolumesPersistentVolumeClaim struct {
+}
+

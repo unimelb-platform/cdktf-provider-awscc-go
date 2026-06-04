@@ -72,6 +72,7 @@ type PipesPipeTargetParametersEcsTaskParametersNetworkConfigurationAwsvpcConfigu
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetAssignPublicIp()
 	ResetSecurityGroups()
+	ResetSubnets()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (p *jsiiProxy_PipesPipeTargetParametersEcsTaskParametersNetworkConfiguratio
 	_jsii_.InvokeVoid(
 		p,
 		"resetSecurityGroups",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PipesPipeTargetParametersEcsTaskParametersNetworkConfigurationAwsvpcConfigurationOutputReference) ResetSubnets() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetSubnets",
 		nil, // no parameters
 	)
 }

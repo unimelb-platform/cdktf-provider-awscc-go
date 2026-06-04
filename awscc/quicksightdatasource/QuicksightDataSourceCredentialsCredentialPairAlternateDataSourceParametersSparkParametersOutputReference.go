@@ -67,6 +67,8 @@ type QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetHost()
+	ResetPort()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSou
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersSparkParametersOutputReference) ResetHost() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetHost",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersSparkParametersOutputReference) ResetPort() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetPort",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersSparkParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

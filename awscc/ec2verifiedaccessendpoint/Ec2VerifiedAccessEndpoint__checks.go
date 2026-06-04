@@ -119,6 +119,14 @@ func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validateInterpolationForAttributeP
 	return nil
 }
 
+func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,9 +188,28 @@ func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validateMoveToParameters(moveTarge
 	return nil
 }
 
+func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validatePutCidrOptionsParameters(value *Ec2VerifiedAccessEndpointCidrOptions) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
 	}
 
 	return nil
@@ -200,6 +227,17 @@ func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validatePutLoadBalancerOptionsPara
 }
 
 func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validatePutNetworkInterfaceOptionsParameters(value *Ec2VerifiedAccessEndpointNetworkInterfaceOptions) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VerifiedAccessEndpoint) validatePutRdsOptionsParameters(value *Ec2VerifiedAccessEndpointRdsOptions) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}

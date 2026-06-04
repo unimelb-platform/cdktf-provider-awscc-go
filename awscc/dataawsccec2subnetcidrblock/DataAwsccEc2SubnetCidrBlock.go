@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2subnetcidrblock/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_subnet_cidr_block awscc_ec2_subnet_cidr_block}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_subnet_cidr_block awscc_ec2_subnet_cidr_block}.
 type DataAwsccEc2SubnetCidrBlock interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -35,6 +35,8 @@ type DataAwsccEc2SubnetCidrBlock interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	IpSource() *string
+	Ipv6AddressAttribute() *string
 	Ipv6CidrBlock() *string
 	Ipv6IpamPoolId() *string
 	Ipv6NetmaskLength() *float64
@@ -50,6 +52,7 @@ type DataAwsccEc2SubnetCidrBlock interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	SubnetCidrBlockId() *string
 	SubnetId() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -86,6 +89,10 @@ type DataAwsccEc2SubnetCidrBlock interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -190,6 +197,26 @@ func (j *jsiiProxy_DataAwsccEc2SubnetCidrBlock) IdInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2SubnetCidrBlock) IpSource() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipSource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2SubnetCidrBlock) Ipv6AddressAttribute() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipv6AddressAttribute",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2SubnetCidrBlock) Ipv6CidrBlock() *string {
 	var returns *string
 	_jsii_.Get(
@@ -260,6 +287,16 @@ func (j *jsiiProxy_DataAwsccEc2SubnetCidrBlock) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2SubnetCidrBlock) SubnetCidrBlockId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"subnetCidrBlockId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2SubnetCidrBlock) SubnetId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -301,7 +338,7 @@ func (j *jsiiProxy_DataAwsccEc2SubnetCidrBlock) TerraformResourceType() *string 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_subnet_cidr_block awscc_ec2_subnet_cidr_block} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_subnet_cidr_block awscc_ec2_subnet_cidr_block} Data Source.
 func NewDataAwsccEc2SubnetCidrBlock(scope constructs.Construct, id *string, config *DataAwsccEc2SubnetCidrBlockConfig) DataAwsccEc2SubnetCidrBlock {
 	_init_.Initialize()
 
@@ -319,7 +356,7 @@ func NewDataAwsccEc2SubnetCidrBlock(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_subnet_cidr_block awscc_ec2_subnet_cidr_block} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_subnet_cidr_block awscc_ec2_subnet_cidr_block} Data Source.
 func NewDataAwsccEc2SubnetCidrBlock_Override(d DataAwsccEc2SubnetCidrBlock, scope constructs.Construct, id *string, config *DataAwsccEc2SubnetCidrBlockConfig) {
 	_init_.Initialize()
 
@@ -686,6 +723,32 @@ func (d *jsiiProxy_DataAwsccEc2SubnetCidrBlock) SynthesizeAttributes() *map[stri
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2SubnetCidrBlock) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2SubnetCidrBlock) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/batchjobqueue/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/batch_job_queue awscc_batch_job_queue}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/batch_job_queue awscc_batch_job_queue}.
 type BatchJobQueue interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -43,6 +43,8 @@ type BatchJobQueue interface {
 	JobQueueName() *string
 	SetJobQueueName(val *string)
 	JobQueueNameInput() *string
+	JobStateTimeLimitActions() BatchJobQueueJobStateTimeLimitActionsList
+	JobStateTimeLimitActionsInput() interface{}
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -101,17 +103,29 @@ type BatchJobQueue interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutComputeEnvironmentOrder(value interface{})
+	PutJobStateTimeLimitActions(value interface{})
 	ResetJobQueueName()
+	ResetJobStateTimeLimitActions()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -119,6 +133,9 @@ type BatchJobQueue interface {
 	ResetState()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -268,6 +285,26 @@ func (j *jsiiProxy_BatchJobQueue) JobQueueNameInput() *string {
 	_jsii_.Get(
 		j,
 		"jobQueueNameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobQueue) JobStateTimeLimitActions() BatchJobQueueJobStateTimeLimitActionsList {
+	var returns BatchJobQueueJobStateTimeLimitActionsList
+	_jsii_.Get(
+		j,
+		"jobStateTimeLimitActions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobQueue) JobStateTimeLimitActionsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"jobStateTimeLimitActionsInput",
 		&returns,
 	)
 	return returns
@@ -434,7 +471,7 @@ func (j *jsiiProxy_BatchJobQueue) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/batch_job_queue awscc_batch_job_queue} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/batch_job_queue awscc_batch_job_queue} Resource.
 func NewBatchJobQueue(scope constructs.Construct, id *string, config *BatchJobQueueConfig) BatchJobQueue {
 	_init_.Initialize()
 
@@ -452,7 +489,7 @@ func NewBatchJobQueue(scope constructs.Construct, id *string, config *BatchJobQu
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/batch_job_queue awscc_batch_job_queue} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/batch_job_queue awscc_batch_job_queue} Resource.
 func NewBatchJobQueue_Override(b BatchJobQueue, scope constructs.Construct, id *string, config *BatchJobQueueConfig) {
 	_init_.Initialize()
 
@@ -855,6 +892,19 @@ func (b *jsiiProxy_BatchJobQueue) GetStringMapAttribute(terraformAttribute *stri
 	return returns
 }
 
+func (b *jsiiProxy_BatchJobQueue) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		b,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (b *jsiiProxy_BatchJobQueue) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := b.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -882,6 +932,17 @@ func (b *jsiiProxy_BatchJobQueue) InterpolationForAttribute(terraformAttribute *
 	return returns
 }
 
+func (b *jsiiProxy_BatchJobQueue) MoveFromId(id *string) {
+	if err := b.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (b *jsiiProxy_BatchJobQueue) MoveTo(moveTarget *string, index interface{}) {
 	if err := b.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -890,6 +951,17 @@ func (b *jsiiProxy_BatchJobQueue) MoveTo(moveTarget *string, index interface{}) 
 		b,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (b *jsiiProxy_BatchJobQueue) MoveToId(id *string) {
+	if err := b.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -915,10 +987,29 @@ func (b *jsiiProxy_BatchJobQueue) PutComputeEnvironmentOrder(value interface{}) 
 	)
 }
 
+func (b *jsiiProxy_BatchJobQueue) PutJobStateTimeLimitActions(value interface{}) {
+	if err := b.validatePutJobStateTimeLimitActionsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"putJobStateTimeLimitActions",
+		[]interface{}{value},
+	)
+}
+
 func (b *jsiiProxy_BatchJobQueue) ResetJobQueueName() {
 	_jsii_.InvokeVoid(
 		b,
 		"resetJobQueueName",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobQueue) ResetJobStateTimeLimitActions() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetJobStateTimeLimitActions",
 		nil, // no parameters
 	)
 }
@@ -961,6 +1052,32 @@ func (b *jsiiProxy_BatchJobQueue) SynthesizeAttributes() *map[string]interface{}
 	_jsii_.Invoke(
 		b,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_BatchJobQueue) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		b,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_BatchJobQueue) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		b,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

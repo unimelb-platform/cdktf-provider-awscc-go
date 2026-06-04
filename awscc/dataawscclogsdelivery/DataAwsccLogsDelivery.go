@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscclogsdelivery/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/logs_delivery awscc_logs_delivery}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/logs_delivery awscc_logs_delivery}.
 type DataAwsccLogsDelivery interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -29,6 +29,7 @@ type DataAwsccLogsDelivery interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	FieldDelimiter() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -52,6 +53,9 @@ type DataAwsccLogsDelivery interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	RecordFields() *[]*string
+	S3EnableHiveCompatiblePath() cdktf.IResolvable
+	S3SuffixPath() *string
 	Tags() DataAwsccLogsDeliveryTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -88,6 +92,10 @@ type DataAwsccLogsDelivery interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -192,6 +200,16 @@ func (j *jsiiProxy_DataAwsccLogsDelivery) DependsOn() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccLogsDelivery) FieldDelimiter() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fieldDelimiter",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccLogsDelivery) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
@@ -282,6 +300,36 @@ func (j *jsiiProxy_DataAwsccLogsDelivery) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccLogsDelivery) RecordFields() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"recordFields",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccLogsDelivery) S3EnableHiveCompatiblePath() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"s3EnableHiveCompatiblePath",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccLogsDelivery) S3SuffixPath() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"s3SuffixPath",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccLogsDelivery) Tags() DataAwsccLogsDeliveryTagsList {
 	var returns DataAwsccLogsDeliveryTagsList
 	_jsii_.Get(
@@ -323,7 +371,7 @@ func (j *jsiiProxy_DataAwsccLogsDelivery) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/logs_delivery awscc_logs_delivery} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/logs_delivery awscc_logs_delivery} Data Source.
 func NewDataAwsccLogsDelivery(scope constructs.Construct, id *string, config *DataAwsccLogsDeliveryConfig) DataAwsccLogsDelivery {
 	_init_.Initialize()
 
@@ -341,7 +389,7 @@ func NewDataAwsccLogsDelivery(scope constructs.Construct, id *string, config *Da
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/logs_delivery awscc_logs_delivery} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/logs_delivery awscc_logs_delivery} Data Source.
 func NewDataAwsccLogsDelivery_Override(d DataAwsccLogsDelivery, scope constructs.Construct, id *string, config *DataAwsccLogsDeliveryConfig) {
 	_init_.Initialize()
 
@@ -708,6 +756,32 @@ func (d *jsiiProxy_DataAwsccLogsDelivery) SynthesizeAttributes() *map[string]int
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLogsDelivery) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLogsDelivery) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

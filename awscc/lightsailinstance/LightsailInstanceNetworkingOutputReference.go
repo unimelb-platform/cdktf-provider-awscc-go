@@ -68,6 +68,7 @@ type LightsailInstanceNetworkingOutputReference interface {
 	PutMonthlyTransfer(value *LightsailInstanceNetworkingMonthlyTransfer)
 	PutPorts(value interface{})
 	ResetMonthlyTransfer()
+	ResetPorts()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (l *jsiiProxy_LightsailInstanceNetworkingOutputReference) ResetMonthlyTrans
 	_jsii_.InvokeVoid(
 		l,
 		"resetMonthlyTransfer",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LightsailInstanceNetworkingOutputReference) ResetPorts() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetPorts",
 		nil, // no parameters
 	)
 }

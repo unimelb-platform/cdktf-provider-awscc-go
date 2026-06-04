@@ -44,11 +44,27 @@ func (s *jsiiProxy_SagemakerDomainDefaultSpaceSettingsOutputReference) validateI
 	return nil
 }
 
+func (s *jsiiProxy_SagemakerDomainDefaultSpaceSettingsOutputReference) validatePutCustomFileSystemConfigsParameters(value interface{}) error {
+	return nil
+}
+
+func (s *jsiiProxy_SagemakerDomainDefaultSpaceSettingsOutputReference) validatePutCustomPosixUserConfigParameters(value *SagemakerDomainDefaultSpaceSettingsCustomPosixUserConfig) error {
+	return nil
+}
+
+func (s *jsiiProxy_SagemakerDomainDefaultSpaceSettingsOutputReference) validatePutJupyterLabAppSettingsParameters(value *SagemakerDomainDefaultSpaceSettingsJupyterLabAppSettings) error {
+	return nil
+}
+
 func (s *jsiiProxy_SagemakerDomainDefaultSpaceSettingsOutputReference) validatePutJupyterServerAppSettingsParameters(value *SagemakerDomainDefaultSpaceSettingsJupyterServerAppSettings) error {
 	return nil
 }
 
 func (s *jsiiProxy_SagemakerDomainDefaultSpaceSettingsOutputReference) validatePutKernelGatewayAppSettingsParameters(value *SagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettings) error {
+	return nil
+}
+
+func (s *jsiiProxy_SagemakerDomainDefaultSpaceSettingsOutputReference) validatePutSpaceStorageSettingsParameters(value *SagemakerDomainDefaultSpaceSettingsSpaceStorageSettings) error {
 	return nil
 }
 

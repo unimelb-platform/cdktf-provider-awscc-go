@@ -76,7 +76,7 @@ func (j *jsiiProxy_S3BucketReplicationConfigurationRulesOutputReference) validat
 	return nil
 }
 
-func (j *jsiiProxy_S3BucketReplicationConfigurationRulesOutputReference) validateSetInternalValueParameters(val *S3BucketReplicationConfigurationRules) error {
+func (j *jsiiProxy_S3BucketReplicationConfigurationRulesOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

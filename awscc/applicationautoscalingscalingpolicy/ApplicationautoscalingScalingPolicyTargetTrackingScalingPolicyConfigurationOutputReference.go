@@ -84,6 +84,7 @@ type ApplicationautoscalingScalingPolicyTargetTrackingScalingPolicyConfiguration
 	ResetPredefinedMetricSpecification()
 	ResetScaleInCooldown()
 	ResetScaleOutCooldown()
+	ResetTargetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -660,6 +661,14 @@ func (a *jsiiProxy_ApplicationautoscalingScalingPolicyTargetTrackingScalingPolic
 	_jsii_.InvokeVoid(
 		a,
 		"resetScaleOutCooldown",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApplicationautoscalingScalingPolicyTargetTrackingScalingPolicyConfigurationOutputReference) ResetTargetValue() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetTargetValue",
 		nil, // no parameters
 	)
 }

@@ -25,6 +25,9 @@ type IotfleetwiseCampaignSignalsToCollectOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	DataPartitionId() *string
+	SetDataPartitionId(val *string)
+	DataPartitionIdInput() *string
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -70,8 +73,10 @@ type IotfleetwiseCampaignSignalsToCollectOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDataPartitionId()
 	ResetMaxSampleCount()
 	ResetMinimumSamplingIntervalMs()
+	ResetName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -112,6 +117,26 @@ func (j *jsiiProxy_IotfleetwiseCampaignSignalsToCollectOutputReference) Creation
 	_jsii_.Get(
 		j,
 		"creationStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotfleetwiseCampaignSignalsToCollectOutputReference) DataPartitionId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"dataPartitionId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotfleetwiseCampaignSignalsToCollectOutputReference) DataPartitionIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"dataPartitionIdInput",
 		&returns,
 	)
 	return returns
@@ -263,6 +288,17 @@ func (j *jsiiProxy_IotfleetwiseCampaignSignalsToCollectOutputReference)SetComple
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IotfleetwiseCampaignSignalsToCollectOutputReference)SetDataPartitionId(val *string) {
+	if err := j.validateSetDataPartitionIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"dataPartitionId",
 		val,
 	)
 }
@@ -519,6 +555,14 @@ func (i *jsiiProxy_IotfleetwiseCampaignSignalsToCollectOutputReference) Interpol
 	return returns
 }
 
+func (i *jsiiProxy_IotfleetwiseCampaignSignalsToCollectOutputReference) ResetDataPartitionId() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetDataPartitionId",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IotfleetwiseCampaignSignalsToCollectOutputReference) ResetMaxSampleCount() {
 	_jsii_.InvokeVoid(
 		i,
@@ -531,6 +575,14 @@ func (i *jsiiProxy_IotfleetwiseCampaignSignalsToCollectOutputReference) ResetMin
 	_jsii_.InvokeVoid(
 		i,
 		"resetMinimumSamplingIntervalMs",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotfleetwiseCampaignSignalsToCollectOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetName",
 		nil, // no parameters
 	)
 }

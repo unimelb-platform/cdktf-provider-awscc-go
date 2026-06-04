@@ -56,11 +56,23 @@ func (e *jsiiProxy_EventsEventBus) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
+func (e *jsiiProxy_EventsEventBus) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_EventsEventBus) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (e *jsiiProxy_EventsEventBus) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_EventsEventBus) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (e *jsiiProxy_EventsEventBus) validatePutDeadLetterConfigParameters(value *EventsEventBusDeadLetterConfig) error {
 	return nil
 }
 
@@ -92,7 +104,15 @@ func (j *jsiiProxy_EventsEventBus) validateSetCountParameters(val interface{}) e
 	return nil
 }
 
+func (j *jsiiProxy_EventsEventBus) validateSetDescriptionParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_EventsEventBus) validateSetEventSourceNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_EventsEventBus) validateSetKmsKeyIdentifierParameters(val *string) error {
 	return nil
 }
 

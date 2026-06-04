@@ -4,6 +4,10 @@ package gameliftfleet
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (g *jsiiProxy_GameliftFleetEc2InboundPermissionsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (g *jsiiProxy_GameliftFleetEc2InboundPermissionsList) validateGetParameters(index *float64) error {
 	return nil
 }

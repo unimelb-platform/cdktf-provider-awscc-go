@@ -90,9 +90,28 @@ func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersStarburstParametersOu
 	return nil
 }
 
+func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersStarburstParametersOutputReference) validatePutOAuthParametersParameters(value *QuicksightDataSourceDataSourceParametersStarburstParametersOAuthParameters) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersStarburstParametersOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	if _context == nil {
 		return fmt.Errorf("parameter _context is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_QuicksightDataSourceDataSourceParametersStarburstParametersOutputReference) validateSetAuthenticationTypeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil
@@ -164,6 +183,14 @@ func (j *jsiiProxy_QuicksightDataSourceDataSourceParametersStarburstParametersOu
 }
 
 func (j *jsiiProxy_QuicksightDataSourceDataSourceParametersStarburstParametersOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_QuicksightDataSourceDataSourceParametersStarburstParametersOutputReference) validateSetDatabaseAccessControlRoleParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

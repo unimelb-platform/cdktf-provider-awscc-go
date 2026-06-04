@@ -9,13 +9,14 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/backupbackupselection/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/backup_backup_selection awscc_backup_backup_selection}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/backup_backup_selection awscc_backup_backup_selection}.
 type BackupBackupSelection interface {
 	cdktf.TerraformResource
 	BackupPlanId() *string
 	SetBackupPlanId(val *string)
 	BackupPlanIdInput() *string
 	BackupSelection() BackupBackupSelectionBackupSelectionOutputReference
+	BackupSelectionId() *string
 	BackupSelectionInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
@@ -89,12 +90,22 @@ type BackupBackupSelection interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -103,6 +114,9 @@ type BackupBackupSelection interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -142,6 +156,16 @@ func (j *jsiiProxy_BackupBackupSelection) BackupSelection() BackupBackupSelectio
 	_jsii_.Get(
 		j,
 		"backupSelection",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BackupBackupSelection) BackupSelectionId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"backupSelectionId",
 		&returns,
 	)
 	return returns
@@ -338,7 +362,7 @@ func (j *jsiiProxy_BackupBackupSelection) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/backup_backup_selection awscc_backup_backup_selection} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/backup_backup_selection awscc_backup_backup_selection} Resource.
 func NewBackupBackupSelection(scope constructs.Construct, id *string, config *BackupBackupSelectionConfig) BackupBackupSelection {
 	_init_.Initialize()
 
@@ -356,7 +380,7 @@ func NewBackupBackupSelection(scope constructs.Construct, id *string, config *Ba
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/backup_backup_selection awscc_backup_backup_selection} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/backup_backup_selection awscc_backup_backup_selection} Resource.
 func NewBackupBackupSelection_Override(b BackupBackupSelection, scope constructs.Construct, id *string, config *BackupBackupSelectionConfig) {
 	_init_.Initialize()
 
@@ -715,6 +739,19 @@ func (b *jsiiProxy_BackupBackupSelection) GetStringMapAttribute(terraformAttribu
 	return returns
 }
 
+func (b *jsiiProxy_BackupBackupSelection) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		b,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (b *jsiiProxy_BackupBackupSelection) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := b.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -742,6 +779,17 @@ func (b *jsiiProxy_BackupBackupSelection) InterpolationForAttribute(terraformAtt
 	return returns
 }
 
+func (b *jsiiProxy_BackupBackupSelection) MoveFromId(id *string) {
+	if err := b.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (b *jsiiProxy_BackupBackupSelection) MoveTo(moveTarget *string, index interface{}) {
 	if err := b.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -750,6 +798,17 @@ func (b *jsiiProxy_BackupBackupSelection) MoveTo(moveTarget *string, index inter
 		b,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (b *jsiiProxy_BackupBackupSelection) MoveToId(id *string) {
+	if err := b.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -789,6 +848,32 @@ func (b *jsiiProxy_BackupBackupSelection) SynthesizeAttributes() *map[string]int
 	_jsii_.Invoke(
 		b,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_BackupBackupSelection) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		b,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_BackupBackupSelection) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		b,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

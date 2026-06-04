@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2instance/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_instance awscc_ec2_instance}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_instance awscc_ec2_instance}.
 type Ec2Instance interface {
 	cdktf.TerraformResource
 	AdditionalInfo() *string
@@ -78,6 +78,7 @@ type Ec2Instance interface {
 	ImageId() *string
 	SetImageId(val *string)
 	ImageIdInput() *string
+	InstanceId() *string
 	InstanceInitiatedShutdownBehavior() *string
 	SetInstanceInitiatedShutdownBehavior(val *string)
 	InstanceInitiatedShutdownBehaviorInput() *string
@@ -103,6 +104,8 @@ type Ec2Instance interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	MetadataOptions() Ec2InstanceMetadataOptionsOutputReference
+	MetadataOptionsInput() interface{}
 	Monitoring() interface{}
 	SetMonitoring(val interface{})
 	MonitoringInput() interface{}
@@ -149,6 +152,7 @@ type Ec2Instance interface {
 	SourceDestCheckInput() interface{}
 	SsmAssociations() Ec2InstanceSsmAssociationsList
 	SsmAssociationsInput() interface{}
+	State() Ec2InstanceStateOutputReference
 	SubnetId() *string
 	SetSubnetId(val *string)
 	SubnetIdInput() *string
@@ -168,6 +172,7 @@ type Ec2Instance interface {
 	UserDataInput() *string
 	Volumes() Ec2InstanceVolumesList
 	VolumesInput() interface{}
+	VpcId() *string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -192,12 +197,22 @@ type Ec2Instance interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -211,6 +226,7 @@ type Ec2Instance interface {
 	PutIpv6Addresses(value interface{})
 	PutLaunchTemplate(value *Ec2InstanceLaunchTemplate)
 	PutLicenseSpecifications(value interface{})
+	PutMetadataOptions(value *Ec2InstanceMetadataOptions)
 	PutNetworkInterfaces(value interface{})
 	PutPrivateDnsNameOptions(value *Ec2InstancePrivateDnsNameOptions)
 	PutSsmAssociations(value interface{})
@@ -240,6 +256,7 @@ type Ec2Instance interface {
 	ResetKeyName()
 	ResetLaunchTemplate()
 	ResetLicenseSpecifications()
+	ResetMetadataOptions()
 	ResetMonitoring()
 	ResetNetworkInterfaces()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -260,6 +277,9 @@ type Ec2Instance interface {
 	ResetUserData()
 	ResetVolumes()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -684,6 +704,16 @@ func (j *jsiiProxy_Ec2Instance) ImageIdInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2Instance) InstanceId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"instanceId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2Instance) InstanceInitiatedShutdownBehavior() *string {
 	var returns *string
 	_jsii_.Get(
@@ -849,6 +879,26 @@ func (j *jsiiProxy_Ec2Instance) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	_jsii_.Get(
 		j,
 		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2Instance) MetadataOptions() Ec2InstanceMetadataOptionsOutputReference {
+	var returns Ec2InstanceMetadataOptionsOutputReference
+	_jsii_.Get(
+		j,
+		"metadataOptions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2Instance) MetadataOptionsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"metadataOptionsInput",
 		&returns,
 	)
 	return returns
@@ -1154,6 +1204,16 @@ func (j *jsiiProxy_Ec2Instance) SsmAssociationsInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2Instance) State() Ec2InstanceStateOutputReference {
+	var returns Ec2InstanceStateOutputReference
+	_jsii_.Get(
+		j,
+		"state",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2Instance) SubnetId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -1284,8 +1344,18 @@ func (j *jsiiProxy_Ec2Instance) VolumesInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2Instance) VpcId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"vpcId",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_instance awscc_ec2_instance} Resource.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_instance awscc_ec2_instance} Resource.
 func NewEc2Instance(scope constructs.Construct, id *string, config *Ec2InstanceConfig) Ec2Instance {
 	_init_.Initialize()
 
@@ -1303,7 +1373,7 @@ func NewEc2Instance(scope constructs.Construct, id *string, config *Ec2InstanceC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_instance awscc_ec2_instance} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_instance awscc_ec2_instance} Resource.
 func NewEc2Instance_Override(e Ec2Instance, scope constructs.Construct, id *string, config *Ec2InstanceConfig) {
 	_init_.Initialize()
 
@@ -1926,6 +1996,19 @@ func (e *jsiiProxy_Ec2Instance) GetStringMapAttribute(terraformAttribute *string
 	return returns
 }
 
+func (e *jsiiProxy_Ec2Instance) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2Instance) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1953,6 +2036,17 @@ func (e *jsiiProxy_Ec2Instance) InterpolationForAttribute(terraformAttribute *st
 	return returns
 }
 
+func (e *jsiiProxy_Ec2Instance) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2Instance) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1961,6 +2055,17 @@ func (e *jsiiProxy_Ec2Instance) MoveTo(moveTarget *string, index interface{}) {
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Ec2Instance) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -2081,6 +2186,17 @@ func (e *jsiiProxy_Ec2Instance) PutLicenseSpecifications(value interface{}) {
 	_jsii_.InvokeVoid(
 		e,
 		"putLicenseSpecifications",
+		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_Ec2Instance) PutMetadataOptions(value *Ec2InstanceMetadataOptions) {
+	if err := e.validatePutMetadataOptionsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putMetadataOptions",
 		[]interface{}{value},
 	)
 }
@@ -2332,6 +2448,14 @@ func (e *jsiiProxy_Ec2Instance) ResetLicenseSpecifications() {
 	)
 }
 
+func (e *jsiiProxy_Ec2Instance) ResetMetadataOptions() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetMetadataOptions",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_Ec2Instance) ResetMonitoring() {
 	_jsii_.InvokeVoid(
 		e,
@@ -2474,6 +2598,32 @@ func (e *jsiiProxy_Ec2Instance) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2Instance) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2Instance) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

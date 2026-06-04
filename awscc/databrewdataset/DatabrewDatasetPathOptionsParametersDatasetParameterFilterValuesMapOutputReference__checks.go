@@ -163,9 +163,25 @@ func (j *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterFilterVal
 	return nil
 }
 
-func (j *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterFilterValuesMapOutputReference) validateSetInternalValueParameters(val *DatabrewDatasetPathOptionsParametersDatasetParameterFilterValuesMap) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterFilterValuesMapOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *DatabrewDatasetPathOptionsParametersDatasetParameterFilterValuesMap:
+		val := val.(*DatabrewDatasetPathOptionsParametersDatasetParameterFilterValuesMap)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case DatabrewDatasetPathOptionsParametersDatasetParameterFilterValuesMap:
+		val_ := val.(DatabrewDatasetPathOptionsParametersDatasetParameterFilterValuesMap)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *DatabrewDatasetPathOptionsParametersDatasetParameterFilterValuesMap; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

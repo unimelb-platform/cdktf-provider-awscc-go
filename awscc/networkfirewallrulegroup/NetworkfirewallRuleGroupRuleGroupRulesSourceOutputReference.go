@@ -27,8 +27,8 @@ type NetworkfirewallRuleGroupRuleGroupRulesSourceOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *NetworkfirewallRuleGroupRuleGroupRulesSource
-	SetInternalValue(val *NetworkfirewallRuleGroupRuleGroupRulesSource)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	RulesSourceList() NetworkfirewallRuleGroupRuleGroupRulesSourceRulesSourceListStructOutputReference
 	RulesSourceListInput() interface{}
 	RulesString() *string
@@ -132,8 +132,8 @@ func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceOutputReference) 
 	return returns
 }
 
-func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceOutputReference) InternalValue() *NetworkfirewallRuleGroupRuleGroupRulesSource {
-	var returns *NetworkfirewallRuleGroupRuleGroupRulesSource
+func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -292,7 +292,7 @@ func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceOutputReference)S
 	)
 }
 
-func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceOutputReference)SetInternalValue(val *NetworkfirewallRuleGroupRuleGroupRulesSource) {
+func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

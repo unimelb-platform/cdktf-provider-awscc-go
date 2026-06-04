@@ -64,7 +64,7 @@ func (j *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3Sourc
 	return nil
 }
 
-func (j *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3SourceConfigFileFormatDescriptorOutputReference) validateSetInternalValueParameters(val *LookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3SourceConfigFileFormatDescriptor) error {
+func (j *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3SourceConfigFileFormatDescriptorOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscclambdalayerversionpermission/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lambda_layer_version_permission awscc_lambda_layer_version_permission}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lambda_layer_version_permission awscc_lambda_layer_version_permission}.
 type DataAwsccLambdaLayerVersionPermission interface {
 	cdktf.TerraformDataSource
 	Action() *string
@@ -37,6 +37,7 @@ type DataAwsccLambdaLayerVersionPermission interface {
 	SetId(val *string)
 	IdInput() *string
 	LayerVersionArn() *string
+	LayerVersionPermissionId() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -86,6 +87,10 @@ type DataAwsccLambdaLayerVersionPermission interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -210,6 +215,16 @@ func (j *jsiiProxy_DataAwsccLambdaLayerVersionPermission) LayerVersionArn() *str
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccLambdaLayerVersionPermission) LayerVersionPermissionId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"layerVersionPermissionId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccLambdaLayerVersionPermission) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -301,7 +316,7 @@ func (j *jsiiProxy_DataAwsccLambdaLayerVersionPermission) TerraformResourceType(
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lambda_layer_version_permission awscc_lambda_layer_version_permission} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lambda_layer_version_permission awscc_lambda_layer_version_permission} Data Source.
 func NewDataAwsccLambdaLayerVersionPermission(scope constructs.Construct, id *string, config *DataAwsccLambdaLayerVersionPermissionConfig) DataAwsccLambdaLayerVersionPermission {
 	_init_.Initialize()
 
@@ -319,7 +334,7 @@ func NewDataAwsccLambdaLayerVersionPermission(scope constructs.Construct, id *st
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lambda_layer_version_permission awscc_lambda_layer_version_permission} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lambda_layer_version_permission awscc_lambda_layer_version_permission} Data Source.
 func NewDataAwsccLambdaLayerVersionPermission_Override(d DataAwsccLambdaLayerVersionPermission, scope constructs.Construct, id *string, config *DataAwsccLambdaLayerVersionPermissionConfig) {
 	_init_.Initialize()
 
@@ -686,6 +701,32 @@ func (d *jsiiProxy_DataAwsccLambdaLayerVersionPermission) SynthesizeAttributes()
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLambdaLayerVersionPermission) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLambdaLayerVersionPermission) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccapigatewayv2apis/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigatewayv2_apis awscc_apigatewayv2_apis}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigatewayv2_apis awscc_apigatewayv2_apis}.
 type DataAwsccApigatewayv2Apis interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccApigatewayv2Apis interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccApigatewayv2Apis) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigatewayv2_apis awscc_apigatewayv2_apis} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigatewayv2_apis awscc_apigatewayv2_apis} Data Source.
 func NewDataAwsccApigatewayv2Apis(scope constructs.Construct, id *string, config *DataAwsccApigatewayv2ApisConfig) DataAwsccApigatewayv2Apis {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccApigatewayv2Apis(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigatewayv2_apis awscc_apigatewayv2_apis} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigatewayv2_apis awscc_apigatewayv2_apis} Data Source.
 func NewDataAwsccApigatewayv2Apis_Override(d DataAwsccApigatewayv2Apis, scope constructs.Construct, id *string, config *DataAwsccApigatewayv2ApisConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccApigatewayv2Apis) SynthesizeAttributes() *map[string
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApigatewayv2Apis) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApigatewayv2Apis) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

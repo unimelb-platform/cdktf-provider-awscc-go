@@ -119,6 +119,14 @@ func (s *jsiiProxy_SagemakerModelExplainabilityJobDefinition) validateInterpolat
 	return nil
 }
 
+func (s *jsiiProxy_SagemakerModelExplainabilityJobDefinition) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (s *jsiiProxy_SagemakerModelExplainabilityJobDefinition) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (s *jsiiProxy_SagemakerModelExplainabilityJobDefinition) validateMoveToPara
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (s *jsiiProxy_SagemakerModelExplainabilityJobDefinition) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil

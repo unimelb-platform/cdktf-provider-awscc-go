@@ -29,6 +29,8 @@ type SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsOutputReference in
 	EfsFileSystemConfigInput() interface{}
 	// Experimental.
 	Fqn() *string
+	FsxLustreFileSystemConfig() SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsFsxLustreFileSystemConfigOutputReference
+	FsxLustreFileSystemConfigInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	// Experimental.
@@ -64,7 +66,9 @@ type SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsOutputReference in
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutEfsFileSystemConfig(value *SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsEfsFileSystemConfig)
+	PutFsxLustreFileSystemConfig(value *SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsFsxLustreFileSystemConfig)
 	ResetEfsFileSystemConfig()
+	ResetFsxLustreFileSystemConfig()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -135,6 +139,26 @@ func (j *jsiiProxy_SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsOutp
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsOutputReference) FsxLustreFileSystemConfig() SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsFsxLustreFileSystemConfigOutputReference {
+	var returns SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsFsxLustreFileSystemConfigOutputReference
+	_jsii_.Get(
+		j,
+		"fsxLustreFileSystemConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsOutputReference) FsxLustreFileSystemConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"fsxLustreFileSystemConfigInput",
 		&returns,
 	)
 	return returns
@@ -450,10 +474,29 @@ func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsOutp
 	)
 }
 
+func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsOutputReference) PutFsxLustreFileSystemConfig(value *SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsFsxLustreFileSystemConfig) {
+	if err := s.validatePutFsxLustreFileSystemConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putFsxLustreFileSystemConfig",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsOutputReference) ResetEfsFileSystemConfig() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetEfsFileSystemConfig",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsOutputReference) ResetFsxLustreFileSystemConfig() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetFsxLustreFileSystemConfig",
 		nil, // no parameters
 	)
 }

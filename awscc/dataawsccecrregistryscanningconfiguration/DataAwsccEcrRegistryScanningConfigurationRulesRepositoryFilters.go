@@ -1,0 +1,6 @@
+package dataawsccecrregistryscanningconfiguration
+
+
+type DataAwsccEcrRegistryScanningConfigurationRulesRepositoryFilters struct {
+}
+

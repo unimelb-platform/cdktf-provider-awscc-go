@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccglueschemaversion/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/glue_schema_version awscc_glue_schema_version}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/glue_schema_version awscc_glue_schema_version}.
 type DataAwsccGlueSchemaVersion interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -85,6 +85,10 @@ type DataAwsccGlueSchemaVersion interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -290,7 +294,7 @@ func (j *jsiiProxy_DataAwsccGlueSchemaVersion) VersionId() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/glue_schema_version awscc_glue_schema_version} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/glue_schema_version awscc_glue_schema_version} Data Source.
 func NewDataAwsccGlueSchemaVersion(scope constructs.Construct, id *string, config *DataAwsccGlueSchemaVersionConfig) DataAwsccGlueSchemaVersion {
 	_init_.Initialize()
 
@@ -308,7 +312,7 @@ func NewDataAwsccGlueSchemaVersion(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/glue_schema_version awscc_glue_schema_version} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/glue_schema_version awscc_glue_schema_version} Data Source.
 func NewDataAwsccGlueSchemaVersion_Override(d DataAwsccGlueSchemaVersion, scope constructs.Construct, id *string, config *DataAwsccGlueSchemaVersionConfig) {
 	_init_.Initialize()
 
@@ -675,6 +679,32 @@ func (d *jsiiProxy_DataAwsccGlueSchemaVersion) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGlueSchemaVersion) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGlueSchemaVersion) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

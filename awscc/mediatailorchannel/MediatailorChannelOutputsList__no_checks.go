@@ -4,6 +4,10 @@ package mediatailorchannel
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (m *jsiiProxy_MediatailorChannelOutputsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_MediatailorChannelOutputsList) validateGetParameters(index *float64) error {
 	return nil
 }

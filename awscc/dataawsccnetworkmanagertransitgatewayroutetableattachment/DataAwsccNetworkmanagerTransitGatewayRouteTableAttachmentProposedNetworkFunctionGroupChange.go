@@ -1,0 +1,6 @@
+package dataawsccnetworkmanagertransitgatewayroutetableattachment
+
+
+type DataAwsccNetworkmanagerTransitGatewayRouteTableAttachmentProposedNetworkFunctionGroupChange struct {
+}
+

@@ -67,6 +67,8 @@ type DynamodbTableAttributeDefinitionsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAttributeName()
+	ResetAttributeType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (d *jsiiProxy_DynamodbTableAttributeDefinitionsOutputReference) Interpolati
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DynamodbTableAttributeDefinitionsOutputReference) ResetAttributeName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetAttributeName",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbTableAttributeDefinitionsOutputReference) ResetAttributeType() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetAttributeType",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DynamodbTableAttributeDefinitionsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

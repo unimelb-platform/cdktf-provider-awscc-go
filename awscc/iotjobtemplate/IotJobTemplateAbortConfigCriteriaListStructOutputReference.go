@@ -33,8 +33,8 @@ type IotJobTemplateAbortConfigCriteriaListStructOutputReference interface {
 	FailureTypeInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *IotJobTemplateAbortConfigCriteriaListStruct
-	SetInternalValue(val *IotJobTemplateAbortConfigCriteriaListStruct)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	MinNumberOfExecutedThings() *float64
 	SetMinNumberOfExecutedThings(val *float64)
 	MinNumberOfExecutedThingsInput() *float64
@@ -73,6 +73,10 @@ type IotJobTemplateAbortConfigCriteriaListStructOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAction()
+	ResetFailureType()
+	ResetMinNumberOfExecutedThings()
+	ResetThresholdPercentage()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -168,8 +172,8 @@ func (j *jsiiProxy_IotJobTemplateAbortConfigCriteriaListStructOutputReference) F
 	return returns
 }
 
-func (j *jsiiProxy_IotJobTemplateAbortConfigCriteriaListStructOutputReference) InternalValue() *IotJobTemplateAbortConfigCriteriaListStruct {
-	var returns *IotJobTemplateAbortConfigCriteriaListStruct
+func (j *jsiiProxy_IotJobTemplateAbortConfigCriteriaListStructOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -310,7 +314,7 @@ func (j *jsiiProxy_IotJobTemplateAbortConfigCriteriaListStructOutputReference)Se
 	)
 }
 
-func (j *jsiiProxy_IotJobTemplateAbortConfigCriteriaListStructOutputReference)SetInternalValue(val *IotJobTemplateAbortConfigCriteriaListStruct) {
+func (j *jsiiProxy_IotJobTemplateAbortConfigCriteriaListStructOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -549,6 +553,38 @@ func (i *jsiiProxy_IotJobTemplateAbortConfigCriteriaListStructOutputReference) I
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotJobTemplateAbortConfigCriteriaListStructOutputReference) ResetAction() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetAction",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotJobTemplateAbortConfigCriteriaListStructOutputReference) ResetFailureType() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetFailureType",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotJobTemplateAbortConfigCriteriaListStructOutputReference) ResetMinNumberOfExecutedThings() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetMinNumberOfExecutedThings",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotJobTemplateAbortConfigCriteriaListStructOutputReference) ResetThresholdPercentage() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetThresholdPercentage",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotJobTemplateAbortConfigCriteriaListStructOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

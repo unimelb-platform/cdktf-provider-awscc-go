@@ -56,7 +56,7 @@ func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestination
 	return nil
 }
 
-func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3BucketOutputReference) validateSetInternalValueParameters(val *LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3Bucket) error {
+func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3BucketOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

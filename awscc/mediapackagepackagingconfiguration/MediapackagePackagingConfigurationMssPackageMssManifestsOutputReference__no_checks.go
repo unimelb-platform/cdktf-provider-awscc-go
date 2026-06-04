@@ -60,7 +60,7 @@ func (j *jsiiProxy_MediapackagePackagingConfigurationMssPackageMssManifestsOutpu
 	return nil
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfigurationMssPackageMssManifestsOutputReference) validateSetInternalValueParameters(val *MediapackagePackagingConfigurationMssPackageMssManifests) error {
+func (j *jsiiProxy_MediapackagePackagingConfigurationMssPackageMssManifestsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

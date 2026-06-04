@@ -30,6 +30,8 @@ type SesConfigurationSetEventDestinationEventDestinationOutputReference interfac
 	Enabled() interface{}
 	SetEnabled(val interface{})
 	EnabledInput() interface{}
+	EventBridgeDestination() SesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference
+	EventBridgeDestinationInput() interface{}
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -77,10 +79,12 @@ type SesConfigurationSetEventDestinationEventDestinationOutputReference interfac
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutCloudwatchDestination(value *SesConfigurationSetEventDestinationEventDestinationCloudwatchDestination)
+	PutEventBridgeDestination(value *SesConfigurationSetEventDestinationEventDestinationEventBridgeDestination)
 	PutKinesisFirehoseDestination(value *SesConfigurationSetEventDestinationEventDestinationKinesisFirehoseDestination)
 	PutSnsDestination(value *SesConfigurationSetEventDestinationEventDestinationSnsDestination)
 	ResetCloudwatchDestination()
 	ResetEnabled()
+	ResetEventBridgeDestination()
 	ResetKinesisFirehoseDestination()
 	ResetName()
 	ResetSnsDestination()
@@ -164,6 +168,26 @@ func (j *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationOutputRefe
 	_jsii_.Get(
 		j,
 		"enabledInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationOutputReference) EventBridgeDestination() SesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference {
+	var returns SesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference
+	_jsii_.Get(
+		j,
+		"eventBridgeDestination",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationOutputReference) EventBridgeDestinationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"eventBridgeDestinationInput",
 		&returns,
 	)
 	return returns
@@ -602,6 +626,17 @@ func (s *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationOutputRefe
 	)
 }
 
+func (s *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationOutputReference) PutEventBridgeDestination(value *SesConfigurationSetEventDestinationEventDestinationEventBridgeDestination) {
+	if err := s.validatePutEventBridgeDestinationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putEventBridgeDestination",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationOutputReference) PutKinesisFirehoseDestination(value *SesConfigurationSetEventDestinationEventDestinationKinesisFirehoseDestination) {
 	if err := s.validatePutKinesisFirehoseDestinationParameters(value); err != nil {
 		panic(err)
@@ -636,6 +671,14 @@ func (s *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationOutputRefe
 	_jsii_.InvokeVoid(
 		s,
 		"resetEnabled",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationOutputReference) ResetEventBridgeDestination() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetEventBridgeDestination",
 		nil, // no parameters
 	)
 }

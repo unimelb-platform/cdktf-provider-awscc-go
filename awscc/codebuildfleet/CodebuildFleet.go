@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/codebuildfleet/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/codebuild_fleet awscc_codebuild_fleet}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/codebuild_fleet awscc_codebuild_fleet}.
 type CodebuildFleet interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -18,6 +18,8 @@ type CodebuildFleet interface {
 	BaseCapacityInput() *float64
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	ComputeConfiguration() CodebuildFleetComputeConfigurationOutputReference
+	ComputeConfigurationInput() interface{}
 	ComputeType() *string
 	SetComputeType(val *string)
 	ComputeTypeInput() *string
@@ -38,6 +40,13 @@ type CodebuildFleet interface {
 	EnvironmentType() *string
 	SetEnvironmentType(val *string)
 	EnvironmentTypeInput() *string
+	FleetProxyConfiguration() CodebuildFleetFleetProxyConfigurationOutputReference
+	FleetProxyConfigurationInput() interface{}
+	FleetServiceRole() *string
+	SetFleetServiceRole(val *string)
+	FleetServiceRoleInput() *string
+	FleetVpcConfig() CodebuildFleetFleetVpcConfigOutputReference
+	FleetVpcConfigInput() interface{}
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -47,6 +56,9 @@ type CodebuildFleet interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
+	ImageId() *string
+	SetImageId(val *string)
+	ImageIdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -56,6 +68,9 @@ type CodebuildFleet interface {
 	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
+	OverflowBehavior() *string
+	SetOverflowBehavior(val *string)
+	OverflowBehaviorInput() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -66,6 +81,8 @@ type CodebuildFleet interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	ScalingConfiguration() CodebuildFleetScalingConfigurationOutputReference
+	ScalingConfigurationInput() interface{}
 	Tags() CodebuildFleetTagsList
 	TagsInput() interface{}
 	// Experimental.
@@ -98,25 +115,49 @@ type CodebuildFleet interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutComputeConfiguration(value *CodebuildFleetComputeConfiguration)
+	PutFleetProxyConfiguration(value *CodebuildFleetFleetProxyConfiguration)
+	PutFleetVpcConfig(value *CodebuildFleetFleetVpcConfig)
+	PutScalingConfiguration(value *CodebuildFleetScalingConfiguration)
 	PutTags(value interface{})
 	ResetBaseCapacity()
+	ResetComputeConfiguration()
 	ResetComputeType()
 	ResetEnvironmentType()
+	ResetFleetProxyConfiguration()
+	ResetFleetServiceRole()
+	ResetFleetVpcConfig()
+	ResetImageId()
 	ResetName()
+	ResetOverflowBehavior()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetScalingConfiguration()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -166,6 +207,26 @@ func (j *jsiiProxy_CodebuildFleet) CdktfStack() cdktf.TerraformStack {
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CodebuildFleet) ComputeConfiguration() CodebuildFleetComputeConfigurationOutputReference {
+	var returns CodebuildFleetComputeConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"computeConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CodebuildFleet) ComputeConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"computeConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -251,6 +312,66 @@ func (j *jsiiProxy_CodebuildFleet) EnvironmentTypeInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_CodebuildFleet) FleetProxyConfiguration() CodebuildFleetFleetProxyConfigurationOutputReference {
+	var returns CodebuildFleetFleetProxyConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"fleetProxyConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CodebuildFleet) FleetProxyConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"fleetProxyConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CodebuildFleet) FleetServiceRole() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fleetServiceRole",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CodebuildFleet) FleetServiceRoleInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fleetServiceRoleInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CodebuildFleet) FleetVpcConfig() CodebuildFleetFleetVpcConfigOutputReference {
+	var returns CodebuildFleetFleetVpcConfigOutputReference
+	_jsii_.Get(
+		j,
+		"fleetVpcConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CodebuildFleet) FleetVpcConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"fleetVpcConfigInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_CodebuildFleet) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
@@ -286,6 +407,26 @@ func (j *jsiiProxy_CodebuildFleet) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CodebuildFleet) ImageId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"imageId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CodebuildFleet) ImageIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"imageIdInput",
 		&returns,
 	)
 	return returns
@@ -331,6 +472,26 @@ func (j *jsiiProxy_CodebuildFleet) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_CodebuildFleet) OverflowBehavior() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"overflowBehavior",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CodebuildFleet) OverflowBehaviorInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"overflowBehaviorInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_CodebuildFleet) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -356,6 +517,26 @@ func (j *jsiiProxy_CodebuildFleet) RawOverrides() interface{} {
 	_jsii_.Get(
 		j,
 		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CodebuildFleet) ScalingConfiguration() CodebuildFleetScalingConfigurationOutputReference {
+	var returns CodebuildFleetScalingConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"scalingConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CodebuildFleet) ScalingConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"scalingConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -412,7 +593,7 @@ func (j *jsiiProxy_CodebuildFleet) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/codebuild_fleet awscc_codebuild_fleet} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/codebuild_fleet awscc_codebuild_fleet} Resource.
 func NewCodebuildFleet(scope constructs.Construct, id *string, config *CodebuildFleetConfig) CodebuildFleet {
 	_init_.Initialize()
 
@@ -430,7 +611,7 @@ func NewCodebuildFleet(scope constructs.Construct, id *string, config *Codebuild
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/codebuild_fleet awscc_codebuild_fleet} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/codebuild_fleet awscc_codebuild_fleet} Resource.
 func NewCodebuildFleet_Override(c CodebuildFleet, scope constructs.Construct, id *string, config *CodebuildFleetConfig) {
 	_init_.Initialize()
 
@@ -504,10 +685,32 @@ func (j *jsiiProxy_CodebuildFleet)SetEnvironmentType(val *string) {
 	)
 }
 
+func (j *jsiiProxy_CodebuildFleet)SetFleetServiceRole(val *string) {
+	if err := j.validateSetFleetServiceRoleParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"fleetServiceRole",
+		val,
+	)
+}
+
 func (j *jsiiProxy_CodebuildFleet)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CodebuildFleet)SetImageId(val *string) {
+	if err := j.validateSetImageIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"imageId",
 		val,
 	)
 }
@@ -530,6 +733,17 @@ func (j *jsiiProxy_CodebuildFleet)SetName(val *string) {
 	_jsii_.Set(
 		j,
 		"name",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CodebuildFleet)SetOverflowBehavior(val *string) {
+	if err := j.validateSetOverflowBehaviorParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"overflowBehavior",
 		val,
 	)
 }
@@ -822,6 +1036,19 @@ func (c *jsiiProxy_CodebuildFleet) GetStringMapAttribute(terraformAttribute *str
 	return returns
 }
 
+func (c *jsiiProxy_CodebuildFleet) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_CodebuildFleet) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -849,6 +1076,17 @@ func (c *jsiiProxy_CodebuildFleet) InterpolationForAttribute(terraformAttribute 
 	return returns
 }
 
+func (c *jsiiProxy_CodebuildFleet) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CodebuildFleet) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -860,6 +1098,17 @@ func (c *jsiiProxy_CodebuildFleet) MoveTo(moveTarget *string, index interface{})
 	)
 }
 
+func (c *jsiiProxy_CodebuildFleet) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CodebuildFleet) OverrideLogicalId(newLogicalId *string) {
 	if err := c.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -868,6 +1117,50 @@ func (c *jsiiProxy_CodebuildFleet) OverrideLogicalId(newLogicalId *string) {
 		c,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (c *jsiiProxy_CodebuildFleet) PutComputeConfiguration(value *CodebuildFleetComputeConfiguration) {
+	if err := c.validatePutComputeConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putComputeConfiguration",
+		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CodebuildFleet) PutFleetProxyConfiguration(value *CodebuildFleetFleetProxyConfiguration) {
+	if err := c.validatePutFleetProxyConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putFleetProxyConfiguration",
+		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CodebuildFleet) PutFleetVpcConfig(value *CodebuildFleetFleetVpcConfig) {
+	if err := c.validatePutFleetVpcConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putFleetVpcConfig",
+		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CodebuildFleet) PutScalingConfiguration(value *CodebuildFleetScalingConfiguration) {
+	if err := c.validatePutScalingConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putScalingConfiguration",
+		[]interface{}{value},
 	)
 }
 
@@ -890,6 +1183,14 @@ func (c *jsiiProxy_CodebuildFleet) ResetBaseCapacity() {
 	)
 }
 
+func (c *jsiiProxy_CodebuildFleet) ResetComputeConfiguration() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetComputeConfiguration",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CodebuildFleet) ResetComputeType() {
 	_jsii_.InvokeVoid(
 		c,
@@ -906,6 +1207,38 @@ func (c *jsiiProxy_CodebuildFleet) ResetEnvironmentType() {
 	)
 }
 
+func (c *jsiiProxy_CodebuildFleet) ResetFleetProxyConfiguration() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetFleetProxyConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CodebuildFleet) ResetFleetServiceRole() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetFleetServiceRole",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CodebuildFleet) ResetFleetVpcConfig() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetFleetVpcConfig",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CodebuildFleet) ResetImageId() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetImageId",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CodebuildFleet) ResetName() {
 	_jsii_.InvokeVoid(
 		c,
@@ -914,10 +1247,26 @@ func (c *jsiiProxy_CodebuildFleet) ResetName() {
 	)
 }
 
+func (c *jsiiProxy_CodebuildFleet) ResetOverflowBehavior() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetOverflowBehavior",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CodebuildFleet) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CodebuildFleet) ResetScalingConfiguration() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetScalingConfiguration",
 		nil, // no parameters
 	)
 }
@@ -936,6 +1285,32 @@ func (c *jsiiProxy_CodebuildFleet) SynthesizeAttributes() *map[string]interface{
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CodebuildFleet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CodebuildFleet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

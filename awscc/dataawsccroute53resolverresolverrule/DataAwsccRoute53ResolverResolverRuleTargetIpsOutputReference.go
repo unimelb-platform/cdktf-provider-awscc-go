@@ -33,6 +33,7 @@ type DataAwsccRoute53ResolverResolverRuleTargetIpsOutputReference interface {
 	Ipv6() *string
 	Port() *string
 	Protocol() *string
+	ServerNameIndication() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -165,6 +166,16 @@ func (j *jsiiProxy_DataAwsccRoute53ResolverResolverRuleTargetIpsOutputReference)
 	_jsii_.Get(
 		j,
 		"protocol",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRoute53ResolverResolverRuleTargetIpsOutputReference) ServerNameIndication() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"serverNameIndication",
 		&returns,
 	)
 	return returns

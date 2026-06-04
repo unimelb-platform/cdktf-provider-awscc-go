@@ -76,6 +76,7 @@ type BillingconductorCustomLineItemCustomLineItemChargeDetailsOutputReference in
 	ResetFlat()
 	ResetLineItemFilters()
 	ResetPercentage()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -574,6 +575,14 @@ func (b *jsiiProxy_BillingconductorCustomLineItemCustomLineItemChargeDetailsOutp
 	_jsii_.InvokeVoid(
 		b,
 		"resetPercentage",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BillingconductorCustomLineItemCustomLineItemChargeDetailsOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetType",
 		nil, // no parameters
 	)
 }

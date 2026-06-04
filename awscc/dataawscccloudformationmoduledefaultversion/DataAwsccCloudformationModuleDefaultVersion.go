@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccloudformationmoduledefaultversion/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudformation_module_default_version awscc_cloudformation_module_default_version}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudformation_module_default_version awscc_cloudformation_module_default_version}.
 type DataAwsccCloudformationModuleDefaultVersion interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -85,6 +85,10 @@ type DataAwsccCloudformationModuleDefaultVersion interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -290,7 +294,7 @@ func (j *jsiiProxy_DataAwsccCloudformationModuleDefaultVersion) VersionId() *str
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudformation_module_default_version awscc_cloudformation_module_default_version} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudformation_module_default_version awscc_cloudformation_module_default_version} Data Source.
 func NewDataAwsccCloudformationModuleDefaultVersion(scope constructs.Construct, id *string, config *DataAwsccCloudformationModuleDefaultVersionConfig) DataAwsccCloudformationModuleDefaultVersion {
 	_init_.Initialize()
 
@@ -308,7 +312,7 @@ func NewDataAwsccCloudformationModuleDefaultVersion(scope constructs.Construct, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudformation_module_default_version awscc_cloudformation_module_default_version} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudformation_module_default_version awscc_cloudformation_module_default_version} Data Source.
 func NewDataAwsccCloudformationModuleDefaultVersion_Override(d DataAwsccCloudformationModuleDefaultVersion, scope constructs.Construct, id *string, config *DataAwsccCloudformationModuleDefaultVersionConfig) {
 	_init_.Initialize()
 
@@ -675,6 +679,32 @@ func (d *jsiiProxy_DataAwsccCloudformationModuleDefaultVersion) SynthesizeAttrib
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudformationModuleDefaultVersion) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudformationModuleDefaultVersion) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

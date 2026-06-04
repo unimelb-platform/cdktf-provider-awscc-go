@@ -82,6 +82,7 @@ type MediapackagePackagingConfigurationDashPackageOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDashManifests(value interface{})
 	PutEncryption(value *MediapackagePackagingConfigurationDashPackageEncryption)
+	ResetDashManifests()
 	ResetEncryption()
 	ResetIncludeEncoderConfigurationInSegments()
 	ResetIncludeIframeOnlyStream()
@@ -656,6 +657,14 @@ func (m *jsiiProxy_MediapackagePackagingConfigurationDashPackageOutputReference)
 		m,
 		"putEncryption",
 		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_MediapackagePackagingConfigurationDashPackageOutputReference) ResetDashManifests() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetDashManifests",
+		nil, // no parameters
 	)
 }
 

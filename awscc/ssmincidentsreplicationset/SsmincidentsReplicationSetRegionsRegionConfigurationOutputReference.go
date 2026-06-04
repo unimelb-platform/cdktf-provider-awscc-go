@@ -64,6 +64,7 @@ type SsmincidentsReplicationSetRegionsRegionConfigurationOutputReference interfa
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetSseKmsKeyId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_SsmincidentsReplicationSetRegionsRegionConfigurationOutputRef
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SsmincidentsReplicationSetRegionsRegionConfigurationOutputReference) ResetSseKmsKeyId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSseKmsKeyId",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SsmincidentsReplicationSetRegionsRegionConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -56,7 +56,15 @@ func (r *jsiiProxy_RdsIntegration) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
+func (r *jsiiProxy_RdsIntegration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RdsIntegration) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (r *jsiiProxy_RdsIntegration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -93,6 +101,14 @@ func (j *jsiiProxy_RdsIntegration) validateSetConnectionParameters(val interface
 }
 
 func (j *jsiiProxy_RdsIntegration) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RdsIntegration) validateSetDataFilterParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_RdsIntegration) validateSetDescriptionParameters(val *string) error {
 	return nil
 }
 

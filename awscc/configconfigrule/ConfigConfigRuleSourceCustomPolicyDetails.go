@@ -2,17 +2,19 @@ package configconfigrule
 
 
 type ConfigConfigRuleSourceCustomPolicyDetails struct {
-	// Logging toggle for custom policy rule.
+	// The boolean expression for enabling debug logging for your CC Custom Policy rule. The default value is ``false``.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/config_config_rule#enable_debug_log_delivery ConfigConfigRule#enable_debug_log_delivery}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/config_config_rule#enable_debug_log_delivery ConfigConfigRule#enable_debug_log_delivery}
 	EnableDebugLogDelivery interface{} `field:"optional" json:"enableDebugLogDelivery" yaml:"enableDebugLogDelivery"`
-	// Runtime system for custom policy rule.
+	// The runtime system for your CC Custom Policy rule.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/config_config_rule#policy_runtime ConfigConfigRule#policy_runtime}
+	// Guard is a policy-as-code language that allows you to write policies that are enforced by CC Custom Policy rules. For more information about Guard, see the [Guard GitHub Repository](https://docs.aws.amazon.com/https://github.com/aws-cloudformation/cloudformation-guard).
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/config_config_rule#policy_runtime ConfigConfigRule#policy_runtime}
 	PolicyRuntime *string `field:"optional" json:"policyRuntime" yaml:"policyRuntime"`
-	// Policy definition containing logic for custom policy rule.
+	// The policy definition containing the logic for your CC Custom Policy rule.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/config_config_rule#policy_text ConfigConfigRule#policy_text}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/config_config_rule#policy_text ConfigConfigRule#policy_text}
 	PolicyText *string `field:"optional" json:"policyText" yaml:"policyText"`
 }
 

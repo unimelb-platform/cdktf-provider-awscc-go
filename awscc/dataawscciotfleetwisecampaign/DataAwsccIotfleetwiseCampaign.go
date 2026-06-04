@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciotfleetwisecampaign/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotfleetwise_campaign awscc_iotfleetwise_campaign}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotfleetwise_campaign awscc_iotfleetwise_campaign}.
 type DataAwsccIotfleetwiseCampaign interface {
 	cdktf.TerraformDataSource
 	Action() *string
@@ -27,6 +27,7 @@ type DataAwsccIotfleetwiseCampaign interface {
 	CreationTime() *string
 	DataDestinationConfigs() DataAwsccIotfleetwiseCampaignDataDestinationConfigsList
 	DataExtraDimensions() *[]*string
+	DataPartitions() DataAwsccIotfleetwiseCampaignDataPartitionsList
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -63,6 +64,7 @@ type DataAwsccIotfleetwiseCampaign interface {
 	RawOverrides() interface{}
 	SignalCatalogArn() *string
 	SignalsToCollect() DataAwsccIotfleetwiseCampaignSignalsToCollectList
+	SignalsToFetch() DataAwsccIotfleetwiseCampaignSignalsToFetchList
 	SpoolingMode() *string
 	StartTime() *string
 	Status() *string
@@ -103,6 +105,10 @@ type DataAwsccIotfleetwiseCampaign interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -212,6 +218,16 @@ func (j *jsiiProxy_DataAwsccIotfleetwiseCampaign) DataExtraDimensions() *[]*stri
 	_jsii_.Get(
 		j,
 		"dataExtraDimensions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotfleetwiseCampaign) DataPartitions() DataAwsccIotfleetwiseCampaignDataPartitionsList {
+	var returns DataAwsccIotfleetwiseCampaignDataPartitionsList
+	_jsii_.Get(
+		j,
+		"dataPartitions",
 		&returns,
 	)
 	return returns
@@ -407,6 +423,16 @@ func (j *jsiiProxy_DataAwsccIotfleetwiseCampaign) SignalsToCollect() DataAwsccIo
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccIotfleetwiseCampaign) SignalsToFetch() DataAwsccIotfleetwiseCampaignSignalsToFetchList {
+	var returns DataAwsccIotfleetwiseCampaignSignalsToFetchList
+	_jsii_.Get(
+		j,
+		"signalsToFetch",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccIotfleetwiseCampaign) SpoolingMode() *string {
 	var returns *string
 	_jsii_.Get(
@@ -488,7 +514,7 @@ func (j *jsiiProxy_DataAwsccIotfleetwiseCampaign) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotfleetwise_campaign awscc_iotfleetwise_campaign} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotfleetwise_campaign awscc_iotfleetwise_campaign} Data Source.
 func NewDataAwsccIotfleetwiseCampaign(scope constructs.Construct, id *string, config *DataAwsccIotfleetwiseCampaignConfig) DataAwsccIotfleetwiseCampaign {
 	_init_.Initialize()
 
@@ -506,7 +532,7 @@ func NewDataAwsccIotfleetwiseCampaign(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotfleetwise_campaign awscc_iotfleetwise_campaign} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotfleetwise_campaign awscc_iotfleetwise_campaign} Data Source.
 func NewDataAwsccIotfleetwiseCampaign_Override(d DataAwsccIotfleetwiseCampaign, scope constructs.Construct, id *string, config *DataAwsccIotfleetwiseCampaignConfig) {
 	_init_.Initialize()
 
@@ -873,6 +899,32 @@ func (d *jsiiProxy_DataAwsccIotfleetwiseCampaign) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotfleetwiseCampaign) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotfleetwiseCampaign) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

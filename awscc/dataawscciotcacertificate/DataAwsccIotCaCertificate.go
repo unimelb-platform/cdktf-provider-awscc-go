@@ -9,11 +9,12 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciotcacertificate/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iot_ca_certificate awscc_iot_ca_certificate}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iot_ca_certificate awscc_iot_ca_certificate}.
 type DataAwsccIotCaCertificate interface {
 	cdktf.TerraformDataSource
 	Arn() *string
 	AutoRegistrationStatus() *string
+	CaCertificateId() *string
 	CaCertificatePem() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
@@ -91,6 +92,10 @@ type DataAwsccIotCaCertificate interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -120,6 +125,16 @@ func (j *jsiiProxy_DataAwsccIotCaCertificate) AutoRegistrationStatus() *string {
 	_jsii_.Get(
 		j,
 		"autoRegistrationStatus",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotCaCertificate) CaCertificateId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"caCertificateId",
 		&returns,
 	)
 	return returns
@@ -356,7 +371,7 @@ func (j *jsiiProxy_DataAwsccIotCaCertificate) VerificationCertificatePem() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iot_ca_certificate awscc_iot_ca_certificate} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iot_ca_certificate awscc_iot_ca_certificate} Data Source.
 func NewDataAwsccIotCaCertificate(scope constructs.Construct, id *string, config *DataAwsccIotCaCertificateConfig) DataAwsccIotCaCertificate {
 	_init_.Initialize()
 
@@ -374,7 +389,7 @@ func NewDataAwsccIotCaCertificate(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iot_ca_certificate awscc_iot_ca_certificate} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iot_ca_certificate awscc_iot_ca_certificate} Data Source.
 func NewDataAwsccIotCaCertificate_Override(d DataAwsccIotCaCertificate, scope constructs.Construct, id *string, config *DataAwsccIotCaCertificateConfig) {
 	_init_.Initialize()
 
@@ -741,6 +756,32 @@ func (d *jsiiProxy_DataAwsccIotCaCertificate) SynthesizeAttributes() *map[string
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotCaCertificate) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotCaCertificate) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

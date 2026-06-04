@@ -1,0 +1,6 @@
+package dataawsccconnecthoursofoperation
+
+
+type DataAwsccConnectHoursOfOperationHoursOfOperationOverridesOverrideConfigStartTime struct {
+}
+

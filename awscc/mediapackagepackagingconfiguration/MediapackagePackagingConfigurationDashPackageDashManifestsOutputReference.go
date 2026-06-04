@@ -27,8 +27,8 @@ type MediapackagePackagingConfigurationDashPackageDashManifestsOutputReference i
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *MediapackagePackagingConfigurationDashPackageDashManifests
-	SetInternalValue(val *MediapackagePackagingConfigurationDashPackageDashManifests)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	ManifestLayout() *string
 	SetManifestLayout(val *string)
 	ManifestLayoutInput() *string
@@ -140,8 +140,8 @@ func (j *jsiiProxy_MediapackagePackagingConfigurationDashPackageDashManifestsOut
 	return returns
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfigurationDashPackageDashManifestsOutputReference) InternalValue() *MediapackagePackagingConfigurationDashPackageDashManifests {
-	var returns *MediapackagePackagingConfigurationDashPackageDashManifests
+func (j *jsiiProxy_MediapackagePackagingConfigurationDashPackageDashManifestsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -340,7 +340,7 @@ func (j *jsiiProxy_MediapackagePackagingConfigurationDashPackageDashManifestsOut
 	)
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfigurationDashPackageDashManifestsOutputReference)SetInternalValue(val *MediapackagePackagingConfigurationDashPackageDashManifests) {
+func (j *jsiiProxy_MediapackagePackagingConfigurationDashPackageDashManifestsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

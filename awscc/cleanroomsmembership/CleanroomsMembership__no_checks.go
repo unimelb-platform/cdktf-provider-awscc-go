@@ -56,11 +56,23 @@ func (c *jsiiProxy_CleanroomsMembership) validateInterpolationForAttributeParame
 	return nil
 }
 
+func (c *jsiiProxy_CleanroomsMembership) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CleanroomsMembership) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (c *jsiiProxy_CleanroomsMembership) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CleanroomsMembership) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (c *jsiiProxy_CleanroomsMembership) validatePutDefaultJobResultConfigurationParameters(value *CleanroomsMembershipDefaultJobResultConfiguration) error {
 	return nil
 }
 
@@ -101,6 +113,10 @@ func (j *jsiiProxy_CleanroomsMembership) validateSetConnectionParameters(val int
 }
 
 func (j *jsiiProxy_CleanroomsMembership) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_CleanroomsMembership) validateSetJobLogStatusParameters(val *string) error {
 	return nil
 }
 

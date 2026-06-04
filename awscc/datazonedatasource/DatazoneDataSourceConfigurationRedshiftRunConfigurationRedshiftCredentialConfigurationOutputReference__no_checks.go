@@ -56,7 +56,7 @@ func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshi
 	return nil
 }
 
-func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialConfigurationOutputReference) validateSetInternalValueParameters(val *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialConfiguration) error {
+func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialConfigurationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

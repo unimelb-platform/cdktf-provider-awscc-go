@@ -93,6 +93,8 @@ type KendraDataSourceDataSourceConfigurationSalesforceConfigurationOutputReferen
 	ResetExcludeAttachmentFilePatterns()
 	ResetIncludeAttachmentFilePatterns()
 	ResetKnowledgeArticleConfiguration()
+	ResetSecretArn()
+	ResetServerUrl()
 	ResetStandardObjectAttachmentConfiguration()
 	ResetStandardObjectConfigurations()
 	// Produce the Token's value at resolution time.
@@ -764,6 +766,22 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSalesforceConfiguratio
 	_jsii_.InvokeVoid(
 		k,
 		"resetKnowledgeArticleConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSalesforceConfigurationOutputReference) ResetSecretArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetSecretArn",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSalesforceConfigurationOutputReference) ResetServerUrl() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetServerUrl",
 		nil, // no parameters
 	)
 }

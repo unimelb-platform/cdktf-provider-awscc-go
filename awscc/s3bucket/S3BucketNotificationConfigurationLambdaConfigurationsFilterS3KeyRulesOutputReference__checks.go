@@ -163,9 +163,25 @@ func (j *jsiiProxy_S3BucketNotificationConfigurationLambdaConfigurationsFilterS3
 	return nil
 }
 
-func (j *jsiiProxy_S3BucketNotificationConfigurationLambdaConfigurationsFilterS3KeyRulesOutputReference) validateSetInternalValueParameters(val *S3BucketNotificationConfigurationLambdaConfigurationsFilterS3KeyRules) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_S3BucketNotificationConfigurationLambdaConfigurationsFilterS3KeyRulesOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *S3BucketNotificationConfigurationLambdaConfigurationsFilterS3KeyRules:
+		val := val.(*S3BucketNotificationConfigurationLambdaConfigurationsFilterS3KeyRules)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case S3BucketNotificationConfigurationLambdaConfigurationsFilterS3KeyRules:
+		val_ := val.(S3BucketNotificationConfigurationLambdaConfigurationsFilterS3KeyRules)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *S3BucketNotificationConfigurationLambdaConfigurationsFilterS3KeyRules; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

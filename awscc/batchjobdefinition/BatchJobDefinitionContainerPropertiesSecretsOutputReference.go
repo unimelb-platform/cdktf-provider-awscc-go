@@ -67,6 +67,8 @@ type BatchJobDefinitionContainerPropertiesSecretsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
+	ResetValueFrom()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesSecretsOutputReference) 
 	)
 
 	return returns
+}
+
+func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesSecretsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesSecretsOutputReference) ResetValueFrom() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetValueFrom",
+		nil, // no parameters
+	)
 }
 
 func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesSecretsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

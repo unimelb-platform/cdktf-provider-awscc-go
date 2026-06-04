@@ -56,11 +56,27 @@ func (m *jsiiProxy_Mediapackagev2Channel) validateInterpolationForAttributeParam
 	return nil
 }
 
+func (m *jsiiProxy_Mediapackagev2Channel) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_Mediapackagev2Channel) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (m *jsiiProxy_Mediapackagev2Channel) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_Mediapackagev2Channel) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (m *jsiiProxy_Mediapackagev2Channel) validatePutInputSwitchConfigurationParameters(value *Mediapackagev2ChannelInputSwitchConfiguration) error {
+	return nil
+}
+
+func (m *jsiiProxy_Mediapackagev2Channel) validatePutOutputHeaderConfigurationParameters(value *Mediapackagev2ChannelOutputHeaderConfiguration) error {
 	return nil
 }
 
@@ -101,6 +117,10 @@ func (j *jsiiProxy_Mediapackagev2Channel) validateSetCountParameters(val interfa
 }
 
 func (j *jsiiProxy_Mediapackagev2Channel) validateSetDescriptionParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Mediapackagev2Channel) validateSetInputTypeParameters(val *string) error {
 	return nil
 }
 

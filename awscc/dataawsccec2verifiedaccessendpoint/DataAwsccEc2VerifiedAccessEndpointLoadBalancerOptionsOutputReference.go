@@ -31,6 +31,7 @@ type DataAwsccEc2VerifiedAccessEndpointLoadBalancerOptionsOutputReference interf
 	SetInternalValue(val *DataAwsccEc2VerifiedAccessEndpointLoadBalancerOptions)
 	LoadBalancerArn() *string
 	Port() *float64
+	PortRanges() DataAwsccEc2VerifiedAccessEndpointLoadBalancerOptionsPortRangesList
 	Protocol() *string
 	SubnetIds() *[]*string
 	// Experimental.
@@ -145,6 +146,16 @@ func (j *jsiiProxy_DataAwsccEc2VerifiedAccessEndpointLoadBalancerOptionsOutputRe
 	_jsii_.Get(
 		j,
 		"port",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VerifiedAccessEndpointLoadBalancerOptionsOutputReference) PortRanges() DataAwsccEc2VerifiedAccessEndpointLoadBalancerOptionsPortRangesList {
+	var returns DataAwsccEc2VerifiedAccessEndpointLoadBalancerOptionsPortRangesList
+	_jsii_.Get(
+		j,
+		"portRanges",
 		&returns,
 	)
 	return returns

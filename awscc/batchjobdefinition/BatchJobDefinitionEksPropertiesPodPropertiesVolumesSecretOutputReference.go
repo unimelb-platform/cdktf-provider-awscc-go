@@ -68,6 +68,7 @@ type BatchJobDefinitionEksPropertiesPodPropertiesVolumesSecretOutputReference in
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetOptional()
+	ResetSecretName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesVolumesSecretOutp
 	_jsii_.InvokeVoid(
 		b,
 		"resetOptional",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesVolumesSecretOutputReference) ResetSecretName() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetSecretName",
 		nil, // no parameters
 	)
 }

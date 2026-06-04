@@ -2,10 +2,6 @@ package medialivemultiplexprogram
 
 
 type MedialiveMultiplexprogramMultiplexProgramSettings struct {
-	// Unique program number.
-	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/medialive_multiplexprogram#program_number MedialiveMultiplexprogram#program_number}
-	ProgramNumber *float64 `field:"required" json:"programNumber" yaml:"programNumber"`
 	// Indicates which pipeline is preferred by the multiplex for program ingest.
 	//
 	// If set to \"PIPELINE_0\" or \"PIPELINE_1\" and an unhealthy ingest causes the multiplex to switch to the non-preferred pipeline,
@@ -14,15 +10,19 @@ type MedialiveMultiplexprogramMultiplexProgramSettings struct {
 	// it will only switch if the active pipeline becomes unhealthy.
 	//
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/medialive_multiplexprogram#preferred_channel_pipeline MedialiveMultiplexprogram#preferred_channel_pipeline}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/medialive_multiplexprogram#preferred_channel_pipeline MedialiveMultiplexprogram#preferred_channel_pipeline}
 	PreferredChannelPipeline *string `field:"optional" json:"preferredChannelPipeline" yaml:"preferredChannelPipeline"`
+	// Unique program number.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/medialive_multiplexprogram#program_number MedialiveMultiplexprogram#program_number}
+	ProgramNumber *float64 `field:"optional" json:"programNumber" yaml:"programNumber"`
 	// Transport stream service descriptor configuration for the Multiplex program.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/medialive_multiplexprogram#service_descriptor MedialiveMultiplexprogram#service_descriptor}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/medialive_multiplexprogram#service_descriptor MedialiveMultiplexprogram#service_descriptor}
 	ServiceDescriptor *MedialiveMultiplexprogramMultiplexProgramSettingsServiceDescriptor `field:"optional" json:"serviceDescriptor" yaml:"serviceDescriptor"`
 	// Program video settings configuration.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/medialive_multiplexprogram#video_settings MedialiveMultiplexprogram#video_settings}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/medialive_multiplexprogram#video_settings MedialiveMultiplexprogram#video_settings}
 	VideoSettings *MedialiveMultiplexprogramMultiplexProgramSettingsVideoSettings `field:"optional" json:"videoSettings" yaml:"videoSettings"`
 }
 

@@ -4,6 +4,10 @@ package dataawsccquicksighttheme
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccQuicksightThemeConfigurationTypographyFontFamiliesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccQuicksightThemeConfigurationTypographyFontFamiliesList) validateGetParameters(index *float64) error {
 	return nil
 }

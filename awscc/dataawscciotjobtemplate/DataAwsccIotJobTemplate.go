@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciotjobtemplate/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iot_job_template awscc_iot_job_template}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iot_job_template awscc_iot_job_template}.
 type DataAwsccIotJobTemplate interface {
 	cdktf.TerraformDataSource
 	AbortConfig() DataAwsccIotJobTemplateAbortConfigOutputReference
@@ -96,6 +96,10 @@ type DataAwsccIotJobTemplate interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -411,7 +415,7 @@ func (j *jsiiProxy_DataAwsccIotJobTemplate) TimeoutConfig() DataAwsccIotJobTempl
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iot_job_template awscc_iot_job_template} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iot_job_template awscc_iot_job_template} Data Source.
 func NewDataAwsccIotJobTemplate(scope constructs.Construct, id *string, config *DataAwsccIotJobTemplateConfig) DataAwsccIotJobTemplate {
 	_init_.Initialize()
 
@@ -429,7 +433,7 @@ func NewDataAwsccIotJobTemplate(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iot_job_template awscc_iot_job_template} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iot_job_template awscc_iot_job_template} Data Source.
 func NewDataAwsccIotJobTemplate_Override(d DataAwsccIotJobTemplate, scope constructs.Construct, id *string, config *DataAwsccIotJobTemplateConfig) {
 	_init_.Initialize()
 
@@ -796,6 +800,32 @@ func (d *jsiiProxy_DataAwsccIotJobTemplate) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotJobTemplate) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotJobTemplate) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

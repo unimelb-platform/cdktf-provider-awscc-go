@@ -64,7 +64,7 @@ func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaL
 	return nil
 }
 
-func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStructOutputReference) validateSetInternalValueParameters(val *Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStruct) error {
+func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStructOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

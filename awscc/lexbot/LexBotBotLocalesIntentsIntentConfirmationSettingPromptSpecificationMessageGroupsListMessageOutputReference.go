@@ -31,8 +31,8 @@ type LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageG
 	Fqn() *string
 	ImageResponseCard() LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListMessageImageResponseCardOutputReference
 	ImageResponseCardInput() interface{}
-	InternalValue() *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListMessage
-	SetInternalValue(val *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListMessage)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	PlainTextMessage() LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListMessagePlainTextMessageOutputReference
 	PlainTextMessageInput() interface{}
 	SsmlMessage() LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListMessageSsmlMessageOutputReference
@@ -172,8 +172,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecifi
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListMessageOutputReference) InternalValue() *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListMessage {
-	var returns *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListMessage
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListMessageOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -292,7 +292,7 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecifi
 	)
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListMessageOutputReference)SetInternalValue(val *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListMessage) {
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListMessageOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

@@ -91,9 +91,11 @@ type SagemakerModelBiasJobDefinitionModelBiasJobInputEndpointInputOutputReferenc
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEndpointName()
 	ResetEndTimeOffset()
 	ResetFeaturesAttribute()
 	ResetInferenceAttribute()
+	ResetLocalPath()
 	ResetProbabilityAttribute()
 	ResetProbabilityThresholdAttribute()
 	ResetS3DataDistributionType()
@@ -763,6 +765,14 @@ func (s *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputEndpointInput
 	return returns
 }
 
+func (s *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputEndpointInputOutputReference) ResetEndpointName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetEndpointName",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputEndpointInputOutputReference) ResetEndTimeOffset() {
 	_jsii_.InvokeVoid(
 		s,
@@ -783,6 +793,14 @@ func (s *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputEndpointInput
 	_jsii_.InvokeVoid(
 		s,
 		"resetInferenceAttribute",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputEndpointInputOutputReference) ResetLocalPath() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetLocalPath",
 		nil, // no parameters
 	)
 }

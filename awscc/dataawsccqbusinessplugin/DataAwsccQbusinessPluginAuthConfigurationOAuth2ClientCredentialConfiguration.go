@@ -1,0 +1,6 @@
+package dataawsccqbusinessplugin
+
+
+type DataAwsccQbusinessPluginAuthConfigurationOAuth2ClientCredentialConfiguration struct {
+}
+

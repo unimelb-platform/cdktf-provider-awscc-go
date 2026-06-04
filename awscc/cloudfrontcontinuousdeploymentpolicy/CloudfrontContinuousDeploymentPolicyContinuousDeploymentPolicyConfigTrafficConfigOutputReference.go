@@ -72,6 +72,7 @@ type CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolicyConfigTraffic
 	PutSingleWeightConfig(value *CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolicyConfigTrafficConfigSingleWeightConfig)
 	ResetSingleHeaderConfig()
 	ResetSingleWeightConfig()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (c *jsiiProxy_CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolic
 	_jsii_.InvokeVoid(
 		c,
 		"resetSingleWeightConfig",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolicyConfigTrafficConfigOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetType",
 		nil, // no parameters
 	)
 }

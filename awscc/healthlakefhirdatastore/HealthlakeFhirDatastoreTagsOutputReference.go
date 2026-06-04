@@ -67,6 +67,8 @@ type HealthlakeFhirDatastoreTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (h *jsiiProxy_HealthlakeFhirDatastoreTagsOutputReference) InterpolationForA
 	)
 
 	return returns
+}
+
+func (h *jsiiProxy_HealthlakeFhirDatastoreTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		h,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (h *jsiiProxy_HealthlakeFhirDatastoreTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		h,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (h *jsiiProxy_HealthlakeFhirDatastoreTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

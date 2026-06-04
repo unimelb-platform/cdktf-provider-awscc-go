@@ -43,6 +43,11 @@ type OsisPipelineVpcOptionsOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	VpcAttachmentOptions() OsisPipelineVpcOptionsVpcAttachmentOptionsOutputReference
+	VpcAttachmentOptionsInput() interface{}
+	VpcEndpointManagement() *string
+	SetVpcEndpointManagement(val *string)
+	VpcEndpointManagementInput() *string
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -67,7 +72,11 @@ type OsisPipelineVpcOptionsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutVpcAttachmentOptions(value *OsisPipelineVpcOptionsVpcAttachmentOptions)
 	ResetSecurityGroupIds()
+	ResetSubnetIds()
+	ResetVpcAttachmentOptions()
+	ResetVpcEndpointManagement()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -193,6 +202,46 @@ func (j *jsiiProxy_OsisPipelineVpcOptionsOutputReference) TerraformResource() cd
 	return returns
 }
 
+func (j *jsiiProxy_OsisPipelineVpcOptionsOutputReference) VpcAttachmentOptions() OsisPipelineVpcOptionsVpcAttachmentOptionsOutputReference {
+	var returns OsisPipelineVpcOptionsVpcAttachmentOptionsOutputReference
+	_jsii_.Get(
+		j,
+		"vpcAttachmentOptions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OsisPipelineVpcOptionsOutputReference) VpcAttachmentOptionsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"vpcAttachmentOptionsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OsisPipelineVpcOptionsOutputReference) VpcEndpointManagement() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"vpcEndpointManagement",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OsisPipelineVpcOptionsOutputReference) VpcEndpointManagementInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"vpcEndpointManagementInput",
+		&returns,
+	)
+	return returns
+}
+
 
 func NewOsisPipelineVpcOptionsOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) OsisPipelineVpcOptionsOutputReference {
 	_init_.Initialize()
@@ -294,6 +343,17 @@ func (j *jsiiProxy_OsisPipelineVpcOptionsOutputReference)SetTerraformResource(va
 	_jsii_.Set(
 		j,
 		"terraformResource",
+		val,
+	)
+}
+
+func (j *jsiiProxy_OsisPipelineVpcOptionsOutputReference)SetVpcEndpointManagement(val *string) {
+	if err := j.validateSetVpcEndpointManagementParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"vpcEndpointManagement",
 		val,
 	)
 }
@@ -484,10 +544,45 @@ func (o *jsiiProxy_OsisPipelineVpcOptionsOutputReference) InterpolationForAttrib
 	return returns
 }
 
+func (o *jsiiProxy_OsisPipelineVpcOptionsOutputReference) PutVpcAttachmentOptions(value *OsisPipelineVpcOptionsVpcAttachmentOptions) {
+	if err := o.validatePutVpcAttachmentOptionsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"putVpcAttachmentOptions",
+		[]interface{}{value},
+	)
+}
+
 func (o *jsiiProxy_OsisPipelineVpcOptionsOutputReference) ResetSecurityGroupIds() {
 	_jsii_.InvokeVoid(
 		o,
 		"resetSecurityGroupIds",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OsisPipelineVpcOptionsOutputReference) ResetSubnetIds() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetSubnetIds",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OsisPipelineVpcOptionsOutputReference) ResetVpcAttachmentOptions() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetVpcAttachmentOptions",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OsisPipelineVpcOptionsOutputReference) ResetVpcEndpointManagement() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetVpcEndpointManagement",
 		nil, // no parameters
 	)
 }

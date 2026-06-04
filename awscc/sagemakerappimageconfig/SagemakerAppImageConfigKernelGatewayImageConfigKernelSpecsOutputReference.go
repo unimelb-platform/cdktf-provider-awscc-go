@@ -30,8 +30,8 @@ type SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecsOutputReference i
 	DisplayNameInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecs
-	SetInternalValue(val *SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecs)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -68,6 +68,7 @@ type SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecsOutputReference i
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetDisplayName()
+	ResetName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -143,8 +144,8 @@ func (j *jsiiProxy_SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecsOut
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecsOutputReference) InternalValue() *SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecs {
-	var returns *SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecs
+func (j *jsiiProxy_SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -254,7 +255,7 @@ func (j *jsiiProxy_SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecsOut
 	)
 }
 
-func (j *jsiiProxy_SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecsOutputReference)SetInternalValue(val *SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecs) {
+func (j *jsiiProxy_SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -488,6 +489,14 @@ func (s *jsiiProxy_SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecsOut
 	_jsii_.InvokeVoid(
 		s,
 		"resetDisplayName",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerAppImageConfigKernelGatewayImageConfigKernelSpecsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetName",
 		nil, // no parameters
 	)
 }

@@ -67,6 +67,8 @@ type CustomerprofilesCalculatedAttributeDefinitionConditionsThresholdOutputRefer
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetOperator()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsThresh
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsThresholdOutputReference) ResetOperator() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetOperator",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsThresholdOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsThresholdOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

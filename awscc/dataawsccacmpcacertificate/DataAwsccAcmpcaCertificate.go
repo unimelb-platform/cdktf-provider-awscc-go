@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccacmpcacertificate/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/acmpca_certificate awscc_acmpca_certificate}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/acmpca_certificate awscc_acmpca_certificate}.
 type DataAwsccAcmpcaCertificate interface {
 	cdktf.TerraformDataSource
 	ApiPassthrough() DataAwsccAcmpcaCertificateApiPassthroughOutputReference
@@ -91,6 +91,10 @@ type DataAwsccAcmpcaCertificate interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -356,7 +360,7 @@ func (j *jsiiProxy_DataAwsccAcmpcaCertificate) ValidityNotBefore() DataAwsccAcmp
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/acmpca_certificate awscc_acmpca_certificate} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/acmpca_certificate awscc_acmpca_certificate} Data Source.
 func NewDataAwsccAcmpcaCertificate(scope constructs.Construct, id *string, config *DataAwsccAcmpcaCertificateConfig) DataAwsccAcmpcaCertificate {
 	_init_.Initialize()
 
@@ -374,7 +378,7 @@ func NewDataAwsccAcmpcaCertificate(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/acmpca_certificate awscc_acmpca_certificate} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/acmpca_certificate awscc_acmpca_certificate} Data Source.
 func NewDataAwsccAcmpcaCertificate_Override(d DataAwsccAcmpcaCertificate, scope constructs.Construct, id *string, config *DataAwsccAcmpcaCertificateConfig) {
 	_init_.Initialize()
 
@@ -741,6 +745,32 @@ func (d *jsiiProxy_DataAwsccAcmpcaCertificate) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAcmpcaCertificate) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAcmpcaCertificate) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

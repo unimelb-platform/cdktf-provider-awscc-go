@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccs3multiregionaccesspoint/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/s3_multi_region_access_point awscc_s3_multi_region_access_point}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/s3_multi_region_access_point awscc_s3_multi_region_access_point}.
 type DataAwsccS3MultiRegionAccessPoint interface {
 	cdktf.TerraformDataSource
 	Alias() *string
@@ -87,6 +87,10 @@ type DataAwsccS3MultiRegionAccessPoint interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -312,7 +316,7 @@ func (j *jsiiProxy_DataAwsccS3MultiRegionAccessPoint) TerraformResourceType() *s
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/s3_multi_region_access_point awscc_s3_multi_region_access_point} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/s3_multi_region_access_point awscc_s3_multi_region_access_point} Data Source.
 func NewDataAwsccS3MultiRegionAccessPoint(scope constructs.Construct, id *string, config *DataAwsccS3MultiRegionAccessPointConfig) DataAwsccS3MultiRegionAccessPoint {
 	_init_.Initialize()
 
@@ -330,7 +334,7 @@ func NewDataAwsccS3MultiRegionAccessPoint(scope constructs.Construct, id *string
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/s3_multi_region_access_point awscc_s3_multi_region_access_point} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/s3_multi_region_access_point awscc_s3_multi_region_access_point} Data Source.
 func NewDataAwsccS3MultiRegionAccessPoint_Override(d DataAwsccS3MultiRegionAccessPoint, scope constructs.Construct, id *string, config *DataAwsccS3MultiRegionAccessPointConfig) {
 	_init_.Initialize()
 
@@ -697,6 +701,32 @@ func (d *jsiiProxy_DataAwsccS3MultiRegionAccessPoint) SynthesizeAttributes() *ma
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccS3MultiRegionAccessPoint) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccS3MultiRegionAccessPoint) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

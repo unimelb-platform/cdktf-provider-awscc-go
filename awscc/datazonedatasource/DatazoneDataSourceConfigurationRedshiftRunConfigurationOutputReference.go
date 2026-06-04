@@ -33,9 +33,9 @@ type DatazoneDataSourceConfigurationRedshiftRunConfigurationOutputReference inte
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	RedshiftCredentialConfiguration() DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialConfigurationOutputReference
-	RedshiftCredentialConfigurationInput() *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialConfiguration
+	RedshiftCredentialConfigurationInput() interface{}
 	RedshiftStorage() DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorageOutputReference
-	RedshiftStorageInput() *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorage
+	RedshiftStorageInput() interface{}
 	RelationalFilterConfigurations() DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConfigurationsList
 	RelationalFilterConfigurationsInput() interface{}
 	// Experimental.
@@ -74,6 +74,9 @@ type DatazoneDataSourceConfigurationRedshiftRunConfigurationOutputReference inte
 	PutRedshiftStorage(value *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorage)
 	PutRelationalFilterConfigurations(value interface{})
 	ResetDataAccessRole()
+	ResetRedshiftCredentialConfiguration()
+	ResetRedshiftStorage()
+	ResetRelationalFilterConfigurations()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -169,8 +172,8 @@ func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationOutput
 	return returns
 }
 
-func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationOutputReference) RedshiftCredentialConfigurationInput() *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialConfiguration {
-	var returns *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftCredentialConfiguration
+func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationOutputReference) RedshiftCredentialConfigurationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"redshiftCredentialConfigurationInput",
@@ -189,8 +192,8 @@ func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationOutput
 	return returns
 }
 
-func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationOutputReference) RedshiftStorageInput() *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorage {
-	var returns *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorage
+func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationOutputReference) RedshiftStorageInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"redshiftStorageInput",
@@ -556,6 +559,30 @@ func (d *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationOutput
 	_jsii_.InvokeVoid(
 		d,
 		"resetDataAccessRole",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationOutputReference) ResetRedshiftCredentialConfiguration() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetRedshiftCredentialConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationOutputReference) ResetRedshiftStorage() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetRedshiftStorage",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationOutputReference) ResetRelationalFilterConfigurations() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetRelationalFilterConfigurations",
 		nil, // no parameters
 	)
 }

@@ -30,8 +30,8 @@ type CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputConstraintsO
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputConstraints
-	SetInternalValue(val *CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputConstraints)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Minimum() *float64
 	SetMinimum(val *float64)
 	MinimumInput() *float64
@@ -70,6 +70,9 @@ type CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputConstraintsO
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetColumnName()
+	ResetMinimum()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -145,8 +148,8 @@ func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutp
 	return returns
 }
 
-func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputConstraintsOutputReference) InternalValue() *CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputConstraints {
-	var returns *CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputConstraints
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputConstraintsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -276,7 +279,7 @@ func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutp
 	)
 }
 
-func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputConstraintsOutputReference)SetInternalValue(val *CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputConstraints) {
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputConstraintsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -515,6 +518,30 @@ func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutp
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputConstraintsOutputReference) ResetColumnName() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetColumnName",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputConstraintsOutputReference) ResetMinimum() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetMinimum",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputConstraintsOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetType",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputConstraintsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

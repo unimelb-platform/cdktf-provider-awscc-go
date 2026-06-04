@@ -30,6 +30,7 @@ type DataAwsccDatasyncTaskScheduleOutputReference interface {
 	InternalValue() *DataAwsccDatasyncTaskSchedule
 	SetInternalValue(val *DataAwsccDatasyncTaskSchedule)
 	ScheduleExpression() *string
+	Status() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -132,6 +133,16 @@ func (j *jsiiProxy_DataAwsccDatasyncTaskScheduleOutputReference) ScheduleExpress
 	_jsii_.Get(
 		j,
 		"scheduleExpression",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatasyncTaskScheduleOutputReference) Status() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"status",
 		&returns,
 	)
 	return returns

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2networkinterface/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_network_interface awscc_ec2_network_interface}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_network_interface awscc_ec2_network_interface}.
 type Ec2NetworkInterface interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -70,6 +70,7 @@ type Ec2NetworkInterface interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	NetworkInterfaceId() *string
 	// The tree node.
 	Node() constructs.Node
 	PrimaryIpv6Address() *string
@@ -107,6 +108,7 @@ type Ec2NetworkInterface interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	VpcId() *string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -131,12 +133,22 @@ type Ec2NetworkInterface interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -166,6 +178,9 @@ type Ec2NetworkInterface interface {
 	ResetSourceDestCheck()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -500,6 +515,16 @@ func (j *jsiiProxy_Ec2NetworkInterface) Lifecycle() *cdktf.TerraformResourceLife
 	return returns
 }
 
+func (j *jsiiProxy_Ec2NetworkInterface) NetworkInterfaceId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"networkInterfaceId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2NetworkInterface) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -720,8 +745,18 @@ func (j *jsiiProxy_Ec2NetworkInterface) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2NetworkInterface) VpcId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"vpcId",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_network_interface awscc_ec2_network_interface} Resource.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_network_interface awscc_ec2_network_interface} Resource.
 func NewEc2NetworkInterface(scope constructs.Construct, id *string, config *Ec2NetworkInterfaceConfig) Ec2NetworkInterface {
 	_init_.Initialize()
 
@@ -739,7 +774,7 @@ func NewEc2NetworkInterface(scope constructs.Construct, id *string, config *Ec2N
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_network_interface awscc_ec2_network_interface} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_network_interface awscc_ec2_network_interface} Resource.
 func NewEc2NetworkInterface_Override(e Ec2NetworkInterface, scope constructs.Construct, id *string, config *Ec2NetworkInterfaceConfig) {
 	_init_.Initialize()
 
@@ -1208,6 +1243,19 @@ func (e *jsiiProxy_Ec2NetworkInterface) GetStringMapAttribute(terraformAttribute
 	return returns
 }
 
+func (e *jsiiProxy_Ec2NetworkInterface) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2NetworkInterface) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1235,6 +1283,17 @@ func (e *jsiiProxy_Ec2NetworkInterface) InterpolationForAttribute(terraformAttri
 	return returns
 }
 
+func (e *jsiiProxy_Ec2NetworkInterface) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2NetworkInterface) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1243,6 +1302,17 @@ func (e *jsiiProxy_Ec2NetworkInterface) MoveTo(moveTarget *string, index interfa
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Ec2NetworkInterface) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1465,6 +1535,32 @@ func (e *jsiiProxy_Ec2NetworkInterface) SynthesizeAttributes() *map[string]inter
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2NetworkInterface) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2NetworkInterface) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

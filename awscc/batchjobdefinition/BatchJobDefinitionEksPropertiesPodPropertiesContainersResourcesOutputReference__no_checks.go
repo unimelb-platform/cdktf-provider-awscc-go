@@ -60,11 +60,11 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourc
 	return nil
 }
 
-func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference) validateSetLimitsParameters(val *string) error {
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference) validateSetLimitsParameters(val *map[string]*string) error {
 	return nil
 }
 
-func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference) validateSetRequestsParameters(val *string) error {
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference) validateSetRequestsParameters(val *map[string]*string) error {
 	return nil
 }
 

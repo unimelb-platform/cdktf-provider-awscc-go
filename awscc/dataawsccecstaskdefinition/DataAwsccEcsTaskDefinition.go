@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccecstaskdefinition/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ecs_task_definition awscc_ecs_task_definition}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ecs_task_definition awscc_ecs_task_definition}.
 type DataAwsccEcsTaskDefinition interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -26,6 +26,7 @@ type DataAwsccEcsTaskDefinition interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	EnableFaultInjection() cdktf.IResolvable
 	EphemeralStorage() DataAwsccEcsTaskDefinitionEphemeralStorageOutputReference
 	ExecutionRoleArn() *string
 	Family() *string
@@ -100,6 +101,10 @@ type DataAwsccEcsTaskDefinition interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -169,6 +174,16 @@ func (j *jsiiProxy_DataAwsccEcsTaskDefinition) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEcsTaskDefinition) EnableFaultInjection() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"enableFaultInjection",
 		&returns,
 	)
 	return returns
@@ -455,7 +470,7 @@ func (j *jsiiProxy_DataAwsccEcsTaskDefinition) Volumes() DataAwsccEcsTaskDefinit
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ecs_task_definition awscc_ecs_task_definition} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ecs_task_definition awscc_ecs_task_definition} Data Source.
 func NewDataAwsccEcsTaskDefinition(scope constructs.Construct, id *string, config *DataAwsccEcsTaskDefinitionConfig) DataAwsccEcsTaskDefinition {
 	_init_.Initialize()
 
@@ -473,7 +488,7 @@ func NewDataAwsccEcsTaskDefinition(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ecs_task_definition awscc_ecs_task_definition} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ecs_task_definition awscc_ecs_task_definition} Data Source.
 func NewDataAwsccEcsTaskDefinition_Override(d DataAwsccEcsTaskDefinition, scope constructs.Construct, id *string, config *DataAwsccEcsTaskDefinitionConfig) {
 	_init_.Initialize()
 
@@ -840,6 +855,32 @@ func (d *jsiiProxy_DataAwsccEcsTaskDefinition) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEcsTaskDefinition) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEcsTaskDefinition) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

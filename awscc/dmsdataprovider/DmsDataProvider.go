@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dmsdataprovider/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/dms_data_provider awscc_dms_data_provider}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/dms_data_provider awscc_dms_data_provider}.
 type DmsDataProvider interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -104,12 +104,22 @@ type DmsDataProvider interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -125,6 +135,9 @@ type DmsDataProvider interface {
 	ResetSettings()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -470,7 +483,7 @@ func (j *jsiiProxy_DmsDataProvider) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/dms_data_provider awscc_dms_data_provider} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/dms_data_provider awscc_dms_data_provider} Resource.
 func NewDmsDataProvider(scope constructs.Construct, id *string, config *DmsDataProviderConfig) DmsDataProvider {
 	_init_.Initialize()
 
@@ -488,7 +501,7 @@ func NewDmsDataProvider(scope constructs.Construct, id *string, config *DmsDataP
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/dms_data_provider awscc_dms_data_provider} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/dms_data_provider awscc_dms_data_provider} Resource.
 func NewDmsDataProvider_Override(d DmsDataProvider, scope constructs.Construct, id *string, config *DmsDataProviderConfig) {
 	_init_.Initialize()
 
@@ -891,6 +904,19 @@ func (d *jsiiProxy_DmsDataProvider) GetStringMapAttribute(terraformAttribute *st
 	return returns
 }
 
+func (d *jsiiProxy_DmsDataProvider) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (d *jsiiProxy_DmsDataProvider) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := d.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -918,6 +944,17 @@ func (d *jsiiProxy_DmsDataProvider) InterpolationForAttribute(terraformAttribute
 	return returns
 }
 
+func (d *jsiiProxy_DmsDataProvider) MoveFromId(id *string) {
+	if err := d.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (d *jsiiProxy_DmsDataProvider) MoveTo(moveTarget *string, index interface{}) {
 	if err := d.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -926,6 +963,17 @@ func (d *jsiiProxy_DmsDataProvider) MoveTo(moveTarget *string, index interface{}
 		d,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (d *jsiiProxy_DmsDataProvider) MoveToId(id *string) {
+	if err := d.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1024,6 +1072,32 @@ func (d *jsiiProxy_DmsDataProvider) SynthesizeAttributes() *map[string]interface
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DmsDataProvider) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DmsDataProvider) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

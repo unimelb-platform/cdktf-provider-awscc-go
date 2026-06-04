@@ -44,6 +44,10 @@ func (i *jsiiProxy_IotfleetwiseCampaignDataDestinationConfigsOutputReference) va
 	return nil
 }
 
+func (i *jsiiProxy_IotfleetwiseCampaignDataDestinationConfigsOutputReference) validatePutMqttTopicConfigParameters(value *IotfleetwiseCampaignDataDestinationConfigsMqttTopicConfig) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotfleetwiseCampaignDataDestinationConfigsOutputReference) validatePutS3ConfigParameters(value *IotfleetwiseCampaignDataDestinationConfigsS3Config) error {
 	return nil
 }

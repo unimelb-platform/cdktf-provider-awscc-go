@@ -67,6 +67,8 @@ type MacieFindingsFilterTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (m *jsiiProxy_MacieFindingsFilterTagsOutputReference) InterpolationForAttri
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_MacieFindingsFilterTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MacieFindingsFilterTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_MacieFindingsFilterTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

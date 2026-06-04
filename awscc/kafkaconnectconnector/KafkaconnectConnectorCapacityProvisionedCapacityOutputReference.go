@@ -68,6 +68,7 @@ type KafkaconnectConnectorCapacityProvisionedCapacityOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetMcuCount()
+	ResetWorkerCount()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (k *jsiiProxy_KafkaconnectConnectorCapacityProvisionedCapacityOutputReferen
 	_jsii_.InvokeVoid(
 		k,
 		"resetMcuCount",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KafkaconnectConnectorCapacityProvisionedCapacityOutputReference) ResetWorkerCount() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetWorkerCount",
 		nil, // no parameters
 	)
 }

@@ -4,6 +4,10 @@ package dataawsccelasticloadbalancingv2loadbalancer
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccElasticloadbalancingv2LoadBalancerLoadBalancerAttributesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccElasticloadbalancingv2LoadBalancerLoadBalancerAttributesList) validateGetParameters(index *float64) error {
 	return nil
 }

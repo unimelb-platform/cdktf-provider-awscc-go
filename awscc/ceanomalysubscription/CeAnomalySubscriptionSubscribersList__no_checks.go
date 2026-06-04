@@ -4,6 +4,10 @@ package ceanomalysubscription
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (c *jsiiProxy_CeAnomalySubscriptionSubscribersList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CeAnomalySubscriptionSubscribersList) validateGetParameters(index *float64) error {
 	return nil
 }

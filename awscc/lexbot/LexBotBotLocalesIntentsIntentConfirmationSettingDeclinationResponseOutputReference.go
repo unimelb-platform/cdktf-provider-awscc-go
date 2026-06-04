@@ -30,8 +30,8 @@ type LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponseOutputRe
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponse
-	SetInternalValue(val *LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponse)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	MessageGroupsList() LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponseMessageGroupsListStructList
 	MessageGroupsListInput() interface{}
 	// Experimental.
@@ -68,6 +68,7 @@ type LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponseOutputRe
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMessageGroupsList(value interface{})
 	ResetAllowInterrupt()
+	ResetMessageGroupsList()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -143,8 +144,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationRe
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponseOutputReference) InternalValue() *LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponse {
-	var returns *LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponse
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponseOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -254,7 +255,7 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationRe
 	)
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponseOutputReference)SetInternalValue(val *LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponse) {
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponseOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -488,6 +489,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationRe
 	_jsii_.InvokeVoid(
 		l,
 		"resetAllowInterrupt",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponseOutputReference) ResetMessageGroupsList() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMessageGroupsList",
 		nil, // no parameters
 	)
 }

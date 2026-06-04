@@ -30,6 +30,7 @@ type DataAwsccEcsTaskDefinitionVolumesOutputReference interface {
 	EfsVolumeConfiguration() DataAwsccEcsTaskDefinitionVolumesEfsVolumeConfigurationOutputReference
 	// Experimental.
 	Fqn() *string
+	FsxWindowsFileServerVolumeConfiguration() DataAwsccEcsTaskDefinitionVolumesFsxWindowsFileServerVolumeConfigurationOutputReference
 	Host() DataAwsccEcsTaskDefinitionVolumesHostOutputReference
 	InternalValue() *DataAwsccEcsTaskDefinitionVolumes
 	SetInternalValue(val *DataAwsccEcsTaskDefinitionVolumes)
@@ -146,6 +147,16 @@ func (j *jsiiProxy_DataAwsccEcsTaskDefinitionVolumesOutputReference) Fqn() *stri
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEcsTaskDefinitionVolumesOutputReference) FsxWindowsFileServerVolumeConfiguration() DataAwsccEcsTaskDefinitionVolumesFsxWindowsFileServerVolumeConfigurationOutputReference {
+	var returns DataAwsccEcsTaskDefinitionVolumesFsxWindowsFileServerVolumeConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"fsxWindowsFileServerVolumeConfiguration",
 		&returns,
 	)
 	return returns

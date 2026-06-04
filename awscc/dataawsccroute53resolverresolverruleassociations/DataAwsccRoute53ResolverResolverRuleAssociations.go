@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccroute53resolverresolverruleassociations/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53resolver_resolver_rule_associations awscc_route53resolver_resolver_rule_associations}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53resolver_resolver_rule_associations awscc_route53resolver_resolver_rule_associations}.
 type DataAwsccRoute53ResolverResolverRuleAssociations interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccRoute53ResolverResolverRuleAssociations interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccRoute53ResolverResolverRuleAssociations) TerraformRe
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53resolver_resolver_rule_associations awscc_route53resolver_resolver_rule_associations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53resolver_resolver_rule_associations awscc_route53resolver_resolver_rule_associations} Data Source.
 func NewDataAwsccRoute53ResolverResolverRuleAssociations(scope constructs.Construct, id *string, config *DataAwsccRoute53ResolverResolverRuleAssociationsConfig) DataAwsccRoute53ResolverResolverRuleAssociations {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccRoute53ResolverResolverRuleAssociations(scope constructs.Constr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53resolver_resolver_rule_associations awscc_route53resolver_resolver_rule_associations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53resolver_resolver_rule_associations awscc_route53resolver_resolver_rule_associations} Data Source.
 func NewDataAwsccRoute53ResolverResolverRuleAssociations_Override(d DataAwsccRoute53ResolverResolverRuleAssociations, scope constructs.Construct, id *string, config *DataAwsccRoute53ResolverResolverRuleAssociationsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccRoute53ResolverResolverRuleAssociations) SynthesizeA
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53ResolverResolverRuleAssociations) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53ResolverResolverRuleAssociations) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

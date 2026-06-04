@@ -60,7 +60,7 @@ func (j *jsiiProxy_DatabrewJobDatabaseOutputsDatabaseOptionsOutputReference) val
 	return nil
 }
 
-func (j *jsiiProxy_DatabrewJobDatabaseOutputsDatabaseOptionsOutputReference) validateSetInternalValueParameters(val *DatabrewJobDatabaseOutputsDatabaseOptions) error {
+func (j *jsiiProxy_DatabrewJobDatabaseOutputsDatabaseOptionsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

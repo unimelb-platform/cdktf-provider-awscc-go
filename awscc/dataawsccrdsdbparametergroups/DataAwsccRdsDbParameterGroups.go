@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccrdsdbparametergroups/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_db_parameter_groups awscc_rds_db_parameter_groups}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_db_parameter_groups awscc_rds_db_parameter_groups}.
 type DataAwsccRdsDbParameterGroups interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccRdsDbParameterGroups interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccRdsDbParameterGroups) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_db_parameter_groups awscc_rds_db_parameter_groups} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_db_parameter_groups awscc_rds_db_parameter_groups} Data Source.
 func NewDataAwsccRdsDbParameterGroups(scope constructs.Construct, id *string, config *DataAwsccRdsDbParameterGroupsConfig) DataAwsccRdsDbParameterGroups {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccRdsDbParameterGroups(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_db_parameter_groups awscc_rds_db_parameter_groups} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_db_parameter_groups awscc_rds_db_parameter_groups} Data Source.
 func NewDataAwsccRdsDbParameterGroups_Override(d DataAwsccRdsDbParameterGroups, scope constructs.Construct, id *string, config *DataAwsccRdsDbParameterGroupsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccRdsDbParameterGroups) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRdsDbParameterGroups) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRdsDbParameterGroups) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -74,6 +74,7 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationFlinkApplicationConfig
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetAutoScalingEnabled()
+	ResetConfigurationType()
 	ResetParallelism()
 	ResetParallelismPerKpu()
 	// Produce the Token's value at resolution time.
@@ -558,6 +559,14 @@ func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationFlinkApp
 	_jsii_.InvokeVoid(
 		k,
 		"resetAutoScalingEnabled",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationOutputReference) ResetConfigurationType() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetConfigurationType",
 		nil, // no parameters
 	)
 }

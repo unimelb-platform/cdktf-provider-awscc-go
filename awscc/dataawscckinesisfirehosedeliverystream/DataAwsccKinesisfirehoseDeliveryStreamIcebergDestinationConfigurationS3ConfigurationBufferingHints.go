@@ -1,0 +1,6 @@
+package dataawscckinesisfirehosedeliverystream
+
+
+type DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationBufferingHints struct {
+}
+

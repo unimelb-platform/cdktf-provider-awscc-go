@@ -67,6 +67,8 @@ type QuicksightDataSetLogicalTableMapDataTransformsTagColumnOperationOutputRefer
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutTags(value interface{})
+	ResetColumnName()
+	ResetTags()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -480,6 +482,22 @@ func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsTagColumnOperat
 		q,
 		"putTags",
 		[]interface{}{value},
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsTagColumnOperationOutputReference) ResetColumnName() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetColumnName",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsTagColumnOperationOutputReference) ResetTags() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetTags",
+		nil, // no parameters
 	)
 }
 

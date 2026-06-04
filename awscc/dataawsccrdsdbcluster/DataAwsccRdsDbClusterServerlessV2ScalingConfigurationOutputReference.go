@@ -31,6 +31,7 @@ type DataAwsccRdsDbClusterServerlessV2ScalingConfigurationOutputReference interf
 	SetInternalValue(val *DataAwsccRdsDbClusterServerlessV2ScalingConfiguration)
 	MaxCapacity() *float64
 	MinCapacity() *float64
+	SecondsUntilAutoPause() *float64
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -143,6 +144,16 @@ func (j *jsiiProxy_DataAwsccRdsDbClusterServerlessV2ScalingConfigurationOutputRe
 	_jsii_.Get(
 		j,
 		"minCapacity",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRdsDbClusterServerlessV2ScalingConfigurationOutputReference) SecondsUntilAutoPause() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"secondsUntilAutoPause",
 		&returns,
 	)
 	return returns

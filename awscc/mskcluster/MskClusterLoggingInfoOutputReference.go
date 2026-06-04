@@ -11,7 +11,7 @@ import (
 type MskClusterLoggingInfoOutputReference interface {
 	cdktf.ComplexObject
 	BrokerLogs() MskClusterLoggingInfoBrokerLogsOutputReference
-	BrokerLogsInput() *MskClusterLoggingInfoBrokerLogs
+	BrokerLogsInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -64,6 +64,7 @@ type MskClusterLoggingInfoOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutBrokerLogs(value *MskClusterLoggingInfoBrokerLogs)
+	ResetBrokerLogs()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -89,8 +90,8 @@ func (j *jsiiProxy_MskClusterLoggingInfoOutputReference) BrokerLogs() MskCluster
 	return returns
 }
 
-func (j *jsiiProxy_MskClusterLoggingInfoOutputReference) BrokerLogsInput() *MskClusterLoggingInfoBrokerLogs {
-	var returns *MskClusterLoggingInfoBrokerLogs
+func (j *jsiiProxy_MskClusterLoggingInfoOutputReference) BrokerLogsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"brokerLogsInput",
@@ -446,6 +447,14 @@ func (m *jsiiProxy_MskClusterLoggingInfoOutputReference) PutBrokerLogs(value *Ms
 		m,
 		"putBrokerLogs",
 		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_MskClusterLoggingInfoOutputReference) ResetBrokerLogs() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetBrokerLogs",
+		nil, // no parameters
 	)
 }
 

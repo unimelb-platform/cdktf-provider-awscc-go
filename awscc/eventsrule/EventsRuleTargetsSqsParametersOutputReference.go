@@ -64,6 +64,7 @@ type EventsRuleTargetsSqsParametersOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetMessageGroupId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (e *jsiiProxy_EventsRuleTargetsSqsParametersOutputReference) InterpolationF
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EventsRuleTargetsSqsParametersOutputReference) ResetMessageGroupId() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetMessageGroupId",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EventsRuleTargetsSqsParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

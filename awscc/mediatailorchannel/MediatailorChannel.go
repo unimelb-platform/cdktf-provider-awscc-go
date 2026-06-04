@@ -9,10 +9,13 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/mediatailorchannel/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediatailor_channel awscc_mediatailor_channel}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediatailor_channel awscc_mediatailor_channel}.
 type MediatailorChannel interface {
 	cdktf.TerraformResource
 	Arn() *string
+	Audiences() *[]*string
+	SetAudiences(val *[]*string)
+	AudiencesInput() *[]*string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	ChannelName() *string
@@ -103,12 +106,22 @@ type MediatailorChannel interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -117,6 +130,7 @@ type MediatailorChannel interface {
 	PutOutputs(value interface{})
 	PutTags(value interface{})
 	PutTimeShiftConfiguration(value *MediatailorChannelTimeShiftConfiguration)
+	ResetAudiences()
 	ResetFillerSlate()
 	ResetLogConfiguration()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -126,6 +140,9 @@ type MediatailorChannel interface {
 	ResetTier()
 	ResetTimeShiftConfiguration()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -145,6 +162,26 @@ func (j *jsiiProxy_MediatailorChannel) Arn() *string {
 	_jsii_.Get(
 		j,
 		"arn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediatailorChannel) Audiences() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"audiences",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediatailorChannel) AudiencesInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"audiencesInput",
 		&returns,
 	)
 	return returns
@@ -481,7 +518,7 @@ func (j *jsiiProxy_MediatailorChannel) TimeShiftConfigurationInput() interface{}
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediatailor_channel awscc_mediatailor_channel} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediatailor_channel awscc_mediatailor_channel} Resource.
 func NewMediatailorChannel(scope constructs.Construct, id *string, config *MediatailorChannelConfig) MediatailorChannel {
 	_init_.Initialize()
 
@@ -499,7 +536,7 @@ func NewMediatailorChannel(scope constructs.Construct, id *string, config *Media
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediatailor_channel awscc_mediatailor_channel} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediatailor_channel awscc_mediatailor_channel} Resource.
 func NewMediatailorChannel_Override(m MediatailorChannel, scope constructs.Construct, id *string, config *MediatailorChannelConfig) {
 	_init_.Initialize()
 
@@ -507,6 +544,17 @@ func NewMediatailorChannel_Override(m MediatailorChannel, scope constructs.Const
 		"awscc.mediatailorChannel.MediatailorChannel",
 		[]interface{}{scope, id, config},
 		m,
+	)
+}
+
+func (j *jsiiProxy_MediatailorChannel)SetAudiences(val *[]*string) {
+	if err := j.validateSetAudiencesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"audiences",
+		val,
 	)
 }
 
@@ -880,6 +928,19 @@ func (m *jsiiProxy_MediatailorChannel) GetStringMapAttribute(terraformAttribute 
 	return returns
 }
 
+func (m *jsiiProxy_MediatailorChannel) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (m *jsiiProxy_MediatailorChannel) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -907,6 +968,17 @@ func (m *jsiiProxy_MediatailorChannel) InterpolationForAttribute(terraformAttrib
 	return returns
 }
 
+func (m *jsiiProxy_MediatailorChannel) MoveFromId(id *string) {
+	if err := m.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_MediatailorChannel) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -915,6 +987,17 @@ func (m *jsiiProxy_MediatailorChannel) MoveTo(moveTarget *string, index interfac
 		m,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (m *jsiiProxy_MediatailorChannel) MoveToId(id *string) {
+	if err := m.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -984,6 +1067,14 @@ func (m *jsiiProxy_MediatailorChannel) PutTimeShiftConfiguration(value *Mediatai
 	)
 }
 
+func (m *jsiiProxy_MediatailorChannel) ResetAudiences() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetAudiences",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_MediatailorChannel) ResetFillerSlate() {
 	_jsii_.InvokeVoid(
 		m,
@@ -1038,6 +1129,32 @@ func (m *jsiiProxy_MediatailorChannel) SynthesizeAttributes() *map[string]interf
 	_jsii_.Invoke(
 		m,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MediatailorChannel) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		m,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MediatailorChannel) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

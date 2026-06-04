@@ -67,6 +67,8 @@ type SesConfigurationSetEventDestinationEventDestinationKinesisFirehoseDestinati
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDeliveryStreamArn()
+	ResetIamRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (s *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationKinesisFir
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationKinesisFirehoseDestinationOutputReference) ResetDeliveryStreamArn() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDeliveryStreamArn",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationKinesisFirehoseDestinationOutputReference) ResetIamRoleArn() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetIamRoleArn",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationKinesisFirehoseDestinationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

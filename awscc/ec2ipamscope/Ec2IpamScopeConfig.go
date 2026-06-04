@@ -21,13 +21,13 @@ type Ec2IpamScopeConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The Id of the IPAM this scope is a part of.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_ipam_scope#ipam_id Ec2IpamScope#ipam_id}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_ipam_scope#ipam_id Ec2IpamScope#ipam_id}
 	IpamId *string `field:"required" json:"ipamId" yaml:"ipamId"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_ipam_scope#description Ec2IpamScope#description}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_ipam_scope#description Ec2IpamScope#description}.
 	Description *string `field:"optional" json:"description" yaml:"description"`
 	// An array of key-value pairs to apply to this resource.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_ipam_scope#tags Ec2IpamScope#tags}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_ipam_scope#tags Ec2IpamScope#tags}
 	Tags interface{} `field:"optional" json:"tags" yaml:"tags"`
 }
 

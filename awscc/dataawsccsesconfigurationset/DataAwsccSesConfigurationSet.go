@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccsesconfigurationset/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ses_configuration_set awscc_ses_configuration_set}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ses_configuration_set awscc_ses_configuration_set}.
 type DataAwsccSesConfigurationSet interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -89,6 +89,10 @@ type DataAwsccSesConfigurationSet interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -334,7 +338,7 @@ func (j *jsiiProxy_DataAwsccSesConfigurationSet) VdmOptions() DataAwsccSesConfig
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ses_configuration_set awscc_ses_configuration_set} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ses_configuration_set awscc_ses_configuration_set} Data Source.
 func NewDataAwsccSesConfigurationSet(scope constructs.Construct, id *string, config *DataAwsccSesConfigurationSetConfig) DataAwsccSesConfigurationSet {
 	_init_.Initialize()
 
@@ -352,7 +356,7 @@ func NewDataAwsccSesConfigurationSet(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ses_configuration_set awscc_ses_configuration_set} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ses_configuration_set awscc_ses_configuration_set} Data Source.
 func NewDataAwsccSesConfigurationSet_Override(d DataAwsccSesConfigurationSet, scope constructs.Construct, id *string, config *DataAwsccSesConfigurationSetConfig) {
 	_init_.Initialize()
 
@@ -719,6 +723,32 @@ func (d *jsiiProxy_DataAwsccSesConfigurationSet) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSesConfigurationSet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSesConfigurationSet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

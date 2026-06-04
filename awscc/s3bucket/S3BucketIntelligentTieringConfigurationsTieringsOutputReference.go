@@ -33,8 +33,8 @@ type S3BucketIntelligentTieringConfigurationsTieringsOutputReference interface {
 	DaysInput() *float64
 	// Experimental.
 	Fqn() *string
-	InternalValue() *S3BucketIntelligentTieringConfigurationsTierings
-	SetInternalValue(val *S3BucketIntelligentTieringConfigurationsTierings)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,6 +67,8 @@ type S3BucketIntelligentTieringConfigurationsTieringsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAccessTier()
+	ResetDays()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -162,8 +164,8 @@ func (j *jsiiProxy_S3BucketIntelligentTieringConfigurationsTieringsOutputReferen
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketIntelligentTieringConfigurationsTieringsOutputReference) InternalValue() *S3BucketIntelligentTieringConfigurationsTierings {
-	var returns *S3BucketIntelligentTieringConfigurationsTierings
+func (j *jsiiProxy_S3BucketIntelligentTieringConfigurationsTieringsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -264,7 +266,7 @@ func (j *jsiiProxy_S3BucketIntelligentTieringConfigurationsTieringsOutputReferen
 	)
 }
 
-func (j *jsiiProxy_S3BucketIntelligentTieringConfigurationsTieringsOutputReference)SetInternalValue(val *S3BucketIntelligentTieringConfigurationsTierings) {
+func (j *jsiiProxy_S3BucketIntelligentTieringConfigurationsTieringsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (s *jsiiProxy_S3BucketIntelligentTieringConfigurationsTieringsOutputReferen
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_S3BucketIntelligentTieringConfigurationsTieringsOutputReference) ResetAccessTier() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetAccessTier",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketIntelligentTieringConfigurationsTieringsOutputReference) ResetDays() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDays",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_S3BucketIntelligentTieringConfigurationsTieringsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

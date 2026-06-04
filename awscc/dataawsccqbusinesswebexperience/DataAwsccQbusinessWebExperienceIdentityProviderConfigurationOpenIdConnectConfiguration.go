@@ -1,0 +1,6 @@
+package dataawsccqbusinesswebexperience
+
+
+type DataAwsccQbusinessWebExperienceIdentityProviderConfigurationOpenIdConnectConfiguration struct {
+}
+

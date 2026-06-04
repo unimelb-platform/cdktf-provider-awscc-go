@@ -91,6 +91,7 @@ type BatchJobDefinitionEksPropertiesPodPropertiesContainersOutputReference inter
 	ResetArgs()
 	ResetCommand()
 	ResetEnv()
+	ResetImage()
 	ResetImagePullPolicy()
 	ResetName()
 	ResetResources()
@@ -749,6 +750,14 @@ func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersOutputR
 	_jsii_.InvokeVoid(
 		b,
 		"resetEnv",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersOutputReference) ResetImage() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetImage",
 		nil, // no parameters
 	)
 }

@@ -33,13 +33,13 @@ type PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesOutputReferen
 	CryptoProvidersInput() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributes
-	SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributes)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	KeySpec() *string
 	SetKeySpec(val *string)
 	KeySpecInput() *string
 	KeyUsageProperty() PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsagePropertyOutputReference
-	KeyUsagePropertyInput() *PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsageProperty
+	KeyUsagePropertyInput() interface{}
 	MinimalKeyLength() *float64
 	SetMinimalKeyLength(val *float64)
 	MinimalKeyLengthInput() *float64
@@ -76,7 +76,11 @@ type PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesOutputReferen
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutKeyUsageProperty(value *PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsageProperty)
+	ResetAlgorithm()
 	ResetCryptoProviders()
+	ResetKeySpec()
+	ResetKeyUsageProperty()
+	ResetMinimalKeyLength()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -172,8 +176,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttribute
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesOutputReference) InternalValue() *PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributes {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributes
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -212,8 +216,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttribute
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesOutputReference) KeyUsagePropertyInput() *PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsageProperty {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsageProperty
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesOutputReference) KeyUsagePropertyInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"keyUsagePropertyInput",
@@ -334,7 +338,7 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttribute
 	)
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesOutputReference)SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributes) {
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -586,10 +590,42 @@ func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttribute
 	)
 }
 
+func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesOutputReference) ResetAlgorithm() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetAlgorithm",
+		nil, // no parameters
+	)
+}
+
 func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesOutputReference) ResetCryptoProviders() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetCryptoProviders",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesOutputReference) ResetKeySpec() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetKeySpec",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesOutputReference) ResetKeyUsageProperty() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetKeyUsageProperty",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesOutputReference) ResetMinimalKeyLength() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetMinimalKeyLength",
 		nil, // no parameters
 	)
 }

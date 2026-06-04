@@ -67,6 +67,8 @@ type MskClusterConfigurationInfoOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetArn()
+	ResetRevision()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (m *jsiiProxy_MskClusterConfigurationInfoOutputReference) InterpolationForA
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_MskClusterConfigurationInfoOutputReference) ResetArn() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetArn",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MskClusterConfigurationInfoOutputReference) ResetRevision() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetRevision",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_MskClusterConfigurationInfoOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

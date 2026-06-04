@@ -27,9 +27,15 @@ type AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputRefe
 	CreationStack() *[]*string
 	CrlDistributionPointExtensionConfiguration() AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationCrlDistributionPointExtensionConfigurationOutputReference
 	CrlDistributionPointExtensionConfigurationInput() interface{}
+	CrlType() *string
+	SetCrlType(val *string)
+	CrlTypeInput() *string
 	CustomCname() *string
 	SetCustomCname(val *string)
 	CustomCnameInput() *string
+	CustomPath() *string
+	SetCustomPath(val *string)
+	CustomPathInput() *string
 	Enabled() interface{}
 	SetEnabled(val interface{})
 	EnabledInput() interface{}
@@ -80,7 +86,9 @@ type AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputRefe
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutCrlDistributionPointExtensionConfiguration(value *AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationCrlDistributionPointExtensionConfiguration)
 	ResetCrlDistributionPointExtensionConfiguration()
+	ResetCrlType()
 	ResetCustomCname()
+	ResetCustomPath()
 	ResetEnabled()
 	ResetExpirationInDays()
 	ResetS3BucketName()
@@ -150,6 +158,26 @@ func (j *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigura
 	return returns
 }
 
+func (j *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputReference) CrlType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"crlType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputReference) CrlTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"crlTypeInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputReference) CustomCname() *string {
 	var returns *string
 	_jsii_.Get(
@@ -165,6 +193,26 @@ func (j *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigura
 	_jsii_.Get(
 		j,
 		"customCnameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputReference) CustomPath() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"customPath",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputReference) CustomPathInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"customPathInput",
 		&returns,
 	)
 	return returns
@@ -340,6 +388,17 @@ func (j *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigura
 	)
 }
 
+func (j *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputReference)SetCrlType(val *string) {
+	if err := j.validateSetCrlTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"crlType",
+		val,
+	)
+}
+
 func (j *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputReference)SetCustomCname(val *string) {
 	if err := j.validateSetCustomCnameParameters(val); err != nil {
 		panic(err)
@@ -347,6 +406,17 @@ func (j *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigura
 	_jsii_.Set(
 		j,
 		"customCname",
+		val,
+	)
+}
+
+func (j *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputReference)SetCustomPath(val *string) {
+	if err := j.validateSetCustomPathParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"customPath",
 		val,
 	)
 }
@@ -633,10 +703,26 @@ func (a *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigura
 	)
 }
 
+func (a *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputReference) ResetCrlType() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetCrlType",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputReference) ResetCustomCname() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetCustomCname",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputReference) ResetCustomPath() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetCustomPath",
 		nil, // no parameters
 	)
 }

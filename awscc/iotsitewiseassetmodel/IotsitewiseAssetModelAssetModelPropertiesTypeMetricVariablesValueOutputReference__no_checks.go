@@ -44,6 +44,10 @@ func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesV
 	return nil
 }
 
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference) validatePutPropertyPathParameters(value interface{}) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }
@@ -56,11 +60,27 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesV
 	return nil
 }
 
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference) validateSetHierarchyExternalIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference) validateSetHierarchyIdParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference) validateSetHierarchyLogicalIdParameters(val *string) error {
 	return nil
 }
 
-func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference) validateSetInternalValueParameters(val *IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValue) error {
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference) validateSetPropertyExternalIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference) validateSetPropertyIdParameters(val *string) error {
 	return nil
 }
 

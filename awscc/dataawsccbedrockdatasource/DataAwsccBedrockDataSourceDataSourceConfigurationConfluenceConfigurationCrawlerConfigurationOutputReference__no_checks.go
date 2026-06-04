@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawsccbedrockdatasource
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationOutputReference) validateSetInternalValueParameters(val *DataAwsccBedrockDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfiguration) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccBedrockDataSourceDataSourceConfigurationConfluenceConfigurationCrawlerConfigurationOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

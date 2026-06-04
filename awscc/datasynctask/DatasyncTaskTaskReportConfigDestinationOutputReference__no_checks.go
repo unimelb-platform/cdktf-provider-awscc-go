@@ -60,7 +60,7 @@ func (j *jsiiProxy_DatasyncTaskTaskReportConfigDestinationOutputReference) valid
 	return nil
 }
 
-func (j *jsiiProxy_DatasyncTaskTaskReportConfigDestinationOutputReference) validateSetInternalValueParameters(val *DatasyncTaskTaskReportConfigDestination) error {
+func (j *jsiiProxy_DatasyncTaskTaskReportConfigDestinationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

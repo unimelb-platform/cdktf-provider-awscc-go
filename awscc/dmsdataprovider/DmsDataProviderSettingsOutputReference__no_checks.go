@@ -44,7 +44,27 @@ func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validateInterpolation
 	return nil
 }
 
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validatePutDocDbSettingsParameters(value *DmsDataProviderSettingsDocDbSettings) error {
+	return nil
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validatePutIbmDb2LuwSettingsParameters(value *DmsDataProviderSettingsIbmDb2LuwSettings) error {
+	return nil
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validatePutIbmDb2ZOsSettingsParameters(value *DmsDataProviderSettingsIbmDb2ZOsSettings) error {
+	return nil
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validatePutMariaDbSettingsParameters(value *DmsDataProviderSettingsMariaDbSettings) error {
+	return nil
+}
+
 func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validatePutMicrosoftSqlServerSettingsParameters(value *DmsDataProviderSettingsMicrosoftSqlServerSettings) error {
+	return nil
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validatePutMongoDbSettingsParameters(value *DmsDataProviderSettingsMongoDbSettings) error {
 	return nil
 }
 
@@ -57,6 +77,10 @@ func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validatePutOracleSett
 }
 
 func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validatePutPostgreSqlSettingsParameters(value *DmsDataProviderSettingsPostgreSqlSettings) error {
+	return nil
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validatePutRedshiftSettingsParameters(value *DmsDataProviderSettingsRedshiftSettings) error {
 	return nil
 }
 

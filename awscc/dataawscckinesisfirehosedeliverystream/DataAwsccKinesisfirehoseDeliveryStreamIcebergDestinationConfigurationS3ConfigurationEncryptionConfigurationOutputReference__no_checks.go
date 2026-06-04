@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawscckinesisfirehosedeliverystream
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationEncryptionConfigurationOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationEncryptionConfigurationOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationEncryptionConfigurationOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationEncryptionConfigurationOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationEncryptionConfigurationOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationEncryptionConfigurationOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationEncryptionConfigurationOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationEncryptionConfigurationOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationEncryptionConfigurationOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationEncryptionConfigurationOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationEncryptionConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationEncryptionConfigurationOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationEncryptionConfigurationOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationEncryptionConfigurationOutputReference) validateSetInternalValueParameters(val *DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationEncryptionConfiguration) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationEncryptionConfigurationOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationEncryptionConfigurationOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationS3ConfigurationEncryptionConfigurationOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

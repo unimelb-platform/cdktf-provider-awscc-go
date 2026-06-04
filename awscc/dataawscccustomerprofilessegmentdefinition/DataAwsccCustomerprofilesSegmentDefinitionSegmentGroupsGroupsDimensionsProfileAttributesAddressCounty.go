@@ -1,0 +1,6 @@
+package dataawscccustomerprofilessegmentdefinition
+
+
+type DataAwsccCustomerprofilesSegmentDefinitionSegmentGroupsGroupsDimensionsProfileAttributesAddressCounty struct {
+}
+

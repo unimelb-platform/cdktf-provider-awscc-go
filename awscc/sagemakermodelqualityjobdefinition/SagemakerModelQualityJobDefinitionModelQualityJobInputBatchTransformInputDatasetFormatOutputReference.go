@@ -29,8 +29,8 @@ type SagemakerModelQualityJobDefinitionModelQualityJobInputBatchTransformInputDa
 	CsvInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *SagemakerModelQualityJobDefinitionModelQualityJobInputBatchTransformInputDatasetFormat
-	SetInternalValue(val *SagemakerModelQualityJobDefinitionModelQualityJobInputBatchTransformInputDatasetFormat)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Json() SagemakerModelQualityJobDefinitionModelQualityJobInputBatchTransformInputDatasetFormatJsonOutputReference
 	JsonInput() interface{}
 	Parquet() interface{}
@@ -148,8 +148,8 @@ func (j *jsiiProxy_SagemakerModelQualityJobDefinitionModelQualityJobInputBatchTr
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerModelQualityJobDefinitionModelQualityJobInputBatchTransformInputDatasetFormatOutputReference) InternalValue() *SagemakerModelQualityJobDefinitionModelQualityJobInputBatchTransformInputDatasetFormat {
-	var returns *SagemakerModelQualityJobDefinitionModelQualityJobInputBatchTransformInputDatasetFormat
+func (j *jsiiProxy_SagemakerModelQualityJobDefinitionModelQualityJobInputBatchTransformInputDatasetFormatOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -268,7 +268,7 @@ func (j *jsiiProxy_SagemakerModelQualityJobDefinitionModelQualityJobInputBatchTr
 	)
 }
 
-func (j *jsiiProxy_SagemakerModelQualityJobDefinitionModelQualityJobInputBatchTransformInputDatasetFormatOutputReference)SetInternalValue(val *SagemakerModelQualityJobDefinitionModelQualityJobInputBatchTransformInputDatasetFormat) {
+func (j *jsiiProxy_SagemakerModelQualityJobDefinitionModelQualityJobInputBatchTransformInputDatasetFormatOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

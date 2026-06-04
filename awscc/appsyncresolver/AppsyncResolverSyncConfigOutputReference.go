@@ -70,6 +70,7 @@ type AppsyncResolverSyncConfigOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutLambdaConflictHandlerConfig(value *AppsyncResolverSyncConfigLambdaConflictHandlerConfig)
+	ResetConflictDetection()
 	ResetConflictHandler()
 	ResetLambdaConflictHandlerConfig()
 	// Produce the Token's value at resolution time.
@@ -516,6 +517,14 @@ func (a *jsiiProxy_AppsyncResolverSyncConfigOutputReference) PutLambdaConflictHa
 		a,
 		"putLambdaConflictHandlerConfig",
 		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_AppsyncResolverSyncConfigOutputReference) ResetConflictDetection() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetConflictDetection",
+		nil, // no parameters
 	)
 }
 

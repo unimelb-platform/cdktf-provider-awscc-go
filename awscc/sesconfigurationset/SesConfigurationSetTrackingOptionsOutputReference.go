@@ -30,6 +30,9 @@ type SesConfigurationSetTrackingOptionsOutputReference interface {
 	CustomRedirectDomainInput() *string
 	// Experimental.
 	Fqn() *string
+	HttpsPolicy() *string
+	SetHttpsPolicy(val *string)
+	HttpsPolicyInput() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	// Experimental.
@@ -65,6 +68,7 @@ type SesConfigurationSetTrackingOptionsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetCustomRedirectDomain()
+	ResetHttpsPolicy()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -135,6 +139,26 @@ func (j *jsiiProxy_SesConfigurationSetTrackingOptionsOutputReference) Fqn() *str
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SesConfigurationSetTrackingOptionsOutputReference) HttpsPolicy() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"httpsPolicy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SesConfigurationSetTrackingOptionsOutputReference) HttpsPolicyInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"httpsPolicyInput",
 		&returns,
 	)
 	return returns
@@ -227,6 +251,17 @@ func (j *jsiiProxy_SesConfigurationSetTrackingOptionsOutputReference)SetCustomRe
 	_jsii_.Set(
 		j,
 		"customRedirectDomain",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SesConfigurationSetTrackingOptionsOutputReference)SetHttpsPolicy(val *string) {
+	if err := j.validateSetHttpsPolicyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"httpsPolicy",
 		val,
 	)
 }
@@ -454,6 +489,14 @@ func (s *jsiiProxy_SesConfigurationSetTrackingOptionsOutputReference) ResetCusto
 	_jsii_.InvokeVoid(
 		s,
 		"resetCustomRedirectDomain",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SesConfigurationSetTrackingOptionsOutputReference) ResetHttpsPolicy() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetHttpsPolicy",
 		nil, // no parameters
 	)
 }

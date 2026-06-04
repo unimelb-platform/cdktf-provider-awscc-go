@@ -70,6 +70,9 @@ type GameliftFleetLocationsLocationCapacityOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDesiredEc2Instances()
+	ResetMaxSize()
+	ResetMinSize()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (g *jsiiProxy_GameliftFleetLocationsLocationCapacityOutputReference) Interp
 	)
 
 	return returns
+}
+
+func (g *jsiiProxy_GameliftFleetLocationsLocationCapacityOutputReference) ResetDesiredEc2Instances() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetDesiredEc2Instances",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GameliftFleetLocationsLocationCapacityOutputReference) ResetMaxSize() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetMaxSize",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GameliftFleetLocationsLocationCapacityOutputReference) ResetMinSize() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetMinSize",
+		nil, // no parameters
+	)
 }
 
 func (g *jsiiProxy_GameliftFleetLocationsLocationCapacityOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

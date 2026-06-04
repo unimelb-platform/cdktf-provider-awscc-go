@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccsupportappaccountalias/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/supportapp_account_alias awscc_supportapp_account_alias}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/supportapp_account_alias awscc_supportapp_account_alias}.
 type DataAwsccSupportappAccountAlias interface {
 	cdktf.TerraformDataSource
 	AccountAlias() *string
@@ -84,6 +84,10 @@ type DataAwsccSupportappAccountAlias interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -279,7 +283,7 @@ func (j *jsiiProxy_DataAwsccSupportappAccountAlias) TerraformResourceType() *str
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/supportapp_account_alias awscc_supportapp_account_alias} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/supportapp_account_alias awscc_supportapp_account_alias} Data Source.
 func NewDataAwsccSupportappAccountAlias(scope constructs.Construct, id *string, config *DataAwsccSupportappAccountAliasConfig) DataAwsccSupportappAccountAlias {
 	_init_.Initialize()
 
@@ -297,7 +301,7 @@ func NewDataAwsccSupportappAccountAlias(scope constructs.Construct, id *string, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/supportapp_account_alias awscc_supportapp_account_alias} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/supportapp_account_alias awscc_supportapp_account_alias} Data Source.
 func NewDataAwsccSupportappAccountAlias_Override(d DataAwsccSupportappAccountAlias, scope constructs.Construct, id *string, config *DataAwsccSupportappAccountAliasConfig) {
 	_init_.Initialize()
 
@@ -664,6 +668,32 @@ func (d *jsiiProxy_DataAwsccSupportappAccountAlias) SynthesizeAttributes() *map[
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSupportappAccountAlias) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSupportappAccountAlias) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -67,6 +67,8 @@ type LookoutmetricsAlertActionLambdaConfigurationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetLambdaArn()
+	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (l *jsiiProxy_LookoutmetricsAlertActionLambdaConfigurationOutputReference) 
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LookoutmetricsAlertActionLambdaConfigurationOutputReference) ResetLambdaArn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetLambdaArn",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LookoutmetricsAlertActionLambdaConfigurationOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetRoleArn",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LookoutmetricsAlertActionLambdaConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

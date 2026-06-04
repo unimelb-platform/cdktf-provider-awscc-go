@@ -64,6 +64,7 @@ type GuarddutyDetectorDataSourcesS3LogsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEnable()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (g *jsiiProxy_GuarddutyDetectorDataSourcesS3LogsOutputReference) Interpolat
 	)
 
 	return returns
+}
+
+func (g *jsiiProxy_GuarddutyDetectorDataSourcesS3LogsOutputReference) ResetEnable() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetEnable",
+		nil, // no parameters
+	)
 }
 
 func (g *jsiiProxy_GuarddutyDetectorDataSourcesS3LogsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

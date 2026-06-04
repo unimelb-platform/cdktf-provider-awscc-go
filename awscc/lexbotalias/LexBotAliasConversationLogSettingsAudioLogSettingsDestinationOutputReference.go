@@ -27,10 +27,10 @@ type LexBotAliasConversationLogSettingsAudioLogSettingsDestinationOutputReferenc
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotAliasConversationLogSettingsAudioLogSettingsDestination
-	SetInternalValue(val *LexBotAliasConversationLogSettingsAudioLogSettingsDestination)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	S3Bucket() LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3BucketOutputReference
-	S3BucketInput() *LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3Bucket
+	S3BucketInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type LexBotAliasConversationLogSettingsAudioLogSettingsDestinationOutputReferenc
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutS3Bucket(value *LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3Bucket)
+	ResetS3Bucket()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -119,8 +120,8 @@ func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestination
 	return returns
 }
 
-func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestinationOutputReference) InternalValue() *LexBotAliasConversationLogSettingsAudioLogSettingsDestination {
-	var returns *LexBotAliasConversationLogSettingsAudioLogSettingsDestination
+func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestinationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -139,8 +140,8 @@ func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestination
 	return returns
 }
 
-func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestinationOutputReference) S3BucketInput() *LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3Bucket {
-	var returns *LexBotAliasConversationLogSettingsAudioLogSettingsDestinationS3Bucket
+func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestinationOutputReference) S3BucketInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"s3BucketInput",
@@ -219,7 +220,7 @@ func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestination
 	)
 }
 
-func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestinationOutputReference)SetInternalValue(val *LexBotAliasConversationLogSettingsAudioLogSettingsDestination) {
+func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestinationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -446,6 +447,14 @@ func (l *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestination
 		l,
 		"putS3Bucket",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsDestinationOutputReference) ResetS3Bucket() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetS3Bucket",
+		nil, // no parameters
 	)
 }
 

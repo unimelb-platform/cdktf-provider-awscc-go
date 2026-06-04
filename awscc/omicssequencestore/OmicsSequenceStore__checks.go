@@ -119,6 +119,14 @@ func (o *jsiiProxy_OmicsSequenceStore) validateInterpolationForAttributeParamete
 	return nil
 }
 
+func (o *jsiiProxy_OmicsSequenceStore) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (o *jsiiProxy_OmicsSequenceStore) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (o *jsiiProxy_OmicsSequenceStore) validateMoveToParameters(moveTarget *stri
 	return nil
 }
 
+func (o *jsiiProxy_OmicsSequenceStore) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (o *jsiiProxy_OmicsSequenceStore) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -234,6 +250,14 @@ func validateOmicsSequenceStore_IsTerraformElementParameters(x interface{}) erro
 func validateOmicsSequenceStore_IsTerraformResourceParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_OmicsSequenceStore) validateSetAccessLogLocationParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil
@@ -337,6 +361,14 @@ func (j *jsiiProxy_OmicsSequenceStore) validateSetDescriptionParameters(val *str
 	return nil
 }
 
+func (j *jsiiProxy_OmicsSequenceStore) validateSetETagAlgorithmFamilyParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_OmicsSequenceStore) validateSetFallbackLocationParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -354,6 +386,14 @@ func (j *jsiiProxy_OmicsSequenceStore) validateSetLifecycleParameters(val *cdktf
 }
 
 func (j *jsiiProxy_OmicsSequenceStore) validateSetNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_OmicsSequenceStore) validateSetPropagatedSetLevelTagsParameters(val *[]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -402,6 +442,14 @@ func (j *jsiiProxy_OmicsSequenceStore) validateSetProvisionersParameters(val *[]
 				return fmt.Errorf("parameter val[%#v] must be one of the allowed types: *cdktf.FileProvisioner, *cdktf.LocalExecProvisioner, *cdktf.RemoteExecProvisioner; received %#v (a %T)", idx_97dfc6, v, v)
 			}
 		}
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_OmicsSequenceStore) validateSetS3AccessPolicyParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil

@@ -64,6 +64,7 @@ type SagemakerSpaceSpaceSettingsSpaceStorageSettingsEbsStorageSettingsOutputRefe
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEbsVolumeSizeInGb()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_SagemakerSpaceSpaceSettingsSpaceStorageSettingsEbsStorageSett
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SagemakerSpaceSpaceSettingsSpaceStorageSettingsEbsStorageSettingsOutputReference) ResetEbsVolumeSizeInGb() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetEbsVolumeSizeInGb",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SagemakerSpaceSpaceSettingsSpaceStorageSettingsEbsStorageSettingsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

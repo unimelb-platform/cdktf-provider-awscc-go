@@ -68,6 +68,7 @@ type LexBotBotLocalesVoiceSettingsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetEngine()
+	ResetVoiceId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (l *jsiiProxy_LexBotBotLocalesVoiceSettingsOutputReference) ResetEngine() {
 	_jsii_.InvokeVoid(
 		l,
 		"resetEngine",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesVoiceSettingsOutputReference) ResetVoiceId() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetVoiceId",
 		nil, // no parameters
 	)
 }

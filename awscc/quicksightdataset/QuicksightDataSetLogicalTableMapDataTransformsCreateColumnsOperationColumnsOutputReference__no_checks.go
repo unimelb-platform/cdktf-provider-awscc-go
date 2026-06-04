@@ -68,7 +68,7 @@ func (j *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOp
 	return nil
 }
 
-func (j *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsOutputReference) validateSetInternalValueParameters(val *QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumns) error {
+func (j *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCreateColumnsOperationColumnsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

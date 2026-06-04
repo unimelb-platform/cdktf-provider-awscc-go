@@ -67,6 +67,8 @@ type SsmcontactsRotationRecurrenceMonthlySettingsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDayOfMonth()
+	ResetHandOffTime()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (s *jsiiProxy_SsmcontactsRotationRecurrenceMonthlySettingsOutputReference) 
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SsmcontactsRotationRecurrenceMonthlySettingsOutputReference) ResetDayOfMonth() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDayOfMonth",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SsmcontactsRotationRecurrenceMonthlySettingsOutputReference) ResetHandOffTime() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetHandOffTime",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SsmcontactsRotationRecurrenceMonthlySettingsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

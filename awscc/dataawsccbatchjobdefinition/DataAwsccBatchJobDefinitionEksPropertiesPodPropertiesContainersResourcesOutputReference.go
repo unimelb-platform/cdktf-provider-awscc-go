@@ -29,8 +29,8 @@ type DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOut
 	Fqn() *string
 	InternalValue() *DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContainersResources
 	SetInternalValue(val *DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContainersResources)
-	Limits() *string
-	Requests() *string
+	Limits() cdktf.StringMap
+	Requests() cdktf.StringMap
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -128,8 +128,8 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContaine
 	return returns
 }
 
-func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference) Limits() *string {
-	var returns *string
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference) Limits() cdktf.StringMap {
+	var returns cdktf.StringMap
 	_jsii_.Get(
 		j,
 		"limits",
@@ -138,8 +138,8 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContaine
 	return returns
 }
 
-func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference) Requests() *string {
-	var returns *string
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference) Requests() cdktf.StringMap {
+	var returns cdktf.StringMap
 	_jsii_.Get(
 		j,
 		"requests",

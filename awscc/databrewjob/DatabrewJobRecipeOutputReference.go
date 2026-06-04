@@ -67,6 +67,7 @@ type DatabrewJobRecipeOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
 	ResetVersion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (d *jsiiProxy_DatabrewJobRecipeOutputReference) InterpolationForAttribute(p
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatabrewJobRecipeOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetName",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatabrewJobRecipeOutputReference) ResetVersion() {

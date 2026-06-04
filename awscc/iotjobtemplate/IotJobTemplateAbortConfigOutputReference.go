@@ -64,6 +64,7 @@ type IotJobTemplateAbortConfigOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutCriteriaList(value interface{})
+	ResetCriteriaList()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -446,6 +447,14 @@ func (i *jsiiProxy_IotJobTemplateAbortConfigOutputReference) PutCriteriaList(val
 		i,
 		"putCriteriaList",
 		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IotJobTemplateAbortConfigOutputReference) ResetCriteriaList() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetCriteriaList",
+		nil, // no parameters
 	)
 }
 

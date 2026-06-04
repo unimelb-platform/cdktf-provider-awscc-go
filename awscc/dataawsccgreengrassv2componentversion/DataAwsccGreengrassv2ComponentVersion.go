@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccgreengrassv2componentversion/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/greengrassv2_component_version awscc_greengrassv2_component_version}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/greengrassv2_component_version awscc_greengrassv2_component_version}.
 type DataAwsccGreengrassv2ComponentVersion interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -88,6 +88,10 @@ type DataAwsccGreengrassv2ComponentVersion interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -323,7 +327,7 @@ func (j *jsiiProxy_DataAwsccGreengrassv2ComponentVersion) TerraformResourceType(
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/greengrassv2_component_version awscc_greengrassv2_component_version} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/greengrassv2_component_version awscc_greengrassv2_component_version} Data Source.
 func NewDataAwsccGreengrassv2ComponentVersion(scope constructs.Construct, id *string, config *DataAwsccGreengrassv2ComponentVersionConfig) DataAwsccGreengrassv2ComponentVersion {
 	_init_.Initialize()
 
@@ -341,7 +345,7 @@ func NewDataAwsccGreengrassv2ComponentVersion(scope constructs.Construct, id *st
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/greengrassv2_component_version awscc_greengrassv2_component_version} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/greengrassv2_component_version awscc_greengrassv2_component_version} Data Source.
 func NewDataAwsccGreengrassv2ComponentVersion_Override(d DataAwsccGreengrassv2ComponentVersion, scope constructs.Construct, id *string, config *DataAwsccGreengrassv2ComponentVersionConfig) {
 	_init_.Initialize()
 
@@ -708,6 +712,32 @@ func (d *jsiiProxy_DataAwsccGreengrassv2ComponentVersion) SynthesizeAttributes()
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGreengrassv2ComponentVersion) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGreengrassv2ComponentVersion) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

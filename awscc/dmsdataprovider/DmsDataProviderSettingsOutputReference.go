@@ -25,18 +25,30 @@ type DmsDataProviderSettingsOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	DocDbSettings() DmsDataProviderSettingsDocDbSettingsOutputReference
+	DocDbSettingsInput() interface{}
 	// Experimental.
 	Fqn() *string
+	IbmDb2LuwSettings() DmsDataProviderSettingsIbmDb2LuwSettingsOutputReference
+	IbmDb2LuwSettingsInput() interface{}
+	IbmDb2ZOsSettings() DmsDataProviderSettingsIbmDb2ZOsSettingsOutputReference
+	IbmDb2ZOsSettingsInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	MariaDbSettings() DmsDataProviderSettingsMariaDbSettingsOutputReference
+	MariaDbSettingsInput() interface{}
 	MicrosoftSqlServerSettings() DmsDataProviderSettingsMicrosoftSqlServerSettingsOutputReference
 	MicrosoftSqlServerSettingsInput() interface{}
+	MongoDbSettings() DmsDataProviderSettingsMongoDbSettingsOutputReference
+	MongoDbSettingsInput() interface{}
 	MySqlSettings() DmsDataProviderSettingsMySqlSettingsOutputReference
 	MySqlSettingsInput() interface{}
 	OracleSettings() DmsDataProviderSettingsOracleSettingsOutputReference
 	OracleSettingsInput() interface{}
 	PostgreSqlSettings() DmsDataProviderSettingsPostgreSqlSettingsOutputReference
 	PostgreSqlSettingsInput() interface{}
+	RedshiftSettings() DmsDataProviderSettingsRedshiftSettingsOutputReference
+	RedshiftSettingsInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -69,14 +81,26 @@ type DmsDataProviderSettingsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutDocDbSettings(value *DmsDataProviderSettingsDocDbSettings)
+	PutIbmDb2LuwSettings(value *DmsDataProviderSettingsIbmDb2LuwSettings)
+	PutIbmDb2ZOsSettings(value *DmsDataProviderSettingsIbmDb2ZOsSettings)
+	PutMariaDbSettings(value *DmsDataProviderSettingsMariaDbSettings)
 	PutMicrosoftSqlServerSettings(value *DmsDataProviderSettingsMicrosoftSqlServerSettings)
+	PutMongoDbSettings(value *DmsDataProviderSettingsMongoDbSettings)
 	PutMySqlSettings(value *DmsDataProviderSettingsMySqlSettings)
 	PutOracleSettings(value *DmsDataProviderSettingsOracleSettings)
 	PutPostgreSqlSettings(value *DmsDataProviderSettingsPostgreSqlSettings)
+	PutRedshiftSettings(value *DmsDataProviderSettingsRedshiftSettings)
+	ResetDocDbSettings()
+	ResetIbmDb2LuwSettings()
+	ResetIbmDb2ZOsSettings()
+	ResetMariaDbSettings()
 	ResetMicrosoftSqlServerSettings()
+	ResetMongoDbSettings()
 	ResetMySqlSettings()
 	ResetOracleSettings()
 	ResetPostgreSqlSettings()
+	ResetRedshiftSettings()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,6 +146,26 @@ func (j *jsiiProxy_DmsDataProviderSettingsOutputReference) CreationStack() *[]*s
 	return returns
 }
 
+func (j *jsiiProxy_DmsDataProviderSettingsOutputReference) DocDbSettings() DmsDataProviderSettingsDocDbSettingsOutputReference {
+	var returns DmsDataProviderSettingsDocDbSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"docDbSettings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DmsDataProviderSettingsOutputReference) DocDbSettingsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"docDbSettingsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DmsDataProviderSettingsOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -132,11 +176,71 @@ func (j *jsiiProxy_DmsDataProviderSettingsOutputReference) Fqn() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DmsDataProviderSettingsOutputReference) IbmDb2LuwSettings() DmsDataProviderSettingsIbmDb2LuwSettingsOutputReference {
+	var returns DmsDataProviderSettingsIbmDb2LuwSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"ibmDb2LuwSettings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DmsDataProviderSettingsOutputReference) IbmDb2LuwSettingsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"ibmDb2LuwSettingsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DmsDataProviderSettingsOutputReference) IbmDb2ZOsSettings() DmsDataProviderSettingsIbmDb2ZOsSettingsOutputReference {
+	var returns DmsDataProviderSettingsIbmDb2ZOsSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"ibmDb2ZOsSettings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DmsDataProviderSettingsOutputReference) IbmDb2ZOsSettingsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"ibmDb2ZOsSettingsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DmsDataProviderSettingsOutputReference) InternalValue() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DmsDataProviderSettingsOutputReference) MariaDbSettings() DmsDataProviderSettingsMariaDbSettingsOutputReference {
+	var returns DmsDataProviderSettingsMariaDbSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"mariaDbSettings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DmsDataProviderSettingsOutputReference) MariaDbSettingsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"mariaDbSettingsInput",
 		&returns,
 	)
 	return returns
@@ -157,6 +261,26 @@ func (j *jsiiProxy_DmsDataProviderSettingsOutputReference) MicrosoftSqlServerSet
 	_jsii_.Get(
 		j,
 		"microsoftSqlServerSettingsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DmsDataProviderSettingsOutputReference) MongoDbSettings() DmsDataProviderSettingsMongoDbSettingsOutputReference {
+	var returns DmsDataProviderSettingsMongoDbSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"mongoDbSettings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DmsDataProviderSettingsOutputReference) MongoDbSettingsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"mongoDbSettingsInput",
 		&returns,
 	)
 	return returns
@@ -217,6 +341,26 @@ func (j *jsiiProxy_DmsDataProviderSettingsOutputReference) PostgreSqlSettingsInp
 	_jsii_.Get(
 		j,
 		"postgreSqlSettingsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DmsDataProviderSettingsOutputReference) RedshiftSettings() DmsDataProviderSettingsRedshiftSettingsOutputReference {
+	var returns DmsDataProviderSettingsRedshiftSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"redshiftSettings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DmsDataProviderSettingsOutputReference) RedshiftSettingsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"redshiftSettingsInput",
 		&returns,
 	)
 	return returns
@@ -511,6 +655,50 @@ func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) InterpolationForAttri
 	return returns
 }
 
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) PutDocDbSettings(value *DmsDataProviderSettingsDocDbSettings) {
+	if err := d.validatePutDocDbSettingsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putDocDbSettings",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) PutIbmDb2LuwSettings(value *DmsDataProviderSettingsIbmDb2LuwSettings) {
+	if err := d.validatePutIbmDb2LuwSettingsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putIbmDb2LuwSettings",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) PutIbmDb2ZOsSettings(value *DmsDataProviderSettingsIbmDb2ZOsSettings) {
+	if err := d.validatePutIbmDb2ZOsSettingsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putIbmDb2ZOsSettings",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) PutMariaDbSettings(value *DmsDataProviderSettingsMariaDbSettings) {
+	if err := d.validatePutMariaDbSettingsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putMariaDbSettings",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) PutMicrosoftSqlServerSettings(value *DmsDataProviderSettingsMicrosoftSqlServerSettings) {
 	if err := d.validatePutMicrosoftSqlServerSettingsParameters(value); err != nil {
 		panic(err)
@@ -518,6 +706,17 @@ func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) PutMicrosoftSqlServer
 	_jsii_.InvokeVoid(
 		d,
 		"putMicrosoftSqlServerSettings",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) PutMongoDbSettings(value *DmsDataProviderSettingsMongoDbSettings) {
+	if err := d.validatePutMongoDbSettingsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putMongoDbSettings",
 		[]interface{}{value},
 	)
 }
@@ -555,10 +754,61 @@ func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) PutPostgreSqlSettings
 	)
 }
 
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) PutRedshiftSettings(value *DmsDataProviderSettingsRedshiftSettings) {
+	if err := d.validatePutRedshiftSettingsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putRedshiftSettings",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) ResetDocDbSettings() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetDocDbSettings",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) ResetIbmDb2LuwSettings() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetIbmDb2LuwSettings",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) ResetIbmDb2ZOsSettings() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetIbmDb2ZOsSettings",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) ResetMariaDbSettings() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetMariaDbSettings",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) ResetMicrosoftSqlServerSettings() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetMicrosoftSqlServerSettings",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) ResetMongoDbSettings() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetMongoDbSettings",
 		nil, // no parameters
 	)
 }
@@ -583,6 +833,14 @@ func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) ResetPostgreSqlSettin
 	_jsii_.InvokeVoid(
 		d,
 		"resetPostgreSqlSettings",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) ResetRedshiftSettings() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetRedshiftSettings",
 		nil, // no parameters
 	)
 }

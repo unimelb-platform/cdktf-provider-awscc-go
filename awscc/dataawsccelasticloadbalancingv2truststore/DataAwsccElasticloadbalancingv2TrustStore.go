@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccelasticloadbalancingv2truststore/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticloadbalancingv2_trust_store awscc_elasticloadbalancingv2_trust_store}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticloadbalancingv2_trust_store awscc_elasticloadbalancingv2_trust_store}.
 type DataAwsccElasticloadbalancingv2TrustStore interface {
 	cdktf.TerraformDataSource
 	CaCertificatesBundleS3Bucket() *string
@@ -90,6 +90,10 @@ type DataAwsccElasticloadbalancingv2TrustStore interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -345,7 +349,7 @@ func (j *jsiiProxy_DataAwsccElasticloadbalancingv2TrustStore) TrustStoreArn() *s
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticloadbalancingv2_trust_store awscc_elasticloadbalancingv2_trust_store} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticloadbalancingv2_trust_store awscc_elasticloadbalancingv2_trust_store} Data Source.
 func NewDataAwsccElasticloadbalancingv2TrustStore(scope constructs.Construct, id *string, config *DataAwsccElasticloadbalancingv2TrustStoreConfig) DataAwsccElasticloadbalancingv2TrustStore {
 	_init_.Initialize()
 
@@ -363,7 +367,7 @@ func NewDataAwsccElasticloadbalancingv2TrustStore(scope constructs.Construct, id
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticloadbalancingv2_trust_store awscc_elasticloadbalancingv2_trust_store} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticloadbalancingv2_trust_store awscc_elasticloadbalancingv2_trust_store} Data Source.
 func NewDataAwsccElasticloadbalancingv2TrustStore_Override(d DataAwsccElasticloadbalancingv2TrustStore, scope constructs.Construct, id *string, config *DataAwsccElasticloadbalancingv2TrustStoreConfig) {
 	_init_.Initialize()
 
@@ -730,6 +734,32 @@ func (d *jsiiProxy_DataAwsccElasticloadbalancingv2TrustStore) SynthesizeAttribut
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccElasticloadbalancingv2TrustStore) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccElasticloadbalancingv2TrustStore) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccssmcontactscontact/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ssmcontacts_contact awscc_ssmcontacts_contact}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ssmcontacts_contact awscc_ssmcontacts_contact}.
 type DataAwsccSsmcontactsContact interface {
 	cdktf.TerraformDataSource
 	Alias() *string
@@ -51,6 +51,7 @@ type DataAwsccSsmcontactsContact interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	Tags() DataAwsccSsmcontactsContactTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -87,6 +88,10 @@ type DataAwsccSsmcontactsContact interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -271,6 +276,16 @@ func (j *jsiiProxy_DataAwsccSsmcontactsContact) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccSsmcontactsContact) Tags() DataAwsccSsmcontactsContactTagsList {
+	var returns DataAwsccSsmcontactsContactTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccSsmcontactsContact) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -312,7 +327,7 @@ func (j *jsiiProxy_DataAwsccSsmcontactsContact) Type() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ssmcontacts_contact awscc_ssmcontacts_contact} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ssmcontacts_contact awscc_ssmcontacts_contact} Data Source.
 func NewDataAwsccSsmcontactsContact(scope constructs.Construct, id *string, config *DataAwsccSsmcontactsContactConfig) DataAwsccSsmcontactsContact {
 	_init_.Initialize()
 
@@ -330,7 +345,7 @@ func NewDataAwsccSsmcontactsContact(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ssmcontacts_contact awscc_ssmcontacts_contact} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ssmcontacts_contact awscc_ssmcontacts_contact} Data Source.
 func NewDataAwsccSsmcontactsContact_Override(d DataAwsccSsmcontactsContact, scope constructs.Construct, id *string, config *DataAwsccSsmcontactsContactConfig) {
 	_init_.Initialize()
 
@@ -697,6 +712,32 @@ func (d *jsiiProxy_DataAwsccSsmcontactsContact) SynthesizeAttributes() *map[stri
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSsmcontactsContact) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSsmcontactsContact) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

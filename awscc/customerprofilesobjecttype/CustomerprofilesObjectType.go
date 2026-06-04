@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/customerprofilesobjecttype/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/customerprofiles_object_type awscc_customerprofiles_object_type}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/customerprofiles_object_type awscc_customerprofiles_object_type}.
 type CustomerprofilesObjectType interface {
 	cdktf.TerraformResource
 	AllowProfileCreation() interface{}
@@ -62,6 +62,10 @@ type CustomerprofilesObjectType interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	MaxAvailableProfileObjectCount() *float64
+	MaxProfileObjectCount() *float64
+	SetMaxProfileObjectCount(val *float64)
+	MaxProfileObjectCountInput() *float64
 	// The tree node.
 	Node() constructs.Node
 	ObjectTypeName() *string
@@ -115,12 +119,22 @@ type CustomerprofilesObjectType interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -128,12 +142,11 @@ type CustomerprofilesObjectType interface {
 	PutKeys(value interface{})
 	PutTags(value interface{})
 	ResetAllowProfileCreation()
-	ResetDescription()
 	ResetEncryptionKey()
 	ResetExpirationDays()
 	ResetFields()
 	ResetKeys()
-	ResetObjectTypeName()
+	ResetMaxProfileObjectCount()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -141,6 +154,9 @@ type CustomerprofilesObjectType interface {
 	ResetTags()
 	ResetTemplateId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -415,6 +431,36 @@ func (j *jsiiProxy_CustomerprofilesObjectType) Lifecycle() *cdktf.TerraformResou
 	return returns
 }
 
+func (j *jsiiProxy_CustomerprofilesObjectType) MaxAvailableProfileObjectCount() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxAvailableProfileObjectCount",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CustomerprofilesObjectType) MaxProfileObjectCount() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxProfileObjectCount",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CustomerprofilesObjectType) MaxProfileObjectCountInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxProfileObjectCountInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_CustomerprofilesObjectType) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -566,7 +612,7 @@ func (j *jsiiProxy_CustomerprofilesObjectType) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/customerprofiles_object_type awscc_customerprofiles_object_type} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/customerprofiles_object_type awscc_customerprofiles_object_type} Resource.
 func NewCustomerprofilesObjectType(scope constructs.Construct, id *string, config *CustomerprofilesObjectTypeConfig) CustomerprofilesObjectType {
 	_init_.Initialize()
 
@@ -584,7 +630,7 @@ func NewCustomerprofilesObjectType(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/customerprofiles_object_type awscc_customerprofiles_object_type} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/customerprofiles_object_type awscc_customerprofiles_object_type} Resource.
 func NewCustomerprofilesObjectType_Override(c CustomerprofilesObjectType, scope constructs.Construct, id *string, config *CustomerprofilesObjectTypeConfig) {
 	_init_.Initialize()
 
@@ -695,6 +741,17 @@ func (j *jsiiProxy_CustomerprofilesObjectType)SetLifecycle(val *cdktf.TerraformR
 	_jsii_.Set(
 		j,
 		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CustomerprofilesObjectType)SetMaxProfileObjectCount(val *float64) {
+	if err := j.validateSetMaxProfileObjectCountParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"maxProfileObjectCount",
 		val,
 	)
 }
@@ -1020,6 +1077,19 @@ func (c *jsiiProxy_CustomerprofilesObjectType) GetStringMapAttribute(terraformAt
 	return returns
 }
 
+func (c *jsiiProxy_CustomerprofilesObjectType) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_CustomerprofilesObjectType) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1047,6 +1117,17 @@ func (c *jsiiProxy_CustomerprofilesObjectType) InterpolationForAttribute(terrafo
 	return returns
 }
 
+func (c *jsiiProxy_CustomerprofilesObjectType) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CustomerprofilesObjectType) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1055,6 +1136,17 @@ func (c *jsiiProxy_CustomerprofilesObjectType) MoveTo(moveTarget *string, index 
 		c,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesObjectType) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1110,14 +1202,6 @@ func (c *jsiiProxy_CustomerprofilesObjectType) ResetAllowProfileCreation() {
 	)
 }
 
-func (c *jsiiProxy_CustomerprofilesObjectType) ResetDescription() {
-	_jsii_.InvokeVoid(
-		c,
-		"resetDescription",
-		nil, // no parameters
-	)
-}
-
 func (c *jsiiProxy_CustomerprofilesObjectType) ResetEncryptionKey() {
 	_jsii_.InvokeVoid(
 		c,
@@ -1150,10 +1234,10 @@ func (c *jsiiProxy_CustomerprofilesObjectType) ResetKeys() {
 	)
 }
 
-func (c *jsiiProxy_CustomerprofilesObjectType) ResetObjectTypeName() {
+func (c *jsiiProxy_CustomerprofilesObjectType) ResetMaxProfileObjectCount() {
 	_jsii_.InvokeVoid(
 		c,
-		"resetObjectTypeName",
+		"resetMaxProfileObjectCount",
 		nil, // no parameters
 	)
 }
@@ -1196,6 +1280,32 @@ func (c *jsiiProxy_CustomerprofilesObjectType) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CustomerprofilesObjectType) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CustomerprofilesObjectType) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

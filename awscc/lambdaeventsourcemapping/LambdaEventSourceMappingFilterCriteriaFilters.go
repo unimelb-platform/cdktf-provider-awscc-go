@@ -2,9 +2,9 @@ package lambdaeventsourcemapping
 
 
 type LambdaEventSourceMappingFilterCriteriaFilters struct {
-	// The filter pattern that defines which events should be passed for invocations.
+	// A filter pattern. For more information on the syntax of a filter pattern, see [Filter rule syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lambda_event_source_mapping#pattern LambdaEventSourceMapping#pattern}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lambda_event_source_mapping#pattern LambdaEventSourceMapping#pattern}
 	Pattern *string `field:"optional" json:"pattern" yaml:"pattern"`
 }
 

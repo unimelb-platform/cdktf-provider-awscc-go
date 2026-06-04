@@ -67,6 +67,8 @@ type SagemakerUserProfileUserSettingsCustomPosixUserConfigOutputReference interf
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetGid()
+	ResetUid()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (s *jsiiProxy_SagemakerUserProfileUserSettingsCustomPosixUserConfigOutputRe
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SagemakerUserProfileUserSettingsCustomPosixUserConfigOutputReference) ResetGid() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetGid",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerUserProfileUserSettingsCustomPosixUserConfigOutputReference) ResetUid() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetUid",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SagemakerUserProfileUserSettingsCustomPosixUserConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

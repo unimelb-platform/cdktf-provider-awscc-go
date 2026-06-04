@@ -171,9 +171,25 @@ func (j *jsiiProxy_PipesPipeSourceParametersActiveMqBrokerParametersCredentialsO
 	return nil
 }
 
-func (j *jsiiProxy_PipesPipeSourceParametersActiveMqBrokerParametersCredentialsOutputReference) validateSetInternalValueParameters(val *PipesPipeSourceParametersActiveMqBrokerParametersCredentials) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_PipesPipeSourceParametersActiveMqBrokerParametersCredentialsOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *PipesPipeSourceParametersActiveMqBrokerParametersCredentials:
+		val := val.(*PipesPipeSourceParametersActiveMqBrokerParametersCredentials)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case PipesPipeSourceParametersActiveMqBrokerParametersCredentials:
+		val_ := val.(PipesPipeSourceParametersActiveMqBrokerParametersCredentials)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *PipesPipeSourceParametersActiveMqBrokerParametersCredentials; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

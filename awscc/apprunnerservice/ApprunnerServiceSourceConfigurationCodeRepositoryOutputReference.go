@@ -35,7 +35,7 @@ type ApprunnerServiceSourceConfigurationCodeRepositoryOutputReference interface 
 	SetRepositoryUrl(val *string)
 	RepositoryUrlInput() *string
 	SourceCodeVersion() ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersionOutputReference
-	SourceCodeVersionInput() *ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersion
+	SourceCodeVersionInput() interface{}
 	SourceDirectory() *string
 	SetSourceDirectory(val *string)
 	SourceDirectoryInput() *string
@@ -74,6 +74,8 @@ type ApprunnerServiceSourceConfigurationCodeRepositoryOutputReference interface 
 	PutCodeConfiguration(value *ApprunnerServiceSourceConfigurationCodeRepositoryCodeConfiguration)
 	PutSourceCodeVersion(value *ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersion)
 	ResetCodeConfiguration()
+	ResetRepositoryUrl()
+	ResetSourceCodeVersion()
 	ResetSourceDirectory()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -190,8 +192,8 @@ func (j *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositoryOutputRefere
 	return returns
 }
 
-func (j *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositoryOutputReference) SourceCodeVersionInput() *ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersion {
-	var returns *ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersion
+func (j *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositoryOutputReference) SourceCodeVersionInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"sourceCodeVersionInput",
@@ -557,6 +559,22 @@ func (a *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositoryOutputRefere
 	_jsii_.InvokeVoid(
 		a,
 		"resetCodeConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositoryOutputReference) ResetRepositoryUrl() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetRepositoryUrl",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositoryOutputReference) ResetSourceCodeVersion() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetSourceCodeVersion",
 		nil, // no parameters
 	)
 }

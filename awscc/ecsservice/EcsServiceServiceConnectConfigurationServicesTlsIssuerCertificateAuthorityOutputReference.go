@@ -30,8 +30,8 @@ type EcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthorityO
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *EcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthority
-	SetInternalValue(val *EcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthority)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -140,8 +140,8 @@ func (j *jsiiProxy_EcsServiceServiceConnectConfigurationServicesTlsIssuerCertifi
 	return returns
 }
 
-func (j *jsiiProxy_EcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthorityOutputReference) InternalValue() *EcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthority {
-	var returns *EcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthority
+func (j *jsiiProxy_EcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthorityOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -231,7 +231,7 @@ func (j *jsiiProxy_EcsServiceServiceConnectConfigurationServicesTlsIssuerCertifi
 	)
 }
 
-func (j *jsiiProxy_EcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthorityOutputReference)SetInternalValue(val *EcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthority) {
+func (j *jsiiProxy_EcsServiceServiceConnectConfigurationServicesTlsIssuerCertificateAuthorityOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

@@ -2,9 +2,9 @@ package lambdafunction
 
 
 type LambdaFunctionEphemeralStorage struct {
-	// The amount of ephemeral storage that your function has access to.
+	// The size of the function's ``/tmp`` directory.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lambda_function#size LambdaFunction#size}
-	Size *float64 `field:"required" json:"size" yaml:"size"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lambda_function#size LambdaFunction#size}
+	Size *float64 `field:"optional" json:"size" yaml:"size"`
 }
 

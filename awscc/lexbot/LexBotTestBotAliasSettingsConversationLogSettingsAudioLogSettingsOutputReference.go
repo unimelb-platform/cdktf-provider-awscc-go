@@ -26,7 +26,7 @@ type LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsOutputRefe
 	// Experimental.
 	CreationStack() *[]*string
 	Destination() LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsDestinationOutputReference
-	DestinationInput() *LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsDestination
+	DestinationInput() interface{}
 	Enabled() interface{}
 	SetEnabled(val interface{})
 	EnabledInput() interface{}
@@ -67,6 +67,8 @@ type LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsOutputRefe
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDestination(value *LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsDestination)
+	ResetDestination()
+	ResetEnabled()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSett
 	return returns
 }
 
-func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsOutputReference) DestinationInput() *LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsDestination {
-	var returns *LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsDestination
+func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsOutputReference) DestinationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"destinationInput",
@@ -480,6 +482,22 @@ func (l *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSett
 		l,
 		"putDestination",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsOutputReference) ResetDestination() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetDestination",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsOutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetEnabled",
+		nil, // no parameters
 	)
 }
 

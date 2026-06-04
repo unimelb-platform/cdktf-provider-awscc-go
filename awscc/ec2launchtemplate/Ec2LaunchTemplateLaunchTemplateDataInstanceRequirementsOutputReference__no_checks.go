@@ -56,6 +56,10 @@ func (e *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutput
 	return nil
 }
 
+func (e *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutputReference) validatePutBaselinePerformanceFactorsParameters(value *Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselinePerformanceFactors) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutputReference) validatePutMemoryGiBPerVCpuParameters(value *Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpu) error {
 	return nil
 }

@@ -27,10 +27,10 @@ type SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobD
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSource
-	SetInternalValue(val *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSource)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	S3DataSource() SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSourceOutputReference
-	S3DataSourceInput() *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSource
+	S3DataSourceInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobD
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutS3DataSource(value *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSource)
+	ResetS3DataSource()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -119,8 +120,8 @@ func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceOutputReference) InternalValue() *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSource {
-	var returns *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSource
+func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -139,8 +140,8 @@ func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceOutputReference) S3DataSourceInput() *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSource {
-	var returns *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSource
+func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceOutputReference) S3DataSourceInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"s3DataSourceInput",
@@ -219,7 +220,7 @@ func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 	)
 }
 
-func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceOutputReference)SetInternalValue(val *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSource) {
+func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -446,6 +447,14 @@ func (s *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 		s,
 		"putS3DataSource",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceOutputReference) ResetS3DataSource() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetS3DataSource",
+		nil, // no parameters
 	)
 }
 

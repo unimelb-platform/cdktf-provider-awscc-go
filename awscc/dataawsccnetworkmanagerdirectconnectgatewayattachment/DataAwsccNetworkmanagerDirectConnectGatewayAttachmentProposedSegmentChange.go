@@ -1,0 +1,6 @@
+package dataawsccnetworkmanagerdirectconnectgatewayattachment
+
+
+type DataAwsccNetworkmanagerDirectConnectGatewayAttachmentProposedSegmentChange struct {
+}
+

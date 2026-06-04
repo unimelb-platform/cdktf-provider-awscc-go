@@ -60,7 +60,7 @@ func (j *jsiiProxy_S3BucketNotificationConfigurationLambdaConfigurationsFilterS3
 	return nil
 }
 
-func (j *jsiiProxy_S3BucketNotificationConfigurationLambdaConfigurationsFilterS3KeyOutputReference) validateSetInternalValueParameters(val *S3BucketNotificationConfigurationLambdaConfigurationsFilterS3Key) error {
+func (j *jsiiProxy_S3BucketNotificationConfigurationLambdaConfigurationsFilterS3KeyOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

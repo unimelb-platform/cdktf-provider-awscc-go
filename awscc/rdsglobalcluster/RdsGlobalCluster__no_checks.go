@@ -56,11 +56,23 @@ func (r *jsiiProxy_RdsGlobalCluster) validateInterpolationForAttributeParameters
 	return nil
 }
 
+func (r *jsiiProxy_RdsGlobalCluster) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RdsGlobalCluster) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (r *jsiiProxy_RdsGlobalCluster) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RdsGlobalCluster) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (r *jsiiProxy_RdsGlobalCluster) validatePutTagsParameters(value interface{}) error {
 	return nil
 }
 
@@ -93,6 +105,10 @@ func (j *jsiiProxy_RdsGlobalCluster) validateSetDeletionProtectionParameters(val
 }
 
 func (j *jsiiProxy_RdsGlobalCluster) validateSetEngineParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_RdsGlobalCluster) validateSetEngineLifecycleSupportParameters(val *string) error {
 	return nil
 }
 

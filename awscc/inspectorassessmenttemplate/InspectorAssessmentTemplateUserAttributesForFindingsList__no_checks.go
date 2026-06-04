@@ -4,6 +4,10 @@ package inspectorassessmenttemplate
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (i *jsiiProxy_InspectorAssessmentTemplateUserAttributesForFindingsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_InspectorAssessmentTemplateUserAttributesForFindingsList) validateGetParameters(index *float64) error {
 	return nil
 }

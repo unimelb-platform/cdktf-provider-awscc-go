@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccsagemakerdevicefleet/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_device_fleet awscc_sagemaker_device_fleet}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_device_fleet awscc_sagemaker_device_fleet}.
 type DataAwsccSagemakerDeviceFleet interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -87,6 +87,10 @@ type DataAwsccSagemakerDeviceFleet interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -312,7 +316,7 @@ func (j *jsiiProxy_DataAwsccSagemakerDeviceFleet) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_device_fleet awscc_sagemaker_device_fleet} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_device_fleet awscc_sagemaker_device_fleet} Data Source.
 func NewDataAwsccSagemakerDeviceFleet(scope constructs.Construct, id *string, config *DataAwsccSagemakerDeviceFleetConfig) DataAwsccSagemakerDeviceFleet {
 	_init_.Initialize()
 
@@ -330,7 +334,7 @@ func NewDataAwsccSagemakerDeviceFleet(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_device_fleet awscc_sagemaker_device_fleet} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_device_fleet awscc_sagemaker_device_fleet} Data Source.
 func NewDataAwsccSagemakerDeviceFleet_Override(d DataAwsccSagemakerDeviceFleet, scope constructs.Construct, id *string, config *DataAwsccSagemakerDeviceFleetConfig) {
 	_init_.Initialize()
 
@@ -697,6 +701,32 @@ func (d *jsiiProxy_DataAwsccSagemakerDeviceFleet) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerDeviceFleet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerDeviceFleet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

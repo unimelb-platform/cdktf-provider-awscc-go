@@ -4,6 +4,10 @@ package eventsrule
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (e *jsiiProxy_EventsRuleTargetsEcsParametersPlacementConstraintsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_EventsRuleTargetsEcsParametersPlacementConstraintsList) validateGetParameters(index *float64) error {
 	return nil
 }

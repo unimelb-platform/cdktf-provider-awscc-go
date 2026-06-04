@@ -27,10 +27,10 @@ type CleanroomsMembershipDefaultResultConfigurationOutputConfigurationOutputRefe
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *CleanroomsMembershipDefaultResultConfigurationOutputConfiguration
-	SetInternalValue(val *CleanroomsMembershipDefaultResultConfigurationOutputConfiguration)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	S3() CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference
-	S3Input() *CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3
+	S3Input() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type CleanroomsMembershipDefaultResultConfigurationOutputConfigurationOutputRefe
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutS3(value *CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3)
+	ResetS3()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -119,8 +120,8 @@ func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigura
 	return returns
 }
 
-func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationOutputReference) InternalValue() *CleanroomsMembershipDefaultResultConfigurationOutputConfiguration {
-	var returns *CleanroomsMembershipDefaultResultConfigurationOutputConfiguration
+func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -139,8 +140,8 @@ func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigura
 	return returns
 }
 
-func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationOutputReference) S3Input() *CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3 {
-	var returns *CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3
+func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationOutputReference) S3Input() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"s3Input",
@@ -219,7 +220,7 @@ func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigura
 	)
 }
 
-func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationOutputReference)SetInternalValue(val *CleanroomsMembershipDefaultResultConfigurationOutputConfiguration) {
+func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -446,6 +447,14 @@ func (c *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigura
 		c,
 		"putS3",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationOutputReference) ResetS3() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetS3",
+		nil, // no parameters
 	)
 }
 

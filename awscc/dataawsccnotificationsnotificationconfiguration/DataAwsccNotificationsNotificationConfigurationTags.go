@@ -1,0 +1,6 @@
+package dataawsccnotificationsnotificationconfiguration
+
+
+type DataAwsccNotificationsNotificationConfigurationTags struct {
+}
+

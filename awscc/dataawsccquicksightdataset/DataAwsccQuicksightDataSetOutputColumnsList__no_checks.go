@@ -4,6 +4,10 @@ package dataawsccquicksightdataset
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccQuicksightDataSetOutputColumnsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccQuicksightDataSetOutputColumnsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -119,6 +119,14 @@ func (c *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateInterpolat
 	return nil
 }
 
+func (c *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (c *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,9 +188,48 @@ func (c *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateMoveToPara
 	return nil
 }
 
+func (c *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (c *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (c *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validatePutTagsParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*ChatbotMicrosoftTeamsChannelConfigurationTags:
+		value := value.(*[]*ChatbotMicrosoftTeamsChannelConfigurationTags)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*ChatbotMicrosoftTeamsChannelConfigurationTags:
+		value_ := value.([]*ChatbotMicrosoftTeamsChannelConfigurationTags)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*ChatbotMicrosoftTeamsChannelConfigurationTags; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil
@@ -326,6 +373,14 @@ func (j *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateSetCountPa
 	return nil
 }
 
+func (j *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateSetCustomizationResourceArnsParameters(val *[]*string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateSetGuardrailPoliciesParameters(val *[]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -421,6 +476,14 @@ func (j *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateSetTeamIdP
 }
 
 func (j *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateSetTeamsChannelIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ChatbotMicrosoftTeamsChannelConfiguration) validateSetTeamsChannelNameParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

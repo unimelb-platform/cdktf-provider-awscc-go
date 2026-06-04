@@ -78,6 +78,7 @@ type QuicksightTopicDataSetsNamedEntitiesOutputReference interface {
 	PutSemanticEntityType(value *QuicksightTopicDataSetsNamedEntitiesSemanticEntityType)
 	ResetDefinition()
 	ResetEntityDescription()
+	ResetEntityName()
 	ResetEntitySynonyms()
 	ResetSemanticEntityType()
 	// Produce the Token's value at resolution time.
@@ -601,6 +602,14 @@ func (q *jsiiProxy_QuicksightTopicDataSetsNamedEntitiesOutputReference) ResetEnt
 	_jsii_.InvokeVoid(
 		q,
 		"resetEntityDescription",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightTopicDataSetsNamedEntitiesOutputReference) ResetEntityName() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetEntityName",
 		nil, // no parameters
 	)
 }

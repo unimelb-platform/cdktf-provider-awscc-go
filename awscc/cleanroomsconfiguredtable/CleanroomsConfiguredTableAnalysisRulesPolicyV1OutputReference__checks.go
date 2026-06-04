@@ -196,9 +196,25 @@ func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1OutputReference
 	return nil
 }
 
-func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1OutputReference) validateSetInternalValueParameters(val *CleanroomsConfiguredTableAnalysisRulesPolicyV1) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1OutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *CleanroomsConfiguredTableAnalysisRulesPolicyV1:
+		val := val.(*CleanroomsConfiguredTableAnalysisRulesPolicyV1)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case CleanroomsConfiguredTableAnalysisRulesPolicyV1:
+		val_ := val.(CleanroomsConfiguredTableAnalysisRulesPolicyV1)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *CleanroomsConfiguredTableAnalysisRulesPolicyV1; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

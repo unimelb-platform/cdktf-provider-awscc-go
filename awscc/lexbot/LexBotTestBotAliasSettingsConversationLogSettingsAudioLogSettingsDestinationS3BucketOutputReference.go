@@ -27,8 +27,8 @@ type LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsDestinatio
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsDestinationS3Bucket
-	SetInternalValue(val *LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsDestinationS3Bucket)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	KmsKeyArn() *string
 	SetKmsKeyArn(val *string)
 	KmsKeyArnInput() *string
@@ -71,6 +71,8 @@ type LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsDestinatio
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetKmsKeyArn()
+	ResetLogPrefix()
+	ResetS3BucketArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -126,8 +128,8 @@ func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSett
 	return returns
 }
 
-func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsDestinationS3BucketOutputReference) InternalValue() *LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsDestinationS3Bucket {
-	var returns *LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsDestinationS3Bucket
+func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsDestinationS3BucketOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -266,7 +268,7 @@ func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSett
 	)
 }
 
-func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsDestinationS3BucketOutputReference)SetInternalValue(val *LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsDestinationS3Bucket) {
+func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsDestinationS3BucketOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -522,6 +524,22 @@ func (l *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSett
 	_jsii_.InvokeVoid(
 		l,
 		"resetKmsKeyArn",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsDestinationS3BucketOutputReference) ResetLogPrefix() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetLogPrefix",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsAudioLogSettingsDestinationS3BucketOutputReference) ResetS3BucketArn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetS3BucketArn",
 		nil, // no parameters
 	)
 }

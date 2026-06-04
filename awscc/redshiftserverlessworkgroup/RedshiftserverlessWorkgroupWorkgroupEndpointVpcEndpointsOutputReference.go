@@ -27,9 +27,10 @@ type RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference int
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpoints
-	SetInternalValue(val *RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpoints)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	NetworkInterfaces() RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsNetworkInterfacesList
+	NetworkInterfacesInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -39,7 +40,11 @@ type RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference int
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	VpcEndpointId() *string
+	SetVpcEndpointId(val *string)
+	VpcEndpointIdInput() *string
 	VpcId() *string
+	SetVpcId(val *string)
+	VpcIdInput() *string
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -64,6 +69,10 @@ type RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference int
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutNetworkInterfaces(value interface{})
+	ResetNetworkInterfaces()
+	ResetVpcEndpointId()
+	ResetVpcId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -119,8 +128,8 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutpu
 	return returns
 }
 
-func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference) InternalValue() *RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpoints {
-	var returns *RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpoints
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -134,6 +143,16 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutpu
 	_jsii_.Get(
 		j,
 		"networkInterfaces",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference) NetworkInterfacesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"networkInterfacesInput",
 		&returns,
 	)
 	return returns
@@ -169,11 +188,31 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutpu
 	return returns
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference) VpcEndpointIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"vpcEndpointIdInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference) VpcId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"vpcId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference) VpcIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"vpcIdInput",
 		&returns,
 	)
 	return returns
@@ -229,7 +268,7 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutpu
 	)
 }
 
-func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference)SetInternalValue(val *RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpoints) {
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -258,6 +297,28 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutpu
 	_jsii_.Set(
 		j,
 		"terraformResource",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference)SetVpcEndpointId(val *string) {
+	if err := j.validateSetVpcEndpointIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"vpcEndpointId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference)SetVpcId(val *string) {
+	if err := j.validateSetVpcIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"vpcId",
 		val,
 	)
 }
@@ -446,6 +507,41 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutpu
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference) PutNetworkInterfaces(value interface{}) {
+	if err := r.validatePutNetworkInterfacesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putNetworkInterfaces",
+		[]interface{}{value},
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference) ResetNetworkInterfaces() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetNetworkInterfaces",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference) ResetVpcEndpointId() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetVpcEndpointId",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference) ResetVpcId() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetVpcId",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

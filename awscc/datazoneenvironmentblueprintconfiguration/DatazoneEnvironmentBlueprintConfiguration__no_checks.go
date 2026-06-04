@@ -56,11 +56,23 @@ func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) validateInterpolat
 	return nil
 }
 
+func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) validatePutProvisioningConfigurationsParameters(value interface{}) error {
 	return nil
 }
 
@@ -101,6 +113,10 @@ func (j *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) validateSetEnabled
 }
 
 func (j *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) validateSetEnvironmentBlueprintIdentifierParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) validateSetEnvironmentRolePermissionBoundaryParameters(val *string) error {
 	return nil
 }
 

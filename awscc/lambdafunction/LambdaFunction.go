@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/lambdafunction/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lambda_function awscc_lambda_function}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lambda_function awscc_lambda_function}.
 type LambdaFunction interface {
 	cdktf.TerraformResource
 	Architectures() *[]*string
@@ -95,6 +95,9 @@ type LambdaFunction interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RecursiveLoop() *string
+	SetRecursiveLoop(val *string)
+	RecursiveLoopInput() *string
 	ReservedConcurrentExecutions() *float64
 	SetReservedConcurrentExecutions(val *float64)
 	ReservedConcurrentExecutionsInput() *float64
@@ -148,12 +151,22 @@ type LambdaFunction interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -187,6 +200,7 @@ type LambdaFunction interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPackageType()
+	ResetRecursiveLoop()
 	ResetReservedConcurrentExecutions()
 	ResetRuntime()
 	ResetRuntimeManagementConfig()
@@ -196,6 +210,9 @@ type LambdaFunction interface {
 	ResetTracingConfig()
 	ResetVpcConfig()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -680,6 +697,26 @@ func (j *jsiiProxy_LambdaFunction) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_LambdaFunction) RecursiveLoop() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"recursiveLoop",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LambdaFunction) RecursiveLoopInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"recursiveLoopInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_LambdaFunction) ReservedConcurrentExecutions() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -901,7 +938,7 @@ func (j *jsiiProxy_LambdaFunction) VpcConfigInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lambda_function awscc_lambda_function} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lambda_function awscc_lambda_function} Resource.
 func NewLambdaFunction(scope constructs.Construct, id *string, config *LambdaFunctionConfig) LambdaFunction {
 	_init_.Initialize()
 
@@ -919,7 +956,7 @@ func NewLambdaFunction(scope constructs.Construct, id *string, config *LambdaFun
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lambda_function awscc_lambda_function} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lambda_function awscc_lambda_function} Resource.
 func NewLambdaFunction_Override(l LambdaFunction, scope constructs.Construct, id *string, config *LambdaFunctionConfig) {
 	_init_.Initialize()
 
@@ -1093,6 +1130,17 @@ func (j *jsiiProxy_LambdaFunction)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LambdaFunction)SetRecursiveLoop(val *string) {
+	if err := j.validateSetRecursiveLoopParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"recursiveLoop",
 		val,
 	)
 }
@@ -1410,6 +1458,19 @@ func (l *jsiiProxy_LambdaFunction) GetStringMapAttribute(terraformAttribute *str
 	return returns
 }
 
+func (l *jsiiProxy_LambdaFunction) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (l *jsiiProxy_LambdaFunction) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := l.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1437,6 +1498,17 @@ func (l *jsiiProxy_LambdaFunction) InterpolationForAttribute(terraformAttribute 
 	return returns
 }
 
+func (l *jsiiProxy_LambdaFunction) MoveFromId(id *string) {
+	if err := l.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (l *jsiiProxy_LambdaFunction) MoveTo(moveTarget *string, index interface{}) {
 	if err := l.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1445,6 +1517,17 @@ func (l *jsiiProxy_LambdaFunction) MoveTo(moveTarget *string, index interface{})
 		l,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (l *jsiiProxy_LambdaFunction) MoveToId(id *string) {
+	if err := l.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1719,6 +1802,14 @@ func (l *jsiiProxy_LambdaFunction) ResetPackageType() {
 	)
 }
 
+func (l *jsiiProxy_LambdaFunction) ResetRecursiveLoop() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetRecursiveLoop",
+		nil, // no parameters
+	)
+}
+
 func (l *jsiiProxy_LambdaFunction) ResetReservedConcurrentExecutions() {
 	_jsii_.InvokeVoid(
 		l,
@@ -1789,6 +1880,32 @@ func (l *jsiiProxy_LambdaFunction) SynthesizeAttributes() *map[string]interface{
 	_jsii_.Invoke(
 		l,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LambdaFunction) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		l,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LambdaFunction) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

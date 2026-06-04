@@ -1,0 +1,6 @@
+package dataawsccapplicationinsightsapplication
+
+
+type DataAwsccApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfigurationConfigurationDetailsProcessesAlarmMetrics struct {
+}
+

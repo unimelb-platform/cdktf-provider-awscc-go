@@ -56,7 +56,7 @@ func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClas
 	return nil
 }
 
-func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancersOutputReference) validateSetInternalValueParameters(val *Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancers) error {
+func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancersOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

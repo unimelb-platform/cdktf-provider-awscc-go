@@ -4,6 +4,10 @@ package datasynclocationazureblob
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DatasyncLocationAzureBlobTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DatasyncLocationAzureBlobTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

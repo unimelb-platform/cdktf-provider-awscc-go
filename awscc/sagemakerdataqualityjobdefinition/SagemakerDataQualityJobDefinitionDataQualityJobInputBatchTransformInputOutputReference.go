@@ -29,7 +29,7 @@ type SagemakerDataQualityJobDefinitionDataQualityJobInputBatchTransformInputOutp
 	SetDataCapturedDestinationS3Uri(val *string)
 	DataCapturedDestinationS3UriInput() *string
 	DatasetFormat() SagemakerDataQualityJobDefinitionDataQualityJobInputBatchTransformInputDatasetFormatOutputReference
-	DatasetFormatInput() *SagemakerDataQualityJobDefinitionDataQualityJobInputBatchTransformInputDatasetFormat
+	DatasetFormatInput() interface{}
 	ExcludeFeaturesAttribute() *string
 	SetExcludeFeaturesAttribute(val *string)
 	ExcludeFeaturesAttributeInput() *string
@@ -79,7 +79,10 @@ type SagemakerDataQualityJobDefinitionDataQualityJobInputBatchTransformInputOutp
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDatasetFormat(value *SagemakerDataQualityJobDefinitionDataQualityJobInputBatchTransformInputDatasetFormat)
+	ResetDataCapturedDestinationS3Uri()
+	ResetDatasetFormat()
 	ResetExcludeFeaturesAttribute()
+	ResetLocalPath()
 	ResetS3DataDistributionType()
 	ResetS3InputMode()
 	// Produce the Token's value at resolution time.
@@ -157,8 +160,8 @@ func (j *jsiiProxy_SagemakerDataQualityJobDefinitionDataQualityJobInputBatchTran
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerDataQualityJobDefinitionDataQualityJobInputBatchTransformInputOutputReference) DatasetFormatInput() *SagemakerDataQualityJobDefinitionDataQualityJobInputBatchTransformInputDatasetFormat {
-	var returns *SagemakerDataQualityJobDefinitionDataQualityJobInputBatchTransformInputDatasetFormat
+func (j *jsiiProxy_SagemakerDataQualityJobDefinitionDataQualityJobInputBatchTransformInputOutputReference) DatasetFormatInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"datasetFormatInput",
@@ -622,10 +625,34 @@ func (s *jsiiProxy_SagemakerDataQualityJobDefinitionDataQualityJobInputBatchTran
 	)
 }
 
+func (s *jsiiProxy_SagemakerDataQualityJobDefinitionDataQualityJobInputBatchTransformInputOutputReference) ResetDataCapturedDestinationS3Uri() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDataCapturedDestinationS3Uri",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerDataQualityJobDefinitionDataQualityJobInputBatchTransformInputOutputReference) ResetDatasetFormat() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDatasetFormat",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerDataQualityJobDefinitionDataQualityJobInputBatchTransformInputOutputReference) ResetExcludeFeaturesAttribute() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetExcludeFeaturesAttribute",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerDataQualityJobDefinitionDataQualityJobInputBatchTransformInputOutputReference) ResetLocalPath() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetLocalPath",
 		nil, // no parameters
 	)
 }

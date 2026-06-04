@@ -4,6 +4,10 @@ package backupbackupplan
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (b *jsiiProxy_BackupBackupPlanBackupPlanAdvancedBackupSettingsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (b *jsiiProxy_BackupBackupPlanBackupPlanAdvancedBackupSettingsList) validateGetParameters(index *float64) error {
 	return nil
 }

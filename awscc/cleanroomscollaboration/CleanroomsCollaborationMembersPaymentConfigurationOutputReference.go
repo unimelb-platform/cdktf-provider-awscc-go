@@ -29,8 +29,12 @@ type CleanroomsCollaborationMembersPaymentConfigurationOutputReference interface
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	JobCompute() CleanroomsCollaborationMembersPaymentConfigurationJobComputeOutputReference
+	JobComputeInput() interface{}
+	MachineLearning() CleanroomsCollaborationMembersPaymentConfigurationMachineLearningOutputReference
+	MachineLearningInput() interface{}
 	QueryCompute() CleanroomsCollaborationMembersPaymentConfigurationQueryComputeOutputReference
-	QueryComputeInput() *CleanroomsCollaborationMembersPaymentConfigurationQueryCompute
+	QueryComputeInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -63,7 +67,12 @@ type CleanroomsCollaborationMembersPaymentConfigurationOutputReference interface
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutJobCompute(value *CleanroomsCollaborationMembersPaymentConfigurationJobCompute)
+	PutMachineLearning(value *CleanroomsCollaborationMembersPaymentConfigurationMachineLearning)
 	PutQueryCompute(value *CleanroomsCollaborationMembersPaymentConfigurationQueryCompute)
+	ResetJobCompute()
+	ResetMachineLearning()
+	ResetQueryCompute()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -129,6 +138,46 @@ func (j *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputRefer
 	return returns
 }
 
+func (j *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputReference) JobCompute() CleanroomsCollaborationMembersPaymentConfigurationJobComputeOutputReference {
+	var returns CleanroomsCollaborationMembersPaymentConfigurationJobComputeOutputReference
+	_jsii_.Get(
+		j,
+		"jobCompute",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputReference) JobComputeInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"jobComputeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputReference) MachineLearning() CleanroomsCollaborationMembersPaymentConfigurationMachineLearningOutputReference {
+	var returns CleanroomsCollaborationMembersPaymentConfigurationMachineLearningOutputReference
+	_jsii_.Get(
+		j,
+		"machineLearning",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputReference) MachineLearningInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"machineLearningInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputReference) QueryCompute() CleanroomsCollaborationMembersPaymentConfigurationQueryComputeOutputReference {
 	var returns CleanroomsCollaborationMembersPaymentConfigurationQueryComputeOutputReference
 	_jsii_.Get(
@@ -139,8 +188,8 @@ func (j *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputRefer
 	return returns
 }
 
-func (j *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputReference) QueryComputeInput() *CleanroomsCollaborationMembersPaymentConfigurationQueryCompute {
-	var returns *CleanroomsCollaborationMembersPaymentConfigurationQueryCompute
+func (j *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputReference) QueryComputeInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"queryComputeInput",
@@ -438,6 +487,28 @@ func (c *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputRefer
 	return returns
 }
 
+func (c *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputReference) PutJobCompute(value *CleanroomsCollaborationMembersPaymentConfigurationJobCompute) {
+	if err := c.validatePutJobComputeParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putJobCompute",
+		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputReference) PutMachineLearning(value *CleanroomsCollaborationMembersPaymentConfigurationMachineLearning) {
+	if err := c.validatePutMachineLearningParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putMachineLearning",
+		[]interface{}{value},
+	)
+}
+
 func (c *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputReference) PutQueryCompute(value *CleanroomsCollaborationMembersPaymentConfigurationQueryCompute) {
 	if err := c.validatePutQueryComputeParameters(value); err != nil {
 		panic(err)
@@ -446,6 +517,30 @@ func (c *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputRefer
 		c,
 		"putQueryCompute",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputReference) ResetJobCompute() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetJobCompute",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputReference) ResetMachineLearning() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetMachineLearning",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsCollaborationMembersPaymentConfigurationOutputReference) ResetQueryCompute() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetQueryCompute",
+		nil, // no parameters
 	)
 }
 

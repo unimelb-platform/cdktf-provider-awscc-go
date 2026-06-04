@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccmemorydbsubnetgroups/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/memorydb_subnet_groups awscc_memorydb_subnet_groups}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/memorydb_subnet_groups awscc_memorydb_subnet_groups}.
 type DataAwsccMemorydbSubnetGroups interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccMemorydbSubnetGroups interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccMemorydbSubnetGroups) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/memorydb_subnet_groups awscc_memorydb_subnet_groups} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/memorydb_subnet_groups awscc_memorydb_subnet_groups} Data Source.
 func NewDataAwsccMemorydbSubnetGroups(scope constructs.Construct, id *string, config *DataAwsccMemorydbSubnetGroupsConfig) DataAwsccMemorydbSubnetGroups {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccMemorydbSubnetGroups(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/memorydb_subnet_groups awscc_memorydb_subnet_groups} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/memorydb_subnet_groups awscc_memorydb_subnet_groups} Data Source.
 func NewDataAwsccMemorydbSubnetGroups_Override(d DataAwsccMemorydbSubnetGroups, scope constructs.Construct, id *string, config *DataAwsccMemorydbSubnetGroupsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccMemorydbSubnetGroups) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMemorydbSubnetGroups) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMemorydbSubnetGroups) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

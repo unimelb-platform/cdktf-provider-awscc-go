@@ -67,6 +67,8 @@ type BillingconductorPricingPlanTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (b *jsiiProxy_BillingconductorPricingPlanTagsOutputReference) Interpolation
 	)
 
 	return returns
+}
+
+func (b *jsiiProxy_BillingconductorPricingPlanTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BillingconductorPricingPlanTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (b *jsiiProxy_BillingconductorPricingPlanTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

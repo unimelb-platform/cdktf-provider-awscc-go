@@ -30,8 +30,8 @@ type DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisionedThroughputS
 	DisableScaleInInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration
-	SetInternalValue(val *DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	ScaleInCooldown() *float64
 	SetScaleInCooldown(val *float64)
 	ScaleInCooldownInput() *float64
@@ -76,6 +76,7 @@ type DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisionedThroughputS
 	ResetDisableScaleIn()
 	ResetScaleInCooldown()
 	ResetScaleOutCooldown()
+	ResetTargetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -151,8 +152,8 @@ func (j *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisio
 	return returns
 }
 
-func (j *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfigurationOutputReference) InternalValue() *DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration {
-	var returns *DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration
+func (j *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfigurationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -302,7 +303,7 @@ func (j *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisio
 	)
 }
 
-func (j *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfigurationOutputReference)SetInternalValue(val *DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration) {
+func (j *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfigurationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -574,6 +575,14 @@ func (d *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisio
 	_jsii_.InvokeVoid(
 		d,
 		"resetScaleOutCooldown",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisionedThroughputSettingsReadCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfigurationOutputReference) ResetTargetValue() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetTargetValue",
 		nil, // no parameters
 	)
 }

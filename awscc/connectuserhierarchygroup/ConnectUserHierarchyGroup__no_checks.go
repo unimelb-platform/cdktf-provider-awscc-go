@@ -56,7 +56,15 @@ func (c *jsiiProxy_ConnectUserHierarchyGroup) validateInterpolationForAttributeP
 	return nil
 }
 
+func (c *jsiiProxy_ConnectUserHierarchyGroup) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_ConnectUserHierarchyGroup) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_ConnectUserHierarchyGroup) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -64,7 +64,7 @@ func (j *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransfor
 	return nil
 }
 
-func (j *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputDatasetFormatOutputReference) validateSetInternalValueParameters(val *SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputDatasetFormat) error {
+func (j *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputDatasetFormatOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

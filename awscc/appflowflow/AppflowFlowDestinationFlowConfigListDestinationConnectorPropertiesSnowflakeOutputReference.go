@@ -75,6 +75,8 @@ type AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesSnowflake
 	PutErrorHandlingConfig(value *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesSnowflakeErrorHandlingConfig)
 	ResetBucketPrefix()
 	ResetErrorHandlingConfig()
+	ResetIntermediateBucketName()
+	ResetObject()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -565,6 +567,22 @@ func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPrope
 	_jsii_.InvokeVoid(
 		a,
 		"resetErrorHandlingConfig",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesSnowflakeOutputReference) ResetIntermediateBucketName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetIntermediateBucketName",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesSnowflakeOutputReference) ResetObject() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetObject",
 		nil, // no parameters
 	)
 }

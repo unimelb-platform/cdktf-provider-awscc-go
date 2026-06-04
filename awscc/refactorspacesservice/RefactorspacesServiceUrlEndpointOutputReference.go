@@ -68,6 +68,7 @@ type RefactorspacesServiceUrlEndpointOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetHealthUrl()
+	ResetUrl()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (r *jsiiProxy_RefactorspacesServiceUrlEndpointOutputReference) ResetHealthU
 	_jsii_.InvokeVoid(
 		r,
 		"resetHealthUrl",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RefactorspacesServiceUrlEndpointOutputReference) ResetUrl() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetUrl",
 		nil, // no parameters
 	)
 }

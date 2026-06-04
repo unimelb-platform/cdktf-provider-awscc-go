@@ -11,7 +11,7 @@ import (
 type PcaconnectoradTemplateDefinitionTemplateV4OutputReference interface {
 	cdktf.ComplexObject
 	CertificateValidity() PcaconnectoradTemplateDefinitionTemplateV4CertificateValidityOutputReference
-	CertificateValidityInput() *PcaconnectoradTemplateDefinitionTemplateV4CertificateValidity
+	CertificateValidityInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -28,24 +28,24 @@ type PcaconnectoradTemplateDefinitionTemplateV4OutputReference interface {
 	// Experimental.
 	CreationStack() *[]*string
 	EnrollmentFlags() PcaconnectoradTemplateDefinitionTemplateV4EnrollmentFlagsOutputReference
-	EnrollmentFlagsInput() *PcaconnectoradTemplateDefinitionTemplateV4EnrollmentFlags
+	EnrollmentFlagsInput() interface{}
 	Extensions() PcaconnectoradTemplateDefinitionTemplateV4ExtensionsOutputReference
-	ExtensionsInput() *PcaconnectoradTemplateDefinitionTemplateV4Extensions
+	ExtensionsInput() interface{}
 	// Experimental.
 	Fqn() *string
 	GeneralFlags() PcaconnectoradTemplateDefinitionTemplateV4GeneralFlagsOutputReference
-	GeneralFlagsInput() *PcaconnectoradTemplateDefinitionTemplateV4GeneralFlags
+	GeneralFlagsInput() interface{}
 	HashAlgorithm() *string
 	SetHashAlgorithm(val *string)
 	HashAlgorithmInput() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	PrivateKeyAttributes() PcaconnectoradTemplateDefinitionTemplateV4PrivateKeyAttributesOutputReference
-	PrivateKeyAttributesInput() *PcaconnectoradTemplateDefinitionTemplateV4PrivateKeyAttributes
+	PrivateKeyAttributesInput() interface{}
 	PrivateKeyFlags() PcaconnectoradTemplateDefinitionTemplateV4PrivateKeyFlagsOutputReference
-	PrivateKeyFlagsInput() *PcaconnectoradTemplateDefinitionTemplateV4PrivateKeyFlags
+	PrivateKeyFlagsInput() interface{}
 	SubjectNameFlags() PcaconnectoradTemplateDefinitionTemplateV4SubjectNameFlagsOutputReference
-	SubjectNameFlagsInput() *PcaconnectoradTemplateDefinitionTemplateV4SubjectNameFlags
+	SubjectNameFlagsInput() interface{}
 	SupersededTemplates() *[]*string
 	SetSupersededTemplates(val *[]*string)
 	SupersededTemplatesInput() *[]*string
@@ -88,7 +88,14 @@ type PcaconnectoradTemplateDefinitionTemplateV4OutputReference interface {
 	PutPrivateKeyAttributes(value *PcaconnectoradTemplateDefinitionTemplateV4PrivateKeyAttributes)
 	PutPrivateKeyFlags(value *PcaconnectoradTemplateDefinitionTemplateV4PrivateKeyFlags)
 	PutSubjectNameFlags(value *PcaconnectoradTemplateDefinitionTemplateV4SubjectNameFlags)
+	ResetCertificateValidity()
+	ResetEnrollmentFlags()
+	ResetExtensions()
+	ResetGeneralFlags()
 	ResetHashAlgorithm()
+	ResetPrivateKeyAttributes()
+	ResetPrivateKeyFlags()
+	ResetSubjectNameFlags()
 	ResetSupersededTemplates()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -115,8 +122,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) Ce
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) CertificateValidityInput() *PcaconnectoradTemplateDefinitionTemplateV4CertificateValidity {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV4CertificateValidity
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) CertificateValidityInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"certificateValidityInput",
@@ -165,8 +172,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) En
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) EnrollmentFlagsInput() *PcaconnectoradTemplateDefinitionTemplateV4EnrollmentFlags {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV4EnrollmentFlags
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) EnrollmentFlagsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"enrollmentFlagsInput",
@@ -185,8 +192,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) Ex
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) ExtensionsInput() *PcaconnectoradTemplateDefinitionTemplateV4Extensions {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV4Extensions
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) ExtensionsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"extensionsInput",
@@ -215,8 +222,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) Ge
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) GeneralFlagsInput() *PcaconnectoradTemplateDefinitionTemplateV4GeneralFlags {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV4GeneralFlags
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) GeneralFlagsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"generalFlagsInput",
@@ -265,8 +272,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) Pr
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) PrivateKeyAttributesInput() *PcaconnectoradTemplateDefinitionTemplateV4PrivateKeyAttributes {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV4PrivateKeyAttributes
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) PrivateKeyAttributesInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"privateKeyAttributesInput",
@@ -285,8 +292,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) Pr
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) PrivateKeyFlagsInput() *PcaconnectoradTemplateDefinitionTemplateV4PrivateKeyFlags {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV4PrivateKeyFlags
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) PrivateKeyFlagsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"privateKeyFlagsInput",
@@ -305,8 +312,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) Su
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) SubjectNameFlagsInput() *PcaconnectoradTemplateDefinitionTemplateV4SubjectNameFlags {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV4SubjectNameFlags
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) SubjectNameFlagsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"subjectNameFlagsInput",
@@ -723,10 +730,66 @@ func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) Pu
 	)
 }
 
+func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) ResetCertificateValidity() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetCertificateValidity",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) ResetEnrollmentFlags() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetEnrollmentFlags",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) ResetExtensions() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetExtensions",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) ResetGeneralFlags() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetGeneralFlags",
+		nil, // no parameters
+	)
+}
+
 func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) ResetHashAlgorithm() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetHashAlgorithm",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) ResetPrivateKeyAttributes() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetPrivateKeyAttributes",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) ResetPrivateKeyFlags() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetPrivateKeyFlags",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4OutputReference) ResetSubjectNameFlags() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetSubjectNameFlags",
 		nil, // no parameters
 	)
 }

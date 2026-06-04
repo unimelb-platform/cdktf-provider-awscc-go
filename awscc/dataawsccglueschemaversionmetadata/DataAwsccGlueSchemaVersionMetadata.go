@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccglueschemaversionmetadata/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/glue_schema_version_metadata awscc_glue_schema_version_metadata}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/glue_schema_version_metadata awscc_glue_schema_version_metadata}.
 type DataAwsccGlueSchemaVersionMetadata interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -85,6 +85,10 @@ type DataAwsccGlueSchemaVersionMetadata interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -290,7 +294,7 @@ func (j *jsiiProxy_DataAwsccGlueSchemaVersionMetadata) Value() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/glue_schema_version_metadata awscc_glue_schema_version_metadata} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/glue_schema_version_metadata awscc_glue_schema_version_metadata} Data Source.
 func NewDataAwsccGlueSchemaVersionMetadata(scope constructs.Construct, id *string, config *DataAwsccGlueSchemaVersionMetadataConfig) DataAwsccGlueSchemaVersionMetadata {
 	_init_.Initialize()
 
@@ -308,7 +312,7 @@ func NewDataAwsccGlueSchemaVersionMetadata(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/glue_schema_version_metadata awscc_glue_schema_version_metadata} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/glue_schema_version_metadata awscc_glue_schema_version_metadata} Data Source.
 func NewDataAwsccGlueSchemaVersionMetadata_Override(d DataAwsccGlueSchemaVersionMetadata, scope constructs.Construct, id *string, config *DataAwsccGlueSchemaVersionMetadataConfig) {
 	_init_.Initialize()
 
@@ -675,6 +679,32 @@ func (d *jsiiProxy_DataAwsccGlueSchemaVersionMetadata) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGlueSchemaVersionMetadata) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGlueSchemaVersionMetadata) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

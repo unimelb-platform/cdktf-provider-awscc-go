@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscclogsquerydefinition/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/logs_query_definition awscc_logs_query_definition}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/logs_query_definition awscc_logs_query_definition}.
 type DataAwsccLogsQueryDefinition interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -48,6 +48,7 @@ type DataAwsccLogsQueryDefinition interface {
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
 	QueryDefinitionId() *string
+	QueryLanguage() *string
 	QueryString() *string
 	// Experimental.
 	RawOverrides() interface{}
@@ -86,6 +87,10 @@ type DataAwsccLogsQueryDefinition interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -250,6 +255,16 @@ func (j *jsiiProxy_DataAwsccLogsQueryDefinition) QueryDefinitionId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccLogsQueryDefinition) QueryLanguage() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"queryLanguage",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccLogsQueryDefinition) QueryString() *string {
 	var returns *string
 	_jsii_.Get(
@@ -301,7 +316,7 @@ func (j *jsiiProxy_DataAwsccLogsQueryDefinition) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/logs_query_definition awscc_logs_query_definition} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/logs_query_definition awscc_logs_query_definition} Data Source.
 func NewDataAwsccLogsQueryDefinition(scope constructs.Construct, id *string, config *DataAwsccLogsQueryDefinitionConfig) DataAwsccLogsQueryDefinition {
 	_init_.Initialize()
 
@@ -319,7 +334,7 @@ func NewDataAwsccLogsQueryDefinition(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/logs_query_definition awscc_logs_query_definition} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/logs_query_definition awscc_logs_query_definition} Data Source.
 func NewDataAwsccLogsQueryDefinition_Override(d DataAwsccLogsQueryDefinition, scope constructs.Construct, id *string, config *DataAwsccLogsQueryDefinitionConfig) {
 	_init_.Initialize()
 
@@ -686,6 +701,32 @@ func (d *jsiiProxy_DataAwsccLogsQueryDefinition) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLogsQueryDefinition) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLogsQueryDefinition) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

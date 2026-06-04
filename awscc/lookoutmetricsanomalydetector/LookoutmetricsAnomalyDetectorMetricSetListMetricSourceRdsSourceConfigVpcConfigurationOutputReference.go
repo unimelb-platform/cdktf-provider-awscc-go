@@ -27,8 +27,8 @@ type LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcCon
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcConfiguration
-	SetInternalValue(val *LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcConfiguration)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	SecurityGroupIdList() *[]*string
 	SetSecurityGroupIdList(val *[]*string)
 	SecurityGroupIdListInput() *[]*string
@@ -67,6 +67,8 @@ type LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcCon
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetSecurityGroupIdList()
+	ResetSubnetIdList()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSour
 	return returns
 }
 
-func (j *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcConfigurationOutputReference) InternalValue() *LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcConfiguration {
-	var returns *LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcConfiguration
+func (j *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcConfigurationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -242,7 +244,7 @@ func (j *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSour
 	)
 }
 
-func (j *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcConfigurationOutputReference)SetInternalValue(val *LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcConfiguration) {
+func (j *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcConfigurationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSour
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcConfigurationOutputReference) ResetSecurityGroupIdList() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetSecurityGroupIdList",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcConfigurationOutputReference) ResetSubnetIdList() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetSubnetIdList",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceRdsSourceConfigVpcConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

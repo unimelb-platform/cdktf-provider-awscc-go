@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccnetworkmanagervpcattachment/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_vpc_attachment awscc_networkmanager_vpc_attachment}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_vpc_attachment awscc_networkmanager_vpc_attachment}.
 type DataAwsccNetworkmanagerVpcAttachment interface {
 	cdktf.TerraformDataSource
 	AttachmentId() *string
@@ -46,10 +46,12 @@ type DataAwsccNetworkmanagerVpcAttachment interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	NetworkFunctionGroupName() *string
 	// The tree node.
 	Node() constructs.Node
 	Options() DataAwsccNetworkmanagerVpcAttachmentOptionsOutputReference
 	OwnerAccountId() *string
+	ProposedNetworkFunctionGroupChange() DataAwsccNetworkmanagerVpcAttachmentProposedNetworkFunctionGroupChangeOutputReference
 	ProposedSegmentChange() DataAwsccNetworkmanagerVpcAttachmentProposedSegmentChangeOutputReference
 	// Experimental.
 	Provider() cdktf.TerraformProvider
@@ -99,6 +101,10 @@ type DataAwsccNetworkmanagerVpcAttachment interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -283,6 +289,16 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerVpcAttachment) Lifecycle() *cdktf.Terr
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccNetworkmanagerVpcAttachment) NetworkFunctionGroupName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"networkFunctionGroupName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccNetworkmanagerVpcAttachment) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -308,6 +324,16 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerVpcAttachment) OwnerAccountId() *strin
 	_jsii_.Get(
 		j,
 		"ownerAccountId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccNetworkmanagerVpcAttachment) ProposedNetworkFunctionGroupChange() DataAwsccNetworkmanagerVpcAttachmentProposedNetworkFunctionGroupChangeOutputReference {
+	var returns DataAwsccNetworkmanagerVpcAttachmentProposedNetworkFunctionGroupChangeOutputReference
+	_jsii_.Get(
+		j,
+		"proposedNetworkFunctionGroupChange",
 		&returns,
 	)
 	return returns
@@ -444,7 +470,7 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerVpcAttachment) VpcArn() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_vpc_attachment awscc_networkmanager_vpc_attachment} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_vpc_attachment awscc_networkmanager_vpc_attachment} Data Source.
 func NewDataAwsccNetworkmanagerVpcAttachment(scope constructs.Construct, id *string, config *DataAwsccNetworkmanagerVpcAttachmentConfig) DataAwsccNetworkmanagerVpcAttachment {
 	_init_.Initialize()
 
@@ -462,7 +488,7 @@ func NewDataAwsccNetworkmanagerVpcAttachment(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_vpc_attachment awscc_networkmanager_vpc_attachment} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_vpc_attachment awscc_networkmanager_vpc_attachment} Data Source.
 func NewDataAwsccNetworkmanagerVpcAttachment_Override(d DataAwsccNetworkmanagerVpcAttachment, scope constructs.Construct, id *string, config *DataAwsccNetworkmanagerVpcAttachmentConfig) {
 	_init_.Initialize()
 
@@ -829,6 +855,32 @@ func (d *jsiiProxy_DataAwsccNetworkmanagerVpcAttachment) SynthesizeAttributes() 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkmanagerVpcAttachment) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkmanagerVpcAttachment) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

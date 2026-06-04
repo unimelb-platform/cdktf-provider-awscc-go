@@ -67,6 +67,8 @@ type StepfunctionsStateMachineAliasRoutingConfigurationOutputReference interface
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetStateMachineVersionArn()
+	ResetWeight()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (s *jsiiProxy_StepfunctionsStateMachineAliasRoutingConfigurationOutputRefer
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_StepfunctionsStateMachineAliasRoutingConfigurationOutputReference) ResetStateMachineVersionArn() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStateMachineVersionArn",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_StepfunctionsStateMachineAliasRoutingConfigurationOutputReference) ResetWeight() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetWeight",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_StepfunctionsStateMachineAliasRoutingConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

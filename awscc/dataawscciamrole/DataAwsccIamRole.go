@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciamrole/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iam_role awscc_iam_role}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iam_role awscc_iam_role}.
 type DataAwsccIamRole interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -93,6 +93,10 @@ type DataAwsccIamRole interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -378,7 +382,7 @@ func (j *jsiiProxy_DataAwsccIamRole) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iam_role awscc_iam_role} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iam_role awscc_iam_role} Data Source.
 func NewDataAwsccIamRole(scope constructs.Construct, id *string, config *DataAwsccIamRoleConfig) DataAwsccIamRole {
 	_init_.Initialize()
 
@@ -396,7 +400,7 @@ func NewDataAwsccIamRole(scope constructs.Construct, id *string, config *DataAws
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iam_role awscc_iam_role} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iam_role awscc_iam_role} Data Source.
 func NewDataAwsccIamRole_Override(d DataAwsccIamRole, scope constructs.Construct, id *string, config *DataAwsccIamRoleConfig) {
 	_init_.Initialize()
 
@@ -763,6 +767,32 @@ func (d *jsiiProxy_DataAwsccIamRole) SynthesizeAttributes() *map[string]interfac
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIamRole) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIamRole) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

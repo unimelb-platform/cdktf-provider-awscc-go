@@ -56,7 +56,15 @@ func (c *jsiiProxy_ConnectcampaignsCampaign) validateInterpolationForAttributePa
 	return nil
 }
 
+func (c *jsiiProxy_ConnectcampaignsCampaign) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_ConnectcampaignsCampaign) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_ConnectcampaignsCampaign) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

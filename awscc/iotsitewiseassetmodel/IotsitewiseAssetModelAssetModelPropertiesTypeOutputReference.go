@@ -29,8 +29,8 @@ type IotsitewiseAssetModelAssetModelPropertiesTypeOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *IotsitewiseAssetModelAssetModelPropertiesType
-	SetInternalValue(val *IotsitewiseAssetModelAssetModelPropertiesType)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Metric() IotsitewiseAssetModelAssetModelPropertiesTypeMetricOutputReference
 	MetricInput() interface{}
 	// Experimental.
@@ -76,6 +76,7 @@ type IotsitewiseAssetModelAssetModelPropertiesTypeOutputReference interface {
 	ResetAttribute()
 	ResetMetric()
 	ResetTransform()
+	ResetTypeName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -151,8 +152,8 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeOutputReference)
 	return returns
 }
 
-func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeOutputReference) InternalValue() *IotsitewiseAssetModelAssetModelPropertiesType {
-	var returns *IotsitewiseAssetModelAssetModelPropertiesType
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -291,7 +292,7 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeOutputReference)
 	)
 }
 
-func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeOutputReference)SetInternalValue(val *IotsitewiseAssetModelAssetModelPropertiesType) {
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -574,6 +575,14 @@ func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeOutputReference)
 	_jsii_.InvokeVoid(
 		i,
 		"resetTransform",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeOutputReference) ResetTypeName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTypeName",
 		nil, // no parameters
 	)
 }

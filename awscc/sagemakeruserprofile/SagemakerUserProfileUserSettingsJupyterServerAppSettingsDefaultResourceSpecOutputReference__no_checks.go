@@ -64,6 +64,10 @@ func (j *jsiiProxy_SagemakerUserProfileUserSettingsJupyterServerAppSettingsDefau
 	return nil
 }
 
+func (j *jsiiProxy_SagemakerUserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecOutputReference) validateSetLifecycleConfigArnParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_SagemakerUserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecOutputReference) validateSetSageMakerImageArnParameters(val *string) error {
 	return nil
 }

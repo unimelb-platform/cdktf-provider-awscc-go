@@ -70,6 +70,7 @@ type EcsTaskDefinitionContainerDefinitionsLogConfigurationOutputReference interf
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutSecretOptions(value interface{})
+	ResetLogDriver()
 	ResetOptions()
 	ResetSecretOptions()
 	// Produce the Token's value at resolution time.
@@ -516,6 +517,14 @@ func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsLogConfigurationOutputRe
 		e,
 		"putSecretOptions",
 		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsLogConfigurationOutputReference) ResetLogDriver() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetLogDriver",
+		nil, // no parameters
 	)
 }
 

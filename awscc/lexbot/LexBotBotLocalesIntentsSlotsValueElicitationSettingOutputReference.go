@@ -29,8 +29,8 @@ type LexBotBotLocalesIntentsSlotsValueElicitationSettingOutputReference interfac
 	DefaultValueSpecificationInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotBotLocalesIntentsSlotsValueElicitationSetting
-	SetInternalValue(val *LexBotBotLocalesIntentsSlotsValueElicitationSetting)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	PromptSpecification() LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationOutputReference
 	PromptSpecificationInput() interface{}
 	SampleUtterances() LexBotBotLocalesIntentsSlotsValueElicitationSettingSampleUtterancesList
@@ -79,6 +79,7 @@ type LexBotBotLocalesIntentsSlotsValueElicitationSettingOutputReference interfac
 	ResetDefaultValueSpecification()
 	ResetPromptSpecification()
 	ResetSampleUtterances()
+	ResetSlotConstraint()
 	ResetWaitAndContinueSpecification()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -155,8 +156,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingOutputRefe
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingOutputReference) InternalValue() *LexBotBotLocalesIntentsSlotsValueElicitationSetting {
-	var returns *LexBotBotLocalesIntentsSlotsValueElicitationSetting
+func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -315,7 +316,7 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingOutputRefe
 	)
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingOutputReference)SetInternalValue(val *LexBotBotLocalesIntentsSlotsValueElicitationSetting) {
+func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -609,6 +610,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingOutputRefe
 	_jsii_.InvokeVoid(
 		l,
 		"resetSampleUtterances",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingOutputReference) ResetSlotConstraint() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetSlotConstraint",
 		nil, // no parameters
 	)
 }

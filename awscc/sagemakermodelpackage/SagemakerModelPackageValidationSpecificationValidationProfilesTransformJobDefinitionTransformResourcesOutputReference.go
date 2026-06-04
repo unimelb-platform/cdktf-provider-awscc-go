@@ -33,8 +33,8 @@ type SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobD
 	InstanceType() *string
 	SetInstanceType(val *string)
 	InstanceTypeInput() *string
-	InternalValue() *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformResources
-	SetInternalValue(val *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformResources)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -70,6 +70,8 @@ type SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobD
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetInstanceCount()
+	ResetInstanceType()
 	ResetVolumeKmsKeyId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -166,8 +168,8 @@ func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformResourcesOutputReference) InternalValue() *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformResources {
-	var returns *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformResources
+func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformResourcesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -288,7 +290,7 @@ func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 	)
 }
 
-func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformResourcesOutputReference)SetInternalValue(val *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformResources) {
+func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformResourcesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -516,6 +518,22 @@ func (s *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformResourcesOutputReference) ResetInstanceCount() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetInstanceCount",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformResourcesOutputReference) ResetInstanceType() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetInstanceType",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformResourcesOutputReference) ResetVolumeKmsKeyId() {

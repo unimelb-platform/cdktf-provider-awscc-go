@@ -67,6 +67,8 @@ type QuicksightThemeTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (q *jsiiProxy_QuicksightThemeTagsOutputReference) InterpolationForAttribute
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightThemeTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightThemeTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightThemeTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

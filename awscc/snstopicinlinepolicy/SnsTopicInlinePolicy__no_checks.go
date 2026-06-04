@@ -56,7 +56,15 @@ func (s *jsiiProxy_SnsTopicInlinePolicy) validateInterpolationForAttributeParame
 	return nil
 }
 
+func (s *jsiiProxy_SnsTopicInlinePolicy) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_SnsTopicInlinePolicy) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (s *jsiiProxy_SnsTopicInlinePolicy) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

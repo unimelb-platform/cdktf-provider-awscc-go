@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccappsyncdomainname/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appsync_domain_name awscc_appsync_domain_name}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appsync_domain_name awscc_appsync_domain_name}.
 type DataAwsccAppsyncDomainName interface {
 	cdktf.TerraformDataSource
 	AppSyncDomainName() *string
@@ -28,6 +28,7 @@ type DataAwsccAppsyncDomainName interface {
 	SetDependsOn(val *[]*string)
 	Description() *string
 	DomainName() *string
+	DomainNameArn() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -52,6 +53,7 @@ type DataAwsccAppsyncDomainName interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	Tags() DataAwsccAppsyncDomainNameTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -87,6 +89,10 @@ type DataAwsccAppsyncDomainName interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -176,6 +182,16 @@ func (j *jsiiProxy_DataAwsccAppsyncDomainName) DomainName() *string {
 	_jsii_.Get(
 		j,
 		"domainName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccAppsyncDomainName) DomainNameArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"domainNameArn",
 		&returns,
 	)
 	return returns
@@ -281,6 +297,16 @@ func (j *jsiiProxy_DataAwsccAppsyncDomainName) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccAppsyncDomainName) Tags() DataAwsccAppsyncDomainNameTagsList {
+	var returns DataAwsccAppsyncDomainNameTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccAppsyncDomainName) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -312,7 +338,7 @@ func (j *jsiiProxy_DataAwsccAppsyncDomainName) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appsync_domain_name awscc_appsync_domain_name} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appsync_domain_name awscc_appsync_domain_name} Data Source.
 func NewDataAwsccAppsyncDomainName(scope constructs.Construct, id *string, config *DataAwsccAppsyncDomainNameConfig) DataAwsccAppsyncDomainName {
 	_init_.Initialize()
 
@@ -330,7 +356,7 @@ func NewDataAwsccAppsyncDomainName(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appsync_domain_name awscc_appsync_domain_name} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appsync_domain_name awscc_appsync_domain_name} Data Source.
 func NewDataAwsccAppsyncDomainName_Override(d DataAwsccAppsyncDomainName, scope constructs.Construct, id *string, config *DataAwsccAppsyncDomainNameConfig) {
 	_init_.Initialize()
 
@@ -697,6 +723,32 @@ func (d *jsiiProxy_DataAwsccAppsyncDomainName) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppsyncDomainName) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppsyncDomainName) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

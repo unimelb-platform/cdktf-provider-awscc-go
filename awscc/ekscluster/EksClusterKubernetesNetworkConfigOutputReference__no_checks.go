@@ -44,6 +44,10 @@ func (e *jsiiProxy_EksClusterKubernetesNetworkConfigOutputReference) validateInt
 	return nil
 }
 
+func (e *jsiiProxy_EksClusterKubernetesNetworkConfigOutputReference) validatePutElasticLoadBalancingParameters(value *EksClusterKubernetesNetworkConfigElasticLoadBalancing) error {
+	return nil
+}
+
 func (e *jsiiProxy_EksClusterKubernetesNetworkConfigOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

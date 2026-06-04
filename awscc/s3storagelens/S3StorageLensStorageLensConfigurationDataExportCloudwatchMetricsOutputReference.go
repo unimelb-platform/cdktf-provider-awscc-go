@@ -64,6 +64,7 @@ type S3StorageLensStorageLensConfigurationDataExportCloudwatchMetricsOutputRefer
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetIsEnabled()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_S3StorageLensStorageLensConfigurationDataExportCloudwatchMetr
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_S3StorageLensStorageLensConfigurationDataExportCloudwatchMetricsOutputReference) ResetIsEnabled() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetIsEnabled",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_S3StorageLensStorageLensConfigurationDataExportCloudwatchMetricsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

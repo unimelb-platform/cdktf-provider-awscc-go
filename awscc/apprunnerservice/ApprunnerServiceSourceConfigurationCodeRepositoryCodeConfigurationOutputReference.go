@@ -68,6 +68,7 @@ type ApprunnerServiceSourceConfigurationCodeRepositoryCodeConfigurationOutputRef
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutCodeConfigurationValues(value *ApprunnerServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues)
 	ResetCodeConfigurationValues()
+	ResetConfigurationSource()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (a *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositoryCodeConfigur
 	_jsii_.InvokeVoid(
 		a,
 		"resetCodeConfigurationValues",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositoryCodeConfigurationOutputReference) ResetConfigurationSource() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetConfigurationSource",
 		nil, // no parameters
 	)
 }

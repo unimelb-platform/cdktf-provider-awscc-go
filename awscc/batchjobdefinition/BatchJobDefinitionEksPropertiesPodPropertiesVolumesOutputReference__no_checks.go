@@ -52,6 +52,10 @@ func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesVolumesOutputRefe
 	return nil
 }
 
+func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesVolumesOutputReference) validatePutPersistentVolumeClaimParameters(value *BatchJobDefinitionEksPropertiesPodPropertiesVolumesPersistentVolumeClaim) error {
+	return nil
+}
+
 func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesVolumesOutputReference) validatePutSecretParameters(value *BatchJobDefinitionEksPropertiesPodPropertiesVolumesSecret) error {
 	return nil
 }

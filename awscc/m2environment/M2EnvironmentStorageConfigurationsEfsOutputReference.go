@@ -67,6 +67,8 @@ type M2EnvironmentStorageConfigurationsEfsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetFileSystemId()
+	ResetMountPoint()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (m *jsiiProxy_M2EnvironmentStorageConfigurationsEfsOutputReference) Interpo
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_M2EnvironmentStorageConfigurationsEfsOutputReference) ResetFileSystemId() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetFileSystemId",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_M2EnvironmentStorageConfigurationsEfsOutputReference) ResetMountPoint() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMountPoint",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_M2EnvironmentStorageConfigurationsEfsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

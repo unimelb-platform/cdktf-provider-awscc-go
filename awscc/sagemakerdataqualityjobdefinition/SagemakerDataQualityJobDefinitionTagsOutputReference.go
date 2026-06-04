@@ -67,6 +67,8 @@ type SagemakerDataQualityJobDefinitionTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (s *jsiiProxy_SagemakerDataQualityJobDefinitionTagsOutputReference) Interpo
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SagemakerDataQualityJobDefinitionTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerDataQualityJobDefinitionTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SagemakerDataQualityJobDefinitionTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

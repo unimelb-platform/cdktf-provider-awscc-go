@@ -88,6 +88,7 @@ type WorkspacesthinclientEnvironmentMaintenanceWindowOutputReference interface {
 	ResetEndTimeMinute()
 	ResetStartTimeHour()
 	ResetStartTimeMinute()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -703,6 +704,14 @@ func (w *jsiiProxy_WorkspacesthinclientEnvironmentMaintenanceWindowOutputReferen
 	_jsii_.InvokeVoid(
 		w,
 		"resetStartTimeMinute",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_WorkspacesthinclientEnvironmentMaintenanceWindowOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetType",
 		nil, // no parameters
 	)
 }

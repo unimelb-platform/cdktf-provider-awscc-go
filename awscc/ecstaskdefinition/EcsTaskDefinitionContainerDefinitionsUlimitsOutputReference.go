@@ -70,6 +70,9 @@ type EcsTaskDefinitionContainerDefinitionsUlimitsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetHardLimit()
+	ResetName()
+	ResetSoftLimit()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsUlimitsOutputReference) 
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsUlimitsOutputReference) ResetHardLimit() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetHardLimit",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsUlimitsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsUlimitsOutputReference) ResetSoftLimit() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetSoftLimit",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsUlimitsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

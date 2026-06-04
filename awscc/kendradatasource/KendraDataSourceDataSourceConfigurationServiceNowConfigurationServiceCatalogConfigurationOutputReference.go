@@ -80,6 +80,7 @@ type KendraDataSourceDataSourceConfigurationServiceNowConfigurationServiceCatalo
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutFieldMappings(value interface{})
 	ResetCrawlAttachments()
+	ResetDocumentDataFieldName()
 	ResetDocumentTitleFieldName()
 	ResetExcludeAttachmentFilePatterns()
 	ResetFieldMappings()
@@ -628,6 +629,14 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationServiceNowConfiguratio
 	_jsii_.InvokeVoid(
 		k,
 		"resetCrawlAttachments",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationServiceNowConfigurationServiceCatalogConfigurationOutputReference) ResetDocumentDataFieldName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetDocumentDataFieldName",
 		nil, // no parameters
 	)
 }

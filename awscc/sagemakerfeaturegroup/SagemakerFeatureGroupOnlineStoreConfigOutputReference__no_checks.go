@@ -48,6 +48,10 @@ func (s *jsiiProxy_SagemakerFeatureGroupOnlineStoreConfigOutputReference) valida
 	return nil
 }
 
+func (s *jsiiProxy_SagemakerFeatureGroupOnlineStoreConfigOutputReference) validatePutTtlDurationParameters(value *SagemakerFeatureGroupOnlineStoreConfigTtlDuration) error {
+	return nil
+}
+
 func (s *jsiiProxy_SagemakerFeatureGroupOnlineStoreConfigOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

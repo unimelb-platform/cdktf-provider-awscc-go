@@ -33,7 +33,7 @@ type DatasyncLocationFsxOntapProtocolSmbOutputReference interface {
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	MountOptions() DatasyncLocationFsxOntapProtocolSmbMountOptionsOutputReference
-	MountOptionsInput() *DatasyncLocationFsxOntapProtocolSmbMountOptions
+	MountOptionsInput() interface{}
 	Password() *string
 	SetPassword(val *string)
 	PasswordInput() *string
@@ -74,6 +74,9 @@ type DatasyncLocationFsxOntapProtocolSmbOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMountOptions(value *DatasyncLocationFsxOntapProtocolSmbMountOptions)
 	ResetDomain()
+	ResetMountOptions()
+	ResetPassword()
+	ResetUser()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -169,8 +172,8 @@ func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolSmbOutputReference) MountOpti
 	return returns
 }
 
-func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolSmbOutputReference) MountOptionsInput() *DatasyncLocationFsxOntapProtocolSmbMountOptions {
-	var returns *DatasyncLocationFsxOntapProtocolSmbMountOptions
+func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolSmbOutputReference) MountOptionsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"mountOptionsInput",
@@ -556,6 +559,30 @@ func (d *jsiiProxy_DatasyncLocationFsxOntapProtocolSmbOutputReference) ResetDoma
 	_jsii_.InvokeVoid(
 		d,
 		"resetDomain",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatasyncLocationFsxOntapProtocolSmbOutputReference) ResetMountOptions() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetMountOptions",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatasyncLocationFsxOntapProtocolSmbOutputReference) ResetPassword() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetPassword",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatasyncLocationFsxOntapProtocolSmbOutputReference) ResetUser() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetUser",
 		nil, // no parameters
 	)
 }

@@ -70,6 +70,7 @@ type LexBotBotLocalesIntentsKendraConfigurationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKendraIndex()
 	ResetQueryFilterString()
 	ResetQueryFilterStringEnabled()
 	// Produce the Token's value at resolution time.
@@ -517,6 +518,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsKendraConfigurationOutputReference) In
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsKendraConfigurationOutputReference) ResetKendraIndex() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetKendraIndex",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotBotLocalesIntentsKendraConfigurationOutputReference) ResetQueryFilterString() {

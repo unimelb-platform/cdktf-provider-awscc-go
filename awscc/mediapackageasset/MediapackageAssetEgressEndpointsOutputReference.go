@@ -67,6 +67,8 @@ type MediapackageAssetEgressEndpointsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPackagingConfigurationId()
+	ResetUrl()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (m *jsiiProxy_MediapackageAssetEgressEndpointsOutputReference) Interpolatio
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_MediapackageAssetEgressEndpointsOutputReference) ResetPackagingConfigurationId() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetPackagingConfigurationId",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediapackageAssetEgressEndpointsOutputReference) ResetUrl() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetUrl",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_MediapackageAssetEgressEndpointsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -68,6 +68,7 @@ type IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEventsActionsDyna
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutPayload(value *IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEventsActionsDynamoDBv2Payload)
 	ResetPayload()
+	ResetTableName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEve
 	_jsii_.InvokeVoid(
 		i,
 		"resetPayload",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputEventsActionsDynamoDBv2OutputReference) ResetTableName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTableName",
 		nil, // no parameters
 	)
 }

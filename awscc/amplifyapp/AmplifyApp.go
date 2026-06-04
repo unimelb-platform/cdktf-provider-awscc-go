@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/amplifyapp/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/amplify_app awscc_amplify_app}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/amplify_app awscc_amplify_app}.
 type AmplifyApp interface {
 	cdktf.TerraformResource
 	AccessToken() *string
@@ -25,8 +25,13 @@ type AmplifyApp interface {
 	BuildSpec() *string
 	SetBuildSpec(val *string)
 	BuildSpecInput() *string
+	CacheConfig() AmplifyAppCacheConfigOutputReference
+	CacheConfigInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	ComputeRoleArn() *string
+	SetComputeRoleArn(val *string)
+	ComputeRoleArnInput() *string
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -67,6 +72,8 @@ type AmplifyApp interface {
 	SetIamServiceRole(val *string)
 	IamServiceRoleInput() *string
 	Id() *string
+	JobConfig() AmplifyAppJobConfigOutputReference
+	JobConfigInput() interface{}
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -127,30 +134,45 @@ type AmplifyApp interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutAutoBranchCreationConfig(value *AmplifyAppAutoBranchCreationConfig)
 	PutBasicAuthConfig(value *AmplifyAppBasicAuthConfig)
+	PutCacheConfig(value *AmplifyAppCacheConfig)
 	PutCustomRules(value interface{})
 	PutEnvironmentVariables(value interface{})
+	PutJobConfig(value *AmplifyAppJobConfig)
 	PutTags(value interface{})
 	ResetAccessToken()
 	ResetAutoBranchCreationConfig()
 	ResetBasicAuthConfig()
 	ResetBuildSpec()
+	ResetCacheConfig()
+	ResetComputeRoleArn()
 	ResetCustomHeaders()
 	ResetCustomRules()
 	ResetDescription()
 	ResetEnableBranchAutoDeletion()
 	ResetEnvironmentVariables()
 	ResetIamServiceRole()
+	ResetJobConfig()
 	ResetOauthToken()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -159,6 +181,9 @@ type AmplifyApp interface {
 	ResetRepository()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -283,11 +308,51 @@ func (j *jsiiProxy_AmplifyApp) BuildSpecInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_AmplifyApp) CacheConfig() AmplifyAppCacheConfigOutputReference {
+	var returns AmplifyAppCacheConfigOutputReference
+	_jsii_.Get(
+		j,
+		"cacheConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AmplifyApp) CacheConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"cacheConfigInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_AmplifyApp) CdktfStack() cdktf.TerraformStack {
 	var returns cdktf.TerraformStack
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AmplifyApp) ComputeRoleArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"computeRoleArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AmplifyApp) ComputeRoleArnInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"computeRoleArnInput",
 		&returns,
 	)
 	return returns
@@ -503,6 +568,26 @@ func (j *jsiiProxy_AmplifyApp) Id() *string {
 	return returns
 }
 
+func (j *jsiiProxy_AmplifyApp) JobConfig() AmplifyAppJobConfigOutputReference {
+	var returns AmplifyAppJobConfigOutputReference
+	_jsii_.Get(
+		j,
+		"jobConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AmplifyApp) JobConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"jobConfigInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_AmplifyApp) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -684,7 +769,7 @@ func (j *jsiiProxy_AmplifyApp) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/amplify_app awscc_amplify_app} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/amplify_app awscc_amplify_app} Resource.
 func NewAmplifyApp(scope constructs.Construct, id *string, config *AmplifyAppConfig) AmplifyApp {
 	_init_.Initialize()
 
@@ -702,7 +787,7 @@ func NewAmplifyApp(scope constructs.Construct, id *string, config *AmplifyAppCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/amplify_app awscc_amplify_app} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/amplify_app awscc_amplify_app} Resource.
 func NewAmplifyApp_Override(a AmplifyApp, scope constructs.Construct, id *string, config *AmplifyAppConfig) {
 	_init_.Initialize()
 
@@ -731,6 +816,17 @@ func (j *jsiiProxy_AmplifyApp)SetBuildSpec(val *string) {
 	_jsii_.Set(
 		j,
 		"buildSpec",
+		val,
+	)
+}
+
+func (j *jsiiProxy_AmplifyApp)SetComputeRoleArn(val *string) {
+	if err := j.validateSetComputeRoleArnParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"computeRoleArn",
 		val,
 	)
 }
@@ -1160,6 +1256,19 @@ func (a *jsiiProxy_AmplifyApp) GetStringMapAttribute(terraformAttribute *string)
 	return returns
 }
 
+func (a *jsiiProxy_AmplifyApp) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (a *jsiiProxy_AmplifyApp) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := a.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1187,6 +1296,17 @@ func (a *jsiiProxy_AmplifyApp) InterpolationForAttribute(terraformAttribute *str
 	return returns
 }
 
+func (a *jsiiProxy_AmplifyApp) MoveFromId(id *string) {
+	if err := a.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (a *jsiiProxy_AmplifyApp) MoveTo(moveTarget *string, index interface{}) {
 	if err := a.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1195,6 +1315,17 @@ func (a *jsiiProxy_AmplifyApp) MoveTo(moveTarget *string, index interface{}) {
 		a,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (a *jsiiProxy_AmplifyApp) MoveToId(id *string) {
+	if err := a.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1231,6 +1362,17 @@ func (a *jsiiProxy_AmplifyApp) PutBasicAuthConfig(value *AmplifyAppBasicAuthConf
 	)
 }
 
+func (a *jsiiProxy_AmplifyApp) PutCacheConfig(value *AmplifyAppCacheConfig) {
+	if err := a.validatePutCacheConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putCacheConfig",
+		[]interface{}{value},
+	)
+}
+
 func (a *jsiiProxy_AmplifyApp) PutCustomRules(value interface{}) {
 	if err := a.validatePutCustomRulesParameters(value); err != nil {
 		panic(err)
@@ -1249,6 +1391,17 @@ func (a *jsiiProxy_AmplifyApp) PutEnvironmentVariables(value interface{}) {
 	_jsii_.InvokeVoid(
 		a,
 		"putEnvironmentVariables",
+		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_AmplifyApp) PutJobConfig(value *AmplifyAppJobConfig) {
+	if err := a.validatePutJobConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putJobConfig",
 		[]interface{}{value},
 	)
 }
@@ -1292,6 +1445,22 @@ func (a *jsiiProxy_AmplifyApp) ResetBuildSpec() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetBuildSpec",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AmplifyApp) ResetCacheConfig() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetCacheConfig",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AmplifyApp) ResetComputeRoleArn() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetComputeRoleArn",
 		nil, // no parameters
 	)
 }
@@ -1344,6 +1513,14 @@ func (a *jsiiProxy_AmplifyApp) ResetIamServiceRole() {
 	)
 }
 
+func (a *jsiiProxy_AmplifyApp) ResetJobConfig() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetJobConfig",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_AmplifyApp) ResetOauthToken() {
 	_jsii_.InvokeVoid(
 		a,
@@ -1390,6 +1567,32 @@ func (a *jsiiProxy_AmplifyApp) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		a,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AmplifyApp) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		a,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AmplifyApp) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

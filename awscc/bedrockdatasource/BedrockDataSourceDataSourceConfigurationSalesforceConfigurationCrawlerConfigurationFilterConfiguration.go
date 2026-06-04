@@ -1,0 +1,14 @@
+package bedrockdatasource
+
+
+type BedrockDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfiguration struct {
+	// The configuration of specific filters applied to your data source content. You can filter out or include certain content.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/bedrock_data_source#pattern_object_filter BedrockDataSource#pattern_object_filter}
+	PatternObjectFilter *BedrockDataSourceDataSourceConfigurationSalesforceConfigurationCrawlerConfigurationFilterConfigurationPatternObjectFilter `field:"optional" json:"patternObjectFilter" yaml:"patternObjectFilter"`
+	// The crawl filter type.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/bedrock_data_source#type BedrockDataSource#type}
+	Type *string `field:"optional" json:"type" yaml:"type"`
+}
+

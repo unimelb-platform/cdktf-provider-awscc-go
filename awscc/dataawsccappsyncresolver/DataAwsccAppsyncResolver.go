@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccappsyncresolver/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appsync_resolver awscc_appsync_resolver}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appsync_resolver awscc_appsync_resolver}.
 type DataAwsccAppsyncResolver interface {
 	cdktf.TerraformDataSource
 	ApiId() *string
@@ -47,6 +47,7 @@ type DataAwsccAppsyncResolver interface {
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	MaxBatchSize() *float64
+	MetricsConfig() *string
 	// The tree node.
 	Node() constructs.Node
 	PipelineConfig() DataAwsccAppsyncResolverPipelineConfigOutputReference
@@ -99,6 +100,10 @@ type DataAwsccAppsyncResolver interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -293,6 +298,16 @@ func (j *jsiiProxy_DataAwsccAppsyncResolver) MaxBatchSize() *float64 {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccAppsyncResolver) MetricsConfig() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"metricsConfig",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccAppsyncResolver) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -444,7 +459,7 @@ func (j *jsiiProxy_DataAwsccAppsyncResolver) TypeName() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appsync_resolver awscc_appsync_resolver} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appsync_resolver awscc_appsync_resolver} Data Source.
 func NewDataAwsccAppsyncResolver(scope constructs.Construct, id *string, config *DataAwsccAppsyncResolverConfig) DataAwsccAppsyncResolver {
 	_init_.Initialize()
 
@@ -462,7 +477,7 @@ func NewDataAwsccAppsyncResolver(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appsync_resolver awscc_appsync_resolver} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appsync_resolver awscc_appsync_resolver} Data Source.
 func NewDataAwsccAppsyncResolver_Override(d DataAwsccAppsyncResolver, scope constructs.Construct, id *string, config *DataAwsccAppsyncResolverConfig) {
 	_init_.Initialize()
 
@@ -829,6 +844,32 @@ func (d *jsiiProxy_DataAwsccAppsyncResolver) SynthesizeAttributes() *map[string]
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppsyncResolver) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppsyncResolver) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

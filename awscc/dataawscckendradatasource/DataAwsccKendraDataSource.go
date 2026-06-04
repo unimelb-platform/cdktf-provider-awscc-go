@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscckendradatasource/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kendra_data_source awscc_kendra_data_source}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kendra_data_source awscc_kendra_data_source}.
 type DataAwsccKendraDataSource interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -23,6 +23,7 @@ type DataAwsccKendraDataSource interface {
 	SetCount(val interface{})
 	CustomDocumentEnrichmentConfiguration() DataAwsccKendraDataSourceCustomDocumentEnrichmentConfigurationOutputReference
 	DataSourceConfiguration() DataAwsccKendraDataSourceDataSourceConfigurationOutputReference
+	DataSourceId() *string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -93,6 +94,10 @@ type DataAwsccKendraDataSource interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -162,6 +167,16 @@ func (j *jsiiProxy_DataAwsccKendraDataSource) DataSourceConfiguration() DataAwsc
 	_jsii_.Get(
 		j,
 		"dataSourceConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccKendraDataSource) DataSourceId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"dataSourceId",
 		&returns,
 	)
 	return returns
@@ -378,7 +393,7 @@ func (j *jsiiProxy_DataAwsccKendraDataSource) Type() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kendra_data_source awscc_kendra_data_source} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kendra_data_source awscc_kendra_data_source} Data Source.
 func NewDataAwsccKendraDataSource(scope constructs.Construct, id *string, config *DataAwsccKendraDataSourceConfig) DataAwsccKendraDataSource {
 	_init_.Initialize()
 
@@ -396,7 +411,7 @@ func NewDataAwsccKendraDataSource(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kendra_data_source awscc_kendra_data_source} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kendra_data_source awscc_kendra_data_source} Data Source.
 func NewDataAwsccKendraDataSource_Override(d DataAwsccKendraDataSource, scope constructs.Construct, id *string, config *DataAwsccKendraDataSourceConfig) {
 	_init_.Initialize()
 
@@ -763,6 +778,32 @@ func (d *jsiiProxy_DataAwsccKendraDataSource) SynthesizeAttributes() *map[string
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKendraDataSource) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKendraDataSource) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

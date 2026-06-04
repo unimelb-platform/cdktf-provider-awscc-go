@@ -4,6 +4,10 @@ package lightsaildisk
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (l *jsiiProxy_LightsailDiskAddOnsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LightsailDiskAddOnsList) validateGetParameters(index *float64) error {
 	return nil
 }

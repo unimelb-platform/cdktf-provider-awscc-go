@@ -1,0 +1,6 @@
+package dataawsccwisdomaiagent
+
+
+type DataAwsccWisdomAiAgentConfigurationAnswerRecommendationAiAgentConfigurationAssociationConfigurationsAssociationConfigurationDataKnowledgeBaseAssociationConfigurationDataContentTagFilterOrConditions struct {
+}
+

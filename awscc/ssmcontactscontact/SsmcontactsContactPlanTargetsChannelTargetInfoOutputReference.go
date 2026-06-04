@@ -67,6 +67,8 @@ type SsmcontactsContactPlanTargetsChannelTargetInfoOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetChannelId()
+	ResetRetryIntervalInMinutes()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (s *jsiiProxy_SsmcontactsContactPlanTargetsChannelTargetInfoOutputReference
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SsmcontactsContactPlanTargetsChannelTargetInfoOutputReference) ResetChannelId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetChannelId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SsmcontactsContactPlanTargetsChannelTargetInfoOutputReference) ResetRetryIntervalInMinutes() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetRetryIntervalInMinutes",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SsmcontactsContactPlanTargetsChannelTargetInfoOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

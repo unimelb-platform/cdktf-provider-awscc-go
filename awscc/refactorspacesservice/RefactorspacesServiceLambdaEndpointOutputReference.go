@@ -64,6 +64,7 @@ type RefactorspacesServiceLambdaEndpointOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (r *jsiiProxy_RefactorspacesServiceLambdaEndpointOutputReference) Interpola
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_RefactorspacesServiceLambdaEndpointOutputReference) ResetArn() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetArn",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_RefactorspacesServiceLambdaEndpointOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

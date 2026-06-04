@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccs3expressdirectorybuckets/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/s3express_directory_buckets awscc_s3express_directory_buckets}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/s3express_directory_buckets awscc_s3express_directory_buckets}.
 type DataAwsccS3ExpressDirectoryBuckets interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccS3ExpressDirectoryBuckets interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccS3ExpressDirectoryBuckets) TerraformResourceType() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/s3express_directory_buckets awscc_s3express_directory_buckets} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/s3express_directory_buckets awscc_s3express_directory_buckets} Data Source.
 func NewDataAwsccS3ExpressDirectoryBuckets(scope constructs.Construct, id *string, config *DataAwsccS3ExpressDirectoryBucketsConfig) DataAwsccS3ExpressDirectoryBuckets {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccS3ExpressDirectoryBuckets(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/s3express_directory_buckets awscc_s3express_directory_buckets} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/s3express_directory_buckets awscc_s3express_directory_buckets} Data Source.
 func NewDataAwsccS3ExpressDirectoryBuckets_Override(d DataAwsccS3ExpressDirectoryBuckets, scope constructs.Construct, id *string, config *DataAwsccS3ExpressDirectoryBucketsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccS3ExpressDirectoryBuckets) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccS3ExpressDirectoryBuckets) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccS3ExpressDirectoryBuckets) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

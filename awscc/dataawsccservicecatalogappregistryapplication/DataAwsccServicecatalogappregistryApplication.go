@@ -9,9 +9,10 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccservicecatalogappregistryapplication/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/servicecatalogappregistry_application awscc_servicecatalogappregistry_application}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/servicecatalogappregistry_application awscc_servicecatalogappregistry_application}.
 type DataAwsccServicecatalogappregistryApplication interface {
 	cdktf.TerraformDataSource
+	ApplicationId() *string
 	ApplicationName() *string
 	ApplicationTagKey() *string
 	ApplicationTagValue() *string
@@ -89,6 +90,10 @@ type DataAwsccServicecatalogappregistryApplication interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -101,6 +106,16 @@ type DataAwsccServicecatalogappregistryApplication interface {
 // The jsii proxy struct for DataAwsccServicecatalogappregistryApplication
 type jsiiProxy_DataAwsccServicecatalogappregistryApplication struct {
 	internal.Type__cdktfTerraformDataSource
+}
+
+func (j *jsiiProxy_DataAwsccServicecatalogappregistryApplication) ApplicationId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"applicationId",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccServicecatalogappregistryApplication) ApplicationName() *string {
@@ -334,7 +349,7 @@ func (j *jsiiProxy_DataAwsccServicecatalogappregistryApplication) TerraformResou
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/servicecatalogappregistry_application awscc_servicecatalogappregistry_application} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/servicecatalogappregistry_application awscc_servicecatalogappregistry_application} Data Source.
 func NewDataAwsccServicecatalogappregistryApplication(scope constructs.Construct, id *string, config *DataAwsccServicecatalogappregistryApplicationConfig) DataAwsccServicecatalogappregistryApplication {
 	_init_.Initialize()
 
@@ -352,7 +367,7 @@ func NewDataAwsccServicecatalogappregistryApplication(scope constructs.Construct
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/servicecatalogappregistry_application awscc_servicecatalogappregistry_application} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/servicecatalogappregistry_application awscc_servicecatalogappregistry_application} Data Source.
 func NewDataAwsccServicecatalogappregistryApplication_Override(d DataAwsccServicecatalogappregistryApplication, scope constructs.Construct, id *string, config *DataAwsccServicecatalogappregistryApplicationConfig) {
 	_init_.Initialize()
 
@@ -719,6 +734,32 @@ func (d *jsiiProxy_DataAwsccServicecatalogappregistryApplication) SynthesizeAttr
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccServicecatalogappregistryApplication) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccServicecatalogappregistryApplication) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

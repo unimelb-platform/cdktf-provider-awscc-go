@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2transitgateway/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_transit_gateway awscc_ec2_transit_gateway}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_transit_gateway awscc_ec2_transit_gateway}.
 type Ec2TransitGateway interface {
 	cdktf.TerraformResource
 	AmazonSideAsn() *float64
@@ -80,6 +80,9 @@ type Ec2TransitGateway interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	SecurityGroupReferencingSupport() *string
+	SetSecurityGroupReferencingSupport(val *string)
+	SecurityGroupReferencingSupportInput() *string
 	Tags() Ec2TransitGatewayTagsList
 	TagsInput() interface{}
 	// Experimental.
@@ -92,6 +95,7 @@ type Ec2TransitGateway interface {
 	TransitGatewayCidrBlocks() *[]*string
 	SetTransitGatewayCidrBlocks(val *[]*string)
 	TransitGatewayCidrBlocksInput() *[]*string
+	TransitGatewayId() *string
 	VpnEcmpSupport() *string
 	SetVpnEcmpSupport(val *string)
 	VpnEcmpSupportInput() *string
@@ -119,12 +123,22 @@ type Ec2TransitGateway interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -141,10 +155,14 @@ type Ec2TransitGateway interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPropagationDefaultRouteTableId()
+	ResetSecurityGroupReferencingSupport()
 	ResetTags()
 	ResetTransitGatewayCidrBlocks()
 	ResetVpnEcmpSupport()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -479,6 +497,26 @@ func (j *jsiiProxy_Ec2TransitGateway) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2TransitGateway) SecurityGroupReferencingSupport() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"securityGroupReferencingSupport",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2TransitGateway) SecurityGroupReferencingSupportInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"securityGroupReferencingSupportInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2TransitGateway) Tags() Ec2TransitGatewayTagsList {
 	var returns Ec2TransitGatewayTagsList
 	_jsii_.Get(
@@ -559,6 +597,16 @@ func (j *jsiiProxy_Ec2TransitGateway) TransitGatewayCidrBlocksInput() *[]*string
 	return returns
 }
 
+func (j *jsiiProxy_Ec2TransitGateway) TransitGatewayId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"transitGatewayId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2TransitGateway) VpnEcmpSupport() *string {
 	var returns *string
 	_jsii_.Get(
@@ -580,7 +628,7 @@ func (j *jsiiProxy_Ec2TransitGateway) VpnEcmpSupportInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_transit_gateway awscc_ec2_transit_gateway} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_transit_gateway awscc_ec2_transit_gateway} Resource.
 func NewEc2TransitGateway(scope constructs.Construct, id *string, config *Ec2TransitGatewayConfig) Ec2TransitGateway {
 	_init_.Initialize()
 
@@ -598,7 +646,7 @@ func NewEc2TransitGateway(scope constructs.Construct, id *string, config *Ec2Tra
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_transit_gateway awscc_ec2_transit_gateway} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_transit_gateway awscc_ec2_transit_gateway} Resource.
 func NewEc2TransitGateway_Override(e Ec2TransitGateway, scope constructs.Construct, id *string, config *Ec2TransitGatewayConfig) {
 	_init_.Initialize()
 
@@ -772,6 +820,17 @@ func (j *jsiiProxy_Ec2TransitGateway)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2TransitGateway)SetSecurityGroupReferencingSupport(val *string) {
+	if err := j.validateSetSecurityGroupReferencingSupportParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"securityGroupReferencingSupport",
 		val,
 	)
 }
@@ -1067,6 +1126,19 @@ func (e *jsiiProxy_Ec2TransitGateway) GetStringMapAttribute(terraformAttribute *
 	return returns
 }
 
+func (e *jsiiProxy_Ec2TransitGateway) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2TransitGateway) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1094,6 +1166,17 @@ func (e *jsiiProxy_Ec2TransitGateway) InterpolationForAttribute(terraformAttribu
 	return returns
 }
 
+func (e *jsiiProxy_Ec2TransitGateway) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2TransitGateway) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1102,6 +1185,17 @@ func (e *jsiiProxy_Ec2TransitGateway) MoveTo(moveTarget *string, index interface
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Ec2TransitGateway) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1207,6 +1301,14 @@ func (e *jsiiProxy_Ec2TransitGateway) ResetPropagationDefaultRouteTableId() {
 	)
 }
 
+func (e *jsiiProxy_Ec2TransitGateway) ResetSecurityGroupReferencingSupport() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetSecurityGroupReferencingSupport",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_Ec2TransitGateway) ResetTags() {
 	_jsii_.InvokeVoid(
 		e,
@@ -1237,6 +1339,32 @@ func (e *jsiiProxy_Ec2TransitGateway) SynthesizeAttributes() *map[string]interfa
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2TransitGateway) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2TransitGateway) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

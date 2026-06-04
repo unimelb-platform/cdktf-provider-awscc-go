@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawsccconnectcampaignsv2campaign
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccConnectcampaignsv2CampaignCommunicationTimeConfigTelephonyRestrictedPeriodsRestrictedPeriodListStructOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccConnectcampaignsv2CampaignCommunicationTimeConfigTelephonyRestrictedPeriodsRestrictedPeriodListStructOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccConnectcampaignsv2CampaignCommunicationTimeConfigTelephonyRestrictedPeriodsRestrictedPeriodListStructOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccConnectcampaignsv2CampaignCommunicationTimeConfigTelephonyRestrictedPeriodsRestrictedPeriodListStructOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccConnectcampaignsv2CampaignCommunicationTimeConfigTelephonyRestrictedPeriodsRestrictedPeriodListStructOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccConnectcampaignsv2CampaignCommunicationTimeConfigTelephonyRestrictedPeriodsRestrictedPeriodListStructOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccConnectcampaignsv2CampaignCommunicationTimeConfigTelephonyRestrictedPeriodsRestrictedPeriodListStructOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccConnectcampaignsv2CampaignCommunicationTimeConfigTelephonyRestrictedPeriodsRestrictedPeriodListStructOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccConnectcampaignsv2CampaignCommunicationTimeConfigTelephonyRestrictedPeriodsRestrictedPeriodListStructOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccConnectcampaignsv2CampaignCommunicationTimeConfigTelephonyRestrictedPeriodsRestrictedPeriodListStructOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccConnectcampaignsv2CampaignCommunicationTimeConfigTelephonyRestrictedPeriodsRestrictedPeriodListStructOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccConnectcampaignsv2CampaignCommunicationTimeConfigTelephonyRestrictedPeriodsRestrictedPeriodListStructOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccConnectcampaignsv2CampaignCommunicationTimeConfigTelephonyRestrictedPeriodsRestrictedPeriodListStructOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccConnectcampaignsv2CampaignCommunicationTimeConfigTelephonyRestrictedPeriodsRestrictedPeriodListStructOutputReference) validateSetInternalValueParameters(val *DataAwsccConnectcampaignsv2CampaignCommunicationTimeConfigTelephonyRestrictedPeriodsRestrictedPeriodListStruct) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccConnectcampaignsv2CampaignCommunicationTimeConfigTelephonyRestrictedPeriodsRestrictedPeriodListStructOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccConnectcampaignsv2CampaignCommunicationTimeConfigTelephonyRestrictedPeriodsRestrictedPeriodListStructOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccConnectcampaignsv2CampaignCommunicationTimeConfigTelephonyRestrictedPeriodsRestrictedPeriodListStructOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
+	return nil
+}
+

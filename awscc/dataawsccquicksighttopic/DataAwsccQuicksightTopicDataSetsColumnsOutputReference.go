@@ -35,6 +35,7 @@ type DataAwsccQuicksightTopicDataSetsColumnsOutputReference interface {
 	// Experimental.
 	CreationStack() *[]*string
 	DefaultFormatting() DataAwsccQuicksightTopicDataSetsColumnsDefaultFormattingOutputReference
+	DisableIndexing() cdktf.IResolvable
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataAwsccQuicksightTopicDataSetsColumns
@@ -217,6 +218,16 @@ func (j *jsiiProxy_DataAwsccQuicksightTopicDataSetsColumnsOutputReference) Defau
 	_jsii_.Get(
 		j,
 		"defaultFormatting",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccQuicksightTopicDataSetsColumnsOutputReference) DisableIndexing() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"disableIndexing",
 		&returns,
 	)
 	return returns

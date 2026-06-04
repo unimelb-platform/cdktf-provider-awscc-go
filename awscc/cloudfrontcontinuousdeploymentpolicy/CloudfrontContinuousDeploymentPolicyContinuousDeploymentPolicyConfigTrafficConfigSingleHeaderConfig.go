@@ -2,9 +2,15 @@ package cloudfrontcontinuousdeploymentpolicy
 
 
 type CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolicyConfigTrafficConfigSingleHeaderConfig struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudfront_continuous_deployment_policy#header CloudfrontContinuousDeploymentPolicy#header}.
-	Header *string `field:"required" json:"header" yaml:"header"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudfront_continuous_deployment_policy#value CloudfrontContinuousDeploymentPolicy#value}.
-	Value *string `field:"required" json:"value" yaml:"value"`
+	// The request header name that you want CloudFront to send to your staging distribution.
+	//
+	// The header must contain the prefix ``aws-cf-cd-``.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudfront_continuous_deployment_policy#header CloudfrontContinuousDeploymentPolicy#header}
+	Header *string `field:"optional" json:"header" yaml:"header"`
+	// The request header value.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudfront_continuous_deployment_policy#value CloudfrontContinuousDeploymentPolicy#value}
+	Value *string `field:"optional" json:"value" yaml:"value"`
 }
 

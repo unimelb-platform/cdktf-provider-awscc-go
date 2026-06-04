@@ -1,0 +1,6 @@
+package dataawsccbedrockknowledgebase
+
+
+type DataAwsccBedrockKnowledgeBaseKnowledgeBaseConfigurationSqlKnowledgeBaseConfigurationRedshiftConfigurationQueryGenerationConfiguration struct {
+}
+

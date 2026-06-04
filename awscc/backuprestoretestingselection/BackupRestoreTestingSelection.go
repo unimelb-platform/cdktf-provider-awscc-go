@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/backuprestoretestingselection/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/backup_restore_testing_selection awscc_backup_restore_testing_selection}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/backup_restore_testing_selection awscc_backup_restore_testing_selection}.
 type BackupRestoreTestingSelection interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -106,12 +106,22 @@ type BackupRestoreTestingSelection interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -124,6 +134,9 @@ type BackupRestoreTestingSelection interface {
 	ResetRestoreMetadataOverrides()
 	ResetValidationWindowHours()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -469,7 +482,7 @@ func (j *jsiiProxy_BackupRestoreTestingSelection) ValidationWindowHoursInput() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/backup_restore_testing_selection awscc_backup_restore_testing_selection} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/backup_restore_testing_selection awscc_backup_restore_testing_selection} Resource.
 func NewBackupRestoreTestingSelection(scope constructs.Construct, id *string, config *BackupRestoreTestingSelectionConfig) BackupRestoreTestingSelection {
 	_init_.Initialize()
 
@@ -487,7 +500,7 @@ func NewBackupRestoreTestingSelection(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/backup_restore_testing_selection awscc_backup_restore_testing_selection} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/backup_restore_testing_selection awscc_backup_restore_testing_selection} Resource.
 func NewBackupRestoreTestingSelection_Override(b BackupRestoreTestingSelection, scope constructs.Construct, id *string, config *BackupRestoreTestingSelectionConfig) {
 	_init_.Initialize()
 
@@ -912,6 +925,19 @@ func (b *jsiiProxy_BackupRestoreTestingSelection) GetStringMapAttribute(terrafor
 	return returns
 }
 
+func (b *jsiiProxy_BackupRestoreTestingSelection) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		b,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (b *jsiiProxy_BackupRestoreTestingSelection) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := b.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -939,6 +965,17 @@ func (b *jsiiProxy_BackupRestoreTestingSelection) InterpolationForAttribute(terr
 	return returns
 }
 
+func (b *jsiiProxy_BackupRestoreTestingSelection) MoveFromId(id *string) {
+	if err := b.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (b *jsiiProxy_BackupRestoreTestingSelection) MoveTo(moveTarget *string, index interface{}) {
 	if err := b.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -947,6 +984,17 @@ func (b *jsiiProxy_BackupRestoreTestingSelection) MoveTo(moveTarget *string, ind
 		b,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (b *jsiiProxy_BackupRestoreTestingSelection) MoveToId(id *string) {
+	if err := b.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1018,6 +1066,32 @@ func (b *jsiiProxy_BackupRestoreTestingSelection) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		b,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_BackupRestoreTestingSelection) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		b,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_BackupRestoreTestingSelection) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		b,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

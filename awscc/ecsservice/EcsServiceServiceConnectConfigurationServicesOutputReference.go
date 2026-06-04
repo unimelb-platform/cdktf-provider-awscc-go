@@ -82,6 +82,7 @@ type EcsServiceServiceConnectConfigurationServicesOutputReference interface {
 	ResetClientAliases()
 	ResetDiscoveryName()
 	ResetIngressPortOverride()
+	ResetPortName()
 	ResetTimeout()
 	ResetTls()
 	// Produce the Token's value at resolution time.
@@ -644,6 +645,14 @@ func (e *jsiiProxy_EcsServiceServiceConnectConfigurationServicesOutputReference)
 	_jsii_.InvokeVoid(
 		e,
 		"resetIngressPortOverride",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcsServiceServiceConnectConfigurationServicesOutputReference) ResetPortName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetPortName",
 		nil, // no parameters
 	)
 }

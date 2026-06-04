@@ -48,6 +48,10 @@ func (c *jsiiProxy_ConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetect
 	return nil
 }
 
+func (j *jsiiProxy_ConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutputReference) validateSetAwaitAnswerMachinePromptParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	return nil
 }

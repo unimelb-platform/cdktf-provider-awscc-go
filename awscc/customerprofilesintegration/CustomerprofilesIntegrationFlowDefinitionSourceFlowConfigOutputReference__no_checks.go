@@ -72,7 +72,7 @@ func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutp
 	return nil
 }
 
-func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutputReference) validateSetInternalValueParameters(val *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfig) error {
+func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

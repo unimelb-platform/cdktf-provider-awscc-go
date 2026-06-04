@@ -67,6 +67,7 @@ type SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsEfsFileSystemConfi
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetFileSystemId()
 	ResetFileSystemPath()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsEfsF
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsEfsFileSystemConfigOutputReference) ResetFileSystemId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetFileSystemId",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SagemakerDomainDefaultUserSettingsCustomFileSystemConfigsEfsFileSystemConfigOutputReference) ResetFileSystemPath() {

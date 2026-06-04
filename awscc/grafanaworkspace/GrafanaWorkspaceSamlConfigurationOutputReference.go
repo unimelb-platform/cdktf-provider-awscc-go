@@ -33,7 +33,7 @@ type GrafanaWorkspaceSamlConfigurationOutputReference interface {
 	// Experimental.
 	Fqn() *string
 	IdpMetadata() GrafanaWorkspaceSamlConfigurationIdpMetadataOutputReference
-	IdpMetadataInput() *GrafanaWorkspaceSamlConfigurationIdpMetadata
+	IdpMetadataInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	LoginValidityDuration() *float64
@@ -78,6 +78,7 @@ type GrafanaWorkspaceSamlConfigurationOutputReference interface {
 	PutRoleValues(value *GrafanaWorkspaceSamlConfigurationRoleValues)
 	ResetAllowedOrganizations()
 	ResetAssertionAttributes()
+	ResetIdpMetadata()
 	ResetLoginValidityDuration()
 	ResetRoleValues()
 	// Produce the Token's value at resolution time.
@@ -185,8 +186,8 @@ func (j *jsiiProxy_GrafanaWorkspaceSamlConfigurationOutputReference) IdpMetadata
 	return returns
 }
 
-func (j *jsiiProxy_GrafanaWorkspaceSamlConfigurationOutputReference) IdpMetadataInput() *GrafanaWorkspaceSamlConfigurationIdpMetadata {
-	var returns *GrafanaWorkspaceSamlConfigurationIdpMetadata
+func (j *jsiiProxy_GrafanaWorkspaceSamlConfigurationOutputReference) IdpMetadataInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"idpMetadataInput",
@@ -601,6 +602,14 @@ func (g *jsiiProxy_GrafanaWorkspaceSamlConfigurationOutputReference) ResetAssert
 	_jsii_.InvokeVoid(
 		g,
 		"resetAssertionAttributes",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GrafanaWorkspaceSamlConfigurationOutputReference) ResetIdpMetadata() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetIdpMetadata",
 		nil, // no parameters
 	)
 }

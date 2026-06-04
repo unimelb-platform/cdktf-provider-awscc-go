@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccroute53dnssec/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53_dnssec awscc_route53_dnssec}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53_dnssec awscc_route53_dnssec}.
 type DataAwsccRoute53Dnssec interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -83,6 +83,10 @@ type DataAwsccRoute53Dnssec interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -268,7 +272,7 @@ func (j *jsiiProxy_DataAwsccRoute53Dnssec) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53_dnssec awscc_route53_dnssec} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53_dnssec awscc_route53_dnssec} Data Source.
 func NewDataAwsccRoute53Dnssec(scope constructs.Construct, id *string, config *DataAwsccRoute53DnssecConfig) DataAwsccRoute53Dnssec {
 	_init_.Initialize()
 
@@ -286,7 +290,7 @@ func NewDataAwsccRoute53Dnssec(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53_dnssec awscc_route53_dnssec} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53_dnssec awscc_route53_dnssec} Data Source.
 func NewDataAwsccRoute53Dnssec_Override(d DataAwsccRoute53Dnssec, scope constructs.Construct, id *string, config *DataAwsccRoute53DnssecConfig) {
 	_init_.Initialize()
 
@@ -653,6 +657,32 @@ func (d *jsiiProxy_DataAwsccRoute53Dnssec) SynthesizeAttributes() *map[string]in
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53Dnssec) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53Dnssec) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

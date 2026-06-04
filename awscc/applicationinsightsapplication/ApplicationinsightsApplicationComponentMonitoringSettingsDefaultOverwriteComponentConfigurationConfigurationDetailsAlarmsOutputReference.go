@@ -67,6 +67,7 @@ type ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteCo
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAlarmName()
 	ResetSeverity()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefa
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsAlarmsOutputReference) ResetAlarmName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetAlarmName",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationConfigurationDetailsAlarmsOutputReference) ResetSeverity() {

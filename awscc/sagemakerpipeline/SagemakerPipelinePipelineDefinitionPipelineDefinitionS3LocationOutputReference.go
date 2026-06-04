@@ -73,7 +73,9 @@ type SagemakerPipelinePipelineDefinitionPipelineDefinitionS3LocationOutputRefere
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucket()
 	ResetETag()
+	ResetKey()
 	ResetVersion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -553,10 +555,26 @@ func (s *jsiiProxy_SagemakerPipelinePipelineDefinitionPipelineDefinitionS3Locati
 	return returns
 }
 
+func (s *jsiiProxy_SagemakerPipelinePipelineDefinitionPipelineDefinitionS3LocationOutputReference) ResetBucket() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetBucket",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerPipelinePipelineDefinitionPipelineDefinitionS3LocationOutputReference) ResetETag() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetETag",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerPipelinePipelineDefinitionPipelineDefinitionS3LocationOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetKey",
 		nil, // no parameters
 	)
 }

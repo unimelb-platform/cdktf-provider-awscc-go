@@ -67,6 +67,7 @@ type IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindowTumblingOutputRefe
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetInterval()
 	ResetOffset()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindowTumb
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindowTumblingOutputReference) ResetInterval() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetInterval",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricWindowTumblingOutputReference) ResetOffset() {

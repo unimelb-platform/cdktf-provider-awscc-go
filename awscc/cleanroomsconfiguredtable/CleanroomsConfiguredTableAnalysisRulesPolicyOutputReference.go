@@ -27,8 +27,8 @@ type CleanroomsConfiguredTableAnalysisRulesPolicyOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *CleanroomsConfiguredTableAnalysisRulesPolicy
-	SetInternalValue(val *CleanroomsConfiguredTableAnalysisRulesPolicy)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -38,7 +38,7 @@ type CleanroomsConfiguredTableAnalysisRulesPolicyOutputReference interface {
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	V1() CleanroomsConfiguredTableAnalysisRulesPolicyV1OutputReference
-	V1Input() *CleanroomsConfiguredTableAnalysisRulesPolicyV1
+	V1Input() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type CleanroomsConfiguredTableAnalysisRulesPolicyOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutV1(value *CleanroomsConfiguredTableAnalysisRulesPolicyV1)
+	ResetV1()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -119,8 +120,8 @@ func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyOutputReference) 
 	return returns
 }
 
-func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyOutputReference) InternalValue() *CleanroomsConfiguredTableAnalysisRulesPolicy {
-	var returns *CleanroomsConfiguredTableAnalysisRulesPolicy
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -159,8 +160,8 @@ func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyOutputReference) 
 	return returns
 }
 
-func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyOutputReference) V1Input() *CleanroomsConfiguredTableAnalysisRulesPolicyV1 {
-	var returns *CleanroomsConfiguredTableAnalysisRulesPolicyV1
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyOutputReference) V1Input() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"v1Input",
@@ -219,7 +220,7 @@ func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyOutputReference)S
 	)
 }
 
-func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyOutputReference)SetInternalValue(val *CleanroomsConfiguredTableAnalysisRulesPolicy) {
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -446,6 +447,14 @@ func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyOutputReference) 
 		c,
 		"putV1",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyOutputReference) ResetV1() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetV1",
+		nil, // no parameters
 	)
 }
 

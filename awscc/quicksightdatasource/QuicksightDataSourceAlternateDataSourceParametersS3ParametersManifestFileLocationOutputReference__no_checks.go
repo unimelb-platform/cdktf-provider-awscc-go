@@ -60,7 +60,7 @@ func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersS3Parameters
 	return nil
 }
 
-func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocationOutputReference) validateSetInternalValueParameters(val *QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocation) error {
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

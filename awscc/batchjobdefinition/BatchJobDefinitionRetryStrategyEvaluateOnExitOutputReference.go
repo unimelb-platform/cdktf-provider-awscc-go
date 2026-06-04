@@ -73,6 +73,7 @@ type BatchJobDefinitionRetryStrategyEvaluateOnExitOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAction()
 	ResetOnExitCode()
 	ResetOnReason()
 	ResetOnStatusReason()
@@ -552,6 +553,14 @@ func (b *jsiiProxy_BatchJobDefinitionRetryStrategyEvaluateOnExitOutputReference)
 	)
 
 	return returns
+}
+
+func (b *jsiiProxy_BatchJobDefinitionRetryStrategyEvaluateOnExitOutputReference) ResetAction() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetAction",
+		nil, // no parameters
+	)
 }
 
 func (b *jsiiProxy_BatchJobDefinitionRetryStrategyEvaluateOnExitOutputReference) ResetOnExitCode() {

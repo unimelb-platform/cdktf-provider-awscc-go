@@ -1,0 +1,6 @@
+package dataawsccwisdomknowledgebase
+
+
+type DataAwsccWisdomKnowledgeBaseVectorIngestionConfigurationParsingConfiguration struct {
+}
+

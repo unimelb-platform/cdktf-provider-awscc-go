@@ -1,0 +1,78 @@
+//go:build no_runtime_type_checking
+
+package bedrockdataautomationproject
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (b *jsiiProxy_BedrockDataAutomationProjectStandardOutputConfigurationDocumentOutputFormatAdditionalFileFormatOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataAutomationProjectStandardOutputConfigurationDocumentOutputFormatAdditionalFileFormatOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataAutomationProjectStandardOutputConfigurationDocumentOutputFormatAdditionalFileFormatOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataAutomationProjectStandardOutputConfigurationDocumentOutputFormatAdditionalFileFormatOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataAutomationProjectStandardOutputConfigurationDocumentOutputFormatAdditionalFileFormatOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataAutomationProjectStandardOutputConfigurationDocumentOutputFormatAdditionalFileFormatOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataAutomationProjectStandardOutputConfigurationDocumentOutputFormatAdditionalFileFormatOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataAutomationProjectStandardOutputConfigurationDocumentOutputFormatAdditionalFileFormatOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataAutomationProjectStandardOutputConfigurationDocumentOutputFormatAdditionalFileFormatOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataAutomationProjectStandardOutputConfigurationDocumentOutputFormatAdditionalFileFormatOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataAutomationProjectStandardOutputConfigurationDocumentOutputFormatAdditionalFileFormatOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataAutomationProjectStandardOutputConfigurationDocumentOutputFormatAdditionalFileFormatOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataAutomationProjectStandardOutputConfigurationDocumentOutputFormatAdditionalFileFormatOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataAutomationProjectStandardOutputConfigurationDocumentOutputFormatAdditionalFileFormatOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataAutomationProjectStandardOutputConfigurationDocumentOutputFormatAdditionalFileFormatOutputReference) validateSetStateParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataAutomationProjectStandardOutputConfigurationDocumentOutputFormatAdditionalFileFormatOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataAutomationProjectStandardOutputConfigurationDocumentOutputFormatAdditionalFileFormatOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewBedrockDataAutomationProjectStandardOutputConfigurationDocumentOutputFormatAdditionalFileFormatOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

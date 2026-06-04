@@ -56,11 +56,23 @@ func (w *jsiiProxy_WorkspacesthinclientEnvironment) validateInterpolationForAttr
 	return nil
 }
 
+func (w *jsiiProxy_WorkspacesthinclientEnvironment) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (w *jsiiProxy_WorkspacesthinclientEnvironment) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (w *jsiiProxy_WorkspacesthinclientEnvironment) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (w *jsiiProxy_WorkspacesthinclientEnvironment) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (w *jsiiProxy_WorkspacesthinclientEnvironment) validatePutDeviceCreationTagsParameters(value interface{}) error {
 	return nil
 }
 

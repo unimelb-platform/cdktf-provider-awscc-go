@@ -1,0 +1,6 @@
+package dataawsccsagemakermodelpackage
+
+
+type DataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSource struct {
+}
+

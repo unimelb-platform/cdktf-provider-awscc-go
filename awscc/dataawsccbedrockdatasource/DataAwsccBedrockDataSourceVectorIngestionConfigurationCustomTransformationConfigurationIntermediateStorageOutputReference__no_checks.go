@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawsccbedrockdatasource
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageOutputReference) validateSetInternalValueParameters(val *DataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorage) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccBedrockDataSourceVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

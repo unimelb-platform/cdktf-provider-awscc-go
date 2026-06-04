@@ -1,0 +1,6 @@
+package dataawscccognitouserpoolriskconfigurationattachment
+
+
+type DataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationActions struct {
+}
+

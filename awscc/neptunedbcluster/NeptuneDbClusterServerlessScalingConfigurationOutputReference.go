@@ -67,6 +67,8 @@ type NeptuneDbClusterServerlessScalingConfigurationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetMaxCapacity()
+	ResetMinCapacity()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (n *jsiiProxy_NeptuneDbClusterServerlessScalingConfigurationOutputReference
 	)
 
 	return returns
+}
+
+func (n *jsiiProxy_NeptuneDbClusterServerlessScalingConfigurationOutputReference) ResetMaxCapacity() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetMaxCapacity",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NeptuneDbClusterServerlessScalingConfigurationOutputReference) ResetMinCapacity() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetMinCapacity",
+		nil, // no parameters
+	)
 }
 
 func (n *jsiiProxy_NeptuneDbClusterServerlessScalingConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

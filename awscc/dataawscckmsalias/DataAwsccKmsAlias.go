@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscckmsalias/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kms_alias awscc_kms_alias}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kms_alias awscc_kms_alias}.
 type DataAwsccKmsAlias interface {
 	cdktf.TerraformDataSource
 	AliasName() *string
@@ -84,6 +84,10 @@ type DataAwsccKmsAlias interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -279,7 +283,7 @@ func (j *jsiiProxy_DataAwsccKmsAlias) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kms_alias awscc_kms_alias} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kms_alias awscc_kms_alias} Data Source.
 func NewDataAwsccKmsAlias(scope constructs.Construct, id *string, config *DataAwsccKmsAliasConfig) DataAwsccKmsAlias {
 	_init_.Initialize()
 
@@ -297,7 +301,7 @@ func NewDataAwsccKmsAlias(scope constructs.Construct, id *string, config *DataAw
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/kms_alias awscc_kms_alias} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/kms_alias awscc_kms_alias} Data Source.
 func NewDataAwsccKmsAlias_Override(d DataAwsccKmsAlias, scope constructs.Construct, id *string, config *DataAwsccKmsAliasConfig) {
 	_init_.Initialize()
 
@@ -664,6 +668,32 @@ func (d *jsiiProxy_DataAwsccKmsAlias) SynthesizeAttributes() *map[string]interfa
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKmsAlias) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccKmsAlias) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

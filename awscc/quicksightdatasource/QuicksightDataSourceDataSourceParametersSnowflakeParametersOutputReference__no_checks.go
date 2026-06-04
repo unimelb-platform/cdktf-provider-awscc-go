@@ -44,7 +44,15 @@ func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersSnowflakeParametersOu
 	return nil
 }
 
+func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersSnowflakeParametersOutputReference) validatePutOAuthParametersParameters(value *QuicksightDataSourceDataSourceParametersSnowflakeParametersOAuthParameters) error {
+	return nil
+}
+
 func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersSnowflakeParametersOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_QuicksightDataSourceDataSourceParametersSnowflakeParametersOutputReference) validateSetAuthenticationTypeParameters(val *string) error {
 	return nil
 }
 
@@ -57,6 +65,10 @@ func (j *jsiiProxy_QuicksightDataSourceDataSourceParametersSnowflakeParametersOu
 }
 
 func (j *jsiiProxy_QuicksightDataSourceDataSourceParametersSnowflakeParametersOutputReference) validateSetDatabaseParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_QuicksightDataSourceDataSourceParametersSnowflakeParametersOutputReference) validateSetDatabaseAccessControlRoleParameters(val *string) error {
 	return nil
 }
 

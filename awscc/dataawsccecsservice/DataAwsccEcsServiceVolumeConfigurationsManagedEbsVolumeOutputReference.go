@@ -46,6 +46,7 @@ type DataAwsccEcsServiceVolumeConfigurationsManagedEbsVolumeOutputReference inte
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	Throughput() *float64
+	VolumeInitializationRate() *float64
 	VolumeType() *string
 	// Experimental.
 	ComputeFqn() *string
@@ -241,6 +242,16 @@ func (j *jsiiProxy_DataAwsccEcsServiceVolumeConfigurationsManagedEbsVolumeOutput
 	_jsii_.Get(
 		j,
 		"throughput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEcsServiceVolumeConfigurationsManagedEbsVolumeOutputReference) VolumeInitializationRate() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"volumeInitializationRate",
 		&returns,
 	)
 	return returns

@@ -41,8 +41,8 @@ type S3BucketLifecycleConfigurationRulesOutputReference interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
-	InternalValue() *S3BucketLifecycleConfigurationRules
-	SetInternalValue(val *S3BucketLifecycleConfigurationRules)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	NoncurrentVersionExpiration() S3BucketLifecycleConfigurationRulesNoncurrentVersionExpirationOutputReference
 	NoncurrentVersionExpirationInDays() *float64
 	SetNoncurrentVersionExpirationInDays(val *float64)
@@ -121,6 +121,7 @@ type S3BucketLifecycleConfigurationRulesOutputReference interface {
 	ResetObjectSizeGreaterThan()
 	ResetObjectSizeLessThan()
 	ResetPrefix()
+	ResetStatus()
 	ResetTagFilters()
 	ResetTransition()
 	ResetTransitions()
@@ -279,8 +280,8 @@ func (j *jsiiProxy_S3BucketLifecycleConfigurationRulesOutputReference) IdInput()
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketLifecycleConfigurationRulesOutputReference) InternalValue() *S3BucketLifecycleConfigurationRules {
-	var returns *S3BucketLifecycleConfigurationRules
+func (j *jsiiProxy_S3BucketLifecycleConfigurationRulesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -623,7 +624,7 @@ func (j *jsiiProxy_S3BucketLifecycleConfigurationRulesOutputReference)SetId(val 
 	)
 }
 
-func (j *jsiiProxy_S3BucketLifecycleConfigurationRulesOutputReference)SetInternalValue(val *S3BucketLifecycleConfigurationRules) {
+func (j *jsiiProxy_S3BucketLifecycleConfigurationRulesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -1066,6 +1067,14 @@ func (s *jsiiProxy_S3BucketLifecycleConfigurationRulesOutputReference) ResetPref
 	_jsii_.InvokeVoid(
 		s,
 		"resetPrefix",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketLifecycleConfigurationRulesOutputReference) ResetStatus() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStatus",
 		nil, // no parameters
 	)
 }

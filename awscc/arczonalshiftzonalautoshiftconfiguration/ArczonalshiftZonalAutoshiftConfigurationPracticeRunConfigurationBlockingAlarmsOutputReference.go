@@ -67,6 +67,8 @@ type ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationBlockingAla
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAlarmIdentifier()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (a *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurat
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationBlockingAlarmsOutputReference) ResetAlarmIdentifier() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetAlarmIdentifier",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationBlockingAlarmsOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetType",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationBlockingAlarmsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

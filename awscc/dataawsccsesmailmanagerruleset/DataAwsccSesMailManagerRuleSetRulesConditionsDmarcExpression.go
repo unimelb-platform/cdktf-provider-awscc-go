@@ -1,0 +1,6 @@
+package dataawsccsesmailmanagerruleset
+
+
+type DataAwsccSesMailManagerRuleSetRulesConditionsDmarcExpression struct {
+}
+

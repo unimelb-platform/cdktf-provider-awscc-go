@@ -56,7 +56,15 @@ func (i *jsiiProxy_IotsitewiseAssetModel) validateInterpolationForAttributeParam
 	return nil
 }
 
+func (i *jsiiProxy_IotsitewiseAssetModel) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotsitewiseAssetModel) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModel) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -100,7 +108,15 @@ func (j *jsiiProxy_IotsitewiseAssetModel) validateSetAssetModelDescriptionParame
 	return nil
 }
 
+func (j *jsiiProxy_IotsitewiseAssetModel) validateSetAssetModelExternalIdParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_IotsitewiseAssetModel) validateSetAssetModelNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModel) validateSetAssetModelTypeParameters(val *string) error {
 	return nil
 }
 

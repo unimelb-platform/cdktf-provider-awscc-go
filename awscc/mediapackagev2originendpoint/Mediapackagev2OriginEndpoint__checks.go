@@ -119,6 +119,14 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpoint) validateInterpolationForAttribu
 	return nil
 }
 
+func (m *jsiiProxy_Mediapackagev2OriginEndpoint) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (m *jsiiProxy_Mediapackagev2OriginEndpoint) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,9 +188,59 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpoint) validateMoveToParameters(moveTa
 	return nil
 }
 
+func (m *jsiiProxy_Mediapackagev2OriginEndpoint) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (m *jsiiProxy_Mediapackagev2OriginEndpoint) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpoint) validatePutDashManifestsParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*Mediapackagev2OriginEndpointDashManifests:
+		value := value.(*[]*Mediapackagev2OriginEndpointDashManifests)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*Mediapackagev2OriginEndpointDashManifests:
+		value_ := value.([]*Mediapackagev2OriginEndpointDashManifests)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Mediapackagev2OriginEndpointDashManifests; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpoint) validatePutForceEndpointErrorConfigurationParameters(value *Mediapackagev2OriginEndpointForceEndpointErrorConfiguration) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
 	}
 
 	return nil

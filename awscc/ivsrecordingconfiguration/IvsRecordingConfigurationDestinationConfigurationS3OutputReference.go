@@ -64,6 +64,7 @@ type IvsRecordingConfigurationDestinationConfigurationS3OutputReference interfac
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucketName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (i *jsiiProxy_IvsRecordingConfigurationDestinationConfigurationS3OutputRefe
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IvsRecordingConfigurationDestinationConfigurationS3OutputReference) ResetBucketName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetBucketName",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IvsRecordingConfigurationDestinationConfigurationS3OutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

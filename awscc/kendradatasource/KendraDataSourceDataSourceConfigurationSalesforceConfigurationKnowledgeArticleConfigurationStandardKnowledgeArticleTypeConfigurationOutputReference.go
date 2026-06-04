@@ -70,6 +70,7 @@ type KendraDataSourceDataSourceConfigurationSalesforceConfigurationKnowledgeArti
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutFieldMappings(value interface{})
+	ResetDocumentDataFieldName()
 	ResetDocumentTitleFieldName()
 	ResetFieldMappings()
 	// Produce the Token's value at resolution time.
@@ -516,6 +517,14 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSalesforceConfiguratio
 		k,
 		"putFieldMappings",
 		[]interface{}{value},
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSalesforceConfigurationKnowledgeArticleConfigurationStandardKnowledgeArticleTypeConfigurationOutputReference) ResetDocumentDataFieldName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetDocumentDataFieldName",
+		nil, // no parameters
 	)
 }
 

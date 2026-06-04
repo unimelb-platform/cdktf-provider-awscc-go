@@ -11,6 +11,7 @@ import (
 type DataAwsccKinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationOutputReference interface {
 	cdktf.ComplexObject
 	AccountUrl() *string
+	BufferingHints() DataAwsccKinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationBufferingHintsOutputReference
 	CloudwatchLoggingOptions() DataAwsccKinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationCloudwatchLoggingOptionsOutputReference
 	// the index of the complex object in a list.
 	// Experimental.
@@ -43,6 +44,7 @@ type DataAwsccKinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationOutp
 	S3BackupMode() *string
 	S3Configuration() DataAwsccKinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationS3ConfigurationOutputReference
 	Schema() *string
+	SecretsManagerConfiguration() DataAwsccKinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationSecretsManagerConfigurationOutputReference
 	SnowflakeRoleConfiguration() DataAwsccKinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationSnowflakeRoleConfigurationOutputReference
 	SnowflakeVpcConfiguration() DataAwsccKinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationSnowflakeVpcConfigurationOutputReference
 	Table() *string
@@ -99,6 +101,16 @@ func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamSnowflakeDestinationCon
 	_jsii_.Get(
 		j,
 		"accountUrl",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationOutputReference) BufferingHints() DataAwsccKinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationBufferingHintsOutputReference {
+	var returns DataAwsccKinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationBufferingHintsOutputReference
+	_jsii_.Get(
+		j,
+		"bufferingHints",
 		&returns,
 	)
 	return returns
@@ -279,6 +291,16 @@ func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamSnowflakeDestinationCon
 	_jsii_.Get(
 		j,
 		"schema",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationOutputReference) SecretsManagerConfiguration() DataAwsccKinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationSecretsManagerConfigurationOutputReference {
+	var returns DataAwsccKinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationSecretsManagerConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"secretsManagerConfiguration",
 		&returns,
 	)
 	return returns

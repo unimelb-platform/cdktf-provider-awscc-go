@@ -56,7 +56,15 @@ func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) validat
 	return nil
 }
 
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (r *jsiiProxy_Route53ResolverResolverQueryLoggingConfigAssociation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

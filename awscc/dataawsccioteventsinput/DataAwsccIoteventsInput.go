@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccioteventsinput/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotevents_input awscc_iotevents_input}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotevents_input awscc_iotevents_input}.
 type DataAwsccIoteventsInput interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -86,6 +86,10 @@ type DataAwsccIoteventsInput interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -301,7 +305,7 @@ func (j *jsiiProxy_DataAwsccIoteventsInput) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotevents_input awscc_iotevents_input} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotevents_input awscc_iotevents_input} Data Source.
 func NewDataAwsccIoteventsInput(scope constructs.Construct, id *string, config *DataAwsccIoteventsInputConfig) DataAwsccIoteventsInput {
 	_init_.Initialize()
 
@@ -319,7 +323,7 @@ func NewDataAwsccIoteventsInput(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotevents_input awscc_iotevents_input} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotevents_input awscc_iotevents_input} Data Source.
 func NewDataAwsccIoteventsInput_Override(d DataAwsccIoteventsInput, scope constructs.Construct, id *string, config *DataAwsccIoteventsInputConfig) {
 	_init_.Initialize()
 
@@ -686,6 +690,32 @@ func (d *jsiiProxy_DataAwsccIoteventsInput) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIoteventsInput) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIoteventsInput) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

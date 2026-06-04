@@ -64,6 +64,7 @@ type LicensemanagerLicenseConsumptionConfigurationProvisionalConfigurationOutput
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetMaxTimeToLiveInMinutes()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (l *jsiiProxy_LicensemanagerLicenseConsumptionConfigurationProvisionalConfi
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LicensemanagerLicenseConsumptionConfigurationProvisionalConfigurationOutputReference) ResetMaxTimeToLiveInMinutes() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMaxTimeToLiveInMinutes",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LicensemanagerLicenseConsumptionConfigurationProvisionalConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

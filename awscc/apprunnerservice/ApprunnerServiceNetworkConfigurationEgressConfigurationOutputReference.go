@@ -67,6 +67,7 @@ type ApprunnerServiceNetworkConfigurationEgressConfigurationOutputReference inte
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEgressType()
 	ResetVpcConnectorArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (a *jsiiProxy_ApprunnerServiceNetworkConfigurationEgressConfigurationOutput
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_ApprunnerServiceNetworkConfigurationEgressConfigurationOutputReference) ResetEgressType() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetEgressType",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_ApprunnerServiceNetworkConfigurationEgressConfigurationOutputReference) ResetVpcConnectorArn() {

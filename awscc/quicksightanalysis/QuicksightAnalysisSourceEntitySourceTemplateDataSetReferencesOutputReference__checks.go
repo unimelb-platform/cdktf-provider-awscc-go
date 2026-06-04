@@ -179,9 +179,25 @@ func (j *jsiiProxy_QuicksightAnalysisSourceEntitySourceTemplateDataSetReferences
 	return nil
 }
 
-func (j *jsiiProxy_QuicksightAnalysisSourceEntitySourceTemplateDataSetReferencesOutputReference) validateSetInternalValueParameters(val *QuicksightAnalysisSourceEntitySourceTemplateDataSetReferences) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_QuicksightAnalysisSourceEntitySourceTemplateDataSetReferencesOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *QuicksightAnalysisSourceEntitySourceTemplateDataSetReferences:
+		val := val.(*QuicksightAnalysisSourceEntitySourceTemplateDataSetReferences)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case QuicksightAnalysisSourceEntitySourceTemplateDataSetReferences:
+		val_ := val.(QuicksightAnalysisSourceEntitySourceTemplateDataSetReferences)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *QuicksightAnalysisSourceEntitySourceTemplateDataSetReferences; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

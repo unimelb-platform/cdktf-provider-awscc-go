@@ -56,7 +56,15 @@ func (l *jsiiProxy_LogsQueryDefinition) validateInterpolationForAttributeParamet
 	return nil
 }
 
+func (l *jsiiProxy_LogsQueryDefinition) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LogsQueryDefinition) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (l *jsiiProxy_LogsQueryDefinition) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -101,6 +109,10 @@ func (j *jsiiProxy_LogsQueryDefinition) validateSetNameParameters(val *string) e
 }
 
 func (j *jsiiProxy_LogsQueryDefinition) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_LogsQueryDefinition) validateSetQueryLanguageParameters(val *string) error {
 	return nil
 }
 

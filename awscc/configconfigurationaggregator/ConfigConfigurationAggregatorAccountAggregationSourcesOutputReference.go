@@ -70,6 +70,7 @@ type ConfigConfigurationAggregatorAccountAggregationSourcesOutputReference inter
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAccountIds()
 	ResetAllAwsRegions()
 	ResetAwsRegions()
 	// Produce the Token's value at resolution time.
@@ -517,6 +518,14 @@ func (c *jsiiProxy_ConfigConfigurationAggregatorAccountAggregationSourcesOutputR
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ConfigConfigurationAggregatorAccountAggregationSourcesOutputReference) ResetAccountIds() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAccountIds",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ConfigConfigurationAggregatorAccountAggregationSourcesOutputReference) ResetAllAwsRegions() {

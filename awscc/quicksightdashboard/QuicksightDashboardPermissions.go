@@ -4,8 +4,8 @@ package quicksightdashboard
 type QuicksightDashboardPermissions struct {
 	// <p>The IAM action to grant or revoke permissions on.</p>.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/quicksight_dashboard#actions QuicksightDashboard#actions}
-	Actions *[]*string `field:"required" json:"actions" yaml:"actions"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/quicksight_dashboard#actions QuicksightDashboard#actions}
+	Actions *[]*string `field:"optional" json:"actions" yaml:"actions"`
 	// <p>The Amazon Resource Name (ARN) of the principal.
 	//
 	// This can be one of the
@@ -24,7 +24,7 @@ type QuicksightDashboardPermissions struct {
 	//             </li>
 	//          </ul>
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/quicksight_dashboard#principal QuicksightDashboard#principal}
-	Principal *string `field:"required" json:"principal" yaml:"principal"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/quicksight_dashboard#principal QuicksightDashboard#principal}
+	Principal *string `field:"optional" json:"principal" yaml:"principal"`
 }
 

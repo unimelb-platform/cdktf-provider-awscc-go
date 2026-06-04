@@ -30,8 +30,8 @@ type CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCustomHeadersConf
 	Header() *string
 	SetHeader(val *string)
 	HeaderInput() *string
-	InternalValue() *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCustomHeadersConfigItems
-	SetInternalValue(val *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCustomHeadersConfigItems)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Override() interface{}
 	SetOverride(val interface{})
 	OverrideInput() interface{}
@@ -70,6 +70,9 @@ type CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCustomHeadersConf
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetHeader()
+	ResetOverride()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -145,8 +148,8 @@ func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCus
 	return returns
 }
 
-func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCustomHeadersConfigItemsOutputReference) InternalValue() *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCustomHeadersConfigItems {
-	var returns *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCustomHeadersConfigItems
+func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCustomHeadersConfigItemsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -276,7 +279,7 @@ func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCus
 	)
 }
 
-func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCustomHeadersConfigItemsOutputReference)SetInternalValue(val *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCustomHeadersConfigItems) {
+func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCustomHeadersConfigItemsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -515,6 +518,30 @@ func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCus
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCustomHeadersConfigItemsOutputReference) ResetHeader() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetHeader",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCustomHeadersConfigItemsOutputReference) ResetOverride() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetOverride",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCustomHeadersConfigItemsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCustomHeadersConfigItemsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

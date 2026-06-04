@@ -4,6 +4,10 @@ package codestarconnectionsconnection
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (c *jsiiProxy_CodestarconnectionsConnectionTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CodestarconnectionsConnectionTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

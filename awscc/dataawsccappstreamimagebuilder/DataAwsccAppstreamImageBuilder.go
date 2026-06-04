@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccappstreamimagebuilder/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appstream_image_builder awscc_appstream_image_builder}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appstream_image_builder awscc_appstream_image_builder}.
 type DataAwsccAppstreamImageBuilder interface {
 	cdktf.TerraformDataSource
 	AccessEndpoints() DataAwsccAppstreamImageBuilderAccessEndpointsList
@@ -96,6 +96,10 @@ type DataAwsccAppstreamImageBuilder interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -411,7 +415,7 @@ func (j *jsiiProxy_DataAwsccAppstreamImageBuilder) VpcConfig() DataAwsccAppstrea
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appstream_image_builder awscc_appstream_image_builder} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appstream_image_builder awscc_appstream_image_builder} Data Source.
 func NewDataAwsccAppstreamImageBuilder(scope constructs.Construct, id *string, config *DataAwsccAppstreamImageBuilderConfig) DataAwsccAppstreamImageBuilder {
 	_init_.Initialize()
 
@@ -429,7 +433,7 @@ func NewDataAwsccAppstreamImageBuilder(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appstream_image_builder awscc_appstream_image_builder} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appstream_image_builder awscc_appstream_image_builder} Data Source.
 func NewDataAwsccAppstreamImageBuilder_Override(d DataAwsccAppstreamImageBuilder, scope constructs.Construct, id *string, config *DataAwsccAppstreamImageBuilderConfig) {
 	_init_.Initialize()
 
@@ -796,6 +800,32 @@ func (d *jsiiProxy_DataAwsccAppstreamImageBuilder) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppstreamImageBuilder) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppstreamImageBuilder) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

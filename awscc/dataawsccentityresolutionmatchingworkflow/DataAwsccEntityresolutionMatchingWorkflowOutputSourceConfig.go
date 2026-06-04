@@ -1,0 +1,6 @@
+package dataawsccentityresolutionmatchingworkflow
+
+
+type DataAwsccEntityresolutionMatchingWorkflowOutputSourceConfig struct {
+}
+

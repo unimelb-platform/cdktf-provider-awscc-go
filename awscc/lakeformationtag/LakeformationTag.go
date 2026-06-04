@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/lakeformationtag/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lakeformation_tag awscc_lakeformation_tag}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lakeformation_tag awscc_lakeformation_tag}.
 type LakeformationTag interface {
 	cdktf.TerraformResource
 	CatalogId() *string
@@ -92,12 +92,22 @@ type LakeformationTag interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -106,6 +116,9 @@ type LakeformationTag interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -351,7 +364,7 @@ func (j *jsiiProxy_LakeformationTag) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lakeformation_tag awscc_lakeformation_tag} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lakeformation_tag awscc_lakeformation_tag} Resource.
 func NewLakeformationTag(scope constructs.Construct, id *string, config *LakeformationTagConfig) LakeformationTag {
 	_init_.Initialize()
 
@@ -369,7 +382,7 @@ func NewLakeformationTag(scope constructs.Construct, id *string, config *Lakefor
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lakeformation_tag awscc_lakeformation_tag} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lakeformation_tag awscc_lakeformation_tag} Resource.
 func NewLakeformationTag_Override(l LakeformationTag, scope constructs.Construct, id *string, config *LakeformationTagConfig) {
 	_init_.Initialize()
 
@@ -750,6 +763,19 @@ func (l *jsiiProxy_LakeformationTag) GetStringMapAttribute(terraformAttribute *s
 	return returns
 }
 
+func (l *jsiiProxy_LakeformationTag) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (l *jsiiProxy_LakeformationTag) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := l.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -777,6 +803,17 @@ func (l *jsiiProxy_LakeformationTag) InterpolationForAttribute(terraformAttribut
 	return returns
 }
 
+func (l *jsiiProxy_LakeformationTag) MoveFromId(id *string) {
+	if err := l.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (l *jsiiProxy_LakeformationTag) MoveTo(moveTarget *string, index interface{}) {
 	if err := l.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -785,6 +822,17 @@ func (l *jsiiProxy_LakeformationTag) MoveTo(moveTarget *string, index interface{
 		l,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (l *jsiiProxy_LakeformationTag) MoveToId(id *string) {
+	if err := l.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -821,6 +869,32 @@ func (l *jsiiProxy_LakeformationTag) SynthesizeAttributes() *map[string]interfac
 	_jsii_.Invoke(
 		l,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LakeformationTag) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		l,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LakeformationTag) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

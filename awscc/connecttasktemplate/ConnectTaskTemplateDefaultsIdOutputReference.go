@@ -27,8 +27,8 @@ type ConnectTaskTemplateDefaultsIdOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *ConnectTaskTemplateDefaultsId
-	SetInternalValue(val *ConnectTaskTemplateDefaultsId)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -64,6 +64,7 @@ type ConnectTaskTemplateDefaultsIdOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -119,8 +120,8 @@ func (j *jsiiProxy_ConnectTaskTemplateDefaultsIdOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_ConnectTaskTemplateDefaultsIdOutputReference) InternalValue() *ConnectTaskTemplateDefaultsId {
-	var returns *ConnectTaskTemplateDefaultsId
+func (j *jsiiProxy_ConnectTaskTemplateDefaultsIdOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -219,7 +220,7 @@ func (j *jsiiProxy_ConnectTaskTemplateDefaultsIdOutputReference)SetComplexObject
 	)
 }
 
-func (j *jsiiProxy_ConnectTaskTemplateDefaultsIdOutputReference)SetInternalValue(val *ConnectTaskTemplateDefaultsId) {
+func (j *jsiiProxy_ConnectTaskTemplateDefaultsIdOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -447,6 +448,14 @@ func (c *jsiiProxy_ConnectTaskTemplateDefaultsIdOutputReference) InterpolationFo
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ConnectTaskTemplateDefaultsIdOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetName",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ConnectTaskTemplateDefaultsIdOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

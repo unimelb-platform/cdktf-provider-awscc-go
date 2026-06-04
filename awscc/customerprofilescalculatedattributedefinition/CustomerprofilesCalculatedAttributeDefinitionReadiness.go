@@ -1,0 +1,6 @@
+package customerprofilescalculatedattributedefinition
+
+
+type CustomerprofilesCalculatedAttributeDefinitionReadiness struct {
+}
+

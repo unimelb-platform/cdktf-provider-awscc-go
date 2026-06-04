@@ -10,6 +10,7 @@ import (
 
 type DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference interface {
 	cdktf.ComplexObject
+	Az() DataAwsccResiliencehubResiliencyPolicyPolicyAzOutputReference
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -27,10 +28,11 @@ type DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
+	Hardware() DataAwsccResiliencehubResiliencyPolicyPolicyHardwareOutputReference
 	InternalValue() *DataAwsccResiliencehubResiliencyPolicyPolicy
 	SetInternalValue(val *DataAwsccResiliencehubResiliencyPolicyPolicy)
-	RpoInSecs() *float64
-	RtoInSecs() *float64
+	Region() DataAwsccResiliencehubResiliencyPolicyPolicyRegionOutputReference
+	SoftwareAttribute() DataAwsccResiliencehubResiliencyPolicyPolicySoftwareOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -78,6 +80,16 @@ type jsiiProxy_DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference struc
 	internal.Type__cdktfComplexObject
 }
 
+func (j *jsiiProxy_DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference) Az() DataAwsccResiliencehubResiliencyPolicyPolicyAzOutputReference {
+	var returns DataAwsccResiliencehubResiliencyPolicyPolicyAzOutputReference
+	_jsii_.Get(
+		j,
+		"az",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -118,6 +130,16 @@ func (j *jsiiProxy_DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference) 
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference) Hardware() DataAwsccResiliencehubResiliencyPolicyPolicyHardwareOutputReference {
+	var returns DataAwsccResiliencehubResiliencyPolicyPolicyHardwareOutputReference
+	_jsii_.Get(
+		j,
+		"hardware",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference) InternalValue() *DataAwsccResiliencehubResiliencyPolicyPolicy {
 	var returns *DataAwsccResiliencehubResiliencyPolicyPolicy
 	_jsii_.Get(
@@ -128,21 +150,21 @@ func (j *jsiiProxy_DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference) 
 	return returns
 }
 
-func (j *jsiiProxy_DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference) RpoInSecs() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference) Region() DataAwsccResiliencehubResiliencyPolicyPolicyRegionOutputReference {
+	var returns DataAwsccResiliencehubResiliencyPolicyPolicyRegionOutputReference
 	_jsii_.Get(
 		j,
-		"rpoInSecs",
+		"region",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference) RtoInSecs() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference) SoftwareAttribute() DataAwsccResiliencehubResiliencyPolicyPolicySoftwareOutputReference {
+	var returns DataAwsccResiliencehubResiliencyPolicyPolicySoftwareOutputReference
 	_jsii_.Get(
 		j,
-		"rtoInSecs",
+		"softwareAttribute",
 		&returns,
 	)
 	return returns
@@ -169,29 +191,29 @@ func (j *jsiiProxy_DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference) 
 }
 
 
-func NewDataAwsccResiliencehubResiliencyPolicyPolicyOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectKey *string) DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference {
+func NewDataAwsccResiliencehubResiliencyPolicyPolicyOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewDataAwsccResiliencehubResiliencyPolicyPolicyOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectKey); err != nil {
+	if err := validateNewDataAwsccResiliencehubResiliencyPolicyPolicyOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
 		panic(err)
 	}
 	j := jsiiProxy_DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference{}
 
 	_jsii_.Create(
 		"awscc.dataAwsccResiliencehubResiliencyPolicy.DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference",
-		[]interface{}{terraformResource, terraformAttribute, complexObjectKey},
+		[]interface{}{terraformResource, terraformAttribute},
 		&j,
 	)
 
 	return &j
 }
 
-func NewDataAwsccResiliencehubResiliencyPolicyPolicyOutputReference_Override(d DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectKey *string) {
+func NewDataAwsccResiliencehubResiliencyPolicyPolicyOutputReference_Override(d DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
 	_init_.Initialize()
 
 	_jsii_.Create(
 		"awscc.dataAwsccResiliencehubResiliencyPolicy.DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference",
-		[]interface{}{terraformResource, terraformAttribute, complexObjectKey},
+		[]interface{}{terraformResource, terraformAttribute},
 		d,
 	)
 }

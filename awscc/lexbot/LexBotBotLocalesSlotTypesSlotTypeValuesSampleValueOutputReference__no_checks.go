@@ -56,7 +56,7 @@ func (j *jsiiProxy_LexBotBotLocalesSlotTypesSlotTypeValuesSampleValueOutputRefer
 	return nil
 }
 
-func (j *jsiiProxy_LexBotBotLocalesSlotTypesSlotTypeValuesSampleValueOutputReference) validateSetInternalValueParameters(val *LexBotBotLocalesSlotTypesSlotTypeValuesSampleValue) error {
+func (j *jsiiProxy_LexBotBotLocalesSlotTypesSlotTypeValuesSampleValueOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

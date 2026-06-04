@@ -68,6 +68,7 @@ type DynamodbTableKinesisStreamSpecificationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetApproximateCreationDateTimePrecision()
+	ResetStreamArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (d *jsiiProxy_DynamodbTableKinesisStreamSpecificationOutputReference) Reset
 	_jsii_.InvokeVoid(
 		d,
 		"resetApproximateCreationDateTimePrecision",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbTableKinesisStreamSpecificationOutputReference) ResetStreamArn() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetStreamArn",
 		nil, // no parameters
 	)
 }

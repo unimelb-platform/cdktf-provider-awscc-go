@@ -64,6 +64,7 @@ type LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationPromp
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetStartTimeoutMs()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpec
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationOutputReference) ResetStartTimeoutMs() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetStartTimeoutMs",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

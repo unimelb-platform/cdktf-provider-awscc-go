@@ -56,7 +56,15 @@ func (c *jsiiProxy_CognitoLogDeliveryConfiguration) validateInterpolationForAttr
 	return nil
 }
 
+func (c *jsiiProxy_CognitoLogDeliveryConfiguration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CognitoLogDeliveryConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_CognitoLogDeliveryConfiguration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

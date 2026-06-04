@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/wisdomknowledgebase/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/wisdom_knowledge_base awscc_wisdom_knowledge_base}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/wisdom_knowledge_base awscc_wisdom_knowledge_base}.
 type WisdomKnowledgeBase interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -78,6 +78,8 @@ type WisdomKnowledgeBase interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	VectorIngestionConfiguration() WisdomKnowledgeBaseVectorIngestionConfigurationOutputReference
+	VectorIngestionConfigurationInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -102,12 +104,22 @@ type WisdomKnowledgeBase interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -115,6 +127,7 @@ type WisdomKnowledgeBase interface {
 	PutServerSideEncryptionConfiguration(value *WisdomKnowledgeBaseServerSideEncryptionConfiguration)
 	PutSourceConfiguration(value *WisdomKnowledgeBaseSourceConfiguration)
 	PutTags(value interface{})
+	PutVectorIngestionConfiguration(value *WisdomKnowledgeBaseVectorIngestionConfiguration)
 	ResetDescription()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -123,7 +136,11 @@ type WisdomKnowledgeBase interface {
 	ResetServerSideEncryptionConfiguration()
 	ResetSourceConfiguration()
 	ResetTags()
+	ResetVectorIngestionConfiguration()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -468,8 +485,28 @@ func (j *jsiiProxy_WisdomKnowledgeBase) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_WisdomKnowledgeBase) VectorIngestionConfiguration() WisdomKnowledgeBaseVectorIngestionConfigurationOutputReference {
+	var returns WisdomKnowledgeBaseVectorIngestionConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"vectorIngestionConfiguration",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/wisdom_knowledge_base awscc_wisdom_knowledge_base} Resource.
+func (j *jsiiProxy_WisdomKnowledgeBase) VectorIngestionConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"vectorIngestionConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/wisdom_knowledge_base awscc_wisdom_knowledge_base} Resource.
 func NewWisdomKnowledgeBase(scope constructs.Construct, id *string, config *WisdomKnowledgeBaseConfig) WisdomKnowledgeBase {
 	_init_.Initialize()
 
@@ -487,7 +524,7 @@ func NewWisdomKnowledgeBase(scope constructs.Construct, id *string, config *Wisd
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/wisdom_knowledge_base awscc_wisdom_knowledge_base} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/wisdom_knowledge_base awscc_wisdom_knowledge_base} Resource.
 func NewWisdomKnowledgeBase_Override(w WisdomKnowledgeBase, scope constructs.Construct, id *string, config *WisdomKnowledgeBaseConfig) {
 	_init_.Initialize()
 
@@ -868,6 +905,19 @@ func (w *jsiiProxy_WisdomKnowledgeBase) GetStringMapAttribute(terraformAttribute
 	return returns
 }
 
+func (w *jsiiProxy_WisdomKnowledgeBase) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		w,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (w *jsiiProxy_WisdomKnowledgeBase) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := w.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -895,6 +945,17 @@ func (w *jsiiProxy_WisdomKnowledgeBase) InterpolationForAttribute(terraformAttri
 	return returns
 }
 
+func (w *jsiiProxy_WisdomKnowledgeBase) MoveFromId(id *string) {
+	if err := w.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		w,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (w *jsiiProxy_WisdomKnowledgeBase) MoveTo(moveTarget *string, index interface{}) {
 	if err := w.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -903,6 +964,17 @@ func (w *jsiiProxy_WisdomKnowledgeBase) MoveTo(moveTarget *string, index interfa
 		w,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (w *jsiiProxy_WisdomKnowledgeBase) MoveToId(id *string) {
+	if err := w.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		w,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -961,6 +1033,17 @@ func (w *jsiiProxy_WisdomKnowledgeBase) PutTags(value interface{}) {
 	)
 }
 
+func (w *jsiiProxy_WisdomKnowledgeBase) PutVectorIngestionConfiguration(value *WisdomKnowledgeBaseVectorIngestionConfiguration) {
+	if err := w.validatePutVectorIngestionConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		w,
+		"putVectorIngestionConfiguration",
+		[]interface{}{value},
+	)
+}
+
 func (w *jsiiProxy_WisdomKnowledgeBase) ResetDescription() {
 	_jsii_.InvokeVoid(
 		w,
@@ -1009,12 +1092,46 @@ func (w *jsiiProxy_WisdomKnowledgeBase) ResetTags() {
 	)
 }
 
+func (w *jsiiProxy_WisdomKnowledgeBase) ResetVectorIngestionConfiguration() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetVectorIngestionConfiguration",
+		nil, // no parameters
+	)
+}
+
 func (w *jsiiProxy_WisdomKnowledgeBase) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		w,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (w *jsiiProxy_WisdomKnowledgeBase) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		w,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (w *jsiiProxy_WisdomKnowledgeBase) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		w,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

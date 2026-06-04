@@ -64,6 +64,7 @@ type QuicksightDataSetLogicalTableMapDataTransformsFilterOperationOutputReferenc
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetConditionExpression()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsFilterOperation
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsFilterOperationOutputReference) ResetConditionExpression() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetConditionExpression",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsFilterOperationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

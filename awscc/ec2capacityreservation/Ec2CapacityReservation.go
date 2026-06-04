@@ -9,15 +9,23 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2capacityreservation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_capacity_reservation awscc_ec2_capacity_reservation}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_capacity_reservation awscc_ec2_capacity_reservation}.
 type Ec2CapacityReservation interface {
 	cdktf.TerraformResource
 	AvailabilityZone() *string
 	SetAvailabilityZone(val *string)
+	AvailabilityZoneId() *string
+	SetAvailabilityZoneId(val *string)
+	AvailabilityZoneIdInput() *string
 	AvailabilityZoneInput() *string
 	AvailableInstanceCount() *float64
+	CapacityAllocationSet() Ec2CapacityReservationCapacityAllocationSetList
+	CapacityReservationArn() *string
+	CapacityReservationFleetId() *string
+	CapacityReservationId() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	CommitmentInfo() Ec2CapacityReservationCommitmentInfoOutputReference
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -28,6 +36,8 @@ type Ec2CapacityReservation interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	CreateDate() *string
+	DeliveryPreference() *string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -74,6 +84,7 @@ type Ec2CapacityReservation interface {
 	OutPostArn() *string
 	SetOutPostArn(val *string)
 	OutPostArnInput() *string
+	OwnerId() *string
 	PlacementGroupArn() *string
 	SetPlacementGroupArn(val *string)
 	PlacementGroupArnInput() *string
@@ -87,6 +98,9 @@ type Ec2CapacityReservation interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	ReservationType() *string
+	StartDate() *string
+	State() *string
 	TagSpecifications() Ec2CapacityReservationTagSpecificationsList
 	TagSpecificationsInput() interface{}
 	Tenancy() *string
@@ -99,6 +113,9 @@ type Ec2CapacityReservation interface {
 	// Experimental.
 	TerraformResourceType() *string
 	TotalInstanceCount() *float64
+	UnusedReservationBillingOwnerId() *string
+	SetUnusedReservationBillingOwnerId(val *string)
+	UnusedReservationBillingOwnerIdInput() *string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -123,16 +140,28 @@ type Ec2CapacityReservation interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutTagSpecifications(value interface{})
+	ResetAvailabilityZone()
+	ResetAvailabilityZoneId()
 	ResetEbsOptimized()
 	ResetEndDate()
 	ResetEndDateType()
@@ -145,7 +174,11 @@ type Ec2CapacityReservation interface {
 	ResetPlacementGroupArn()
 	ResetTagSpecifications()
 	ResetTenancy()
+	ResetUnusedReservationBillingOwnerId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -165,6 +198,26 @@ func (j *jsiiProxy_Ec2CapacityReservation) AvailabilityZone() *string {
 	_jsii_.Get(
 		j,
 		"availabilityZone",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2CapacityReservation) AvailabilityZoneId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"availabilityZoneId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2CapacityReservation) AvailabilityZoneIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"availabilityZoneIdInput",
 		&returns,
 	)
 	return returns
@@ -190,11 +243,61 @@ func (j *jsiiProxy_Ec2CapacityReservation) AvailableInstanceCount() *float64 {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2CapacityReservation) CapacityAllocationSet() Ec2CapacityReservationCapacityAllocationSetList {
+	var returns Ec2CapacityReservationCapacityAllocationSetList
+	_jsii_.Get(
+		j,
+		"capacityAllocationSet",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2CapacityReservation) CapacityReservationArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"capacityReservationArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2CapacityReservation) CapacityReservationFleetId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"capacityReservationFleetId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2CapacityReservation) CapacityReservationId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"capacityReservationId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2CapacityReservation) CdktfStack() cdktf.TerraformStack {
 	var returns cdktf.TerraformStack
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2CapacityReservation) CommitmentInfo() Ec2CapacityReservationCommitmentInfoOutputReference {
+	var returns Ec2CapacityReservationCommitmentInfoOutputReference
+	_jsii_.Get(
+		j,
+		"commitmentInfo",
 		&returns,
 	)
 	return returns
@@ -225,6 +328,26 @@ func (j *jsiiProxy_Ec2CapacityReservation) Count() interface{} {
 	_jsii_.Get(
 		j,
 		"count",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2CapacityReservation) CreateDate() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"createDate",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2CapacityReservation) DeliveryPreference() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"deliveryPreference",
 		&returns,
 	)
 	return returns
@@ -480,6 +603,16 @@ func (j *jsiiProxy_Ec2CapacityReservation) OutPostArnInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2CapacityReservation) OwnerId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ownerId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2CapacityReservation) PlacementGroupArn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -525,6 +658,36 @@ func (j *jsiiProxy_Ec2CapacityReservation) RawOverrides() interface{} {
 	_jsii_.Get(
 		j,
 		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2CapacityReservation) ReservationType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"reservationType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2CapacityReservation) StartDate() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"startDate",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2CapacityReservation) State() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"state",
 		&returns,
 	)
 	return returns
@@ -610,8 +773,28 @@ func (j *jsiiProxy_Ec2CapacityReservation) TotalInstanceCount() *float64 {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2CapacityReservation) UnusedReservationBillingOwnerId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"unusedReservationBillingOwnerId",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_capacity_reservation awscc_ec2_capacity_reservation} Resource.
+func (j *jsiiProxy_Ec2CapacityReservation) UnusedReservationBillingOwnerIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"unusedReservationBillingOwnerIdInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_capacity_reservation awscc_ec2_capacity_reservation} Resource.
 func NewEc2CapacityReservation(scope constructs.Construct, id *string, config *Ec2CapacityReservationConfig) Ec2CapacityReservation {
 	_init_.Initialize()
 
@@ -629,7 +812,7 @@ func NewEc2CapacityReservation(scope constructs.Construct, id *string, config *E
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_capacity_reservation awscc_ec2_capacity_reservation} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_capacity_reservation awscc_ec2_capacity_reservation} Resource.
 func NewEc2CapacityReservation_Override(e Ec2CapacityReservation, scope constructs.Construct, id *string, config *Ec2CapacityReservationConfig) {
 	_init_.Initialize()
 
@@ -647,6 +830,17 @@ func (j *jsiiProxy_Ec2CapacityReservation)SetAvailabilityZone(val *string) {
 	_jsii_.Set(
 		j,
 		"availabilityZone",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2CapacityReservation)SetAvailabilityZoneId(val *string) {
+	if err := j.validateSetAvailabilityZoneIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"availabilityZoneId",
 		val,
 	)
 }
@@ -836,6 +1030,17 @@ func (j *jsiiProxy_Ec2CapacityReservation)SetTenancy(val *string) {
 	_jsii_.Set(
 		j,
 		"tenancy",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2CapacityReservation)SetUnusedReservationBillingOwnerId(val *string) {
+	if err := j.validateSetUnusedReservationBillingOwnerIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"unusedReservationBillingOwnerId",
 		val,
 	)
 }
@@ -1109,6 +1314,19 @@ func (e *jsiiProxy_Ec2CapacityReservation) GetStringMapAttribute(terraformAttrib
 	return returns
 }
 
+func (e *jsiiProxy_Ec2CapacityReservation) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2CapacityReservation) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1136,6 +1354,17 @@ func (e *jsiiProxy_Ec2CapacityReservation) InterpolationForAttribute(terraformAt
 	return returns
 }
 
+func (e *jsiiProxy_Ec2CapacityReservation) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2CapacityReservation) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1144,6 +1373,17 @@ func (e *jsiiProxy_Ec2CapacityReservation) MoveTo(moveTarget *string, index inte
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Ec2CapacityReservation) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1166,6 +1406,22 @@ func (e *jsiiProxy_Ec2CapacityReservation) PutTagSpecifications(value interface{
 		e,
 		"putTagSpecifications",
 		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_Ec2CapacityReservation) ResetAvailabilityZone() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetAvailabilityZone",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2CapacityReservation) ResetAvailabilityZoneId() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetAvailabilityZoneId",
+		nil, // no parameters
 	)
 }
 
@@ -1249,12 +1505,46 @@ func (e *jsiiProxy_Ec2CapacityReservation) ResetTenancy() {
 	)
 }
 
+func (e *jsiiProxy_Ec2CapacityReservation) ResetUnusedReservationBillingOwnerId() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetUnusedReservationBillingOwnerId",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_Ec2CapacityReservation) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2CapacityReservation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2CapacityReservation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

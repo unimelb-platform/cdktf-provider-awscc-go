@@ -1,0 +1,6 @@
+package dataawsccgameliftcontainergroupdefinition
+
+
+type DataAwsccGameliftContainerGroupDefinitionGameServerContainerDefinitionPortConfiguration struct {
+}
+

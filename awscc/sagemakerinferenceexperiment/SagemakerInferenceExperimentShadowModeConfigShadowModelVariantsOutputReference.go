@@ -27,8 +27,8 @@ type SagemakerInferenceExperimentShadowModeConfigShadowModelVariantsOutputRefere
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *SagemakerInferenceExperimentShadowModeConfigShadowModelVariants
-	SetInternalValue(val *SagemakerInferenceExperimentShadowModeConfigShadowModelVariants)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	SamplingPercentage() *float64
 	SetSamplingPercentage(val *float64)
 	SamplingPercentageInput() *float64
@@ -67,6 +67,8 @@ type SagemakerInferenceExperimentShadowModeConfigShadowModelVariantsOutputRefere
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetSamplingPercentage()
+	ResetShadowModelVariantName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_SagemakerInferenceExperimentShadowModeConfigShadowModelVarian
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerInferenceExperimentShadowModeConfigShadowModelVariantsOutputReference) InternalValue() *SagemakerInferenceExperimentShadowModeConfigShadowModelVariants {
-	var returns *SagemakerInferenceExperimentShadowModeConfigShadowModelVariants
+func (j *jsiiProxy_SagemakerInferenceExperimentShadowModeConfigShadowModelVariantsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -242,7 +244,7 @@ func (j *jsiiProxy_SagemakerInferenceExperimentShadowModeConfigShadowModelVarian
 	)
 }
 
-func (j *jsiiProxy_SagemakerInferenceExperimentShadowModeConfigShadowModelVariantsOutputReference)SetInternalValue(val *SagemakerInferenceExperimentShadowModeConfigShadowModelVariants) {
+func (j *jsiiProxy_SagemakerInferenceExperimentShadowModeConfigShadowModelVariantsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (s *jsiiProxy_SagemakerInferenceExperimentShadowModeConfigShadowModelVarian
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SagemakerInferenceExperimentShadowModeConfigShadowModelVariantsOutputReference) ResetSamplingPercentage() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSamplingPercentage",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerInferenceExperimentShadowModeConfigShadowModelVariantsOutputReference) ResetShadowModelVariantName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetShadowModelVariantName",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SagemakerInferenceExperimentShadowModeConfigShadowModelVariantsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

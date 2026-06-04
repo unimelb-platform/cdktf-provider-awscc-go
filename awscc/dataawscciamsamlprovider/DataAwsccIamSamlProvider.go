@@ -9,10 +9,12 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciamsamlprovider/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iam_saml_provider awscc_iam_saml_provider}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iam_saml_provider awscc_iam_saml_provider}.
 type DataAwsccIamSamlProvider interface {
 	cdktf.TerraformDataSource
+	AddPrivateKey() *string
 	Arn() *string
+	AssertionEncryptionMode() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -43,13 +45,16 @@ type DataAwsccIamSamlProvider interface {
 	Name() *string
 	// The tree node.
 	Node() constructs.Node
+	PrivateKeyList() DataAwsccIamSamlProviderPrivateKeyListStructList
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	RemovePrivateKey() *string
 	SamlMetadataDocument() *string
+	SamlProviderUuid() *string
 	Tags() DataAwsccIamSamlProviderTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -86,6 +91,10 @@ type DataAwsccIamSamlProvider interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -100,11 +109,31 @@ type jsiiProxy_DataAwsccIamSamlProvider struct {
 	internal.Type__cdktfTerraformDataSource
 }
 
+func (j *jsiiProxy_DataAwsccIamSamlProvider) AddPrivateKey() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"addPrivateKey",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccIamSamlProvider) Arn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"arn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIamSamlProvider) AssertionEncryptionMode() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"assertionEncryptionMode",
 		&returns,
 	)
 	return returns
@@ -230,6 +259,16 @@ func (j *jsiiProxy_DataAwsccIamSamlProvider) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccIamSamlProvider) PrivateKeyList() DataAwsccIamSamlProviderPrivateKeyListStructList {
+	var returns DataAwsccIamSamlProviderPrivateKeyListStructList
+	_jsii_.Get(
+		j,
+		"privateKeyList",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccIamSamlProvider) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -250,11 +289,31 @@ func (j *jsiiProxy_DataAwsccIamSamlProvider) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccIamSamlProvider) RemovePrivateKey() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"removePrivateKey",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccIamSamlProvider) SamlMetadataDocument() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"samlMetadataDocument",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIamSamlProvider) SamlProviderUuid() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"samlProviderUuid",
 		&returns,
 	)
 	return returns
@@ -301,7 +360,7 @@ func (j *jsiiProxy_DataAwsccIamSamlProvider) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iam_saml_provider awscc_iam_saml_provider} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iam_saml_provider awscc_iam_saml_provider} Data Source.
 func NewDataAwsccIamSamlProvider(scope constructs.Construct, id *string, config *DataAwsccIamSamlProviderConfig) DataAwsccIamSamlProvider {
 	_init_.Initialize()
 
@@ -319,7 +378,7 @@ func NewDataAwsccIamSamlProvider(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iam_saml_provider awscc_iam_saml_provider} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iam_saml_provider awscc_iam_saml_provider} Data Source.
 func NewDataAwsccIamSamlProvider_Override(d DataAwsccIamSamlProvider, scope constructs.Construct, id *string, config *DataAwsccIamSamlProviderConfig) {
 	_init_.Initialize()
 
@@ -686,6 +745,32 @@ func (d *jsiiProxy_DataAwsccIamSamlProvider) SynthesizeAttributes() *map[string]
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIamSamlProvider) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIamSamlProvider) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

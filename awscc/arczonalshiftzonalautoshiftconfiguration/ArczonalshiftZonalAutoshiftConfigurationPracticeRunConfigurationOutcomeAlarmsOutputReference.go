@@ -30,8 +30,8 @@ type ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutcomeAlar
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutcomeAlarms
-	SetInternalValue(val *ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutcomeAlarms)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,6 +67,8 @@ type ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutcomeAlar
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAlarmIdentifier()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -142,8 +144,8 @@ func (j *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurat
 	return returns
 }
 
-func (j *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutcomeAlarmsOutputReference) InternalValue() *ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutcomeAlarms {
-	var returns *ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutcomeAlarms
+func (j *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutcomeAlarmsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -253,7 +255,7 @@ func (j *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurat
 	)
 }
 
-func (j *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutcomeAlarmsOutputReference)SetInternalValue(val *ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutcomeAlarms) {
+func (j *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutcomeAlarmsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (a *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurat
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutcomeAlarmsOutputReference) ResetAlarmIdentifier() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetAlarmIdentifier",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutcomeAlarmsOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetType",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutcomeAlarmsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

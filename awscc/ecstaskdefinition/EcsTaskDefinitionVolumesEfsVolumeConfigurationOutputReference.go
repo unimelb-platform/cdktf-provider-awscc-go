@@ -77,6 +77,7 @@ type EcsTaskDefinitionVolumesEfsVolumeConfigurationOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAuthorizationConfig(value *EcsTaskDefinitionVolumesEfsVolumeConfigurationAuthorizationConfig)
 	ResetAuthorizationConfig()
+	ResetFilesystemId()
 	ResetRootDirectory()
 	ResetTransitEncryption()
 	ResetTransitEncryptionPort()
@@ -593,6 +594,14 @@ func (e *jsiiProxy_EcsTaskDefinitionVolumesEfsVolumeConfigurationOutputReference
 	_jsii_.InvokeVoid(
 		e,
 		"resetAuthorizationConfig",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcsTaskDefinitionVolumesEfsVolumeConfigurationOutputReference) ResetFilesystemId() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetFilesystemId",
 		nil, // no parameters
 	)
 }

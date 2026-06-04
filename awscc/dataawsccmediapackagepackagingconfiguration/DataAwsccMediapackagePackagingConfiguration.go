@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccmediapackagepackagingconfiguration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediapackage_packaging_configuration awscc_mediapackage_packaging_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediapackage_packaging_configuration awscc_mediapackage_packaging_configuration}.
 type DataAwsccMediapackagePackagingConfiguration interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -46,6 +46,7 @@ type DataAwsccMediapackagePackagingConfiguration interface {
 	MssPackage() DataAwsccMediapackagePackagingConfigurationMssPackageOutputReference
 	// The tree node.
 	Node() constructs.Node
+	PackagingConfigurationId() *string
 	PackagingGroupId() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
@@ -89,6 +90,10 @@ type DataAwsccMediapackagePackagingConfiguration interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -263,6 +268,16 @@ func (j *jsiiProxy_DataAwsccMediapackagePackagingConfiguration) Node() construct
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccMediapackagePackagingConfiguration) PackagingConfigurationId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"packagingConfigurationId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccMediapackagePackagingConfiguration) PackagingGroupId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -334,7 +349,7 @@ func (j *jsiiProxy_DataAwsccMediapackagePackagingConfiguration) TerraformResourc
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediapackage_packaging_configuration awscc_mediapackage_packaging_configuration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediapackage_packaging_configuration awscc_mediapackage_packaging_configuration} Data Source.
 func NewDataAwsccMediapackagePackagingConfiguration(scope constructs.Construct, id *string, config *DataAwsccMediapackagePackagingConfigurationConfig) DataAwsccMediapackagePackagingConfiguration {
 	_init_.Initialize()
 
@@ -352,7 +367,7 @@ func NewDataAwsccMediapackagePackagingConfiguration(scope constructs.Construct, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediapackage_packaging_configuration awscc_mediapackage_packaging_configuration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediapackage_packaging_configuration awscc_mediapackage_packaging_configuration} Data Source.
 func NewDataAwsccMediapackagePackagingConfiguration_Override(d DataAwsccMediapackagePackagingConfiguration, scope constructs.Construct, id *string, config *DataAwsccMediapackagePackagingConfigurationConfig) {
 	_init_.Initialize()
 
@@ -719,6 +734,32 @@ func (d *jsiiProxy_DataAwsccMediapackagePackagingConfiguration) SynthesizeAttrib
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMediapackagePackagingConfiguration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMediapackagePackagingConfiguration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -195,6 +195,14 @@ func (j *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterServerAppSettingsDefaultRes
 	return nil
 }
 
+func (j *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecOutputReference) validateSetLifecycleConfigArnParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterServerAppSettingsDefaultResourceSpecOutputReference) validateSetSageMakerImageArnParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

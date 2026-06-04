@@ -9,9 +9,10 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/gameliftbuild/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/gamelift_build awscc_gamelift_build}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/gamelift_build awscc_gamelift_build}.
 type GameliftBuild interface {
 	cdktf.TerraformResource
+	BuildArn() *string
 	BuildId() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
@@ -65,6 +66,8 @@ type GameliftBuild interface {
 	ServerSdkVersionInput() *string
 	StorageLocation() GameliftBuildStorageLocationOutputReference
 	StorageLocationInput() interface{}
+	Tags() GameliftBuildTagsList
+	TagsInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -98,16 +101,27 @@ type GameliftBuild interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutStorageLocation(value *GameliftBuildStorageLocation)
+	PutTags(value interface{})
 	ResetName()
 	ResetOperatingSystem()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -115,8 +129,12 @@ type GameliftBuild interface {
 	ResetOverrideLogicalId()
 	ResetServerSdkVersion()
 	ResetStorageLocation()
+	ResetTags()
 	ResetVersion()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -129,6 +147,16 @@ type GameliftBuild interface {
 // The jsii proxy struct for GameliftBuild
 type jsiiProxy_GameliftBuild struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_GameliftBuild) BuildArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"buildArn",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_GameliftBuild) BuildId() *string {
@@ -361,6 +389,26 @@ func (j *jsiiProxy_GameliftBuild) StorageLocationInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_GameliftBuild) Tags() GameliftBuildTagsList {
+	var returns GameliftBuildTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_GameliftBuild) TagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_GameliftBuild) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -412,7 +460,7 @@ func (j *jsiiProxy_GameliftBuild) VersionInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/gamelift_build awscc_gamelift_build} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/gamelift_build awscc_gamelift_build} Resource.
 func NewGameliftBuild(scope constructs.Construct, id *string, config *GameliftBuildConfig) GameliftBuild {
 	_init_.Initialize()
 
@@ -430,7 +478,7 @@ func NewGameliftBuild(scope constructs.Construct, id *string, config *GameliftBu
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/gamelift_build awscc_gamelift_build} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/gamelift_build awscc_gamelift_build} Resource.
 func NewGameliftBuild_Override(g GameliftBuild, scope constructs.Construct, id *string, config *GameliftBuildConfig) {
 	_init_.Initialize()
 
@@ -822,6 +870,19 @@ func (g *jsiiProxy_GameliftBuild) GetStringMapAttribute(terraformAttribute *stri
 	return returns
 }
 
+func (g *jsiiProxy_GameliftBuild) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		g,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (g *jsiiProxy_GameliftBuild) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := g.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -849,6 +910,17 @@ func (g *jsiiProxy_GameliftBuild) InterpolationForAttribute(terraformAttribute *
 	return returns
 }
 
+func (g *jsiiProxy_GameliftBuild) MoveFromId(id *string) {
+	if err := g.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		g,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (g *jsiiProxy_GameliftBuild) MoveTo(moveTarget *string, index interface{}) {
 	if err := g.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -857,6 +929,17 @@ func (g *jsiiProxy_GameliftBuild) MoveTo(moveTarget *string, index interface{}) 
 		g,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (g *jsiiProxy_GameliftBuild) MoveToId(id *string) {
+	if err := g.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		g,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -878,6 +961,17 @@ func (g *jsiiProxy_GameliftBuild) PutStorageLocation(value *GameliftBuildStorage
 	_jsii_.InvokeVoid(
 		g,
 		"putStorageLocation",
+		[]interface{}{value},
+	)
+}
+
+func (g *jsiiProxy_GameliftBuild) PutTags(value interface{}) {
+	if err := g.validatePutTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		g,
+		"putTags",
 		[]interface{}{value},
 	)
 }
@@ -922,6 +1016,14 @@ func (g *jsiiProxy_GameliftBuild) ResetStorageLocation() {
 	)
 }
 
+func (g *jsiiProxy_GameliftBuild) ResetTags() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetTags",
+		nil, // no parameters
+	)
+}
+
 func (g *jsiiProxy_GameliftBuild) ResetVersion() {
 	_jsii_.InvokeVoid(
 		g,
@@ -936,6 +1038,32 @@ func (g *jsiiProxy_GameliftBuild) SynthesizeAttributes() *map[string]interface{}
 	_jsii_.Invoke(
 		g,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (g *jsiiProxy_GameliftBuild) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		g,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (g *jsiiProxy_GameliftBuild) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		g,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

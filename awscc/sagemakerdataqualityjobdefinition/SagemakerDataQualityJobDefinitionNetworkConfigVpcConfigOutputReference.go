@@ -67,6 +67,8 @@ type SagemakerDataQualityJobDefinitionNetworkConfigVpcConfigOutputReference inte
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetSecurityGroupIds()
+	ResetSubnets()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (s *jsiiProxy_SagemakerDataQualityJobDefinitionNetworkConfigVpcConfigOutput
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SagemakerDataQualityJobDefinitionNetworkConfigVpcConfigOutputReference) ResetSecurityGroupIds() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSecurityGroupIds",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerDataQualityJobDefinitionNetworkConfigVpcConfigOutputReference) ResetSubnets() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSubnets",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SagemakerDataQualityJobDefinitionNetworkConfigVpcConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

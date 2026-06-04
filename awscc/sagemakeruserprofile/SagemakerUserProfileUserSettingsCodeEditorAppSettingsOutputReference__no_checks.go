@@ -44,11 +44,23 @@ func (s *jsiiProxy_SagemakerUserProfileUserSettingsCodeEditorAppSettingsOutputRe
 	return nil
 }
 
+func (s *jsiiProxy_SagemakerUserProfileUserSettingsCodeEditorAppSettingsOutputReference) validatePutAppLifecycleManagementParameters(value *SagemakerUserProfileUserSettingsCodeEditorAppSettingsAppLifecycleManagement) error {
+	return nil
+}
+
+func (s *jsiiProxy_SagemakerUserProfileUserSettingsCodeEditorAppSettingsOutputReference) validatePutCustomImagesParameters(value interface{}) error {
+	return nil
+}
+
 func (s *jsiiProxy_SagemakerUserProfileUserSettingsCodeEditorAppSettingsOutputReference) validatePutDefaultResourceSpecParameters(value *SagemakerUserProfileUserSettingsCodeEditorAppSettingsDefaultResourceSpec) error {
 	return nil
 }
 
 func (s *jsiiProxy_SagemakerUserProfileUserSettingsCodeEditorAppSettingsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_SagemakerUserProfileUserSettingsCodeEditorAppSettingsOutputReference) validateSetBuiltInLifecycleConfigArnParameters(val *string) error {
 	return nil
 }
 

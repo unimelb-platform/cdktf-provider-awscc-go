@@ -67,6 +67,8 @@ type KendraDataSourceDataSourceConfigurationConfluenceConfigurationVpcConfigurat
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetSecurityGroupIds()
+	ResetSubnetIds()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationConfluenceConfiguratio
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationConfluenceConfigurationVpcConfigurationOutputReference) ResetSecurityGroupIds() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetSecurityGroupIds",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationConfluenceConfigurationVpcConfigurationOutputReference) ResetSubnetIds() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetSubnetIds",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationConfluenceConfigurationVpcConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

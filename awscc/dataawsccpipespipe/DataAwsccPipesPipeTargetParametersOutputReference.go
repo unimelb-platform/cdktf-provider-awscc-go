@@ -49,6 +49,7 @@ type DataAwsccPipesPipeTargetParametersOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	TimestreamParameters() DataAwsccPipesPipeTargetParametersTimestreamParametersOutputReference
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -273,6 +274,16 @@ func (j *jsiiProxy_DataAwsccPipesPipeTargetParametersOutputReference) TerraformR
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccPipesPipeTargetParametersOutputReference) TimestreamParameters() DataAwsccPipesPipeTargetParametersTimestreamParametersOutputReference {
+	var returns DataAwsccPipesPipeTargetParametersTimestreamParametersOutputReference
+	_jsii_.Get(
+		j,
+		"timestreamParameters",
 		&returns,
 	)
 	return returns

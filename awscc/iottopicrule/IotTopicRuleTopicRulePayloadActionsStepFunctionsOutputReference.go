@@ -71,6 +71,8 @@ type IotTopicRuleTopicRulePayloadActionsStepFunctionsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetExecutionNamePrefix()
+	ResetRoleArn()
+	ResetStateMachineName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -522,6 +524,22 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsStepFunctionsOutputReferen
 	_jsii_.InvokeVoid(
 		i,
 		"resetExecutionNamePrefix",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsStepFunctionsOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsStepFunctionsOutputReference) ResetStateMachineName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetStateMachineName",
 		nil, // no parameters
 	)
 }

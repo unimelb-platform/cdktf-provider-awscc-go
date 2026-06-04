@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciotwirelesswirelessgateways/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotwireless_wireless_gateways awscc_iotwireless_wireless_gateways}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotwireless_wireless_gateways awscc_iotwireless_wireless_gateways}.
 type DataAwsccIotwirelessWirelessGateways interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccIotwirelessWirelessGateways interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccIotwirelessWirelessGateways) TerraformResourceType()
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotwireless_wireless_gateways awscc_iotwireless_wireless_gateways} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotwireless_wireless_gateways awscc_iotwireless_wireless_gateways} Data Source.
 func NewDataAwsccIotwirelessWirelessGateways(scope constructs.Construct, id *string, config *DataAwsccIotwirelessWirelessGatewaysConfig) DataAwsccIotwirelessWirelessGateways {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccIotwirelessWirelessGateways(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotwireless_wireless_gateways awscc_iotwireless_wireless_gateways} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotwireless_wireless_gateways awscc_iotwireless_wireless_gateways} Data Source.
 func NewDataAwsccIotwirelessWirelessGateways_Override(d DataAwsccIotwirelessWirelessGateways, scope constructs.Construct, id *string, config *DataAwsccIotwirelessWirelessGatewaysConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccIotwirelessWirelessGateways) SynthesizeAttributes() 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotwirelessWirelessGateways) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotwirelessWirelessGateways) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

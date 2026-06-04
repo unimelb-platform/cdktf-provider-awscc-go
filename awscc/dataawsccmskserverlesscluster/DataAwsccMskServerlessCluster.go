@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccmskserverlesscluster/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/msk_serverless_cluster awscc_msk_serverless_cluster}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/msk_serverless_cluster awscc_msk_serverless_cluster}.
 type DataAwsccMskServerlessCluster interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -87,6 +87,10 @@ type DataAwsccMskServerlessCluster interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -312,7 +316,7 @@ func (j *jsiiProxy_DataAwsccMskServerlessCluster) VpcConfigs() DataAwsccMskServe
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/msk_serverless_cluster awscc_msk_serverless_cluster} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/msk_serverless_cluster awscc_msk_serverless_cluster} Data Source.
 func NewDataAwsccMskServerlessCluster(scope constructs.Construct, id *string, config *DataAwsccMskServerlessClusterConfig) DataAwsccMskServerlessCluster {
 	_init_.Initialize()
 
@@ -330,7 +334,7 @@ func NewDataAwsccMskServerlessCluster(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/msk_serverless_cluster awscc_msk_serverless_cluster} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/msk_serverless_cluster awscc_msk_serverless_cluster} Data Source.
 func NewDataAwsccMskServerlessCluster_Override(d DataAwsccMskServerlessCluster, scope constructs.Construct, id *string, config *DataAwsccMskServerlessClusterConfig) {
 	_init_.Initialize()
 
@@ -697,6 +701,32 @@ func (d *jsiiProxy_DataAwsccMskServerlessCluster) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMskServerlessCluster) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMskServerlessCluster) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

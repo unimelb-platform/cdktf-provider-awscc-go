@@ -67,6 +67,7 @@ type RdsDbClusterParameterGroupTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
 	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (r *jsiiProxy_RdsDbClusterParameterGroupTagsOutputReference) InterpolationF
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_RdsDbClusterParameterGroupTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetKey",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_RdsDbClusterParameterGroupTagsOutputReference) ResetValue() {

@@ -1,0 +1,6 @@
+package dataawsccgameliftcontainerfleet
+
+
+type DataAwsccGameliftContainerFleetGameSessionCreationLimitPolicy struct {
+}
+

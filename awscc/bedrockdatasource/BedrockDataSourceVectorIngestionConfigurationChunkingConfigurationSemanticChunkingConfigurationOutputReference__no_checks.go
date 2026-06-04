@@ -1,0 +1,86 @@
+//go:build no_runtime_type_checking
+
+package bedrockdatasource
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (b *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateSetBreakpointPercentileThresholdParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateSetBufferSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateSetMaxTokensParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

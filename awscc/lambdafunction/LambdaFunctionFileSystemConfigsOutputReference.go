@@ -67,6 +67,8 @@ type LambdaFunctionFileSystemConfigsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetArn()
+	ResetLocalMountPath()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (l *jsiiProxy_LambdaFunctionFileSystemConfigsOutputReference) Interpolation
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LambdaFunctionFileSystemConfigsOutputReference) ResetArn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetArn",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LambdaFunctionFileSystemConfigsOutputReference) ResetLocalMountPath() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetLocalMountPath",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LambdaFunctionFileSystemConfigsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

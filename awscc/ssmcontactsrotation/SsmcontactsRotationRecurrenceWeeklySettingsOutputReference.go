@@ -67,6 +67,8 @@ type SsmcontactsRotationRecurrenceWeeklySettingsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDayOfWeek()
+	ResetHandOffTime()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (s *jsiiProxy_SsmcontactsRotationRecurrenceWeeklySettingsOutputReference) I
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SsmcontactsRotationRecurrenceWeeklySettingsOutputReference) ResetDayOfWeek() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDayOfWeek",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SsmcontactsRotationRecurrenceWeeklySettingsOutputReference) ResetHandOffTime() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetHandOffTime",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SsmcontactsRotationRecurrenceWeeklySettingsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

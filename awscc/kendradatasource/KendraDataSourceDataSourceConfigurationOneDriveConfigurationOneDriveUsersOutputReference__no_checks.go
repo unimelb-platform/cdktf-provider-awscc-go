@@ -60,7 +60,7 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationO
 	return nil
 }
 
-func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsersOutputReference) validateSetInternalValueParameters(val *KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsers) error {
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsersOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

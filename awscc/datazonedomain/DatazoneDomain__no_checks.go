@@ -56,7 +56,15 @@ func (d *jsiiProxy_DatazoneDomain) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
+func (d *jsiiProxy_DatazoneDomain) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DatazoneDomain) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DatazoneDomain) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -104,6 +112,10 @@ func (j *jsiiProxy_DatazoneDomain) validateSetDomainExecutionRoleParameters(val 
 	return nil
 }
 
+func (j *jsiiProxy_DatazoneDomain) validateSetDomainVersionParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DatazoneDomain) validateSetKmsKeyIdentifierParameters(val *string) error {
 	return nil
 }
@@ -117,6 +129,10 @@ func (j *jsiiProxy_DatazoneDomain) validateSetNameParameters(val *string) error 
 }
 
 func (j *jsiiProxy_DatazoneDomain) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DatazoneDomain) validateSetServiceRoleParameters(val *string) error {
 	return nil
 }
 

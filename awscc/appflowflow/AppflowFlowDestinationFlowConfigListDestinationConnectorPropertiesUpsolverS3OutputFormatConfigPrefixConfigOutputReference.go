@@ -27,8 +27,8 @@ type AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfig
-	SetInternalValue(val *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfig)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	PathPrefixHierarchy() *[]*string
 	SetPathPrefixHierarchy(val *[]*string)
 	PathPrefixHierarchyInput() *[]*string
@@ -128,8 +128,8 @@ func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPrope
 	return returns
 }
 
-func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigOutputReference) InternalValue() *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfig {
-	var returns *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfig
+func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -268,7 +268,7 @@ func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPrope
 	)
 }
 
-func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigOutputReference)SetInternalValue(val *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfig) {
+func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

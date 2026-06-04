@@ -67,6 +67,8 @@ type NetworkfirewallRuleGroupTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (n *jsiiProxy_NetworkfirewallRuleGroupTagsOutputReference) InterpolationFor
 	)
 
 	return returns
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallRuleGroupTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (n *jsiiProxy_NetworkfirewallRuleGroupTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

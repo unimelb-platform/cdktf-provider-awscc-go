@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/datazonedatasource/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datazone_data_source awscc_datazone_data_source}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datazone_data_source awscc_datazone_data_source}.
 type DatazoneDataSource interface {
 	cdktf.TerraformResource
 	AssetFormsInput() DatazoneDataSourceAssetFormsInputList
@@ -22,6 +22,10 @@ type DatazoneDataSource interface {
 	Connection() interface{}
 	// Experimental.
 	SetConnection(val interface{})
+	ConnectionId() *string
+	ConnectionIdentifier() *string
+	SetConnectionIdentifier(val *string)
+	ConnectionIdentifierInput() *string
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -29,6 +33,7 @@ type DatazoneDataSource interface {
 	// Experimental.
 	SetCount(val interface{})
 	CreatedAt() *string
+	DataSourceId() *string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -124,12 +129,22 @@ type DatazoneDataSource interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -139,8 +154,10 @@ type DatazoneDataSource interface {
 	PutSchedule(value *DatazoneDataSourceSchedule)
 	ResetAssetFormsInput()
 	ResetConfiguration()
+	ResetConnectionIdentifier()
 	ResetDescription()
 	ResetEnableSetting()
+	ResetEnvironmentIdentifier()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -148,6 +165,9 @@ type DatazoneDataSource interface {
 	ResetRecommendation()
 	ResetSchedule()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -222,6 +242,36 @@ func (j *jsiiProxy_DatazoneDataSource) Connection() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DatazoneDataSource) ConnectionId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"connectionId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneDataSource) ConnectionIdentifier() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"connectionIdentifier",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneDataSource) ConnectionIdentifierInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"connectionIdentifierInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DatazoneDataSource) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -247,6 +297,16 @@ func (j *jsiiProxy_DatazoneDataSource) CreatedAt() *string {
 	_jsii_.Get(
 		j,
 		"createdAt",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneDataSource) DataSourceId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"dataSourceId",
 		&returns,
 	)
 	return returns
@@ -663,7 +723,7 @@ func (j *jsiiProxy_DatazoneDataSource) UpdatedAt() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datazone_data_source awscc_datazone_data_source} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datazone_data_source awscc_datazone_data_source} Resource.
 func NewDatazoneDataSource(scope constructs.Construct, id *string, config *DatazoneDataSourceConfig) DatazoneDataSource {
 	_init_.Initialize()
 
@@ -681,7 +741,7 @@ func NewDatazoneDataSource(scope constructs.Construct, id *string, config *Dataz
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datazone_data_source awscc_datazone_data_source} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datazone_data_source awscc_datazone_data_source} Resource.
 func NewDatazoneDataSource_Override(d DatazoneDataSource, scope constructs.Construct, id *string, config *DatazoneDataSourceConfig) {
 	_init_.Initialize()
 
@@ -699,6 +759,17 @@ func (j *jsiiProxy_DatazoneDataSource)SetConnection(val interface{}) {
 	_jsii_.Set(
 		j,
 		"connection",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DatazoneDataSource)SetConnectionIdentifier(val *string) {
+	if err := j.validateSetConnectionIdentifierParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"connectionIdentifier",
 		val,
 	)
 }
@@ -1117,6 +1188,19 @@ func (d *jsiiProxy_DatazoneDataSource) GetStringMapAttribute(terraformAttribute 
 	return returns
 }
 
+func (d *jsiiProxy_DatazoneDataSource) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (d *jsiiProxy_DatazoneDataSource) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := d.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1144,6 +1228,17 @@ func (d *jsiiProxy_DatazoneDataSource) InterpolationForAttribute(terraformAttrib
 	return returns
 }
 
+func (d *jsiiProxy_DatazoneDataSource) MoveFromId(id *string) {
+	if err := d.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (d *jsiiProxy_DatazoneDataSource) MoveTo(moveTarget *string, index interface{}) {
 	if err := d.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1152,6 +1247,17 @@ func (d *jsiiProxy_DatazoneDataSource) MoveTo(moveTarget *string, index interfac
 		d,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (d *jsiiProxy_DatazoneDataSource) MoveToId(id *string) {
+	if err := d.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1226,6 +1332,14 @@ func (d *jsiiProxy_DatazoneDataSource) ResetConfiguration() {
 	)
 }
 
+func (d *jsiiProxy_DatazoneDataSource) ResetConnectionIdentifier() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetConnectionIdentifier",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DatazoneDataSource) ResetDescription() {
 	_jsii_.InvokeVoid(
 		d,
@@ -1238,6 +1352,14 @@ func (d *jsiiProxy_DatazoneDataSource) ResetEnableSetting() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetEnableSetting",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatazoneDataSource) ResetEnvironmentIdentifier() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetEnvironmentIdentifier",
 		nil, // no parameters
 	)
 }
@@ -1280,6 +1402,32 @@ func (d *jsiiProxy_DatazoneDataSource) SynthesizeAttributes() *map[string]interf
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DatazoneDataSource) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DatazoneDataSource) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

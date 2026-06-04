@@ -56,11 +56,27 @@ func (d *jsiiProxy_DatasyncLocationObjectStorage) validateInterpolationForAttrib
 	return nil
 }
 
+func (d *jsiiProxy_DatasyncLocationObjectStorage) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DatasyncLocationObjectStorage) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (d *jsiiProxy_DatasyncLocationObjectStorage) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DatasyncLocationObjectStorage) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DatasyncLocationObjectStorage) validatePutCmkSecretConfigParameters(value *DatasyncLocationObjectStorageCmkSecretConfig) error {
+	return nil
+}
+
+func (d *jsiiProxy_DatasyncLocationObjectStorage) validatePutCustomSecretConfigParameters(value *DatasyncLocationObjectStorageCustomSecretConfig) error {
 	return nil
 }
 

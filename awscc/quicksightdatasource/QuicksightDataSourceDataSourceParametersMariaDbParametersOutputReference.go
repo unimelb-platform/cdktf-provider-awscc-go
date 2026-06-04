@@ -70,6 +70,9 @@ type QuicksightDataSourceDataSourceParametersMariaDbParametersOutputReference in
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDatabase()
+	ResetHost()
+	ResetPort()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersMariaDbParametersOutp
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersMariaDbParametersOutputReference) ResetDatabase() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDatabase",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersMariaDbParametersOutputReference) ResetHost() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetHost",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersMariaDbParametersOutputReference) ResetPort() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetPort",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersMariaDbParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

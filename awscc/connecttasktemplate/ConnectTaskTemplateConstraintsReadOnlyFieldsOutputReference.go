@@ -28,7 +28,7 @@ type ConnectTaskTemplateConstraintsReadOnlyFieldsOutputReference interface {
 	// Experimental.
 	Fqn() *string
 	Id() ConnectTaskTemplateConstraintsReadOnlyFieldsIdOutputReference
-	IdInput() *ConnectTaskTemplateConstraintsReadOnlyFieldsId
+	IdInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	// Experimental.
@@ -64,6 +64,7 @@ type ConnectTaskTemplateConstraintsReadOnlyFieldsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutId(value *ConnectTaskTemplateConstraintsReadOnlyFieldsId)
+	ResetId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -129,8 +130,8 @@ func (j *jsiiProxy_ConnectTaskTemplateConstraintsReadOnlyFieldsOutputReference) 
 	return returns
 }
 
-func (j *jsiiProxy_ConnectTaskTemplateConstraintsReadOnlyFieldsOutputReference) IdInput() *ConnectTaskTemplateConstraintsReadOnlyFieldsId {
-	var returns *ConnectTaskTemplateConstraintsReadOnlyFieldsId
+func (j *jsiiProxy_ConnectTaskTemplateConstraintsReadOnlyFieldsOutputReference) IdInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"idInput",
@@ -446,6 +447,14 @@ func (c *jsiiProxy_ConnectTaskTemplateConstraintsReadOnlyFieldsOutputReference) 
 		c,
 		"putId",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_ConnectTaskTemplateConstraintsReadOnlyFieldsOutputReference) ResetId() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetId",
+		nil, // no parameters
 	)
 }
 

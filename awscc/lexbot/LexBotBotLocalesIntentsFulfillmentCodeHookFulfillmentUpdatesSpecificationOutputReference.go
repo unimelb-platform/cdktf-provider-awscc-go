@@ -73,6 +73,7 @@ type LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationOu
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutStartResponse(value *LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponse)
 	PutUpdateResponse(value *LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponse)
+	ResetActive()
 	ResetStartResponse()
 	ResetTimeoutInSeconds()
 	ResetUpdateResponse()
@@ -551,6 +552,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesS
 		l,
 		"putUpdateResponse",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationOutputReference) ResetActive() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetActive",
+		nil, // no parameters
 	)
 }
 

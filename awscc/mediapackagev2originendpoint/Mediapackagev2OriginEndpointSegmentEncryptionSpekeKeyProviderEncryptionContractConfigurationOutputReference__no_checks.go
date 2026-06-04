@@ -56,7 +56,7 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProvider
 	return nil
 }
 
-func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfigurationOutputReference) validateSetInternalValueParameters(val *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfiguration) error {
+func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderEncryptionContractConfigurationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

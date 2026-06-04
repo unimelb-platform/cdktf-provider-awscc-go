@@ -11,7 +11,7 @@ import (
 type LexBotAliasBotAliasLocaleSettingsOutputReference interface {
 	cdktf.ComplexObject
 	BotAliasLocaleSetting() LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingOutputReference
-	BotAliasLocaleSettingInput() *LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSetting
+	BotAliasLocaleSettingInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -67,6 +67,8 @@ type LexBotAliasBotAliasLocaleSettingsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutBotAliasLocaleSetting(value *LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSetting)
+	ResetBotAliasLocaleSetting()
+	ResetLocaleId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -92,8 +94,8 @@ func (j *jsiiProxy_LexBotAliasBotAliasLocaleSettingsOutputReference) BotAliasLoc
 	return returns
 }
 
-func (j *jsiiProxy_LexBotAliasBotAliasLocaleSettingsOutputReference) BotAliasLocaleSettingInput() *LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSetting {
-	var returns *LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSetting
+func (j *jsiiProxy_LexBotAliasBotAliasLocaleSettingsOutputReference) BotAliasLocaleSettingInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"botAliasLocaleSettingInput",
@@ -480,6 +482,22 @@ func (l *jsiiProxy_LexBotAliasBotAliasLocaleSettingsOutputReference) PutBotAlias
 		l,
 		"putBotAliasLocaleSetting",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotAliasBotAliasLocaleSettingsOutputReference) ResetBotAliasLocaleSetting() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetBotAliasLocaleSetting",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotAliasBotAliasLocaleSettingsOutputReference) ResetLocaleId() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetLocaleId",
+		nil, // no parameters
 	)
 }
 

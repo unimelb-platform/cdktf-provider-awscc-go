@@ -64,7 +64,7 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpec
 	return nil
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListStructOutputReference) validateSetInternalValueParameters(val *LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListStruct) error {
+func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListStructOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

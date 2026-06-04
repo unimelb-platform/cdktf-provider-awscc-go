@@ -70,6 +70,9 @@ type QuicksightDataSourceDataSourceParametersMySqlParametersOutputReference inte
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDatabase()
+	ResetHost()
+	ResetPort()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersMySqlParametersOutput
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersMySqlParametersOutputReference) ResetDatabase() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDatabase",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersMySqlParametersOutputReference) ResetHost() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetHost",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersMySqlParametersOutputReference) ResetPort() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetPort",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersMySqlParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

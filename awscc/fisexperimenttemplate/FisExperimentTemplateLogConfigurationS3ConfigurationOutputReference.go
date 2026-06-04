@@ -67,6 +67,7 @@ type FisExperimentTemplateLogConfigurationS3ConfigurationOutputReference interfa
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucketName()
 	ResetPrefix()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (f *jsiiProxy_FisExperimentTemplateLogConfigurationS3ConfigurationOutputRef
 	)
 
 	return returns
+}
+
+func (f *jsiiProxy_FisExperimentTemplateLogConfigurationS3ConfigurationOutputReference) ResetBucketName() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetBucketName",
+		nil, // no parameters
+	)
 }
 
 func (f *jsiiProxy_FisExperimentTemplateLogConfigurationS3ConfigurationOutputReference) ResetPrefix() {

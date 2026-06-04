@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccivschannel/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ivs_channel awscc_ivs_channel}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ivs_channel awscc_ivs_channel}.
 type DataAwsccIvsChannel interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -18,6 +18,7 @@ type DataAwsccIvsChannel interface {
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
+	ContainerFormat() *string
 	// Experimental.
 	Count() interface{}
 	// Experimental.
@@ -44,6 +45,7 @@ type DataAwsccIvsChannel interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	MultitrackInputConfiguration() DataAwsccIvsChannelMultitrackInputConfigurationOutputReference
 	Name() *string
 	// The tree node.
 	Node() constructs.Node
@@ -93,6 +95,10 @@ type DataAwsccIvsChannel interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -142,6 +148,16 @@ func (j *jsiiProxy_DataAwsccIvsChannel) ConstructNodeMetadata() *map[string]inte
 	_jsii_.Get(
 		j,
 		"constructNodeMetadata",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIvsChannel) ContainerFormat() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"containerFormat",
 		&returns,
 	)
 	return returns
@@ -252,6 +268,16 @@ func (j *jsiiProxy_DataAwsccIvsChannel) Lifecycle() *cdktf.TerraformResourceLife
 	_jsii_.Get(
 		j,
 		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIvsChannel) MultitrackInputConfiguration() DataAwsccIvsChannelMultitrackInputConfigurationOutputReference {
+	var returns DataAwsccIvsChannelMultitrackInputConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"multitrackInputConfiguration",
 		&returns,
 	)
 	return returns
@@ -378,7 +404,7 @@ func (j *jsiiProxy_DataAwsccIvsChannel) Type() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ivs_channel awscc_ivs_channel} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ivs_channel awscc_ivs_channel} Data Source.
 func NewDataAwsccIvsChannel(scope constructs.Construct, id *string, config *DataAwsccIvsChannelConfig) DataAwsccIvsChannel {
 	_init_.Initialize()
 
@@ -396,7 +422,7 @@ func NewDataAwsccIvsChannel(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ivs_channel awscc_ivs_channel} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ivs_channel awscc_ivs_channel} Data Source.
 func NewDataAwsccIvsChannel_Override(d DataAwsccIvsChannel, scope constructs.Construct, id *string, config *DataAwsccIvsChannelConfig) {
 	_init_.Initialize()
 
@@ -763,6 +789,32 @@ func (d *jsiiProxy_DataAwsccIvsChannel) SynthesizeAttributes() *map[string]inter
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIvsChannel) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIvsChannel) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -68,6 +68,7 @@ type AppsyncResolverCachingConfigOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetCachingKeys()
+	ResetTtl()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (a *jsiiProxy_AppsyncResolverCachingConfigOutputReference) ResetCachingKeys
 	_jsii_.InvokeVoid(
 		a,
 		"resetCachingKeys",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppsyncResolverCachingConfigOutputReference) ResetTtl() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetTtl",
 		nil, // no parameters
 	)
 }

@@ -1,0 +1,6 @@
+package dataawscckinesisfirehosedeliverystream
+
+
+type DataAwsccKinesisfirehoseDeliveryStreamDatabaseSourceConfigurationDatabaseSourceAuthenticationConfigurationSecretsManagerConfiguration struct {
+}
+

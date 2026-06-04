@@ -70,6 +70,7 @@ type DatabrewDatasetPathOptionsParametersDatasetParameterDatetimeOptionsOutputRe
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetFormat()
 	ResetLocaleCode()
 	ResetTimezoneOffset()
 	// Produce the Token's value at resolution time.
@@ -517,6 +518,14 @@ func (d *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterDatetimeO
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterDatetimeOptionsOutputReference) ResetFormat() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetFormat",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterDatetimeOptionsOutputReference) ResetLocaleCode() {

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciamservicelinkedrole/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iam_service_linked_role awscc_iam_service_linked_role}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iam_service_linked_role awscc_iam_service_linked_role}.
 type DataAwsccIamServiceLinkedRole interface {
 	cdktf.TerraformDataSource
 	AwsServiceName() *string
@@ -86,6 +86,10 @@ type DataAwsccIamServiceLinkedRole interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -301,7 +305,7 @@ func (j *jsiiProxy_DataAwsccIamServiceLinkedRole) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iam_service_linked_role awscc_iam_service_linked_role} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iam_service_linked_role awscc_iam_service_linked_role} Data Source.
 func NewDataAwsccIamServiceLinkedRole(scope constructs.Construct, id *string, config *DataAwsccIamServiceLinkedRoleConfig) DataAwsccIamServiceLinkedRole {
 	_init_.Initialize()
 
@@ -319,7 +323,7 @@ func NewDataAwsccIamServiceLinkedRole(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iam_service_linked_role awscc_iam_service_linked_role} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iam_service_linked_role awscc_iam_service_linked_role} Data Source.
 func NewDataAwsccIamServiceLinkedRole_Override(d DataAwsccIamServiceLinkedRole, scope constructs.Construct, id *string, config *DataAwsccIamServiceLinkedRoleConfig) {
 	_init_.Initialize()
 
@@ -686,6 +690,32 @@ func (d *jsiiProxy_DataAwsccIamServiceLinkedRole) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIamServiceLinkedRole) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIamServiceLinkedRole) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

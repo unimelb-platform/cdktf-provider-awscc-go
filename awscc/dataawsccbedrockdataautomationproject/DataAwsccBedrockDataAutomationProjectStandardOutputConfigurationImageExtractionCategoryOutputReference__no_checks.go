@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawsccbedrockdataautomationproject
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccBedrockDataAutomationProjectStandardOutputConfigurationImageExtractionCategoryOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataAutomationProjectStandardOutputConfigurationImageExtractionCategoryOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataAutomationProjectStandardOutputConfigurationImageExtractionCategoryOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataAutomationProjectStandardOutputConfigurationImageExtractionCategoryOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataAutomationProjectStandardOutputConfigurationImageExtractionCategoryOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataAutomationProjectStandardOutputConfigurationImageExtractionCategoryOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataAutomationProjectStandardOutputConfigurationImageExtractionCategoryOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataAutomationProjectStandardOutputConfigurationImageExtractionCategoryOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataAutomationProjectStandardOutputConfigurationImageExtractionCategoryOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataAutomationProjectStandardOutputConfigurationImageExtractionCategoryOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataAutomationProjectStandardOutputConfigurationImageExtractionCategoryOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataAutomationProjectStandardOutputConfigurationImageExtractionCategoryOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataAutomationProjectStandardOutputConfigurationImageExtractionCategoryOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataAutomationProjectStandardOutputConfigurationImageExtractionCategoryOutputReference) validateSetInternalValueParameters(val *DataAwsccBedrockDataAutomationProjectStandardOutputConfigurationImageExtractionCategory) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataAutomationProjectStandardOutputConfigurationImageExtractionCategoryOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataAutomationProjectStandardOutputConfigurationImageExtractionCategoryOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccBedrockDataAutomationProjectStandardOutputConfigurationImageExtractionCategoryOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

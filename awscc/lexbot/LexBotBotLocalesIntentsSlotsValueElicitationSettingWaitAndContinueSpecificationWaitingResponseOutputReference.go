@@ -30,8 +30,8 @@ type LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecifica
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationWaitingResponse
-	SetInternalValue(val *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationWaitingResponse)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	MessageGroupsList() LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupsListStructList
 	MessageGroupsListInput() interface{}
 	// Experimental.
@@ -68,6 +68,7 @@ type LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecifica
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMessageGroupsList(value interface{})
 	ResetAllowInterrupt()
+	ResetMessageGroupsList()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -143,8 +144,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndCon
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationWaitingResponseOutputReference) InternalValue() *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationWaitingResponse {
-	var returns *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationWaitingResponse
+func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationWaitingResponseOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -254,7 +255,7 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndCon
 	)
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationWaitingResponseOutputReference)SetInternalValue(val *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationWaitingResponse) {
+func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationWaitingResponseOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -488,6 +489,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndCon
 	_jsii_.InvokeVoid(
 		l,
 		"resetAllowInterrupt",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationWaitingResponseOutputReference) ResetMessageGroupsList() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMessageGroupsList",
 		nil, // no parameters
 	)
 }

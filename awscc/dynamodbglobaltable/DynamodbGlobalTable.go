@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dynamodbglobaltable/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/dynamodb_global_table awscc_dynamodb_global_table}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/dynamodb_global_table awscc_dynamodb_global_table}.
 type DynamodbGlobalTable interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -44,6 +44,8 @@ type DynamodbGlobalTable interface {
 	FriendlyUniqueId() *string
 	GlobalSecondaryIndexes() DynamodbGlobalTableGlobalSecondaryIndexesList
 	GlobalSecondaryIndexesInput() interface{}
+	GlobalTableWitnesses() DynamodbGlobalTableGlobalTableWitnessesList
+	GlobalTableWitnessesInput() interface{}
 	Id() *string
 	KeySchema() DynamodbGlobalTableKeySchemaList
 	KeySchemaInput() interface{}
@@ -53,6 +55,9 @@ type DynamodbGlobalTable interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	LocalSecondaryIndexes() DynamodbGlobalTableLocalSecondaryIndexesList
 	LocalSecondaryIndexesInput() interface{}
+	MultiRegionConsistency() *string
+	SetMultiRegionConsistency(val *string)
+	MultiRegionConsistencyInput() *string
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
@@ -84,6 +89,10 @@ type DynamodbGlobalTable interface {
 	TerraformResourceType() *string
 	TimeToLiveSpecification() DynamodbGlobalTableTimeToLiveSpecificationOutputReference
 	TimeToLiveSpecificationInput() interface{}
+	WarmThroughput() DynamodbGlobalTableWarmThroughputOutputReference
+	WarmThroughputInput() interface{}
+	WriteOnDemandThroughputSettings() DynamodbGlobalTableWriteOnDemandThroughputSettingsOutputReference
+	WriteOnDemandThroughputSettingsInput() interface{}
 	WriteProvisionedThroughputSettings() DynamodbGlobalTableWriteProvisionedThroughputSettingsOutputReference
 	WriteProvisionedThroughputSettingsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
@@ -110,27 +119,42 @@ type DynamodbGlobalTable interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutAttributeDefinitions(value interface{})
 	PutGlobalSecondaryIndexes(value interface{})
+	PutGlobalTableWitnesses(value interface{})
 	PutKeySchema(value interface{})
 	PutLocalSecondaryIndexes(value interface{})
 	PutReplicas(value interface{})
 	PutSseSpecification(value *DynamodbGlobalTableSseSpecification)
 	PutStreamSpecification(value *DynamodbGlobalTableStreamSpecification)
 	PutTimeToLiveSpecification(value *DynamodbGlobalTableTimeToLiveSpecification)
+	PutWarmThroughput(value *DynamodbGlobalTableWarmThroughput)
+	PutWriteOnDemandThroughputSettings(value *DynamodbGlobalTableWriteOnDemandThroughputSettings)
 	PutWriteProvisionedThroughputSettings(value *DynamodbGlobalTableWriteProvisionedThroughputSettings)
 	ResetBillingMode()
 	ResetGlobalSecondaryIndexes()
+	ResetGlobalTableWitnesses()
 	ResetLocalSecondaryIndexes()
+	ResetMultiRegionConsistency()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -138,8 +162,13 @@ type DynamodbGlobalTable interface {
 	ResetStreamSpecification()
 	ResetTableName()
 	ResetTimeToLiveSpecification()
+	ResetWarmThroughput()
+	ResetWriteOnDemandThroughputSettings()
 	ResetWriteProvisionedThroughputSettings()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -304,6 +333,26 @@ func (j *jsiiProxy_DynamodbGlobalTable) GlobalSecondaryIndexesInput() interface{
 	return returns
 }
 
+func (j *jsiiProxy_DynamodbGlobalTable) GlobalTableWitnesses() DynamodbGlobalTableGlobalTableWitnessesList {
+	var returns DynamodbGlobalTableGlobalTableWitnessesList
+	_jsii_.Get(
+		j,
+		"globalTableWitnesses",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTable) GlobalTableWitnessesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"globalTableWitnessesInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DynamodbGlobalTable) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -359,6 +408,26 @@ func (j *jsiiProxy_DynamodbGlobalTable) LocalSecondaryIndexesInput() interface{}
 	_jsii_.Get(
 		j,
 		"localSecondaryIndexesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTable) MultiRegionConsistency() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"multiRegionConsistency",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTable) MultiRegionConsistencyInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"multiRegionConsistencyInput",
 		&returns,
 	)
 	return returns
@@ -554,6 +623,46 @@ func (j *jsiiProxy_DynamodbGlobalTable) TimeToLiveSpecificationInput() interface
 	return returns
 }
 
+func (j *jsiiProxy_DynamodbGlobalTable) WarmThroughput() DynamodbGlobalTableWarmThroughputOutputReference {
+	var returns DynamodbGlobalTableWarmThroughputOutputReference
+	_jsii_.Get(
+		j,
+		"warmThroughput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTable) WarmThroughputInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"warmThroughputInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTable) WriteOnDemandThroughputSettings() DynamodbGlobalTableWriteOnDemandThroughputSettingsOutputReference {
+	var returns DynamodbGlobalTableWriteOnDemandThroughputSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"writeOnDemandThroughputSettings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTable) WriteOnDemandThroughputSettingsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"writeOnDemandThroughputSettingsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DynamodbGlobalTable) WriteProvisionedThroughputSettings() DynamodbGlobalTableWriteProvisionedThroughputSettingsOutputReference {
 	var returns DynamodbGlobalTableWriteProvisionedThroughputSettingsOutputReference
 	_jsii_.Get(
@@ -575,7 +684,7 @@ func (j *jsiiProxy_DynamodbGlobalTable) WriteProvisionedThroughputSettingsInput(
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/dynamodb_global_table awscc_dynamodb_global_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/dynamodb_global_table awscc_dynamodb_global_table} Resource.
 func NewDynamodbGlobalTable(scope constructs.Construct, id *string, config *DynamodbGlobalTableConfig) DynamodbGlobalTable {
 	_init_.Initialize()
 
@@ -593,7 +702,7 @@ func NewDynamodbGlobalTable(scope constructs.Construct, id *string, config *Dyna
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/dynamodb_global_table awscc_dynamodb_global_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/dynamodb_global_table awscc_dynamodb_global_table} Resource.
 func NewDynamodbGlobalTable_Override(d DynamodbGlobalTable, scope constructs.Construct, id *string, config *DynamodbGlobalTableConfig) {
 	_init_.Initialize()
 
@@ -660,6 +769,17 @@ func (j *jsiiProxy_DynamodbGlobalTable)SetLifecycle(val *cdktf.TerraformResource
 	_jsii_.Set(
 		j,
 		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DynamodbGlobalTable)SetMultiRegionConsistency(val *string) {
+	if err := j.validateSetMultiRegionConsistencyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"multiRegionConsistency",
 		val,
 	)
 }
@@ -963,6 +1083,19 @@ func (d *jsiiProxy_DynamodbGlobalTable) GetStringMapAttribute(terraformAttribute
 	return returns
 }
 
+func (d *jsiiProxy_DynamodbGlobalTable) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (d *jsiiProxy_DynamodbGlobalTable) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := d.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -990,6 +1123,17 @@ func (d *jsiiProxy_DynamodbGlobalTable) InterpolationForAttribute(terraformAttri
 	return returns
 }
 
+func (d *jsiiProxy_DynamodbGlobalTable) MoveFromId(id *string) {
+	if err := d.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (d *jsiiProxy_DynamodbGlobalTable) MoveTo(moveTarget *string, index interface{}) {
 	if err := d.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -998,6 +1142,17 @@ func (d *jsiiProxy_DynamodbGlobalTable) MoveTo(moveTarget *string, index interfa
 		d,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTable) MoveToId(id *string) {
+	if err := d.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1030,6 +1185,17 @@ func (d *jsiiProxy_DynamodbGlobalTable) PutGlobalSecondaryIndexes(value interfac
 	_jsii_.InvokeVoid(
 		d,
 		"putGlobalSecondaryIndexes",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTable) PutGlobalTableWitnesses(value interface{}) {
+	if err := d.validatePutGlobalTableWitnessesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putGlobalTableWitnesses",
 		[]interface{}{value},
 	)
 }
@@ -1100,6 +1266,28 @@ func (d *jsiiProxy_DynamodbGlobalTable) PutTimeToLiveSpecification(value *Dynamo
 	)
 }
 
+func (d *jsiiProxy_DynamodbGlobalTable) PutWarmThroughput(value *DynamodbGlobalTableWarmThroughput) {
+	if err := d.validatePutWarmThroughputParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putWarmThroughput",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTable) PutWriteOnDemandThroughputSettings(value *DynamodbGlobalTableWriteOnDemandThroughputSettings) {
+	if err := d.validatePutWriteOnDemandThroughputSettingsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putWriteOnDemandThroughputSettings",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DynamodbGlobalTable) PutWriteProvisionedThroughputSettings(value *DynamodbGlobalTableWriteProvisionedThroughputSettings) {
 	if err := d.validatePutWriteProvisionedThroughputSettingsParameters(value); err != nil {
 		panic(err)
@@ -1127,10 +1315,26 @@ func (d *jsiiProxy_DynamodbGlobalTable) ResetGlobalSecondaryIndexes() {
 	)
 }
 
+func (d *jsiiProxy_DynamodbGlobalTable) ResetGlobalTableWitnesses() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetGlobalTableWitnesses",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DynamodbGlobalTable) ResetLocalSecondaryIndexes() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetLocalSecondaryIndexes",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTable) ResetMultiRegionConsistency() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetMultiRegionConsistency",
 		nil, // no parameters
 	)
 }
@@ -1175,6 +1379,22 @@ func (d *jsiiProxy_DynamodbGlobalTable) ResetTimeToLiveSpecification() {
 	)
 }
 
+func (d *jsiiProxy_DynamodbGlobalTable) ResetWarmThroughput() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetWarmThroughput",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTable) ResetWriteOnDemandThroughputSettings() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetWriteOnDemandThroughputSettings",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DynamodbGlobalTable) ResetWriteProvisionedThroughputSettings() {
 	_jsii_.InvokeVoid(
 		d,
@@ -1189,6 +1409,32 @@ func (d *jsiiProxy_DynamodbGlobalTable) SynthesizeAttributes() *map[string]inter
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DynamodbGlobalTable) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DynamodbGlobalTable) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -35,6 +35,8 @@ type BackupBackupPlanBackupPlanBackupPlanRuleOutputReference interface {
 	EnableContinuousBackupInput() interface{}
 	// Experimental.
 	Fqn() *string
+	IndexActions() BackupBackupPlanBackupPlanBackupPlanRuleIndexActionsList
+	IndexActionsInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	Lifecycle() BackupBackupPlanBackupPlanBackupPlanRuleLifecycleOutputReference
@@ -90,10 +92,12 @@ type BackupBackupPlanBackupPlanBackupPlanRuleOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutCopyActions(value interface{})
+	PutIndexActions(value interface{})
 	PutLifecycle(value *BackupBackupPlanBackupPlanBackupPlanRuleLifecycle)
 	ResetCompletionWindowMinutes()
 	ResetCopyActions()
 	ResetEnableContinuousBackup()
+	ResetIndexActions()
 	ResetLifecycle()
 	ResetRecoveryPointTags()
 	ResetScheduleExpression()
@@ -209,6 +213,26 @@ func (j *jsiiProxy_BackupBackupPlanBackupPlanBackupPlanRuleOutputReference) Fqn(
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BackupBackupPlanBackupPlanBackupPlanRuleOutputReference) IndexActions() BackupBackupPlanBackupPlanBackupPlanRuleIndexActionsList {
+	var returns BackupBackupPlanBackupPlanBackupPlanRuleIndexActionsList
+	_jsii_.Get(
+		j,
+		"indexActions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BackupBackupPlanBackupPlanBackupPlanRuleOutputReference) IndexActionsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"indexActionsInput",
 		&returns,
 	)
 	return returns
@@ -752,6 +776,17 @@ func (b *jsiiProxy_BackupBackupPlanBackupPlanBackupPlanRuleOutputReference) PutC
 	)
 }
 
+func (b *jsiiProxy_BackupBackupPlanBackupPlanBackupPlanRuleOutputReference) PutIndexActions(value interface{}) {
+	if err := b.validatePutIndexActionsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		b,
+		"putIndexActions",
+		[]interface{}{value},
+	)
+}
+
 func (b *jsiiProxy_BackupBackupPlanBackupPlanBackupPlanRuleOutputReference) PutLifecycle(value *BackupBackupPlanBackupPlanBackupPlanRuleLifecycle) {
 	if err := b.validatePutLifecycleParameters(value); err != nil {
 		panic(err)
@@ -783,6 +818,14 @@ func (b *jsiiProxy_BackupBackupPlanBackupPlanBackupPlanRuleOutputReference) Rese
 	_jsii_.InvokeVoid(
 		b,
 		"resetEnableContinuousBackup",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BackupBackupPlanBackupPlanBackupPlanRuleOutputReference) ResetIndexActions() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetIndexActions",
 		nil, // no parameters
 	)
 }

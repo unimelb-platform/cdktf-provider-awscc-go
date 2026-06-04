@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccelasticacheserverlesscaches/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticache_serverless_caches awscc_elasticache_serverless_caches}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticache_serverless_caches awscc_elasticache_serverless_caches}.
 type DataAwsccElasticacheServerlessCaches interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccElasticacheServerlessCaches interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccElasticacheServerlessCaches) TerraformResourceType()
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticache_serverless_caches awscc_elasticache_serverless_caches} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticache_serverless_caches awscc_elasticache_serverless_caches} Data Source.
 func NewDataAwsccElasticacheServerlessCaches(scope constructs.Construct, id *string, config *DataAwsccElasticacheServerlessCachesConfig) DataAwsccElasticacheServerlessCaches {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccElasticacheServerlessCaches(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticache_serverless_caches awscc_elasticache_serverless_caches} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticache_serverless_caches awscc_elasticache_serverless_caches} Data Source.
 func NewDataAwsccElasticacheServerlessCaches_Override(d DataAwsccElasticacheServerlessCaches, scope constructs.Construct, id *string, config *DataAwsccElasticacheServerlessCachesConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccElasticacheServerlessCaches) SynthesizeAttributes() 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccElasticacheServerlessCaches) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccElasticacheServerlessCaches) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

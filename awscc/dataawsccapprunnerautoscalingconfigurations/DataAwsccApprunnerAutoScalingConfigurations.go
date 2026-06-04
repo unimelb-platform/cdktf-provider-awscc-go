@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccapprunnerautoscalingconfigurations/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apprunner_auto_scaling_configurations awscc_apprunner_auto_scaling_configurations}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apprunner_auto_scaling_configurations awscc_apprunner_auto_scaling_configurations}.
 type DataAwsccApprunnerAutoScalingConfigurations interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccApprunnerAutoScalingConfigurations interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccApprunnerAutoScalingConfigurations) TerraformResourc
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apprunner_auto_scaling_configurations awscc_apprunner_auto_scaling_configurations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apprunner_auto_scaling_configurations awscc_apprunner_auto_scaling_configurations} Data Source.
 func NewDataAwsccApprunnerAutoScalingConfigurations(scope constructs.Construct, id *string, config *DataAwsccApprunnerAutoScalingConfigurationsConfig) DataAwsccApprunnerAutoScalingConfigurations {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccApprunnerAutoScalingConfigurations(scope constructs.Construct, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apprunner_auto_scaling_configurations awscc_apprunner_auto_scaling_configurations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apprunner_auto_scaling_configurations awscc_apprunner_auto_scaling_configurations} Data Source.
 func NewDataAwsccApprunnerAutoScalingConfigurations_Override(d DataAwsccApprunnerAutoScalingConfigurations, scope constructs.Construct, id *string, config *DataAwsccApprunnerAutoScalingConfigurationsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccApprunnerAutoScalingConfigurations) SynthesizeAttrib
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApprunnerAutoScalingConfigurations) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApprunnerAutoScalingConfigurations) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -52,11 +52,19 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputRefere
 	return nil
 }
 
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) validatePutFilePathParameters(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesFilePath) error {
+	return nil
+}
+
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) validatePutNameParameters(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesName) error {
 	return nil
 }
 
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) validatePutReleaseParameters(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesRelease) error {
+	return nil
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) validatePutSourceLambdaLayerArnParameters(value *Inspectorv2FilterFilterCriteriaVulnerablePackagesSourceLambdaLayerArn) error {
 	return nil
 }
 

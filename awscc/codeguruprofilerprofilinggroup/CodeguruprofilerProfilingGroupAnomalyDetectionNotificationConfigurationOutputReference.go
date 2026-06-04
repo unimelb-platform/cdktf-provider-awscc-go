@@ -68,6 +68,7 @@ type CodeguruprofilerProfilingGroupAnomalyDetectionNotificationConfigurationOutp
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetChannelId()
+	ResetChannelUri()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (c *jsiiProxy_CodeguruprofilerProfilingGroupAnomalyDetectionNotificationCon
 	_jsii_.InvokeVoid(
 		c,
 		"resetChannelId",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CodeguruprofilerProfilingGroupAnomalyDetectionNotificationConfigurationOutputReference) ResetChannelUri() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetChannelUri",
 		nil, // no parameters
 	)
 }

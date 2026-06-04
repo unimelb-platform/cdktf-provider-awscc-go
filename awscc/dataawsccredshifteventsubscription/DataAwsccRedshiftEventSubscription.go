@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccredshifteventsubscription/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/redshift_event_subscription awscc_redshift_event_subscription}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/redshift_event_subscription awscc_redshift_event_subscription}.
 type DataAwsccRedshiftEventSubscription interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -96,6 +96,10 @@ type DataAwsccRedshiftEventSubscription interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -411,7 +415,7 @@ func (j *jsiiProxy_DataAwsccRedshiftEventSubscription) TerraformResourceType() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/redshift_event_subscription awscc_redshift_event_subscription} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/redshift_event_subscription awscc_redshift_event_subscription} Data Source.
 func NewDataAwsccRedshiftEventSubscription(scope constructs.Construct, id *string, config *DataAwsccRedshiftEventSubscriptionConfig) DataAwsccRedshiftEventSubscription {
 	_init_.Initialize()
 
@@ -429,7 +433,7 @@ func NewDataAwsccRedshiftEventSubscription(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/redshift_event_subscription awscc_redshift_event_subscription} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/redshift_event_subscription awscc_redshift_event_subscription} Data Source.
 func NewDataAwsccRedshiftEventSubscription_Override(d DataAwsccRedshiftEventSubscription, scope constructs.Construct, id *string, config *DataAwsccRedshiftEventSubscriptionConfig) {
 	_init_.Initialize()
 
@@ -796,6 +800,32 @@ func (d *jsiiProxy_DataAwsccRedshiftEventSubscription) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRedshiftEventSubscription) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRedshiftEventSubscription) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

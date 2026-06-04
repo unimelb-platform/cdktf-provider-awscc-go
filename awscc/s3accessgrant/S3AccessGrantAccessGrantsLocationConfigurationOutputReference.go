@@ -64,6 +64,7 @@ type S3AccessGrantAccessGrantsLocationConfigurationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetS3SubPrefix()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_S3AccessGrantAccessGrantsLocationConfigurationOutputReference
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_S3AccessGrantAccessGrantsLocationConfigurationOutputReference) ResetS3SubPrefix() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetS3SubPrefix",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_S3AccessGrantAccessGrantsLocationConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

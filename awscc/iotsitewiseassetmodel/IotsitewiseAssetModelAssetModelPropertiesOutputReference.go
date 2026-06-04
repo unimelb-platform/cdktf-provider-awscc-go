@@ -31,8 +31,14 @@ type IotsitewiseAssetModelAssetModelPropertiesOutputReference interface {
 	DataTypeSpec() *string
 	SetDataTypeSpec(val *string)
 	DataTypeSpecInput() *string
+	ExternalId() *string
+	SetExternalId(val *string)
+	ExternalIdInput() *string
 	// Experimental.
 	Fqn() *string
+	Id() *string
+	SetId(val *string)
+	IdInput() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	LogicalId() *string
@@ -50,7 +56,7 @@ type IotsitewiseAssetModelAssetModelPropertiesOutputReference interface {
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	Type() IotsitewiseAssetModelAssetModelPropertiesTypeOutputReference
-	TypeInput() *IotsitewiseAssetModelAssetModelPropertiesType
+	TypeInput() interface{}
 	Unit() *string
 	SetUnit(val *string)
 	UnitInput() *string
@@ -79,7 +85,13 @@ type IotsitewiseAssetModelAssetModelPropertiesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutType(value *IotsitewiseAssetModelAssetModelPropertiesType)
+	ResetDataType()
 	ResetDataTypeSpec()
+	ResetExternalId()
+	ResetId()
+	ResetLogicalId()
+	ResetName()
+	ResetType()
 	ResetUnit()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -166,11 +178,51 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference) Dat
 	return returns
 }
 
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference) ExternalId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference) ExternalIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalIdInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference) Id() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"id",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference) IdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"idInput",
 		&returns,
 	)
 	return returns
@@ -256,8 +308,8 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference) Typ
 	return returns
 }
 
-func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference) TypeInput() *IotsitewiseAssetModelAssetModelPropertiesType {
-	var returns *IotsitewiseAssetModelAssetModelPropertiesType
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference) TypeInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"typeInput",
@@ -354,6 +406,28 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference)SetD
 	_jsii_.Set(
 		j,
 		"dataTypeSpec",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference)SetExternalId(val *string) {
+	if err := j.validateSetExternalIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"externalId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"id",
 		val,
 	)
 }
@@ -621,10 +695,58 @@ func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference) Put
 	)
 }
 
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference) ResetDataType() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetDataType",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference) ResetDataTypeSpec() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetDataTypeSpec",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference) ResetExternalId() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetExternalId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference) ResetId() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference) ResetLogicalId() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetType",
 		nil, // no parameters
 	)
 }

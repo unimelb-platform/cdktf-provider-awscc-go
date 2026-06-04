@@ -67,6 +67,8 @@ type ImagebuilderLifecyclePolicyResourceSelectionRecipesOutputReference interfac
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
+	ResetSemanticVersion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (i *jsiiProxy_ImagebuilderLifecyclePolicyResourceSelectionRecipesOutputRefe
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_ImagebuilderLifecyclePolicyResourceSelectionRecipesOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_ImagebuilderLifecyclePolicyResourceSelectionRecipesOutputReference) ResetSemanticVersion() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetSemanticVersion",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_ImagebuilderLifecyclePolicyResourceSelectionRecipesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

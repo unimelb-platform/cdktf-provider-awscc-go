@@ -45,8 +45,10 @@ type SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersOutput
 	SetImageDigest(val *string)
 	ImageDigestInput() *string
 	ImageInput() *string
-	InternalValue() *SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainers
-	SetInternalValue(val *SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainers)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
+	ModelDataSource() SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersModelDataSourceOutputReference
+	ModelDataSourceInput() interface{}
 	ModelDataUrl() *string
 	SetModelDataUrl(val *string)
 	ModelDataUrlInput() *string
@@ -87,12 +89,15 @@ type SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersOutput
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutModelDataSource(value *SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersModelDataSource)
 	PutModelInput(value *SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersModelInput)
 	ResetContainerHostname()
 	ResetEnvironment()
 	ResetFramework()
 	ResetFrameworkVersion()
+	ResetImage()
 	ResetImageDigest()
+	ResetModelDataSource()
 	ResetModelDataUrl()
 	ResetModelInput()
 	ResetNearestModelName()
@@ -271,11 +276,31 @@ func (j *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddCo
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersOutputReference) InternalValue() *SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainers {
-	var returns *SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainers
+func (j *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersOutputReference) ModelDataSource() SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersModelDataSourceOutputReference {
+	var returns SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersModelDataSourceOutputReference
+	_jsii_.Get(
+		j,
+		"modelDataSource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersOutputReference) ModelDataSourceInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"modelDataSourceInput",
 		&returns,
 	)
 	return returns
@@ -477,7 +502,7 @@ func (j *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddCo
 	)
 }
 
-func (j *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersOutputReference)SetInternalValue(val *SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainers) {
+func (j *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -718,6 +743,17 @@ func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddCo
 	return returns
 }
 
+func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersOutputReference) PutModelDataSource(value *SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersModelDataSource) {
+	if err := s.validatePutModelDataSourceParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putModelDataSource",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersOutputReference) PutModelInput(value *SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersModelInput) {
 	if err := s.validatePutModelInputParameters(value); err != nil {
 		panic(err)
@@ -761,10 +797,26 @@ func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddCo
 	)
 }
 
+func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersOutputReference) ResetImage() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetImage",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersOutputReference) ResetImageDigest() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetImageDigest",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersOutputReference) ResetModelDataSource() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetModelDataSource",
 		nil, // no parameters
 	)
 }

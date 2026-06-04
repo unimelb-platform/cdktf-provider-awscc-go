@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawsccquicksightdatasource
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersIdentityProviderVpcConnectionPropertiesOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersIdentityProviderVpcConnectionPropertiesOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersIdentityProviderVpcConnectionPropertiesOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersIdentityProviderVpcConnectionPropertiesOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersIdentityProviderVpcConnectionPropertiesOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersIdentityProviderVpcConnectionPropertiesOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersIdentityProviderVpcConnectionPropertiesOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersIdentityProviderVpcConnectionPropertiesOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersIdentityProviderVpcConnectionPropertiesOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersIdentityProviderVpcConnectionPropertiesOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersIdentityProviderVpcConnectionPropertiesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersIdentityProviderVpcConnectionPropertiesOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersIdentityProviderVpcConnectionPropertiesOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersIdentityProviderVpcConnectionPropertiesOutputReference) validateSetInternalValueParameters(val *DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersIdentityProviderVpcConnectionProperties) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersIdentityProviderVpcConnectionPropertiesOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersIdentityProviderVpcConnectionPropertiesOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccQuicksightDataSourceDataSourceParametersStarburstParametersOAuthParametersIdentityProviderVpcConnectionPropertiesOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

@@ -56,7 +56,15 @@ func (r *jsiiProxy_RdsDbCluster) validateInterpolationForAttributeParameters(ter
 	return nil
 }
 
+func (r *jsiiProxy_RdsDbCluster) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RdsDbCluster) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (r *jsiiProxy_RdsDbCluster) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -69,10 +77,6 @@ func (r *jsiiProxy_RdsDbCluster) validatePutAssociatedRolesParameters(value inte
 }
 
 func (r *jsiiProxy_RdsDbCluster) validatePutMasterUserSecretParameters(value *RdsDbClusterMasterUserSecret) error {
-	return nil
-}
-
-func (r *jsiiProxy_RdsDbCluster) validatePutReadEndpointParameters(value *RdsDbClusterReadEndpoint) error {
 	return nil
 }
 
@@ -124,6 +128,10 @@ func (j *jsiiProxy_RdsDbCluster) validateSetBackupRetentionPeriodParameters(val 
 	return nil
 }
 
+func (j *jsiiProxy_RdsDbCluster) validateSetClusterScalabilityTypeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_RdsDbCluster) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }
@@ -133,6 +141,10 @@ func (j *jsiiProxy_RdsDbCluster) validateSetCopyTagsToSnapshotParameters(val int
 }
 
 func (j *jsiiProxy_RdsDbCluster) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RdsDbCluster) validateSetDatabaseInsightsModeParameters(val *string) error {
 	return nil
 }
 
@@ -192,7 +204,15 @@ func (j *jsiiProxy_RdsDbCluster) validateSetEnableIamDatabaseAuthenticationParam
 	return nil
 }
 
+func (j *jsiiProxy_RdsDbCluster) validateSetEnableLocalWriteForwardingParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_RdsDbCluster) validateSetEngineParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_RdsDbCluster) validateSetEngineLifecycleSupportParameters(val *string) error {
 	return nil
 }
 

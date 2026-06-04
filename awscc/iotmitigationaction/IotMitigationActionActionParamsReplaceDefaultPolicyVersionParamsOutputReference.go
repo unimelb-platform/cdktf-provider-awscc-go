@@ -64,6 +64,7 @@ type IotMitigationActionActionParamsReplaceDefaultPolicyVersionParamsOutputRefer
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetTemplateName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (i *jsiiProxy_IotMitigationActionActionParamsReplaceDefaultPolicyVersionPar
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotMitigationActionActionParamsReplaceDefaultPolicyVersionParamsOutputReference) ResetTemplateName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTemplateName",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotMitigationActionActionParamsReplaceDefaultPolicyVersionParamsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

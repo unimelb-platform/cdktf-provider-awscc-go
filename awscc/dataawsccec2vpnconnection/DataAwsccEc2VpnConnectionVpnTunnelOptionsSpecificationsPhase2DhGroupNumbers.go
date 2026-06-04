@@ -1,0 +1,6 @@
+package dataawsccec2vpnconnection
+
+
+type DataAwsccEc2VpnConnectionVpnTunnelOptionsSpecificationsPhase2DhGroupNumbers struct {
+}
+

@@ -35,6 +35,9 @@ type OpensearchserverlessSecurityConfigSamlOptionsOutputReference interface {
 	Metadata() *string
 	SetMetadata(val *string)
 	MetadataInput() *string
+	OpenSearchServerlessEntityId() *string
+	SetOpenSearchServerlessEntityId(val *string)
+	OpenSearchServerlessEntityIdInput() *string
 	SessionTimeout() *float64
 	SetSessionTimeout(val *float64)
 	SessionTimeoutInput() *float64
@@ -74,6 +77,8 @@ type OpensearchserverlessSecurityConfigSamlOptionsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetGroupAttribute()
+	ResetMetadata()
+	ResetOpenSearchServerlessEntityId()
 	ResetSessionTimeout()
 	ResetUserAttribute()
 	// Produce the Token's value at resolution time.
@@ -176,6 +181,26 @@ func (j *jsiiProxy_OpensearchserverlessSecurityConfigSamlOptionsOutputReference)
 	_jsii_.Get(
 		j,
 		"metadataInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OpensearchserverlessSecurityConfigSamlOptionsOutputReference) OpenSearchServerlessEntityId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"openSearchServerlessEntityId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OpensearchserverlessSecurityConfigSamlOptionsOutputReference) OpenSearchServerlessEntityIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"openSearchServerlessEntityIdInput",
 		&returns,
 	)
 	return returns
@@ -320,6 +345,17 @@ func (j *jsiiProxy_OpensearchserverlessSecurityConfigSamlOptionsOutputReference)
 	_jsii_.Set(
 		j,
 		"metadata",
+		val,
+	)
+}
+
+func (j *jsiiProxy_OpensearchserverlessSecurityConfigSamlOptionsOutputReference)SetOpenSearchServerlessEntityId(val *string) {
+	if err := j.validateSetOpenSearchServerlessEntityIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"openSearchServerlessEntityId",
 		val,
 	)
 }
@@ -558,6 +594,22 @@ func (o *jsiiProxy_OpensearchserverlessSecurityConfigSamlOptionsOutputReference)
 	_jsii_.InvokeVoid(
 		o,
 		"resetGroupAttribute",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OpensearchserverlessSecurityConfigSamlOptionsOutputReference) ResetMetadata() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetMetadata",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OpensearchserverlessSecurityConfigSamlOptionsOutputReference) ResetOpenSearchServerlessEntityId() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetOpenSearchServerlessEntityId",
 		nil, // no parameters
 	)
 }

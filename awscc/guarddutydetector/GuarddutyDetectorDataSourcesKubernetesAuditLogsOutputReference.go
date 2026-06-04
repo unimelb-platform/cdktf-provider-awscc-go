@@ -30,8 +30,8 @@ type GuarddutyDetectorDataSourcesKubernetesAuditLogsOutputReference interface {
 	EnableInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *GuarddutyDetectorDataSourcesKubernetesAuditLogs
-	SetInternalValue(val *GuarddutyDetectorDataSourcesKubernetesAuditLogs)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type GuarddutyDetectorDataSourcesKubernetesAuditLogsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEnable()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -139,8 +140,8 @@ func (j *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesAuditLogsOutputReferenc
 	return returns
 }
 
-func (j *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesAuditLogsOutputReference) InternalValue() *GuarddutyDetectorDataSourcesKubernetesAuditLogs {
-	var returns *GuarddutyDetectorDataSourcesKubernetesAuditLogs
+func (j *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesAuditLogsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -230,7 +231,7 @@ func (j *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesAuditLogsOutputReferenc
 	)
 }
 
-func (j *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesAuditLogsOutputReference)SetInternalValue(val *GuarddutyDetectorDataSourcesKubernetesAuditLogs) {
+func (j *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesAuditLogsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -447,6 +448,14 @@ func (g *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesAuditLogsOutputReferenc
 	)
 
 	return returns
+}
+
+func (g *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesAuditLogsOutputReference) ResetEnable() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetEnable",
+		nil, // no parameters
+	)
 }
 
 func (g *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesAuditLogsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

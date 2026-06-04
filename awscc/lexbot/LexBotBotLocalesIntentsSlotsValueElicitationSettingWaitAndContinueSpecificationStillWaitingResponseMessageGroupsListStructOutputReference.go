@@ -27,10 +27,10 @@ type LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecifica
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupsListStruct
-	SetInternalValue(val *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupsListStruct)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Message() LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupsListMessageOutputReference
-	MessageInput() *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupsListMessage
+	MessageInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,6 +67,7 @@ type LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecifica
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMessage(value *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupsListMessage)
 	PutVariations(value interface{})
+	ResetMessage()
 	ResetVariations()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -123,8 +124,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndCon
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupsListStructOutputReference) InternalValue() *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupsListStruct {
-	var returns *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupsListStruct
+func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupsListStructOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -143,8 +144,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndCon
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupsListStructOutputReference) MessageInput() *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupsListMessage {
-	var returns *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupsListMessage
+func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupsListStructOutputReference) MessageInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"messageInput",
@@ -243,7 +244,7 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndCon
 	)
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupsListStructOutputReference)SetInternalValue(val *LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupsListStruct) {
+func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupsListStructOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +482,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndCon
 		l,
 		"putVariations",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupsListStructOutputReference) ResetMessage() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMessage",
+		nil, // no parameters
 	)
 }
 

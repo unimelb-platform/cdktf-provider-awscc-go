@@ -1,0 +1,6 @@
+package dataawsccmediaconnectbridgesource
+
+
+type DataAwsccMediaconnectBridgeSourceNetworkSourceMulticastSourceSettings struct {
+}
+

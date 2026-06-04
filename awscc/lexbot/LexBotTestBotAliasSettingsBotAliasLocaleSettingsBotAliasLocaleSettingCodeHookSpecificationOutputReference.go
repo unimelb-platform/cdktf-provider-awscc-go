@@ -30,7 +30,7 @@ type LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingCodeHo
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	LambdaCodeHook() LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHookOutputReference
-	LambdaCodeHookInput() *LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHook
+	LambdaCodeHookInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingCodeHo
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutLambdaCodeHook(value *LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHook)
+	ResetLambdaCodeHook()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -139,8 +140,8 @@ func (j *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocal
 	return returns
 }
 
-func (j *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationOutputReference) LambdaCodeHookInput() *LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHook {
-	var returns *LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHook
+func (j *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationOutputReference) LambdaCodeHookInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"lambdaCodeHookInput",
@@ -446,6 +447,14 @@ func (l *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocal
 		l,
 		"putLambdaCodeHook",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationOutputReference) ResetLambdaCodeHook() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetLambdaCodeHook",
+		nil, // no parameters
 	)
 }
 

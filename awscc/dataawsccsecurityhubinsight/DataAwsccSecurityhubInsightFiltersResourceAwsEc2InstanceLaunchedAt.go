@@ -1,0 +1,6 @@
+package dataawsccsecurityhubinsight
+
+
+type DataAwsccSecurityhubInsightFiltersResourceAwsEc2InstanceLaunchedAt struct {
+}
+

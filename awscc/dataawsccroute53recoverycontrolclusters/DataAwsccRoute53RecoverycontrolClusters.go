@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccroute53recoverycontrolclusters/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53recoverycontrol_clusters awscc_route53recoverycontrol_clusters}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53recoverycontrol_clusters awscc_route53recoverycontrol_clusters}.
 type DataAwsccRoute53RecoverycontrolClusters interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccRoute53RecoverycontrolClusters interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccRoute53RecoverycontrolClusters) TerraformResourceTyp
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53recoverycontrol_clusters awscc_route53recoverycontrol_clusters} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53recoverycontrol_clusters awscc_route53recoverycontrol_clusters} Data Source.
 func NewDataAwsccRoute53RecoverycontrolClusters(scope constructs.Construct, id *string, config *DataAwsccRoute53RecoverycontrolClustersConfig) DataAwsccRoute53RecoverycontrolClusters {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccRoute53RecoverycontrolClusters(scope constructs.Construct, id *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53recoverycontrol_clusters awscc_route53recoverycontrol_clusters} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53recoverycontrol_clusters awscc_route53recoverycontrol_clusters} Data Source.
 func NewDataAwsccRoute53RecoverycontrolClusters_Override(d DataAwsccRoute53RecoverycontrolClusters, scope constructs.Construct, id *string, config *DataAwsccRoute53RecoverycontrolClustersConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccRoute53RecoverycontrolClusters) SynthesizeAttributes
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53RecoverycontrolClusters) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53RecoverycontrolClusters) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

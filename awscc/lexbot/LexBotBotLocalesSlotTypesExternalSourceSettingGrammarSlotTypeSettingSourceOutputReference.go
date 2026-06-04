@@ -71,6 +71,8 @@ type LexBotBotLocalesSlotTypesExternalSourceSettingGrammarSlotTypeSettingSourceO
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetKmsKeyArn()
+	ResetS3BucketName()
+	ResetS3ObjectKey()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -522,6 +524,22 @@ func (l *jsiiProxy_LexBotBotLocalesSlotTypesExternalSourceSettingGrammarSlotType
 	_jsii_.InvokeVoid(
 		l,
 		"resetKmsKeyArn",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesSlotTypesExternalSourceSettingGrammarSlotTypeSettingSourceOutputReference) ResetS3BucketName() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetS3BucketName",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesSlotTypesExternalSourceSettingGrammarSlotTypeSettingSourceOutputReference) ResetS3ObjectKey() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetS3ObjectKey",
 		nil, // no parameters
 	)
 }

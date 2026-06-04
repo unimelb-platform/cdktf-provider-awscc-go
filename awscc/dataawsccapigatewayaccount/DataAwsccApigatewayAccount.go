@@ -9,9 +9,10 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccapigatewayaccount/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigateway_account awscc_apigateway_account}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigateway_account awscc_apigateway_account}.
 type DataAwsccApigatewayAccount interface {
 	cdktf.TerraformDataSource
+	AccountId() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	CloudwatchRoleArn() *string
@@ -83,6 +84,10 @@ type DataAwsccApigatewayAccount interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -95,6 +100,16 @@ type DataAwsccApigatewayAccount interface {
 // The jsii proxy struct for DataAwsccApigatewayAccount
 type jsiiProxy_DataAwsccApigatewayAccount struct {
 	internal.Type__cdktfTerraformDataSource
+}
+
+func (j *jsiiProxy_DataAwsccApigatewayAccount) AccountId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"accountId",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccApigatewayAccount) CdktfStack() cdktf.TerraformStack {
@@ -268,7 +283,7 @@ func (j *jsiiProxy_DataAwsccApigatewayAccount) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigateway_account awscc_apigateway_account} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigateway_account awscc_apigateway_account} Data Source.
 func NewDataAwsccApigatewayAccount(scope constructs.Construct, id *string, config *DataAwsccApigatewayAccountConfig) DataAwsccApigatewayAccount {
 	_init_.Initialize()
 
@@ -286,7 +301,7 @@ func NewDataAwsccApigatewayAccount(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigateway_account awscc_apigateway_account} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigateway_account awscc_apigateway_account} Data Source.
 func NewDataAwsccApigatewayAccount_Override(d DataAwsccApigatewayAccount, scope constructs.Construct, id *string, config *DataAwsccApigatewayAccountConfig) {
 	_init_.Initialize()
 
@@ -653,6 +668,32 @@ func (d *jsiiProxy_DataAwsccApigatewayAccount) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApigatewayAccount) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApigatewayAccount) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -27,8 +27,8 @@ type DatasyncLocationFsxOntapProtocolSmbMountOptionsOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DatasyncLocationFsxOntapProtocolSmbMountOptions
-	SetInternalValue(val *DatasyncLocationFsxOntapProtocolSmbMountOptions)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -120,8 +120,8 @@ func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolSmbMountOptionsOutputReferenc
 	return returns
 }
 
-func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolSmbMountOptionsOutputReference) InternalValue() *DatasyncLocationFsxOntapProtocolSmbMountOptions {
-	var returns *DatasyncLocationFsxOntapProtocolSmbMountOptions
+func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolSmbMountOptionsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -220,7 +220,7 @@ func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolSmbMountOptionsOutputReferenc
 	)
 }
 
-func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolSmbMountOptionsOutputReference)SetInternalValue(val *DatasyncLocationFsxOntapProtocolSmbMountOptions) {
+func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolSmbMountOptionsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

@@ -44,6 +44,10 @@ func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelP
 	return nil
 }
 
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) validatePutPropertyPathParameters(value interface{}) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }
@@ -56,11 +60,27 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelP
 	return nil
 }
 
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) validateSetHierarchyExternalIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) validateSetHierarchyIdParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) validateSetHierarchyLogicalIdParameters(val *string) error {
 	return nil
 }
 
-func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) validateSetInternalValueParameters(val *IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValue) error {
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) validateSetPropertyExternalIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformVariablesValueOutputReference) validateSetPropertyIdParameters(val *string) error {
 	return nil
 }
 

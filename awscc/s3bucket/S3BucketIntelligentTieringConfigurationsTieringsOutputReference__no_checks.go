@@ -64,7 +64,7 @@ func (j *jsiiProxy_S3BucketIntelligentTieringConfigurationsTieringsOutputReferen
 	return nil
 }
 
-func (j *jsiiProxy_S3BucketIntelligentTieringConfigurationsTieringsOutputReference) validateSetInternalValueParameters(val *S3BucketIntelligentTieringConfigurationsTierings) error {
+func (j *jsiiProxy_S3BucketIntelligentTieringConfigurationsTieringsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

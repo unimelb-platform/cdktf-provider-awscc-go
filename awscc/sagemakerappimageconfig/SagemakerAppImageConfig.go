@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/sagemakerappimageconfig/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/sagemaker_app_image_config awscc_sagemaker_app_image_config}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/sagemaker_app_image_config awscc_sagemaker_app_image_config}.
 type SagemakerAppImageConfig interface {
 	cdktf.TerraformResource
 	AppImageConfigArn() *string
@@ -18,6 +18,8 @@ type SagemakerAppImageConfig interface {
 	AppImageConfigNameInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	CodeEditorAppImageConfig() SagemakerAppImageConfigCodeEditorAppImageConfigOutputReference
+	CodeEditorAppImageConfigInput() interface{}
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -93,18 +95,30 @@ type SagemakerAppImageConfig interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutCodeEditorAppImageConfig(value *SagemakerAppImageConfigCodeEditorAppImageConfig)
 	PutJupyterLabAppImageConfig(value *SagemakerAppImageConfigJupyterLabAppImageConfig)
 	PutKernelGatewayImageConfig(value *SagemakerAppImageConfigKernelGatewayImageConfig)
 	PutTags(value interface{})
+	ResetCodeEditorAppImageConfig()
 	ResetJupyterLabAppImageConfig()
 	ResetKernelGatewayImageConfig()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -112,6 +126,9 @@ type SagemakerAppImageConfig interface {
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -161,6 +178,26 @@ func (j *jsiiProxy_SagemakerAppImageConfig) CdktfStack() cdktf.TerraformStack {
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerAppImageConfig) CodeEditorAppImageConfig() SagemakerAppImageConfigCodeEditorAppImageConfigOutputReference {
+	var returns SagemakerAppImageConfigCodeEditorAppImageConfigOutputReference
+	_jsii_.Get(
+		j,
+		"codeEditorAppImageConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerAppImageConfig) CodeEditorAppImageConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"codeEditorAppImageConfigInput",
 		&returns,
 	)
 	return returns
@@ -387,7 +424,7 @@ func (j *jsiiProxy_SagemakerAppImageConfig) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/sagemaker_app_image_config awscc_sagemaker_app_image_config} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/sagemaker_app_image_config awscc_sagemaker_app_image_config} Resource.
 func NewSagemakerAppImageConfig(scope constructs.Construct, id *string, config *SagemakerAppImageConfigConfig) SagemakerAppImageConfig {
 	_init_.Initialize()
 
@@ -405,7 +442,7 @@ func NewSagemakerAppImageConfig(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/sagemaker_app_image_config awscc_sagemaker_app_image_config} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/sagemaker_app_image_config awscc_sagemaker_app_image_config} Resource.
 func NewSagemakerAppImageConfig_Override(s SagemakerAppImageConfig, scope constructs.Construct, id *string, config *SagemakerAppImageConfigConfig) {
 	_init_.Initialize()
 
@@ -764,6 +801,19 @@ func (s *jsiiProxy_SagemakerAppImageConfig) GetStringMapAttribute(terraformAttri
 	return returns
 }
 
+func (s *jsiiProxy_SagemakerAppImageConfig) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (s *jsiiProxy_SagemakerAppImageConfig) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := s.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -791,6 +841,17 @@ func (s *jsiiProxy_SagemakerAppImageConfig) InterpolationForAttribute(terraformA
 	return returns
 }
 
+func (s *jsiiProxy_SagemakerAppImageConfig) MoveFromId(id *string) {
+	if err := s.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (s *jsiiProxy_SagemakerAppImageConfig) MoveTo(moveTarget *string, index interface{}) {
 	if err := s.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -802,6 +863,17 @@ func (s *jsiiProxy_SagemakerAppImageConfig) MoveTo(moveTarget *string, index int
 	)
 }
 
+func (s *jsiiProxy_SagemakerAppImageConfig) MoveToId(id *string) {
+	if err := s.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (s *jsiiProxy_SagemakerAppImageConfig) OverrideLogicalId(newLogicalId *string) {
 	if err := s.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -810,6 +882,17 @@ func (s *jsiiProxy_SagemakerAppImageConfig) OverrideLogicalId(newLogicalId *stri
 		s,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (s *jsiiProxy_SagemakerAppImageConfig) PutCodeEditorAppImageConfig(value *SagemakerAppImageConfigCodeEditorAppImageConfig) {
+	if err := s.validatePutCodeEditorAppImageConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putCodeEditorAppImageConfig",
+		[]interface{}{value},
 	)
 }
 
@@ -843,6 +926,14 @@ func (s *jsiiProxy_SagemakerAppImageConfig) PutTags(value interface{}) {
 		s,
 		"putTags",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SagemakerAppImageConfig) ResetCodeEditorAppImageConfig() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetCodeEditorAppImageConfig",
+		nil, // no parameters
 	)
 }
 
@@ -884,6 +975,32 @@ func (s *jsiiProxy_SagemakerAppImageConfig) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		s,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SagemakerAppImageConfig) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		s,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SagemakerAppImageConfig) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -154,7 +154,40 @@ func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) validatePutPointI
 	return nil
 }
 
+func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) validatePutReadOnDemandThroughputSettingsParameters(value *DynamodbGlobalTableReplicasReadOnDemandThroughputSettings) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) validatePutReadProvisionedThroughputSettingsParameters(value *DynamodbGlobalTableReplicasReadProvisionedThroughputSettings) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) validatePutReplicaStreamSpecificationParameters(value *DynamodbGlobalTableReplicasReplicaStreamSpecification) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) validatePutResourcePolicyParameters(value *DynamodbGlobalTableReplicasResourcePolicy) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}

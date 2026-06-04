@@ -119,6 +119,14 @@ func (a *jsiiProxy_AmplifyApp) validateInterpolationForAttributeParameters(terra
 	return nil
 }
 
+func (a *jsiiProxy_AmplifyApp) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (a *jsiiProxy_AmplifyApp) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (a *jsiiProxy_AmplifyApp) validateMoveToParameters(moveTarget *string, inde
 	return nil
 }
 
+func (a *jsiiProxy_AmplifyApp) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (a *jsiiProxy_AmplifyApp) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -200,6 +216,17 @@ func (a *jsiiProxy_AmplifyApp) validatePutAutoBranchCreationConfigParameters(val
 }
 
 func (a *jsiiProxy_AmplifyApp) validatePutBasicAuthConfigParameters(value *AmplifyAppBasicAuthConfig) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (a *jsiiProxy_AmplifyApp) validatePutCacheConfigParameters(value *AmplifyAppCacheConfig) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -267,6 +294,17 @@ func (a *jsiiProxy_AmplifyApp) validatePutEnvironmentVariablesParameters(value i
 		if !_jsii_.IsAnonymousProxy(value) {
 			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*AmplifyAppEnvironmentVariables; received %#v (a %T)", value, value)
 		}
+	}
+
+	return nil
+}
+
+func (a *jsiiProxy_AmplifyApp) validatePutJobConfigParameters(value *AmplifyAppJobConfig) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
 	}
 
 	return nil
@@ -352,6 +390,14 @@ func (j *jsiiProxy_AmplifyApp) validateSetAccessTokenParameters(val *string) err
 }
 
 func (j *jsiiProxy_AmplifyApp) validateSetBuildSpecParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_AmplifyApp) validateSetComputeRoleArnParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

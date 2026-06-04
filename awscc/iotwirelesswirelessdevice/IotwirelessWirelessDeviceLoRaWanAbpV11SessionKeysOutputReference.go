@@ -33,8 +33,8 @@ type IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeysOutputReference interface 
 	FNwkSIntKeyInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeys
-	SetInternalValue(val *IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeys)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	NwkSEncKey() *string
 	SetNwkSEncKey(val *string)
 	NwkSEncKeyInput() *string
@@ -73,6 +73,10 @@ type IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeysOutputReference interface 
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAppSKey()
+	ResetFNwkSIntKey()
+	ResetNwkSEncKey()
+	ResetSNwkSIntKey()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -168,8 +172,8 @@ func (j *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeysOutputRefere
 	return returns
 }
 
-func (j *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeysOutputReference) InternalValue() *IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeys {
-	var returns *IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeys
+func (j *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeysOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -310,7 +314,7 @@ func (j *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeysOutputRefere
 	)
 }
 
-func (j *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeysOutputReference)SetInternalValue(val *IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeys) {
+func (j *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeysOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -549,6 +553,38 @@ func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeysOutputRefere
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeysOutputReference) ResetAppSKey() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetAppSKey",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeysOutputReference) ResetFNwkSIntKey() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetFNwkSIntKey",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeysOutputReference) ResetNwkSEncKey() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetNwkSEncKey",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeysOutputReference) ResetSNwkSIntKey() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetSNwkSIntKey",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanAbpV11SessionKeysOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

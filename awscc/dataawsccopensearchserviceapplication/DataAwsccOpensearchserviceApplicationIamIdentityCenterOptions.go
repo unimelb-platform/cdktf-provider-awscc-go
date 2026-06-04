@@ -1,0 +1,6 @@
+package dataawsccopensearchserviceapplication
+
+
+type DataAwsccOpensearchserviceApplicationIamIdentityCenterOptions struct {
+}
+

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2networkinterfaceattachment/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_network_interface_attachment awscc_ec2_network_interface_attachment}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_network_interface_attachment awscc_ec2_network_interface_attachment}.
 type Ec2NetworkInterfaceAttachment interface {
 	cdktf.TerraformResource
 	AttachmentId() *string
@@ -35,6 +35,8 @@ type Ec2NetworkInterfaceAttachment interface {
 	DeviceIndex() *string
 	SetDeviceIndex(val *string)
 	DeviceIndexInput() *string
+	EnaSrdSpecification() Ec2NetworkInterfaceAttachmentEnaSrdSpecificationOutputReference
+	EnaSrdSpecificationInput() interface{}
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -96,20 +98,35 @@ type Ec2NetworkInterfaceAttachment interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutEnaSrdSpecification(value *Ec2NetworkInterfaceAttachmentEnaSrdSpecification)
 	ResetDeleteOnTermination()
+	ResetEnaSrdSpecification()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -219,6 +236,26 @@ func (j *jsiiProxy_Ec2NetworkInterfaceAttachment) DeviceIndexInput() *string {
 	_jsii_.Get(
 		j,
 		"deviceIndexInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2NetworkInterfaceAttachment) EnaSrdSpecification() Ec2NetworkInterfaceAttachmentEnaSrdSpecificationOutputReference {
+	var returns Ec2NetworkInterfaceAttachmentEnaSrdSpecificationOutputReference
+	_jsii_.Get(
+		j,
+		"enaSrdSpecification",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2NetworkInterfaceAttachment) EnaSrdSpecificationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enaSrdSpecificationInput",
 		&returns,
 	)
 	return returns
@@ -385,7 +422,7 @@ func (j *jsiiProxy_Ec2NetworkInterfaceAttachment) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_network_interface_attachment awscc_ec2_network_interface_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_network_interface_attachment awscc_ec2_network_interface_attachment} Resource.
 func NewEc2NetworkInterfaceAttachment(scope constructs.Construct, id *string, config *Ec2NetworkInterfaceAttachmentConfig) Ec2NetworkInterfaceAttachment {
 	_init_.Initialize()
 
@@ -403,7 +440,7 @@ func NewEc2NetworkInterfaceAttachment(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_network_interface_attachment awscc_ec2_network_interface_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_network_interface_attachment awscc_ec2_network_interface_attachment} Resource.
 func NewEc2NetworkInterfaceAttachment_Override(e Ec2NetworkInterfaceAttachment, scope constructs.Construct, id *string, config *Ec2NetworkInterfaceAttachmentConfig) {
 	_init_.Initialize()
 
@@ -795,6 +832,19 @@ func (e *jsiiProxy_Ec2NetworkInterfaceAttachment) GetStringMapAttribute(terrafor
 	return returns
 }
 
+func (e *jsiiProxy_Ec2NetworkInterfaceAttachment) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2NetworkInterfaceAttachment) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -822,6 +872,17 @@ func (e *jsiiProxy_Ec2NetworkInterfaceAttachment) InterpolationForAttribute(terr
 	return returns
 }
 
+func (e *jsiiProxy_Ec2NetworkInterfaceAttachment) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2NetworkInterfaceAttachment) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -830,6 +891,17 @@ func (e *jsiiProxy_Ec2NetworkInterfaceAttachment) MoveTo(moveTarget *string, ind
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Ec2NetworkInterfaceAttachment) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -844,10 +916,29 @@ func (e *jsiiProxy_Ec2NetworkInterfaceAttachment) OverrideLogicalId(newLogicalId
 	)
 }
 
+func (e *jsiiProxy_Ec2NetworkInterfaceAttachment) PutEnaSrdSpecification(value *Ec2NetworkInterfaceAttachmentEnaSrdSpecification) {
+	if err := e.validatePutEnaSrdSpecificationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putEnaSrdSpecification",
+		[]interface{}{value},
+	)
+}
+
 func (e *jsiiProxy_Ec2NetworkInterfaceAttachment) ResetDeleteOnTermination() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetDeleteOnTermination",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2NetworkInterfaceAttachment) ResetEnaSrdSpecification() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetEnaSrdSpecification",
 		nil, // no parameters
 	)
 }
@@ -866,6 +957,32 @@ func (e *jsiiProxy_Ec2NetworkInterfaceAttachment) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2NetworkInterfaceAttachment) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2NetworkInterfaceAttachment) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

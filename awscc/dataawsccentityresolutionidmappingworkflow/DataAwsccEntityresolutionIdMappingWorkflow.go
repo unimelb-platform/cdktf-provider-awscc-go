@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccentityresolutionidmappingworkflow/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/entityresolution_id_mapping_workflow awscc_entityresolution_id_mapping_workflow}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/entityresolution_id_mapping_workflow awscc_entityresolution_id_mapping_workflow}.
 type DataAwsccEntityresolutionIdMappingWorkflow interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -92,6 +92,10 @@ type DataAwsccEntityresolutionIdMappingWorkflow interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -367,7 +371,7 @@ func (j *jsiiProxy_DataAwsccEntityresolutionIdMappingWorkflow) WorkflowName() *s
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/entityresolution_id_mapping_workflow awscc_entityresolution_id_mapping_workflow} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/entityresolution_id_mapping_workflow awscc_entityresolution_id_mapping_workflow} Data Source.
 func NewDataAwsccEntityresolutionIdMappingWorkflow(scope constructs.Construct, id *string, config *DataAwsccEntityresolutionIdMappingWorkflowConfig) DataAwsccEntityresolutionIdMappingWorkflow {
 	_init_.Initialize()
 
@@ -385,7 +389,7 @@ func NewDataAwsccEntityresolutionIdMappingWorkflow(scope constructs.Construct, i
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/entityresolution_id_mapping_workflow awscc_entityresolution_id_mapping_workflow} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/entityresolution_id_mapping_workflow awscc_entityresolution_id_mapping_workflow} Data Source.
 func NewDataAwsccEntityresolutionIdMappingWorkflow_Override(d DataAwsccEntityresolutionIdMappingWorkflow, scope constructs.Construct, id *string, config *DataAwsccEntityresolutionIdMappingWorkflowConfig) {
 	_init_.Initialize()
 
@@ -752,6 +756,32 @@ func (d *jsiiProxy_DataAwsccEntityresolutionIdMappingWorkflow) SynthesizeAttribu
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEntityresolutionIdMappingWorkflow) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEntityresolutionIdMappingWorkflow) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

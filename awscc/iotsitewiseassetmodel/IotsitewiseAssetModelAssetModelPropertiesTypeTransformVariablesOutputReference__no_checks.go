@@ -60,7 +60,7 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeTransformVariabl
 	return nil
 }
 
-func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeTransformVariablesOutputReference) validateSetInternalValueParameters(val *IotsitewiseAssetModelAssetModelPropertiesTypeTransformVariables) error {
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeTransformVariablesOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

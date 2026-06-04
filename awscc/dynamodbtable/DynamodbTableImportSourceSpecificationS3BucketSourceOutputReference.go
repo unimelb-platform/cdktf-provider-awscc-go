@@ -27,8 +27,8 @@ type DynamodbTableImportSourceSpecificationS3BucketSourceOutputReference interfa
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DynamodbTableImportSourceSpecificationS3BucketSource
-	SetInternalValue(val *DynamodbTableImportSourceSpecificationS3BucketSource)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	S3Bucket() *string
 	SetS3Bucket(val *string)
 	S3BucketInput() *string
@@ -70,6 +70,7 @@ type DynamodbTableImportSourceSpecificationS3BucketSourceOutputReference interfa
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetS3Bucket()
 	ResetS3BucketOwner()
 	ResetS3KeyPrefix()
 	// Produce the Token's value at resolution time.
@@ -127,8 +128,8 @@ func (j *jsiiProxy_DynamodbTableImportSourceSpecificationS3BucketSourceOutputRef
 	return returns
 }
 
-func (j *jsiiProxy_DynamodbTableImportSourceSpecificationS3BucketSourceOutputReference) InternalValue() *DynamodbTableImportSourceSpecificationS3BucketSource {
-	var returns *DynamodbTableImportSourceSpecificationS3BucketSource
+func (j *jsiiProxy_DynamodbTableImportSourceSpecificationS3BucketSourceOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -267,7 +268,7 @@ func (j *jsiiProxy_DynamodbTableImportSourceSpecificationS3BucketSourceOutputRef
 	)
 }
 
-func (j *jsiiProxy_DynamodbTableImportSourceSpecificationS3BucketSourceOutputReference)SetInternalValue(val *DynamodbTableImportSourceSpecificationS3BucketSource) {
+func (j *jsiiProxy_DynamodbTableImportSourceSpecificationS3BucketSourceOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -517,6 +518,14 @@ func (d *jsiiProxy_DynamodbTableImportSourceSpecificationS3BucketSourceOutputRef
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DynamodbTableImportSourceSpecificationS3BucketSourceOutputReference) ResetS3Bucket() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetS3Bucket",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DynamodbTableImportSourceSpecificationS3BucketSourceOutputReference) ResetS3BucketOwner() {

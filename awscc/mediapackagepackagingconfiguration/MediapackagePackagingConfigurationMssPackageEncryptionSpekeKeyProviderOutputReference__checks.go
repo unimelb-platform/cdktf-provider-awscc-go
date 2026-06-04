@@ -174,9 +174,25 @@ func (j *jsiiProxy_MediapackagePackagingConfigurationMssPackageEncryptionSpekeKe
 	return nil
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfigurationMssPackageEncryptionSpekeKeyProviderOutputReference) validateSetInternalValueParameters(val *MediapackagePackagingConfigurationMssPackageEncryptionSpekeKeyProvider) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_MediapackagePackagingConfigurationMssPackageEncryptionSpekeKeyProviderOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *MediapackagePackagingConfigurationMssPackageEncryptionSpekeKeyProvider:
+		val := val.(*MediapackagePackagingConfigurationMssPackageEncryptionSpekeKeyProvider)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case MediapackagePackagingConfigurationMssPackageEncryptionSpekeKeyProvider:
+		val_ := val.(MediapackagePackagingConfigurationMssPackageEncryptionSpekeKeyProvider)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *MediapackagePackagingConfigurationMssPackageEncryptionSpekeKeyProvider; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

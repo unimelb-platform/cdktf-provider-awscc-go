@@ -67,6 +67,8 @@ type LexBotBotLocalesIntentsFulfillmentCodeHookPostFulfillmentStatusSpecificatio
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetText()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookPostFulfillmentStat
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupsListVariationsImageResponseCardButtonsOutputReference) ResetText() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetText",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupsListVariationsImageResponseCardButtonsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupsListVariationsImageResponseCardButtonsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

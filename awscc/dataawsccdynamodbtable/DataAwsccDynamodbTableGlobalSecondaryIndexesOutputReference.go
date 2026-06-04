@@ -32,6 +32,7 @@ type DataAwsccDynamodbTableGlobalSecondaryIndexesOutputReference interface {
 	InternalValue() *DataAwsccDynamodbTableGlobalSecondaryIndexes
 	SetInternalValue(val *DataAwsccDynamodbTableGlobalSecondaryIndexes)
 	KeySchema() DataAwsccDynamodbTableGlobalSecondaryIndexesKeySchemaList
+	OnDemandThroughput() DataAwsccDynamodbTableGlobalSecondaryIndexesOnDemandThroughputOutputReference
 	Projection() DataAwsccDynamodbTableGlobalSecondaryIndexesProjectionOutputReference
 	ProvisionedThroughput() DataAwsccDynamodbTableGlobalSecondaryIndexesProvisionedThroughputOutputReference
 	// Experimental.
@@ -42,6 +43,7 @@ type DataAwsccDynamodbTableGlobalSecondaryIndexesOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	WarmThroughput() DataAwsccDynamodbTableGlobalSecondaryIndexesWarmThroughputOutputReference
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -161,6 +163,16 @@ func (j *jsiiProxy_DataAwsccDynamodbTableGlobalSecondaryIndexesOutputReference) 
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccDynamodbTableGlobalSecondaryIndexesOutputReference) OnDemandThroughput() DataAwsccDynamodbTableGlobalSecondaryIndexesOnDemandThroughputOutputReference {
+	var returns DataAwsccDynamodbTableGlobalSecondaryIndexesOnDemandThroughputOutputReference
+	_jsii_.Get(
+		j,
+		"onDemandThroughput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccDynamodbTableGlobalSecondaryIndexesOutputReference) Projection() DataAwsccDynamodbTableGlobalSecondaryIndexesProjectionOutputReference {
 	var returns DataAwsccDynamodbTableGlobalSecondaryIndexesProjectionOutputReference
 	_jsii_.Get(
@@ -196,6 +208,16 @@ func (j *jsiiProxy_DataAwsccDynamodbTableGlobalSecondaryIndexesOutputReference) 
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDynamodbTableGlobalSecondaryIndexesOutputReference) WarmThroughput() DataAwsccDynamodbTableGlobalSecondaryIndexesWarmThroughputOutputReference {
+	var returns DataAwsccDynamodbTableGlobalSecondaryIndexesWarmThroughputOutputReference
+	_jsii_.Get(
+		j,
+		"warmThroughput",
 		&returns,
 	)
 	return returns

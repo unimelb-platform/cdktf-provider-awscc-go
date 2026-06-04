@@ -60,7 +60,7 @@ func (j *jsiiProxy_S3StorageLensStorageLensConfigurationAccountLevelBucketLevelP
 	return nil
 }
 
-func (j *jsiiProxy_S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetricsOutputReference) validateSetInternalValueParameters(val *S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetrics) error {
+func (j *jsiiProxy_S3StorageLensStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetricsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

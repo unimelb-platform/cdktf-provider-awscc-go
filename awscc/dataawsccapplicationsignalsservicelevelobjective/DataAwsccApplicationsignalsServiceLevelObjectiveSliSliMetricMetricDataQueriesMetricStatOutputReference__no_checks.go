@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawsccapplicationsignalsservicelevelobjective
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStatOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStatOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStatOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStatOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStatOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStatOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStatOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStatOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStatOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStatOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStatOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStatOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStatOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStatOutputReference) validateSetInternalValueParameters(val *DataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStat) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStatOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStatOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccApplicationsignalsServiceLevelObjectiveSliSliMetricMetricDataQueriesMetricStatOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

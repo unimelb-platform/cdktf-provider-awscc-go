@@ -1,0 +1,6 @@
+package dataawscckinesisfirehosedeliverystream
+
+
+type DataAwsccKinesisfirehoseDeliveryStreamDirectPutSourceConfiguration struct {
+}
+

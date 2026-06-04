@@ -64,7 +64,7 @@ func (j *jsiiProxy_DatabrewJobOutputsLocationOutputReference) validateSetComplex
 	return nil
 }
 
-func (j *jsiiProxy_DatabrewJobOutputsLocationOutputReference) validateSetInternalValueParameters(val *DatabrewJobOutputsLocation) error {
+func (j *jsiiProxy_DatabrewJobOutputsLocationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

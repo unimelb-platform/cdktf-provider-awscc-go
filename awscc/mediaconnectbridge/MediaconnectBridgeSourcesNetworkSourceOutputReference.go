@@ -32,6 +32,8 @@ type MediaconnectBridgeSourcesNetworkSourceOutputReference interface {
 	MulticastIp() *string
 	SetMulticastIp(val *string)
 	MulticastIpInput() *string
+	MulticastSourceSettings() MediaconnectBridgeSourcesNetworkSourceMulticastSourceSettingsOutputReference
+	MulticastSourceSettingsInput() interface{}
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -76,6 +78,13 @@ type MediaconnectBridgeSourcesNetworkSourceOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutMulticastSourceSettings(value *MediaconnectBridgeSourcesNetworkSourceMulticastSourceSettings)
+	ResetMulticastIp()
+	ResetMulticastSourceSettings()
+	ResetName()
+	ResetNetworkName()
+	ResetPort()
+	ResetProtocol()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -156,6 +165,26 @@ func (j *jsiiProxy_MediaconnectBridgeSourcesNetworkSourceOutputReference) Multic
 	_jsii_.Get(
 		j,
 		"multicastIpInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediaconnectBridgeSourcesNetworkSourceOutputReference) MulticastSourceSettings() MediaconnectBridgeSourcesNetworkSourceMulticastSourceSettingsOutputReference {
+	var returns MediaconnectBridgeSourcesNetworkSourceMulticastSourceSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"multicastSourceSettings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediaconnectBridgeSourcesNetworkSourceOutputReference) MulticastSourceSettingsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"multicastSourceSettingsInput",
 		&returns,
 	)
 	return returns
@@ -583,6 +612,65 @@ func (m *jsiiProxy_MediaconnectBridgeSourcesNetworkSourceOutputReference) Interp
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_MediaconnectBridgeSourcesNetworkSourceOutputReference) PutMulticastSourceSettings(value *MediaconnectBridgeSourcesNetworkSourceMulticastSourceSettings) {
+	if err := m.validatePutMulticastSourceSettingsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putMulticastSourceSettings",
+		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_MediaconnectBridgeSourcesNetworkSourceOutputReference) ResetMulticastIp() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMulticastIp",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectBridgeSourcesNetworkSourceOutputReference) ResetMulticastSourceSettings() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMulticastSourceSettings",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectBridgeSourcesNetworkSourceOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectBridgeSourcesNetworkSourceOutputReference) ResetNetworkName() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetNetworkName",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectBridgeSourcesNetworkSourceOutputReference) ResetPort() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetPort",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectBridgeSourcesNetworkSourceOutputReference) ResetProtocol() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetProtocol",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_MediaconnectBridgeSourcesNetworkSourceOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

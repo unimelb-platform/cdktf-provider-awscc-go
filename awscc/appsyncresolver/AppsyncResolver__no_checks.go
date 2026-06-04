@@ -56,7 +56,15 @@ func (a *jsiiProxy_AppsyncResolver) validateInterpolationForAttributeParameters(
 	return nil
 }
 
+func (a *jsiiProxy_AppsyncResolver) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_AppsyncResolver) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (a *jsiiProxy_AppsyncResolver) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -133,6 +141,10 @@ func (j *jsiiProxy_AppsyncResolver) validateSetLifecycleParameters(val *cdktf.Te
 }
 
 func (j *jsiiProxy_AppsyncResolver) validateSetMaxBatchSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_AppsyncResolver) validateSetMetricsConfigParameters(val *string) error {
 	return nil
 }
 

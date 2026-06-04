@@ -40,6 +40,8 @@ type DataAwsccDynamodbGlobalTableGlobalSecondaryIndexesOutputReference interface
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	WarmThroughput() DataAwsccDynamodbGlobalTableGlobalSecondaryIndexesWarmThroughputOutputReference
+	WriteOnDemandThroughputSettings() DataAwsccDynamodbGlobalTableGlobalSecondaryIndexesWriteOnDemandThroughputSettingsOutputReference
 	WriteProvisionedThroughputSettings() DataAwsccDynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThroughputSettingsOutputReference
 	// Experimental.
 	ComputeFqn() *string
@@ -175,6 +177,26 @@ func (j *jsiiProxy_DataAwsccDynamodbGlobalTableGlobalSecondaryIndexesOutputRefer
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDynamodbGlobalTableGlobalSecondaryIndexesOutputReference) WarmThroughput() DataAwsccDynamodbGlobalTableGlobalSecondaryIndexesWarmThroughputOutputReference {
+	var returns DataAwsccDynamodbGlobalTableGlobalSecondaryIndexesWarmThroughputOutputReference
+	_jsii_.Get(
+		j,
+		"warmThroughput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDynamodbGlobalTableGlobalSecondaryIndexesOutputReference) WriteOnDemandThroughputSettings() DataAwsccDynamodbGlobalTableGlobalSecondaryIndexesWriteOnDemandThroughputSettingsOutputReference {
+	var returns DataAwsccDynamodbGlobalTableGlobalSecondaryIndexesWriteOnDemandThroughputSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"writeOnDemandThroughputSettings",
 		&returns,
 	)
 	return returns

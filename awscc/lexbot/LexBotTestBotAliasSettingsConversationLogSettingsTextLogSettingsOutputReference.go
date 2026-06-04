@@ -26,7 +26,7 @@ type LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsOutputRefer
 	// Experimental.
 	CreationStack() *[]*string
 	Destination() LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestinationOutputReference
-	DestinationInput() *LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestination
+	DestinationInput() interface{}
 	Enabled() interface{}
 	SetEnabled(val interface{})
 	EnabledInput() interface{}
@@ -67,6 +67,8 @@ type LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsOutputRefer
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDestination(value *LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestination)
+	ResetDestination()
+	ResetEnabled()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSetti
 	return returns
 }
 
-func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsOutputReference) DestinationInput() *LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestination {
-	var returns *LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsDestination
+func (j *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsOutputReference) DestinationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"destinationInput",
@@ -480,6 +482,22 @@ func (l *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSetti
 		l,
 		"putDestination",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsOutputReference) ResetDestination() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetDestination",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotTestBotAliasSettingsConversationLogSettingsTextLogSettingsOutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetEnabled",
+		nil, // no parameters
 	)
 }
 

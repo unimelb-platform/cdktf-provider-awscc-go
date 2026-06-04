@@ -30,8 +30,8 @@ type PcaconnectoradTemplateDefinitionTemplateV2GeneralFlagsOutputReference inter
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *PcaconnectoradTemplateDefinitionTemplateV2GeneralFlags
-	SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV2GeneralFlags)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	MachineType() interface{}
 	SetMachineType(val interface{})
 	MachineTypeInput() interface{}
@@ -144,8 +144,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2GeneralFlagsOutputR
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2GeneralFlagsOutputReference) InternalValue() *PcaconnectoradTemplateDefinitionTemplateV2GeneralFlags {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV2GeneralFlags
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2GeneralFlagsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -255,7 +255,7 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2GeneralFlagsOutputR
 	)
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2GeneralFlagsOutputReference)SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV2GeneralFlags) {
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2GeneralFlagsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

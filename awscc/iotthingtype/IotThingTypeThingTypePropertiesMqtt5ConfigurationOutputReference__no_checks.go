@@ -1,0 +1,78 @@
+//go:build no_runtime_type_checking
+
+package iotthingtype
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (i *jsiiProxy_IotThingTypeThingTypePropertiesMqtt5ConfigurationOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotThingTypeThingTypePropertiesMqtt5ConfigurationOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotThingTypeThingTypePropertiesMqtt5ConfigurationOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotThingTypeThingTypePropertiesMqtt5ConfigurationOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotThingTypeThingTypePropertiesMqtt5ConfigurationOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotThingTypeThingTypePropertiesMqtt5ConfigurationOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotThingTypeThingTypePropertiesMqtt5ConfigurationOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotThingTypeThingTypePropertiesMqtt5ConfigurationOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotThingTypeThingTypePropertiesMqtt5ConfigurationOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotThingTypeThingTypePropertiesMqtt5ConfigurationOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotThingTypeThingTypePropertiesMqtt5ConfigurationOutputReference) validatePutPropagatingAttributesParameters(value interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotThingTypeThingTypePropertiesMqtt5ConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotThingTypeThingTypePropertiesMqtt5ConfigurationOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotThingTypeThingTypePropertiesMqtt5ConfigurationOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotThingTypeThingTypePropertiesMqtt5ConfigurationOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotThingTypeThingTypePropertiesMqtt5ConfigurationOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotThingTypeThingTypePropertiesMqtt5ConfigurationOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewIotThingTypeThingTypePropertiesMqtt5ConfigurationOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

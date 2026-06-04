@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccognitouserpoolusertogroupattachment/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cognito_user_pool_user_to_group_attachment awscc_cognito_user_pool_user_to_group_attachment}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cognito_user_pool_user_to_group_attachment awscc_cognito_user_pool_user_to_group_attachment}.
 type DataAwsccCognitoUserPoolUserToGroupAttachment interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -85,6 +85,10 @@ type DataAwsccCognitoUserPoolUserToGroupAttachment interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -290,7 +294,7 @@ func (j *jsiiProxy_DataAwsccCognitoUserPoolUserToGroupAttachment) UserPoolId() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cognito_user_pool_user_to_group_attachment awscc_cognito_user_pool_user_to_group_attachment} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cognito_user_pool_user_to_group_attachment awscc_cognito_user_pool_user_to_group_attachment} Data Source.
 func NewDataAwsccCognitoUserPoolUserToGroupAttachment(scope constructs.Construct, id *string, config *DataAwsccCognitoUserPoolUserToGroupAttachmentConfig) DataAwsccCognitoUserPoolUserToGroupAttachment {
 	_init_.Initialize()
 
@@ -308,7 +312,7 @@ func NewDataAwsccCognitoUserPoolUserToGroupAttachment(scope constructs.Construct
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cognito_user_pool_user_to_group_attachment awscc_cognito_user_pool_user_to_group_attachment} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cognito_user_pool_user_to_group_attachment awscc_cognito_user_pool_user_to_group_attachment} Data Source.
 func NewDataAwsccCognitoUserPoolUserToGroupAttachment_Override(d DataAwsccCognitoUserPoolUserToGroupAttachment, scope constructs.Construct, id *string, config *DataAwsccCognitoUserPoolUserToGroupAttachmentConfig) {
 	_init_.Initialize()
 
@@ -675,6 +679,32 @@ func (d *jsiiProxy_DataAwsccCognitoUserPoolUserToGroupAttachment) SynthesizeAttr
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCognitoUserPoolUserToGroupAttachment) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCognitoUserPoolUserToGroupAttachment) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

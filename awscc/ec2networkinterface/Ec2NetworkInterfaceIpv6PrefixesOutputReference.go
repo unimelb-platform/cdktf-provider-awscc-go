@@ -64,6 +64,7 @@ type Ec2NetworkInterfaceIpv6PrefixesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetIpv6Prefix()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (e *jsiiProxy_Ec2NetworkInterfaceIpv6PrefixesOutputReference) Interpolation
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_Ec2NetworkInterfaceIpv6PrefixesOutputReference) ResetIpv6Prefix() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetIpv6Prefix",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_Ec2NetworkInterfaceIpv6PrefixesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

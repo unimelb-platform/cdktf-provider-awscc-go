@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/s3bucket/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/s3_bucket awscc_s3_bucket}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/s3_bucket awscc_s3_bucket}.
 type S3Bucket interface {
 	cdktf.TerraformResource
 	AccelerateConfiguration() S3BucketAccelerateConfigurationOutputReference
@@ -66,6 +66,8 @@ type S3Bucket interface {
 	LifecycleConfigurationInput() interface{}
 	LoggingConfiguration() S3BucketLoggingConfigurationOutputReference
 	LoggingConfigurationInput() interface{}
+	MetadataTableConfiguration() S3BucketMetadataTableConfigurationOutputReference
+	MetadataTableConfigurationInput() interface{}
 	MetricsConfigurations() S3BucketMetricsConfigurationsList
 	MetricsConfigurationsInput() interface{}
 	// The tree node.
@@ -131,12 +133,22 @@ type S3Bucket interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -148,6 +160,7 @@ type S3Bucket interface {
 	PutInventoryConfigurations(value interface{})
 	PutLifecycleConfiguration(value *S3BucketLifecycleConfiguration)
 	PutLoggingConfiguration(value *S3BucketLoggingConfiguration)
+	PutMetadataTableConfiguration(value *S3BucketMetadataTableConfiguration)
 	PutMetricsConfigurations(value interface{})
 	PutNotificationConfiguration(value *S3BucketNotificationConfiguration)
 	PutObjectLockConfiguration(value *S3BucketObjectLockConfiguration)
@@ -167,6 +180,7 @@ type S3Bucket interface {
 	ResetInventoryConfigurations()
 	ResetLifecycleConfiguration()
 	ResetLoggingConfiguration()
+	ResetMetadataTableConfiguration()
 	ResetMetricsConfigurations()
 	ResetNotificationConfiguration()
 	ResetObjectLockConfiguration()
@@ -181,6 +195,9 @@ type S3Bucket interface {
 	ResetVersioningConfiguration()
 	ResetWebsiteConfiguration()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -525,6 +542,26 @@ func (j *jsiiProxy_S3Bucket) LoggingConfigurationInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_S3Bucket) MetadataTableConfiguration() S3BucketMetadataTableConfigurationOutputReference {
+	var returns S3BucketMetadataTableConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"metadataTableConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_S3Bucket) MetadataTableConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"metadataTableConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_S3Bucket) MetricsConfigurations() S3BucketMetricsConfigurationsList {
 	var returns S3BucketMetricsConfigurationsList
 	_jsii_.Get(
@@ -816,7 +853,7 @@ func (j *jsiiProxy_S3Bucket) WebsiteUrl() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/s3_bucket awscc_s3_bucket} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/s3_bucket awscc_s3_bucket} Resource.
 func NewS3Bucket(scope constructs.Construct, id *string, config *S3BucketConfig) S3Bucket {
 	_init_.Initialize()
 
@@ -834,7 +871,7 @@ func NewS3Bucket(scope constructs.Construct, id *string, config *S3BucketConfig)
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/s3_bucket awscc_s3_bucket} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/s3_bucket awscc_s3_bucket} Resource.
 func NewS3Bucket_Override(s S3Bucket, scope constructs.Construct, id *string, config *S3BucketConfig) {
 	_init_.Initialize()
 
@@ -1215,6 +1252,19 @@ func (s *jsiiProxy_S3Bucket) GetStringMapAttribute(terraformAttribute *string) *
 	return returns
 }
 
+func (s *jsiiProxy_S3Bucket) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (s *jsiiProxy_S3Bucket) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := s.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1242,6 +1292,17 @@ func (s *jsiiProxy_S3Bucket) InterpolationForAttribute(terraformAttribute *strin
 	return returns
 }
 
+func (s *jsiiProxy_S3Bucket) MoveFromId(id *string) {
+	if err := s.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (s *jsiiProxy_S3Bucket) MoveTo(moveTarget *string, index interface{}) {
 	if err := s.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1250,6 +1311,17 @@ func (s *jsiiProxy_S3Bucket) MoveTo(moveTarget *string, index interface{}) {
 		s,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (s *jsiiProxy_S3Bucket) MoveToId(id *string) {
+	if err := s.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1348,6 +1420,17 @@ func (s *jsiiProxy_S3Bucket) PutLoggingConfiguration(value *S3BucketLoggingConfi
 	_jsii_.InvokeVoid(
 		s,
 		"putLoggingConfiguration",
+		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_S3Bucket) PutMetadataTableConfiguration(value *S3BucketMetadataTableConfiguration) {
+	if err := s.validatePutMetadataTableConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putMetadataTableConfiguration",
 		[]interface{}{value},
 	)
 }
@@ -1531,6 +1614,14 @@ func (s *jsiiProxy_S3Bucket) ResetLoggingConfiguration() {
 	)
 }
 
+func (s *jsiiProxy_S3Bucket) ResetMetadataTableConfiguration() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetMetadataTableConfiguration",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_S3Bucket) ResetMetricsConfigurations() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1625,6 +1716,32 @@ func (s *jsiiProxy_S3Bucket) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		s,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_S3Bucket) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		s,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_S3Bucket) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

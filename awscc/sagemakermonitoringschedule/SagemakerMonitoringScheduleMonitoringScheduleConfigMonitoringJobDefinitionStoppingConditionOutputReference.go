@@ -64,6 +64,7 @@ type SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionS
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetMaxRuntimeInSeconds()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoring
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionStoppingConditionOutputReference) ResetMaxRuntimeInSeconds() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetMaxRuntimeInSeconds",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionStoppingConditionOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

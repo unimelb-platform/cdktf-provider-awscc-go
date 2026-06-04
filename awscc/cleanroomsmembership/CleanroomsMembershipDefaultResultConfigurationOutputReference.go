@@ -30,7 +30,7 @@ type CleanroomsMembershipDefaultResultConfigurationOutputReference interface {
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	OutputConfiguration() CleanroomsMembershipDefaultResultConfigurationOutputConfigurationOutputReference
-	OutputConfigurationInput() *CleanroomsMembershipDefaultResultConfigurationOutputConfiguration
+	OutputConfigurationInput() interface{}
 	RoleArn() *string
 	SetRoleArn(val *string)
 	RoleArnInput() *string
@@ -67,6 +67,7 @@ type CleanroomsMembershipDefaultResultConfigurationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutOutputConfiguration(value *CleanroomsMembershipDefaultResultConfigurationOutputConfiguration)
+	ResetOutputConfiguration()
 	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -143,8 +144,8 @@ func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputReference
 	return returns
 }
 
-func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputReference) OutputConfigurationInput() *CleanroomsMembershipDefaultResultConfigurationOutputConfiguration {
-	var returns *CleanroomsMembershipDefaultResultConfigurationOutputConfiguration
+func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputReference) OutputConfigurationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"outputConfigurationInput",
@@ -481,6 +482,14 @@ func (c *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputReference
 		c,
 		"putOutputConfiguration",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputReference) ResetOutputConfiguration() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetOutputConfiguration",
+		nil, // no parameters
 	)
 }
 

@@ -33,8 +33,8 @@ type DatabrewJobOutputsLocationOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DatabrewJobOutputsLocation
-	SetInternalValue(val *DatabrewJobOutputsLocation)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Key() *string
 	SetKey(val *string)
 	KeyInput() *string
@@ -70,6 +70,7 @@ type DatabrewJobOutputsLocationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucket()
 	ResetBucketOwner()
 	ResetKey()
 	// Produce the Token's value at resolution time.
@@ -167,8 +168,8 @@ func (j *jsiiProxy_DatabrewJobOutputsLocationOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DatabrewJobOutputsLocationOutputReference) InternalValue() *DatabrewJobOutputsLocation {
-	var returns *DatabrewJobOutputsLocation
+func (j *jsiiProxy_DatabrewJobOutputsLocationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -289,7 +290,7 @@ func (j *jsiiProxy_DatabrewJobOutputsLocationOutputReference)SetComplexObjectIsF
 	)
 }
 
-func (j *jsiiProxy_DatabrewJobOutputsLocationOutputReference)SetInternalValue(val *DatabrewJobOutputsLocation) {
+func (j *jsiiProxy_DatabrewJobOutputsLocationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -517,6 +518,14 @@ func (d *jsiiProxy_DatabrewJobOutputsLocationOutputReference) InterpolationForAt
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatabrewJobOutputsLocationOutputReference) ResetBucket() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetBucket",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatabrewJobOutputsLocationOutputReference) ResetBucketOwner() {

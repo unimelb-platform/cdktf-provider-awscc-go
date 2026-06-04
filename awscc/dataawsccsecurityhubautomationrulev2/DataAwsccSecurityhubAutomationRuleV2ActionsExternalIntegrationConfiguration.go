@@ -1,0 +1,6 @@
+package dataawsccsecurityhubautomationrulev2
+
+
+type DataAwsccSecurityhubAutomationRuleV2ActionsExternalIntegrationConfiguration struct {
+}
+

@@ -85,6 +85,8 @@ type LexBotBotLocalesOutputReference interface {
 	ResetCustomVocabulary()
 	ResetDescription()
 	ResetIntents()
+	ResetLocaleId()
+	ResetNluConfidenceThreshold()
 	ResetSlotTypes()
 	ResetVoiceSettings()
 	// Produce the Token's value at resolution time.
@@ -678,6 +680,22 @@ func (l *jsiiProxy_LexBotBotLocalesOutputReference) ResetIntents() {
 	_jsii_.InvokeVoid(
 		l,
 		"resetIntents",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesOutputReference) ResetLocaleId() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetLocaleId",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesOutputReference) ResetNluConfidenceThreshold() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetNluConfidenceThreshold",
 		nil, // no parameters
 	)
 }

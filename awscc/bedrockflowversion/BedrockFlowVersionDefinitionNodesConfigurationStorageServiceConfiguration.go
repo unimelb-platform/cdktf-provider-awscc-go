@@ -1,0 +1,6 @@
+package bedrockflowversion
+
+
+type BedrockFlowVersionDefinitionNodesConfigurationStorageServiceConfiguration struct {
+}
+

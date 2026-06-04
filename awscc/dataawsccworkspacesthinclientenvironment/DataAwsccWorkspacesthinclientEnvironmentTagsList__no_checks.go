@@ -4,6 +4,10 @@ package dataawsccworkspacesthinclientenvironment
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccWorkspacesthinclientEnvironmentTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccWorkspacesthinclientEnvironmentTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

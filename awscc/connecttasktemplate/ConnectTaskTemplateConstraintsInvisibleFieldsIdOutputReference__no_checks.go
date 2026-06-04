@@ -56,7 +56,7 @@ func (j *jsiiProxy_ConnectTaskTemplateConstraintsInvisibleFieldsIdOutputReferenc
 	return nil
 }
 
-func (j *jsiiProxy_ConnectTaskTemplateConstraintsInvisibleFieldsIdOutputReference) validateSetInternalValueParameters(val *ConnectTaskTemplateConstraintsInvisibleFieldsId) error {
+func (j *jsiiProxy_ConnectTaskTemplateConstraintsInvisibleFieldsIdOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

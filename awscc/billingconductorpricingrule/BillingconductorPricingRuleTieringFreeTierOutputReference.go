@@ -64,6 +64,7 @@ type BillingconductorPricingRuleTieringFreeTierOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetActivated()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (b *jsiiProxy_BillingconductorPricingRuleTieringFreeTierOutputReference) In
 	)
 
 	return returns
+}
+
+func (b *jsiiProxy_BillingconductorPricingRuleTieringFreeTierOutputReference) ResetActivated() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetActivated",
+		nil, // no parameters
+	)
 }
 
 func (b *jsiiProxy_BillingconductorPricingRuleTieringFreeTierOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

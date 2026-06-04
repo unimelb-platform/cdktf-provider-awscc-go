@@ -85,6 +85,8 @@ type PipesPipeTargetParametersBatchJobParametersOutputReference interface {
 	ResetArrayProperties()
 	ResetContainerOverrides()
 	ResetDependsOn()
+	ResetJobDefinition()
+	ResetJobName()
 	ResetParameters()
 	ResetRetryStrategy()
 	// Produce the Token's value at resolution time.
@@ -678,6 +680,22 @@ func (p *jsiiProxy_PipesPipeTargetParametersBatchJobParametersOutputReference) R
 	_jsii_.InvokeVoid(
 		p,
 		"resetDependsOn",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PipesPipeTargetParametersBatchJobParametersOutputReference) ResetJobDefinition() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetJobDefinition",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PipesPipeTargetParametersBatchJobParametersOutputReference) ResetJobName() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetJobName",
 		nil, // no parameters
 	)
 }

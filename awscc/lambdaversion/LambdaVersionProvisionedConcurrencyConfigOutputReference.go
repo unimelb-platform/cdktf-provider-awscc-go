@@ -64,6 +64,7 @@ type LambdaVersionProvisionedConcurrencyConfigOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetProvisionedConcurrentExecutions()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (l *jsiiProxy_LambdaVersionProvisionedConcurrencyConfigOutputReference) Int
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LambdaVersionProvisionedConcurrencyConfigOutputReference) ResetProvisionedConcurrentExecutions() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetProvisionedConcurrentExecutions",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LambdaVersionProvisionedConcurrencyConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

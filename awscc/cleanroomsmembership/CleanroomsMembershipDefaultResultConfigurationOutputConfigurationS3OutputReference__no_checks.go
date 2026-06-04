@@ -60,7 +60,7 @@ func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigura
 	return nil
 }
 
-func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference) validateSetInternalValueParameters(val *CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3) error {
+func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 
@@ -69,6 +69,10 @@ func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigura
 }
 
 func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference) validateSetResultFormatParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference) validateSetSingleFileOutputParameters(val interface{}) error {
 	return nil
 }
 

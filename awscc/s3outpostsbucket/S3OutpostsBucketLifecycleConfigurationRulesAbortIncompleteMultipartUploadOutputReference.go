@@ -64,6 +64,7 @@ type S3OutpostsBucketLifecycleConfigurationRulesAbortIncompleteMultipartUploadOu
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDaysAfterInitiation()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_S3OutpostsBucketLifecycleConfigurationRulesAbortIncompleteMul
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_S3OutpostsBucketLifecycleConfigurationRulesAbortIncompleteMultipartUploadOutputReference) ResetDaysAfterInitiation() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDaysAfterInitiation",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_S3OutpostsBucketLifecycleConfigurationRulesAbortIncompleteMultipartUploadOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -119,6 +119,14 @@ func (d *jsiiProxy_DatasyncTask) validateInterpolationForAttributeParameters(ter
 	return nil
 }
 
+func (d *jsiiProxy_DatasyncTask) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (d *jsiiProxy_DatasyncTask) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (d *jsiiProxy_DatasyncTask) validateMoveToParameters(moveTarget *string, in
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DatasyncTask) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -245,6 +261,17 @@ func (d *jsiiProxy_DatasyncTask) validatePutIncludesParameters(value interface{}
 		if !_jsii_.IsAnonymousProxy(value) {
 			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*DatasyncTaskIncludes; received %#v (a %T)", value, value)
 		}
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DatasyncTask) validatePutManifestConfigParameters(value *DatasyncTaskManifestConfig) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
 	}
 
 	return nil
@@ -523,6 +550,14 @@ func (j *jsiiProxy_DatasyncTask) validateSetProvisionersParameters(val *[]interf
 }
 
 func (j *jsiiProxy_DatasyncTask) validateSetSourceLocationArnParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_DatasyncTask) validateSetTaskModeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

@@ -9,14 +9,12 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/medialivemultiplexprogram/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/medialive_multiplexprogram awscc_medialive_multiplexprogram}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/medialive_multiplexprogram awscc_medialive_multiplexprogram}.
 type MedialiveMultiplexprogram interface {
 	cdktf.TerraformResource
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	ChannelId() *string
-	SetChannelId(val *string)
-	ChannelIdInput() *string
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -101,19 +99,28 @@ type MedialiveMultiplexprogram interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutMultiplexProgramSettings(value *MedialiveMultiplexprogramMultiplexProgramSettings)
 	PutPacketIdentifiersMap(value *MedialiveMultiplexprogramPacketIdentifiersMap)
 	PutPipelineDetails(value interface{})
-	ResetChannelId()
 	ResetMultiplexId()
 	ResetMultiplexProgramSettings()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -124,6 +131,9 @@ type MedialiveMultiplexprogram interface {
 	ResetPreferredChannelPipeline()
 	ResetProgramName()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -153,16 +163,6 @@ func (j *jsiiProxy_MedialiveMultiplexprogram) ChannelId() *string {
 	_jsii_.Get(
 		j,
 		"channelId",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_MedialiveMultiplexprogram) ChannelIdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"channelIdInput",
 		&returns,
 	)
 	return returns
@@ -449,7 +449,7 @@ func (j *jsiiProxy_MedialiveMultiplexprogram) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/medialive_multiplexprogram awscc_medialive_multiplexprogram} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/medialive_multiplexprogram awscc_medialive_multiplexprogram} Resource.
 func NewMedialiveMultiplexprogram(scope constructs.Construct, id *string, config *MedialiveMultiplexprogramConfig) MedialiveMultiplexprogram {
 	_init_.Initialize()
 
@@ -467,7 +467,7 @@ func NewMedialiveMultiplexprogram(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/medialive_multiplexprogram awscc_medialive_multiplexprogram} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/medialive_multiplexprogram awscc_medialive_multiplexprogram} Resource.
 func NewMedialiveMultiplexprogram_Override(m MedialiveMultiplexprogram, scope constructs.Construct, id *string, config *MedialiveMultiplexprogramConfig) {
 	_init_.Initialize()
 
@@ -475,17 +475,6 @@ func NewMedialiveMultiplexprogram_Override(m MedialiveMultiplexprogram, scope co
 		"awscc.medialiveMultiplexprogram.MedialiveMultiplexprogram",
 		[]interface{}{scope, id, config},
 		m,
-	)
-}
-
-func (j *jsiiProxy_MedialiveMultiplexprogram)SetChannelId(val *string) {
-	if err := j.validateSetChannelIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"channelId",
-		val,
 	)
 }
 
@@ -859,6 +848,19 @@ func (m *jsiiProxy_MedialiveMultiplexprogram) GetStringMapAttribute(terraformAtt
 	return returns
 }
 
+func (m *jsiiProxy_MedialiveMultiplexprogram) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (m *jsiiProxy_MedialiveMultiplexprogram) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -886,6 +888,17 @@ func (m *jsiiProxy_MedialiveMultiplexprogram) InterpolationForAttribute(terrafor
 	return returns
 }
 
+func (m *jsiiProxy_MedialiveMultiplexprogram) MoveFromId(id *string) {
+	if err := m.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_MedialiveMultiplexprogram) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -894,6 +907,17 @@ func (m *jsiiProxy_MedialiveMultiplexprogram) MoveTo(moveTarget *string, index i
 		m,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (m *jsiiProxy_MedialiveMultiplexprogram) MoveToId(id *string) {
+	if err := m.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -938,14 +962,6 @@ func (m *jsiiProxy_MedialiveMultiplexprogram) PutPipelineDetails(value interface
 		m,
 		"putPipelineDetails",
 		[]interface{}{value},
-	)
-}
-
-func (m *jsiiProxy_MedialiveMultiplexprogram) ResetChannelId() {
-	_jsii_.InvokeVoid(
-		m,
-		"resetChannelId",
-		nil, // no parameters
 	)
 }
 
@@ -1011,6 +1027,32 @@ func (m *jsiiProxy_MedialiveMultiplexprogram) SynthesizeAttributes() *map[string
 	_jsii_.Invoke(
 		m,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MedialiveMultiplexprogram) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		m,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MedialiveMultiplexprogram) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

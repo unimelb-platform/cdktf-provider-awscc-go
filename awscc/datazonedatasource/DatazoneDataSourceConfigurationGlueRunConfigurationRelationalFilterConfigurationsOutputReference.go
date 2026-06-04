@@ -32,8 +32,8 @@ type DatazoneDataSourceConfigurationGlueRunConfigurationRelationalFilterConfigur
 	FilterExpressionsInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DatazoneDataSourceConfigurationGlueRunConfigurationRelationalFilterConfigurations
-	SetInternalValue(val *DatazoneDataSourceConfigurationGlueRunConfigurationRelationalFilterConfigurations)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	SchemaName() *string
 	SetSchemaName(val *string)
 	SchemaNameInput() *string
@@ -70,6 +70,7 @@ type DatazoneDataSourceConfigurationGlueRunConfigurationRelationalFilterConfigur
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutFilterExpressions(value interface{})
+	ResetDatabaseName()
 	ResetFilterExpressions()
 	ResetSchemaName()
 	// Produce the Token's value at resolution time.
@@ -167,8 +168,8 @@ func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationRelational
 	return returns
 }
 
-func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationRelationalFilterConfigurationsOutputReference) InternalValue() *DatazoneDataSourceConfigurationGlueRunConfigurationRelationalFilterConfigurations {
-	var returns *DatazoneDataSourceConfigurationGlueRunConfigurationRelationalFilterConfigurations
+func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationRelationalFilterConfigurationsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -278,7 +279,7 @@ func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationRelational
 	)
 }
 
-func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationRelationalFilterConfigurationsOutputReference)SetInternalValue(val *DatazoneDataSourceConfigurationGlueRunConfigurationRelationalFilterConfigurations) {
+func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationRelationalFilterConfigurationsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -516,6 +517,14 @@ func (d *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationRelational
 		d,
 		"putFilterExpressions",
 		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationRelationalFilterConfigurationsOutputReference) ResetDatabaseName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetDatabaseName",
+		nil, // no parameters
 	)
 }
 

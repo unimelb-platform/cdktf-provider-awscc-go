@@ -95,6 +95,7 @@ type PipesPipeSourceParametersSelfManagedKafkaParametersOutputReference interfac
 	ResetMaximumBatchingWindowInSeconds()
 	ResetServerRootCaCertificate()
 	ResetStartingPosition()
+	ResetTopicName()
 	ResetVpc()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -781,6 +782,14 @@ func (p *jsiiProxy_PipesPipeSourceParametersSelfManagedKafkaParametersOutputRefe
 	_jsii_.InvokeVoid(
 		p,
 		"resetStartingPosition",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PipesPipeSourceParametersSelfManagedKafkaParametersOutputReference) ResetTopicName() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetTopicName",
 		nil, // no parameters
 	)
 }

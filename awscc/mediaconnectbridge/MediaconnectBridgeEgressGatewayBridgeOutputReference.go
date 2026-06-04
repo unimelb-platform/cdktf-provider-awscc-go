@@ -64,6 +64,7 @@ type MediaconnectBridgeEgressGatewayBridgeOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetMaxBitrate()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (m *jsiiProxy_MediaconnectBridgeEgressGatewayBridgeOutputReference) Interpo
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_MediaconnectBridgeEgressGatewayBridgeOutputReference) ResetMaxBitrate() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetMaxBitrate",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_MediaconnectBridgeEgressGatewayBridgeOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -56,7 +56,15 @@ func (m *jsiiProxy_MskReplicator) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
+func (m *jsiiProxy_MskReplicator) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_MskReplicator) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (m *jsiiProxy_MskReplicator) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -97,10 +105,6 @@ func (j *jsiiProxy_MskReplicator) validateSetConnectionParameters(val interface{
 }
 
 func (j *jsiiProxy_MskReplicator) validateSetCountParameters(val interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_MskReplicator) validateSetCurrentVersionParameters(val *string) error {
 	return nil
 }
 

@@ -76,6 +76,11 @@ type IotTopicRuleTopicRulePayloadErrorActionOpenSearchOutputReference interface 
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEndpoint()
+	ResetId()
+	ResetIndex()
+	ResetRoleArn()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -583,6 +588,46 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionOpenSearchOutputRefere
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionOpenSearchOutputReference) ResetEndpoint() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetEndpoint",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionOpenSearchOutputReference) ResetId() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionOpenSearchOutputReference) ResetIndex() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetIndex",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionOpenSearchOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionOpenSearchOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetType",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionOpenSearchOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

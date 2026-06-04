@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccmediaconnectflowentitlement/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediaconnect_flow_entitlement awscc_mediaconnect_flow_entitlement}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediaconnect_flow_entitlement awscc_mediaconnect_flow_entitlement}.
 type DataAwsccMediaconnectFlowEntitlement interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -90,6 +90,10 @@ type DataAwsccMediaconnectFlowEntitlement interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -345,7 +349,7 @@ func (j *jsiiProxy_DataAwsccMediaconnectFlowEntitlement) TerraformResourceType()
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediaconnect_flow_entitlement awscc_mediaconnect_flow_entitlement} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediaconnect_flow_entitlement awscc_mediaconnect_flow_entitlement} Data Source.
 func NewDataAwsccMediaconnectFlowEntitlement(scope constructs.Construct, id *string, config *DataAwsccMediaconnectFlowEntitlementConfig) DataAwsccMediaconnectFlowEntitlement {
 	_init_.Initialize()
 
@@ -363,7 +367,7 @@ func NewDataAwsccMediaconnectFlowEntitlement(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediaconnect_flow_entitlement awscc_mediaconnect_flow_entitlement} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediaconnect_flow_entitlement awscc_mediaconnect_flow_entitlement} Data Source.
 func NewDataAwsccMediaconnectFlowEntitlement_Override(d DataAwsccMediaconnectFlowEntitlement, scope constructs.Construct, id *string, config *DataAwsccMediaconnectFlowEntitlementConfig) {
 	_init_.Initialize()
 
@@ -730,6 +734,32 @@ func (d *jsiiProxy_DataAwsccMediaconnectFlowEntitlement) SynthesizeAttributes() 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMediaconnectFlowEntitlement) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMediaconnectFlowEntitlement) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

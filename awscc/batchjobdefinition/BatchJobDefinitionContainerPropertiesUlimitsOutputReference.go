@@ -70,6 +70,9 @@ type BatchJobDefinitionContainerPropertiesUlimitsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetHardLimit()
+	ResetName()
+	ResetSoftLimit()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesUlimitsOutputReference) 
 	)
 
 	return returns
+}
+
+func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesUlimitsOutputReference) ResetHardLimit() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetHardLimit",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesUlimitsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesUlimitsOutputReference) ResetSoftLimit() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetSoftLimit",
+		nil, // no parameters
+	)
 }
 
 func (b *jsiiProxy_BatchJobDefinitionContainerPropertiesUlimitsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

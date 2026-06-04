@@ -21,21 +21,21 @@ type LogsDeliverySourceConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The unique name of the Log source.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_delivery_source#name LogsDeliverySource#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_delivery_source#name LogsDeliverySource#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// The type of logs being delivered.
 	//
 	// Only mandatory when the resourceArn could match more than one. In such a case, the error message will contain all the possible options.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_delivery_source#log_type LogsDeliverySource#log_type}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_delivery_source#log_type LogsDeliverySource#log_type}
 	LogType *string `field:"optional" json:"logType" yaml:"logType"`
 	// The ARN of the resource that will be sending the logs.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_delivery_source#resource_arn LogsDeliverySource#resource_arn}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_delivery_source#resource_arn LogsDeliverySource#resource_arn}
 	ResourceArn *string `field:"optional" json:"resourceArn" yaml:"resourceArn"`
 	// The tags that have been assigned to this delivery source.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_delivery_source#tags LogsDeliverySource#tags}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_delivery_source#tags LogsDeliverySource#tags}
 	Tags interface{} `field:"optional" json:"tags" yaml:"tags"`
 }
 

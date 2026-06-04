@@ -70,6 +70,7 @@ type AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesS3OutputR
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutS3OutputFormatConfig(value *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesS3S3OutputFormatConfig)
+	ResetBucketName()
 	ResetBucketPrefix()
 	ResetS3OutputFormatConfig()
 	// Produce the Token's value at resolution time.
@@ -516,6 +517,14 @@ func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPrope
 		a,
 		"putS3OutputFormatConfig",
 		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesS3OutputReference) ResetBucketName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetBucketName",
+		nil, // no parameters
 	)
 }
 

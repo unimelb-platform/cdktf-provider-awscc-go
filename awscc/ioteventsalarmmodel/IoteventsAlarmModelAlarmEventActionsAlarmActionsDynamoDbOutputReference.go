@@ -91,13 +91,16 @@ type IoteventsAlarmModelAlarmEventActionsAlarmActionsDynamoDbOutputReference int
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutPayload(value *IoteventsAlarmModelAlarmEventActionsAlarmActionsDynamoDbPayload)
+	ResetHashKeyField()
 	ResetHashKeyType()
+	ResetHashKeyValue()
 	ResetOperation()
 	ResetPayload()
 	ResetPayloadField()
 	ResetRangeKeyField()
 	ResetRangeKeyType()
 	ResetRangeKeyValue()
+	ResetTableName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -762,10 +765,26 @@ func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsDynamoDbOutpu
 	)
 }
 
+func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsDynamoDbOutputReference) ResetHashKeyField() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetHashKeyField",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsDynamoDbOutputReference) ResetHashKeyType() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetHashKeyType",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsDynamoDbOutputReference) ResetHashKeyValue() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetHashKeyValue",
 		nil, // no parameters
 	)
 }
@@ -814,6 +833,14 @@ func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsDynamoDbOutpu
 	_jsii_.InvokeVoid(
 		i,
 		"resetRangeKeyValue",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsDynamoDbOutputReference) ResetTableName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTableName",
 		nil, // no parameters
 	)
 }

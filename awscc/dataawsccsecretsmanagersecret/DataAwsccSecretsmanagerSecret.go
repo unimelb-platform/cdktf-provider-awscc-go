@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccsecretsmanagersecret/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/secretsmanager_secret awscc_secretsmanager_secret}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/secretsmanager_secret awscc_secretsmanager_secret}.
 type DataAwsccSecretsmanagerSecret interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -52,6 +52,7 @@ type DataAwsccSecretsmanagerSecret interface {
 	// Experimental.
 	RawOverrides() interface{}
 	ReplicaRegions() DataAwsccSecretsmanagerSecretReplicaRegionsList
+	SecretId() *string
 	SecretString() *string
 	Tags() DataAwsccSecretsmanagerSecretTagsList
 	// Experimental.
@@ -89,6 +90,10 @@ type DataAwsccSecretsmanagerSecret interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -283,6 +288,16 @@ func (j *jsiiProxy_DataAwsccSecretsmanagerSecret) ReplicaRegions() DataAwsccSecr
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccSecretsmanagerSecret) SecretId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"secretId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccSecretsmanagerSecret) SecretString() *string {
 	var returns *string
 	_jsii_.Get(
@@ -334,7 +349,7 @@ func (j *jsiiProxy_DataAwsccSecretsmanagerSecret) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/secretsmanager_secret awscc_secretsmanager_secret} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/secretsmanager_secret awscc_secretsmanager_secret} Data Source.
 func NewDataAwsccSecretsmanagerSecret(scope constructs.Construct, id *string, config *DataAwsccSecretsmanagerSecretConfig) DataAwsccSecretsmanagerSecret {
 	_init_.Initialize()
 
@@ -352,7 +367,7 @@ func NewDataAwsccSecretsmanagerSecret(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/secretsmanager_secret awscc_secretsmanager_secret} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/secretsmanager_secret awscc_secretsmanager_secret} Data Source.
 func NewDataAwsccSecretsmanagerSecret_Override(d DataAwsccSecretsmanagerSecret, scope constructs.Construct, id *string, config *DataAwsccSecretsmanagerSecretConfig) {
 	_init_.Initialize()
 
@@ -719,6 +734,32 @@ func (d *jsiiProxy_DataAwsccSecretsmanagerSecret) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSecretsmanagerSecret) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSecretsmanagerSecret) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

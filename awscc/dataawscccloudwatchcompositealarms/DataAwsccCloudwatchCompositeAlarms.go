@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccloudwatchcompositealarms/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudwatch_composite_alarms awscc_cloudwatch_composite_alarms}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudwatch_composite_alarms awscc_cloudwatch_composite_alarms}.
 type DataAwsccCloudwatchCompositeAlarms interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccCloudwatchCompositeAlarms interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccCloudwatchCompositeAlarms) TerraformResourceType() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudwatch_composite_alarms awscc_cloudwatch_composite_alarms} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudwatch_composite_alarms awscc_cloudwatch_composite_alarms} Data Source.
 func NewDataAwsccCloudwatchCompositeAlarms(scope constructs.Construct, id *string, config *DataAwsccCloudwatchCompositeAlarmsConfig) DataAwsccCloudwatchCompositeAlarms {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccCloudwatchCompositeAlarms(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudwatch_composite_alarms awscc_cloudwatch_composite_alarms} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudwatch_composite_alarms awscc_cloudwatch_composite_alarms} Data Source.
 func NewDataAwsccCloudwatchCompositeAlarms_Override(d DataAwsccCloudwatchCompositeAlarms, scope constructs.Construct, id *string, config *DataAwsccCloudwatchCompositeAlarmsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccCloudwatchCompositeAlarms) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudwatchCompositeAlarms) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudwatchCompositeAlarms) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

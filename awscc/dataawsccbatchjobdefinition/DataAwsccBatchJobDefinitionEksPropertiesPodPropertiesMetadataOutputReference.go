@@ -10,6 +10,7 @@ import (
 
 type DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference interface {
 	cdktf.ComplexObject
+	Annotations() cdktf.StringMap
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -29,7 +30,8 @@ type DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReferenc
 	Fqn() *string
 	InternalValue() *DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesMetadata
 	SetInternalValue(val *DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesMetadata)
-	Labels() *string
+	Labels() cdktf.StringMap
+	Namespace() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -75,6 +77,16 @@ type DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReferenc
 // The jsii proxy struct for DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference
 type jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) Annotations() cdktf.StringMap {
+	var returns cdktf.StringMap
+	_jsii_.Get(
+		j,
+		"annotations",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) ComplexObjectIndex() interface{} {
@@ -127,11 +139,21 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesMetadata
 	return returns
 }
 
-func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) Labels() *string {
-	var returns *string
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) Labels() cdktf.StringMap {
+	var returns cdktf.StringMap
 	_jsii_.Get(
 		j,
 		"labels",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference) Namespace() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"namespace",
 		&returns,
 	)
 	return returns

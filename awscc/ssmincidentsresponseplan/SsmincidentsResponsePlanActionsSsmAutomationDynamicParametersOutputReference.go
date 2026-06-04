@@ -41,7 +41,7 @@ type SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersOutputReferenc
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	Value() SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersValueOutputReference
-	ValueInput() *SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersValue
+	ValueInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -67,6 +67,8 @@ type SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersOutputReferenc
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutValue(value *SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersValue)
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -182,8 +184,8 @@ func (j *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationDynamicParameters
 	return returns
 }
 
-func (j *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersOutputReference) ValueInput() *SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersValue {
-	var returns *SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersValue
+func (j *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersOutputReference) ValueInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"valueInput",
@@ -480,6 +482,22 @@ func (s *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationDynamicParameters
 		s,
 		"putValue",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetValue",
+		nil, // no parameters
 	)
 }
 

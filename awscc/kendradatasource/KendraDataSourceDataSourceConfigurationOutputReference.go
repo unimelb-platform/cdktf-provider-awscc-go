@@ -45,6 +45,8 @@ type KendraDataSourceDataSourceConfigurationOutputReference interface {
 	ServiceNowConfigurationInput() interface{}
 	SharePointConfiguration() KendraDataSourceDataSourceConfigurationSharePointConfigurationOutputReference
 	SharePointConfigurationInput() interface{}
+	TemplateConfiguration() KendraDataSourceDataSourceConfigurationTemplateConfigurationOutputReference
+	TemplateConfigurationInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -89,6 +91,7 @@ type KendraDataSourceDataSourceConfigurationOutputReference interface {
 	PutSalesforceConfiguration(value *KendraDataSourceDataSourceConfigurationSalesforceConfiguration)
 	PutServiceNowConfiguration(value *KendraDataSourceDataSourceConfigurationServiceNowConfiguration)
 	PutSharePointConfiguration(value *KendraDataSourceDataSourceConfigurationSharePointConfiguration)
+	PutTemplateConfiguration(value *KendraDataSourceDataSourceConfigurationTemplateConfiguration)
 	PutWebCrawlerConfiguration(value *KendraDataSourceDataSourceConfigurationWebCrawlerConfiguration)
 	PutWorkDocsConfiguration(value *KendraDataSourceDataSourceConfigurationWorkDocsConfiguration)
 	ResetConfluenceConfiguration()
@@ -99,6 +102,7 @@ type KendraDataSourceDataSourceConfigurationOutputReference interface {
 	ResetSalesforceConfiguration()
 	ResetServiceNowConfiguration()
 	ResetSharePointConfiguration()
+	ResetTemplateConfiguration()
 	ResetWebCrawlerConfiguration()
 	ResetWorkDocsConfiguration()
 	// Produce the Token's value at resolution time.
@@ -321,6 +325,26 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationOutputReference) Share
 	_jsii_.Get(
 		j,
 		"sharePointConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationOutputReference) TemplateConfiguration() KendraDataSourceDataSourceConfigurationTemplateConfigurationOutputReference {
+	var returns KendraDataSourceDataSourceConfigurationTemplateConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"templateConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationOutputReference) TemplateConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"templateConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -743,6 +767,17 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationOutputReference) PutSh
 	)
 }
 
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationOutputReference) PutTemplateConfiguration(value *KendraDataSourceDataSourceConfigurationTemplateConfiguration) {
+	if err := k.validatePutTemplateConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"putTemplateConfiguration",
+		[]interface{}{value},
+	)
+}
+
 func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationOutputReference) PutWebCrawlerConfiguration(value *KendraDataSourceDataSourceConfigurationWebCrawlerConfiguration) {
 	if err := k.validatePutWebCrawlerConfigurationParameters(value); err != nil {
 		panic(err)
@@ -825,6 +860,14 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationOutputReference) Reset
 	_jsii_.InvokeVoid(
 		k,
 		"resetSharePointConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationOutputReference) ResetTemplateConfiguration() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetTemplateConfiguration",
 		nil, // no parameters
 	)
 }

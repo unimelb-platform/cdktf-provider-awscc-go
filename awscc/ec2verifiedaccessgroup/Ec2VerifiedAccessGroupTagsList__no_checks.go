@@ -4,6 +4,10 @@ package ec2verifiedaccessgroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (e *jsiiProxy_Ec2VerifiedAccessGroupTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VerifiedAccessGroupTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

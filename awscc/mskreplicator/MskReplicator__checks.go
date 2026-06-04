@@ -119,6 +119,14 @@ func (m *jsiiProxy_MskReplicator) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
+func (m *jsiiProxy_MskReplicator) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (m *jsiiProxy_MskReplicator) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (m *jsiiProxy_MskReplicator) validateMoveToParameters(moveTarget *string, i
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (m *jsiiProxy_MskReplicator) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -406,14 +422,6 @@ func (j *jsiiProxy_MskReplicator) validateSetCountParameters(val interface{}) er
 		if !_jsii_.IsAnonymousProxy(val) {
 			return fmt.Errorf("parameter val must be one of the allowed types: *float64, cdktf.TerraformCount; received %#v (a %T)", val, val)
 		}
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_MskReplicator) validateSetCurrentVersionParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil

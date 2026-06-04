@@ -56,11 +56,23 @@ func (t *jsiiProxy_TransferAgreement) validateInterpolationForAttributeParameter
 	return nil
 }
 
+func (t *jsiiProxy_TransferAgreement) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (t *jsiiProxy_TransferAgreement) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (t *jsiiProxy_TransferAgreement) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (t *jsiiProxy_TransferAgreement) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (t *jsiiProxy_TransferAgreement) validatePutCustomDirectoriesParameters(value *TransferAgreementCustomDirectories) error {
 	return nil
 }
 
@@ -104,6 +116,10 @@ func (j *jsiiProxy_TransferAgreement) validateSetDescriptionParameters(val *stri
 	return nil
 }
 
+func (j *jsiiProxy_TransferAgreement) validateSetEnforceMessageSigningParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_TransferAgreement) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }
@@ -113,6 +129,10 @@ func (j *jsiiProxy_TransferAgreement) validateSetLocalProfileIdParameters(val *s
 }
 
 func (j *jsiiProxy_TransferAgreement) validateSetPartnerProfileIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_TransferAgreement) validateSetPreserveFilenameParameters(val *string) error {
 	return nil
 }
 

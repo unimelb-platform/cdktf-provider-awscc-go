@@ -67,6 +67,7 @@ type KafkaconnectConnectorLogDeliveryWorkerLogDeliveryCloudwatchLogsOutputRefere
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEnabled()
 	ResetLogGroup()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (k *jsiiProxy_KafkaconnectConnectorLogDeliveryWorkerLogDeliveryCloudwatchLo
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KafkaconnectConnectorLogDeliveryWorkerLogDeliveryCloudwatchLogsOutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetEnabled",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KafkaconnectConnectorLogDeliveryWorkerLogDeliveryCloudwatchLogsOutputReference) ResetLogGroup() {

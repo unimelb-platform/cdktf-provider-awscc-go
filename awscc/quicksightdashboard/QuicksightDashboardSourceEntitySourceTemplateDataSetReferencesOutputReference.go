@@ -33,8 +33,8 @@ type QuicksightDashboardSourceEntitySourceTemplateDataSetReferencesOutputReferen
 	DataSetPlaceholderInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *QuicksightDashboardSourceEntitySourceTemplateDataSetReferences
-	SetInternalValue(val *QuicksightDashboardSourceEntitySourceTemplateDataSetReferences)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,6 +67,8 @@ type QuicksightDashboardSourceEntitySourceTemplateDataSetReferencesOutputReferen
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDataSetArn()
+	ResetDataSetPlaceholder()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -162,8 +164,8 @@ func (j *jsiiProxy_QuicksightDashboardSourceEntitySourceTemplateDataSetReference
 	return returns
 }
 
-func (j *jsiiProxy_QuicksightDashboardSourceEntitySourceTemplateDataSetReferencesOutputReference) InternalValue() *QuicksightDashboardSourceEntitySourceTemplateDataSetReferences {
-	var returns *QuicksightDashboardSourceEntitySourceTemplateDataSetReferences
+func (j *jsiiProxy_QuicksightDashboardSourceEntitySourceTemplateDataSetReferencesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -264,7 +266,7 @@ func (j *jsiiProxy_QuicksightDashboardSourceEntitySourceTemplateDataSetReference
 	)
 }
 
-func (j *jsiiProxy_QuicksightDashboardSourceEntitySourceTemplateDataSetReferencesOutputReference)SetInternalValue(val *QuicksightDashboardSourceEntitySourceTemplateDataSetReferences) {
+func (j *jsiiProxy_QuicksightDashboardSourceEntitySourceTemplateDataSetReferencesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (q *jsiiProxy_QuicksightDashboardSourceEntitySourceTemplateDataSetReference
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDashboardSourceEntitySourceTemplateDataSetReferencesOutputReference) ResetDataSetArn() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDataSetArn",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDashboardSourceEntitySourceTemplateDataSetReferencesOutputReference) ResetDataSetPlaceholder() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDataSetPlaceholder",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDashboardSourceEntitySourceTemplateDataSetReferencesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

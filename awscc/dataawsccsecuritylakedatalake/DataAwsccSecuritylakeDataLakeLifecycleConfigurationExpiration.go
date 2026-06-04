@@ -1,0 +1,6 @@
+package dataawsccsecuritylakedatalake
+
+
+type DataAwsccSecuritylakeDataLakeLifecycleConfigurationExpiration struct {
+}
+

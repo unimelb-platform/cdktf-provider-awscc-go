@@ -67,6 +67,8 @@ type EmrserverlessApplicationTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (e *jsiiProxy_EmrserverlessApplicationTagsOutputReference) InterpolationFor
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EmrserverlessApplicationTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EmrserverlessApplicationTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EmrserverlessApplicationTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

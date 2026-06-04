@@ -56,7 +56,7 @@ func (j *jsiiProxy_ConnectTaskTemplateConstraintsReadOnlyFieldsIdOutputReference
 	return nil
 }
 
-func (j *jsiiProxy_ConnectTaskTemplateConstraintsReadOnlyFieldsIdOutputReference) validateSetInternalValueParameters(val *ConnectTaskTemplateConstraintsReadOnlyFieldsId) error {
+func (j *jsiiProxy_ConnectTaskTemplateConstraintsReadOnlyFieldsIdOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

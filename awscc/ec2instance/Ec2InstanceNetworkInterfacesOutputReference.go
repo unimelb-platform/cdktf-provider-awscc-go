@@ -40,6 +40,8 @@ type Ec2InstanceNetworkInterfacesOutputReference interface {
 	DeviceIndex() *string
 	SetDeviceIndex(val *string)
 	DeviceIndexInput() *string
+	EnaSrdSpecification() Ec2InstanceNetworkInterfacesEnaSrdSpecificationOutputReference
+	EnaSrdSpecificationInput() interface{}
 	// Experimental.
 	Fqn() *string
 	GroupSet() *[]*string
@@ -98,12 +100,15 @@ type Ec2InstanceNetworkInterfacesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutEnaSrdSpecification(value *Ec2InstanceNetworkInterfacesEnaSrdSpecification)
 	PutIpv6Addresses(value interface{})
 	PutPrivateIpAddresses(value interface{})
 	ResetAssociateCarrierIpAddress()
 	ResetAssociatePublicIpAddress()
 	ResetDeleteOnTermination()
 	ResetDescription()
+	ResetDeviceIndex()
+	ResetEnaSrdSpecification()
 	ResetGroupSet()
 	ResetIpv6AddressCount()
 	ResetIpv6Addresses()
@@ -252,6 +257,26 @@ func (j *jsiiProxy_Ec2InstanceNetworkInterfacesOutputReference) DeviceIndexInput
 	_jsii_.Get(
 		j,
 		"deviceIndexInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2InstanceNetworkInterfacesOutputReference) EnaSrdSpecification() Ec2InstanceNetworkInterfacesEnaSrdSpecificationOutputReference {
+	var returns Ec2InstanceNetworkInterfacesEnaSrdSpecificationOutputReference
+	_jsii_.Get(
+		j,
+		"enaSrdSpecification",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2InstanceNetworkInterfacesOutputReference) EnaSrdSpecificationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enaSrdSpecificationInput",
 		&returns,
 	)
 	return returns
@@ -847,6 +872,17 @@ func (e *jsiiProxy_Ec2InstanceNetworkInterfacesOutputReference) InterpolationFor
 	return returns
 }
 
+func (e *jsiiProxy_Ec2InstanceNetworkInterfacesOutputReference) PutEnaSrdSpecification(value *Ec2InstanceNetworkInterfacesEnaSrdSpecification) {
+	if err := e.validatePutEnaSrdSpecificationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putEnaSrdSpecification",
+		[]interface{}{value},
+	)
+}
+
 func (e *jsiiProxy_Ec2InstanceNetworkInterfacesOutputReference) PutIpv6Addresses(value interface{}) {
 	if err := e.validatePutIpv6AddressesParameters(value); err != nil {
 		panic(err)
@@ -897,6 +933,22 @@ func (e *jsiiProxy_Ec2InstanceNetworkInterfacesOutputReference) ResetDescription
 	_jsii_.InvokeVoid(
 		e,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2InstanceNetworkInterfacesOutputReference) ResetDeviceIndex() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetDeviceIndex",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2InstanceNetworkInterfacesOutputReference) ResetEnaSrdSpecification() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetEnaSrdSpecification",
 		nil, // no parameters
 	)
 }

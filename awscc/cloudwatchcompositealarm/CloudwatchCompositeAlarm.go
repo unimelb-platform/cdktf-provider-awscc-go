@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/cloudwatchcompositealarm/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudwatch_composite_alarm awscc_cloudwatch_composite_alarm}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudwatch_composite_alarm awscc_cloudwatch_composite_alarm}.
 type CloudwatchCompositeAlarm interface {
 	cdktf.TerraformResource
 	ActionsEnabled() interface{}
@@ -84,6 +84,8 @@ type CloudwatchCompositeAlarm interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	Tags() CloudwatchCompositeAlarmTagsList
+	TagsInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -114,15 +116,26 @@ type CloudwatchCompositeAlarm interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTags(value interface{})
 	ResetActionsEnabled()
 	ResetActionsSuppressor()
 	ResetActionsSuppressorExtensionPeriod()
@@ -135,7 +148,11 @@ type CloudwatchCompositeAlarm interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -500,6 +517,26 @@ func (j *jsiiProxy_CloudwatchCompositeAlarm) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_CloudwatchCompositeAlarm) Tags() CloudwatchCompositeAlarmTagsList {
+	var returns CloudwatchCompositeAlarmTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CloudwatchCompositeAlarm) TagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_CloudwatchCompositeAlarm) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -531,7 +568,7 @@ func (j *jsiiProxy_CloudwatchCompositeAlarm) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudwatch_composite_alarm awscc_cloudwatch_composite_alarm} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudwatch_composite_alarm awscc_cloudwatch_composite_alarm} Resource.
 func NewCloudwatchCompositeAlarm(scope constructs.Construct, id *string, config *CloudwatchCompositeAlarmConfig) CloudwatchCompositeAlarm {
 	_init_.Initialize()
 
@@ -549,7 +586,7 @@ func NewCloudwatchCompositeAlarm(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudwatch_composite_alarm awscc_cloudwatch_composite_alarm} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudwatch_composite_alarm awscc_cloudwatch_composite_alarm} Resource.
 func NewCloudwatchCompositeAlarm_Override(c CloudwatchCompositeAlarm, scope constructs.Construct, id *string, config *CloudwatchCompositeAlarmConfig) {
 	_init_.Initialize()
 
@@ -1007,6 +1044,19 @@ func (c *jsiiProxy_CloudwatchCompositeAlarm) GetStringMapAttribute(terraformAttr
 	return returns
 }
 
+func (c *jsiiProxy_CloudwatchCompositeAlarm) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_CloudwatchCompositeAlarm) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1034,6 +1084,17 @@ func (c *jsiiProxy_CloudwatchCompositeAlarm) InterpolationForAttribute(terraform
 	return returns
 }
 
+func (c *jsiiProxy_CloudwatchCompositeAlarm) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CloudwatchCompositeAlarm) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1045,6 +1106,17 @@ func (c *jsiiProxy_CloudwatchCompositeAlarm) MoveTo(moveTarget *string, index in
 	)
 }
 
+func (c *jsiiProxy_CloudwatchCompositeAlarm) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CloudwatchCompositeAlarm) OverrideLogicalId(newLogicalId *string) {
 	if err := c.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -1053,6 +1125,17 @@ func (c *jsiiProxy_CloudwatchCompositeAlarm) OverrideLogicalId(newLogicalId *str
 		c,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (c *jsiiProxy_CloudwatchCompositeAlarm) PutTags(value interface{}) {
+	if err := c.validatePutTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putTags",
+		[]interface{}{value},
 	)
 }
 
@@ -1136,12 +1219,46 @@ func (c *jsiiProxy_CloudwatchCompositeAlarm) ResetOverrideLogicalId() {
 	)
 }
 
+func (c *jsiiProxy_CloudwatchCompositeAlarm) ResetTags() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetTags",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CloudwatchCompositeAlarm) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CloudwatchCompositeAlarm) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CloudwatchCompositeAlarm) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

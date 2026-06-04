@@ -68,6 +68,7 @@ type IotMitigationActionActionParamsAddThingsToThingGroupParamsOutputReference i
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetOverrideDynamicGroups()
+	ResetThingGroupNames()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (i *jsiiProxy_IotMitigationActionActionParamsAddThingsToThingGroupParamsOut
 	_jsii_.InvokeVoid(
 		i,
 		"resetOverrideDynamicGroups",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotMitigationActionActionParamsAddThingsToThingGroupParamsOutputReference) ResetThingGroupNames() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetThingGroupNames",
 		nil, // no parameters
 	)
 }

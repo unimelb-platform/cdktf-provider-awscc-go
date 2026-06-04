@@ -10,6 +10,9 @@ import (
 
 type SagemakerUserProfileUserSettingsOutputReference interface {
 	cdktf.ComplexObject
+	AutoMountHomeEfs() *string
+	SetAutoMountHomeEfs(val *string)
+	AutoMountHomeEfsInput() *string
 	CodeEditorAppSettings() SagemakerUserProfileUserSettingsCodeEditorAppSettingsOutputReference
 	CodeEditorAppSettingsInput() interface{}
 	// the index of the complex object in a list.
@@ -59,6 +62,8 @@ type SagemakerUserProfileUserSettingsOutputReference interface {
 	StudioWebPortal() *string
 	SetStudioWebPortal(val *string)
 	StudioWebPortalInput() *string
+	StudioWebPortalSettings() SagemakerUserProfileUserSettingsStudioWebPortalSettingsOutputReference
+	StudioWebPortalSettingsInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -100,6 +105,8 @@ type SagemakerUserProfileUserSettingsOutputReference interface {
 	PutRStudioServerProAppSettings(value *SagemakerUserProfileUserSettingsRStudioServerProAppSettings)
 	PutSharingSettings(value *SagemakerUserProfileUserSettingsSharingSettings)
 	PutSpaceStorageSettings(value *SagemakerUserProfileUserSettingsSpaceStorageSettings)
+	PutStudioWebPortalSettings(value *SagemakerUserProfileUserSettingsStudioWebPortalSettings)
+	ResetAutoMountHomeEfs()
 	ResetCodeEditorAppSettings()
 	ResetCustomFileSystemConfigs()
 	ResetCustomPosixUserConfig()
@@ -113,6 +120,7 @@ type SagemakerUserProfileUserSettingsOutputReference interface {
 	ResetSharingSettings()
 	ResetSpaceStorageSettings()
 	ResetStudioWebPortal()
+	ResetStudioWebPortalSettings()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -126,6 +134,26 @@ type SagemakerUserProfileUserSettingsOutputReference interface {
 // The jsii proxy struct for SagemakerUserProfileUserSettingsOutputReference
 type jsiiProxy_SagemakerUserProfileUserSettingsOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_SagemakerUserProfileUserSettingsOutputReference) AutoMountHomeEfs() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"autoMountHomeEfs",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerUserProfileUserSettingsOutputReference) AutoMountHomeEfsInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"autoMountHomeEfsInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_SagemakerUserProfileUserSettingsOutputReference) CodeEditorAppSettings() SagemakerUserProfileUserSettingsCodeEditorAppSettingsOutputReference {
@@ -438,6 +466,26 @@ func (j *jsiiProxy_SagemakerUserProfileUserSettingsOutputReference) StudioWebPor
 	return returns
 }
 
+func (j *jsiiProxy_SagemakerUserProfileUserSettingsOutputReference) StudioWebPortalSettings() SagemakerUserProfileUserSettingsStudioWebPortalSettingsOutputReference {
+	var returns SagemakerUserProfileUserSettingsStudioWebPortalSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"studioWebPortalSettings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerUserProfileUserSettingsOutputReference) StudioWebPortalSettingsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"studioWebPortalSettingsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SagemakerUserProfileUserSettingsOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -483,6 +531,17 @@ func NewSagemakerUserProfileUserSettingsOutputReference_Override(s SagemakerUser
 		"awscc.sagemakerUserProfile.SagemakerUserProfileUserSettingsOutputReference",
 		[]interface{}{terraformResource, terraformAttribute},
 		s,
+	)
+}
+
+func (j *jsiiProxy_SagemakerUserProfileUserSettingsOutputReference)SetAutoMountHomeEfs(val *string) {
+	if err := j.validateSetAutoMountHomeEfsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"autoMountHomeEfs",
+		val,
 	)
 }
 
@@ -870,6 +929,25 @@ func (s *jsiiProxy_SagemakerUserProfileUserSettingsOutputReference) PutSpaceStor
 	)
 }
 
+func (s *jsiiProxy_SagemakerUserProfileUserSettingsOutputReference) PutStudioWebPortalSettings(value *SagemakerUserProfileUserSettingsStudioWebPortalSettings) {
+	if err := s.validatePutStudioWebPortalSettingsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putStudioWebPortalSettings",
+		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SagemakerUserProfileUserSettingsOutputReference) ResetAutoMountHomeEfs() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetAutoMountHomeEfs",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerUserProfileUserSettingsOutputReference) ResetCodeEditorAppSettings() {
 	_jsii_.InvokeVoid(
 		s,
@@ -970,6 +1048,14 @@ func (s *jsiiProxy_SagemakerUserProfileUserSettingsOutputReference) ResetStudioW
 	_jsii_.InvokeVoid(
 		s,
 		"resetStudioWebPortal",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerUserProfileUserSettingsOutputReference) ResetStudioWebPortalSettings() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStudioWebPortalSettings",
 		nil, // no parameters
 	)
 }

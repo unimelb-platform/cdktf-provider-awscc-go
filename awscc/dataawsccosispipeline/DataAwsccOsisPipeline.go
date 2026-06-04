@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccosispipeline/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/osis_pipeline awscc_osis_pipeline}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/osis_pipeline awscc_osis_pipeline}.
 type DataAwsccOsisPipeline interface {
 	cdktf.TerraformDataSource
 	BufferOptions() DataAwsccOsisPipelineBufferOptionsOutputReference
@@ -64,6 +64,7 @@ type DataAwsccOsisPipeline interface {
 	// Experimental.
 	TerraformResourceType() *string
 	VpcEndpoints() DataAwsccOsisPipelineVpcEndpointsList
+	VpcEndpointService() *string
 	VpcOptions() DataAwsccOsisPipelineVpcOptionsOutputReference
 	// Experimental.
 	AddOverride(path *string, value interface{})
@@ -94,6 +95,10 @@ type DataAwsccOsisPipeline interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -378,6 +383,16 @@ func (j *jsiiProxy_DataAwsccOsisPipeline) VpcEndpoints() DataAwsccOsisPipelineVp
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccOsisPipeline) VpcEndpointService() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"vpcEndpointService",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccOsisPipeline) VpcOptions() DataAwsccOsisPipelineVpcOptionsOutputReference {
 	var returns DataAwsccOsisPipelineVpcOptionsOutputReference
 	_jsii_.Get(
@@ -389,7 +404,7 @@ func (j *jsiiProxy_DataAwsccOsisPipeline) VpcOptions() DataAwsccOsisPipelineVpcO
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/osis_pipeline awscc_osis_pipeline} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/osis_pipeline awscc_osis_pipeline} Data Source.
 func NewDataAwsccOsisPipeline(scope constructs.Construct, id *string, config *DataAwsccOsisPipelineConfig) DataAwsccOsisPipeline {
 	_init_.Initialize()
 
@@ -407,7 +422,7 @@ func NewDataAwsccOsisPipeline(scope constructs.Construct, id *string, config *Da
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/osis_pipeline awscc_osis_pipeline} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/osis_pipeline awscc_osis_pipeline} Data Source.
 func NewDataAwsccOsisPipeline_Override(d DataAwsccOsisPipeline, scope constructs.Construct, id *string, config *DataAwsccOsisPipelineConfig) {
 	_init_.Initialize()
 
@@ -774,6 +789,32 @@ func (d *jsiiProxy_DataAwsccOsisPipeline) SynthesizeAttributes() *map[string]int
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccOsisPipeline) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccOsisPipeline) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

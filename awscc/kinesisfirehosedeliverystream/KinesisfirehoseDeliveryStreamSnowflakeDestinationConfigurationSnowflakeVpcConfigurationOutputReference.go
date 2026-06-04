@@ -64,6 +64,7 @@ type KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationSnowflakeVpcC
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPrivateLinkVpceId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfiguratio
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationSnowflakeVpcConfigurationOutputReference) ResetPrivateLinkVpceId() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetPrivateLinkVpceId",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationSnowflakeVpcConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -4,6 +4,10 @@ package lexbotalias
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (l *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsList) validateGetParameters(index *float64) error {
 	return nil
 }

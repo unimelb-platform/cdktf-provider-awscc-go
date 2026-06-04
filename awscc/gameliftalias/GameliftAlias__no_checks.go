@@ -56,7 +56,15 @@ func (g *jsiiProxy_GameliftAlias) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
+func (g *jsiiProxy_GameliftAlias) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (g *jsiiProxy_GameliftAlias) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (g *jsiiProxy_GameliftAlias) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -65,6 +73,10 @@ func (g *jsiiProxy_GameliftAlias) validateOverrideLogicalIdParameters(newLogical
 }
 
 func (g *jsiiProxy_GameliftAlias) validatePutRoutingStrategyParameters(value *GameliftAliasRoutingStrategy) error {
+	return nil
+}
+
+func (g *jsiiProxy_GameliftAlias) validatePutTagsParameters(value interface{}) error {
 	return nil
 }
 

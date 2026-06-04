@@ -64,6 +64,7 @@ type SesConfigurationSetEventDestinationEventDestinationSnsDestinationOutputRefe
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetTopicArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationSnsDestina
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationSnsDestinationOutputReference) ResetTopicArn() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTopicArn",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SesConfigurationSetEventDestinationEventDestinationSnsDestinationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

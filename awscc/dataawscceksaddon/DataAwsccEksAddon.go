@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscceksaddon/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/eks_addon awscc_eks_addon}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/eks_addon awscc_eks_addon}.
 type DataAwsccEksAddon interface {
 	cdktf.TerraformDataSource
 	AddonName() *string
@@ -46,6 +46,7 @@ type DataAwsccEksAddon interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	PodIdentityAssociations() DataAwsccEksAddonPodIdentityAssociationsList
 	PreserveOnDelete() cdktf.IResolvable
 	// Experimental.
 	Provider() cdktf.TerraformProvider
@@ -91,6 +92,10 @@ type DataAwsccEksAddon interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -265,6 +270,16 @@ func (j *jsiiProxy_DataAwsccEksAddon) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEksAddon) PodIdentityAssociations() DataAwsccEksAddonPodIdentityAssociationsList {
+	var returns DataAwsccEksAddonPodIdentityAssociationsList
+	_jsii_.Get(
+		j,
+		"podIdentityAssociations",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEksAddon) PreserveOnDelete() cdktf.IResolvable {
 	var returns cdktf.IResolvable
 	_jsii_.Get(
@@ -356,7 +371,7 @@ func (j *jsiiProxy_DataAwsccEksAddon) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/eks_addon awscc_eks_addon} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/eks_addon awscc_eks_addon} Data Source.
 func NewDataAwsccEksAddon(scope constructs.Construct, id *string, config *DataAwsccEksAddonConfig) DataAwsccEksAddon {
 	_init_.Initialize()
 
@@ -374,7 +389,7 @@ func NewDataAwsccEksAddon(scope constructs.Construct, id *string, config *DataAw
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/eks_addon awscc_eks_addon} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/eks_addon awscc_eks_addon} Data Source.
 func NewDataAwsccEksAddon_Override(d DataAwsccEksAddon, scope constructs.Construct, id *string, config *DataAwsccEksAddonConfig) {
 	_init_.Initialize()
 
@@ -741,6 +756,32 @@ func (d *jsiiProxy_DataAwsccEksAddon) SynthesizeAttributes() *map[string]interfa
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEksAddon) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEksAddon) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

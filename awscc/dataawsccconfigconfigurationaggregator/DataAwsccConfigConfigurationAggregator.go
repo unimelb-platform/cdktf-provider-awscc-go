@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccconfigconfigurationaggregator/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/config_configuration_aggregator awscc_config_configuration_aggregator}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/config_configuration_aggregator awscc_config_configuration_aggregator}.
 type DataAwsccConfigConfigurationAggregator interface {
 	cdktf.TerraformDataSource
 	AccountAggregationSources() DataAwsccConfigConfigurationAggregatorAccountAggregationSourcesList
@@ -87,6 +87,10 @@ type DataAwsccConfigConfigurationAggregator interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -312,7 +316,7 @@ func (j *jsiiProxy_DataAwsccConfigConfigurationAggregator) TerraformResourceType
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/config_configuration_aggregator awscc_config_configuration_aggregator} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/config_configuration_aggregator awscc_config_configuration_aggregator} Data Source.
 func NewDataAwsccConfigConfigurationAggregator(scope constructs.Construct, id *string, config *DataAwsccConfigConfigurationAggregatorConfig) DataAwsccConfigConfigurationAggregator {
 	_init_.Initialize()
 
@@ -330,7 +334,7 @@ func NewDataAwsccConfigConfigurationAggregator(scope constructs.Construct, id *s
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/config_configuration_aggregator awscc_config_configuration_aggregator} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/config_configuration_aggregator awscc_config_configuration_aggregator} Data Source.
 func NewDataAwsccConfigConfigurationAggregator_Override(d DataAwsccConfigConfigurationAggregator, scope constructs.Construct, id *string, config *DataAwsccConfigConfigurationAggregatorConfig) {
 	_init_.Initialize()
 
@@ -697,6 +701,32 @@ func (d *jsiiProxy_DataAwsccConfigConfigurationAggregator) SynthesizeAttributes(
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccConfigConfigurationAggregator) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccConfigConfigurationAggregator) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -100,6 +100,10 @@ func (j *jsiiProxy_QuicksightTopicDataSetsColumnsOutputReference) validateSetCom
 	return nil
 }
 
+func (j *jsiiProxy_QuicksightTopicDataSetsColumnsOutputReference) validateSetDisableIndexingParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_QuicksightTopicDataSetsColumnsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ivschannel/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ivs_channel awscc_ivs_channel}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ivs_channel awscc_ivs_channel}.
 type IvsChannel interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -24,6 +24,9 @@ type IvsChannel interface {
 	SetConnection(val interface{})
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
+	ContainerFormat() *string
+	SetContainerFormat(val *string)
+	ContainerFormatInput() *string
 	// Experimental.
 	Count() interface{}
 	// Experimental.
@@ -52,6 +55,8 @@ type IvsChannel interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	MultitrackInputConfiguration() IvsChannelMultitrackInputConfigurationOutputReference
+	MultitrackInputConfigurationInput() interface{}
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -109,19 +114,32 @@ type IvsChannel interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutMultitrackInputConfiguration(value *IvsChannelMultitrackInputConfiguration)
 	PutTags(value interface{})
 	ResetAuthorized()
+	ResetContainerFormat()
 	ResetInsecureIngest()
 	ResetLatencyMode()
+	ResetMultitrackInputConfiguration()
 	ResetName()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -131,6 +149,9 @@ type IvsChannel interface {
 	ResetTags()
 	ResetType()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -200,6 +221,26 @@ func (j *jsiiProxy_IvsChannel) ConstructNodeMetadata() *map[string]interface{} {
 	_jsii_.Get(
 		j,
 		"constructNodeMetadata",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IvsChannel) ContainerFormat() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"containerFormat",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IvsChannel) ContainerFormatInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"containerFormatInput",
 		&returns,
 	)
 	return returns
@@ -320,6 +361,26 @@ func (j *jsiiProxy_IvsChannel) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	_jsii_.Get(
 		j,
 		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IvsChannel) MultitrackInputConfiguration() IvsChannelMultitrackInputConfigurationOutputReference {
+	var returns IvsChannelMultitrackInputConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"multitrackInputConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IvsChannel) MultitrackInputConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"multitrackInputConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -506,7 +567,7 @@ func (j *jsiiProxy_IvsChannel) TypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ivs_channel awscc_ivs_channel} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ivs_channel awscc_ivs_channel} Resource.
 func NewIvsChannel(scope constructs.Construct, id *string, config *IvsChannelConfig) IvsChannel {
 	_init_.Initialize()
 
@@ -524,7 +585,7 @@ func NewIvsChannel(scope constructs.Construct, id *string, config *IvsChannelCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ivs_channel awscc_ivs_channel} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ivs_channel awscc_ivs_channel} Resource.
 func NewIvsChannel_Override(i IvsChannel, scope constructs.Construct, id *string, config *IvsChannelConfig) {
 	_init_.Initialize()
 
@@ -553,6 +614,17 @@ func (j *jsiiProxy_IvsChannel)SetConnection(val interface{}) {
 	_jsii_.Set(
 		j,
 		"connection",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IvsChannel)SetContainerFormat(val *string) {
+	if err := j.validateSetContainerFormatParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"containerFormat",
 		val,
 	)
 }
@@ -949,6 +1021,19 @@ func (i *jsiiProxy_IvsChannel) GetStringMapAttribute(terraformAttribute *string)
 	return returns
 }
 
+func (i *jsiiProxy_IvsChannel) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (i *jsiiProxy_IvsChannel) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := i.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -976,6 +1061,17 @@ func (i *jsiiProxy_IvsChannel) InterpolationForAttribute(terraformAttribute *str
 	return returns
 }
 
+func (i *jsiiProxy_IvsChannel) MoveFromId(id *string) {
+	if err := i.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (i *jsiiProxy_IvsChannel) MoveTo(moveTarget *string, index interface{}) {
 	if err := i.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -987,6 +1083,17 @@ func (i *jsiiProxy_IvsChannel) MoveTo(moveTarget *string, index interface{}) {
 	)
 }
 
+func (i *jsiiProxy_IvsChannel) MoveToId(id *string) {
+	if err := i.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (i *jsiiProxy_IvsChannel) OverrideLogicalId(newLogicalId *string) {
 	if err := i.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -995,6 +1102,17 @@ func (i *jsiiProxy_IvsChannel) OverrideLogicalId(newLogicalId *string) {
 		i,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (i *jsiiProxy_IvsChannel) PutMultitrackInputConfiguration(value *IvsChannelMultitrackInputConfiguration) {
+	if err := i.validatePutMultitrackInputConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putMultitrackInputConfiguration",
+		[]interface{}{value},
 	)
 }
 
@@ -1017,6 +1135,14 @@ func (i *jsiiProxy_IvsChannel) ResetAuthorized() {
 	)
 }
 
+func (i *jsiiProxy_IvsChannel) ResetContainerFormat() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetContainerFormat",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IvsChannel) ResetInsecureIngest() {
 	_jsii_.InvokeVoid(
 		i,
@@ -1029,6 +1155,14 @@ func (i *jsiiProxy_IvsChannel) ResetLatencyMode() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetLatencyMode",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IvsChannel) ResetMultitrackInputConfiguration() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetMultitrackInputConfiguration",
 		nil, // no parameters
 	)
 }
@@ -1087,6 +1221,32 @@ func (i *jsiiProxy_IvsChannel) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		i,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IvsChannel) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		i,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IvsChannel) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

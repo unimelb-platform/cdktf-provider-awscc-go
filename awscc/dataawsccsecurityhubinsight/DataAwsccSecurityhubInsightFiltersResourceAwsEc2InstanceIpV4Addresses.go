@@ -1,0 +1,6 @@
+package dataawsccsecurityhubinsight
+
+
+type DataAwsccSecurityhubInsightFiltersResourceAwsEc2InstanceIpV4Addresses struct {
+}
+

@@ -76,6 +76,10 @@ func (j *jsiiProxy_EntityresolutionIdMappingWorkflowInputSourceConfigOutputRefer
 	return nil
 }
 
+func (j *jsiiProxy_EntityresolutionIdMappingWorkflowInputSourceConfigOutputReference) validateSetTypeParameters(val *string) error {
+	return nil
+}
+
 func validateNewEntityresolutionIdMappingWorkflowInputSourceConfigOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
 	return nil
 }

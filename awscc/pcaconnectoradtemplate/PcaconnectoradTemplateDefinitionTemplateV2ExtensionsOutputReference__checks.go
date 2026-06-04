@@ -185,9 +185,25 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2ExtensionsOutputRef
 	return nil
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2ExtensionsOutputReference) validateSetInternalValueParameters(val *PcaconnectoradTemplateDefinitionTemplateV2Extensions) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2ExtensionsOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *PcaconnectoradTemplateDefinitionTemplateV2Extensions:
+		val := val.(*PcaconnectoradTemplateDefinitionTemplateV2Extensions)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case PcaconnectoradTemplateDefinitionTemplateV2Extensions:
+		val_ := val.(PcaconnectoradTemplateDefinitionTemplateV2Extensions)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *PcaconnectoradTemplateDefinitionTemplateV2Extensions; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

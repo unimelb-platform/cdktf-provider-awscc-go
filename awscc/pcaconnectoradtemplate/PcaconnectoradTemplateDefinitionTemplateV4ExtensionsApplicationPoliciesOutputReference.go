@@ -68,6 +68,7 @@ type PcaconnectoradTemplateDefinitionTemplateV4ExtensionsApplicationPoliciesOutp
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutPolicies(value interface{})
 	ResetCritical()
+	ResetPolicies()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4ExtensionsApplicati
 	_jsii_.InvokeVoid(
 		p,
 		"resetCritical",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4ExtensionsApplicationPoliciesOutputReference) ResetPolicies() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetPolicies",
 		nil, // no parameters
 	)
 }

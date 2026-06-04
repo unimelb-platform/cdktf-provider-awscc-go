@@ -73,7 +73,10 @@ type SesContactListTopicsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDefaultSubscriptionStatus()
 	ResetDescription()
+	ResetDisplayName()
+	ResetTopicName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -552,10 +555,34 @@ func (s *jsiiProxy_SesContactListTopicsOutputReference) InterpolationForAttribut
 	return returns
 }
 
+func (s *jsiiProxy_SesContactListTopicsOutputReference) ResetDefaultSubscriptionStatus() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDefaultSubscriptionStatus",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SesContactListTopicsOutputReference) ResetDescription() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SesContactListTopicsOutputReference) ResetDisplayName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDisplayName",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SesContactListTopicsOutputReference) ResetTopicName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTopicName",
 		nil, // no parameters
 	)
 }

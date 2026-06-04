@@ -9,13 +9,15 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/cassandratable/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cassandra_table awscc_cassandra_table}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cassandra_table awscc_cassandra_table}.
 type CassandraTable interface {
 	cdktf.TerraformResource
 	AutoScalingSpecifications() CassandraTableAutoScalingSpecificationsOutputReference
 	AutoScalingSpecificationsInput() interface{}
 	BillingMode() CassandraTableBillingModeOutputReference
 	BillingModeInput() interface{}
+	CdcSpecification() CassandraTableCdcSpecificationOutputReference
+	CdcSpecificationInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	ClientSideTimestampsEnabled() interface{}
@@ -114,17 +116,28 @@ type CassandraTable interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutAutoScalingSpecifications(value *CassandraTableAutoScalingSpecifications)
 	PutBillingMode(value *CassandraTableBillingMode)
+	PutCdcSpecification(value *CassandraTableCdcSpecification)
 	PutClusteringKeyColumns(value interface{})
 	PutEncryptionSpecification(value *CassandraTableEncryptionSpecification)
 	PutPartitionKeyColumns(value interface{})
@@ -133,6 +146,7 @@ type CassandraTable interface {
 	PutTags(value interface{})
 	ResetAutoScalingSpecifications()
 	ResetBillingMode()
+	ResetCdcSpecification()
 	ResetClientSideTimestampsEnabled()
 	ResetClusteringKeyColumns()
 	ResetDefaultTimeToLive()
@@ -146,6 +160,9 @@ type CassandraTable interface {
 	ResetTableName()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -195,6 +212,26 @@ func (j *jsiiProxy_CassandraTable) BillingModeInput() interface{} {
 	_jsii_.Get(
 		j,
 		"billingModeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CassandraTable) CdcSpecification() CassandraTableCdcSpecificationOutputReference {
+	var returns CassandraTableCdcSpecificationOutputReference
+	_jsii_.Get(
+		j,
+		"cdcSpecification",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CassandraTable) CdcSpecificationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"cdcSpecificationInput",
 		&returns,
 	)
 	return returns
@@ -591,7 +628,7 @@ func (j *jsiiProxy_CassandraTable) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cassandra_table awscc_cassandra_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cassandra_table awscc_cassandra_table} Resource.
 func NewCassandraTable(scope constructs.Construct, id *string, config *CassandraTableConfig) CassandraTable {
 	_init_.Initialize()
 
@@ -609,7 +646,7 @@ func NewCassandraTable(scope constructs.Construct, id *string, config *Cassandra
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cassandra_table awscc_cassandra_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cassandra_table awscc_cassandra_table} Resource.
 func NewCassandraTable_Override(c CassandraTable, scope constructs.Construct, id *string, config *CassandraTableConfig) {
 	_init_.Initialize()
 
@@ -1012,6 +1049,19 @@ func (c *jsiiProxy_CassandraTable) GetStringMapAttribute(terraformAttribute *str
 	return returns
 }
 
+func (c *jsiiProxy_CassandraTable) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_CassandraTable) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1039,6 +1089,17 @@ func (c *jsiiProxy_CassandraTable) InterpolationForAttribute(terraformAttribute 
 	return returns
 }
 
+func (c *jsiiProxy_CassandraTable) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CassandraTable) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1047,6 +1108,17 @@ func (c *jsiiProxy_CassandraTable) MoveTo(moveTarget *string, index interface{})
 		c,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (c *jsiiProxy_CassandraTable) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1079,6 +1151,17 @@ func (c *jsiiProxy_CassandraTable) PutBillingMode(value *CassandraTableBillingMo
 	_jsii_.InvokeVoid(
 		c,
 		"putBillingMode",
+		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CassandraTable) PutCdcSpecification(value *CassandraTableCdcSpecification) {
+	if err := c.validatePutCdcSpecificationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putCdcSpecification",
 		[]interface{}{value},
 	)
 }
@@ -1161,6 +1244,14 @@ func (c *jsiiProxy_CassandraTable) ResetBillingMode() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetBillingMode",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CassandraTable) ResetCdcSpecification() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetCdcSpecification",
 		nil, // no parameters
 	)
 }
@@ -1251,6 +1342,32 @@ func (c *jsiiProxy_CassandraTable) SynthesizeAttributes() *map[string]interface{
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CassandraTable) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CassandraTable) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

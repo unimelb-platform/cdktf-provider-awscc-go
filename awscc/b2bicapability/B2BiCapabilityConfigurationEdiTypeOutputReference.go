@@ -27,8 +27,8 @@ type B2BiCapabilityConfigurationEdiTypeOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *B2BiCapabilityConfigurationEdiType
-	SetInternalValue(val *B2BiCapabilityConfigurationEdiType)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -120,8 +120,8 @@ func (j *jsiiProxy_B2BiCapabilityConfigurationEdiTypeOutputReference) Fqn() *str
 	return returns
 }
 
-func (j *jsiiProxy_B2BiCapabilityConfigurationEdiTypeOutputReference) InternalValue() *B2BiCapabilityConfigurationEdiType {
-	var returns *B2BiCapabilityConfigurationEdiType
+func (j *jsiiProxy_B2BiCapabilityConfigurationEdiTypeOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -220,7 +220,7 @@ func (j *jsiiProxy_B2BiCapabilityConfigurationEdiTypeOutputReference)SetComplexO
 	)
 }
 
-func (j *jsiiProxy_B2BiCapabilityConfigurationEdiTypeOutputReference)SetInternalValue(val *B2BiCapabilityConfigurationEdiType) {
+func (j *jsiiProxy_B2BiCapabilityConfigurationEdiTypeOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

@@ -52,11 +52,19 @@ func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) validateP
 	return nil
 }
 
+func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) validatePutOnDemandThroughputParameters(value *DynamodbTableGlobalSecondaryIndexesOnDemandThroughput) error {
+	return nil
+}
+
 func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) validatePutProjectionParameters(value *DynamodbTableGlobalSecondaryIndexesProjection) error {
 	return nil
 }
 
 func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) validatePutProvisionedThroughputParameters(value *DynamodbTableGlobalSecondaryIndexesProvisionedThroughput) error {
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbTableGlobalSecondaryIndexesOutputReference) validatePutWarmThroughputParameters(value *DynamodbTableGlobalSecondaryIndexesWarmThroughput) error {
 	return nil
 }
 

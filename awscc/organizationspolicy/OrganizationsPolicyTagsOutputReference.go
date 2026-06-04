@@ -67,6 +67,8 @@ type OrganizationsPolicyTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (o *jsiiProxy_OrganizationsPolicyTagsOutputReference) InterpolationForAttri
 	)
 
 	return returns
+}
+
+func (o *jsiiProxy_OrganizationsPolicyTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OrganizationsPolicyTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (o *jsiiProxy_OrganizationsPolicyTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

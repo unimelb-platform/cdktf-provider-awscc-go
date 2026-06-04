@@ -64,7 +64,7 @@ func (j *jsiiProxy_LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingOutputR
 	return nil
 }
 
-func (j *jsiiProxy_LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingOutputReference) validateSetInternalValueParameters(val *LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSetting) error {
+func (j *jsiiProxy_LexBotAliasBotAliasLocaleSettingsBotAliasLocaleSettingOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

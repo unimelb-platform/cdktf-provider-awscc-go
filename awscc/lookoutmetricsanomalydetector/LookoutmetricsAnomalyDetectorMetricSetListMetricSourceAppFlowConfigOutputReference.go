@@ -67,6 +67,8 @@ type LookoutmetricsAnomalyDetectorMetricSetListMetricSourceAppFlowConfigOutputRe
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetFlowName()
+	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceAppFlow
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceAppFlowConfigOutputReference) ResetFlowName() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetFlowName",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceAppFlowConfigOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetRoleArn",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceAppFlowConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

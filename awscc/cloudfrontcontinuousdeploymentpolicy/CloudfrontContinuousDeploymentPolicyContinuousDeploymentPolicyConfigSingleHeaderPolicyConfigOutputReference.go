@@ -67,6 +67,8 @@ type CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolicyConfigSingleH
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetHeader()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolic
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolicyConfigSingleHeaderPolicyConfigOutputReference) ResetHeader() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetHeader",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolicyConfigSingleHeaderPolicyConfigOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolicyConfigSingleHeaderPolicyConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

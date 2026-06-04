@@ -21,11 +21,11 @@ type SesDedicatedIpPoolConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The name of the dedicated IP pool.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ses_dedicated_ip_pool#pool_name SesDedicatedIpPool#pool_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ses_dedicated_ip_pool#pool_name SesDedicatedIpPool#pool_name}
 	PoolName *string `field:"optional" json:"poolName" yaml:"poolName"`
 	// Specifies whether the dedicated IP pool is managed or not. The default value is STANDARD.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ses_dedicated_ip_pool#scaling_mode SesDedicatedIpPool#scaling_mode}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ses_dedicated_ip_pool#scaling_mode SesDedicatedIpPool#scaling_mode}
 	ScalingMode *string `field:"optional" json:"scalingMode" yaml:"scalingMode"`
 }
 

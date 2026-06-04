@@ -35,6 +35,7 @@ type DataAwsccSagemakerModelPackageAdditionalInferenceSpecificationsToAddContain
 	ImageDigest() *string
 	InternalValue() *DataAwsccSagemakerModelPackageAdditionalInferenceSpecificationsToAddContainers
 	SetInternalValue(val *DataAwsccSagemakerModelPackageAdditionalInferenceSpecificationsToAddContainers)
+	ModelDataSource() DataAwsccSagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersModelDataSourceOutputReference
 	ModelDataUrl() *string
 	ModelInput() DataAwsccSagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersModelInputOutputReference
 	NearestModelName() *string
@@ -190,6 +191,16 @@ func (j *jsiiProxy_DataAwsccSagemakerModelPackageAdditionalInferenceSpecificatio
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersOutputReference) ModelDataSource() DataAwsccSagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersModelDataSourceOutputReference {
+	var returns DataAwsccSagemakerModelPackageAdditionalInferenceSpecificationsToAddContainersModelDataSourceOutputReference
+	_jsii_.Get(
+		j,
+		"modelDataSource",
 		&returns,
 	)
 	return returns

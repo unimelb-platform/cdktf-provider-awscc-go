@@ -1,0 +1,6 @@
+package dataawscccustomerprofilessegmentdefinition
+
+
+type DataAwsccCustomerprofilesSegmentDefinitionSegmentGroupsGroupsDimensionsProfileAttributesHomePhoneNumber struct {
+}
+

@@ -19,13 +19,9 @@ type ApigatewayClientCertificateConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// The description of the client certificate.
-	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/apigateway_client_certificate#description ApigatewayClientCertificate#description}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/apigateway_client_certificate#description ApigatewayClientCertificate#description}.
 	Description *string `field:"optional" json:"description" yaml:"description"`
-	// The collection of tags. Each tag element is associated with a given resource.
-	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/apigateway_client_certificate#tags ApigatewayClientCertificate#tags}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/apigateway_client_certificate#tags ApigatewayClientCertificate#tags}.
 	Tags interface{} `field:"optional" json:"tags" yaml:"tags"`
 }
 

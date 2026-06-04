@@ -30,6 +30,7 @@ type DataAwsccEcsClusterConfigurationOutputReference interface {
 	Fqn() *string
 	InternalValue() *DataAwsccEcsClusterConfiguration
 	SetInternalValue(val *DataAwsccEcsClusterConfiguration)
+	ManagedStorageConfiguration() DataAwsccEcsClusterConfigurationManagedStorageConfigurationOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -132,6 +133,16 @@ func (j *jsiiProxy_DataAwsccEcsClusterConfigurationOutputReference) InternalValu
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEcsClusterConfigurationOutputReference) ManagedStorageConfiguration() DataAwsccEcsClusterConfigurationManagedStorageConfigurationOutputReference {
+	var returns DataAwsccEcsClusterConfigurationManagedStorageConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"managedStorageConfiguration",
 		&returns,
 	)
 	return returns

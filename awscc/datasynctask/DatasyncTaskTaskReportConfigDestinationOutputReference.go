@@ -27,8 +27,8 @@ type DatasyncTaskTaskReportConfigDestinationOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DatasyncTaskTaskReportConfigDestination
-	SetInternalValue(val *DatasyncTaskTaskReportConfigDestination)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	S3() DatasyncTaskTaskReportConfigDestinationS3OutputReference
 	S3Input() interface{}
 	// Experimental.
@@ -120,8 +120,8 @@ func (j *jsiiProxy_DatasyncTaskTaskReportConfigDestinationOutputReference) Fqn()
 	return returns
 }
 
-func (j *jsiiProxy_DatasyncTaskTaskReportConfigDestinationOutputReference) InternalValue() *DatasyncTaskTaskReportConfigDestination {
-	var returns *DatasyncTaskTaskReportConfigDestination
+func (j *jsiiProxy_DatasyncTaskTaskReportConfigDestinationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -220,7 +220,7 @@ func (j *jsiiProxy_DatasyncTaskTaskReportConfigDestinationOutputReference)SetCom
 	)
 }
 
-func (j *jsiiProxy_DatasyncTaskTaskReportConfigDestinationOutputReference)SetInternalValue(val *DatasyncTaskTaskReportConfigDestination) {
+func (j *jsiiProxy_DatasyncTaskTaskReportConfigDestinationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

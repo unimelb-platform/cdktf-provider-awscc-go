@@ -171,6 +171,22 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) va
 	return nil
 }
 
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) validateSetExternalIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) validateSetIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_IotsitewiseAssetModelAssetModelHierarchiesOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	switch val.(type) {
 	case cdktf.IResolvable:

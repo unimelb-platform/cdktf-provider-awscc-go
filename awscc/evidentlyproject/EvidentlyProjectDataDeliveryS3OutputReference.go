@@ -67,6 +67,7 @@ type EvidentlyProjectDataDeliveryS3OutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucketName()
 	ResetPrefix()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (e *jsiiProxy_EvidentlyProjectDataDeliveryS3OutputReference) InterpolationF
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EvidentlyProjectDataDeliveryS3OutputReference) ResetBucketName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetBucketName",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EvidentlyProjectDataDeliveryS3OutputReference) ResetPrefix() {

@@ -64,6 +64,10 @@ func (j *jsiiProxy_SagemakerUserProfileUserSettingsKernelGatewayAppSettingsDefau
 	return nil
 }
 
+func (j *jsiiProxy_SagemakerUserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecOutputReference) validateSetLifecycleConfigArnParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_SagemakerUserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecOutputReference) validateSetSageMakerImageArnParameters(val *string) error {
 	return nil
 }

@@ -73,6 +73,8 @@ type LakeformationTagAssociationResourceTableOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCatalogId()
+	ResetDatabaseName()
 	ResetName()
 	ResetTableWildcard()
 	// Produce the Token's value at resolution time.
@@ -551,6 +553,22 @@ func (l *jsiiProxy_LakeformationTagAssociationResourceTableOutputReference) Inte
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LakeformationTagAssociationResourceTableOutputReference) ResetCatalogId() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetCatalogId",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LakeformationTagAssociationResourceTableOutputReference) ResetDatabaseName() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetDatabaseName",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LakeformationTagAssociationResourceTableOutputReference) ResetName() {

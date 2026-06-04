@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccpersonalizesolution/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/personalize_solution awscc_personalize_solution}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/personalize_solution awscc_personalize_solution}.
 type DataAwsccPersonalizeSolution interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -90,6 +90,10 @@ type DataAwsccPersonalizeSolution interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -345,7 +349,7 @@ func (j *jsiiProxy_DataAwsccPersonalizeSolution) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/personalize_solution awscc_personalize_solution} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/personalize_solution awscc_personalize_solution} Data Source.
 func NewDataAwsccPersonalizeSolution(scope constructs.Construct, id *string, config *DataAwsccPersonalizeSolutionConfig) DataAwsccPersonalizeSolution {
 	_init_.Initialize()
 
@@ -363,7 +367,7 @@ func NewDataAwsccPersonalizeSolution(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/personalize_solution awscc_personalize_solution} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/personalize_solution awscc_personalize_solution} Data Source.
 func NewDataAwsccPersonalizeSolution_Override(d DataAwsccPersonalizeSolution, scope constructs.Construct, id *string, config *DataAwsccPersonalizeSolutionConfig) {
 	_init_.Initialize()
 
@@ -730,6 +734,32 @@ func (d *jsiiProxy_DataAwsccPersonalizeSolution) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccPersonalizeSolution) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccPersonalizeSolution) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

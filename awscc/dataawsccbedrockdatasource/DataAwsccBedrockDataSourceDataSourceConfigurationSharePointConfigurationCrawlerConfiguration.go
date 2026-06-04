@@ -1,0 +1,6 @@
+package dataawsccbedrockdatasource
+
+
+type DataAwsccBedrockDataSourceDataSourceConfigurationSharePointConfigurationCrawlerConfiguration struct {
+}
+

@@ -70,6 +70,8 @@ type TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationMixedMeas
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetMeasureValueType()
+	ResetSourceColumn()
 	ResetTargetMultiMeasureAttributeName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -516,6 +518,22 @@ func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigur
 	)
 
 	return returns
+}
+
+func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationMixedMeasureMappingsMultiMeasureAttributeMappingsOutputReference) ResetMeasureValueType() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetMeasureValueType",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationMixedMeasureMappingsMultiMeasureAttributeMappingsOutputReference) ResetSourceColumn() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetSourceColumn",
+		nil, // no parameters
+	)
 }
 
 func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationMixedMeasureMappingsMultiMeasureAttributeMappingsOutputReference) ResetTargetMultiMeasureAttributeName() {

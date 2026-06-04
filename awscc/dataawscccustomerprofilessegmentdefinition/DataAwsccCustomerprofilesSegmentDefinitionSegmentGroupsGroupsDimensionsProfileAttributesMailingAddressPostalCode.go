@@ -1,0 +1,6 @@
+package dataawscccustomerprofilessegmentdefinition
+
+
+type DataAwsccCustomerprofilesSegmentDefinitionSegmentGroupsGroupsDimensionsProfileAttributesMailingAddressPostalCode struct {
+}
+

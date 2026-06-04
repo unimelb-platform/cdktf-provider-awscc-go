@@ -64,6 +64,10 @@ func (j *jsiiProxy_DatasyncTaskScheduleOutputReference) validateSetScheduleExpre
 	return nil
 }
 
+func (j *jsiiProxy_DatasyncTaskScheduleOutputReference) validateSetStatusParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DatasyncTaskScheduleOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

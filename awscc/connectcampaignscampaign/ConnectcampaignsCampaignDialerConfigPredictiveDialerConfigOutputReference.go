@@ -67,6 +67,7 @@ type ConnectcampaignsCampaignDialerConfigPredictiveDialerConfigOutputReference i
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBandwidthAllocation()
 	ResetDialingCapacity()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (c *jsiiProxy_ConnectcampaignsCampaignDialerConfigPredictiveDialerConfigOut
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ConnectcampaignsCampaignDialerConfigPredictiveDialerConfigOutputReference) ResetBandwidthAllocation() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetBandwidthAllocation",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ConnectcampaignsCampaignDialerConfigPredictiveDialerConfigOutputReference) ResetDialingCapacity() {

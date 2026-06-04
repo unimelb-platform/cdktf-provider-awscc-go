@@ -19,15 +19,27 @@ type LakeformationPrincipalPermissionsConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lakeformation_principal_permissions#permissions LakeformationPrincipalPermissions#permissions}.
+	// The permissions granted or revoked.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lakeformation_principal_permissions#permissions LakeformationPrincipalPermissions#permissions}
 	Permissions *[]*string `field:"required" json:"permissions" yaml:"permissions"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lakeformation_principal_permissions#permissions_with_grant_option LakeformationPrincipalPermissions#permissions_with_grant_option}.
+	// Indicates the ability to grant permissions (as a subset of permissions granted).
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lakeformation_principal_permissions#permissions_with_grant_option LakeformationPrincipalPermissions#permissions_with_grant_option}
 	PermissionsWithGrantOption *[]*string `field:"required" json:"permissionsWithGrantOption" yaml:"permissionsWithGrantOption"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lakeformation_principal_permissions#principal LakeformationPrincipalPermissions#principal}.
+	// The principal to be granted a permission.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lakeformation_principal_permissions#principal LakeformationPrincipalPermissions#principal}
 	Principal *LakeformationPrincipalPermissionsPrincipal `field:"required" json:"principal" yaml:"principal"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lakeformation_principal_permissions#resource LakeformationPrincipalPermissions#resource}.
+	// The resource to be granted or revoked permissions.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lakeformation_principal_permissions#resource LakeformationPrincipalPermissions#resource}
 	Resource *LakeformationPrincipalPermissionsResource `field:"required" json:"resource" yaml:"resource"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lakeformation_principal_permissions#catalog LakeformationPrincipalPermissions#catalog}.
+	// The identifier for the GLUDC.
+	//
+	// By default, the account ID. The GLUDC is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lakeformation_principal_permissions#catalog LakeformationPrincipalPermissions#catalog}
 	Catalog *string `field:"optional" json:"catalog" yaml:"catalog"`
 }
 

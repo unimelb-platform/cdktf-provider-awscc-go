@@ -10,6 +10,9 @@ import (
 
 type QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference interface {
 	cdktf.ComplexObject
+	AuthenticationType() *string
+	SetAuthenticationType(val *string)
+	AuthenticationTypeInput() *string
 	Catalog() *string
 	SetCatalog(val *string)
 	CatalogInput() *string
@@ -28,6 +31,9 @@ type QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	DatabaseAccessControlRole() *string
+	SetDatabaseAccessControlRole(val *string)
+	DatabaseAccessControlRoleInput() *string
 	// Experimental.
 	Fqn() *string
 	Host() *string
@@ -35,6 +41,8 @@ type QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS
 	HostInput() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	OAuthParameters() QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOAuthParametersOutputReference
+	OAuthParametersInput() interface{}
 	Port() *float64
 	SetPort(val *float64)
 	PortInput() *float64
@@ -73,6 +81,13 @@ type QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutOAuthParameters(value *QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOAuthParameters)
+	ResetAuthenticationType()
+	ResetCatalog()
+	ResetDatabaseAccessControlRole()
+	ResetHost()
+	ResetOAuthParameters()
+	ResetPort()
 	ResetProductType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -87,6 +102,26 @@ type QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS
 // The jsii proxy struct for QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference
 type jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference) AuthenticationType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"authenticationType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference) AuthenticationTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"authenticationTypeInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference) Catalog() *string {
@@ -139,6 +174,26 @@ func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSou
 	return returns
 }
 
+func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference) DatabaseAccessControlRole() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseAccessControlRole",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference) DatabaseAccessControlRoleInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseAccessControlRoleInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -174,6 +229,26 @@ func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSou
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference) OAuthParameters() QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOAuthParametersOutputReference {
+	var returns QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOAuthParametersOutputReference
+	_jsii_.Get(
+		j,
+		"oAuthParameters",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference) OAuthParametersInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"oAuthParametersInput",
 		&returns,
 	)
 	return returns
@@ -267,6 +342,17 @@ func NewQuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParamete
 	)
 }
 
+func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference)SetAuthenticationType(val *string) {
+	if err := j.validateSetAuthenticationTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"authenticationType",
+		val,
+	)
+}
+
 func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference)SetCatalog(val *string) {
 	if err := j.validateSetCatalogParameters(val); err != nil {
 		panic(err)
@@ -296,6 +382,17 @@ func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSou
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
+		val,
+	)
+}
+
+func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference)SetDatabaseAccessControlRole(val *string) {
+	if err := j.validateSetDatabaseAccessControlRoleParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"databaseAccessControlRole",
 		val,
 	)
 }
@@ -550,6 +647,65 @@ func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSou
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference) PutOAuthParameters(value *QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOAuthParameters) {
+	if err := q.validatePutOAuthParametersParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		q,
+		"putOAuthParameters",
+		[]interface{}{value},
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference) ResetAuthenticationType() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetAuthenticationType",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference) ResetCatalog() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetCatalog",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference) ResetDatabaseAccessControlRole() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDatabaseAccessControlRole",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference) ResetHost() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetHost",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference) ResetOAuthParameters() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetOAuthParameters",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference) ResetPort() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetPort",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersStarburstParametersOutputReference) ResetProductType() {

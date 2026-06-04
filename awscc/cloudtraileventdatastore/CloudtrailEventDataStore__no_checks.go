@@ -56,7 +56,15 @@ func (c *jsiiProxy_CloudtrailEventDataStore) validateInterpolationForAttributePa
 	return nil
 }
 
+func (c *jsiiProxy_CloudtrailEventDataStore) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CloudtrailEventDataStore) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_CloudtrailEventDataStore) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -65,6 +73,10 @@ func (c *jsiiProxy_CloudtrailEventDataStore) validateOverrideLogicalIdParameters
 }
 
 func (c *jsiiProxy_CloudtrailEventDataStore) validatePutAdvancedEventSelectorsParameters(value interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_CloudtrailEventDataStore) validatePutContextKeySelectorsParameters(value interface{}) error {
 	return nil
 }
 
@@ -125,6 +137,10 @@ func (j *jsiiProxy_CloudtrailEventDataStore) validateSetKmsKeyIdParameters(val *
 }
 
 func (j *jsiiProxy_CloudtrailEventDataStore) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
+	return nil
+}
+
+func (j *jsiiProxy_CloudtrailEventDataStore) validateSetMaxEventSizeParameters(val *string) error {
 	return nil
 }
 

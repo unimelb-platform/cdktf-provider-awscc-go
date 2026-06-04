@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccappstreamentitlement/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appstream_entitlement awscc_appstream_entitlement}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appstream_entitlement awscc_appstream_entitlement}.
 type DataAwsccAppstreamEntitlement interface {
 	cdktf.TerraformDataSource
 	AppVisibility() *string
@@ -89,6 +89,10 @@ type DataAwsccAppstreamEntitlement interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -334,7 +338,7 @@ func (j *jsiiProxy_DataAwsccAppstreamEntitlement) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appstream_entitlement awscc_appstream_entitlement} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appstream_entitlement awscc_appstream_entitlement} Data Source.
 func NewDataAwsccAppstreamEntitlement(scope constructs.Construct, id *string, config *DataAwsccAppstreamEntitlementConfig) DataAwsccAppstreamEntitlement {
 	_init_.Initialize()
 
@@ -352,7 +356,7 @@ func NewDataAwsccAppstreamEntitlement(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appstream_entitlement awscc_appstream_entitlement} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appstream_entitlement awscc_appstream_entitlement} Data Source.
 func NewDataAwsccAppstreamEntitlement_Override(d DataAwsccAppstreamEntitlement, scope constructs.Construct, id *string, config *DataAwsccAppstreamEntitlementConfig) {
 	_init_.Initialize()
 
@@ -719,6 +723,32 @@ func (d *jsiiProxy_DataAwsccAppstreamEntitlement) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppstreamEntitlement) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppstreamEntitlement) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

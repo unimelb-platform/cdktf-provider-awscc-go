@@ -41,7 +41,7 @@ type EmrserverlessApplicationInitialCapacityOutputReference interface {
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	Value() EmrserverlessApplicationInitialCapacityValueOutputReference
-	ValueInput() *EmrserverlessApplicationInitialCapacityValue
+	ValueInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -67,6 +67,8 @@ type EmrserverlessApplicationInitialCapacityOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutValue(value *EmrserverlessApplicationInitialCapacityValue)
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -182,8 +184,8 @@ func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityOutputReference) Value
 	return returns
 }
 
-func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityOutputReference) ValueInput() *EmrserverlessApplicationInitialCapacityValue {
-	var returns *EmrserverlessApplicationInitialCapacityValue
+func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityOutputReference) ValueInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"valueInput",
@@ -480,6 +482,22 @@ func (e *jsiiProxy_EmrserverlessApplicationInitialCapacityOutputReference) PutVa
 		e,
 		"putValue",
 		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_EmrserverlessApplicationInitialCapacityOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EmrserverlessApplicationInitialCapacityOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetValue",
+		nil, // no parameters
 	)
 }
 

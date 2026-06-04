@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciamuser/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iam_user awscc_iam_user}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iam_user awscc_iam_user}.
 type DataAwsccIamUser interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -91,6 +91,10 @@ type DataAwsccIamUser interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -356,7 +360,7 @@ func (j *jsiiProxy_DataAwsccIamUser) UserName() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iam_user awscc_iam_user} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iam_user awscc_iam_user} Data Source.
 func NewDataAwsccIamUser(scope constructs.Construct, id *string, config *DataAwsccIamUserConfig) DataAwsccIamUser {
 	_init_.Initialize()
 
@@ -374,7 +378,7 @@ func NewDataAwsccIamUser(scope constructs.Construct, id *string, config *DataAws
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iam_user awscc_iam_user} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iam_user awscc_iam_user} Data Source.
 func NewDataAwsccIamUser_Override(d DataAwsccIamUser, scope constructs.Construct, id *string, config *DataAwsccIamUserConfig) {
 	_init_.Initialize()
 
@@ -741,6 +745,32 @@ func (d *jsiiProxy_DataAwsccIamUser) SynthesizeAttributes() *map[string]interfac
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIamUser) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIamUser) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

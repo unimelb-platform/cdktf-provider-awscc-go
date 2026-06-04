@@ -1,0 +1,6 @@
+package dataawsccapigatewaydomainnameaccessassociation
+
+
+type DataAwsccApigatewayDomainNameAccessAssociationTags struct {
+}
+

@@ -64,6 +64,7 @@ type SesConfigurationSetVdmOptionsDashboardOptionsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEngagementMetrics()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_SesConfigurationSetVdmOptionsDashboardOptionsOutputReference)
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SesConfigurationSetVdmOptionsDashboardOptionsOutputReference) ResetEngagementMetrics() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetEngagementMetrics",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SesConfigurationSetVdmOptionsDashboardOptionsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

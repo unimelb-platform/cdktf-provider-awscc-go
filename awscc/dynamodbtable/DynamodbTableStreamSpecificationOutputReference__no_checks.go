@@ -44,6 +44,10 @@ func (d *jsiiProxy_DynamodbTableStreamSpecificationOutputReference) validateInte
 	return nil
 }
 
+func (d *jsiiProxy_DynamodbTableStreamSpecificationOutputReference) validatePutResourcePolicyParameters(value *DynamodbTableStreamSpecificationResourcePolicy) error {
+	return nil
+}
+
 func (d *jsiiProxy_DynamodbTableStreamSpecificationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

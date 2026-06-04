@@ -1,0 +1,39 @@
+package kafkaconnectworkerconfiguration
+
+import (
+	"github.com/hashicorp/terraform-cdk-go/cdktf"
+)
+
+type KafkaconnectWorkerConfigurationConfig struct {
+	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
+	Count interface{} `field:"optional" json:"count" yaml:"count"`
+	// Experimental.
+	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
+	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
+	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
+	// Experimental.
+	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
+	// The name of the worker configuration.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/kafkaconnect_worker_configuration#name KafkaconnectWorkerConfiguration#name}
+	Name *string `field:"required" json:"name" yaml:"name"`
+	// Base64 encoded contents of connect-distributed.properties file.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/kafkaconnect_worker_configuration#properties_file_content KafkaconnectWorkerConfiguration#properties_file_content}
+	PropertiesFileContent *string `field:"required" json:"propertiesFileContent" yaml:"propertiesFileContent"`
+	// A summary description of the worker configuration.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/kafkaconnect_worker_configuration#description KafkaconnectWorkerConfiguration#description}
+	Description *string `field:"optional" json:"description" yaml:"description"`
+	// A collection of tags associated with a resource.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/kafkaconnect_worker_configuration#tags KafkaconnectWorkerConfiguration#tags}
+	Tags interface{} `field:"optional" json:"tags" yaml:"tags"`
+}
+

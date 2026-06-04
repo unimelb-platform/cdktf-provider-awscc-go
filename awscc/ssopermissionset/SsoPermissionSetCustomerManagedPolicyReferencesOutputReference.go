@@ -67,6 +67,7 @@ type SsoPermissionSetCustomerManagedPolicyReferencesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
 	ResetPath()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (s *jsiiProxy_SsoPermissionSetCustomerManagedPolicyReferencesOutputReferenc
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SsoPermissionSetCustomerManagedPolicyReferencesOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetName",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SsoPermissionSetCustomerManagedPolicyReferencesOutputReference) ResetPath() {

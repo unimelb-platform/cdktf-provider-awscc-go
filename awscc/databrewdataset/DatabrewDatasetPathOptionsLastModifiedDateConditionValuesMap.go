@@ -2,11 +2,11 @@ package databrewdataset
 
 
 type DatabrewDatasetPathOptionsLastModifiedDateConditionValuesMap struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/databrew_dataset#value DatabrewDataset#value}.
-	Value *string `field:"required" json:"value" yaml:"value"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/databrew_dataset#value DatabrewDataset#value}.
+	Value *string `field:"optional" json:"value" yaml:"value"`
 	// Variable name.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/databrew_dataset#value_reference DatabrewDataset#value_reference}
-	ValueReference *string `field:"required" json:"valueReference" yaml:"valueReference"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/databrew_dataset#value_reference DatabrewDataset#value_reference}
+	ValueReference *string `field:"optional" json:"valueReference" yaml:"valueReference"`
 }
 

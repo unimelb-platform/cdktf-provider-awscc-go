@@ -56,7 +56,15 @@ func (e *jsiiProxy_Ec2DhcpOptions) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
+func (e *jsiiProxy_Ec2DhcpOptions) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2DhcpOptions) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2DhcpOptions) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -97,6 +105,10 @@ func (j *jsiiProxy_Ec2DhcpOptions) validateSetDomainNameParameters(val *string) 
 }
 
 func (j *jsiiProxy_Ec2DhcpOptions) validateSetDomainNameServersParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2DhcpOptions) validateSetIpv6AddressPreferredLeaseTimeParameters(val *float64) error {
 	return nil
 }
 

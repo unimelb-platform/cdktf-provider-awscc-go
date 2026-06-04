@@ -90,6 +90,37 @@ func (e *jsiiProxy_Ec2VerifiedAccessEndpointNetworkInterfaceOptionsOutputReferen
 	return nil
 }
 
+func (e *jsiiProxy_Ec2VerifiedAccessEndpointNetworkInterfaceOptionsOutputReference) validatePutPortRangesParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*Ec2VerifiedAccessEndpointNetworkInterfaceOptionsPortRanges:
+		value := value.(*[]*Ec2VerifiedAccessEndpointNetworkInterfaceOptionsPortRanges)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*Ec2VerifiedAccessEndpointNetworkInterfaceOptionsPortRanges:
+		value_ := value.([]*Ec2VerifiedAccessEndpointNetworkInterfaceOptionsPortRanges)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Ec2VerifiedAccessEndpointNetworkInterfaceOptionsPortRanges; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VerifiedAccessEndpointNetworkInterfaceOptionsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	if _context == nil {
 		return fmt.Errorf("parameter _context is required, but nil was provided")

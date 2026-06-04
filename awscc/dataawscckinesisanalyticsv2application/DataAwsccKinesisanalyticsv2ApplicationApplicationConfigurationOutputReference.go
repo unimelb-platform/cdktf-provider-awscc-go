@@ -12,6 +12,7 @@ type DataAwsccKinesisanalyticsv2ApplicationApplicationConfigurationOutputReferen
 	cdktf.ComplexObject
 	ApplicationCodeConfiguration() DataAwsccKinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationOutputReference
 	ApplicationSnapshotConfiguration() DataAwsccKinesisanalyticsv2ApplicationApplicationConfigurationApplicationSnapshotConfigurationOutputReference
+	ApplicationSystemRollbackConfiguration() DataAwsccKinesisanalyticsv2ApplicationApplicationConfigurationApplicationSystemRollbackConfigurationOutputReference
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -98,6 +99,16 @@ func (j *jsiiProxy_DataAwsccKinesisanalyticsv2ApplicationApplicationConfiguratio
 	_jsii_.Get(
 		j,
 		"applicationSnapshotConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccKinesisanalyticsv2ApplicationApplicationConfigurationOutputReference) ApplicationSystemRollbackConfiguration() DataAwsccKinesisanalyticsv2ApplicationApplicationConfigurationApplicationSystemRollbackConfigurationOutputReference {
+	var returns DataAwsccKinesisanalyticsv2ApplicationApplicationConfigurationApplicationSystemRollbackConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"applicationSystemRollbackConfiguration",
 		&returns,
 	)
 	return returns

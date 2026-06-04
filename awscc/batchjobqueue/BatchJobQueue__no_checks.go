@@ -56,7 +56,15 @@ func (b *jsiiProxy_BatchJobQueue) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
+func (b *jsiiProxy_BatchJobQueue) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (b *jsiiProxy_BatchJobQueue) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (b *jsiiProxy_BatchJobQueue) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -65,6 +73,10 @@ func (b *jsiiProxy_BatchJobQueue) validateOverrideLogicalIdParameters(newLogical
 }
 
 func (b *jsiiProxy_BatchJobQueue) validatePutComputeEnvironmentOrderParameters(value interface{}) error {
+	return nil
+}
+
+func (b *jsiiProxy_BatchJobQueue) validatePutJobStateTimeLimitActionsParameters(value interface{}) error {
 	return nil
 }
 

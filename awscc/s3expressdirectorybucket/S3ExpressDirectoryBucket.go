@@ -9,10 +9,13 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/s3expressdirectorybucket/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/s3express_directory_bucket awscc_s3express_directory_bucket}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/s3express_directory_bucket awscc_s3express_directory_bucket}.
 type S3ExpressDirectoryBucket interface {
 	cdktf.TerraformResource
 	Arn() *string
+	AvailabilityZoneName() *string
+	BucketEncryption() S3ExpressDirectoryBucketBucketEncryptionOutputReference
+	BucketEncryptionInput() interface{}
 	BucketName() *string
 	SetBucketName(val *string)
 	BucketNameInput() *string
@@ -48,6 +51,8 @@ type S3ExpressDirectoryBucket interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	LifecycleConfiguration() S3ExpressDirectoryBucketLifecycleConfigurationOutputReference
+	LifecycleConfigurationInput() interface{}
 	LocationName() *string
 	SetLocationName(val *string)
 	LocationNameInput() *string
@@ -93,20 +98,37 @@ type S3ExpressDirectoryBucket interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutBucketEncryption(value *S3ExpressDirectoryBucketBucketEncryption)
+	PutLifecycleConfiguration(value *S3ExpressDirectoryBucketLifecycleConfiguration)
+	ResetBucketEncryption()
 	ResetBucketName()
+	ResetLifecycleConfiguration()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -126,6 +148,36 @@ func (j *jsiiProxy_S3ExpressDirectoryBucket) Arn() *string {
 	_jsii_.Get(
 		j,
 		"arn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_S3ExpressDirectoryBucket) AvailabilityZoneName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"availabilityZoneName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_S3ExpressDirectoryBucket) BucketEncryption() S3ExpressDirectoryBucketBucketEncryptionOutputReference {
+	var returns S3ExpressDirectoryBucketBucketEncryptionOutputReference
+	_jsii_.Get(
+		j,
+		"bucketEncryption",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_S3ExpressDirectoryBucket) BucketEncryptionInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"bucketEncryptionInput",
 		&returns,
 	)
 	return returns
@@ -271,6 +323,26 @@ func (j *jsiiProxy_S3ExpressDirectoryBucket) Lifecycle() *cdktf.TerraformResourc
 	return returns
 }
 
+func (j *jsiiProxy_S3ExpressDirectoryBucket) LifecycleConfiguration() S3ExpressDirectoryBucketLifecycleConfigurationOutputReference {
+	var returns S3ExpressDirectoryBucketLifecycleConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"lifecycleConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_S3ExpressDirectoryBucket) LifecycleConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"lifecycleConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_S3ExpressDirectoryBucket) LocationName() *string {
 	var returns *string
 	_jsii_.Get(
@@ -362,7 +434,7 @@ func (j *jsiiProxy_S3ExpressDirectoryBucket) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/s3express_directory_bucket awscc_s3express_directory_bucket} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/s3express_directory_bucket awscc_s3express_directory_bucket} Resource.
 func NewS3ExpressDirectoryBucket(scope constructs.Construct, id *string, config *S3ExpressDirectoryBucketConfig) S3ExpressDirectoryBucket {
 	_init_.Initialize()
 
@@ -380,7 +452,7 @@ func NewS3ExpressDirectoryBucket(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/s3express_directory_bucket awscc_s3express_directory_bucket} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/s3express_directory_bucket awscc_s3express_directory_bucket} Resource.
 func NewS3ExpressDirectoryBucket_Override(s S3ExpressDirectoryBucket, scope constructs.Construct, id *string, config *S3ExpressDirectoryBucketConfig) {
 	_init_.Initialize()
 
@@ -761,6 +833,19 @@ func (s *jsiiProxy_S3ExpressDirectoryBucket) GetStringMapAttribute(terraformAttr
 	return returns
 }
 
+func (s *jsiiProxy_S3ExpressDirectoryBucket) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (s *jsiiProxy_S3ExpressDirectoryBucket) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := s.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -788,6 +873,17 @@ func (s *jsiiProxy_S3ExpressDirectoryBucket) InterpolationForAttribute(terraform
 	return returns
 }
 
+func (s *jsiiProxy_S3ExpressDirectoryBucket) MoveFromId(id *string) {
+	if err := s.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (s *jsiiProxy_S3ExpressDirectoryBucket) MoveTo(moveTarget *string, index interface{}) {
 	if err := s.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -796,6 +892,17 @@ func (s *jsiiProxy_S3ExpressDirectoryBucket) MoveTo(moveTarget *string, index in
 		s,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (s *jsiiProxy_S3ExpressDirectoryBucket) MoveToId(id *string) {
+	if err := s.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -810,10 +917,48 @@ func (s *jsiiProxy_S3ExpressDirectoryBucket) OverrideLogicalId(newLogicalId *str
 	)
 }
 
+func (s *jsiiProxy_S3ExpressDirectoryBucket) PutBucketEncryption(value *S3ExpressDirectoryBucketBucketEncryption) {
+	if err := s.validatePutBucketEncryptionParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putBucketEncryption",
+		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_S3ExpressDirectoryBucket) PutLifecycleConfiguration(value *S3ExpressDirectoryBucketLifecycleConfiguration) {
+	if err := s.validatePutLifecycleConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putLifecycleConfiguration",
+		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_S3ExpressDirectoryBucket) ResetBucketEncryption() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetBucketEncryption",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_S3ExpressDirectoryBucket) ResetBucketName() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetBucketName",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3ExpressDirectoryBucket) ResetLifecycleConfiguration() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetLifecycleConfiguration",
 		nil, // no parameters
 	)
 }
@@ -832,6 +977,32 @@ func (s *jsiiProxy_S3ExpressDirectoryBucket) SynthesizeAttributes() *map[string]
 	_jsii_.Invoke(
 		s,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_S3ExpressDirectoryBucket) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		s,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_S3ExpressDirectoryBucket) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

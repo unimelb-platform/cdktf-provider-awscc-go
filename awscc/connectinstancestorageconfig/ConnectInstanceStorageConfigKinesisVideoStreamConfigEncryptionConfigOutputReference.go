@@ -30,8 +30,8 @@ type ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfigOutputR
 	EncryptionTypeInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfig
-	SetInternalValue(val *ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfig)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	KeyId() *string
 	SetKeyId(val *string)
 	KeyIdInput() *string
@@ -67,6 +67,8 @@ type ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfigOutputR
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEncryptionType()
+	ResetKeyId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -142,8 +144,8 @@ func (j *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptio
 	return returns
 }
 
-func (j *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfigOutputReference) InternalValue() *ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfig {
-	var returns *ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfig
+func (j *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfigOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -253,7 +255,7 @@ func (j *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptio
 	)
 }
 
-func (j *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfigOutputReference)SetInternalValue(val *ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfig) {
+func (j *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfigOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptio
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfigOutputReference) ResetEncryptionType() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetEncryptionType",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfigOutputReference) ResetKeyId() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetKeyId",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

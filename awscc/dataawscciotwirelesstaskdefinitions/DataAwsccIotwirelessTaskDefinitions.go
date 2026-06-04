@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciotwirelesstaskdefinitions/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotwireless_task_definitions awscc_iotwireless_task_definitions}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotwireless_task_definitions awscc_iotwireless_task_definitions}.
 type DataAwsccIotwirelessTaskDefinitions interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccIotwirelessTaskDefinitions interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccIotwirelessTaskDefinitions) TerraformResourceType() 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotwireless_task_definitions awscc_iotwireless_task_definitions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotwireless_task_definitions awscc_iotwireless_task_definitions} Data Source.
 func NewDataAwsccIotwirelessTaskDefinitions(scope constructs.Construct, id *string, config *DataAwsccIotwirelessTaskDefinitionsConfig) DataAwsccIotwirelessTaskDefinitions {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccIotwirelessTaskDefinitions(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotwireless_task_definitions awscc_iotwireless_task_definitions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotwireless_task_definitions awscc_iotwireless_task_definitions} Data Source.
 func NewDataAwsccIotwirelessTaskDefinitions_Override(d DataAwsccIotwirelessTaskDefinitions, scope constructs.Construct, id *string, config *DataAwsccIotwirelessTaskDefinitionsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccIotwirelessTaskDefinitions) SynthesizeAttributes() *
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotwirelessTaskDefinitions) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotwirelessTaskDefinitions) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

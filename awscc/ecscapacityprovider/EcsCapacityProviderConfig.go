@@ -19,11 +19,11 @@ type EcsCapacityProviderConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ecs_capacity_provider#auto_scaling_group_provider EcsCapacityProvider#auto_scaling_group_provider}.
-	AutoScalingGroupProvider *EcsCapacityProviderAutoScalingGroupProvider `field:"required" json:"autoScalingGroupProvider" yaml:"autoScalingGroupProvider"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ecs_capacity_provider#name EcsCapacityProvider#name}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ecs_capacity_provider#auto_scaling_group_provider EcsCapacityProvider#auto_scaling_group_provider}.
+	AutoScalingGroupProvider *EcsCapacityProviderAutoScalingGroupProvider `field:"optional" json:"autoScalingGroupProvider" yaml:"autoScalingGroupProvider"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ecs_capacity_provider#name EcsCapacityProvider#name}.
 	Name *string `field:"optional" json:"name" yaml:"name"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ecs_capacity_provider#tags EcsCapacityProvider#tags}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ecs_capacity_provider#tags EcsCapacityProvider#tags}.
 	Tags interface{} `field:"optional" json:"tags" yaml:"tags"`
 }
 

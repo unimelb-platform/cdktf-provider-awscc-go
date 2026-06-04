@@ -31,6 +31,7 @@ type DataAwsccDatazoneDataSourceConfigurationOutputReference interface {
 	InternalValue() *DataAwsccDatazoneDataSourceConfiguration
 	SetInternalValue(val *DataAwsccDatazoneDataSourceConfiguration)
 	RedshiftRunConfiguration() DataAwsccDatazoneDataSourceConfigurationRedshiftRunConfigurationOutputReference
+	SageMakerRunConfiguration() DataAwsccDatazoneDataSourceConfigurationSageMakerRunConfigurationOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -143,6 +144,16 @@ func (j *jsiiProxy_DataAwsccDatazoneDataSourceConfigurationOutputReference) Reds
 	_jsii_.Get(
 		j,
 		"redshiftRunConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatazoneDataSourceConfigurationOutputReference) SageMakerRunConfiguration() DataAwsccDatazoneDataSourceConfigurationSageMakerRunConfigurationOutputReference {
+	var returns DataAwsccDatazoneDataSourceConfigurationSageMakerRunConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"sageMakerRunConfiguration",
 		&returns,
 	)
 	return returns

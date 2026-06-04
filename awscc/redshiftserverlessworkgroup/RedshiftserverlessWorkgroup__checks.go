@@ -119,6 +119,14 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroup) validateInterpolationForAttribut
 	return nil
 }
 
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (r *jsiiProxy_RedshiftserverlessWorkgroup) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroup) validateMoveToParameters(moveTar
 	return nil
 }
 
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (r *jsiiProxy_RedshiftserverlessWorkgroup) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -219,6 +235,17 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroup) validatePutConfigParametersParam
 	return nil
 }
 
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) validatePutPricePerformanceTargetParameters(value *RedshiftserverlessWorkgroupPricePerformanceTarget) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (r *jsiiProxy_RedshiftserverlessWorkgroup) validatePutTagsParameters(value interface{}) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
@@ -245,6 +272,17 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroup) validatePutTagsParameters(value 
 		if !_jsii_.IsAnonymousProxy(value) {
 			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*RedshiftserverlessWorkgroupTags; received %#v (a %T)", value, value)
 		}
+	}
+
+	return nil
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroup) validatePutWorkgroupParameters(value *RedshiftserverlessWorkgroupWorkgroup) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
 	}
 
 	return nil
@@ -416,6 +454,14 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetLifecycleParameters(v
 	return nil
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetMaxCapacityParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetNamespaceNameParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -498,6 +544,14 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetPubliclyAccessiblePar
 	return nil
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetRecoveryPointIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetSecurityGroupIdsParameters(val *[]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -506,7 +560,39 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetSecurityGroupIdsParam
 	return nil
 }
 
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetSnapshotArnParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetSnapshotNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetSnapshotOwnerAccountParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetSubnetIdsParameters(val *[]*string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroup) validateSetTrackNameParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

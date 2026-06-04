@@ -64,6 +64,7 @@ type Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTargetGroupsConfig
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutTargetGroups(value interface{})
+	ResetTargetGroups()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -446,6 +447,14 @@ func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTarg
 		e,
 		"putTargetGroups",
 		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTargetGroupsConfigOutputReference) ResetTargetGroups() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetTargetGroups",
+		nil, // no parameters
 	)
 }
 

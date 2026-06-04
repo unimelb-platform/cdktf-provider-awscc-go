@@ -42,13 +42,19 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
 			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
 			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "hasResourceMove", GoMethod: "HasResourceMove"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
+			_jsii_.MemberProperty{JsiiProperty: "identityPoolId", GoGetter: "IdentityPoolId"},
 			_jsii_.MemberProperty{JsiiProperty: "identityPoolName", GoGetter: "IdentityPoolName"},
 			_jsii_.MemberProperty{JsiiProperty: "identityPoolNameInput", GoGetter: "IdentityPoolNameInput"},
+			_jsii_.MemberProperty{JsiiProperty: "identityPoolTags", GoGetter: "IdentityPoolTags"},
+			_jsii_.MemberProperty{JsiiProperty: "identityPoolTagsInput", GoGetter: "IdentityPoolTagsInput"},
 			_jsii_.MemberMethod{JsiiMethod: "importFrom", GoMethod: "ImportFrom"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "lifecycle", GoGetter: "Lifecycle"},
+			_jsii_.MemberMethod{JsiiMethod: "moveFromId", GoMethod: "MoveFromId"},
 			_jsii_.MemberMethod{JsiiMethod: "moveTo", GoMethod: "MoveTo"},
+			_jsii_.MemberMethod{JsiiMethod: "moveToId", GoMethod: "MoveToId"},
 			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberProperty{JsiiProperty: "openIdConnectProviderArNs", GoGetter: "OpenIdConnectProviderArNs"},
@@ -60,6 +66,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "pushSyncInput", GoGetter: "PushSyncInput"},
 			_jsii_.MemberMethod{JsiiMethod: "putCognitoIdentityProviders", GoMethod: "PutCognitoIdentityProviders"},
 			_jsii_.MemberMethod{JsiiMethod: "putCognitoStreams", GoMethod: "PutCognitoStreams"},
+			_jsii_.MemberMethod{JsiiMethod: "putIdentityPoolTags", GoMethod: "PutIdentityPoolTags"},
 			_jsii_.MemberMethod{JsiiMethod: "putPushSync", GoMethod: "PutPushSync"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAllowClassicFlow", GoMethod: "ResetAllowClassicFlow"},
@@ -68,6 +75,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetCognitoStreams", GoMethod: "ResetCognitoStreams"},
 			_jsii_.MemberMethod{JsiiMethod: "resetDeveloperProviderName", GoMethod: "ResetDeveloperProviderName"},
 			_jsii_.MemberMethod{JsiiMethod: "resetIdentityPoolName", GoMethod: "ResetIdentityPoolName"},
+			_jsii_.MemberMethod{JsiiMethod: "resetIdentityPoolTags", GoMethod: "ResetIdentityPoolTags"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOpenIdConnectProviderArNs", GoMethod: "ResetOpenIdConnectProviderArNs"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetPushSync", GoMethod: "ResetPushSync"},
@@ -78,9 +86,11 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "supportedLoginProviders", GoGetter: "SupportedLoginProviders"},
 			_jsii_.MemberProperty{JsiiProperty: "supportedLoginProvidersInput", GoGetter: "SupportedLoginProvidersInput"},
 			_jsii_.MemberMethod{JsiiMethod: "synthesizeAttributes", GoMethod: "SynthesizeAttributes"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesizeHclAttributes", GoMethod: "SynthesizeHclAttributes"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformGeneratorMetadata", GoGetter: "TerraformGeneratorMetadata"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformMetaArguments", GoGetter: "TerraformMetaArguments"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResourceType", GoGetter: "TerraformResourceType"},
+			_jsii_.MemberMethod{JsiiMethod: "toHclTerraform", GoMethod: "ToHclTerraform"},
 			_jsii_.MemberMethod{JsiiMethod: "toMetadata", GoMethod: "ToMetadata"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 			_jsii_.MemberMethod{JsiiMethod: "toTerraform", GoMethod: "ToTerraform"},
@@ -99,6 +109,7 @@ func init() {
 		"awscc.cognitoIdentityPool.CognitoIdentityPoolCognitoIdentityProvidersList",
 		reflect.TypeOf((*CognitoIdentityPoolCognitoIdentityProvidersList)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -141,6 +152,8 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "providerName", GoGetter: "ProviderName"},
 			_jsii_.MemberProperty{JsiiProperty: "providerNameInput", GoGetter: "ProviderNameInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetClientId", GoMethod: "ResetClientId"},
+			_jsii_.MemberMethod{JsiiMethod: "resetProviderName", GoMethod: "ResetProviderName"},
 			_jsii_.MemberMethod{JsiiMethod: "resetServerSideTokenCheck", GoMethod: "ResetServerSideTokenCheck"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "serverSideTokenCheck", GoGetter: "ServerSideTokenCheck"},
@@ -203,6 +216,70 @@ func init() {
 	_jsii_.RegisterStruct(
 		"awscc.cognitoIdentityPool.CognitoIdentityPoolConfig",
 		reflect.TypeOf((*CognitoIdentityPoolConfig)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"awscc.cognitoIdentityPool.CognitoIdentityPoolIdentityPoolTags",
+		reflect.TypeOf((*CognitoIdentityPoolIdentityPoolTags)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"awscc.cognitoIdentityPool.CognitoIdentityPoolIdentityPoolTagsList",
+		reflect.TypeOf((*CognitoIdentityPoolIdentityPoolTagsList)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "get", GoMethod: "Get"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "wrapsSet", GoGetter: "WrapsSet"},
+		},
+		func() interface{} {
+			j := jsiiProxy_CognitoIdentityPoolIdentityPoolTagsList{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexList)
+			return &j
+		},
+	)
+	_jsii_.RegisterClass(
+		"awscc.cognitoIdentityPool.CognitoIdentityPoolIdentityPoolTagsOutputReference",
+		reflect.TypeOf((*CognitoIdentityPoolIdentityPoolTagsOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "key", GoGetter: "Key"},
+			_jsii_.MemberProperty{JsiiProperty: "keyInput", GoGetter: "KeyInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetKey", GoMethod: "ResetKey"},
+			_jsii_.MemberMethod{JsiiMethod: "resetValue", GoMethod: "ResetValue"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "value", GoGetter: "Value"},
+			_jsii_.MemberProperty{JsiiProperty: "valueInput", GoGetter: "ValueInput"},
+		},
+		func() interface{} {
+			j := jsiiProxy_CognitoIdentityPoolIdentityPoolTagsOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
 	)
 	_jsii_.RegisterStruct(
 		"awscc.cognitoIdentityPool.CognitoIdentityPoolPushSync",

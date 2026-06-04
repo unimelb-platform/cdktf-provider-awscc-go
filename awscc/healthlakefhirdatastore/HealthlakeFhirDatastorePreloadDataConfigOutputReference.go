@@ -64,6 +64,7 @@ type HealthlakeFhirDatastorePreloadDataConfigOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPreloadDataType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (h *jsiiProxy_HealthlakeFhirDatastorePreloadDataConfigOutputReference) Inte
 	)
 
 	return returns
+}
+
+func (h *jsiiProxy_HealthlakeFhirDatastorePreloadDataConfigOutputReference) ResetPreloadDataType() {
+	_jsii_.InvokeVoid(
+		h,
+		"resetPreloadDataType",
+		nil, // no parameters
+	)
 }
 
 func (h *jsiiProxy_HealthlakeFhirDatastorePreloadDataConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

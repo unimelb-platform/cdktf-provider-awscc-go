@@ -70,7 +70,9 @@ type S3BucketNotificationConfigurationQueueConfigurationsOutputReference interfa
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutFilter(value *S3BucketNotificationConfigurationQueueConfigurationsFilter)
+	ResetEvent()
 	ResetFilter()
+	ResetQueue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -518,10 +520,26 @@ func (s *jsiiProxy_S3BucketNotificationConfigurationQueueConfigurationsOutputRef
 	)
 }
 
+func (s *jsiiProxy_S3BucketNotificationConfigurationQueueConfigurationsOutputReference) ResetEvent() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetEvent",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_S3BucketNotificationConfigurationQueueConfigurationsOutputReference) ResetFilter() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetFilter",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketNotificationConfigurationQueueConfigurationsOutputReference) ResetQueue() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetQueue",
 		nil, // no parameters
 	)
 }

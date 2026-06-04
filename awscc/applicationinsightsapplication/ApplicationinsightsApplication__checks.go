@@ -119,6 +119,14 @@ func (a *jsiiProxy_ApplicationinsightsApplication) validateInterpolationForAttri
 	return nil
 }
 
+func (a *jsiiProxy_ApplicationinsightsApplication) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (a *jsiiProxy_ApplicationinsightsApplication) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (a *jsiiProxy_ApplicationinsightsApplication) validateMoveToParameters(move
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplication) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -347,6 +363,26 @@ func validateApplicationinsightsApplication_IsTerraformElementParameters(x inter
 func validateApplicationinsightsApplication_IsTerraformResourceParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ApplicationinsightsApplication) validateSetAttachMissingPermissionParameters(val interface{}) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+	switch val.(type) {
+	case *bool:
+		// ok
+	case bool:
+		// ok
+	case cdktf.IResolvable:
+		// ok
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: *bool, cdktf.IResolvable; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil
@@ -573,6 +609,14 @@ func (j *jsiiProxy_ApplicationinsightsApplication) validateSetProvisionersParame
 }
 
 func (j *jsiiProxy_ApplicationinsightsApplication) validateSetResourceGroupNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ApplicationinsightsApplication) validateSetSnsNotificationArnParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

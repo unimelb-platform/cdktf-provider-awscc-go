@@ -41,6 +41,9 @@ type LambdaFunctionCodeOutputReference interface {
 	S3ObjectVersion() *string
 	SetS3ObjectVersion(val *string)
 	S3ObjectVersionInput() *string
+	SourceKmsKeyArn() *string
+	SetSourceKmsKeyArn(val *string)
+	SourceKmsKeyArnInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -80,6 +83,7 @@ type LambdaFunctionCodeOutputReference interface {
 	ResetS3Bucket()
 	ResetS3Key()
 	ResetS3ObjectVersion()
+	ResetSourceKmsKeyArn()
 	ResetZipFile()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -226,6 +230,26 @@ func (j *jsiiProxy_LambdaFunctionCodeOutputReference) S3ObjectVersionInput() *st
 	return returns
 }
 
+func (j *jsiiProxy_LambdaFunctionCodeOutputReference) SourceKmsKeyArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"sourceKmsKeyArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LambdaFunctionCodeOutputReference) SourceKmsKeyArnInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"sourceKmsKeyArnInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_LambdaFunctionCodeOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -367,6 +391,17 @@ func (j *jsiiProxy_LambdaFunctionCodeOutputReference)SetS3ObjectVersion(val *str
 	_jsii_.Set(
 		j,
 		"s3ObjectVersion",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LambdaFunctionCodeOutputReference)SetSourceKmsKeyArn(val *string) {
+	if err := j.validateSetSourceKmsKeyArnParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"sourceKmsKeyArn",
 		val,
 	)
 }
@@ -618,6 +653,14 @@ func (l *jsiiProxy_LambdaFunctionCodeOutputReference) ResetS3ObjectVersion() {
 	_jsii_.InvokeVoid(
 		l,
 		"resetS3ObjectVersion",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LambdaFunctionCodeOutputReference) ResetSourceKmsKeyArn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetSourceKmsKeyArn",
 		nil, // no parameters
 	)
 }

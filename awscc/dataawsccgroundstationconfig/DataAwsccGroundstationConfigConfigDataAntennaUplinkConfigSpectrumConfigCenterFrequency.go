@@ -1,0 +1,6 @@
+package dataawsccgroundstationconfig
+
+
+type DataAwsccGroundstationConfigConfigDataAntennaUplinkConfigSpectrumConfigCenterFrequency struct {
+}
+

@@ -67,6 +67,8 @@ type LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsList
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetText()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMes
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListVariationsImageResponseCardButtonsOutputReference) ResetText() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetText",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListVariationsImageResponseCardButtonsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListVariationsImageResponseCardButtonsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

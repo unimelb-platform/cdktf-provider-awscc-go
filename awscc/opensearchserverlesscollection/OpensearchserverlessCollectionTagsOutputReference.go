@@ -67,6 +67,8 @@ type OpensearchserverlessCollectionTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (o *jsiiProxy_OpensearchserverlessCollectionTagsOutputReference) Interpolat
 	)
 
 	return returns
+}
+
+func (o *jsiiProxy_OpensearchserverlessCollectionTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OpensearchserverlessCollectionTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (o *jsiiProxy_OpensearchserverlessCollectionTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

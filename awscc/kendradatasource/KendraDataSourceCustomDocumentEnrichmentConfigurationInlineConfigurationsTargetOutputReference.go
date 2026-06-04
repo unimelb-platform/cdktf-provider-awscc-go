@@ -70,6 +70,7 @@ type KendraDataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationsTa
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutTargetDocumentAttributeValue(value *KendraDataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationsTargetTargetDocumentAttributeValue)
+	ResetTargetDocumentAttributeKey()
 	ResetTargetDocumentAttributeValue()
 	ResetTargetDocumentAttributeValueDeletion()
 	// Produce the Token's value at resolution time.
@@ -516,6 +517,14 @@ func (k *jsiiProxy_KendraDataSourceCustomDocumentEnrichmentConfigurationInlineCo
 		k,
 		"putTargetDocumentAttributeValue",
 		[]interface{}{value},
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationsTargetOutputReference) ResetTargetDocumentAttributeKey() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetTargetDocumentAttributeKey",
+		nil, // no parameters
 	)
 }
 

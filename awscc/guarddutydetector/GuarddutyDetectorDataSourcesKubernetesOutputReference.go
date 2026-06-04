@@ -11,7 +11,7 @@ import (
 type GuarddutyDetectorDataSourcesKubernetesOutputReference interface {
 	cdktf.ComplexObject
 	AuditLogs() GuarddutyDetectorDataSourcesKubernetesAuditLogsOutputReference
-	AuditLogsInput() *GuarddutyDetectorDataSourcesKubernetesAuditLogs
+	AuditLogsInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -64,6 +64,7 @@ type GuarddutyDetectorDataSourcesKubernetesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAuditLogs(value *GuarddutyDetectorDataSourcesKubernetesAuditLogs)
+	ResetAuditLogs()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -89,8 +90,8 @@ func (j *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesOutputReference) AuditL
 	return returns
 }
 
-func (j *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesOutputReference) AuditLogsInput() *GuarddutyDetectorDataSourcesKubernetesAuditLogs {
-	var returns *GuarddutyDetectorDataSourcesKubernetesAuditLogs
+func (j *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesOutputReference) AuditLogsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"auditLogsInput",
@@ -446,6 +447,14 @@ func (g *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesOutputReference) PutAud
 		g,
 		"putAuditLogs",
 		[]interface{}{value},
+	)
+}
+
+func (g *jsiiProxy_GuarddutyDetectorDataSourcesKubernetesOutputReference) ResetAuditLogs() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetAuditLogs",
+		nil, // no parameters
 	)
 }
 

@@ -56,7 +56,15 @@ func (s *jsiiProxy_SsoAssignment) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
+func (s *jsiiProxy_SsoAssignment) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_SsoAssignment) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (s *jsiiProxy_SsoAssignment) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

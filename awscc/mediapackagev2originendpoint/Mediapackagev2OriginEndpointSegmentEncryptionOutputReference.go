@@ -29,7 +29,7 @@ type Mediapackagev2OriginEndpointSegmentEncryptionOutputReference interface {
 	// Experimental.
 	CreationStack() *[]*string
 	EncryptionMethod() Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethodOutputReference
-	EncryptionMethodInput() *Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethod
+	EncryptionMethodInput() interface{}
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -38,7 +38,7 @@ type Mediapackagev2OriginEndpointSegmentEncryptionOutputReference interface {
 	SetKeyRotationIntervalSeconds(val *float64)
 	KeyRotationIntervalSecondsInput() *float64
 	SpekeKeyProvider() Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProviderOutputReference
-	SpekeKeyProviderInput() *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProvider
+	SpekeKeyProviderInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -74,7 +74,9 @@ type Mediapackagev2OriginEndpointSegmentEncryptionOutputReference interface {
 	PutEncryptionMethod(value *Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethod)
 	PutSpekeKeyProvider(value *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProvider)
 	ResetConstantInitializationVector()
+	ResetEncryptionMethod()
 	ResetKeyRotationIntervalSeconds()
+	ResetSpekeKeyProvider()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -150,8 +152,8 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionOutputReference)
 	return returns
 }
 
-func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionOutputReference) EncryptionMethodInput() *Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethod {
-	var returns *Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethod
+func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionOutputReference) EncryptionMethodInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"encryptionMethodInput",
@@ -210,8 +212,8 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionOutputReference)
 	return returns
 }
 
-func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionOutputReference) SpekeKeyProviderInput() *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProvider {
-	var returns *Mediapackagev2OriginEndpointSegmentEncryptionSpekeKeyProvider
+func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionOutputReference) SpekeKeyProviderInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"spekeKeyProviderInput",
@@ -561,10 +563,26 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionOutputReference)
 	)
 }
 
+func (m *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionOutputReference) ResetEncryptionMethod() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetEncryptionMethod",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionOutputReference) ResetKeyRotationIntervalSeconds() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetKeyRotationIntervalSeconds",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionOutputReference) ResetSpekeKeyProvider() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetSpekeKeyProvider",
 		nil, // no parameters
 	)
 }

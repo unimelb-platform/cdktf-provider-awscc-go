@@ -10,6 +10,9 @@ import (
 
 type SagemakerInferenceComponentSpecificationOutputReference interface {
 	cdktf.ComplexObject
+	BaseInferenceComponentName() *string
+	SetBaseInferenceComponentName(val *string)
+	BaseInferenceComponentNameInput() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -73,6 +76,8 @@ type SagemakerInferenceComponentSpecificationOutputReference interface {
 	PutComputeResourceRequirements(value *SagemakerInferenceComponentSpecificationComputeResourceRequirements)
 	PutContainer(value *SagemakerInferenceComponentSpecificationContainer)
 	PutStartupParameters(value *SagemakerInferenceComponentSpecificationStartupParameters)
+	ResetBaseInferenceComponentName()
+	ResetComputeResourceRequirements()
 	ResetContainer()
 	ResetModelName()
 	ResetStartupParameters()
@@ -89,6 +94,26 @@ type SagemakerInferenceComponentSpecificationOutputReference interface {
 // The jsii proxy struct for SagemakerInferenceComponentSpecificationOutputReference
 type jsiiProxy_SagemakerInferenceComponentSpecificationOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_SagemakerInferenceComponentSpecificationOutputReference) BaseInferenceComponentName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"baseInferenceComponentName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerInferenceComponentSpecificationOutputReference) BaseInferenceComponentNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"baseInferenceComponentNameInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_SagemakerInferenceComponentSpecificationOutputReference) ComplexObjectIndex() interface{} {
@@ -266,6 +291,17 @@ func NewSagemakerInferenceComponentSpecificationOutputReference_Override(s Sagem
 		"awscc.sagemakerInferenceComponent.SagemakerInferenceComponentSpecificationOutputReference",
 		[]interface{}{terraformResource, terraformAttribute},
 		s,
+	)
+}
+
+func (j *jsiiProxy_SagemakerInferenceComponentSpecificationOutputReference)SetBaseInferenceComponentName(val *string) {
+	if err := j.validateSetBaseInferenceComponentNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"baseInferenceComponentName",
+		val,
 	)
 }
 
@@ -551,6 +587,22 @@ func (s *jsiiProxy_SagemakerInferenceComponentSpecificationOutputReference) PutS
 		s,
 		"putStartupParameters",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SagemakerInferenceComponentSpecificationOutputReference) ResetBaseInferenceComponentName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetBaseInferenceComponentName",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerInferenceComponentSpecificationOutputReference) ResetComputeResourceRequirements() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetComputeResourceRequirements",
+		nil, // no parameters
 	)
 }
 

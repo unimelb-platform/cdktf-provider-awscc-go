@@ -56,7 +56,15 @@ func (a *jsiiProxy_ApsWorkspace) validateInterpolationForAttributeParameters(ter
 	return nil
 }
 
+func (a *jsiiProxy_ApsWorkspace) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_ApsWorkspace) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (a *jsiiProxy_ApsWorkspace) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -68,7 +76,15 @@ func (a *jsiiProxy_ApsWorkspace) validatePutLoggingConfigurationParameters(value
 	return nil
 }
 
+func (a *jsiiProxy_ApsWorkspace) validatePutQueryLoggingConfigurationParameters(value *ApsWorkspaceQueryLoggingConfiguration) error {
+	return nil
+}
+
 func (a *jsiiProxy_ApsWorkspace) validatePutTagsParameters(value interface{}) error {
+	return nil
+}
+
+func (a *jsiiProxy_ApsWorkspace) validatePutWorkspaceConfigurationParameters(value *ApsWorkspaceWorkspaceConfiguration) error {
 	return nil
 }
 

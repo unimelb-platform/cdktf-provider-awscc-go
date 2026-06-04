@@ -30,8 +30,8 @@ type CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConf
 	Header() *string
 	SetHeader(val *string)
 	HeaderInput() *string
-	InternalValue() *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItems
-	SetInternalValue(val *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItems)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConf
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetHeader()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -139,8 +140,8 @@ func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRem
 	return returns
 }
 
-func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItemsOutputReference) InternalValue() *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItems {
-	var returns *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItems
+func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItemsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -230,7 +231,7 @@ func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRem
 	)
 }
 
-func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItemsOutputReference)SetInternalValue(val *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItems) {
+func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItemsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -447,6 +448,14 @@ func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRem
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItemsOutputReference) ResetHeader() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetHeader",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigItemsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

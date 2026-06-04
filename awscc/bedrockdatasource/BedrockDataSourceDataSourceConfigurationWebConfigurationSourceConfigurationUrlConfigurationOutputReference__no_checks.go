@@ -1,0 +1,78 @@
+//go:build no_runtime_type_checking
+
+package bedrockdatasource
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (b *jsiiProxy_BedrockDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationUrlConfigurationOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationUrlConfigurationOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationUrlConfigurationOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationUrlConfigurationOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationUrlConfigurationOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationUrlConfigurationOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationUrlConfigurationOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationUrlConfigurationOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationUrlConfigurationOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationUrlConfigurationOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationUrlConfigurationOutputReference) validatePutSeedUrlsParameters(value interface{}) error {
+	return nil
+}
+
+func (b *jsiiProxy_BedrockDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationUrlConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationUrlConfigurationOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationUrlConfigurationOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationUrlConfigurationOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationUrlConfigurationOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_BedrockDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationUrlConfigurationOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewBedrockDataSourceDataSourceConfigurationWebConfigurationSourceConfigurationUrlConfigurationOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

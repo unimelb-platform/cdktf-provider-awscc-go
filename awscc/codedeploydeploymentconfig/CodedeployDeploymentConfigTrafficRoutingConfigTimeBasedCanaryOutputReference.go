@@ -67,6 +67,8 @@ type CodedeployDeploymentConfigTrafficRoutingConfigTimeBasedCanaryOutputReferenc
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCanaryInterval()
+	ResetCanaryPercentage()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CodedeployDeploymentConfigTrafficRoutingConfigTimeBasedCanary
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CodedeployDeploymentConfigTrafficRoutingConfigTimeBasedCanaryOutputReference) ResetCanaryInterval() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetCanaryInterval",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CodedeployDeploymentConfigTrafficRoutingConfigTimeBasedCanaryOutputReference) ResetCanaryPercentage() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetCanaryPercentage",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CodedeployDeploymentConfigTrafficRoutingConfigTimeBasedCanaryOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

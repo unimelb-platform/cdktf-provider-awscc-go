@@ -119,6 +119,14 @@ func (i *jsiiProxy_IamSamlProvider) validateInterpolationForAttributeParameters(
 	return nil
 }
 
+func (i *jsiiProxy_IamSamlProvider) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (i *jsiiProxy_IamSamlProvider) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,9 +188,48 @@ func (i *jsiiProxy_IamSamlProvider) validateMoveToParameters(moveTarget *string,
 	return nil
 }
 
+func (i *jsiiProxy_IamSamlProvider) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (i *jsiiProxy_IamSamlProvider) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_IamSamlProvider) validatePutPrivateKeyListParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*IamSamlProviderPrivateKeyListStruct:
+		value := value.(*[]*IamSamlProviderPrivateKeyListStruct)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*IamSamlProviderPrivateKeyListStruct:
+		value_ := value.([]*IamSamlProviderPrivateKeyListStruct)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*IamSamlProviderPrivateKeyListStruct; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil
@@ -254,6 +301,22 @@ func validateIamSamlProvider_IsTerraformElementParameters(x interface{}) error {
 func validateIamSamlProvider_IsTerraformResourceParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_IamSamlProvider) validateSetAddPrivateKeyParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_IamSamlProvider) validateSetAssertionEncryptionModeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil
@@ -411,6 +474,14 @@ func (j *jsiiProxy_IamSamlProvider) validateSetProvisionersParameters(val *[]int
 	return nil
 }
 
+func (j *jsiiProxy_IamSamlProvider) validateSetRemovePrivateKeyParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_IamSamlProvider) validateSetSamlMetadataDocumentParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -428,9 +499,6 @@ func validateNewIamSamlProviderParameters(scope constructs.Construct, id *string
 		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
-	if config == nil {
-		return fmt.Errorf("parameter config is required, but nil was provided")
-	}
 	if err := _jsii_.ValidateStruct(config, func() string { return "parameter config" }); err != nil {
 		return err
 	}

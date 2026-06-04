@@ -1,0 +1,6 @@
+package dataawsccmskreplicator
+
+
+type DataAwsccMskReplicatorReplicationInfoListTopicReplicationStartingPosition struct {
+}
+

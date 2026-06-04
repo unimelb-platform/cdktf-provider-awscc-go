@@ -28,6 +28,9 @@ type BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	EnableExecuteCommand() interface{}
+	SetEnableExecuteCommand(val interface{})
+	EnableExecuteCommandInput() interface{}
 	Environment() BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerEnvironmentList
 	EnvironmentInput() interface{}
 	EphemeralStorage() BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerEphemeralStorageOutputReference
@@ -35,8 +38,6 @@ type BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference
 	ExecutionRoleArn() *string
 	SetExecutionRoleArn(val *string)
 	ExecutionRoleArnInput() *string
-	FargatePlatformConfiguration() BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerFargatePlatformConfigurationOutputReference
-	FargatePlatformConfigurationInput() interface{}
 	// Experimental.
 	Fqn() *string
 	Image() *string
@@ -59,14 +60,14 @@ type BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference
 	MemoryInput() *float64
 	MountPoints() BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerMountPointsList
 	MountPointsInput() interface{}
-	NetworkConfiguration() BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerNetworkConfigurationOutputReference
-	NetworkConfigurationInput() interface{}
 	Privileged() interface{}
 	SetPrivileged(val interface{})
 	PrivilegedInput() interface{}
 	ReadonlyRootFilesystem() interface{}
 	SetReadonlyRootFilesystem(val interface{})
 	ReadonlyRootFilesystemInput() interface{}
+	RepositoryCredentials() BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerRepositoryCredentialsOutputReference
+	RepositoryCredentialsInput() interface{}
 	ResourceRequirements() BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerResourceRequirementsList
 	ResourceRequirementsInput() interface{}
 	RuntimePlatform() BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerRuntimePlatformOutputReference
@@ -117,30 +118,30 @@ type BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutEnvironment(value interface{})
 	PutEphemeralStorage(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerEphemeralStorage)
-	PutFargatePlatformConfiguration(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerFargatePlatformConfiguration)
 	PutLinuxParameters(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerLinuxParameters)
 	PutLogConfiguration(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerLogConfiguration)
 	PutMountPoints(value interface{})
-	PutNetworkConfiguration(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerNetworkConfiguration)
+	PutRepositoryCredentials(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerRepositoryCredentials)
 	PutResourceRequirements(value interface{})
 	PutRuntimePlatform(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerRuntimePlatform)
 	PutSecrets(value interface{})
 	PutUlimits(value interface{})
 	PutVolumes(value interface{})
 	ResetCommand()
+	ResetEnableExecuteCommand()
 	ResetEnvironment()
 	ResetEphemeralStorage()
 	ResetExecutionRoleArn()
-	ResetFargatePlatformConfiguration()
+	ResetImage()
 	ResetInstanceType()
 	ResetJobRoleArn()
 	ResetLinuxParameters()
 	ResetLogConfiguration()
 	ResetMemory()
 	ResetMountPoints()
-	ResetNetworkConfiguration()
 	ResetPrivileged()
 	ResetReadonlyRootFilesystem()
+	ResetRepositoryCredentials()
 	ResetResourceRequirements()
 	ResetRuntimePlatform()
 	ResetSecrets()
@@ -213,6 +214,26 @@ func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerO
 	return returns
 }
 
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) EnableExecuteCommand() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableExecuteCommand",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) EnableExecuteCommandInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableExecuteCommandInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) Environment() BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerEnvironmentList {
 	var returns BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerEnvironmentList
 	_jsii_.Get(
@@ -268,26 +289,6 @@ func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerO
 	_jsii_.Get(
 		j,
 		"executionRoleArnInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) FargatePlatformConfiguration() BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerFargatePlatformConfigurationOutputReference {
-	var returns BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerFargatePlatformConfigurationOutputReference
-	_jsii_.Get(
-		j,
-		"fargatePlatformConfiguration",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) FargatePlatformConfigurationInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"fargatePlatformConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -453,26 +454,6 @@ func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerO
 	return returns
 }
 
-func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) NetworkConfiguration() BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerNetworkConfigurationOutputReference {
-	var returns BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerNetworkConfigurationOutputReference
-	_jsii_.Get(
-		j,
-		"networkConfiguration",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) NetworkConfigurationInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"networkConfigurationInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) Privileged() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -508,6 +489,26 @@ func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerO
 	_jsii_.Get(
 		j,
 		"readonlyRootFilesystemInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) RepositoryCredentials() BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerRepositoryCredentialsOutputReference {
+	var returns BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerRepositoryCredentialsOutputReference
+	_jsii_.Get(
+		j,
+		"repositoryCredentials",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) RepositoryCredentialsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"repositoryCredentialsInput",
 		&returns,
 	)
 	return returns
@@ -730,6 +731,17 @@ func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerO
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
+		val,
+	)
+}
+
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference)SetEnableExecuteCommand(val interface{}) {
+	if err := j.validateSetEnableExecuteCommandParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enableExecuteCommand",
 		val,
 	)
 }
@@ -1074,17 +1086,6 @@ func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerO
 	)
 }
 
-func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) PutFargatePlatformConfiguration(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerFargatePlatformConfiguration) {
-	if err := b.validatePutFargatePlatformConfigurationParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		b,
-		"putFargatePlatformConfiguration",
-		[]interface{}{value},
-	)
-}
-
 func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) PutLinuxParameters(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerLinuxParameters) {
 	if err := b.validatePutLinuxParametersParameters(value); err != nil {
 		panic(err)
@@ -1118,13 +1119,13 @@ func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerO
 	)
 }
 
-func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) PutNetworkConfiguration(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerNetworkConfiguration) {
-	if err := b.validatePutNetworkConfigurationParameters(value); err != nil {
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) PutRepositoryCredentials(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerRepositoryCredentials) {
+	if err := b.validatePutRepositoryCredentialsParameters(value); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
 		b,
-		"putNetworkConfiguration",
+		"putRepositoryCredentials",
 		[]interface{}{value},
 	)
 }
@@ -1192,6 +1193,14 @@ func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerO
 	)
 }
 
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) ResetEnableExecuteCommand() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetEnableExecuteCommand",
+		nil, // no parameters
+	)
+}
+
 func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) ResetEnvironment() {
 	_jsii_.InvokeVoid(
 		b,
@@ -1216,10 +1225,10 @@ func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerO
 	)
 }
 
-func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) ResetFargatePlatformConfiguration() {
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) ResetImage() {
 	_jsii_.InvokeVoid(
 		b,
-		"resetFargatePlatformConfiguration",
+		"resetImage",
 		nil, // no parameters
 	)
 }
@@ -1272,14 +1281,6 @@ func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerO
 	)
 }
 
-func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) ResetNetworkConfiguration() {
-	_jsii_.InvokeVoid(
-		b,
-		"resetNetworkConfiguration",
-		nil, // no parameters
-	)
-}
-
 func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) ResetPrivileged() {
 	_jsii_.InvokeVoid(
 		b,
@@ -1292,6 +1293,14 @@ func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerO
 	_jsii_.InvokeVoid(
 		b,
 		"resetReadonlyRootFilesystem",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesContainerOutputReference) ResetRepositoryCredentials() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetRepositoryCredentials",
 		nil, // no parameters
 	)
 }

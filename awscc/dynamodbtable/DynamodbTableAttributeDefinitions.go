@@ -2,9 +2,13 @@ package dynamodbtable
 
 
 type DynamodbTableAttributeDefinitions struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/dynamodb_table#attribute_name DynamodbTable#attribute_name}.
-	AttributeName *string `field:"required" json:"attributeName" yaml:"attributeName"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/dynamodb_table#attribute_type DynamodbTable#attribute_type}.
-	AttributeType *string `field:"required" json:"attributeType" yaml:"attributeType"`
+	// A name for the attribute.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/dynamodb_table#attribute_name DynamodbTable#attribute_name}
+	AttributeName *string `field:"optional" json:"attributeName" yaml:"attributeName"`
+	// The data type for the attribute, where:   +  ``S`` - the attribute is of type String   +  ``N`` - the attribute is of type Number   +  ``B`` - the attribute is of type Binary.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/dynamodb_table#attribute_type DynamodbTable#attribute_type}
+	AttributeType *string `field:"optional" json:"attributeType" yaml:"attributeType"`
 }
 

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/mediapackagepackagingconfiguration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediapackage_packaging_configuration awscc_mediapackage_packaging_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediapackage_packaging_configuration awscc_mediapackage_packaging_configuration}.
 type MediapackagePackagingConfiguration interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -44,8 +44,6 @@ type MediapackagePackagingConfiguration interface {
 	HlsPackage() MediapackagePackagingConfigurationHlsPackageOutputReference
 	HlsPackageInput() interface{}
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -54,6 +52,9 @@ type MediapackagePackagingConfiguration interface {
 	MssPackageInput() interface{}
 	// The tree node.
 	Node() constructs.Node
+	PackagingConfigurationId() *string
+	SetPackagingConfigurationId(val *string)
+	PackagingConfigurationIdInput() *string
 	PackagingGroupId() *string
 	SetPackagingGroupId(val *string)
 	PackagingGroupIdInput() *string
@@ -99,12 +100,22 @@ type MediapackagePackagingConfiguration interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -122,6 +133,9 @@ type MediapackagePackagingConfiguration interface {
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -296,16 +310,6 @@ func (j *jsiiProxy_MediapackagePackagingConfiguration) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfiguration) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_MediapackagePackagingConfiguration) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -341,6 +345,26 @@ func (j *jsiiProxy_MediapackagePackagingConfiguration) Node() constructs.Node {
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediapackagePackagingConfiguration) PackagingConfigurationId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"packagingConfigurationId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MediapackagePackagingConfiguration) PackagingConfigurationIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"packagingConfigurationIdInput",
 		&returns,
 	)
 	return returns
@@ -447,7 +471,7 @@ func (j *jsiiProxy_MediapackagePackagingConfiguration) TerraformResourceType() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediapackage_packaging_configuration awscc_mediapackage_packaging_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediapackage_packaging_configuration awscc_mediapackage_packaging_configuration} Resource.
 func NewMediapackagePackagingConfiguration(scope constructs.Construct, id *string, config *MediapackagePackagingConfigurationConfig) MediapackagePackagingConfiguration {
 	_init_.Initialize()
 
@@ -465,7 +489,7 @@ func NewMediapackagePackagingConfiguration(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediapackage_packaging_configuration awscc_mediapackage_packaging_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediapackage_packaging_configuration awscc_mediapackage_packaging_configuration} Resource.
 func NewMediapackagePackagingConfiguration_Override(m MediapackagePackagingConfiguration, scope constructs.Construct, id *string, config *MediapackagePackagingConfigurationConfig) {
 	_init_.Initialize()
 
@@ -514,17 +538,6 @@ func (j *jsiiProxy_MediapackagePackagingConfiguration)SetForEach(val cdktf.ITerr
 	)
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfiguration)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
-		val,
-	)
-}
-
 func (j *jsiiProxy_MediapackagePackagingConfiguration)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
 	if err := j.validateSetLifecycleParameters(val); err != nil {
 		panic(err)
@@ -532,6 +545,17 @@ func (j *jsiiProxy_MediapackagePackagingConfiguration)SetLifecycle(val *cdktf.Te
 	_jsii_.Set(
 		j,
 		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_MediapackagePackagingConfiguration)SetPackagingConfigurationId(val *string) {
+	if err := j.validateSetPackagingConfigurationIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"packagingConfigurationId",
 		val,
 	)
 }
@@ -835,6 +859,19 @@ func (m *jsiiProxy_MediapackagePackagingConfiguration) GetStringMapAttribute(ter
 	return returns
 }
 
+func (m *jsiiProxy_MediapackagePackagingConfiguration) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (m *jsiiProxy_MediapackagePackagingConfiguration) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -862,6 +899,17 @@ func (m *jsiiProxy_MediapackagePackagingConfiguration) InterpolationForAttribute
 	return returns
 }
 
+func (m *jsiiProxy_MediapackagePackagingConfiguration) MoveFromId(id *string) {
+	if err := m.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_MediapackagePackagingConfiguration) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -870,6 +918,17 @@ func (m *jsiiProxy_MediapackagePackagingConfiguration) MoveTo(moveTarget *string
 		m,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (m *jsiiProxy_MediapackagePackagingConfiguration) MoveToId(id *string) {
+	if err := m.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -993,6 +1052,32 @@ func (m *jsiiProxy_MediapackagePackagingConfiguration) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		m,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MediapackagePackagingConfiguration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		m,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MediapackagePackagingConfiguration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

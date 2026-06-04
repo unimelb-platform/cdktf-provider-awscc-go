@@ -11,7 +11,7 @@ import (
 type KinesisfirehoseDeliveryStreamMskSourceConfigurationOutputReference interface {
 	cdktf.ComplexObject
 	AuthenticationConfiguration() KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfigurationOutputReference
-	AuthenticationConfigurationInput() *KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfiguration
+	AuthenticationConfigurationInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -34,6 +34,9 @@ type KinesisfirehoseDeliveryStreamMskSourceConfigurationOutputReference interfac
 	MskClusterArn() *string
 	SetMskClusterArn(val *string)
 	MskClusterArnInput() *string
+	ReadFromTimestamp() *string
+	SetReadFromTimestamp(val *string)
+	ReadFromTimestampInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -70,6 +73,10 @@ type KinesisfirehoseDeliveryStreamMskSourceConfigurationOutputReference interfac
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAuthenticationConfiguration(value *KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfiguration)
+	ResetAuthenticationConfiguration()
+	ResetMskClusterArn()
+	ResetReadFromTimestamp()
+	ResetTopicName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -95,8 +102,8 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationOutputRefe
 	return returns
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationOutputReference) AuthenticationConfigurationInput() *KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfiguration {
-	var returns *KinesisfirehoseDeliveryStreamMskSourceConfigurationAuthenticationConfiguration
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationOutputReference) AuthenticationConfigurationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"authenticationConfigurationInput",
@@ -170,6 +177,26 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationOutputRefe
 	_jsii_.Get(
 		j,
 		"mskClusterArnInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationOutputReference) ReadFromTimestamp() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"readFromTimestamp",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationOutputReference) ReadFromTimestampInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"readFromTimestampInput",
 		&returns,
 	)
 	return returns
@@ -283,6 +310,17 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationOutputRefe
 	_jsii_.Set(
 		j,
 		"mskClusterArn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationOutputReference)SetReadFromTimestamp(val *string) {
+	if err := j.validateSetReadFromTimestampParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"readFromTimestamp",
 		val,
 	)
 }
@@ -514,6 +552,38 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationOutputRefe
 		k,
 		"putAuthenticationConfiguration",
 		[]interface{}{value},
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationOutputReference) ResetAuthenticationConfiguration() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetAuthenticationConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationOutputReference) ResetMskClusterArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetMskClusterArn",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationOutputReference) ResetReadFromTimestamp() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetReadFromTimestamp",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamMskSourceConfigurationOutputReference) ResetTopicName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetTopicName",
+		nil, // no parameters
 	)
 }
 

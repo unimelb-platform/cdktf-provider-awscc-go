@@ -64,7 +64,7 @@ func (j *jsiiProxy_CassandraTableClusteringKeyColumnsColumnOutputReference) vali
 	return nil
 }
 
-func (j *jsiiProxy_CassandraTableClusteringKeyColumnsColumnOutputReference) validateSetInternalValueParameters(val *CassandraTableClusteringKeyColumnsColumn) error {
+func (j *jsiiProxy_CassandraTableClusteringKeyColumnsColumnOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

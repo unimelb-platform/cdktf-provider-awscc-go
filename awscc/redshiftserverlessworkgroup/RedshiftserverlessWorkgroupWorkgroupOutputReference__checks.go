@@ -90,6 +90,59 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) validate
 	return nil
 }
 
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) validatePutConfigParametersParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*RedshiftserverlessWorkgroupWorkgroupConfigParameters:
+		value := value.(*[]*RedshiftserverlessWorkgroupWorkgroupConfigParameters)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*RedshiftserverlessWorkgroupWorkgroupConfigParameters:
+		value_ := value.([]*RedshiftserverlessWorkgroupWorkgroupConfigParameters)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*RedshiftserverlessWorkgroupWorkgroupConfigParameters; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) validatePutEndpointParameters(value *RedshiftserverlessWorkgroupWorkgroupEndpoint) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) validatePutPricePerformanceTargetParameters(value *RedshiftserverlessWorkgroupWorkgroupPricePerformanceTarget) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	if _context == nil {
 		return fmt.Errorf("parameter _context is required, but nil was provided")
@@ -163,9 +216,25 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) validate
 	return nil
 }
 
-func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) validateSetInternalValueParameters(val *RedshiftserverlessWorkgroupWorkgroup) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *RedshiftserverlessWorkgroupWorkgroup:
+		val := val.(*RedshiftserverlessWorkgroupWorkgroup)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case RedshiftserverlessWorkgroupWorkgroup:
+		val_ := val.(RedshiftserverlessWorkgroupWorkgroup)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *RedshiftserverlessWorkgroupWorkgroup; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

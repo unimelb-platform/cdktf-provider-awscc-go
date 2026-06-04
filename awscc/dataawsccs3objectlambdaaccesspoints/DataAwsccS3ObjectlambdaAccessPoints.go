@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccs3objectlambdaaccesspoints/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/s3objectlambda_access_points awscc_s3objectlambda_access_points}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/s3objectlambda_access_points awscc_s3objectlambda_access_points}.
 type DataAwsccS3ObjectlambdaAccessPoints interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccS3ObjectlambdaAccessPoints interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccS3ObjectlambdaAccessPoints) TerraformResourceType() 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/s3objectlambda_access_points awscc_s3objectlambda_access_points} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/s3objectlambda_access_points awscc_s3objectlambda_access_points} Data Source.
 func NewDataAwsccS3ObjectlambdaAccessPoints(scope constructs.Construct, id *string, config *DataAwsccS3ObjectlambdaAccessPointsConfig) DataAwsccS3ObjectlambdaAccessPoints {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccS3ObjectlambdaAccessPoints(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/s3objectlambda_access_points awscc_s3objectlambda_access_points} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/s3objectlambda_access_points awscc_s3objectlambda_access_points} Data Source.
 func NewDataAwsccS3ObjectlambdaAccessPoints_Override(d DataAwsccS3ObjectlambdaAccessPoints, scope constructs.Construct, id *string, config *DataAwsccS3ObjectlambdaAccessPointsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccS3ObjectlambdaAccessPoints) SynthesizeAttributes() *
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccS3ObjectlambdaAccessPoints) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccS3ObjectlambdaAccessPoints) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

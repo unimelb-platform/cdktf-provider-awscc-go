@@ -73,7 +73,10 @@ type IotTopicRuleTopicRulePayloadActionsS3OutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucketName()
 	ResetCannedAcl()
+	ResetKey()
+	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -552,10 +555,34 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsS3OutputReference) Interpo
 	return returns
 }
 
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsS3OutputReference) ResetBucketName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetBucketName",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsS3OutputReference) ResetCannedAcl() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetCannedAcl",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsS3OutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadActionsS3OutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArn",
 		nil, // no parameters
 	)
 }

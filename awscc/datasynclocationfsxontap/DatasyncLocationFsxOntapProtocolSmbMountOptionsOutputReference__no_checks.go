@@ -56,7 +56,7 @@ func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolSmbMountOptionsOutputReferenc
 	return nil
 }
 
-func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolSmbMountOptionsOutputReference) validateSetInternalValueParameters(val *DatasyncLocationFsxOntapProtocolSmbMountOptions) error {
+func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolSmbMountOptionsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

@@ -68,7 +68,7 @@ func (j *jsiiProxy_DataAwsccResiliencehubResiliencyPolicyPolicyOutputReference) 
 	return nil
 }
 
-func validateNewDataAwsccResiliencehubResiliencyPolicyPolicyOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectKey *string) error {
+func validateNewDataAwsccResiliencehubResiliencyPolicyPolicyOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
 	return nil
 }
 

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2transitgatewaymulticastgroupmember/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_transit_gateway_multicast_group_member awscc_ec2_transit_gateway_multicast_group_member}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_transit_gateway_multicast_group_member awscc_ec2_transit_gateway_multicast_group_member}.
 type DataAwsccEc2TransitGatewayMulticastGroupMember interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -54,7 +54,6 @@ type DataAwsccEc2TransitGatewayMulticastGroupMember interface {
 	RawOverrides() interface{}
 	ResourceId() *string
 	ResourceType() *string
-	SourceType() *string
 	SubnetId() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -93,6 +92,10 @@ type DataAwsccEc2TransitGatewayMulticastGroupMember interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -307,16 +310,6 @@ func (j *jsiiProxy_DataAwsccEc2TransitGatewayMulticastGroupMember) ResourceType(
 	return returns
 }
 
-func (j *jsiiProxy_DataAwsccEc2TransitGatewayMulticastGroupMember) SourceType() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"sourceType",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataAwsccEc2TransitGatewayMulticastGroupMember) SubnetId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -378,7 +371,7 @@ func (j *jsiiProxy_DataAwsccEc2TransitGatewayMulticastGroupMember) TransitGatewa
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_transit_gateway_multicast_group_member awscc_ec2_transit_gateway_multicast_group_member} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_transit_gateway_multicast_group_member awscc_ec2_transit_gateway_multicast_group_member} Data Source.
 func NewDataAwsccEc2TransitGatewayMulticastGroupMember(scope constructs.Construct, id *string, config *DataAwsccEc2TransitGatewayMulticastGroupMemberConfig) DataAwsccEc2TransitGatewayMulticastGroupMember {
 	_init_.Initialize()
 
@@ -396,7 +389,7 @@ func NewDataAwsccEc2TransitGatewayMulticastGroupMember(scope constructs.Construc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_transit_gateway_multicast_group_member awscc_ec2_transit_gateway_multicast_group_member} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_transit_gateway_multicast_group_member awscc_ec2_transit_gateway_multicast_group_member} Data Source.
 func NewDataAwsccEc2TransitGatewayMulticastGroupMember_Override(d DataAwsccEc2TransitGatewayMulticastGroupMember, scope constructs.Construct, id *string, config *DataAwsccEc2TransitGatewayMulticastGroupMemberConfig) {
 	_init_.Initialize()
 
@@ -763,6 +756,32 @@ func (d *jsiiProxy_DataAwsccEc2TransitGatewayMulticastGroupMember) SynthesizeAtt
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2TransitGatewayMulticastGroupMember) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2TransitGatewayMulticastGroupMember) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

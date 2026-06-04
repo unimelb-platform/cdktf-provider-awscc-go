@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccsagemakermonitoringschedule/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_monitoring_schedule awscc_sagemaker_monitoring_schedule}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_monitoring_schedule awscc_sagemaker_monitoring_schedule}.
 type DataAwsccSagemakerMonitoringSchedule interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -92,6 +92,10 @@ type DataAwsccSagemakerMonitoringSchedule interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -367,7 +371,7 @@ func (j *jsiiProxy_DataAwsccSagemakerMonitoringSchedule) TerraformResourceType()
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_monitoring_schedule awscc_sagemaker_monitoring_schedule} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_monitoring_schedule awscc_sagemaker_monitoring_schedule} Data Source.
 func NewDataAwsccSagemakerMonitoringSchedule(scope constructs.Construct, id *string, config *DataAwsccSagemakerMonitoringScheduleConfig) DataAwsccSagemakerMonitoringSchedule {
 	_init_.Initialize()
 
@@ -385,7 +389,7 @@ func NewDataAwsccSagemakerMonitoringSchedule(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_monitoring_schedule awscc_sagemaker_monitoring_schedule} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_monitoring_schedule awscc_sagemaker_monitoring_schedule} Data Source.
 func NewDataAwsccSagemakerMonitoringSchedule_Override(d DataAwsccSagemakerMonitoringSchedule, scope constructs.Construct, id *string, config *DataAwsccSagemakerMonitoringScheduleConfig) {
 	_init_.Initialize()
 
@@ -752,6 +756,32 @@ func (d *jsiiProxy_DataAwsccSagemakerMonitoringSchedule) SynthesizeAttributes() 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerMonitoringSchedule) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerMonitoringSchedule) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

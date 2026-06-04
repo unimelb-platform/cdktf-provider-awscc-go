@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccgameliftmatchmakingconfiguration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/gamelift_matchmaking_configuration awscc_gamelift_matchmaking_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/gamelift_matchmaking_configuration awscc_gamelift_matchmaking_configuration}.
 type DataAwsccGameliftMatchmakingConfiguration interface {
 	cdktf.TerraformDataSource
 	AcceptanceRequired() cdktf.IResolvable
@@ -100,6 +100,10 @@ type DataAwsccGameliftMatchmakingConfiguration interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -455,7 +459,7 @@ func (j *jsiiProxy_DataAwsccGameliftMatchmakingConfiguration) TerraformResourceT
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/gamelift_matchmaking_configuration awscc_gamelift_matchmaking_configuration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/gamelift_matchmaking_configuration awscc_gamelift_matchmaking_configuration} Data Source.
 func NewDataAwsccGameliftMatchmakingConfiguration(scope constructs.Construct, id *string, config *DataAwsccGameliftMatchmakingConfigurationConfig) DataAwsccGameliftMatchmakingConfiguration {
 	_init_.Initialize()
 
@@ -473,7 +477,7 @@ func NewDataAwsccGameliftMatchmakingConfiguration(scope constructs.Construct, id
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/gamelift_matchmaking_configuration awscc_gamelift_matchmaking_configuration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/gamelift_matchmaking_configuration awscc_gamelift_matchmaking_configuration} Data Source.
 func NewDataAwsccGameliftMatchmakingConfiguration_Override(d DataAwsccGameliftMatchmakingConfiguration, scope constructs.Construct, id *string, config *DataAwsccGameliftMatchmakingConfigurationConfig) {
 	_init_.Initialize()
 
@@ -840,6 +844,32 @@ func (d *jsiiProxy_DataAwsccGameliftMatchmakingConfiguration) SynthesizeAttribut
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGameliftMatchmakingConfiguration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGameliftMatchmakingConfiguration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

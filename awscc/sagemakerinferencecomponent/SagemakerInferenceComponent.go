@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/sagemakerinferencecomponent/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/sagemaker_inference_component awscc_sagemaker_inference_component}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/sagemaker_inference_component awscc_sagemaker_inference_component}.
 type SagemakerInferenceComponent interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -29,6 +29,8 @@ type SagemakerInferenceComponent interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DeploymentConfig() SagemakerInferenceComponentDeploymentConfigOutputReference
+	DeploymentConfigInput() interface{}
 	EndpointArn() *string
 	SetEndpointArn(val *string)
 	EndpointArnInput() *string
@@ -106,25 +108,42 @@ type SagemakerInferenceComponent interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutDeploymentConfig(value *SagemakerInferenceComponentDeploymentConfig)
 	PutRuntimeConfig(value *SagemakerInferenceComponentRuntimeConfig)
 	PutSpecification(value *SagemakerInferenceComponentSpecification)
 	PutTags(value interface{})
+	ResetDeploymentConfig()
 	ResetEndpointArn()
 	ResetInferenceComponentName()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetRuntimeConfig()
 	ResetTags()
+	ResetVariantName()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -194,6 +213,26 @@ func (j *jsiiProxy_SagemakerInferenceComponent) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerInferenceComponent) DeploymentConfig() SagemakerInferenceComponentDeploymentConfigOutputReference {
+	var returns SagemakerInferenceComponentDeploymentConfigOutputReference
+	_jsii_.Get(
+		j,
+		"deploymentConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerInferenceComponent) DeploymentConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"deploymentConfigInput",
 		&returns,
 	)
 	return returns
@@ -500,7 +539,7 @@ func (j *jsiiProxy_SagemakerInferenceComponent) VariantNameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/sagemaker_inference_component awscc_sagemaker_inference_component} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/sagemaker_inference_component awscc_sagemaker_inference_component} Resource.
 func NewSagemakerInferenceComponent(scope constructs.Construct, id *string, config *SagemakerInferenceComponentConfig) SagemakerInferenceComponent {
 	_init_.Initialize()
 
@@ -518,7 +557,7 @@ func NewSagemakerInferenceComponent(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/sagemaker_inference_component awscc_sagemaker_inference_component} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/sagemaker_inference_component awscc_sagemaker_inference_component} Resource.
 func NewSagemakerInferenceComponent_Override(s SagemakerInferenceComponent, scope constructs.Construct, id *string, config *SagemakerInferenceComponentConfig) {
 	_init_.Initialize()
 
@@ -910,6 +949,19 @@ func (s *jsiiProxy_SagemakerInferenceComponent) GetStringMapAttribute(terraformA
 	return returns
 }
 
+func (s *jsiiProxy_SagemakerInferenceComponent) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (s *jsiiProxy_SagemakerInferenceComponent) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := s.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -937,6 +989,17 @@ func (s *jsiiProxy_SagemakerInferenceComponent) InterpolationForAttribute(terraf
 	return returns
 }
 
+func (s *jsiiProxy_SagemakerInferenceComponent) MoveFromId(id *string) {
+	if err := s.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (s *jsiiProxy_SagemakerInferenceComponent) MoveTo(moveTarget *string, index interface{}) {
 	if err := s.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -948,6 +1011,17 @@ func (s *jsiiProxy_SagemakerInferenceComponent) MoveTo(moveTarget *string, index
 	)
 }
 
+func (s *jsiiProxy_SagemakerInferenceComponent) MoveToId(id *string) {
+	if err := s.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (s *jsiiProxy_SagemakerInferenceComponent) OverrideLogicalId(newLogicalId *string) {
 	if err := s.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -956,6 +1030,17 @@ func (s *jsiiProxy_SagemakerInferenceComponent) OverrideLogicalId(newLogicalId *
 		s,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (s *jsiiProxy_SagemakerInferenceComponent) PutDeploymentConfig(value *SagemakerInferenceComponentDeploymentConfig) {
+	if err := s.validatePutDeploymentConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putDeploymentConfig",
+		[]interface{}{value},
 	)
 }
 
@@ -992,6 +1077,14 @@ func (s *jsiiProxy_SagemakerInferenceComponent) PutTags(value interface{}) {
 	)
 }
 
+func (s *jsiiProxy_SagemakerInferenceComponent) ResetDeploymentConfig() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDeploymentConfig",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerInferenceComponent) ResetEndpointArn() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1016,10 +1109,26 @@ func (s *jsiiProxy_SagemakerInferenceComponent) ResetOverrideLogicalId() {
 	)
 }
 
+func (s *jsiiProxy_SagemakerInferenceComponent) ResetRuntimeConfig() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetRuntimeConfig",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerInferenceComponent) ResetTags() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetTags",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerInferenceComponent) ResetVariantName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetVariantName",
 		nil, // no parameters
 	)
 }
@@ -1030,6 +1139,32 @@ func (s *jsiiProxy_SagemakerInferenceComponent) SynthesizeAttributes() *map[stri
 	_jsii_.Invoke(
 		s,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SagemakerInferenceComponent) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		s,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SagemakerInferenceComponent) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

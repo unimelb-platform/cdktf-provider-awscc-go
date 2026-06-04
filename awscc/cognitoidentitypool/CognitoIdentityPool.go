@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/cognitoidentitypool/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cognito_identity_pool awscc_cognito_identity_pool}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cognito_identity_pool awscc_cognito_identity_pool}.
 type CognitoIdentityPool interface {
 	cdktf.TerraformResource
 	AllowClassicFlow() interface{}
@@ -53,9 +53,12 @@ type CognitoIdentityPool interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
+	IdentityPoolId() *string
 	IdentityPoolName() *string
 	SetIdentityPoolName(val *string)
 	IdentityPoolNameInput() *string
+	IdentityPoolTags() CognitoIdentityPoolIdentityPoolTagsList
+	IdentityPoolTagsInput() interface{}
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -114,17 +117,28 @@ type CognitoIdentityPool interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutCognitoIdentityProviders(value interface{})
 	PutCognitoStreams(value *CognitoIdentityPoolCognitoStreams)
+	PutIdentityPoolTags(value interface{})
 	PutPushSync(value *CognitoIdentityPoolPushSync)
 	ResetAllowClassicFlow()
 	ResetCognitoEvents()
@@ -132,6 +146,7 @@ type CognitoIdentityPool interface {
 	ResetCognitoStreams()
 	ResetDeveloperProviderName()
 	ResetIdentityPoolName()
+	ResetIdentityPoolTags()
 	ResetOpenIdConnectProviderArNs()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -140,6 +155,9 @@ type CognitoIdentityPool interface {
 	ResetSamlProviderArNs()
 	ResetSupportedLoginProviders()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -364,6 +382,16 @@ func (j *jsiiProxy_CognitoIdentityPool) Id() *string {
 	return returns
 }
 
+func (j *jsiiProxy_CognitoIdentityPool) IdentityPoolId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"identityPoolId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_CognitoIdentityPool) IdentityPoolName() *string {
 	var returns *string
 	_jsii_.Get(
@@ -379,6 +407,26 @@ func (j *jsiiProxy_CognitoIdentityPool) IdentityPoolNameInput() *string {
 	_jsii_.Get(
 		j,
 		"identityPoolNameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CognitoIdentityPool) IdentityPoolTags() CognitoIdentityPoolIdentityPoolTagsList {
+	var returns CognitoIdentityPoolIdentityPoolTagsList
+	_jsii_.Get(
+		j,
+		"identityPoolTags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CognitoIdentityPool) IdentityPoolTagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"identityPoolTagsInput",
 		&returns,
 	)
 	return returns
@@ -555,7 +603,7 @@ func (j *jsiiProxy_CognitoIdentityPool) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cognito_identity_pool awscc_cognito_identity_pool} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cognito_identity_pool awscc_cognito_identity_pool} Resource.
 func NewCognitoIdentityPool(scope constructs.Construct, id *string, config *CognitoIdentityPoolConfig) CognitoIdentityPool {
 	_init_.Initialize()
 
@@ -573,7 +621,7 @@ func NewCognitoIdentityPool(scope constructs.Construct, id *string, config *Cogn
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cognito_identity_pool awscc_cognito_identity_pool} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cognito_identity_pool awscc_cognito_identity_pool} Resource.
 func NewCognitoIdentityPool_Override(c CognitoIdentityPool, scope constructs.Construct, id *string, config *CognitoIdentityPoolConfig) {
 	_init_.Initialize()
 
@@ -1009,6 +1057,19 @@ func (c *jsiiProxy_CognitoIdentityPool) GetStringMapAttribute(terraformAttribute
 	return returns
 }
 
+func (c *jsiiProxy_CognitoIdentityPool) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_CognitoIdentityPool) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1036,6 +1097,17 @@ func (c *jsiiProxy_CognitoIdentityPool) InterpolationForAttribute(terraformAttri
 	return returns
 }
 
+func (c *jsiiProxy_CognitoIdentityPool) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CognitoIdentityPool) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1044,6 +1116,17 @@ func (c *jsiiProxy_CognitoIdentityPool) MoveTo(moveTarget *string, index interfa
 		c,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (c *jsiiProxy_CognitoIdentityPool) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1076,6 +1159,17 @@ func (c *jsiiProxy_CognitoIdentityPool) PutCognitoStreams(value *CognitoIdentity
 	_jsii_.InvokeVoid(
 		c,
 		"putCognitoStreams",
+		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CognitoIdentityPool) PutIdentityPoolTags(value interface{}) {
+	if err := c.validatePutIdentityPoolTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putIdentityPoolTags",
 		[]interface{}{value},
 	)
 }
@@ -1139,6 +1233,14 @@ func (c *jsiiProxy_CognitoIdentityPool) ResetIdentityPoolName() {
 	)
 }
 
+func (c *jsiiProxy_CognitoIdentityPool) ResetIdentityPoolTags() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetIdentityPoolTags",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CognitoIdentityPool) ResetOpenIdConnectProviderArNs() {
 	_jsii_.InvokeVoid(
 		c,
@@ -1185,6 +1287,32 @@ func (c *jsiiProxy_CognitoIdentityPool) SynthesizeAttributes() *map[string]inter
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CognitoIdentityPool) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CognitoIdentityPool) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

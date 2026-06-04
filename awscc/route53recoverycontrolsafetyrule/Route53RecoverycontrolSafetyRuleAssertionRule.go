@@ -6,13 +6,13 @@ type Route53RecoverycontrolSafetyRuleAssertionRule struct {
 	//
 	// For example, you might include three routing controls, one for each of three AWS Regions.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/route53recoverycontrol_safety_rule#asserted_controls Route53RecoverycontrolSafetyRule#asserted_controls}
-	AssertedControls *[]*string `field:"required" json:"assertedControls" yaml:"assertedControls"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/route53recoverycontrol_safety_rule#asserted_controls Route53RecoverycontrolSafetyRule#asserted_controls}
+	AssertedControls *[]*string `field:"optional" json:"assertedControls" yaml:"assertedControls"`
 	// An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail.
 	//
 	// This helps prevent "flapping" of state. The wait period is 5000 ms by default, but you can choose a custom value.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/route53recoverycontrol_safety_rule#wait_period_ms Route53RecoverycontrolSafetyRule#wait_period_ms}
-	WaitPeriodMs *float64 `field:"required" json:"waitPeriodMs" yaml:"waitPeriodMs"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/route53recoverycontrol_safety_rule#wait_period_ms Route53RecoverycontrolSafetyRule#wait_period_ms}
+	WaitPeriodMs *float64 `field:"optional" json:"waitPeriodMs" yaml:"waitPeriodMs"`
 }
 

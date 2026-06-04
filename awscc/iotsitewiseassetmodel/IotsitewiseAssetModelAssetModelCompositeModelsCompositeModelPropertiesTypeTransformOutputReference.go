@@ -67,6 +67,8 @@ type IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeT
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutVariables(value interface{})
+	ResetExpression()
+	ResetVariables()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -480,6 +482,22 @@ func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelP
 		i,
 		"putVariables",
 		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformOutputReference) ResetExpression() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetExpression",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeTransformOutputReference) ResetVariables() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetVariables",
+		nil, // no parameters
 	)
 }
 

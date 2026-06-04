@@ -2,9 +2,13 @@ package efsfilesystem
 
 
 type EfsFileSystemFileSystemTags struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/efs_file_system#key EfsFileSystem#key}.
-	Key *string `field:"required" json:"key" yaml:"key"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/efs_file_system#value EfsFileSystem#value}.
-	Value *string `field:"required" json:"value" yaml:"value"`
+	// The tag key (String). The key can't start with ``aws:``.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/efs_file_system#key EfsFileSystem#key}
+	Key *string `field:"optional" json:"key" yaml:"key"`
+	// The value of the tag key.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/efs_file_system#value EfsFileSystem#value}
+	Value *string `field:"optional" json:"value" yaml:"value"`
 }
 

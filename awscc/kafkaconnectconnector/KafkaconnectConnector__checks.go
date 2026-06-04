@@ -119,6 +119,14 @@ func (k *jsiiProxy_KafkaconnectConnector) validateInterpolationForAttributeParam
 	return nil
 }
 
+func (k *jsiiProxy_KafkaconnectConnector) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (k *jsiiProxy_KafkaconnectConnector) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (k *jsiiProxy_KafkaconnectConnector) validateMoveToParameters(moveTarget *s
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (k *jsiiProxy_KafkaconnectConnector) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -268,6 +284,37 @@ func (k *jsiiProxy_KafkaconnectConnector) validatePutPluginsParameters(value int
 	default:
 		if !_jsii_.IsAnonymousProxy(value) {
 			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*KafkaconnectConnectorPlugins; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (k *jsiiProxy_KafkaconnectConnector) validatePutTagsParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*KafkaconnectConnectorTags:
+		value := value.(*[]*KafkaconnectConnectorTags)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*KafkaconnectConnectorTags:
+		value_ := value.([]*KafkaconnectConnectorTags)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*KafkaconnectConnectorTags; received %#v (a %T)", value, value)
 		}
 	}
 

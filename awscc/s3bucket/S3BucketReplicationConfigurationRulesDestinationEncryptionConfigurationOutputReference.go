@@ -64,6 +64,7 @@ type S3BucketReplicationConfigurationRulesDestinationEncryptionConfigurationOutp
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetReplicaKmsKeyId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationEncryptionCon
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationEncryptionConfigurationOutputReference) ResetReplicaKmsKeyId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetReplicaKmsKeyId",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationEncryptionConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -1,0 +1,6 @@
+package dataawsccs3tablestable
+
+
+type DataAwsccS3TablesTableIcebergMetadataIcebergSchemaSchemaFieldListStruct struct {
+}
+

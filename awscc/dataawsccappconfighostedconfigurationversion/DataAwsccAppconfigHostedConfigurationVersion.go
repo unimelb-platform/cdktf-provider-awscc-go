@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccappconfighostedconfigurationversion/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appconfig_hosted_configuration_version awscc_appconfig_hosted_configuration_version}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appconfig_hosted_configuration_version awscc_appconfig_hosted_configuration_version}.
 type DataAwsccAppconfigHostedConfigurationVersion interface {
 	cdktf.TerraformDataSource
 	ApplicationId() *string
@@ -90,6 +90,10 @@ type DataAwsccAppconfigHostedConfigurationVersion interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -345,7 +349,7 @@ func (j *jsiiProxy_DataAwsccAppconfigHostedConfigurationVersion) VersionNumber()
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appconfig_hosted_configuration_version awscc_appconfig_hosted_configuration_version} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appconfig_hosted_configuration_version awscc_appconfig_hosted_configuration_version} Data Source.
 func NewDataAwsccAppconfigHostedConfigurationVersion(scope constructs.Construct, id *string, config *DataAwsccAppconfigHostedConfigurationVersionConfig) DataAwsccAppconfigHostedConfigurationVersion {
 	_init_.Initialize()
 
@@ -363,7 +367,7 @@ func NewDataAwsccAppconfigHostedConfigurationVersion(scope constructs.Construct,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appconfig_hosted_configuration_version awscc_appconfig_hosted_configuration_version} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appconfig_hosted_configuration_version awscc_appconfig_hosted_configuration_version} Data Source.
 func NewDataAwsccAppconfigHostedConfigurationVersion_Override(d DataAwsccAppconfigHostedConfigurationVersion, scope constructs.Construct, id *string, config *DataAwsccAppconfigHostedConfigurationVersionConfig) {
 	_init_.Initialize()
 
@@ -730,6 +734,32 @@ func (d *jsiiProxy_DataAwsccAppconfigHostedConfigurationVersion) SynthesizeAttri
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppconfigHostedConfigurationVersion) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppconfigHostedConfigurationVersion) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

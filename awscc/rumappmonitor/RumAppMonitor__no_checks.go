@@ -56,7 +56,15 @@ func (r *jsiiProxy_RumAppMonitor) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
+func (r *jsiiProxy_RumAppMonitor) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RumAppMonitor) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (r *jsiiProxy_RumAppMonitor) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -69,6 +77,14 @@ func (r *jsiiProxy_RumAppMonitor) validatePutAppMonitorConfigurationParameters(v
 }
 
 func (r *jsiiProxy_RumAppMonitor) validatePutCustomEventsParameters(value *RumAppMonitorCustomEvents) error {
+	return nil
+}
+
+func (r *jsiiProxy_RumAppMonitor) validatePutDeobfuscationConfigurationParameters(value *RumAppMonitorDeobfuscationConfiguration) error {
+	return nil
+}
+
+func (r *jsiiProxy_RumAppMonitor) validatePutResourcePolicyParameters(value *RumAppMonitorResourcePolicy) error {
 	return nil
 }
 
@@ -105,6 +121,10 @@ func (j *jsiiProxy_RumAppMonitor) validateSetCwLogEnabledParameters(val interfac
 }
 
 func (j *jsiiProxy_RumAppMonitor) validateSetDomainParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_RumAppMonitor) validateSetDomainListParameters(val *[]*string) error {
 	return nil
 }
 

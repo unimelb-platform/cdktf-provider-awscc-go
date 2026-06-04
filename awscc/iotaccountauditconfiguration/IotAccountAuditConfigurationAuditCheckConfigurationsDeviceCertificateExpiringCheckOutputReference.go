@@ -20,6 +20,8 @@ type IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiri
 	ComplexObjectIsFromSet() *bool
 	// Experimental.
 	SetComplexObjectIsFromSet(val *bool)
+	Configuration() IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiringCheckConfigurationOutputReference
+	ConfigurationInput() interface{}
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
 	//
 	// If this returns an empty array the stack will not be attached.
@@ -64,6 +66,8 @@ type IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiri
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutConfiguration(value *IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiringCheckConfiguration)
+	ResetConfiguration()
 	ResetEnabled()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -95,6 +99,26 @@ func (j *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCer
 	_jsii_.Get(
 		j,
 		"complexObjectIsFromSet",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiringCheckOutputReference) Configuration() IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiringCheckConfigurationOutputReference {
+	var returns IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiringCheckConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"configuration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiringCheckOutputReference) ConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"configurationInput",
 		&returns,
 	)
 	return returns
@@ -448,6 +472,25 @@ func (i *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCer
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiringCheckOutputReference) PutConfiguration(value *IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiringCheckConfiguration) {
+	if err := i.validatePutConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putConfiguration",
+		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiringCheckOutputReference) ResetConfiguration() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetConfiguration",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiringCheckOutputReference) ResetEnabled() {

@@ -10,6 +10,7 @@ import (
 
 type DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference interface {
 	cdktf.ComplexObject
+	AdditionalAnalyses() *string
 	AggregateColumns() DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggregateColumnsList
 	AllowedJoinOperators() *[]*string
 	// the index of the complex object in a list.
@@ -81,6 +82,16 @@ type DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputRef
 // The jsii proxy struct for DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference
 type jsiiProxy_DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference) AdditionalAnalyses() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"additionalAnalyses",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference) AggregateColumns() DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggregateColumnsList {

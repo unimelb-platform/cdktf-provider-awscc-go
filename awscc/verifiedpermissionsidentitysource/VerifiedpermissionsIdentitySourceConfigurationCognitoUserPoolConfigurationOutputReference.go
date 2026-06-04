@@ -30,6 +30,8 @@ type VerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationO
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
+	GroupConfiguration() VerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationGroupConfigurationOutputReference
+	GroupConfigurationInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	// Experimental.
@@ -67,7 +69,10 @@ type VerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationO
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutGroupConfiguration(value *VerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationGroupConfiguration)
 	ResetClientIds()
+	ResetGroupConfiguration()
+	ResetUserPoolArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -138,6 +143,26 @@ func (j *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationCognitoUserPool
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationOutputReference) GroupConfiguration() VerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationGroupConfigurationOutputReference {
+	var returns VerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationGroupConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"groupConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationOutputReference) GroupConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"groupConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -484,10 +509,37 @@ func (v *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationCognitoUserPool
 	return returns
 }
 
+func (v *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationOutputReference) PutGroupConfiguration(value *VerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationGroupConfiguration) {
+	if err := v.validatePutGroupConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		v,
+		"putGroupConfiguration",
+		[]interface{}{value},
+	)
+}
+
 func (v *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationOutputReference) ResetClientIds() {
 	_jsii_.InvokeVoid(
 		v,
 		"resetClientIds",
+		nil, // no parameters
+	)
+}
+
+func (v *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationOutputReference) ResetGroupConfiguration() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetGroupConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (v *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfigurationOutputReference) ResetUserPoolArn() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetUserPoolArn",
 		nil, // no parameters
 	)
 }

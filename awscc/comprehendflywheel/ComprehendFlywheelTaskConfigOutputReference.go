@@ -72,6 +72,7 @@ type ComprehendFlywheelTaskConfigOutputReference interface {
 	PutEntityRecognitionConfig(value *ComprehendFlywheelTaskConfigEntityRecognitionConfig)
 	ResetDocumentClassificationConfig()
 	ResetEntityRecognitionConfig()
+	ResetLanguageCode()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (c *jsiiProxy_ComprehendFlywheelTaskConfigOutputReference) ResetEntityRecog
 	_jsii_.InvokeVoid(
 		c,
 		"resetEntityRecognitionConfig",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ComprehendFlywheelTaskConfigOutputReference) ResetLanguageCode() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetLanguageCode",
 		nil, // no parameters
 	)
 }

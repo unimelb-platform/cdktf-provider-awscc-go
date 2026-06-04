@@ -95,6 +95,7 @@ type PipesPipeSourceParametersKinesisStreamParametersOutputReference interface {
 	ResetMaximumRetryAttempts()
 	ResetOnPartialBatchItemFailure()
 	ResetParallelizationFactor()
+	ResetStartingPosition()
 	ResetStartingPositionTimestamp()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -781,6 +782,14 @@ func (p *jsiiProxy_PipesPipeSourceParametersKinesisStreamParametersOutputReferen
 	_jsii_.InvokeVoid(
 		p,
 		"resetParallelizationFactor",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PipesPipeSourceParametersKinesisStreamParametersOutputReference) ResetStartingPosition() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetStartingPosition",
 		nil, // no parameters
 	)
 }

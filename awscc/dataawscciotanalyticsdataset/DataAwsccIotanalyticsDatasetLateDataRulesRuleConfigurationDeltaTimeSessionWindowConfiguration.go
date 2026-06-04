@@ -1,0 +1,6 @@
+package dataawscciotanalyticsdataset
+
+
+type DataAwsccIotanalyticsDatasetLateDataRulesRuleConfigurationDeltaTimeSessionWindowConfiguration struct {
+}
+

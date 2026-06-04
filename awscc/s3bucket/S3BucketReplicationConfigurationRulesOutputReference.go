@@ -28,7 +28,7 @@ type S3BucketReplicationConfigurationRulesOutputReference interface {
 	DeleteMarkerReplication() S3BucketReplicationConfigurationRulesDeleteMarkerReplicationOutputReference
 	DeleteMarkerReplicationInput() interface{}
 	Destination() S3BucketReplicationConfigurationRulesDestinationOutputReference
-	DestinationInput() *S3BucketReplicationConfigurationRulesDestination
+	DestinationInput() interface{}
 	Filter() S3BucketReplicationConfigurationRulesFilterOutputReference
 	FilterInput() interface{}
 	// Experimental.
@@ -36,8 +36,8 @@ type S3BucketReplicationConfigurationRulesOutputReference interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
-	InternalValue() *S3BucketReplicationConfigurationRules
-	SetInternalValue(val *S3BucketReplicationConfigurationRules)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Prefix() *string
 	SetPrefix(val *string)
 	PrefixInput() *string
@@ -86,11 +86,13 @@ type S3BucketReplicationConfigurationRulesOutputReference interface {
 	PutFilter(value *S3BucketReplicationConfigurationRulesFilter)
 	PutSourceSelectionCriteria(value *S3BucketReplicationConfigurationRulesSourceSelectionCriteria)
 	ResetDeleteMarkerReplication()
+	ResetDestination()
 	ResetFilter()
 	ResetId()
 	ResetPrefix()
 	ResetPriority()
 	ResetSourceSelectionCriteria()
+	ResetStatus()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -166,8 +168,8 @@ func (j *jsiiProxy_S3BucketReplicationConfigurationRulesOutputReference) Destina
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketReplicationConfigurationRulesOutputReference) DestinationInput() *S3BucketReplicationConfigurationRulesDestination {
-	var returns *S3BucketReplicationConfigurationRulesDestination
+func (j *jsiiProxy_S3BucketReplicationConfigurationRulesOutputReference) DestinationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"destinationInput",
@@ -226,8 +228,8 @@ func (j *jsiiProxy_S3BucketReplicationConfigurationRulesOutputReference) IdInput
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketReplicationConfigurationRulesOutputReference) InternalValue() *S3BucketReplicationConfigurationRules {
-	var returns *S3BucketReplicationConfigurationRules
+func (j *jsiiProxy_S3BucketReplicationConfigurationRulesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -397,7 +399,7 @@ func (j *jsiiProxy_S3BucketReplicationConfigurationRulesOutputReference)SetId(va
 	)
 }
 
-func (j *jsiiProxy_S3BucketReplicationConfigurationRulesOutputReference)SetInternalValue(val *S3BucketReplicationConfigurationRules) {
+func (j *jsiiProxy_S3BucketReplicationConfigurationRulesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -701,6 +703,14 @@ func (s *jsiiProxy_S3BucketReplicationConfigurationRulesOutputReference) ResetDe
 	)
 }
 
+func (s *jsiiProxy_S3BucketReplicationConfigurationRulesOutputReference) ResetDestination() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDestination",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_S3BucketReplicationConfigurationRulesOutputReference) ResetFilter() {
 	_jsii_.InvokeVoid(
 		s,
@@ -737,6 +747,14 @@ func (s *jsiiProxy_S3BucketReplicationConfigurationRulesOutputReference) ResetSo
 	_jsii_.InvokeVoid(
 		s,
 		"resetSourceSelectionCriteria",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketReplicationConfigurationRulesOutputReference) ResetStatus() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStatus",
 		nil, // no parameters
 	)
 }

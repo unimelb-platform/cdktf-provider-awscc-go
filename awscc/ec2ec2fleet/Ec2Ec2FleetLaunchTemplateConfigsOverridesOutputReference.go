@@ -13,6 +13,8 @@ type Ec2Ec2FleetLaunchTemplateConfigsOverridesOutputReference interface {
 	AvailabilityZone() *string
 	SetAvailabilityZone(val *string)
 	AvailabilityZoneInput() *string
+	BlockDeviceMappings() Ec2Ec2FleetLaunchTemplateConfigsOverridesBlockDeviceMappingsList
+	BlockDeviceMappingsInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -83,9 +85,11 @@ type Ec2Ec2FleetLaunchTemplateConfigsOverridesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutBlockDeviceMappings(value interface{})
 	PutInstanceRequirements(value *Ec2Ec2FleetLaunchTemplateConfigsOverridesInstanceRequirements)
 	PutPlacement(value *Ec2Ec2FleetLaunchTemplateConfigsOverridesPlacement)
 	ResetAvailabilityZone()
+	ResetBlockDeviceMappings()
 	ResetInstanceRequirements()
 	ResetInstanceType()
 	ResetMaxPrice()
@@ -123,6 +127,26 @@ func (j *jsiiProxy_Ec2Ec2FleetLaunchTemplateConfigsOverridesOutputReference) Ava
 	_jsii_.Get(
 		j,
 		"availabilityZoneInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2Ec2FleetLaunchTemplateConfigsOverridesOutputReference) BlockDeviceMappings() Ec2Ec2FleetLaunchTemplateConfigsOverridesBlockDeviceMappingsList {
+	var returns Ec2Ec2FleetLaunchTemplateConfigsOverridesBlockDeviceMappingsList
+	_jsii_.Get(
+		j,
+		"blockDeviceMappings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2Ec2FleetLaunchTemplateConfigsOverridesOutputReference) BlockDeviceMappingsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"blockDeviceMappingsInput",
 		&returns,
 	)
 	return returns
@@ -673,6 +697,17 @@ func (e *jsiiProxy_Ec2Ec2FleetLaunchTemplateConfigsOverridesOutputReference) Int
 	return returns
 }
 
+func (e *jsiiProxy_Ec2Ec2FleetLaunchTemplateConfigsOverridesOutputReference) PutBlockDeviceMappings(value interface{}) {
+	if err := e.validatePutBlockDeviceMappingsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putBlockDeviceMappings",
+		[]interface{}{value},
+	)
+}
+
 func (e *jsiiProxy_Ec2Ec2FleetLaunchTemplateConfigsOverridesOutputReference) PutInstanceRequirements(value *Ec2Ec2FleetLaunchTemplateConfigsOverridesInstanceRequirements) {
 	if err := e.validatePutInstanceRequirementsParameters(value); err != nil {
 		panic(err)
@@ -699,6 +734,14 @@ func (e *jsiiProxy_Ec2Ec2FleetLaunchTemplateConfigsOverridesOutputReference) Res
 	_jsii_.InvokeVoid(
 		e,
 		"resetAvailabilityZone",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2Ec2FleetLaunchTemplateConfigsOverridesOutputReference) ResetBlockDeviceMappings() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetBlockDeviceMappings",
 		nil, // no parameters
 	)
 }

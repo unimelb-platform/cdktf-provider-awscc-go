@@ -220,9 +220,25 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationS3
 	return nil
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationS3ConfigurationOutputReference) validateSetInternalValueParameters(val *KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationS3Configuration) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationS3ConfigurationOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationS3Configuration:
+		val := val.(*KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationS3Configuration)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationS3Configuration:
+		val_ := val.(KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationS3Configuration)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *KinesisfirehoseDeliveryStreamSplunkDestinationConfigurationS3Configuration; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

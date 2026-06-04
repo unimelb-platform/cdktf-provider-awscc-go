@@ -9,10 +9,11 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccmediatailorchannel/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediatailor_channel awscc_mediatailor_channel}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediatailor_channel awscc_mediatailor_channel}.
 type DataAwsccMediatailorChannel interface {
 	cdktf.TerraformDataSource
 	Arn() *string
+	Audiences() *[]*string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	ChannelName() *string
@@ -91,6 +92,10 @@ type DataAwsccMediatailorChannel interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -110,6 +115,16 @@ func (j *jsiiProxy_DataAwsccMediatailorChannel) Arn() *string {
 	_jsii_.Get(
 		j,
 		"arn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccMediatailorChannel) Audiences() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"audiences",
 		&returns,
 	)
 	return returns
@@ -356,7 +371,7 @@ func (j *jsiiProxy_DataAwsccMediatailorChannel) TimeShiftConfiguration() DataAws
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediatailor_channel awscc_mediatailor_channel} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediatailor_channel awscc_mediatailor_channel} Data Source.
 func NewDataAwsccMediatailorChannel(scope constructs.Construct, id *string, config *DataAwsccMediatailorChannelConfig) DataAwsccMediatailorChannel {
 	_init_.Initialize()
 
@@ -374,7 +389,7 @@ func NewDataAwsccMediatailorChannel(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mediatailor_channel awscc_mediatailor_channel} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mediatailor_channel awscc_mediatailor_channel} Data Source.
 func NewDataAwsccMediatailorChannel_Override(d DataAwsccMediatailorChannel, scope constructs.Construct, id *string, config *DataAwsccMediatailorChannelConfig) {
 	_init_.Initialize()
 
@@ -741,6 +756,32 @@ func (d *jsiiProxy_DataAwsccMediatailorChannel) SynthesizeAttributes() *map[stri
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMediatailorChannel) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMediatailorChannel) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

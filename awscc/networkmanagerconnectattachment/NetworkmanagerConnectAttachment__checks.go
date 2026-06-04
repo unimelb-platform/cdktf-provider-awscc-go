@@ -119,6 +119,14 @@ func (n *jsiiProxy_NetworkmanagerConnectAttachment) validateInterpolationForAttr
 	return nil
 }
 
+func (n *jsiiProxy_NetworkmanagerConnectAttachment) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (n *jsiiProxy_NetworkmanagerConnectAttachment) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (n *jsiiProxy_NetworkmanagerConnectAttachment) validateMoveToParameters(mov
 	return nil
 }
 
+func (n *jsiiProxy_NetworkmanagerConnectAttachment) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (n *jsiiProxy_NetworkmanagerConnectAttachment) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -189,6 +205,17 @@ func (n *jsiiProxy_NetworkmanagerConnectAttachment) validateOverrideLogicalIdPar
 }
 
 func (n *jsiiProxy_NetworkmanagerConnectAttachment) validatePutOptionsParameters(value *NetworkmanagerConnectAttachmentOptions) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (n *jsiiProxy_NetworkmanagerConnectAttachment) validatePutProposedNetworkFunctionGroupChangeParameters(value *NetworkmanagerConnectAttachmentProposedNetworkFunctionGroupChange) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -390,6 +417,14 @@ func (j *jsiiProxy_NetworkmanagerConnectAttachment) validateSetEdgeLocationParam
 func (j *jsiiProxy_NetworkmanagerConnectAttachment) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 		return err
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_NetworkmanagerConnectAttachment) validateSetNetworkFunctionGroupNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil

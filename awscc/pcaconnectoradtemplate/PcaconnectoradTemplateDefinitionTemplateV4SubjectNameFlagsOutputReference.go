@@ -27,8 +27,8 @@ type PcaconnectoradTemplateDefinitionTemplateV4SubjectNameFlagsOutputReference i
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *PcaconnectoradTemplateDefinitionTemplateV4SubjectNameFlags
-	SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV4SubjectNameFlags)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	RequireCommonName() interface{}
 	SetRequireCommonName(val interface{})
 	RequireCommonNameInput() interface{}
@@ -156,8 +156,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4SubjectNameFlagsOut
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4SubjectNameFlagsOutputReference) InternalValue() *PcaconnectoradTemplateDefinitionTemplateV4SubjectNameFlags {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV4SubjectNameFlags
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4SubjectNameFlagsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -436,7 +436,7 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4SubjectNameFlagsOut
 	)
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4SubjectNameFlagsOutputReference)SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV4SubjectNameFlags) {
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV4SubjectNameFlagsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

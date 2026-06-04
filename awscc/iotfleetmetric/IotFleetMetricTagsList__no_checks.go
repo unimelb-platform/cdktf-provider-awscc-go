@@ -4,6 +4,10 @@ package iotfleetmetric
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (i *jsiiProxy_IotFleetMetricTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotFleetMetricTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -70,6 +70,7 @@ type AppflowConnectorProfileConnectorProfileConfigConnectorProfilePropertiesPard
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBusinessUnitId()
 	ResetInstanceUrl()
 	ResetIsSandboxEnvironment()
 	// Produce the Token's value at resolution time.
@@ -517,6 +518,14 @@ func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfile
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfilePropertiesPardotOutputReference) ResetBusinessUnitId() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetBusinessUnitId",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfilePropertiesPardotOutputReference) ResetInstanceUrl() {

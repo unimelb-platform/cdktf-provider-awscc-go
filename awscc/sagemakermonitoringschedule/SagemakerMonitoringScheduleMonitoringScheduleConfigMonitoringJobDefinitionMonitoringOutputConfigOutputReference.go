@@ -27,8 +27,8 @@ type SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionM
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfig
-	SetInternalValue(val *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfig)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	KmsKeyId() *string
 	SetKmsKeyId(val *string)
 	KmsKeyIdInput() *string
@@ -68,6 +68,7 @@ type SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionM
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMonitoringOutputs(value interface{})
 	ResetKmsKeyId()
+	ResetMonitoringOutputs()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -123,8 +124,8 @@ func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoring
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigOutputReference) InternalValue() *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfig {
-	var returns *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfig
+func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -243,7 +244,7 @@ func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoring
 	)
 }
 
-func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigOutputReference)SetInternalValue(val *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfig) {
+func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -488,6 +489,14 @@ func (s *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoring
 	_jsii_.InvokeVoid(
 		s,
 		"resetKmsKeyId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringOutputConfigOutputReference) ResetMonitoringOutputs() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetMonitoringOutputs",
 		nil, // no parameters
 	)
 }

@@ -101,6 +101,17 @@ func (e *jsiiProxy_EntityresolutionIdMappingWorkflowIdMappingTechniquesOutputRef
 	return nil
 }
 
+func (e *jsiiProxy_EntityresolutionIdMappingWorkflowIdMappingTechniquesOutputReference) validatePutRuleBasedPropertiesParameters(value *EntityresolutionIdMappingWorkflowIdMappingTechniquesRuleBasedProperties) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_EntityresolutionIdMappingWorkflowIdMappingTechniquesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	if _context == nil {
 		return fmt.Errorf("parameter _context is required, but nil was provided")

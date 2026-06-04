@@ -27,8 +27,8 @@ type GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfigurationOutputRe
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfiguration
-	SetInternalValue(val *GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfiguration)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	TargetValue() *float64
 	SetTargetValue(val *float64)
 	TargetValueInput() *float64
@@ -64,6 +64,7 @@ type GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfigurationOutputRe
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetTargetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -119,8 +120,8 @@ func (j *jsiiProxy_GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfigu
 	return returns
 }
 
-func (j *jsiiProxy_GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfigurationOutputReference) InternalValue() *GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfiguration {
-	var returns *GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfiguration
+func (j *jsiiProxy_GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfigurationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -219,7 +220,7 @@ func (j *jsiiProxy_GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfigu
 	)
 }
 
-func (j *jsiiProxy_GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfigurationOutputReference)SetInternalValue(val *GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfiguration) {
+func (j *jsiiProxy_GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfigurationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -447,6 +448,14 @@ func (g *jsiiProxy_GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfigu
 	)
 
 	return returns
+}
+
+func (g *jsiiProxy_GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfigurationOutputReference) ResetTargetValue() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetTargetValue",
+		nil, // no parameters
+	)
 }
 
 func (g *jsiiProxy_GameliftGameServerGroupAutoScalingPolicyTargetTrackingConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

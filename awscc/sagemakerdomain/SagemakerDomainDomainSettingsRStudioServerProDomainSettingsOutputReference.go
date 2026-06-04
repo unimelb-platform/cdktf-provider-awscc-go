@@ -74,6 +74,7 @@ type SagemakerDomainDomainSettingsRStudioServerProDomainSettingsOutputReference 
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDefaultResourceSpec(value *SagemakerDomainDomainSettingsRStudioServerProDomainSettingsDefaultResourceSpec)
 	ResetDefaultResourceSpec()
+	ResetDomainExecutionRoleArn()
 	ResetRStudioConnectUrl()
 	ResetRStudioPackageManagerUrl()
 	// Produce the Token's value at resolution time.
@@ -558,6 +559,14 @@ func (s *jsiiProxy_SagemakerDomainDomainSettingsRStudioServerProDomainSettingsOu
 	_jsii_.InvokeVoid(
 		s,
 		"resetDefaultResourceSpec",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerDomainDomainSettingsRStudioServerProDomainSettingsOutputReference) ResetDomainExecutionRoleArn() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDomainExecutionRoleArn",
 		nil, // no parameters
 	)
 }

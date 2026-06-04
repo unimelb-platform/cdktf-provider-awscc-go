@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscclightsaildatabase/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lightsail_database awscc_lightsail_database}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lightsail_database awscc_lightsail_database}.
 type DataAwsccLightsailDatabase interface {
 	cdktf.TerraformDataSource
 	AvailabilityZone() *string
@@ -98,6 +98,10 @@ type DataAwsccLightsailDatabase interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -433,7 +437,7 @@ func (j *jsiiProxy_DataAwsccLightsailDatabase) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lightsail_database awscc_lightsail_database} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lightsail_database awscc_lightsail_database} Data Source.
 func NewDataAwsccLightsailDatabase(scope constructs.Construct, id *string, config *DataAwsccLightsailDatabaseConfig) DataAwsccLightsailDatabase {
 	_init_.Initialize()
 
@@ -451,7 +455,7 @@ func NewDataAwsccLightsailDatabase(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lightsail_database awscc_lightsail_database} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lightsail_database awscc_lightsail_database} Data Source.
 func NewDataAwsccLightsailDatabase_Override(d DataAwsccLightsailDatabase, scope constructs.Construct, id *string, config *DataAwsccLightsailDatabaseConfig) {
 	_init_.Initialize()
 
@@ -818,6 +822,32 @@ func (d *jsiiProxy_DataAwsccLightsailDatabase) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLightsailDatabase) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLightsailDatabase) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -76,6 +76,18 @@ func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputRefere
 	return nil
 }
 
+func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference) validateSetRoleArnParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference) validateSetStatusParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference) validateSetStatusMessageParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_EfsFileSystemReplicationConfigurationDestinationsOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

@@ -27,15 +27,15 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigur
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchema
-	SetInternalValue(val *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchema)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	RecordColumns() Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaRecordColumnsList
 	RecordColumnsInput() interface{}
 	RecordEncoding() *string
 	SetRecordEncoding(val *string)
 	RecordEncodingInput() *string
 	RecordFormat() Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaRecordFormatOutputReference
-	RecordFormatInput() *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaRecordFormat
+	RecordFormatInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -70,7 +70,9 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigur
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutRecordColumns(value interface{})
 	PutRecordFormat(value *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaRecordFormat)
+	ResetRecordColumns()
 	ResetRecordEncoding()
+	ResetRecordFormat()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -126,8 +128,8 @@ func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 	return returns
 }
 
-func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaOutputReference) InternalValue() *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchema {
-	var returns *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchema
+func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -186,8 +188,8 @@ func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 	return returns
 }
 
-func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaOutputReference) RecordFormatInput() *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaRecordFormat {
-	var returns *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaRecordFormat
+func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaOutputReference) RecordFormatInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"recordFormatInput",
@@ -266,7 +268,7 @@ func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 	)
 }
 
-func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaOutputReference)SetInternalValue(val *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchema) {
+func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -518,10 +520,26 @@ func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 	)
 }
 
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaOutputReference) ResetRecordColumns() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetRecordColumns",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaOutputReference) ResetRecordEncoding() {
 	_jsii_.InvokeVoid(
 		k,
 		"resetRecordEncoding",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaOutputReference) ResetRecordFormat() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetRecordFormat",
 		nil, // no parameters
 	)
 }

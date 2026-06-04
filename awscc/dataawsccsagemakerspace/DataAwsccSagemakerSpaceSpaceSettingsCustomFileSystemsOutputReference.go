@@ -28,6 +28,7 @@ type DataAwsccSagemakerSpaceSpaceSettingsCustomFileSystemsOutputReference interf
 	EfsFileSystem() DataAwsccSagemakerSpaceSpaceSettingsCustomFileSystemsEfsFileSystemOutputReference
 	// Experimental.
 	Fqn() *string
+	FsxLustreFileSystem() DataAwsccSagemakerSpaceSpaceSettingsCustomFileSystemsFsxLustreFileSystemOutputReference
 	InternalValue() *DataAwsccSagemakerSpaceSpaceSettingsCustomFileSystems
 	SetInternalValue(val *DataAwsccSagemakerSpaceSpaceSettingsCustomFileSystems)
 	// Experimental.
@@ -122,6 +123,16 @@ func (j *jsiiProxy_DataAwsccSagemakerSpaceSpaceSettingsCustomFileSystemsOutputRe
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerSpaceSpaceSettingsCustomFileSystemsOutputReference) FsxLustreFileSystem() DataAwsccSagemakerSpaceSpaceSettingsCustomFileSystemsFsxLustreFileSystemOutputReference {
+	var returns DataAwsccSagemakerSpaceSpaceSettingsCustomFileSystemsFsxLustreFileSystemOutputReference
+	_jsii_.Get(
+		j,
+		"fsxLustreFileSystem",
 		&returns,
 	)
 	return returns

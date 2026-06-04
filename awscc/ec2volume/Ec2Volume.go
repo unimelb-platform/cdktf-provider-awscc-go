@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2volume/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_volume awscc_ec2_volume}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_volume awscc_ec2_volume}.
 type Ec2Volume interface {
 	cdktf.TerraformResource
 	AutoEnableIo() interface{}
@@ -92,6 +92,9 @@ type Ec2Volume interface {
 	SetThroughput(val *float64)
 	ThroughputInput() *float64
 	VolumeId() *string
+	VolumeInitializationRate() *float64
+	SetVolumeInitializationRate(val *float64)
+	VolumeInitializationRateInput() *float64
 	VolumeType() *string
 	SetVolumeType(val *string)
 	VolumeTypeInput() *string
@@ -119,12 +122,22 @@ type Ec2Volume interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -142,8 +155,12 @@ type Ec2Volume interface {
 	ResetSnapshotId()
 	ResetTags()
 	ResetThroughput()
+	ResetVolumeInitializationRate()
 	ResetVolumeType()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -558,6 +575,26 @@ func (j *jsiiProxy_Ec2Volume) VolumeId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2Volume) VolumeInitializationRate() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"volumeInitializationRate",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2Volume) VolumeInitializationRateInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"volumeInitializationRateInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2Volume) VolumeType() *string {
 	var returns *string
 	_jsii_.Get(
@@ -579,7 +616,7 @@ func (j *jsiiProxy_Ec2Volume) VolumeTypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_volume awscc_ec2_volume} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_volume awscc_ec2_volume} Resource.
 func NewEc2Volume(scope constructs.Construct, id *string, config *Ec2VolumeConfig) Ec2Volume {
 	_init_.Initialize()
 
@@ -597,7 +634,7 @@ func NewEc2Volume(scope constructs.Construct, id *string, config *Ec2VolumeConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_volume awscc_ec2_volume} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_volume awscc_ec2_volume} Resource.
 func NewEc2Volume_Override(e Ec2Volume, scope constructs.Construct, id *string, config *Ec2VolumeConfig) {
 	_init_.Initialize()
 
@@ -782,6 +819,17 @@ func (j *jsiiProxy_Ec2Volume)SetThroughput(val *float64) {
 	_jsii_.Set(
 		j,
 		"throughput",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2Volume)SetVolumeInitializationRate(val *float64) {
+	if err := j.validateSetVolumeInitializationRateParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"volumeInitializationRate",
 		val,
 	)
 }
@@ -1066,6 +1114,19 @@ func (e *jsiiProxy_Ec2Volume) GetStringMapAttribute(terraformAttribute *string) 
 	return returns
 }
 
+func (e *jsiiProxy_Ec2Volume) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2Volume) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1093,6 +1154,17 @@ func (e *jsiiProxy_Ec2Volume) InterpolationForAttribute(terraformAttribute *stri
 	return returns
 }
 
+func (e *jsiiProxy_Ec2Volume) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2Volume) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1101,6 +1173,17 @@ func (e *jsiiProxy_Ec2Volume) MoveTo(moveTarget *string, index interface{}) {
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Ec2Volume) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1214,6 +1297,14 @@ func (e *jsiiProxy_Ec2Volume) ResetThroughput() {
 	)
 }
 
+func (e *jsiiProxy_Ec2Volume) ResetVolumeInitializationRate() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetVolumeInitializationRate",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_Ec2Volume) ResetVolumeType() {
 	_jsii_.InvokeVoid(
 		e,
@@ -1228,6 +1319,32 @@ func (e *jsiiProxy_Ec2Volume) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2Volume) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2Volume) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

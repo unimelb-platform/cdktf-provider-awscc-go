@@ -67,6 +67,8 @@ type GlobalacceleratorEndpointGroupPortOverridesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEndpointPort()
+	ResetListenerPort()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (g *jsiiProxy_GlobalacceleratorEndpointGroupPortOverridesOutputReference) I
 	)
 
 	return returns
+}
+
+func (g *jsiiProxy_GlobalacceleratorEndpointGroupPortOverridesOutputReference) ResetEndpointPort() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetEndpointPort",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GlobalacceleratorEndpointGroupPortOverridesOutputReference) ResetListenerPort() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetListenerPort",
+		nil, // no parameters
+	)
 }
 
 func (g *jsiiProxy_GlobalacceleratorEndpointGroupPortOverridesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

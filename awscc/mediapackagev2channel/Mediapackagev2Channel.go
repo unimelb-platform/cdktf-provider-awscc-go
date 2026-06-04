@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/mediapackagev2channel/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediapackagev2_channel awscc_mediapackagev2_channel}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediapackagev2_channel awscc_mediapackagev2_channel}.
 type Mediapackagev2Channel interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -49,6 +49,12 @@ type Mediapackagev2Channel interface {
 	FriendlyUniqueId() *string
 	Id() *string
 	IngestEndpoints() Mediapackagev2ChannelIngestEndpointsList
+	IngestEndpointUrls() *[]*string
+	InputSwitchConfiguration() Mediapackagev2ChannelInputSwitchConfigurationOutputReference
+	InputSwitchConfigurationInput() interface{}
+	InputType() *string
+	SetInputType(val *string)
+	InputTypeInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -56,6 +62,8 @@ type Mediapackagev2Channel interface {
 	ModifiedAt() *string
 	// The tree node.
 	Node() constructs.Node
+	OutputHeaderConfiguration() Mediapackagev2ChannelOutputHeaderConfigurationOutputReference
+	OutputHeaderConfigurationInput() interface{}
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -98,24 +106,40 @@ type Mediapackagev2Channel interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutInputSwitchConfiguration(value *Mediapackagev2ChannelInputSwitchConfiguration)
+	PutOutputHeaderConfiguration(value *Mediapackagev2ChannelOutputHeaderConfiguration)
 	PutTags(value interface{})
-	ResetChannelGroupName()
-	ResetChannelName()
 	ResetDescription()
+	ResetInputSwitchConfiguration()
+	ResetInputType()
+	ResetOutputHeaderConfiguration()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -310,6 +334,56 @@ func (j *jsiiProxy_Mediapackagev2Channel) IngestEndpoints() Mediapackagev2Channe
 	return returns
 }
 
+func (j *jsiiProxy_Mediapackagev2Channel) IngestEndpointUrls() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"ingestEndpointUrls",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Mediapackagev2Channel) InputSwitchConfiguration() Mediapackagev2ChannelInputSwitchConfigurationOutputReference {
+	var returns Mediapackagev2ChannelInputSwitchConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"inputSwitchConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Mediapackagev2Channel) InputSwitchConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"inputSwitchConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Mediapackagev2Channel) InputType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"inputType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Mediapackagev2Channel) InputTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"inputTypeInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Mediapackagev2Channel) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -335,6 +409,26 @@ func (j *jsiiProxy_Mediapackagev2Channel) Node() constructs.Node {
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Mediapackagev2Channel) OutputHeaderConfiguration() Mediapackagev2ChannelOutputHeaderConfigurationOutputReference {
+	var returns Mediapackagev2ChannelOutputHeaderConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"outputHeaderConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Mediapackagev2Channel) OutputHeaderConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"outputHeaderConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -421,7 +515,7 @@ func (j *jsiiProxy_Mediapackagev2Channel) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediapackagev2_channel awscc_mediapackagev2_channel} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediapackagev2_channel awscc_mediapackagev2_channel} Resource.
 func NewMediapackagev2Channel(scope constructs.Construct, id *string, config *Mediapackagev2ChannelConfig) Mediapackagev2Channel {
 	_init_.Initialize()
 
@@ -439,7 +533,7 @@ func NewMediapackagev2Channel(scope constructs.Construct, id *string, config *Me
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/mediapackagev2_channel awscc_mediapackagev2_channel} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/mediapackagev2_channel awscc_mediapackagev2_channel} Resource.
 func NewMediapackagev2Channel_Override(m Mediapackagev2Channel, scope constructs.Construct, id *string, config *Mediapackagev2ChannelConfig) {
 	_init_.Initialize()
 
@@ -517,6 +611,17 @@ func (j *jsiiProxy_Mediapackagev2Channel)SetForEach(val cdktf.ITerraformIterator
 	_jsii_.Set(
 		j,
 		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Mediapackagev2Channel)SetInputType(val *string) {
+	if err := j.validateSetInputTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"inputType",
 		val,
 	)
 }
@@ -820,6 +925,19 @@ func (m *jsiiProxy_Mediapackagev2Channel) GetStringMapAttribute(terraformAttribu
 	return returns
 }
 
+func (m *jsiiProxy_Mediapackagev2Channel) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (m *jsiiProxy_Mediapackagev2Channel) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -847,6 +965,17 @@ func (m *jsiiProxy_Mediapackagev2Channel) InterpolationForAttribute(terraformAtt
 	return returns
 }
 
+func (m *jsiiProxy_Mediapackagev2Channel) MoveFromId(id *string) {
+	if err := m.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_Mediapackagev2Channel) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -855,6 +984,17 @@ func (m *jsiiProxy_Mediapackagev2Channel) MoveTo(moveTarget *string, index inter
 		m,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (m *jsiiProxy_Mediapackagev2Channel) MoveToId(id *string) {
+	if err := m.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -869,6 +1009,28 @@ func (m *jsiiProxy_Mediapackagev2Channel) OverrideLogicalId(newLogicalId *string
 	)
 }
 
+func (m *jsiiProxy_Mediapackagev2Channel) PutInputSwitchConfiguration(value *Mediapackagev2ChannelInputSwitchConfiguration) {
+	if err := m.validatePutInputSwitchConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putInputSwitchConfiguration",
+		[]interface{}{value},
+	)
+}
+
+func (m *jsiiProxy_Mediapackagev2Channel) PutOutputHeaderConfiguration(value *Mediapackagev2ChannelOutputHeaderConfiguration) {
+	if err := m.validatePutOutputHeaderConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putOutputHeaderConfiguration",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_Mediapackagev2Channel) PutTags(value interface{}) {
 	if err := m.validatePutTagsParameters(value); err != nil {
 		panic(err)
@@ -880,26 +1042,34 @@ func (m *jsiiProxy_Mediapackagev2Channel) PutTags(value interface{}) {
 	)
 }
 
-func (m *jsiiProxy_Mediapackagev2Channel) ResetChannelGroupName() {
-	_jsii_.InvokeVoid(
-		m,
-		"resetChannelGroupName",
-		nil, // no parameters
-	)
-}
-
-func (m *jsiiProxy_Mediapackagev2Channel) ResetChannelName() {
-	_jsii_.InvokeVoid(
-		m,
-		"resetChannelName",
-		nil, // no parameters
-	)
-}
-
 func (m *jsiiProxy_Mediapackagev2Channel) ResetDescription() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_Mediapackagev2Channel) ResetInputSwitchConfiguration() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetInputSwitchConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_Mediapackagev2Channel) ResetInputType() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetInputType",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_Mediapackagev2Channel) ResetOutputHeaderConfiguration() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetOutputHeaderConfiguration",
 		nil, // no parameters
 	)
 }
@@ -926,6 +1096,32 @@ func (m *jsiiProxy_Mediapackagev2Channel) SynthesizeAttributes() *map[string]int
 	_jsii_.Invoke(
 		m,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_Mediapackagev2Channel) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		m,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_Mediapackagev2Channel) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

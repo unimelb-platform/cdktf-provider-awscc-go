@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2capacityreservationfleet/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_capacity_reservation_fleet awscc_ec2_capacity_reservation_fleet}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_capacity_reservation_fleet awscc_ec2_capacity_reservation_fleet}.
 type DataAwsccEc2CapacityReservationFleet interface {
 	cdktf.TerraformDataSource
 	AllocationStrategy() *string
@@ -92,6 +92,10 @@ type DataAwsccEc2CapacityReservationFleet interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -367,7 +371,7 @@ func (j *jsiiProxy_DataAwsccEc2CapacityReservationFleet) TotalTargetCapacity() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_capacity_reservation_fleet awscc_ec2_capacity_reservation_fleet} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_capacity_reservation_fleet awscc_ec2_capacity_reservation_fleet} Data Source.
 func NewDataAwsccEc2CapacityReservationFleet(scope constructs.Construct, id *string, config *DataAwsccEc2CapacityReservationFleetConfig) DataAwsccEc2CapacityReservationFleet {
 	_init_.Initialize()
 
@@ -385,7 +389,7 @@ func NewDataAwsccEc2CapacityReservationFleet(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_capacity_reservation_fleet awscc_ec2_capacity_reservation_fleet} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_capacity_reservation_fleet awscc_ec2_capacity_reservation_fleet} Data Source.
 func NewDataAwsccEc2CapacityReservationFleet_Override(d DataAwsccEc2CapacityReservationFleet, scope constructs.Construct, id *string, config *DataAwsccEc2CapacityReservationFleetConfig) {
 	_init_.Initialize()
 
@@ -752,6 +756,32 @@ func (d *jsiiProxy_DataAwsccEc2CapacityReservationFleet) SynthesizeAttributes() 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2CapacityReservationFleet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2CapacityReservationFleet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

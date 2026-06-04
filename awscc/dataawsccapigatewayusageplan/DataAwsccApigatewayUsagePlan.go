@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccapigatewayusageplan/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigateway_usage_plan awscc_apigateway_usage_plan}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigateway_usage_plan awscc_apigateway_usage_plan}.
 type DataAwsccApigatewayUsagePlan interface {
 	cdktf.TerraformDataSource
 	ApiStages() DataAwsccApigatewayUsagePlanApiStagesList
@@ -58,6 +58,7 @@ type DataAwsccApigatewayUsagePlan interface {
 	// Experimental.
 	TerraformResourceType() *string
 	Throttle() DataAwsccApigatewayUsagePlanThrottleOutputReference
+	UsagePlanId() *string
 	UsagePlanName() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
@@ -88,6 +89,10 @@ type DataAwsccApigatewayUsagePlan interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -312,6 +317,16 @@ func (j *jsiiProxy_DataAwsccApigatewayUsagePlan) Throttle() DataAwsccApigatewayU
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccApigatewayUsagePlan) UsagePlanId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"usagePlanId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccApigatewayUsagePlan) UsagePlanName() *string {
 	var returns *string
 	_jsii_.Get(
@@ -323,7 +338,7 @@ func (j *jsiiProxy_DataAwsccApigatewayUsagePlan) UsagePlanName() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigateway_usage_plan awscc_apigateway_usage_plan} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigateway_usage_plan awscc_apigateway_usage_plan} Data Source.
 func NewDataAwsccApigatewayUsagePlan(scope constructs.Construct, id *string, config *DataAwsccApigatewayUsagePlanConfig) DataAwsccApigatewayUsagePlan {
 	_init_.Initialize()
 
@@ -341,7 +356,7 @@ func NewDataAwsccApigatewayUsagePlan(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigateway_usage_plan awscc_apigateway_usage_plan} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigateway_usage_plan awscc_apigateway_usage_plan} Data Source.
 func NewDataAwsccApigatewayUsagePlan_Override(d DataAwsccApigatewayUsagePlan, scope constructs.Construct, id *string, config *DataAwsccApigatewayUsagePlanConfig) {
 	_init_.Initialize()
 
@@ -708,6 +723,32 @@ func (d *jsiiProxy_DataAwsccApigatewayUsagePlan) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApigatewayUsagePlan) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApigatewayUsagePlan) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

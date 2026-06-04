@@ -41,8 +41,8 @@ type KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfigura
 	FieldMappingsInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfiguration
-	SetInternalValue(val *KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfiguration)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -76,6 +76,9 @@ type KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfigura
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutFieldMappings(value interface{})
+	ResetChangeDetectingColumns()
+	ResetDocumentDataColumnName()
+	ResetDocumentIdColumnName()
 	ResetDocumentTitleColumnName()
 	ResetFieldMappings()
 	// Produce the Token's value at resolution time.
@@ -233,8 +236,8 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationC
 	return returns
 }
 
-func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfigurationOutputReference) InternalValue() *KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfiguration {
-	var returns *KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfiguration
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfigurationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -357,7 +360,7 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationC
 	)
 }
 
-func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfigurationOutputReference)SetInternalValue(val *KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfiguration) {
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfigurationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -584,6 +587,30 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationC
 		k,
 		"putFieldMappings",
 		[]interface{}{value},
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfigurationOutputReference) ResetChangeDetectingColumns() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetChangeDetectingColumns",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfigurationOutputReference) ResetDocumentDataColumnName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetDocumentDataColumnName",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationColumnConfigurationOutputReference) ResetDocumentIdColumnName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetDocumentIdColumnName",
+		nil, // no parameters
 	)
 }
 

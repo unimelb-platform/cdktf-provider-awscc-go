@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/provider/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs awscc}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs awscc}.
 type AwsccProvider interface {
 	cdktf.TerraformProvider
 	AccessKey() *string
@@ -28,6 +28,9 @@ type AwsccProvider interface {
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
+	Endpoints() *AwsccProviderEndpoints
+	SetEndpoints(val *AwsccProviderEndpoints)
+	EndpointsInput() *AwsccProviderEndpoints
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -98,6 +101,7 @@ type AwsccProvider interface {
 	ResetAlias()
 	ResetAssumeRole()
 	ResetAssumeRoleWithWebIdentity()
+	ResetEndpoints()
 	ResetHttpProxy()
 	ResetHttpsProxy()
 	ResetInsecure()
@@ -117,6 +121,9 @@ type AwsccProvider interface {
 	ResetToken()
 	ResetUserAgent()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -226,6 +233,26 @@ func (j *jsiiProxy_AwsccProvider) ConstructNodeMetadata() *map[string]interface{
 	_jsii_.Get(
 		j,
 		"constructNodeMetadata",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AwsccProvider) Endpoints() *AwsccProviderEndpoints {
+	var returns *AwsccProviderEndpoints
+	_jsii_.Get(
+		j,
+		"endpoints",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AwsccProvider) EndpointsInput() *AwsccProviderEndpoints {
+	var returns *AwsccProviderEndpoints
+	_jsii_.Get(
+		j,
+		"endpointsInput",
 		&returns,
 	)
 	return returns
@@ -612,7 +639,7 @@ func (j *jsiiProxy_AwsccProvider) UserAgentInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs awscc} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs awscc} Resource.
 func NewAwsccProvider(scope constructs.Construct, id *string, config *AwsccProviderConfig) AwsccProvider {
 	_init_.Initialize()
 
@@ -630,7 +657,7 @@ func NewAwsccProvider(scope constructs.Construct, id *string, config *AwsccProvi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs awscc} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs awscc} Resource.
 func NewAwsccProvider_Override(a AwsccProvider, scope constructs.Construct, id *string, config *AwsccProviderConfig) {
 	_init_.Initialize()
 
@@ -675,6 +702,17 @@ func (j *jsiiProxy_AwsccProvider)SetAssumeRoleWithWebIdentity(val *AwsccProvider
 	_jsii_.Set(
 		j,
 		"assumeRoleWithWebIdentity",
+		val,
+	)
+}
+
+func (j *jsiiProxy_AwsccProvider)SetEndpoints(val *AwsccProviderEndpoints) {
+	if err := j.validateSetEndpointsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"endpoints",
 		val,
 	)
 }
@@ -968,6 +1006,14 @@ func (a *jsiiProxy_AwsccProvider) ResetAssumeRoleWithWebIdentity() {
 	)
 }
 
+func (a *jsiiProxy_AwsccProvider) ResetEndpoints() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetEndpoints",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_AwsccProvider) ResetHttpProxy() {
 	_jsii_.InvokeVoid(
 		a,
@@ -1102,6 +1148,32 @@ func (a *jsiiProxy_AwsccProvider) SynthesizeAttributes() *map[string]interface{}
 	_jsii_.Invoke(
 		a,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AwsccProvider) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		a,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AwsccProvider) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

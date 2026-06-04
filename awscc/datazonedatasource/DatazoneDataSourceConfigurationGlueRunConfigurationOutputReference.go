@@ -10,6 +10,12 @@ import (
 
 type DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference interface {
 	cdktf.ComplexObject
+	AutoImportDataQualityResult() interface{}
+	SetAutoImportDataQualityResult(val interface{})
+	AutoImportDataQualityResultInput() interface{}
+	CatalogName() *string
+	SetCatalogName(val *string)
+	CatalogNameInput() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -67,7 +73,10 @@ type DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference interfac
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutRelationalFilterConfigurations(value interface{})
+	ResetAutoImportDataQualityResult()
+	ResetCatalogName()
 	ResetDataAccessRole()
+	ResetRelationalFilterConfigurations()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -81,6 +90,46 @@ type DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference interfac
 // The jsii proxy struct for DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference
 type jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference) AutoImportDataQualityResult() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"autoImportDataQualityResult",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference) AutoImportDataQualityResultInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"autoImportDataQualityResultInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference) CatalogName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"catalogName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference) CatalogNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"catalogNameInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference) ComplexObjectIndex() interface{} {
@@ -218,6 +267,28 @@ func NewDatazoneDataSourceConfigurationGlueRunConfigurationOutputReference_Overr
 		"awscc.datazoneDataSource.DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference",
 		[]interface{}{terraformResource, terraformAttribute},
 		d,
+	)
+}
+
+func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference)SetAutoImportDataQualityResult(val interface{}) {
+	if err := j.validateSetAutoImportDataQualityResultParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"autoImportDataQualityResult",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference)SetCatalogName(val *string) {
+	if err := j.validateSetCatalogNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"catalogName",
+		val,
 	)
 }
 
@@ -484,10 +555,34 @@ func (d *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationOutputRefe
 	)
 }
 
+func (d *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference) ResetAutoImportDataQualityResult() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetAutoImportDataQualityResult",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference) ResetCatalogName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetCatalogName",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference) ResetDataAccessRole() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetDataAccessRole",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatazoneDataSourceConfigurationGlueRunConfigurationOutputReference) ResetRelationalFilterConfigurations() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetRelationalFilterConfigurations",
 		nil, // no parameters
 	)
 }

@@ -68,6 +68,7 @@ type EcsTaskDefinitionPlacementConstraintsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetExpression()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (e *jsiiProxy_EcsTaskDefinitionPlacementConstraintsOutputReference) ResetEx
 	_jsii_.InvokeVoid(
 		e,
 		"resetExpression",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcsTaskDefinitionPlacementConstraintsOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetType",
 		nil, // no parameters
 	)
 }

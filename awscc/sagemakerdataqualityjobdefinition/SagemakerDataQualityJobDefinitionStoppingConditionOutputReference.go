@@ -64,6 +64,7 @@ type SagemakerDataQualityJobDefinitionStoppingConditionOutputReference interface
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetMaxRuntimeInSeconds()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_SagemakerDataQualityJobDefinitionStoppingConditionOutputRefer
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SagemakerDataQualityJobDefinitionStoppingConditionOutputReference) ResetMaxRuntimeInSeconds() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetMaxRuntimeInSeconds",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SagemakerDataQualityJobDefinitionStoppingConditionOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

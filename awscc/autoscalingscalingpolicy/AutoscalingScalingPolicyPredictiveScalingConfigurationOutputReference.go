@@ -78,6 +78,7 @@ type AutoscalingScalingPolicyPredictiveScalingConfigurationOutputReference inter
 	PutMetricSpecifications(value interface{})
 	ResetMaxCapacityBreachBehavior()
 	ResetMaxCapacityBuffer()
+	ResetMetricSpecifications()
 	ResetMode()
 	ResetSchedulingBufferTime()
 	// Produce the Token's value at resolution time.
@@ -601,6 +602,14 @@ func (a *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationOutputR
 	_jsii_.InvokeVoid(
 		a,
 		"resetMaxCapacityBuffer",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationOutputReference) ResetMetricSpecifications() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetMetricSpecifications",
 		nil, // no parameters
 	)
 }

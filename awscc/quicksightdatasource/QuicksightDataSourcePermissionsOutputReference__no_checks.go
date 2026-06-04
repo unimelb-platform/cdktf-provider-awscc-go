@@ -68,6 +68,10 @@ func (j *jsiiProxy_QuicksightDataSourcePermissionsOutputReference) validateSetPr
 	return nil
 }
 
+func (j *jsiiProxy_QuicksightDataSourcePermissionsOutputReference) validateSetResourceParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_QuicksightDataSourcePermissionsOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

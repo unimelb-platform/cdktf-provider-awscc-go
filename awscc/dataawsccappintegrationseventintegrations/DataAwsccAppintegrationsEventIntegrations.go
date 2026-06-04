@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccappintegrationseventintegrations/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appintegrations_event_integrations awscc_appintegrations_event_integrations}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appintegrations_event_integrations awscc_appintegrations_event_integrations}.
 type DataAwsccAppintegrationsEventIntegrations interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccAppintegrationsEventIntegrations interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccAppintegrationsEventIntegrations) TerraformResourceT
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appintegrations_event_integrations awscc_appintegrations_event_integrations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appintegrations_event_integrations awscc_appintegrations_event_integrations} Data Source.
 func NewDataAwsccAppintegrationsEventIntegrations(scope constructs.Construct, id *string, config *DataAwsccAppintegrationsEventIntegrationsConfig) DataAwsccAppintegrationsEventIntegrations {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccAppintegrationsEventIntegrations(scope constructs.Construct, id
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appintegrations_event_integrations awscc_appintegrations_event_integrations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appintegrations_event_integrations awscc_appintegrations_event_integrations} Data Source.
 func NewDataAwsccAppintegrationsEventIntegrations_Override(d DataAwsccAppintegrationsEventIntegrations, scope constructs.Construct, id *string, config *DataAwsccAppintegrationsEventIntegrationsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccAppintegrationsEventIntegrations) SynthesizeAttribut
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppintegrationsEventIntegrations) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppintegrationsEventIntegrations) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

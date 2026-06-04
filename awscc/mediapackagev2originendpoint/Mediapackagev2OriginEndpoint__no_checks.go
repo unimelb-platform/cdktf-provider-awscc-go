@@ -56,11 +56,27 @@ func (m *jsiiProxy_Mediapackagev2OriginEndpoint) validateInterpolationForAttribu
 	return nil
 }
 
+func (m *jsiiProxy_Mediapackagev2OriginEndpoint) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_Mediapackagev2OriginEndpoint) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (m *jsiiProxy_Mediapackagev2OriginEndpoint) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_Mediapackagev2OriginEndpoint) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpoint) validatePutDashManifestsParameters(value interface{}) error {
+	return nil
+}
+
+func (m *jsiiProxy_Mediapackagev2OriginEndpoint) validatePutForceEndpointErrorConfigurationParameters(value *Mediapackagev2OriginEndpointForceEndpointErrorConfiguration) error {
 	return nil
 }
 

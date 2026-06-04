@@ -70,6 +70,7 @@ type AppflowFlowSourceFlowConfigSourceConnectorPropertiesSapoDataOutputReference
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutPaginationConfig(value *AppflowFlowSourceFlowConfigSourceConnectorPropertiesSapoDataPaginationConfig)
 	PutParallelismConfig(value *AppflowFlowSourceFlowConfigSourceConnectorPropertiesSapoDataParallelismConfig)
+	ResetObjectPath()
 	ResetPaginationConfig()
 	ResetParallelismConfig()
 	// Produce the Token's value at resolution time.
@@ -516,6 +517,14 @@ func (a *jsiiProxy_AppflowFlowSourceFlowConfigSourceConnectorPropertiesSapoDataO
 		a,
 		"putParallelismConfig",
 		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_AppflowFlowSourceFlowConfigSourceConnectorPropertiesSapoDataOutputReference) ResetObjectPath() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetObjectPath",
+		nil, // no parameters
 	)
 }
 

@@ -11,7 +11,7 @@ import (
 type NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsOutputReference interface {
 	cdktf.ComplexObject
 	ActionDefinition() NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinitionOutputReference
-	ActionDefinitionInput() *NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinition
+	ActionDefinitionInput() interface{}
 	ActionName() *string
 	SetActionName(val *string)
 	ActionNameInput() *string
@@ -67,6 +67,8 @@ type NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsOutputRefe
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutActionDefinition(value *NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinition)
+	ResetActionDefinition()
+	ResetActionName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -92,8 +94,8 @@ func (j *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomAct
 	return returns
 }
 
-func (j *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsOutputReference) ActionDefinitionInput() *NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinition {
-	var returns *NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinition
+func (j *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsOutputReference) ActionDefinitionInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"actionDefinitionInput",
@@ -480,6 +482,22 @@ func (n *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomAct
 		n,
 		"putActionDefinition",
 		[]interface{}{value},
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsOutputReference) ResetActionDefinition() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetActionDefinition",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsOutputReference) ResetActionName() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetActionName",
+		nil, // no parameters
 	)
 }
 

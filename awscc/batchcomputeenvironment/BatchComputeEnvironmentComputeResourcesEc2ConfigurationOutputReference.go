@@ -72,6 +72,7 @@ type BatchComputeEnvironmentComputeResourcesEc2ConfigurationOutputReference inte
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetImageIdOverride()
 	ResetImageKubernetesVersion()
+	ResetImageType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (b *jsiiProxy_BatchComputeEnvironmentComputeResourcesEc2ConfigurationOutput
 	_jsii_.InvokeVoid(
 		b,
 		"resetImageKubernetesVersion",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchComputeEnvironmentComputeResourcesEc2ConfigurationOutputReference) ResetImageType() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetImageType",
 		nil, // no parameters
 	)
 }

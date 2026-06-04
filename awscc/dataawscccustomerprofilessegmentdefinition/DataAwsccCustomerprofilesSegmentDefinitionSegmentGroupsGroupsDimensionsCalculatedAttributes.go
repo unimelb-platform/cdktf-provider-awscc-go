@@ -1,0 +1,6 @@
+package dataawscccustomerprofilessegmentdefinition
+
+
+type DataAwsccCustomerprofilesSegmentDefinitionSegmentGroupsGroupsDimensionsCalculatedAttributes struct {
+}
+

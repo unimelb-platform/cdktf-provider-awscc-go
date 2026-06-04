@@ -163,9 +163,25 @@ func (j *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigS3StorageConfigOutputR
 	return nil
 }
 
-func (j *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigS3StorageConfigOutputReference) validateSetInternalValueParameters(val *SagemakerFeatureGroupOfflineStoreConfigS3StorageConfig) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_SagemakerFeatureGroupOfflineStoreConfigS3StorageConfigOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *SagemakerFeatureGroupOfflineStoreConfigS3StorageConfig:
+		val := val.(*SagemakerFeatureGroupOfflineStoreConfigS3StorageConfig)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case SagemakerFeatureGroupOfflineStoreConfigS3StorageConfig:
+		val_ := val.(SagemakerFeatureGroupOfflineStoreConfigS3StorageConfig)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *SagemakerFeatureGroupOfflineStoreConfigS3StorageConfig; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

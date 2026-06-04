@@ -64,6 +64,10 @@ func (j *jsiiProxy_SagemakerSpaceSpaceSettingsKernelGatewayAppSettingsDefaultRes
 	return nil
 }
 
+func (j *jsiiProxy_SagemakerSpaceSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecOutputReference) validateSetLifecycleConfigArnParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_SagemakerSpaceSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpecOutputReference) validateSetSageMakerImageArnParameters(val *string) error {
 	return nil
 }

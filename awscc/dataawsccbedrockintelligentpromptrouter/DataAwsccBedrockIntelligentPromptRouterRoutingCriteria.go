@@ -1,0 +1,6 @@
+package dataawsccbedrockintelligentpromptrouter
+
+
+type DataAwsccBedrockIntelligentPromptRouterRoutingCriteria struct {
+}
+

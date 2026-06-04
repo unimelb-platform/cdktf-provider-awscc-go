@@ -10,6 +10,7 @@ import (
 
 type DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference interface {
 	cdktf.ComplexObject
+	AdditionalAnalyses() *string
 	AllowedJoinOperators() *[]*string
 	// the index of the complex object in a list.
 	// Experimental.
@@ -77,6 +78,16 @@ type DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputRefe
 // The jsii proxy struct for DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference
 type jsiiProxy_DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference) AdditionalAnalyses() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"additionalAnalyses",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccCleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference) AllowedJoinOperators() *[]*string {

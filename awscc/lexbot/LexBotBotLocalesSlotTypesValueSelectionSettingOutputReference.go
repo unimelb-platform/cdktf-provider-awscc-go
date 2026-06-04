@@ -72,6 +72,7 @@ type LexBotBotLocalesSlotTypesValueSelectionSettingOutputReference interface {
 	PutRegexFilter(value *LexBotBotLocalesSlotTypesValueSelectionSettingRegexFilter)
 	ResetAdvancedRecognitionSetting()
 	ResetRegexFilter()
+	ResetResolutionStrategy()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (l *jsiiProxy_LexBotBotLocalesSlotTypesValueSelectionSettingOutputReference
 	_jsii_.InvokeVoid(
 		l,
 		"resetRegexFilter",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesSlotTypesValueSelectionSettingOutputReference) ResetResolutionStrategy() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetResolutionStrategy",
 		nil, // no parameters
 	)
 }

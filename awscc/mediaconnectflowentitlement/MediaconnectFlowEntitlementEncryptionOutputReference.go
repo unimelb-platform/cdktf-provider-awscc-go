@@ -88,11 +88,13 @@ type MediaconnectFlowEntitlementEncryptionOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAlgorithm()
 	ResetConstantInitializationVector()
 	ResetDeviceId()
 	ResetKeyType()
 	ResetRegion()
 	ResetResourceId()
+	ResetRoleArn()
 	ResetSecretArn()
 	ResetUrl()
 	// Produce the Token's value at resolution time.
@@ -728,6 +730,14 @@ func (m *jsiiProxy_MediaconnectFlowEntitlementEncryptionOutputReference) Interpo
 	return returns
 }
 
+func (m *jsiiProxy_MediaconnectFlowEntitlementEncryptionOutputReference) ResetAlgorithm() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetAlgorithm",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_MediaconnectFlowEntitlementEncryptionOutputReference) ResetConstantInitializationVector() {
 	_jsii_.InvokeVoid(
 		m,
@@ -764,6 +774,14 @@ func (m *jsiiProxy_MediaconnectFlowEntitlementEncryptionOutputReference) ResetRe
 	_jsii_.InvokeVoid(
 		m,
 		"resetResourceId",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediaconnectFlowEntitlementEncryptionOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetRoleArn",
 		nil, // no parameters
 	)
 }

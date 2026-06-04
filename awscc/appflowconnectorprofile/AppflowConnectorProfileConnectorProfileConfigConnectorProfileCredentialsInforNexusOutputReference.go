@@ -73,6 +73,10 @@ type AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsInf
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAccessKeyId()
+	ResetDatakey()
+	ResetSecretAccessKey()
+	ResetUserId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -549,6 +553,38 @@ func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfile
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsInforNexusOutputReference) ResetAccessKeyId() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetAccessKeyId",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsInforNexusOutputReference) ResetDatakey() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetDatakey",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsInforNexusOutputReference) ResetSecretAccessKey() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetSecretAccessKey",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsInforNexusOutputReference) ResetUserId() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetUserId",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsInforNexusOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

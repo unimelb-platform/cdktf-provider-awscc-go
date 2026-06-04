@@ -56,11 +56,27 @@ func (e *jsiiProxy_EksCluster) validateInterpolationForAttributeParameters(terra
 	return nil
 }
 
+func (e *jsiiProxy_EksCluster) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_EksCluster) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (e *jsiiProxy_EksCluster) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_EksCluster) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (e *jsiiProxy_EksCluster) validatePutAccessConfigParameters(value *EksClusterAccessConfig) error {
+	return nil
+}
+
+func (e *jsiiProxy_EksCluster) validatePutComputeConfigParameters(value *EksClusterComputeConfig) error {
 	return nil
 }
 
@@ -76,11 +92,31 @@ func (e *jsiiProxy_EksCluster) validatePutLoggingParameters(value *EksClusterLog
 	return nil
 }
 
+func (e *jsiiProxy_EksCluster) validatePutOutpostConfigParameters(value *EksClusterOutpostConfig) error {
+	return nil
+}
+
+func (e *jsiiProxy_EksCluster) validatePutRemoteNetworkConfigParameters(value *EksClusterRemoteNetworkConfig) error {
+	return nil
+}
+
 func (e *jsiiProxy_EksCluster) validatePutResourcesVpcConfigParameters(value *EksClusterResourcesVpcConfig) error {
 	return nil
 }
 
+func (e *jsiiProxy_EksCluster) validatePutStorageConfigParameters(value *EksClusterStorageConfig) error {
+	return nil
+}
+
 func (e *jsiiProxy_EksCluster) validatePutTagsParameters(value interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_EksCluster) validatePutUpgradePolicyParameters(value *EksClusterUpgradePolicy) error {
+	return nil
+}
+
+func (e *jsiiProxy_EksCluster) validatePutZonalShiftConfigParameters(value *EksClusterZonalShiftConfig) error {
 	return nil
 }
 
@@ -100,11 +136,19 @@ func validateEksCluster_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 
+func (j *jsiiProxy_EksCluster) validateSetBootstrapSelfManagedAddonsParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_EksCluster) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }
 
 func (j *jsiiProxy_EksCluster) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_EksCluster) validateSetForceParameters(val interface{}) error {
 	return nil
 }
 

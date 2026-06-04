@@ -37,6 +37,7 @@ type DataAwsccKendraDataSourceDataSourceConfigurationOutputReference interface {
 	SalesforceConfiguration() DataAwsccKendraDataSourceDataSourceConfigurationSalesforceConfigurationOutputReference
 	ServiceNowConfiguration() DataAwsccKendraDataSourceDataSourceConfigurationServiceNowConfigurationOutputReference
 	SharePointConfiguration() DataAwsccKendraDataSourceDataSourceConfigurationSharePointConfigurationOutputReference
+	TemplateConfiguration() DataAwsccKendraDataSourceDataSourceConfigurationTemplateConfigurationOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -211,6 +212,16 @@ func (j *jsiiProxy_DataAwsccKendraDataSourceDataSourceConfigurationOutputReferen
 	_jsii_.Get(
 		j,
 		"sharePointConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccKendraDataSourceDataSourceConfigurationOutputReference) TemplateConfiguration() DataAwsccKendraDataSourceDataSourceConfigurationTemplateConfigurationOutputReference {
+	var returns DataAwsccKendraDataSourceDataSourceConfigurationTemplateConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"templateConfiguration",
 		&returns,
 	)
 	return returns

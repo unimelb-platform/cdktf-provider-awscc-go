@@ -27,8 +27,8 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigur
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaRecordColumns
-	SetInternalValue(val *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaRecordColumns)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Mapping() *string
 	SetMapping(val *string)
 	MappingInput() *string
@@ -71,6 +71,8 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigur
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetMapping()
+	ResetName()
+	ResetSqlType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -126,8 +128,8 @@ func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 	return returns
 }
 
-func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaRecordColumnsOutputReference) InternalValue() *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaRecordColumns {
-	var returns *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaRecordColumns
+func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaRecordColumnsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -266,7 +268,7 @@ func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 	)
 }
 
-func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaRecordColumnsOutputReference)SetInternalValue(val *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaRecordColumns) {
+func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaRecordColumnsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -522,6 +524,22 @@ func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlAppli
 	_jsii_.InvokeVoid(
 		k,
 		"resetMapping",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaRecordColumnsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfigurationInputsInputSchemaRecordColumnsOutputReference) ResetSqlType() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetSqlType",
 		nil, // no parameters
 	)
 }

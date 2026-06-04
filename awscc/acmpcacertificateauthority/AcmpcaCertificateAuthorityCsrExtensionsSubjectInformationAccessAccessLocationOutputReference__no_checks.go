@@ -72,7 +72,7 @@ func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAcce
 	return nil
 }
 
-func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocationOutputReference) validateSetInternalValueParameters(val *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocation) error {
+func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

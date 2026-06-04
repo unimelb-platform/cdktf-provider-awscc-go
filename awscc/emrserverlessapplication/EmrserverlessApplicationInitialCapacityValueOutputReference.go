@@ -27,8 +27,8 @@ type EmrserverlessApplicationInitialCapacityValueOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *EmrserverlessApplicationInitialCapacityValue
-	SetInternalValue(val *EmrserverlessApplicationInitialCapacityValue)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -38,7 +38,7 @@ type EmrserverlessApplicationInitialCapacityValueOutputReference interface {
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	WorkerConfiguration() EmrserverlessApplicationInitialCapacityValueWorkerConfigurationOutputReference
-	WorkerConfigurationInput() *EmrserverlessApplicationInitialCapacityValueWorkerConfiguration
+	WorkerConfigurationInput() interface{}
 	WorkerCount() *float64
 	SetWorkerCount(val *float64)
 	WorkerCountInput() *float64
@@ -67,6 +67,8 @@ type EmrserverlessApplicationInitialCapacityValueOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutWorkerConfiguration(value *EmrserverlessApplicationInitialCapacityValueWorkerConfiguration)
+	ResetWorkerConfiguration()
+	ResetWorkerCount()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityValueOutputReference) 
 	return returns
 }
 
-func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityValueOutputReference) InternalValue() *EmrserverlessApplicationInitialCapacityValue {
-	var returns *EmrserverlessApplicationInitialCapacityValue
+func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityValueOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -162,8 +164,8 @@ func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityValueOutputReference) 
 	return returns
 }
 
-func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityValueOutputReference) WorkerConfigurationInput() *EmrserverlessApplicationInitialCapacityValueWorkerConfiguration {
-	var returns *EmrserverlessApplicationInitialCapacityValueWorkerConfiguration
+func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityValueOutputReference) WorkerConfigurationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"workerConfigurationInput",
@@ -242,7 +244,7 @@ func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityValueOutputReference)S
 	)
 }
 
-func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityValueOutputReference)SetInternalValue(val *EmrserverlessApplicationInitialCapacityValue) {
+func (j *jsiiProxy_EmrserverlessApplicationInitialCapacityValueOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -480,6 +482,22 @@ func (e *jsiiProxy_EmrserverlessApplicationInitialCapacityValueOutputReference) 
 		e,
 		"putWorkerConfiguration",
 		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_EmrserverlessApplicationInitialCapacityValueOutputReference) ResetWorkerConfiguration() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetWorkerConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EmrserverlessApplicationInitialCapacityValueOutputReference) ResetWorkerCount() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetWorkerCount",
+		nil, // no parameters
 	)
 }
 

@@ -67,6 +67,8 @@ type KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfiguratio
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetParameterName()
+	ResetParameterValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinati
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) ResetParameterName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetParameterName",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) ResetParameterValue() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetParameterValue",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

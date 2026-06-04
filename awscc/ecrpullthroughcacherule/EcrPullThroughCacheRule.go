@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ecrpullthroughcacherule/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ecr_pull_through_cache_rule awscc_ecr_pull_through_cache_rule}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ecr_pull_through_cache_rule awscc_ecr_pull_through_cache_rule}.
 type EcrPullThroughCacheRule interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -27,6 +27,9 @@ type EcrPullThroughCacheRule interface {
 	CredentialArn() *string
 	SetCredentialArn(val *string)
 	CredentialArnInput() *string
+	CustomRoleArn() *string
+	SetCustomRoleArn(val *string)
+	CustomRoleArnInput() *string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -71,6 +74,9 @@ type EcrPullThroughCacheRule interface {
 	UpstreamRegistryUrl() *string
 	SetUpstreamRegistryUrl(val *string)
 	UpstreamRegistryUrlInput() *string
+	UpstreamRepositoryPrefix() *string
+	SetUpstreamRepositoryPrefix(val *string)
+	UpstreamRepositoryPrefixInput() *string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -95,23 +101,38 @@ type EcrPullThroughCacheRule interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetCredentialArn()
+	ResetCustomRoleArn()
 	ResetEcrRepositoryPrefix()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetUpstreamRegistry()
 	ResetUpstreamRegistryUrl()
+	ResetUpstreamRepositoryPrefix()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -181,6 +202,26 @@ func (j *jsiiProxy_EcrPullThroughCacheRule) CredentialArnInput() *string {
 	_jsii_.Get(
 		j,
 		"credentialArnInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EcrPullThroughCacheRule) CustomRoleArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"customRoleArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EcrPullThroughCacheRule) CustomRoleArnInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"customRoleArnInput",
 		&returns,
 	)
 	return returns
@@ -376,8 +417,28 @@ func (j *jsiiProxy_EcrPullThroughCacheRule) UpstreamRegistryUrlInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_EcrPullThroughCacheRule) UpstreamRepositoryPrefix() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"upstreamRepositoryPrefix",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ecr_pull_through_cache_rule awscc_ecr_pull_through_cache_rule} Resource.
+func (j *jsiiProxy_EcrPullThroughCacheRule) UpstreamRepositoryPrefixInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"upstreamRepositoryPrefixInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ecr_pull_through_cache_rule awscc_ecr_pull_through_cache_rule} Resource.
 func NewEcrPullThroughCacheRule(scope constructs.Construct, id *string, config *EcrPullThroughCacheRuleConfig) EcrPullThroughCacheRule {
 	_init_.Initialize()
 
@@ -395,7 +456,7 @@ func NewEcrPullThroughCacheRule(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ecr_pull_through_cache_rule awscc_ecr_pull_through_cache_rule} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ecr_pull_through_cache_rule awscc_ecr_pull_through_cache_rule} Resource.
 func NewEcrPullThroughCacheRule_Override(e EcrPullThroughCacheRule, scope constructs.Construct, id *string, config *EcrPullThroughCacheRuleConfig) {
 	_init_.Initialize()
 
@@ -435,6 +496,17 @@ func (j *jsiiProxy_EcrPullThroughCacheRule)SetCredentialArn(val *string) {
 	_jsii_.Set(
 		j,
 		"credentialArn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_EcrPullThroughCacheRule)SetCustomRoleArn(val *string) {
+	if err := j.validateSetCustomRoleArnParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"customRoleArn",
 		val,
 	)
 }
@@ -514,6 +586,17 @@ func (j *jsiiProxy_EcrPullThroughCacheRule)SetUpstreamRegistryUrl(val *string) {
 	_jsii_.Set(
 		j,
 		"upstreamRegistryUrl",
+		val,
+	)
+}
+
+func (j *jsiiProxy_EcrPullThroughCacheRule)SetUpstreamRepositoryPrefix(val *string) {
+	if err := j.validateSetUpstreamRepositoryPrefixParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"upstreamRepositoryPrefix",
 		val,
 	)
 }
@@ -787,6 +870,19 @@ func (e *jsiiProxy_EcrPullThroughCacheRule) GetStringMapAttribute(terraformAttri
 	return returns
 }
 
+func (e *jsiiProxy_EcrPullThroughCacheRule) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_EcrPullThroughCacheRule) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -814,6 +910,17 @@ func (e *jsiiProxy_EcrPullThroughCacheRule) InterpolationForAttribute(terraformA
 	return returns
 }
 
+func (e *jsiiProxy_EcrPullThroughCacheRule) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_EcrPullThroughCacheRule) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -822,6 +929,17 @@ func (e *jsiiProxy_EcrPullThroughCacheRule) MoveTo(moveTarget *string, index int
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_EcrPullThroughCacheRule) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -840,6 +958,14 @@ func (e *jsiiProxy_EcrPullThroughCacheRule) ResetCredentialArn() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetCredentialArn",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcrPullThroughCacheRule) ResetCustomRoleArn() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetCustomRoleArn",
 		nil, // no parameters
 	)
 }
@@ -876,12 +1002,46 @@ func (e *jsiiProxy_EcrPullThroughCacheRule) ResetUpstreamRegistryUrl() {
 	)
 }
 
+func (e *jsiiProxy_EcrPullThroughCacheRule) ResetUpstreamRepositoryPrefix() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetUpstreamRepositoryPrefix",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EcrPullThroughCacheRule) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_EcrPullThroughCacheRule) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_EcrPullThroughCacheRule) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

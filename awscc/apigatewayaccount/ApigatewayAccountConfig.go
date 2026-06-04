@@ -19,9 +19,7 @@ type ApigatewayAccountConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// The ARN of an Amazon CloudWatch role for the current Account.
-	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/apigateway_account#cloudwatch_role_arn ApigatewayAccount#cloudwatch_role_arn}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/apigateway_account#cloudwatch_role_arn ApigatewayAccount#cloudwatch_role_arn}.
 	CloudwatchRoleArn *string `field:"optional" json:"cloudwatchRoleArn" yaml:"cloudwatchRoleArn"`
 }
 

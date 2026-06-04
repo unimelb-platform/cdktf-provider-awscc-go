@@ -56,7 +56,15 @@ func (i *jsiiProxy_IotsitewiseGateway) validateInterpolationForAttributeParamete
 	return nil
 }
 
+func (i *jsiiProxy_IotsitewiseGateway) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotsitewiseGateway) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotsitewiseGateway) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -101,6 +109,10 @@ func (j *jsiiProxy_IotsitewiseGateway) validateSetCountParameters(val interface{
 }
 
 func (j *jsiiProxy_IotsitewiseGateway) validateSetGatewayNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseGateway) validateSetGatewayVersionParameters(val *string) error {
 	return nil
 }
 

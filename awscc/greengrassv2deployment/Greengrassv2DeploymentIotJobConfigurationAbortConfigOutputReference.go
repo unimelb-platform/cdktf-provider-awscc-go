@@ -64,6 +64,7 @@ type Greengrassv2DeploymentIotJobConfigurationAbortConfigOutputReference interfa
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutCriteriaList(value interface{})
+	ResetCriteriaList()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -446,6 +447,14 @@ func (g *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigOutputRef
 		g,
 		"putCriteriaList",
 		[]interface{}{value},
+	)
+}
+
+func (g *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigOutputReference) ResetCriteriaList() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetCriteriaList",
+		nil, // no parameters
 	)
 }
 

@@ -68,6 +68,7 @@ type AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesMarketoOu
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutErrorHandlingConfig(value *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesMarketoErrorHandlingConfig)
 	ResetErrorHandlingConfig()
+	ResetObject()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPrope
 	_jsii_.InvokeVoid(
 		a,
 		"resetErrorHandlingConfig",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesMarketoOutputReference) ResetObject() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetObject",
 		nil, // no parameters
 	)
 }

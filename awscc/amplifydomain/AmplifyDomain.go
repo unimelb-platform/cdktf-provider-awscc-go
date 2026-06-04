@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/amplifydomain/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/amplify_domain awscc_amplify_domain}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/amplify_domain awscc_amplify_domain}.
 type AmplifyDomain interface {
 	cdktf.TerraformResource
 	AppId() *string
@@ -24,7 +24,10 @@ type AmplifyDomain interface {
 	AutoSubDomainIamRoleInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	Certificate() AmplifyDomainCertificateOutputReference
 	CertificateRecord() *string
+	CertificateSettings() AmplifyDomainCertificateSettingsOutputReference
+	CertificateSettingsInput() interface{}
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -80,6 +83,7 @@ type AmplifyDomain interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	UpdateStatus() *string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -104,23 +108,38 @@ type AmplifyDomain interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutCertificateSettings(value *AmplifyDomainCertificateSettings)
 	PutSubDomainSettings(value interface{})
 	ResetAutoSubDomainCreationPatterns()
 	ResetAutoSubDomainIamRole()
+	ResetCertificateSettings()
 	ResetEnableAutoSubDomain()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -215,11 +234,41 @@ func (j *jsiiProxy_AmplifyDomain) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
+func (j *jsiiProxy_AmplifyDomain) Certificate() AmplifyDomainCertificateOutputReference {
+	var returns AmplifyDomainCertificateOutputReference
+	_jsii_.Get(
+		j,
+		"certificate",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_AmplifyDomain) CertificateRecord() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"certificateRecord",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AmplifyDomain) CertificateSettings() AmplifyDomainCertificateSettingsOutputReference {
+	var returns AmplifyDomainCertificateSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"certificateSettings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AmplifyDomain) CertificateSettingsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"certificateSettingsInput",
 		&returns,
 	)
 	return returns
@@ -465,8 +514,18 @@ func (j *jsiiProxy_AmplifyDomain) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_AmplifyDomain) UpdateStatus() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"updateStatus",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/amplify_domain awscc_amplify_domain} Resource.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/amplify_domain awscc_amplify_domain} Resource.
 func NewAmplifyDomain(scope constructs.Construct, id *string, config *AmplifyDomainConfig) AmplifyDomain {
 	_init_.Initialize()
 
@@ -484,7 +543,7 @@ func NewAmplifyDomain(scope constructs.Construct, id *string, config *AmplifyDom
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/amplify_domain awscc_amplify_domain} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/amplify_domain awscc_amplify_domain} Resource.
 func NewAmplifyDomain_Override(a AmplifyDomain, scope constructs.Construct, id *string, config *AmplifyDomainConfig) {
 	_init_.Initialize()
 
@@ -887,6 +946,19 @@ func (a *jsiiProxy_AmplifyDomain) GetStringMapAttribute(terraformAttribute *stri
 	return returns
 }
 
+func (a *jsiiProxy_AmplifyDomain) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (a *jsiiProxy_AmplifyDomain) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := a.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -914,6 +986,17 @@ func (a *jsiiProxy_AmplifyDomain) InterpolationForAttribute(terraformAttribute *
 	return returns
 }
 
+func (a *jsiiProxy_AmplifyDomain) MoveFromId(id *string) {
+	if err := a.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (a *jsiiProxy_AmplifyDomain) MoveTo(moveTarget *string, index interface{}) {
 	if err := a.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -925,6 +1008,17 @@ func (a *jsiiProxy_AmplifyDomain) MoveTo(moveTarget *string, index interface{}) 
 	)
 }
 
+func (a *jsiiProxy_AmplifyDomain) MoveToId(id *string) {
+	if err := a.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (a *jsiiProxy_AmplifyDomain) OverrideLogicalId(newLogicalId *string) {
 	if err := a.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -933,6 +1027,17 @@ func (a *jsiiProxy_AmplifyDomain) OverrideLogicalId(newLogicalId *string) {
 		a,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (a *jsiiProxy_AmplifyDomain) PutCertificateSettings(value *AmplifyDomainCertificateSettings) {
+	if err := a.validatePutCertificateSettingsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putCertificateSettings",
+		[]interface{}{value},
 	)
 }
 
@@ -963,6 +1068,14 @@ func (a *jsiiProxy_AmplifyDomain) ResetAutoSubDomainIamRole() {
 	)
 }
 
+func (a *jsiiProxy_AmplifyDomain) ResetCertificateSettings() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetCertificateSettings",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_AmplifyDomain) ResetEnableAutoSubDomain() {
 	_jsii_.InvokeVoid(
 		a,
@@ -985,6 +1098,32 @@ func (a *jsiiProxy_AmplifyDomain) SynthesizeAttributes() *map[string]interface{}
 	_jsii_.Invoke(
 		a,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AmplifyDomain) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		a,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AmplifyDomain) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

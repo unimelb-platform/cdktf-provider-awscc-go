@@ -42,8 +42,8 @@ type KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationS3Configu
 	ErrorOutputPrefixInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationS3Configuration
-	SetInternalValue(val *KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationS3Configuration)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Prefix() *string
 	SetPrefix(val *string)
 	PrefixInput() *string
@@ -85,12 +85,14 @@ type KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationS3Configu
 	PutBufferingHints(value *KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationS3ConfigurationBufferingHints)
 	PutCloudwatchLoggingOptions(value *KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationS3ConfigurationCloudwatchLoggingOptions)
 	PutEncryptionConfiguration(value *KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationS3ConfigurationEncryptionConfiguration)
+	ResetBucketArn()
 	ResetBufferingHints()
 	ResetCloudwatchLoggingOptions()
 	ResetCompressionFormat()
 	ResetEncryptionConfiguration()
 	ResetErrorOutputPrefix()
 	ResetPrefix()
+	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -266,8 +268,8 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigur
 	return returns
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationS3ConfigurationOutputReference) InternalValue() *KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationS3Configuration {
-	var returns *KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationS3Configuration
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationS3ConfigurationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -419,7 +421,7 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigur
 	)
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationS3ConfigurationOutputReference)SetInternalValue(val *KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationS3Configuration) {
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationS3ConfigurationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -693,6 +695,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigur
 	)
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationS3ConfigurationOutputReference) ResetBucketArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetBucketArn",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationS3ConfigurationOutputReference) ResetBufferingHints() {
 	_jsii_.InvokeVoid(
 		k,
@@ -737,6 +747,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigur
 	_jsii_.InvokeVoid(
 		k,
 		"resetPrefix",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamElasticsearchDestinationConfigurationS3ConfigurationOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetRoleArn",
 		nil, // no parameters
 	)
 }

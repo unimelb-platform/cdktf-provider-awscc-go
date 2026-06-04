@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccodestarconnectionssyncconfigurations/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codestarconnections_sync_configurations awscc_codestarconnections_sync_configurations}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codestarconnections_sync_configurations awscc_codestarconnections_sync_configurations}.
 type DataAwsccCodestarconnectionsSyncConfigurations interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccCodestarconnectionsSyncConfigurations interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccCodestarconnectionsSyncConfigurations) TerraformReso
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codestarconnections_sync_configurations awscc_codestarconnections_sync_configurations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codestarconnections_sync_configurations awscc_codestarconnections_sync_configurations} Data Source.
 func NewDataAwsccCodestarconnectionsSyncConfigurations(scope constructs.Construct, id *string, config *DataAwsccCodestarconnectionsSyncConfigurationsConfig) DataAwsccCodestarconnectionsSyncConfigurations {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccCodestarconnectionsSyncConfigurations(scope constructs.Construc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/codestarconnections_sync_configurations awscc_codestarconnections_sync_configurations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/codestarconnections_sync_configurations awscc_codestarconnections_sync_configurations} Data Source.
 func NewDataAwsccCodestarconnectionsSyncConfigurations_Override(d DataAwsccCodestarconnectionsSyncConfigurations, scope constructs.Construct, id *string, config *DataAwsccCodestarconnectionsSyncConfigurationsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccCodestarconnectionsSyncConfigurations) SynthesizeAtt
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCodestarconnectionsSyncConfigurations) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCodestarconnectionsSyncConfigurations) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

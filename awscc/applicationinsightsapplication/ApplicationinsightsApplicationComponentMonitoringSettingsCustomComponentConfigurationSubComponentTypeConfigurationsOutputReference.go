@@ -30,7 +30,7 @@ type ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentCon
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	SubComponentConfigurationDetails() ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsOutputReference
-	SubComponentConfigurationDetailsInput() *ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetails
+	SubComponentConfigurationDetailsInput() interface{}
 	SubComponentType() *string
 	SetSubComponentType(val *string)
 	SubComponentTypeInput() *string
@@ -67,6 +67,8 @@ type ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentCon
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutSubComponentConfigurationDetails(value *ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetails)
+	ResetSubComponentConfigurationDetails()
+	ResetSubComponentType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -142,8 +144,8 @@ func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsCust
 	return returns
 }
 
-func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfigurationSubComponentTypeConfigurationsOutputReference) SubComponentConfigurationDetailsInput() *ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetails {
-	var returns *ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetails
+func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfigurationSubComponentTypeConfigurationsOutputReference) SubComponentConfigurationDetailsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"subComponentConfigurationDetailsInput",
@@ -480,6 +482,22 @@ func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsCust
 		a,
 		"putSubComponentConfigurationDetails",
 		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfigurationSubComponentTypeConfigurationsOutputReference) ResetSubComponentConfigurationDetails() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetSubComponentConfigurationDetails",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfigurationSubComponentTypeConfigurationsOutputReference) ResetSubComponentType() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetSubComponentType",
+		nil, // no parameters
 	)
 }
 

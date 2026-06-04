@@ -39,6 +39,7 @@ type DataAwsccKinesisfirehoseDeliveryStreamSplunkDestinationConfigurationOutputR
 	RetryOptions() DataAwsccKinesisfirehoseDeliveryStreamSplunkDestinationConfigurationRetryOptionsOutputReference
 	S3BackupMode() *string
 	S3Configuration() DataAwsccKinesisfirehoseDeliveryStreamSplunkDestinationConfigurationS3ConfigurationOutputReference
+	SecretsManagerConfiguration() DataAwsccKinesisfirehoseDeliveryStreamSplunkDestinationConfigurationSecretsManagerConfigurationOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -231,6 +232,16 @@ func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamSplunkDestinationConfig
 	_jsii_.Get(
 		j,
 		"s3Configuration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamSplunkDestinationConfigurationOutputReference) SecretsManagerConfiguration() DataAwsccKinesisfirehoseDeliveryStreamSplunkDestinationConfigurationSecretsManagerConfigurationOutputReference {
+	var returns DataAwsccKinesisfirehoseDeliveryStreamSplunkDestinationConfigurationSecretsManagerConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"secretsManagerConfiguration",
 		&returns,
 	)
 	return returns

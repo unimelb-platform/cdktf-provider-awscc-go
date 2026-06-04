@@ -56,7 +56,15 @@ func (l *jsiiProxy_LambdaFunction) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
+func (l *jsiiProxy_LambdaFunction) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LambdaFunction) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (l *jsiiProxy_LambdaFunction) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -177,6 +185,10 @@ func (j *jsiiProxy_LambdaFunction) validateSetPackageTypeParameters(val *string)
 }
 
 func (j *jsiiProxy_LambdaFunction) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_LambdaFunction) validateSetRecursiveLoopParameters(val *string) error {
 	return nil
 }
 

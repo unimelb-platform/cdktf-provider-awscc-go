@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/kafkaconnectconnector/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/kafkaconnect_connector awscc_kafkaconnect_connector}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/kafkaconnect_connector awscc_kafkaconnect_connector}.
 type KafkaconnectConnector interface {
 	cdktf.TerraformResource
 	Capacity() KafkaconnectConnectorCapacityOutputReference
@@ -81,6 +81,8 @@ type KafkaconnectConnector interface {
 	ServiceExecutionRoleArn() *string
 	SetServiceExecutionRoleArn(val *string)
 	ServiceExecutionRoleArnInput() *string
+	Tags() KafkaconnectConnectorTagsList
+	TagsInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -113,12 +115,22 @@ type KafkaconnectConnector interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -128,14 +140,19 @@ type KafkaconnectConnector interface {
 	PutKafkaClusterEncryptionInTransit(value *KafkaconnectConnectorKafkaClusterEncryptionInTransit)
 	PutLogDelivery(value *KafkaconnectConnectorLogDelivery)
 	PutPlugins(value interface{})
+	PutTags(value interface{})
 	PutWorkerConfiguration(value *KafkaconnectConnectorWorkerConfiguration)
 	ResetConnectorDescription()
 	ResetLogDelivery()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTags()
 	ResetWorkerConfiguration()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -520,6 +537,26 @@ func (j *jsiiProxy_KafkaconnectConnector) ServiceExecutionRoleArnInput() *string
 	return returns
 }
 
+func (j *jsiiProxy_KafkaconnectConnector) Tags() KafkaconnectConnectorTagsList {
+	var returns KafkaconnectConnectorTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KafkaconnectConnector) TagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_KafkaconnectConnector) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -571,7 +608,7 @@ func (j *jsiiProxy_KafkaconnectConnector) WorkerConfigurationInput() interface{}
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/kafkaconnect_connector awscc_kafkaconnect_connector} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/kafkaconnect_connector awscc_kafkaconnect_connector} Resource.
 func NewKafkaconnectConnector(scope constructs.Construct, id *string, config *KafkaconnectConnectorConfig) KafkaconnectConnector {
 	_init_.Initialize()
 
@@ -589,7 +626,7 @@ func NewKafkaconnectConnector(scope constructs.Construct, id *string, config *Ka
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/kafkaconnect_connector awscc_kafkaconnect_connector} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/kafkaconnect_connector awscc_kafkaconnect_connector} Resource.
 func NewKafkaconnectConnector_Override(k KafkaconnectConnector, scope constructs.Construct, id *string, config *KafkaconnectConnectorConfig) {
 	_init_.Initialize()
 
@@ -992,6 +1029,19 @@ func (k *jsiiProxy_KafkaconnectConnector) GetStringMapAttribute(terraformAttribu
 	return returns
 }
 
+func (k *jsiiProxy_KafkaconnectConnector) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		k,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (k *jsiiProxy_KafkaconnectConnector) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := k.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1019,6 +1069,17 @@ func (k *jsiiProxy_KafkaconnectConnector) InterpolationForAttribute(terraformAtt
 	return returns
 }
 
+func (k *jsiiProxy_KafkaconnectConnector) MoveFromId(id *string) {
+	if err := k.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (k *jsiiProxy_KafkaconnectConnector) MoveTo(moveTarget *string, index interface{}) {
 	if err := k.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1027,6 +1088,17 @@ func (k *jsiiProxy_KafkaconnectConnector) MoveTo(moveTarget *string, index inter
 		k,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (k *jsiiProxy_KafkaconnectConnector) MoveToId(id *string) {
+	if err := k.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1107,6 +1179,17 @@ func (k *jsiiProxy_KafkaconnectConnector) PutPlugins(value interface{}) {
 	)
 }
 
+func (k *jsiiProxy_KafkaconnectConnector) PutTags(value interface{}) {
+	if err := k.validatePutTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"putTags",
+		[]interface{}{value},
+	)
+}
+
 func (k *jsiiProxy_KafkaconnectConnector) PutWorkerConfiguration(value *KafkaconnectConnectorWorkerConfiguration) {
 	if err := k.validatePutWorkerConfigurationParameters(value); err != nil {
 		panic(err)
@@ -1142,6 +1225,14 @@ func (k *jsiiProxy_KafkaconnectConnector) ResetOverrideLogicalId() {
 	)
 }
 
+func (k *jsiiProxy_KafkaconnectConnector) ResetTags() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetTags",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KafkaconnectConnector) ResetWorkerConfiguration() {
 	_jsii_.InvokeVoid(
 		k,
@@ -1156,6 +1247,32 @@ func (k *jsiiProxy_KafkaconnectConnector) SynthesizeAttributes() *map[string]int
 	_jsii_.Invoke(
 		k,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (k *jsiiProxy_KafkaconnectConnector) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		k,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (k *jsiiProxy_KafkaconnectConnector) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		k,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

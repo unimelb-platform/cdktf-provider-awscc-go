@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/sagemakermodelbiasjobdefinition/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/sagemaker_model_bias_job_definition awscc_sagemaker_model_bias_job_definition}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/sagemaker_model_bias_job_definition awscc_sagemaker_model_bias_job_definition}.
 type SagemakerModelBiasJobDefinition interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -110,12 +110,22 @@ type SagemakerModelBiasJobDefinition interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -137,6 +147,9 @@ type SagemakerModelBiasJobDefinition interface {
 	ResetStoppingCondition()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -562,7 +575,7 @@ func (j *jsiiProxy_SagemakerModelBiasJobDefinition) TerraformResourceType() *str
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/sagemaker_model_bias_job_definition awscc_sagemaker_model_bias_job_definition} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/sagemaker_model_bias_job_definition awscc_sagemaker_model_bias_job_definition} Resource.
 func NewSagemakerModelBiasJobDefinition(scope constructs.Construct, id *string, config *SagemakerModelBiasJobDefinitionConfig) SagemakerModelBiasJobDefinition {
 	_init_.Initialize()
 
@@ -580,7 +593,7 @@ func NewSagemakerModelBiasJobDefinition(scope constructs.Construct, id *string, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/sagemaker_model_bias_job_definition awscc_sagemaker_model_bias_job_definition} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/sagemaker_model_bias_job_definition awscc_sagemaker_model_bias_job_definition} Resource.
 func NewSagemakerModelBiasJobDefinition_Override(s SagemakerModelBiasJobDefinition, scope constructs.Construct, id *string, config *SagemakerModelBiasJobDefinitionConfig) {
 	_init_.Initialize()
 
@@ -961,6 +974,19 @@ func (s *jsiiProxy_SagemakerModelBiasJobDefinition) GetStringMapAttribute(terraf
 	return returns
 }
 
+func (s *jsiiProxy_SagemakerModelBiasJobDefinition) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (s *jsiiProxy_SagemakerModelBiasJobDefinition) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := s.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -988,6 +1014,17 @@ func (s *jsiiProxy_SagemakerModelBiasJobDefinition) InterpolationForAttribute(te
 	return returns
 }
 
+func (s *jsiiProxy_SagemakerModelBiasJobDefinition) MoveFromId(id *string) {
+	if err := s.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (s *jsiiProxy_SagemakerModelBiasJobDefinition) MoveTo(moveTarget *string, index interface{}) {
 	if err := s.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -996,6 +1033,17 @@ func (s *jsiiProxy_SagemakerModelBiasJobDefinition) MoveTo(moveTarget *string, i
 		s,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelBiasJobDefinition) MoveToId(id *string) {
+	if err := s.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1160,6 +1208,32 @@ func (s *jsiiProxy_SagemakerModelBiasJobDefinition) SynthesizeAttributes() *map[
 	_jsii_.Invoke(
 		s,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SagemakerModelBiasJobDefinition) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		s,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SagemakerModelBiasJobDefinition) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

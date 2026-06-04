@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccsagemakerdomain/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_domain awscc_sagemaker_domain}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_domain awscc_sagemaker_domain}.
 type DataAwsccSagemakerDomain interface {
 	cdktf.TerraformDataSource
 	AppNetworkAccessType() *string
@@ -62,6 +62,7 @@ type DataAwsccSagemakerDomain interface {
 	SingleSignOnApplicationArn() *string
 	SingleSignOnManagedApplicationInstanceId() *string
 	SubnetIds() *[]*string
+	TagPropagation() *string
 	Tags() DataAwsccSagemakerDomainTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -100,6 +101,10 @@ type DataAwsccSagemakerDomain interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -394,6 +399,16 @@ func (j *jsiiProxy_DataAwsccSagemakerDomain) SubnetIds() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccSagemakerDomain) TagPropagation() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"tagPropagation",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccSagemakerDomain) Tags() DataAwsccSagemakerDomainTagsList {
 	var returns DataAwsccSagemakerDomainTagsList
 	_jsii_.Get(
@@ -455,7 +470,7 @@ func (j *jsiiProxy_DataAwsccSagemakerDomain) VpcId() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_domain awscc_sagemaker_domain} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_domain awscc_sagemaker_domain} Data Source.
 func NewDataAwsccSagemakerDomain(scope constructs.Construct, id *string, config *DataAwsccSagemakerDomainConfig) DataAwsccSagemakerDomain {
 	_init_.Initialize()
 
@@ -473,7 +488,7 @@ func NewDataAwsccSagemakerDomain(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_domain awscc_sagemaker_domain} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_domain awscc_sagemaker_domain} Data Source.
 func NewDataAwsccSagemakerDomain_Override(d DataAwsccSagemakerDomain, scope constructs.Construct, id *string, config *DataAwsccSagemakerDomainConfig) {
 	_init_.Initialize()
 
@@ -840,6 +855,32 @@ func (d *jsiiProxy_DataAwsccSagemakerDomain) SynthesizeAttributes() *map[string]
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerDomain) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerDomain) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

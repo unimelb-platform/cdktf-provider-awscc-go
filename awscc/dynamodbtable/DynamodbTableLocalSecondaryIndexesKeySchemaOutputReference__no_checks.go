@@ -60,7 +60,7 @@ func (j *jsiiProxy_DynamodbTableLocalSecondaryIndexesKeySchemaOutputReference) v
 	return nil
 }
 
-func (j *jsiiProxy_DynamodbTableLocalSecondaryIndexesKeySchemaOutputReference) validateSetInternalValueParameters(val *DynamodbTableLocalSecondaryIndexesKeySchema) error {
+func (j *jsiiProxy_DynamodbTableLocalSecondaryIndexesKeySchemaOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

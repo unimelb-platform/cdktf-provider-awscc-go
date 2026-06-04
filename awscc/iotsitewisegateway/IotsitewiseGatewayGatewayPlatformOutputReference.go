@@ -27,12 +27,12 @@ type IotsitewiseGatewayGatewayPlatformOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	Greengrass() IotsitewiseGatewayGatewayPlatformGreengrassOutputReference
-	GreengrassInput() interface{}
 	GreengrassV2() IotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference
 	GreengrassV2Input() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	SiemensIe() IotsitewiseGatewayGatewayPlatformSiemensIeOutputReference
+	SiemensIeInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -65,10 +65,10 @@ type IotsitewiseGatewayGatewayPlatformOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
-	PutGreengrass(value *IotsitewiseGatewayGatewayPlatformGreengrass)
 	PutGreengrassV2(value *IotsitewiseGatewayGatewayPlatformGreengrassV2)
-	ResetGreengrass()
+	PutSiemensIe(value *IotsitewiseGatewayGatewayPlatformSiemensIe)
 	ResetGreengrassV2()
+	ResetSiemensIe()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -124,26 +124,6 @@ func (j *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) Fqn() *stri
 	return returns
 }
 
-func (j *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) Greengrass() IotsitewiseGatewayGatewayPlatformGreengrassOutputReference {
-	var returns IotsitewiseGatewayGatewayPlatformGreengrassOutputReference
-	_jsii_.Get(
-		j,
-		"greengrass",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) GreengrassInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"greengrassInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) GreengrassV2() IotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference {
 	var returns IotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference
 	_jsii_.Get(
@@ -169,6 +149,26 @@ func (j *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) InternalVal
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) SiemensIe() IotsitewiseGatewayGatewayPlatformSiemensIeOutputReference {
+	var returns IotsitewiseGatewayGatewayPlatformSiemensIeOutputReference
+	_jsii_.Get(
+		j,
+		"siemensIe",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) SiemensIeInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"siemensIeInput",
 		&returns,
 	)
 	return returns
@@ -463,17 +463,6 @@ func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) Interpolati
 	return returns
 }
 
-func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) PutGreengrass(value *IotsitewiseGatewayGatewayPlatformGreengrass) {
-	if err := i.validatePutGreengrassParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		i,
-		"putGreengrass",
-		[]interface{}{value},
-	)
-}
-
 func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) PutGreengrassV2(value *IotsitewiseGatewayGatewayPlatformGreengrassV2) {
 	if err := i.validatePutGreengrassV2Parameters(value); err != nil {
 		panic(err)
@@ -485,11 +474,14 @@ func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) PutGreengra
 	)
 }
 
-func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) ResetGreengrass() {
+func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) PutSiemensIe(value *IotsitewiseGatewayGatewayPlatformSiemensIe) {
+	if err := i.validatePutSiemensIeParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		i,
-		"resetGreengrass",
-		nil, // no parameters
+		"putSiemensIe",
+		[]interface{}{value},
 	)
 }
 
@@ -497,6 +489,14 @@ func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) ResetGreeng
 	_jsii_.InvokeVoid(
 		i,
 		"resetGreengrassV2",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) ResetSiemensIe() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetSiemensIe",
 		nil, // no parameters
 	)
 }

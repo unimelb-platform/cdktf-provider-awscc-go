@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccelasticbeanstalkapplication/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticbeanstalk_application awscc_elasticbeanstalk_application}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticbeanstalk_application awscc_elasticbeanstalk_application}.
 type DataAwsccElasticbeanstalkApplication interface {
 	cdktf.TerraformDataSource
 	ApplicationName() *string
@@ -85,6 +85,10 @@ type DataAwsccElasticbeanstalkApplication interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -290,7 +294,7 @@ func (j *jsiiProxy_DataAwsccElasticbeanstalkApplication) TerraformResourceType()
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticbeanstalk_application awscc_elasticbeanstalk_application} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticbeanstalk_application awscc_elasticbeanstalk_application} Data Source.
 func NewDataAwsccElasticbeanstalkApplication(scope constructs.Construct, id *string, config *DataAwsccElasticbeanstalkApplicationConfig) DataAwsccElasticbeanstalkApplication {
 	_init_.Initialize()
 
@@ -308,7 +312,7 @@ func NewDataAwsccElasticbeanstalkApplication(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/elasticbeanstalk_application awscc_elasticbeanstalk_application} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/elasticbeanstalk_application awscc_elasticbeanstalk_application} Data Source.
 func NewDataAwsccElasticbeanstalkApplication_Override(d DataAwsccElasticbeanstalkApplication, scope constructs.Construct, id *string, config *DataAwsccElasticbeanstalkApplicationConfig) {
 	_init_.Initialize()
 
@@ -675,6 +679,32 @@ func (d *jsiiProxy_DataAwsccElasticbeanstalkApplication) SynthesizeAttributes() 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccElasticbeanstalkApplication) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccElasticbeanstalkApplication) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

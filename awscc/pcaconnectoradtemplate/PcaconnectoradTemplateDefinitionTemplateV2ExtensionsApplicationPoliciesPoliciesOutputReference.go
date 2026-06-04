@@ -27,8 +27,8 @@ type PcaconnectoradTemplateDefinitionTemplateV2ExtensionsApplicationPoliciesPoli
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *PcaconnectoradTemplateDefinitionTemplateV2ExtensionsApplicationPoliciesPolicies
-	SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV2ExtensionsApplicationPoliciesPolicies)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	PolicyObjectIdentifier() *string
 	SetPolicyObjectIdentifier(val *string)
 	PolicyObjectIdentifierInput() *string
@@ -124,8 +124,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2ExtensionsApplicati
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2ExtensionsApplicationPoliciesPoliciesOutputReference) InternalValue() *PcaconnectoradTemplateDefinitionTemplateV2ExtensionsApplicationPoliciesPolicies {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV2ExtensionsApplicationPoliciesPolicies
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2ExtensionsApplicationPoliciesPoliciesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -244,7 +244,7 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2ExtensionsApplicati
 	)
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2ExtensionsApplicationPoliciesPoliciesOutputReference)SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV2ExtensionsApplicationPoliciesPolicies) {
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2ExtensionsApplicationPoliciesPoliciesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

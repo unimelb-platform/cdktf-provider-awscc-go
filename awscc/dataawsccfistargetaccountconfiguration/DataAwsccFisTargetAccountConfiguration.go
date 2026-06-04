@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccfistargetaccountconfiguration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/fis_target_account_configuration awscc_fis_target_account_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/fis_target_account_configuration awscc_fis_target_account_configuration}.
 type DataAwsccFisTargetAccountConfiguration interface {
 	cdktf.TerraformDataSource
 	AccountId() *string
@@ -86,6 +86,10 @@ type DataAwsccFisTargetAccountConfiguration interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -301,7 +305,7 @@ func (j *jsiiProxy_DataAwsccFisTargetAccountConfiguration) TerraformResourceType
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/fis_target_account_configuration awscc_fis_target_account_configuration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/fis_target_account_configuration awscc_fis_target_account_configuration} Data Source.
 func NewDataAwsccFisTargetAccountConfiguration(scope constructs.Construct, id *string, config *DataAwsccFisTargetAccountConfigurationConfig) DataAwsccFisTargetAccountConfiguration {
 	_init_.Initialize()
 
@@ -319,7 +323,7 @@ func NewDataAwsccFisTargetAccountConfiguration(scope constructs.Construct, id *s
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/fis_target_account_configuration awscc_fis_target_account_configuration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/fis_target_account_configuration awscc_fis_target_account_configuration} Data Source.
 func NewDataAwsccFisTargetAccountConfiguration_Override(d DataAwsccFisTargetAccountConfiguration, scope constructs.Construct, id *string, config *DataAwsccFisTargetAccountConfigurationConfig) {
 	_init_.Initialize()
 
@@ -686,6 +690,32 @@ func (d *jsiiProxy_DataAwsccFisTargetAccountConfiguration) SynthesizeAttributes(
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccFisTargetAccountConfiguration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccFisTargetAccountConfiguration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

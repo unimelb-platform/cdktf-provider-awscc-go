@@ -11,7 +11,7 @@ import (
 type Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationOutputReference interface {
 	cdktf.ComplexObject
 	CodeContent() Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentOutputReference
-	CodeContentInput() *Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent
+	CodeContentInput() interface{}
 	CodeContentType() *string
 	SetCodeContentType(val *string)
 	CodeContentTypeInput() *string
@@ -67,6 +67,8 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigu
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutCodeContent(value *Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent)
+	ResetCodeContent()
+	ResetCodeContentType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -92,8 +94,8 @@ func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationApplicat
 	return returns
 }
 
-func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationOutputReference) CodeContentInput() *Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent {
-	var returns *Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent
+func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationOutputReference) CodeContentInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"codeContentInput",
@@ -480,6 +482,22 @@ func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationApplicat
 		k,
 		"putCodeContent",
 		[]interface{}{value},
+	)
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationOutputReference) ResetCodeContent() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetCodeContent",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationOutputReference) ResetCodeContentType() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetCodeContentType",
+		nil, // no parameters
 	)
 }
 

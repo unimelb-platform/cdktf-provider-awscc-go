@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccivsrecordingconfiguration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ivs_recording_configuration awscc_ivs_recording_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ivs_recording_configuration awscc_ivs_recording_configuration}.
 type DataAwsccIvsRecordingConfiguration interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -90,6 +90,10 @@ type DataAwsccIvsRecordingConfiguration interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -345,7 +349,7 @@ func (j *jsiiProxy_DataAwsccIvsRecordingConfiguration) ThumbnailConfiguration() 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ivs_recording_configuration awscc_ivs_recording_configuration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ivs_recording_configuration awscc_ivs_recording_configuration} Data Source.
 func NewDataAwsccIvsRecordingConfiguration(scope constructs.Construct, id *string, config *DataAwsccIvsRecordingConfigurationConfig) DataAwsccIvsRecordingConfiguration {
 	_init_.Initialize()
 
@@ -363,7 +367,7 @@ func NewDataAwsccIvsRecordingConfiguration(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ivs_recording_configuration awscc_ivs_recording_configuration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ivs_recording_configuration awscc_ivs_recording_configuration} Data Source.
 func NewDataAwsccIvsRecordingConfiguration_Override(d DataAwsccIvsRecordingConfiguration, scope constructs.Construct, id *string, config *DataAwsccIvsRecordingConfigurationConfig) {
 	_init_.Initialize()
 
@@ -730,6 +734,32 @@ func (d *jsiiProxy_DataAwsccIvsRecordingConfiguration) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIvsRecordingConfiguration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIvsRecordingConfiguration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

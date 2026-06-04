@@ -56,7 +56,7 @@ func (j *jsiiProxy_SagemakerInferenceExperimentShadowModeConfigShadowModelVarian
 	return nil
 }
 
-func (j *jsiiProxy_SagemakerInferenceExperimentShadowModeConfigShadowModelVariantsOutputReference) validateSetInternalValueParameters(val *SagemakerInferenceExperimentShadowModeConfigShadowModelVariants) error {
+func (j *jsiiProxy_SagemakerInferenceExperimentShadowModeConfigShadowModelVariantsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

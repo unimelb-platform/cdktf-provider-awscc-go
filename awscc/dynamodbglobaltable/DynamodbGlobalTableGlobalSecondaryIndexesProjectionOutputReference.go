@@ -27,8 +27,8 @@ type DynamodbGlobalTableGlobalSecondaryIndexesProjectionOutputReference interfac
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DynamodbGlobalTableGlobalSecondaryIndexesProjection
-	SetInternalValue(val *DynamodbGlobalTableGlobalSecondaryIndexesProjection)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	NonKeyAttributes() *[]*string
 	SetNonKeyAttributes(val *[]*string)
 	NonKeyAttributesInput() *[]*string
@@ -124,8 +124,8 @@ func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesProjectionOutputRefe
 	return returns
 }
 
-func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesProjectionOutputReference) InternalValue() *DynamodbGlobalTableGlobalSecondaryIndexesProjection {
-	var returns *DynamodbGlobalTableGlobalSecondaryIndexesProjection
+func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesProjectionOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -244,7 +244,7 @@ func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesProjectionOutputRefe
 	)
 }
 
-func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesProjectionOutputReference)SetInternalValue(val *DynamodbGlobalTableGlobalSecondaryIndexesProjection) {
+func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesProjectionOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

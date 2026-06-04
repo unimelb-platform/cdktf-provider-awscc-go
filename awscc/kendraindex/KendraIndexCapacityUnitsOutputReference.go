@@ -67,6 +67,8 @@ type KendraIndexCapacityUnitsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetQueryCapacityUnits()
+	ResetStorageCapacityUnits()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (k *jsiiProxy_KendraIndexCapacityUnitsOutputReference) InterpolationForAttr
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KendraIndexCapacityUnitsOutputReference) ResetQueryCapacityUnits() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetQueryCapacityUnits",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraIndexCapacityUnitsOutputReference) ResetStorageCapacityUnits() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetStorageCapacityUnits",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KendraIndexCapacityUnitsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

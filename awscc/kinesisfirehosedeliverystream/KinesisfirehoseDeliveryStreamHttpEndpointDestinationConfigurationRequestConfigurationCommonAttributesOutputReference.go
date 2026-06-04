@@ -67,6 +67,8 @@ type KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationRequestCon
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAttributeName()
+	ResetAttributeValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigura
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationRequestConfigurationCommonAttributesOutputReference) ResetAttributeName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetAttributeName",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationRequestConfigurationCommonAttributesOutputReference) ResetAttributeValue() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetAttributeValue",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationRequestConfigurationCommonAttributesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

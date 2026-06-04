@@ -72,6 +72,7 @@ type CassandraTableReplicaSpecificationsOutputReference interface {
 	PutReadCapacityAutoScaling(value *CassandraTableReplicaSpecificationsReadCapacityAutoScaling)
 	ResetReadCapacityAutoScaling()
 	ResetReadCapacityUnits()
+	ResetRegion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (c *jsiiProxy_CassandraTableReplicaSpecificationsOutputReference) ResetRead
 	_jsii_.InvokeVoid(
 		c,
 		"resetReadCapacityUnits",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CassandraTableReplicaSpecificationsOutputReference) ResetRegion() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetRegion",
 		nil, // no parameters
 	)
 }

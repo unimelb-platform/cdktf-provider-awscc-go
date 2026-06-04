@@ -67,6 +67,8 @@ type NetworkmanagerConnectAttachmentTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (n *jsiiProxy_NetworkmanagerConnectAttachmentTagsOutputReference) Interpola
 	)
 
 	return returns
+}
+
+func (n *jsiiProxy_NetworkmanagerConnectAttachmentTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkmanagerConnectAttachmentTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (n *jsiiProxy_NetworkmanagerConnectAttachmentTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

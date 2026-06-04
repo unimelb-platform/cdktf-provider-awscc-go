@@ -70,6 +70,9 @@ type BudgetsBudgetsActionDefinitionSsmActionDefinitionOutputReference interface 
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetInstanceIds()
+	ResetRegion()
+	ResetSubtype()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (b *jsiiProxy_BudgetsBudgetsActionDefinitionSsmActionDefinitionOutputRefere
 	)
 
 	return returns
+}
+
+func (b *jsiiProxy_BudgetsBudgetsActionDefinitionSsmActionDefinitionOutputReference) ResetInstanceIds() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetInstanceIds",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BudgetsBudgetsActionDefinitionSsmActionDefinitionOutputReference) ResetRegion() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetRegion",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BudgetsBudgetsActionDefinitionSsmActionDefinitionOutputReference) ResetSubtype() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetSubtype",
+		nil, // no parameters
+	)
 }
 
 func (b *jsiiProxy_BudgetsBudgetsActionDefinitionSsmActionDefinitionOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

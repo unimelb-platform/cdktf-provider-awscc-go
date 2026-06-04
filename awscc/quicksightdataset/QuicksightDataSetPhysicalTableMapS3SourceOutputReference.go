@@ -70,6 +70,8 @@ type QuicksightDataSetPhysicalTableMapS3SourceOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutInputColumns(value interface{})
 	PutUploadSettings(value *QuicksightDataSetPhysicalTableMapS3SourceUploadSettings)
+	ResetDataSourceArn()
+	ResetInputColumns()
 	ResetUploadSettings()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -515,6 +517,22 @@ func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapS3SourceOutputReference) Put
 		q,
 		"putUploadSettings",
 		[]interface{}{value},
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapS3SourceOutputReference) ResetDataSourceArn() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDataSourceArn",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapS3SourceOutputReference) ResetInputColumns() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetInputColumns",
+		nil, // no parameters
 	)
 }
 

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/cloudfrontoriginrequestpolicy/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudfront_origin_request_policy awscc_cloudfront_origin_request_policy}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudfront_origin_request_policy awscc_cloudfront_origin_request_policy}.
 type CloudfrontOriginRequestPolicy interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -46,6 +46,7 @@ type CloudfrontOriginRequestPolicy interface {
 	Node() constructs.Node
 	OriginRequestPolicyConfig() CloudfrontOriginRequestPolicyOriginRequestPolicyConfigOutputReference
 	OriginRequestPolicyConfigInput() interface{}
+	OriginRequestPolicyId() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -86,12 +87,22 @@ type CloudfrontOriginRequestPolicy interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -100,6 +111,9 @@ type CloudfrontOriginRequestPolicy interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -254,6 +268,16 @@ func (j *jsiiProxy_CloudfrontOriginRequestPolicy) OriginRequestPolicyConfigInput
 	return returns
 }
 
+func (j *jsiiProxy_CloudfrontOriginRequestPolicy) OriginRequestPolicyId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"originRequestPolicyId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_CloudfrontOriginRequestPolicy) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -315,7 +339,7 @@ func (j *jsiiProxy_CloudfrontOriginRequestPolicy) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudfront_origin_request_policy awscc_cloudfront_origin_request_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudfront_origin_request_policy awscc_cloudfront_origin_request_policy} Resource.
 func NewCloudfrontOriginRequestPolicy(scope constructs.Construct, id *string, config *CloudfrontOriginRequestPolicyConfig) CloudfrontOriginRequestPolicy {
 	_init_.Initialize()
 
@@ -333,7 +357,7 @@ func NewCloudfrontOriginRequestPolicy(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudfront_origin_request_policy awscc_cloudfront_origin_request_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudfront_origin_request_policy awscc_cloudfront_origin_request_policy} Resource.
 func NewCloudfrontOriginRequestPolicy_Override(c CloudfrontOriginRequestPolicy, scope constructs.Construct, id *string, config *CloudfrontOriginRequestPolicyConfig) {
 	_init_.Initialize()
 
@@ -681,6 +705,19 @@ func (c *jsiiProxy_CloudfrontOriginRequestPolicy) GetStringMapAttribute(terrafor
 	return returns
 }
 
+func (c *jsiiProxy_CloudfrontOriginRequestPolicy) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_CloudfrontOriginRequestPolicy) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -708,6 +745,17 @@ func (c *jsiiProxy_CloudfrontOriginRequestPolicy) InterpolationForAttribute(terr
 	return returns
 }
 
+func (c *jsiiProxy_CloudfrontOriginRequestPolicy) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CloudfrontOriginRequestPolicy) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -716,6 +764,17 @@ func (c *jsiiProxy_CloudfrontOriginRequestPolicy) MoveTo(moveTarget *string, ind
 		c,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (c *jsiiProxy_CloudfrontOriginRequestPolicy) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -755,6 +814,32 @@ func (c *jsiiProxy_CloudfrontOriginRequestPolicy) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CloudfrontOriginRequestPolicy) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CloudfrontOriginRequestPolicy) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

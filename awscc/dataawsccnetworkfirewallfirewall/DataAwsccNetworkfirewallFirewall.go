@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccnetworkfirewallfirewall/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkfirewall_firewall awscc_networkfirewall_firewall}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkfirewall_firewall awscc_networkfirewall_firewall}.
 type DataAwsccNetworkfirewallFirewall interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -26,6 +26,7 @@ type DataAwsccNetworkfirewallFirewall interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	Description() *string
+	EnabledAnalysisTypes() *[]*string
 	EndpointIds() *[]*string
 	FirewallArn() *string
 	FirewallId() *string
@@ -94,6 +95,10 @@ type DataAwsccNetworkfirewallFirewall interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -163,6 +168,16 @@ func (j *jsiiProxy_DataAwsccNetworkfirewallFirewall) Description() *string {
 	_jsii_.Get(
 		j,
 		"description",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccNetworkfirewallFirewall) EnabledAnalysisTypes() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"enabledAnalysisTypes",
 		&returns,
 	)
 	return returns
@@ -389,7 +404,7 @@ func (j *jsiiProxy_DataAwsccNetworkfirewallFirewall) VpcId() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkfirewall_firewall awscc_networkfirewall_firewall} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkfirewall_firewall awscc_networkfirewall_firewall} Data Source.
 func NewDataAwsccNetworkfirewallFirewall(scope constructs.Construct, id *string, config *DataAwsccNetworkfirewallFirewallConfig) DataAwsccNetworkfirewallFirewall {
 	_init_.Initialize()
 
@@ -407,7 +422,7 @@ func NewDataAwsccNetworkfirewallFirewall(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkfirewall_firewall awscc_networkfirewall_firewall} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkfirewall_firewall awscc_networkfirewall_firewall} Data Source.
 func NewDataAwsccNetworkfirewallFirewall_Override(d DataAwsccNetworkfirewallFirewall, scope constructs.Construct, id *string, config *DataAwsccNetworkfirewallFirewallConfig) {
 	_init_.Initialize()
 
@@ -774,6 +789,32 @@ func (d *jsiiProxy_DataAwsccNetworkfirewallFirewall) SynthesizeAttributes() *map
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkfirewallFirewall) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkfirewallFirewall) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

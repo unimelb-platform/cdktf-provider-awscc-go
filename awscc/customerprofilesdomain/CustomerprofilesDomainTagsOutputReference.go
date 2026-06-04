@@ -67,6 +67,8 @@ type CustomerprofilesDomainTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CustomerprofilesDomainTagsOutputReference) InterpolationForAt
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CustomerprofilesDomainTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesDomainTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CustomerprofilesDomainTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

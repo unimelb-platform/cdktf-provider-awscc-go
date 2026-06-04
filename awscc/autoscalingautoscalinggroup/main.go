@@ -13,12 +13,19 @@ func init() {
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addMoveTarget", GoMethod: "AddMoveTarget"},
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberProperty{JsiiProperty: "autoScalingGroupArn", GoGetter: "AutoScalingGroupArn"},
 			_jsii_.MemberProperty{JsiiProperty: "autoScalingGroupName", GoGetter: "AutoScalingGroupName"},
 			_jsii_.MemberProperty{JsiiProperty: "autoScalingGroupNameInput", GoGetter: "AutoScalingGroupNameInput"},
+			_jsii_.MemberProperty{JsiiProperty: "availabilityZoneDistribution", GoGetter: "AvailabilityZoneDistribution"},
+			_jsii_.MemberProperty{JsiiProperty: "availabilityZoneDistributionInput", GoGetter: "AvailabilityZoneDistributionInput"},
+			_jsii_.MemberProperty{JsiiProperty: "availabilityZoneImpairmentPolicy", GoGetter: "AvailabilityZoneImpairmentPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "availabilityZoneImpairmentPolicyInput", GoGetter: "AvailabilityZoneImpairmentPolicyInput"},
 			_jsii_.MemberProperty{JsiiProperty: "availabilityZones", GoGetter: "AvailabilityZones"},
 			_jsii_.MemberProperty{JsiiProperty: "availabilityZonesInput", GoGetter: "AvailabilityZonesInput"},
 			_jsii_.MemberProperty{JsiiProperty: "capacityRebalance", GoGetter: "CapacityRebalance"},
 			_jsii_.MemberProperty{JsiiProperty: "capacityRebalanceInput", GoGetter: "CapacityRebalanceInput"},
+			_jsii_.MemberProperty{JsiiProperty: "capacityReservationSpecification", GoGetter: "CapacityReservationSpecification"},
+			_jsii_.MemberProperty{JsiiProperty: "capacityReservationSpecificationInput", GoGetter: "CapacityReservationSpecificationInput"},
 			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
 			_jsii_.MemberProperty{JsiiProperty: "connection", GoGetter: "Connection"},
 			_jsii_.MemberProperty{JsiiProperty: "constructNodeMetadata", GoGetter: "ConstructNodeMetadata"},
@@ -46,6 +53,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
 			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
 			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "hasResourceMove", GoMethod: "HasResourceMove"},
 			_jsii_.MemberProperty{JsiiProperty: "healthCheckGracePeriod", GoGetter: "HealthCheckGracePeriod"},
 			_jsii_.MemberProperty{JsiiProperty: "healthCheckGracePeriodInput", GoGetter: "HealthCheckGracePeriodInput"},
 			_jsii_.MemberProperty{JsiiProperty: "healthCheckType", GoGetter: "HealthCheckType"},
@@ -76,7 +84,9 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "minSizeInput", GoGetter: "MinSizeInput"},
 			_jsii_.MemberProperty{JsiiProperty: "mixedInstancesPolicy", GoGetter: "MixedInstancesPolicy"},
 			_jsii_.MemberProperty{JsiiProperty: "mixedInstancesPolicyInput", GoGetter: "MixedInstancesPolicyInput"},
+			_jsii_.MemberMethod{JsiiMethod: "moveFromId", GoMethod: "MoveFromId"},
 			_jsii_.MemberMethod{JsiiMethod: "moveTo", GoMethod: "MoveTo"},
+			_jsii_.MemberMethod{JsiiMethod: "moveToId", GoMethod: "MoveToId"},
 			_jsii_.MemberProperty{JsiiProperty: "newInstancesProtectedFromScaleIn", GoGetter: "NewInstancesProtectedFromScaleIn"},
 			_jsii_.MemberProperty{JsiiProperty: "newInstancesProtectedFromScaleInInput", GoGetter: "NewInstancesProtectedFromScaleInInput"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
@@ -89,6 +99,9 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "placementGroupInput", GoGetter: "PlacementGroupInput"},
 			_jsii_.MemberProperty{JsiiProperty: "provider", GoGetter: "Provider"},
 			_jsii_.MemberProperty{JsiiProperty: "provisioners", GoGetter: "Provisioners"},
+			_jsii_.MemberMethod{JsiiMethod: "putAvailabilityZoneDistribution", GoMethod: "PutAvailabilityZoneDistribution"},
+			_jsii_.MemberMethod{JsiiMethod: "putAvailabilityZoneImpairmentPolicy", GoMethod: "PutAvailabilityZoneImpairmentPolicy"},
+			_jsii_.MemberMethod{JsiiMethod: "putCapacityReservationSpecification", GoMethod: "PutCapacityReservationSpecification"},
 			_jsii_.MemberMethod{JsiiMethod: "putInstanceMaintenancePolicy", GoMethod: "PutInstanceMaintenancePolicy"},
 			_jsii_.MemberMethod{JsiiMethod: "putLaunchTemplate", GoMethod: "PutLaunchTemplate"},
 			_jsii_.MemberMethod{JsiiMethod: "putLifecycleHookSpecificationList", GoMethod: "PutLifecycleHookSpecificationList"},
@@ -97,10 +110,14 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "putNotificationConfiguration", GoMethod: "PutNotificationConfiguration"},
 			_jsii_.MemberMethod{JsiiMethod: "putNotificationConfigurations", GoMethod: "PutNotificationConfigurations"},
 			_jsii_.MemberMethod{JsiiMethod: "putTags", GoMethod: "PutTags"},
+			_jsii_.MemberMethod{JsiiMethod: "putTrafficSources", GoMethod: "PutTrafficSources"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAutoScalingGroupName", GoMethod: "ResetAutoScalingGroupName"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAvailabilityZoneDistribution", GoMethod: "ResetAvailabilityZoneDistribution"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAvailabilityZoneImpairmentPolicy", GoMethod: "ResetAvailabilityZoneImpairmentPolicy"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAvailabilityZones", GoMethod: "ResetAvailabilityZones"},
 			_jsii_.MemberMethod{JsiiMethod: "resetCapacityRebalance", GoMethod: "ResetCapacityRebalance"},
+			_jsii_.MemberMethod{JsiiMethod: "resetCapacityReservationSpecification", GoMethod: "ResetCapacityReservationSpecification"},
 			_jsii_.MemberMethod{JsiiMethod: "resetContext", GoMethod: "ResetContext"},
 			_jsii_.MemberMethod{JsiiMethod: "resetCooldown", GoMethod: "ResetCooldown"},
 			_jsii_.MemberMethod{JsiiMethod: "resetDefaultInstanceWarmup", GoMethod: "ResetDefaultInstanceWarmup"},
@@ -123,13 +140,18 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetPlacementGroup", GoMethod: "ResetPlacementGroup"},
 			_jsii_.MemberMethod{JsiiMethod: "resetServiceLinkedRoleArn", GoMethod: "ResetServiceLinkedRoleArn"},
+			_jsii_.MemberMethod{JsiiMethod: "resetSkipZonalShiftValidation", GoMethod: "ResetSkipZonalShiftValidation"},
 			_jsii_.MemberMethod{JsiiMethod: "resetTags", GoMethod: "ResetTags"},
 			_jsii_.MemberMethod{JsiiMethod: "resetTargetGroupArNs", GoMethod: "ResetTargetGroupArNs"},
 			_jsii_.MemberMethod{JsiiMethod: "resetTerminationPolicies", GoMethod: "ResetTerminationPolicies"},
+			_jsii_.MemberMethod{JsiiMethod: "resetTrafficSources", GoMethod: "ResetTrafficSources"},
 			_jsii_.MemberMethod{JsiiMethod: "resetVpcZoneIdentifier", GoMethod: "ResetVpcZoneIdentifier"},
 			_jsii_.MemberProperty{JsiiProperty: "serviceLinkedRoleArn", GoGetter: "ServiceLinkedRoleArn"},
 			_jsii_.MemberProperty{JsiiProperty: "serviceLinkedRoleArnInput", GoGetter: "ServiceLinkedRoleArnInput"},
+			_jsii_.MemberProperty{JsiiProperty: "skipZonalShiftValidation", GoGetter: "SkipZonalShiftValidation"},
+			_jsii_.MemberProperty{JsiiProperty: "skipZonalShiftValidationInput", GoGetter: "SkipZonalShiftValidationInput"},
 			_jsii_.MemberMethod{JsiiMethod: "synthesizeAttributes", GoMethod: "SynthesizeAttributes"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesizeHclAttributes", GoMethod: "SynthesizeHclAttributes"},
 			_jsii_.MemberProperty{JsiiProperty: "tags", GoGetter: "Tags"},
 			_jsii_.MemberProperty{JsiiProperty: "tagsInput", GoGetter: "TagsInput"},
 			_jsii_.MemberProperty{JsiiProperty: "targetGroupArNs", GoGetter: "TargetGroupArNs"},
@@ -139,15 +161,184 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "terraformGeneratorMetadata", GoGetter: "TerraformGeneratorMetadata"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformMetaArguments", GoGetter: "TerraformMetaArguments"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResourceType", GoGetter: "TerraformResourceType"},
+			_jsii_.MemberMethod{JsiiMethod: "toHclTerraform", GoMethod: "ToHclTerraform"},
 			_jsii_.MemberMethod{JsiiMethod: "toMetadata", GoMethod: "ToMetadata"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 			_jsii_.MemberMethod{JsiiMethod: "toTerraform", GoMethod: "ToTerraform"},
+			_jsii_.MemberProperty{JsiiProperty: "trafficSources", GoGetter: "TrafficSources"},
+			_jsii_.MemberProperty{JsiiProperty: "trafficSourcesInput", GoGetter: "TrafficSourcesInput"},
 			_jsii_.MemberProperty{JsiiProperty: "vpcZoneIdentifier", GoGetter: "VpcZoneIdentifier"},
 			_jsii_.MemberProperty{JsiiProperty: "vpcZoneIdentifierInput", GoGetter: "VpcZoneIdentifierInput"},
 		},
 		func() interface{} {
 			j := jsiiProxy_AutoscalingAutoScalingGroup{}
 			_jsii_.InitJsiiProxy(&j.Type__cdktfTerraformResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupAvailabilityZoneDistribution",
+		reflect.TypeOf((*AutoscalingAutoScalingGroupAvailabilityZoneDistribution)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupAvailabilityZoneDistributionOutputReference",
+		reflect.TypeOf((*AutoscalingAutoScalingGroupAvailabilityZoneDistributionOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "capacityDistributionStrategy", GoGetter: "CapacityDistributionStrategy"},
+			_jsii_.MemberProperty{JsiiProperty: "capacityDistributionStrategyInput", GoGetter: "CapacityDistributionStrategyInput"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "resetCapacityDistributionStrategy", GoMethod: "ResetCapacityDistributionStrategy"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AutoscalingAutoScalingGroupAvailabilityZoneDistributionOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupAvailabilityZoneImpairmentPolicy",
+		reflect.TypeOf((*AutoscalingAutoScalingGroupAvailabilityZoneImpairmentPolicy)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupAvailabilityZoneImpairmentPolicyOutputReference",
+		reflect.TypeOf((*AutoscalingAutoScalingGroupAvailabilityZoneImpairmentPolicyOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "impairedZoneHealthCheckBehavior", GoGetter: "ImpairedZoneHealthCheckBehavior"},
+			_jsii_.MemberProperty{JsiiProperty: "impairedZoneHealthCheckBehaviorInput", GoGetter: "ImpairedZoneHealthCheckBehaviorInput"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "resetImpairedZoneHealthCheckBehavior", GoMethod: "ResetImpairedZoneHealthCheckBehavior"},
+			_jsii_.MemberMethod{JsiiMethod: "resetZonalShiftEnabled", GoMethod: "ResetZonalShiftEnabled"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "zonalShiftEnabled", GoGetter: "ZonalShiftEnabled"},
+			_jsii_.MemberProperty{JsiiProperty: "zonalShiftEnabledInput", GoGetter: "ZonalShiftEnabledInput"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AutoscalingAutoScalingGroupAvailabilityZoneImpairmentPolicyOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupCapacityReservationSpecification",
+		reflect.TypeOf((*AutoscalingAutoScalingGroupCapacityReservationSpecification)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupCapacityReservationSpecificationCapacityReservationTarget",
+		reflect.TypeOf((*AutoscalingAutoScalingGroupCapacityReservationSpecificationCapacityReservationTarget)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupCapacityReservationSpecificationCapacityReservationTargetOutputReference",
+		reflect.TypeOf((*AutoscalingAutoScalingGroupCapacityReservationSpecificationCapacityReservationTargetOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "capacityReservationIds", GoGetter: "CapacityReservationIds"},
+			_jsii_.MemberProperty{JsiiProperty: "capacityReservationIdsInput", GoGetter: "CapacityReservationIdsInput"},
+			_jsii_.MemberProperty{JsiiProperty: "capacityReservationResourceGroupArns", GoGetter: "CapacityReservationResourceGroupArns"},
+			_jsii_.MemberProperty{JsiiProperty: "capacityReservationResourceGroupArnsInput", GoGetter: "CapacityReservationResourceGroupArnsInput"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "resetCapacityReservationIds", GoMethod: "ResetCapacityReservationIds"},
+			_jsii_.MemberMethod{JsiiMethod: "resetCapacityReservationResourceGroupArns", GoMethod: "ResetCapacityReservationResourceGroupArns"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AutoscalingAutoScalingGroupCapacityReservationSpecificationCapacityReservationTargetOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterClass(
+		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupCapacityReservationSpecificationOutputReference",
+		reflect.TypeOf((*AutoscalingAutoScalingGroupCapacityReservationSpecificationOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "capacityReservationPreference", GoGetter: "CapacityReservationPreference"},
+			_jsii_.MemberProperty{JsiiProperty: "capacityReservationPreferenceInput", GoGetter: "CapacityReservationPreferenceInput"},
+			_jsii_.MemberProperty{JsiiProperty: "capacityReservationTarget", GoGetter: "CapacityReservationTarget"},
+			_jsii_.MemberProperty{JsiiProperty: "capacityReservationTargetInput", GoGetter: "CapacityReservationTargetInput"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "putCapacityReservationTarget", GoMethod: "PutCapacityReservationTarget"},
+			_jsii_.MemberMethod{JsiiMethod: "resetCapacityReservationPreference", GoMethod: "ResetCapacityReservationPreference"},
+			_jsii_.MemberMethod{JsiiMethod: "resetCapacityReservationTarget", GoMethod: "ResetCapacityReservationTarget"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AutoscalingAutoScalingGroupCapacityReservationSpecificationOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
 			return &j
 		},
 	)
@@ -228,6 +419,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "launchTemplateNameInput", GoGetter: "LaunchTemplateNameInput"},
 			_jsii_.MemberMethod{JsiiMethod: "resetLaunchTemplateId", GoMethod: "ResetLaunchTemplateId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetLaunchTemplateName", GoMethod: "ResetLaunchTemplateName"},
+			_jsii_.MemberMethod{JsiiMethod: "resetVersion", GoMethod: "ResetVersion"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
@@ -249,6 +441,7 @@ func init() {
 		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupLifecycleHookSpecificationListStructList",
 		reflect.TypeOf((*AutoscalingAutoScalingGroupLifecycleHookSpecificationListStructList)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -301,6 +494,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "notificationTargetArnInput", GoGetter: "NotificationTargetArnInput"},
 			_jsii_.MemberMethod{JsiiMethod: "resetDefaultResult", GoMethod: "ResetDefaultResult"},
 			_jsii_.MemberMethod{JsiiMethod: "resetHeartbeatTimeout", GoMethod: "ResetHeartbeatTimeout"},
+			_jsii_.MemberMethod{JsiiMethod: "resetLifecycleHookName", GoMethod: "ResetLifecycleHookName"},
+			_jsii_.MemberMethod{JsiiMethod: "resetLifecycleTransition", GoMethod: "ResetLifecycleTransition"},
 			_jsii_.MemberMethod{JsiiMethod: "resetNotificationMetadata", GoMethod: "ResetNotificationMetadata"},
 			_jsii_.MemberMethod{JsiiMethod: "resetNotificationTargetArn", GoMethod: "ResetNotificationTargetArn"},
 			_jsii_.MemberMethod{JsiiMethod: "resetRoleArn", GoMethod: "ResetRoleArn"},
@@ -325,6 +520,7 @@ func init() {
 		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupMetricsCollectionList",
 		reflect.TypeOf((*AutoscalingAutoScalingGroupMetricsCollectionList)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -367,6 +563,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "metrics", GoGetter: "Metrics"},
 			_jsii_.MemberProperty{JsiiProperty: "metricsInput", GoGetter: "MetricsInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetGranularity", GoMethod: "ResetGranularity"},
 			_jsii_.MemberMethod{JsiiMethod: "resetMetrics", GoMethod: "ResetMetrics"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
@@ -472,6 +669,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "launchTemplateNameInput", GoGetter: "LaunchTemplateNameInput"},
 			_jsii_.MemberMethod{JsiiMethod: "resetLaunchTemplateId", GoMethod: "ResetLaunchTemplateId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetLaunchTemplateName", GoMethod: "ResetLaunchTemplateName"},
+			_jsii_.MemberMethod{JsiiMethod: "resetVersion", GoMethod: "ResetVersion"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
@@ -512,6 +710,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "overridesInput", GoGetter: "OverridesInput"},
 			_jsii_.MemberMethod{JsiiMethod: "putLaunchTemplateSpecification", GoMethod: "PutLaunchTemplateSpecification"},
 			_jsii_.MemberMethod{JsiiMethod: "putOverrides", GoMethod: "PutOverrides"},
+			_jsii_.MemberMethod{JsiiMethod: "resetLaunchTemplateSpecification", GoMethod: "ResetLaunchTemplateSpecification"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrides", GoMethod: "ResetOverrides"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
@@ -654,6 +853,147 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselineEbsBandwidthMbpsOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactors",
+		reflect.TypeOf((*AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactors)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsCpu",
+		reflect.TypeOf((*AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsCpu)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsCpuOutputReference",
+		reflect.TypeOf((*AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsCpuOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "putReferences", GoMethod: "PutReferences"},
+			_jsii_.MemberProperty{JsiiProperty: "references", GoGetter: "References"},
+			_jsii_.MemberProperty{JsiiProperty: "referencesInput", GoGetter: "ReferencesInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetReferences", GoMethod: "ResetReferences"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsCpuOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsCpuReferences",
+		reflect.TypeOf((*AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsCpuReferences)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsCpuReferencesList",
+		reflect.TypeOf((*AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsCpuReferencesList)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "get", GoMethod: "Get"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "wrapsSet", GoGetter: "WrapsSet"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsCpuReferencesList{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexList)
+			return &j
+		},
+	)
+	_jsii_.RegisterClass(
+		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsCpuReferencesOutputReference",
+		reflect.TypeOf((*AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsCpuReferencesOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "instanceFamily", GoGetter: "InstanceFamily"},
+			_jsii_.MemberProperty{JsiiProperty: "instanceFamilyInput", GoGetter: "InstanceFamilyInput"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "resetInstanceFamily", GoMethod: "ResetInstanceFamily"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsCpuReferencesOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterClass(
+		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsOutputReference",
+		reflect.TypeOf((*AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "cpu", GoGetter: "Cpu"},
+			_jsii_.MemberProperty{JsiiProperty: "cpuInput", GoGetter: "CpuInput"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "putCpu", GoMethod: "PutCpu"},
+			_jsii_.MemberMethod{JsiiMethod: "resetCpu", GoMethod: "ResetCpu"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsOutputReference{}
 			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
 			return &j
 		},
@@ -846,6 +1186,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "bareMetalInput", GoGetter: "BareMetalInput"},
 			_jsii_.MemberProperty{JsiiProperty: "baselineEbsBandwidthMbps", GoGetter: "BaselineEbsBandwidthMbps"},
 			_jsii_.MemberProperty{JsiiProperty: "baselineEbsBandwidthMbpsInput", GoGetter: "BaselineEbsBandwidthMbpsInput"},
+			_jsii_.MemberProperty{JsiiProperty: "baselinePerformanceFactors", GoGetter: "BaselinePerformanceFactors"},
+			_jsii_.MemberProperty{JsiiProperty: "baselinePerformanceFactorsInput", GoGetter: "BaselinePerformanceFactorsInput"},
 			_jsii_.MemberProperty{JsiiProperty: "burstablePerformance", GoGetter: "BurstablePerformance"},
 			_jsii_.MemberProperty{JsiiProperty: "burstablePerformanceInput", GoGetter: "BurstablePerformanceInput"},
 			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
@@ -890,6 +1232,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "putAcceleratorCount", GoMethod: "PutAcceleratorCount"},
 			_jsii_.MemberMethod{JsiiMethod: "putAcceleratorTotalMemoryMiB", GoMethod: "PutAcceleratorTotalMemoryMiB"},
 			_jsii_.MemberMethod{JsiiMethod: "putBaselineEbsBandwidthMbps", GoMethod: "PutBaselineEbsBandwidthMbps"},
+			_jsii_.MemberMethod{JsiiMethod: "putBaselinePerformanceFactors", GoMethod: "PutBaselinePerformanceFactors"},
 			_jsii_.MemberMethod{JsiiMethod: "putMemoryGiBPerVCpu", GoMethod: "PutMemoryGiBPerVCpu"},
 			_jsii_.MemberMethod{JsiiMethod: "putMemoryMiB", GoMethod: "PutMemoryMiB"},
 			_jsii_.MemberMethod{JsiiMethod: "putNetworkBandwidthGbps", GoMethod: "PutNetworkBandwidthGbps"},
@@ -906,6 +1249,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetAllowedInstanceTypes", GoMethod: "ResetAllowedInstanceTypes"},
 			_jsii_.MemberMethod{JsiiMethod: "resetBareMetal", GoMethod: "ResetBareMetal"},
 			_jsii_.MemberMethod{JsiiMethod: "resetBaselineEbsBandwidthMbps", GoMethod: "ResetBaselineEbsBandwidthMbps"},
+			_jsii_.MemberMethod{JsiiMethod: "resetBaselinePerformanceFactors", GoMethod: "ResetBaselinePerformanceFactors"},
 			_jsii_.MemberMethod{JsiiMethod: "resetBurstablePerformance", GoMethod: "ResetBurstablePerformance"},
 			_jsii_.MemberMethod{JsiiMethod: "resetCpuManufacturers", GoMethod: "ResetCpuManufacturers"},
 			_jsii_.MemberMethod{JsiiMethod: "resetExcludedInstanceTypes", GoMethod: "ResetExcludedInstanceTypes"},
@@ -914,12 +1258,14 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetLocalStorageTypes", GoMethod: "ResetLocalStorageTypes"},
 			_jsii_.MemberMethod{JsiiMethod: "resetMaxSpotPriceAsPercentageOfOptimalOnDemandPrice", GoMethod: "ResetMaxSpotPriceAsPercentageOfOptimalOnDemandPrice"},
 			_jsii_.MemberMethod{JsiiMethod: "resetMemoryGiBPerVCpu", GoMethod: "ResetMemoryGiBPerVCpu"},
+			_jsii_.MemberMethod{JsiiMethod: "resetMemoryMiB", GoMethod: "ResetMemoryMiB"},
 			_jsii_.MemberMethod{JsiiMethod: "resetNetworkBandwidthGbps", GoMethod: "ResetNetworkBandwidthGbps"},
 			_jsii_.MemberMethod{JsiiMethod: "resetNetworkInterfaceCount", GoMethod: "ResetNetworkInterfaceCount"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOnDemandMaxPricePercentageOverLowestPrice", GoMethod: "ResetOnDemandMaxPricePercentageOverLowestPrice"},
 			_jsii_.MemberMethod{JsiiMethod: "resetRequireHibernateSupport", GoMethod: "ResetRequireHibernateSupport"},
 			_jsii_.MemberMethod{JsiiMethod: "resetSpotMaxPricePercentageOverLowestPrice", GoMethod: "ResetSpotMaxPricePercentageOverLowestPrice"},
 			_jsii_.MemberMethod{JsiiMethod: "resetTotalLocalStorageGb", GoMethod: "ResetTotalLocalStorageGb"},
+			_jsii_.MemberMethod{JsiiMethod: "resetVCpuCount", GoMethod: "ResetVCpuCount"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "spotMaxPricePercentageOverLowestPrice", GoGetter: "SpotMaxPricePercentageOverLowestPrice"},
 			_jsii_.MemberProperty{JsiiProperty: "spotMaxPricePercentageOverLowestPriceInput", GoGetter: "SpotMaxPricePercentageOverLowestPriceInput"},
@@ -1052,6 +1398,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "launchTemplateNameInput", GoGetter: "LaunchTemplateNameInput"},
 			_jsii_.MemberMethod{JsiiMethod: "resetLaunchTemplateId", GoMethod: "ResetLaunchTemplateId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetLaunchTemplateName", GoMethod: "ResetLaunchTemplateName"},
+			_jsii_.MemberMethod{JsiiMethod: "resetVersion", GoMethod: "ResetVersion"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
@@ -1069,6 +1416,7 @@ func init() {
 		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesList",
 		reflect.TypeOf((*AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesList)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1160,6 +1508,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "putInstancesDistribution", GoMethod: "PutInstancesDistribution"},
 			_jsii_.MemberMethod{JsiiMethod: "putLaunchTemplate", GoMethod: "PutLaunchTemplate"},
 			_jsii_.MemberMethod{JsiiMethod: "resetInstancesDistribution", GoMethod: "ResetInstancesDistribution"},
+			_jsii_.MemberMethod{JsiiMethod: "resetLaunchTemplate", GoMethod: "ResetLaunchTemplate"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
@@ -1199,6 +1548,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "notificationTypes", GoGetter: "NotificationTypes"},
 			_jsii_.MemberProperty{JsiiProperty: "notificationTypesInput", GoGetter: "NotificationTypesInput"},
 			_jsii_.MemberMethod{JsiiMethod: "resetNotificationTypes", GoMethod: "ResetNotificationTypes"},
+			_jsii_.MemberMethod{JsiiMethod: "resetTopicArn", GoMethod: "ResetTopicArn"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
@@ -1220,6 +1570,7 @@ func init() {
 		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupNotificationConfigurationsList",
 		reflect.TypeOf((*AutoscalingAutoScalingGroupNotificationConfigurationsList)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1261,6 +1612,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "notificationTypes", GoGetter: "NotificationTypes"},
 			_jsii_.MemberProperty{JsiiProperty: "notificationTypesInput", GoGetter: "NotificationTypesInput"},
 			_jsii_.MemberMethod{JsiiMethod: "resetNotificationTypes", GoMethod: "ResetNotificationTypes"},
+			_jsii_.MemberMethod{JsiiMethod: "resetTopicArn", GoMethod: "ResetTopicArn"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
@@ -1282,6 +1634,7 @@ func init() {
 		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupTagsList",
 		reflect.TypeOf((*AutoscalingAutoScalingGroupTagsList)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
@@ -1324,6 +1677,9 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "keyInput", GoGetter: "KeyInput"},
 			_jsii_.MemberProperty{JsiiProperty: "propagateAtLaunch", GoGetter: "PropagateAtLaunch"},
 			_jsii_.MemberProperty{JsiiProperty: "propagateAtLaunchInput", GoGetter: "PropagateAtLaunchInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetKey", GoMethod: "ResetKey"},
+			_jsii_.MemberMethod{JsiiMethod: "resetPropagateAtLaunch", GoMethod: "ResetPropagateAtLaunch"},
+			_jsii_.MemberMethod{JsiiMethod: "resetValue", GoMethod: "ResetValue"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
@@ -1333,6 +1689,70 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_AutoscalingAutoScalingGroupTagsOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupTrafficSources",
+		reflect.TypeOf((*AutoscalingAutoScalingGroupTrafficSources)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupTrafficSourcesList",
+		reflect.TypeOf((*AutoscalingAutoScalingGroupTrafficSourcesList)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "allWithMapKey", GoMethod: "AllWithMapKey"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "get", GoMethod: "Get"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "wrapsSet", GoGetter: "WrapsSet"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AutoscalingAutoScalingGroupTrafficSourcesList{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexList)
+			return &j
+		},
+	)
+	_jsii_.RegisterClass(
+		"awscc.autoscalingAutoScalingGroup.AutoscalingAutoScalingGroupTrafficSourcesOutputReference",
+		reflect.TypeOf((*AutoscalingAutoScalingGroupTrafficSourcesOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "identifier", GoGetter: "Identifier"},
+			_jsii_.MemberProperty{JsiiProperty: "identifierInput", GoGetter: "IdentifierInput"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "resetIdentifier", GoMethod: "ResetIdentifier"},
+			_jsii_.MemberMethod{JsiiMethod: "resetType", GoMethod: "ResetType"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "type", GoGetter: "Type"},
+			_jsii_.MemberProperty{JsiiProperty: "typeInput", GoGetter: "TypeInput"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AutoscalingAutoScalingGroupTrafficSourcesOutputReference{}
 			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
 			return &j
 		},

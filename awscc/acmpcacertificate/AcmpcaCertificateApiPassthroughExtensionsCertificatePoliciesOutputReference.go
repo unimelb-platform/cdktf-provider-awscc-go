@@ -67,6 +67,7 @@ type AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesOutputReference
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutPolicyQualifiers(value interface{})
+	ResetCertPolicyId()
 	ResetPolicyQualifiers()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -481,6 +482,14 @@ func (a *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesO
 		a,
 		"putPolicyQualifiers",
 		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesOutputReference) ResetCertPolicyId() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetCertPolicyId",
+		nil, // no parameters
 	)
 }
 

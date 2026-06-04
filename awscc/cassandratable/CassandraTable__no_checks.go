@@ -56,7 +56,15 @@ func (c *jsiiProxy_CassandraTable) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
+func (c *jsiiProxy_CassandraTable) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CassandraTable) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_CassandraTable) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -69,6 +77,10 @@ func (c *jsiiProxy_CassandraTable) validatePutAutoScalingSpecificationsParameter
 }
 
 func (c *jsiiProxy_CassandraTable) validatePutBillingModeParameters(value *CassandraTableBillingMode) error {
+	return nil
+}
+
+func (c *jsiiProxy_CassandraTable) validatePutCdcSpecificationParameters(value *CassandraTableCdcSpecification) error {
 	return nil
 }
 

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/elasticloadbalancingv2loadbalancer/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/elasticloadbalancingv2_load_balancer awscc_elasticloadbalancingv2_load_balancer}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/elasticloadbalancingv2_load_balancer awscc_elasticloadbalancingv2_load_balancer}.
 type Elasticloadbalancingv2LoadBalancer interface {
 	cdktf.TerraformResource
 	CanonicalHostedZoneId() *string
@@ -30,6 +30,9 @@ type Elasticloadbalancingv2LoadBalancer interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	DnsName() *string
+	EnablePrefixForIpv6SourceNat() *string
+	SetEnablePrefixForIpv6SourceNat(val *string)
+	EnablePrefixForIpv6SourceNatInput() *string
 	EnforceSecurityGroupInboundRulesOnPrivateLinkTraffic() *string
 	SetEnforceSecurityGroupInboundRulesOnPrivateLinkTraffic(val *string)
 	EnforceSecurityGroupInboundRulesOnPrivateLinkTrafficInput() *string
@@ -45,6 +48,9 @@ type Elasticloadbalancingv2LoadBalancer interface {
 	IpAddressType() *string
 	SetIpAddressType(val *string)
 	IpAddressTypeInput() *string
+	Ipv4IpamPoolId() *string
+	SetIpv4IpamPoolId(val *string)
+	Ipv4IpamPoolIdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -54,6 +60,8 @@ type Elasticloadbalancingv2LoadBalancer interface {
 	LoadBalancerAttributesInput() interface{}
 	LoadBalancerFullName() *string
 	LoadBalancerName() *string
+	MinimumLoadBalancerCapacity() Elasticloadbalancingv2LoadBalancerMinimumLoadBalancerCapacityOutputReference
+	MinimumLoadBalancerCapacityInput() interface{}
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -115,21 +123,35 @@ type Elasticloadbalancingv2LoadBalancer interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutLoadBalancerAttributes(value interface{})
+	PutMinimumLoadBalancerCapacity(value *Elasticloadbalancingv2LoadBalancerMinimumLoadBalancerCapacity)
 	PutSubnetMappings(value interface{})
 	PutTags(value interface{})
+	ResetEnablePrefixForIpv6SourceNat()
 	ResetEnforceSecurityGroupInboundRulesOnPrivateLinkTraffic()
 	ResetIpAddressType()
+	ResetIpv4IpamPoolId()
 	ResetLoadBalancerAttributes()
+	ResetMinimumLoadBalancerCapacity()
 	ResetName()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -141,6 +163,9 @@ type Elasticloadbalancingv2LoadBalancer interface {
 	ResetTags()
 	ResetType()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -220,6 +245,26 @@ func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) DnsName() *string {
 	_jsii_.Get(
 		j,
 		"dnsName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) EnablePrefixForIpv6SourceNat() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"enablePrefixForIpv6SourceNat",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) EnablePrefixForIpv6SourceNatInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"enablePrefixForIpv6SourceNatInput",
 		&returns,
 	)
 	return returns
@@ -305,6 +350,26 @@ func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) IpAddressTypeInput() *str
 	return returns
 }
 
+func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) Ipv4IpamPoolId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipv4IpamPoolId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) Ipv4IpamPoolIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipv4IpamPoolIdInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -360,6 +425,26 @@ func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) LoadBalancerName() *strin
 	_jsii_.Get(
 		j,
 		"loadBalancerName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) MinimumLoadBalancerCapacity() Elasticloadbalancingv2LoadBalancerMinimumLoadBalancerCapacityOutputReference {
+	var returns Elasticloadbalancingv2LoadBalancerMinimumLoadBalancerCapacityOutputReference
+	_jsii_.Get(
+		j,
+		"minimumLoadBalancerCapacity",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) MinimumLoadBalancerCapacityInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"minimumLoadBalancerCapacityInput",
 		&returns,
 	)
 	return returns
@@ -576,7 +661,7 @@ func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer) TypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/elasticloadbalancingv2_load_balancer awscc_elasticloadbalancingv2_load_balancer} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/elasticloadbalancingv2_load_balancer awscc_elasticloadbalancingv2_load_balancer} Resource.
 func NewElasticloadbalancingv2LoadBalancer(scope constructs.Construct, id *string, config *Elasticloadbalancingv2LoadBalancerConfig) Elasticloadbalancingv2LoadBalancer {
 	_init_.Initialize()
 
@@ -594,7 +679,7 @@ func NewElasticloadbalancingv2LoadBalancer(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/elasticloadbalancingv2_load_balancer awscc_elasticloadbalancingv2_load_balancer} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/elasticloadbalancingv2_load_balancer awscc_elasticloadbalancingv2_load_balancer} Resource.
 func NewElasticloadbalancingv2LoadBalancer_Override(e Elasticloadbalancingv2LoadBalancer, scope constructs.Construct, id *string, config *Elasticloadbalancingv2LoadBalancerConfig) {
 	_init_.Initialize()
 
@@ -635,6 +720,17 @@ func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer)SetDependsOn(val *[]*strin
 	)
 }
 
+func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer)SetEnablePrefixForIpv6SourceNat(val *string) {
+	if err := j.validateSetEnablePrefixForIpv6SourceNatParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enablePrefixForIpv6SourceNat",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer)SetEnforceSecurityGroupInboundRulesOnPrivateLinkTraffic(val *string) {
 	if err := j.validateSetEnforceSecurityGroupInboundRulesOnPrivateLinkTrafficParameters(val); err != nil {
 		panic(err)
@@ -661,6 +757,17 @@ func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer)SetIpAddressType(val *stri
 	_jsii_.Set(
 		j,
 		"ipAddressType",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Elasticloadbalancingv2LoadBalancer)SetIpv4IpamPoolId(val *string) {
+	if err := j.validateSetIpv4IpamPoolIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ipv4IpamPoolId",
 		val,
 	)
 }
@@ -1019,6 +1126,19 @@ func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) GetStringMapAttribute(ter
 	return returns
 }
 
+func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1046,6 +1166,17 @@ func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) InterpolationForAttribute
 	return returns
 }
 
+func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1054,6 +1185,17 @@ func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) MoveTo(moveTarget *string
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1075,6 +1217,17 @@ func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) PutLoadBalancerAttributes
 	_jsii_.InvokeVoid(
 		e,
 		"putLoadBalancerAttributes",
+		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) PutMinimumLoadBalancerCapacity(value *Elasticloadbalancingv2LoadBalancerMinimumLoadBalancerCapacity) {
+	if err := e.validatePutMinimumLoadBalancerCapacityParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putMinimumLoadBalancerCapacity",
 		[]interface{}{value},
 	)
 }
@@ -1101,6 +1254,14 @@ func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) PutTags(value interface{}
 	)
 }
 
+func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) ResetEnablePrefixForIpv6SourceNat() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetEnablePrefixForIpv6SourceNat",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) ResetEnforceSecurityGroupInboundRulesOnPrivateLinkTraffic() {
 	_jsii_.InvokeVoid(
 		e,
@@ -1117,10 +1278,26 @@ func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) ResetIpAddressType() {
 	)
 }
 
+func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) ResetIpv4IpamPoolId() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetIpv4IpamPoolId",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) ResetLoadBalancerAttributes() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetLoadBalancerAttributes",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) ResetMinimumLoadBalancerCapacity() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetMinimumLoadBalancerCapacity",
 		nil, // no parameters
 	)
 }
@@ -1195,6 +1372,32 @@ func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Elasticloadbalancingv2LoadBalancer) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

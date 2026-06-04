@@ -72,6 +72,7 @@ type CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorPro
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetEnableDynamicFieldUpdate()
 	ResetIncludeDeletedRecords()
+	ResetObject()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSour
 	_jsii_.InvokeVoid(
 		c,
 		"resetIncludeDeletedRecords",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorPropertiesSalesforceOutputReference) ResetObject() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetObject",
 		nil, // no parameters
 	)
 }

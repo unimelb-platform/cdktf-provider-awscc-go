@@ -32,10 +32,10 @@ type AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS
 	FileTypeInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfig
-	SetInternalValue(val *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfig)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	PrefixConfig() AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfigOutputReference
-	PrefixConfigInput() *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfig
+	PrefixConfigInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -72,6 +72,7 @@ type AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS
 	PutPrefixConfig(value *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfig)
 	ResetAggregationConfig()
 	ResetFileType()
+	ResetPrefixConfig()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -167,8 +168,8 @@ func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPrope
 	return returns
 }
 
-func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigOutputReference) InternalValue() *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfig {
-	var returns *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfig
+func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -187,8 +188,8 @@ func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPrope
 	return returns
 }
 
-func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigOutputReference) PrefixConfigInput() *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfig {
-	var returns *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfig
+func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigOutputReference) PrefixConfigInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"prefixConfigInput",
@@ -278,7 +279,7 @@ func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPrope
 	)
 }
 
-func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigOutputReference)SetInternalValue(val *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfig) {
+func (j *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -531,6 +532,14 @@ func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPrope
 	_jsii_.InvokeVoid(
 		a,
 		"resetFileType",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesUpsolverS3OutputFormatConfigOutputReference) ResetPrefixConfig() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetPrefixConfig",
 		nil, // no parameters
 	)
 }

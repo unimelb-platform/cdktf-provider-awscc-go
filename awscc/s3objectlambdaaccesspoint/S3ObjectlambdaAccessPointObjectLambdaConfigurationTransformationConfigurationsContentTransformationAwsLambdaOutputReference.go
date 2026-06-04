@@ -67,6 +67,7 @@ type S3ObjectlambdaAccessPointObjectLambdaConfigurationTransformationConfigurati
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetFunctionArn()
 	ResetFunctionPayload()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (s *jsiiProxy_S3ObjectlambdaAccessPointObjectLambdaConfigurationTransformat
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_S3ObjectlambdaAccessPointObjectLambdaConfigurationTransformationConfigurationsContentTransformationAwsLambdaOutputReference) ResetFunctionArn() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetFunctionArn",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_S3ObjectlambdaAccessPointObjectLambdaConfigurationTransformationConfigurationsContentTransformationAwsLambdaOutputReference) ResetFunctionPayload() {

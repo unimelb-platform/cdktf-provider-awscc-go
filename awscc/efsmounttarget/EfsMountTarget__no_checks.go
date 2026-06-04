@@ -56,7 +56,15 @@ func (e *jsiiProxy_EfsMountTarget) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
+func (e *jsiiProxy_EfsMountTarget) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_EfsMountTarget) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_EfsMountTarget) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -93,6 +101,14 @@ func (j *jsiiProxy_EfsMountTarget) validateSetFileSystemIdParameters(val *string
 }
 
 func (j *jsiiProxy_EfsMountTarget) validateSetIpAddressParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_EfsMountTarget) validateSetIpAddressTypeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_EfsMountTarget) validateSetIpv6AddressParameters(val *string) error {
 	return nil
 }
 

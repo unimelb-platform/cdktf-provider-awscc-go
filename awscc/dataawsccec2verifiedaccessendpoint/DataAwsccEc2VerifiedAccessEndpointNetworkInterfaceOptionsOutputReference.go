@@ -31,6 +31,7 @@ type DataAwsccEc2VerifiedAccessEndpointNetworkInterfaceOptionsOutputReference in
 	SetInternalValue(val *DataAwsccEc2VerifiedAccessEndpointNetworkInterfaceOptions)
 	NetworkInterfaceId() *string
 	Port() *float64
+	PortRanges() DataAwsccEc2VerifiedAccessEndpointNetworkInterfaceOptionsPortRangesList
 	Protocol() *string
 	// Experimental.
 	TerraformAttribute() *string
@@ -144,6 +145,16 @@ func (j *jsiiProxy_DataAwsccEc2VerifiedAccessEndpointNetworkInterfaceOptionsOutp
 	_jsii_.Get(
 		j,
 		"port",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2VerifiedAccessEndpointNetworkInterfaceOptionsOutputReference) PortRanges() DataAwsccEc2VerifiedAccessEndpointNetworkInterfaceOptionsPortRangesList {
+	var returns DataAwsccEc2VerifiedAccessEndpointNetworkInterfaceOptionsPortRangesList
+	_jsii_.Get(
+		j,
+		"portRanges",
 		&returns,
 	)
 	return returns

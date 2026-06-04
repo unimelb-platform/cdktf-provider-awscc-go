@@ -27,8 +27,8 @@ type SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncident
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfiguration
-	SetInternalValue(val *SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfiguration)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	ServiceId() *string
 	SetServiceId(val *string)
 	ServiceIdInput() *string
@@ -64,6 +64,7 @@ type SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncident
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetServiceId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -119,8 +120,8 @@ func (j *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPag
 	return returns
 }
 
-func (j *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfigurationOutputReference) InternalValue() *SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfiguration {
-	var returns *SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfiguration
+func (j *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfigurationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -219,7 +220,7 @@ func (j *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPag
 	)
 }
 
-func (j *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfigurationOutputReference)SetInternalValue(val *SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfiguration) {
+func (j *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfigurationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPag
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfigurationOutputReference) ResetServiceId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetServiceId",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

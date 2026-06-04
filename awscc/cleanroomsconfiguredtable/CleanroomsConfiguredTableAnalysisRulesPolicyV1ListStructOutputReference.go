@@ -10,6 +10,9 @@ import (
 
 type CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference interface {
 	cdktf.ComplexObject
+	AdditionalAnalyses() *string
+	SetAdditionalAnalyses(val *string)
+	AdditionalAnalysesInput() *string
 	AllowedJoinOperators() *[]*string
 	SetAllowedJoinOperators(val *[]*string)
 	AllowedJoinOperatorsInput() *[]*string
@@ -70,7 +73,10 @@ type CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference int
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAdditionalAnalyses()
 	ResetAllowedJoinOperators()
+	ResetJoinColumns()
+	ResetListColumns()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -84,6 +90,26 @@ type CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference int
 // The jsii proxy struct for CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference
 type jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference) AdditionalAnalyses() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"additionalAnalyses",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference) AdditionalAnalysesInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"additionalAnalysesInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference) AllowedJoinOperators() *[]*string {
@@ -241,6 +267,17 @@ func NewCleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference_
 		"awscc.cleanroomsConfiguredTable.CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference",
 		[]interface{}{terraformResource, terraformAttribute},
 		c,
+	)
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference)SetAdditionalAnalyses(val *string) {
+	if err := j.validateSetAdditionalAnalysesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"additionalAnalyses",
+		val,
 	)
 }
 
@@ -518,10 +555,34 @@ func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutpu
 	return returns
 }
 
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference) ResetAdditionalAnalyses() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAdditionalAnalyses",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference) ResetAllowedJoinOperators() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetAllowedJoinOperators",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference) ResetJoinColumns() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetJoinColumns",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference) ResetListColumns() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetListColumns",
 		nil, // no parameters
 	)
 }

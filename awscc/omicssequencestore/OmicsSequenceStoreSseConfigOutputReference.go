@@ -68,6 +68,7 @@ type OmicsSequenceStoreSseConfigOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetKeyArn()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (o *jsiiProxy_OmicsSequenceStoreSseConfigOutputReference) ResetKeyArn() {
 	_jsii_.InvokeVoid(
 		o,
 		"resetKeyArn",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OmicsSequenceStoreSseConfigOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetType",
 		nil, // no parameters
 	)
 }

@@ -73,6 +73,7 @@ type RumAppMonitorAppMonitorConfigurationMetricDestinationsOutputReference inter
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMetricDefinitions(value interface{})
+	ResetDestination()
 	ResetDestinationArn()
 	ResetIamRoleArn()
 	ResetMetricDefinitions()
@@ -551,6 +552,14 @@ func (r *jsiiProxy_RumAppMonitorAppMonitorConfigurationMetricDestinationsOutputR
 		r,
 		"putMetricDefinitions",
 		[]interface{}{value},
+	)
+}
+
+func (r *jsiiProxy_RumAppMonitorAppMonitorConfigurationMetricDestinationsOutputReference) ResetDestination() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetDestination",
+		nil, // no parameters
 	)
 }
 

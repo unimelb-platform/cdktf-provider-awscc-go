@@ -56,7 +56,15 @@ func (r *jsiiProxy_Resourceexplorer2DefaultViewAssociation) validateInterpolatio
 	return nil
 }
 
+func (r *jsiiProxy_Resourceexplorer2DefaultViewAssociation) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_Resourceexplorer2DefaultViewAssociation) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (r *jsiiProxy_Resourceexplorer2DefaultViewAssociation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -60,7 +60,7 @@ func (j *jsiiProxy_EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeightsOu
 	return nil
 }
 
-func (j *jsiiProxy_EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeightsOutputReference) validateSetInternalValueParameters(val *EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeights) error {
+func (j *jsiiProxy_EvidentlyLaunchScheduledSplitsConfigSegmentOverridesWeightsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

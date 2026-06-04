@@ -30,6 +30,7 @@ type DataAwsccDynamodbTablePointInTimeRecoverySpecificationOutputReference inter
 	InternalValue() *DataAwsccDynamodbTablePointInTimeRecoverySpecification
 	SetInternalValue(val *DataAwsccDynamodbTablePointInTimeRecoverySpecification)
 	PointInTimeRecoveryEnabled() cdktf.IResolvable
+	RecoveryPeriodInDays() *float64
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -132,6 +133,16 @@ func (j *jsiiProxy_DataAwsccDynamodbTablePointInTimeRecoverySpecificationOutputR
 	_jsii_.Get(
 		j,
 		"pointInTimeRecoveryEnabled",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDynamodbTablePointInTimeRecoverySpecificationOutputReference) RecoveryPeriodInDays() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"recoveryPeriodInDays",
 		&returns,
 	)
 	return returns

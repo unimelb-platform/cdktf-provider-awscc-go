@@ -56,7 +56,15 @@ func (e *jsiiProxy_Ec2IpamResourceDiscovery) validateInterpolationForAttributePa
 	return nil
 }
 
+func (e *jsiiProxy_Ec2IpamResourceDiscovery) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2IpamResourceDiscovery) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2IpamResourceDiscovery) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -65,6 +73,10 @@ func (e *jsiiProxy_Ec2IpamResourceDiscovery) validateOverrideLogicalIdParameters
 }
 
 func (e *jsiiProxy_Ec2IpamResourceDiscovery) validatePutOperatingRegionsParameters(value interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2IpamResourceDiscovery) validatePutOrganizationalUnitExclusionsParameters(value interface{}) error {
 	return nil
 }
 

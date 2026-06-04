@@ -71,6 +71,7 @@ type Elasticloadbalancingv2TargetGroupTargetsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetAvailabilityZone()
+	ResetId()
 	ResetPort()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -523,6 +524,14 @@ func (e *jsiiProxy_Elasticloadbalancingv2TargetGroupTargetsOutputReference) Rese
 	_jsii_.InvokeVoid(
 		e,
 		"resetAvailabilityZone",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Elasticloadbalancingv2TargetGroupTargetsOutputReference) ResetId() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetId",
 		nil, // no parameters
 	)
 }

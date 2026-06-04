@@ -71,6 +71,7 @@ type SagemakerDeviceDeviceOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetDescription()
+	ResetDeviceName()
 	ResetIotThingName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -523,6 +524,14 @@ func (s *jsiiProxy_SagemakerDeviceDeviceOutputReference) ResetDescription() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerDeviceDeviceOutputReference) ResetDeviceName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDeviceName",
 		nil, // no parameters
 	)
 }

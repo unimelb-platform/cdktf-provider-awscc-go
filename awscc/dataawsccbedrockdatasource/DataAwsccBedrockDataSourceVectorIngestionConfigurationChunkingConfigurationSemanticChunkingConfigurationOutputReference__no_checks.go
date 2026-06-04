@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawsccbedrockdatasource
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateSetInternalValueParameters(val *DataAwsccBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfiguration) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccBedrockDataSourceVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfigurationOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

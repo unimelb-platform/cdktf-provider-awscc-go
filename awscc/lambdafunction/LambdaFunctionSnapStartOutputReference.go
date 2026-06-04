@@ -64,6 +64,7 @@ type LambdaFunctionSnapStartOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetApplyOn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (l *jsiiProxy_LambdaFunctionSnapStartOutputReference) InterpolationForAttri
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LambdaFunctionSnapStartOutputReference) ResetApplyOn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetApplyOn",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LambdaFunctionSnapStartOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

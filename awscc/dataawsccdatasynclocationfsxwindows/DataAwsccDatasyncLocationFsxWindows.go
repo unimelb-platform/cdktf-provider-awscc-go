@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdatasynclocationfsxwindows/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_fsx_windows awscc_datasync_location_fsx_windows}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_fsx_windows awscc_datasync_location_fsx_windows}.
 type DataAwsccDatasyncLocationFsxWindows interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -91,6 +91,10 @@ type DataAwsccDatasyncLocationFsxWindows interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -356,7 +360,7 @@ func (j *jsiiProxy_DataAwsccDatasyncLocationFsxWindows) User() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_fsx_windows awscc_datasync_location_fsx_windows} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_fsx_windows awscc_datasync_location_fsx_windows} Data Source.
 func NewDataAwsccDatasyncLocationFsxWindows(scope constructs.Construct, id *string, config *DataAwsccDatasyncLocationFsxWindowsConfig) DataAwsccDatasyncLocationFsxWindows {
 	_init_.Initialize()
 
@@ -374,7 +378,7 @@ func NewDataAwsccDatasyncLocationFsxWindows(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_fsx_windows awscc_datasync_location_fsx_windows} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_fsx_windows awscc_datasync_location_fsx_windows} Data Source.
 func NewDataAwsccDatasyncLocationFsxWindows_Override(d DataAwsccDatasyncLocationFsxWindows, scope constructs.Construct, id *string, config *DataAwsccDatasyncLocationFsxWindowsConfig) {
 	_init_.Initialize()
 
@@ -741,6 +745,32 @@ func (d *jsiiProxy_DataAwsccDatasyncLocationFsxWindows) SynthesizeAttributes() *
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatasyncLocationFsxWindows) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatasyncLocationFsxWindows) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

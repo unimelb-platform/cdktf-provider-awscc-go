@@ -64,6 +64,7 @@ type AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsC
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMetricDataQueries(value interface{})
+	ResetMetricDataQueries()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -446,6 +447,14 @@ func (a *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricS
 		a,
 		"putMetricDataQueries",
 		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedLoadMetricSpecificationOutputReference) ResetMetricDataQueries() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetMetricDataQueries",
+		nil, // no parameters
 	)
 }
 

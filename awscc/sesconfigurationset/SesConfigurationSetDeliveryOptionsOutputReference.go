@@ -29,6 +29,9 @@ type SesConfigurationSetDeliveryOptionsOutputReference interface {
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	MaxDeliverySeconds() *float64
+	SetMaxDeliverySeconds(val *float64)
+	MaxDeliverySecondsInput() *float64
 	SendingPoolName() *string
 	SetSendingPoolName(val *string)
 	SendingPoolNameInput() *string
@@ -67,6 +70,7 @@ type SesConfigurationSetDeliveryOptionsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetMaxDeliverySeconds()
 	ResetSendingPoolName()
 	ResetTlsPolicy()
 	// Produce the Token's value at resolution time.
@@ -129,6 +133,26 @@ func (j *jsiiProxy_SesConfigurationSetDeliveryOptionsOutputReference) InternalVa
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SesConfigurationSetDeliveryOptionsOutputReference) MaxDeliverySeconds() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxDeliverySeconds",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SesConfigurationSetDeliveryOptionsOutputReference) MaxDeliverySecondsInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxDeliverySecondsInput",
 		&returns,
 	)
 	return returns
@@ -251,6 +275,17 @@ func (j *jsiiProxy_SesConfigurationSetDeliveryOptionsOutputReference)SetInternal
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SesConfigurationSetDeliveryOptionsOutputReference)SetMaxDeliverySeconds(val *float64) {
+	if err := j.validateSetMaxDeliverySecondsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"maxDeliverySeconds",
 		val,
 	)
 }
@@ -483,6 +518,14 @@ func (s *jsiiProxy_SesConfigurationSetDeliveryOptionsOutputReference) Interpolat
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SesConfigurationSetDeliveryOptionsOutputReference) ResetMaxDeliverySeconds() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetMaxDeliverySeconds",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SesConfigurationSetDeliveryOptionsOutputReference) ResetSendingPoolName() {

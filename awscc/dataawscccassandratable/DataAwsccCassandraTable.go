@@ -9,11 +9,12 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccassandratable/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cassandra_table awscc_cassandra_table}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cassandra_table awscc_cassandra_table}.
 type DataAwsccCassandraTable interface {
 	cdktf.TerraformDataSource
 	AutoScalingSpecifications() DataAwsccCassandraTableAutoScalingSpecificationsOutputReference
 	BillingMode() DataAwsccCassandraTableBillingModeOutputReference
+	CdcSpecification() DataAwsccCassandraTableCdcSpecificationOutputReference
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	ClientSideTimestampsEnabled() cdktf.IResolvable
@@ -95,6 +96,10 @@ type DataAwsccCassandraTable interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -124,6 +129,16 @@ func (j *jsiiProxy_DataAwsccCassandraTable) BillingMode() DataAwsccCassandraTabl
 	_jsii_.Get(
 		j,
 		"billingMode",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCassandraTable) CdcSpecification() DataAwsccCassandraTableCdcSpecificationOutputReference {
+	var returns DataAwsccCassandraTableCdcSpecificationOutputReference
+	_jsii_.Get(
+		j,
+		"cdcSpecification",
 		&returns,
 	)
 	return returns
@@ -400,7 +415,7 @@ func (j *jsiiProxy_DataAwsccCassandraTable) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cassandra_table awscc_cassandra_table} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cassandra_table awscc_cassandra_table} Data Source.
 func NewDataAwsccCassandraTable(scope constructs.Construct, id *string, config *DataAwsccCassandraTableConfig) DataAwsccCassandraTable {
 	_init_.Initialize()
 
@@ -418,7 +433,7 @@ func NewDataAwsccCassandraTable(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cassandra_table awscc_cassandra_table} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cassandra_table awscc_cassandra_table} Data Source.
 func NewDataAwsccCassandraTable_Override(d DataAwsccCassandraTable, scope constructs.Construct, id *string, config *DataAwsccCassandraTableConfig) {
 	_init_.Initialize()
 
@@ -785,6 +800,32 @@ func (d *jsiiProxy_DataAwsccCassandraTable) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCassandraTable) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCassandraTable) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

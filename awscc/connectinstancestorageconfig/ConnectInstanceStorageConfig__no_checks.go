@@ -56,7 +56,15 @@ func (c *jsiiProxy_ConnectInstanceStorageConfig) validateInterpolationForAttribu
 	return nil
 }
 
+func (c *jsiiProxy_ConnectInstanceStorageConfig) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_ConnectInstanceStorageConfig) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_ConnectInstanceStorageConfig) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

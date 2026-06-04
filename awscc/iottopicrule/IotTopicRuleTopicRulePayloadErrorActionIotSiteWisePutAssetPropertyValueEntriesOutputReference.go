@@ -33,8 +33,8 @@ type IotTopicRuleTopicRulePayloadErrorActionIotSiteWisePutAssetPropertyValueEntr
 	EntryIdInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *IotTopicRuleTopicRulePayloadErrorActionIotSiteWisePutAssetPropertyValueEntries
-	SetInternalValue(val *IotTopicRuleTopicRulePayloadErrorActionIotSiteWisePutAssetPropertyValueEntries)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	PropertyAlias() *string
 	SetPropertyAlias(val *string)
 	PropertyAliasInput() *string
@@ -80,6 +80,7 @@ type IotTopicRuleTopicRulePayloadErrorActionIotSiteWisePutAssetPropertyValueEntr
 	ResetEntryId()
 	ResetPropertyAlias()
 	ResetPropertyId()
+	ResetPropertyValues()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -175,8 +176,8 @@ func (j *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionIotSiteWisePutAssetPro
 	return returns
 }
 
-func (j *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionIotSiteWisePutAssetPropertyValueEntriesOutputReference) InternalValue() *IotTopicRuleTopicRulePayloadErrorActionIotSiteWisePutAssetPropertyValueEntries {
-	var returns *IotTopicRuleTopicRulePayloadErrorActionIotSiteWisePutAssetPropertyValueEntries
+func (j *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionIotSiteWisePutAssetPropertyValueEntriesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -337,7 +338,7 @@ func (j *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionIotSiteWisePutAssetPro
 	)
 }
 
-func (j *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionIotSiteWisePutAssetPropertyValueEntriesOutputReference)SetInternalValue(val *IotTopicRuleTopicRulePayloadErrorActionIotSiteWisePutAssetPropertyValueEntries) {
+func (j *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionIotSiteWisePutAssetPropertyValueEntriesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -617,6 +618,14 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionIotSiteWisePutAssetPro
 	_jsii_.InvokeVoid(
 		i,
 		"resetPropertyId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionIotSiteWisePutAssetPropertyValueEntriesOutputReference) ResetPropertyValues() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetPropertyValues",
 		nil, // no parameters
 	)
 }

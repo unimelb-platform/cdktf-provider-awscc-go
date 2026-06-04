@@ -107,6 +107,7 @@ type LexBotBotLocalesIntentsOutputReference interface {
 	ResetIntentClosingSetting()
 	ResetIntentConfirmationSetting()
 	ResetKendraConfiguration()
+	ResetName()
 	ResetOutputContexts()
 	ResetParentIntentSignature()
 	ResetSampleUtterances()
@@ -921,6 +922,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsOutputReference) ResetKendraConfigurat
 	_jsii_.InvokeVoid(
 		l,
 		"resetKendraConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetName",
 		nil, // no parameters
 	)
 }

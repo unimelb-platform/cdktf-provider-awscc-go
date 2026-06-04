@@ -75,6 +75,8 @@ type SsmResourceDataSyncSyncSourceOutputReference interface {
 	PutAwsOrganizationsSource(value *SsmResourceDataSyncSyncSourceAwsOrganizationsSource)
 	ResetAwsOrganizationsSource()
 	ResetIncludeFutureRegions()
+	ResetSourceRegions()
+	ResetSourceType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -565,6 +567,22 @@ func (s *jsiiProxy_SsmResourceDataSyncSyncSourceOutputReference) ResetIncludeFut
 	_jsii_.InvokeVoid(
 		s,
 		"resetIncludeFutureRegions",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SsmResourceDataSyncSyncSourceOutputReference) ResetSourceRegions() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSourceRegions",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SsmResourceDataSyncSyncSourceOutputReference) ResetSourceType() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSourceType",
 		nil, // no parameters
 	)
 }

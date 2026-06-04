@@ -1,0 +1,6 @@
+package dataawsccsecretsmanagerrotationschedule
+
+
+type DataAwsccSecretsmanagerRotationScheduleRotationRules struct {
+}
+

@@ -64,6 +64,7 @@ type IotMitigationActionActionParamsPublishFindingToSnsParamsOutputReference int
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetTopicArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (i *jsiiProxy_IotMitigationActionActionParamsPublishFindingToSnsParamsOutpu
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotMitigationActionActionParamsPublishFindingToSnsParamsOutputReference) ResetTopicArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTopicArn",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotMitigationActionActionParamsPublishFindingToSnsParamsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

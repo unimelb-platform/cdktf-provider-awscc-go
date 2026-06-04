@@ -28,6 +28,7 @@ type DataAwsccSesConfigurationSetTrackingOptionsOutputReference interface {
 	CustomRedirectDomain() *string
 	// Experimental.
 	Fqn() *string
+	HttpsPolicy() *string
 	InternalValue() *DataAwsccSesConfigurationSetTrackingOptions
 	SetInternalValue(val *DataAwsccSesConfigurationSetTrackingOptions)
 	// Experimental.
@@ -122,6 +123,16 @@ func (j *jsiiProxy_DataAwsccSesConfigurationSetTrackingOptionsOutputReference) F
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSesConfigurationSetTrackingOptionsOutputReference) HttpsPolicy() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"httpsPolicy",
 		&returns,
 	)
 	return returns

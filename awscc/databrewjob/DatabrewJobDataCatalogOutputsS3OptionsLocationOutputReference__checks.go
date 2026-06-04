@@ -179,9 +179,25 @@ func (j *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsLocationOutputReference
 	return nil
 }
 
-func (j *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsLocationOutputReference) validateSetInternalValueParameters(val *DatabrewJobDataCatalogOutputsS3OptionsLocation) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_DatabrewJobDataCatalogOutputsS3OptionsLocationOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *DatabrewJobDataCatalogOutputsS3OptionsLocation:
+		val := val.(*DatabrewJobDataCatalogOutputsS3OptionsLocation)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case DatabrewJobDataCatalogOutputsS3OptionsLocation:
+		val_ := val.(DatabrewJobDataCatalogOutputsS3OptionsLocation)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *DatabrewJobDataCatalogOutputsS3OptionsLocation; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/opensearchserverlesssecurityconfig/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/opensearchserverless_security_config awscc_opensearchserverless_security_config}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/opensearchserverless_security_config awscc_opensearchserverless_security_config}.
 type OpensearchserverlessSecurityConfig interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -39,6 +39,8 @@ type OpensearchserverlessSecurityConfig interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	IamIdentityCenterOptions() OpensearchserverlessSecurityConfigIamIdentityCenterOptionsOutputReference
+	IamIdentityCenterOptionsInput() interface{}
 	Id() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
@@ -61,6 +63,7 @@ type OpensearchserverlessSecurityConfig interface {
 	RawOverrides() interface{}
 	SamlOptions() OpensearchserverlessSecurityConfigSamlOptionsOutputReference
 	SamlOptionsInput() interface{}
+	SecurityConfigId() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -94,17 +97,29 @@ type OpensearchserverlessSecurityConfig interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutIamIdentityCenterOptions(value *OpensearchserverlessSecurityConfigIamIdentityCenterOptions)
 	PutSamlOptions(value *OpensearchserverlessSecurityConfigSamlOptions)
 	ResetDescription()
+	ResetIamIdentityCenterOptions()
 	ResetName()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -112,6 +127,9 @@ type OpensearchserverlessSecurityConfig interface {
 	ResetSamlOptions()
 	ResetType()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -226,6 +244,26 @@ func (j *jsiiProxy_OpensearchserverlessSecurityConfig) FriendlyUniqueId() *strin
 	return returns
 }
 
+func (j *jsiiProxy_OpensearchserverlessSecurityConfig) IamIdentityCenterOptions() OpensearchserverlessSecurityConfigIamIdentityCenterOptionsOutputReference {
+	var returns OpensearchserverlessSecurityConfigIamIdentityCenterOptionsOutputReference
+	_jsii_.Get(
+		j,
+		"iamIdentityCenterOptions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OpensearchserverlessSecurityConfig) IamIdentityCenterOptionsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"iamIdentityCenterOptionsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_OpensearchserverlessSecurityConfig) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -326,6 +364,16 @@ func (j *jsiiProxy_OpensearchserverlessSecurityConfig) SamlOptionsInput() interf
 	return returns
 }
 
+func (j *jsiiProxy_OpensearchserverlessSecurityConfig) SecurityConfigId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"securityConfigId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_OpensearchserverlessSecurityConfig) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -377,7 +425,7 @@ func (j *jsiiProxy_OpensearchserverlessSecurityConfig) TypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/opensearchserverless_security_config awscc_opensearchserverless_security_config} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/opensearchserverless_security_config awscc_opensearchserverless_security_config} Resource.
 func NewOpensearchserverlessSecurityConfig(scope constructs.Construct, id *string, config *OpensearchserverlessSecurityConfigConfig) OpensearchserverlessSecurityConfig {
 	_init_.Initialize()
 
@@ -395,7 +443,7 @@ func NewOpensearchserverlessSecurityConfig(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/opensearchserverless_security_config awscc_opensearchserverless_security_config} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/opensearchserverless_security_config awscc_opensearchserverless_security_config} Resource.
 func NewOpensearchserverlessSecurityConfig_Override(o OpensearchserverlessSecurityConfig, scope constructs.Construct, id *string, config *OpensearchserverlessSecurityConfigConfig) {
 	_init_.Initialize()
 
@@ -776,6 +824,19 @@ func (o *jsiiProxy_OpensearchserverlessSecurityConfig) GetStringMapAttribute(ter
 	return returns
 }
 
+func (o *jsiiProxy_OpensearchserverlessSecurityConfig) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		o,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (o *jsiiProxy_OpensearchserverlessSecurityConfig) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := o.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -803,6 +864,17 @@ func (o *jsiiProxy_OpensearchserverlessSecurityConfig) InterpolationForAttribute
 	return returns
 }
 
+func (o *jsiiProxy_OpensearchserverlessSecurityConfig) MoveFromId(id *string) {
+	if err := o.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (o *jsiiProxy_OpensearchserverlessSecurityConfig) MoveTo(moveTarget *string, index interface{}) {
 	if err := o.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -814,6 +886,17 @@ func (o *jsiiProxy_OpensearchserverlessSecurityConfig) MoveTo(moveTarget *string
 	)
 }
 
+func (o *jsiiProxy_OpensearchserverlessSecurityConfig) MoveToId(id *string) {
+	if err := o.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (o *jsiiProxy_OpensearchserverlessSecurityConfig) OverrideLogicalId(newLogicalId *string) {
 	if err := o.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -822,6 +905,17 @@ func (o *jsiiProxy_OpensearchserverlessSecurityConfig) OverrideLogicalId(newLogi
 		o,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (o *jsiiProxy_OpensearchserverlessSecurityConfig) PutIamIdentityCenterOptions(value *OpensearchserverlessSecurityConfigIamIdentityCenterOptions) {
+	if err := o.validatePutIamIdentityCenterOptionsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"putIamIdentityCenterOptions",
+		[]interface{}{value},
 	)
 }
 
@@ -840,6 +934,14 @@ func (o *jsiiProxy_OpensearchserverlessSecurityConfig) ResetDescription() {
 	_jsii_.InvokeVoid(
 		o,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OpensearchserverlessSecurityConfig) ResetIamIdentityCenterOptions() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetIamIdentityCenterOptions",
 		nil, // no parameters
 	)
 }
@@ -882,6 +984,32 @@ func (o *jsiiProxy_OpensearchserverlessSecurityConfig) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		o,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (o *jsiiProxy_OpensearchserverlessSecurityConfig) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		o,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (o *jsiiProxy_OpensearchserverlessSecurityConfig) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		o,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

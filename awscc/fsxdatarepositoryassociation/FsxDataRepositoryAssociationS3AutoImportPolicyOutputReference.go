@@ -64,6 +64,7 @@ type FsxDataRepositoryAssociationS3AutoImportPolicyOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEvents()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (f *jsiiProxy_FsxDataRepositoryAssociationS3AutoImportPolicyOutputReference
 	)
 
 	return returns
+}
+
+func (f *jsiiProxy_FsxDataRepositoryAssociationS3AutoImportPolicyOutputReference) ResetEvents() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetEvents",
+		nil, // no parameters
+	)
 }
 
 func (f *jsiiProxy_FsxDataRepositoryAssociationS3AutoImportPolicyOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

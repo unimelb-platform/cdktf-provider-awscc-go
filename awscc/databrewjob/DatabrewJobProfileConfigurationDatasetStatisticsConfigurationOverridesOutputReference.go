@@ -67,6 +67,8 @@ type DatabrewJobProfileConfigurationDatasetStatisticsConfigurationOverridesOutpu
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetParameters()
+	ResetStatistic()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (d *jsiiProxy_DatabrewJobProfileConfigurationDatasetStatisticsConfiguration
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatabrewJobProfileConfigurationDatasetStatisticsConfigurationOverridesOutputReference) ResetParameters() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetParameters",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatabrewJobProfileConfigurationDatasetStatisticsConfigurationOverridesOutputReference) ResetStatistic() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetStatistic",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatabrewJobProfileConfigurationDatasetStatisticsConfigurationOverridesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

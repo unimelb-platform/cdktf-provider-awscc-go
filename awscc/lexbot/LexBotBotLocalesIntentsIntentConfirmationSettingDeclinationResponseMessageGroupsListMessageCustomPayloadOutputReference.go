@@ -64,6 +64,7 @@ type LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponseMessageG
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationRe
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponseMessageGroupsListMessageCustomPayloadOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponseMessageGroupsListMessageCustomPayloadOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

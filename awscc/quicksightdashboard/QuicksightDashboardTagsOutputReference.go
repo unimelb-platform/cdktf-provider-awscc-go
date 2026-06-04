@@ -67,6 +67,8 @@ type QuicksightDashboardTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (q *jsiiProxy_QuicksightDashboardTagsOutputReference) InterpolationForAttri
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDashboardTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDashboardTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDashboardTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

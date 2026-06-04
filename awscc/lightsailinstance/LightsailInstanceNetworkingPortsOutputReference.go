@@ -48,8 +48,8 @@ type LightsailInstanceNetworkingPortsOutputReference interface {
 	FromPort() *float64
 	SetFromPort(val *float64)
 	FromPortInput() *float64
-	InternalValue() *LightsailInstanceNetworkingPorts
-	SetInternalValue(val *LightsailInstanceNetworkingPorts)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Ipv6Cidrs() *[]*string
 	SetIpv6Cidrs(val *[]*string)
 	Ipv6CidrsInput() *[]*string
@@ -296,8 +296,8 @@ func (j *jsiiProxy_LightsailInstanceNetworkingPortsOutputReference) FromPortInpu
 	return returns
 }
 
-func (j *jsiiProxy_LightsailInstanceNetworkingPortsOutputReference) InternalValue() *LightsailInstanceNetworkingPorts {
-	var returns *LightsailInstanceNetworkingPorts
+func (j *jsiiProxy_LightsailInstanceNetworkingPortsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -513,7 +513,7 @@ func (j *jsiiProxy_LightsailInstanceNetworkingPortsOutputReference)SetFromPort(v
 	)
 }
 
-func (j *jsiiProxy_LightsailInstanceNetworkingPortsOutputReference)SetInternalValue(val *LightsailInstanceNetworkingPorts) {
+func (j *jsiiProxy_LightsailInstanceNetworkingPortsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

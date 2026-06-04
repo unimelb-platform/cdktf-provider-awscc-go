@@ -76,8 +76,11 @@ type S3BucketIntelligentTieringConfigurationsOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutTagFilters(value interface{})
 	PutTierings(value interface{})
+	ResetId()
 	ResetPrefix()
+	ResetStatus()
 	ResetTagFilters()
+	ResetTierings()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -587,6 +590,14 @@ func (s *jsiiProxy_S3BucketIntelligentTieringConfigurationsOutputReference) PutT
 	)
 }
 
+func (s *jsiiProxy_S3BucketIntelligentTieringConfigurationsOutputReference) ResetId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetId",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_S3BucketIntelligentTieringConfigurationsOutputReference) ResetPrefix() {
 	_jsii_.InvokeVoid(
 		s,
@@ -595,10 +606,26 @@ func (s *jsiiProxy_S3BucketIntelligentTieringConfigurationsOutputReference) Rese
 	)
 }
 
+func (s *jsiiProxy_S3BucketIntelligentTieringConfigurationsOutputReference) ResetStatus() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStatus",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_S3BucketIntelligentTieringConfigurationsOutputReference) ResetTagFilters() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetTagFilters",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketIntelligentTieringConfigurationsOutputReference) ResetTierings() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTierings",
 		nil, // no parameters
 	)
 }

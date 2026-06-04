@@ -2,14 +2,6 @@ package quicksightdatasource
 
 
 type QuicksightDataSourceCredentialsCredentialPair struct {
-	// <p>Password.</p>.
-	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/quicksight_data_source#password QuicksightDataSource#password}
-	Password *string `field:"required" json:"password" yaml:"password"`
-	// <p>User name.</p>.
-	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/quicksight_data_source#username QuicksightDataSource#username}
-	Username *string `field:"required" json:"username" yaml:"username"`
 	// <p>A set of alternate data source parameters that you want to share for these             credentials.
 	//
 	// The credentials are applied in tandem with the data source parameters when
@@ -21,7 +13,15 @@ type QuicksightDataSourceCredentialsCredentialPair struct {
 	//             null, the <code>DataSourceParameters</code> originally used with these
 	//                 <code>Credentials</code> is automatically allowed.</p>
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/quicksight_data_source#alternate_data_source_parameters QuicksightDataSource#alternate_data_source_parameters}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/quicksight_data_source#alternate_data_source_parameters QuicksightDataSource#alternate_data_source_parameters}
 	AlternateDataSourceParameters interface{} `field:"optional" json:"alternateDataSourceParameters" yaml:"alternateDataSourceParameters"`
+	// <p>Password.</p>.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/quicksight_data_source#password QuicksightDataSource#password}
+	Password *string `field:"optional" json:"password" yaml:"password"`
+	// <p>User name.</p>.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/quicksight_data_source#username QuicksightDataSource#username}
+	Username *string `field:"optional" json:"username" yaml:"username"`
 }
 

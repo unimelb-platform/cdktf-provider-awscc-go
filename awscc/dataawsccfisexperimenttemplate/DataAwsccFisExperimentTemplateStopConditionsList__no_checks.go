@@ -4,6 +4,10 @@ package dataawsccfisexperimenttemplate
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccFisExperimentTemplateStopConditionsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccFisExperimentTemplateStopConditionsList) validateGetParameters(index *float64) error {
 	return nil
 }

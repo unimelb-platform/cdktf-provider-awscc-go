@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/appconfigextensionassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/appconfig_extension_association awscc_appconfig_extension_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/appconfig_extension_association awscc_appconfig_extension_association}.
 type AppconfigExtensionAssociation interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -30,6 +30,7 @@ type AppconfigExtensionAssociation interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	ExtensionArn() *string
+	ExtensionAssociationId() *string
 	ExtensionIdentifier() *string
 	SetExtensionIdentifier(val *string)
 	ExtensionIdentifierInput() *string
@@ -100,12 +101,22 @@ type AppconfigExtensionAssociation interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -119,6 +130,9 @@ type AppconfigExtensionAssociation interface {
 	ResetResourceIdentifier()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -198,6 +212,16 @@ func (j *jsiiProxy_AppconfigExtensionAssociation) ExtensionArn() *string {
 	_jsii_.Get(
 		j,
 		"extensionArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AppconfigExtensionAssociation) ExtensionAssociationId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"extensionAssociationId",
 		&returns,
 	)
 	return returns
@@ -434,7 +458,7 @@ func (j *jsiiProxy_AppconfigExtensionAssociation) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/appconfig_extension_association awscc_appconfig_extension_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/appconfig_extension_association awscc_appconfig_extension_association} Resource.
 func NewAppconfigExtensionAssociation(scope constructs.Construct, id *string, config *AppconfigExtensionAssociationConfig) AppconfigExtensionAssociation {
 	_init_.Initialize()
 
@@ -452,7 +476,7 @@ func NewAppconfigExtensionAssociation(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/appconfig_extension_association awscc_appconfig_extension_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/appconfig_extension_association awscc_appconfig_extension_association} Resource.
 func NewAppconfigExtensionAssociation_Override(a AppconfigExtensionAssociation, scope constructs.Construct, id *string, config *AppconfigExtensionAssociationConfig) {
 	_init_.Initialize()
 
@@ -844,6 +868,19 @@ func (a *jsiiProxy_AppconfigExtensionAssociation) GetStringMapAttribute(terrafor
 	return returns
 }
 
+func (a *jsiiProxy_AppconfigExtensionAssociation) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (a *jsiiProxy_AppconfigExtensionAssociation) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := a.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -871,6 +908,17 @@ func (a *jsiiProxy_AppconfigExtensionAssociation) InterpolationForAttribute(terr
 	return returns
 }
 
+func (a *jsiiProxy_AppconfigExtensionAssociation) MoveFromId(id *string) {
+	if err := a.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (a *jsiiProxy_AppconfigExtensionAssociation) MoveTo(moveTarget *string, index interface{}) {
 	if err := a.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -879,6 +927,17 @@ func (a *jsiiProxy_AppconfigExtensionAssociation) MoveTo(moveTarget *string, ind
 		a,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (a *jsiiProxy_AppconfigExtensionAssociation) MoveToId(id *string) {
+	if err := a.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -958,6 +1017,32 @@ func (a *jsiiProxy_AppconfigExtensionAssociation) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		a,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AppconfigExtensionAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		a,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AppconfigExtensionAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

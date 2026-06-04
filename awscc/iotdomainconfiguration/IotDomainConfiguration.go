@@ -9,14 +9,22 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/iotdomainconfiguration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iot_domain_configuration awscc_iot_domain_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iot_domain_configuration awscc_iot_domain_configuration}.
 type IotDomainConfiguration interface {
 	cdktf.TerraformResource
+	ApplicationProtocol() *string
+	SetApplicationProtocol(val *string)
+	ApplicationProtocolInput() *string
 	Arn() *string
+	AuthenticationType() *string
+	SetAuthenticationType(val *string)
+	AuthenticationTypeInput() *string
 	AuthorizerConfig() IotDomainConfigurationAuthorizerConfigOutputReference
 	AuthorizerConfigInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	ClientCertificateConfig() IotDomainConfigurationClientCertificateConfigOutputReference
+	ClientCertificateConfigInput() interface{}
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -69,6 +77,8 @@ type IotDomainConfiguration interface {
 	ServerCertificateArns() *[]*string
 	SetServerCertificateArns(val *[]*string)
 	ServerCertificateArnsInput() *[]*string
+	ServerCertificateConfig() IotDomainConfigurationServerCertificateConfigOutputReference
+	ServerCertificateConfigInput() interface{}
 	ServerCertificates() IotDomainConfigurationServerCertificatesList
 	ServiceType() *string
 	SetServiceType(val *string)
@@ -110,19 +120,34 @@ type IotDomainConfiguration interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutAuthorizerConfig(value *IotDomainConfigurationAuthorizerConfig)
+	PutClientCertificateConfig(value *IotDomainConfigurationClientCertificateConfig)
+	PutServerCertificateConfig(value *IotDomainConfigurationServerCertificateConfig)
 	PutTags(value interface{})
 	PutTlsConfig(value *IotDomainConfigurationTlsConfig)
+	ResetApplicationProtocol()
+	ResetAuthenticationType()
 	ResetAuthorizerConfig()
+	ResetClientCertificateConfig()
 	ResetDomainConfigurationName()
 	ResetDomainConfigurationStatus()
 	ResetDomainName()
@@ -130,11 +155,15 @@ type IotDomainConfiguration interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetServerCertificateArns()
+	ResetServerCertificateConfig()
 	ResetServiceType()
 	ResetTags()
 	ResetTlsConfig()
 	ResetValidationCertificateArn()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -149,11 +178,51 @@ type jsiiProxy_IotDomainConfiguration struct {
 	internal.Type__cdktfTerraformResource
 }
 
+func (j *jsiiProxy_IotDomainConfiguration) ApplicationProtocol() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"applicationProtocol",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotDomainConfiguration) ApplicationProtocolInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"applicationProtocolInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_IotDomainConfiguration) Arn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"arn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotDomainConfiguration) AuthenticationType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"authenticationType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotDomainConfiguration) AuthenticationTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"authenticationTypeInput",
 		&returns,
 	)
 	return returns
@@ -184,6 +253,26 @@ func (j *jsiiProxy_IotDomainConfiguration) CdktfStack() cdktf.TerraformStack {
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotDomainConfiguration) ClientCertificateConfig() IotDomainConfigurationClientCertificateConfigOutputReference {
+	var returns IotDomainConfigurationClientCertificateConfigOutputReference
+	_jsii_.Get(
+		j,
+		"clientCertificateConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotDomainConfiguration) ClientCertificateConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"clientCertificateConfigInput",
 		&returns,
 	)
 	return returns
@@ -409,6 +498,26 @@ func (j *jsiiProxy_IotDomainConfiguration) ServerCertificateArnsInput() *[]*stri
 	return returns
 }
 
+func (j *jsiiProxy_IotDomainConfiguration) ServerCertificateConfig() IotDomainConfigurationServerCertificateConfigOutputReference {
+	var returns IotDomainConfigurationServerCertificateConfigOutputReference
+	_jsii_.Get(
+		j,
+		"serverCertificateConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotDomainConfiguration) ServerCertificateConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"serverCertificateConfigInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_IotDomainConfiguration) ServerCertificates() IotDomainConfigurationServerCertificatesList {
 	var returns IotDomainConfigurationServerCertificatesList
 	_jsii_.Get(
@@ -530,7 +639,7 @@ func (j *jsiiProxy_IotDomainConfiguration) ValidationCertificateArnInput() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iot_domain_configuration awscc_iot_domain_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iot_domain_configuration awscc_iot_domain_configuration} Resource.
 func NewIotDomainConfiguration(scope constructs.Construct, id *string, config *IotDomainConfigurationConfig) IotDomainConfiguration {
 	_init_.Initialize()
 
@@ -548,7 +657,7 @@ func NewIotDomainConfiguration(scope constructs.Construct, id *string, config *I
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iot_domain_configuration awscc_iot_domain_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iot_domain_configuration awscc_iot_domain_configuration} Resource.
 func NewIotDomainConfiguration_Override(i IotDomainConfiguration, scope constructs.Construct, id *string, config *IotDomainConfigurationConfig) {
 	_init_.Initialize()
 
@@ -556,6 +665,28 @@ func NewIotDomainConfiguration_Override(i IotDomainConfiguration, scope construc
 		"awscc.iotDomainConfiguration.IotDomainConfiguration",
 		[]interface{}{scope, id, config},
 		i,
+	)
+}
+
+func (j *jsiiProxy_IotDomainConfiguration)SetApplicationProtocol(val *string) {
+	if err := j.validateSetApplicationProtocolParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"applicationProtocol",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IotDomainConfiguration)SetAuthenticationType(val *string) {
+	if err := j.validateSetAuthenticationTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"authenticationType",
+		val,
 	)
 }
 
@@ -962,6 +1093,19 @@ func (i *jsiiProxy_IotDomainConfiguration) GetStringMapAttribute(terraformAttrib
 	return returns
 }
 
+func (i *jsiiProxy_IotDomainConfiguration) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (i *jsiiProxy_IotDomainConfiguration) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := i.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -989,6 +1133,17 @@ func (i *jsiiProxy_IotDomainConfiguration) InterpolationForAttribute(terraformAt
 	return returns
 }
 
+func (i *jsiiProxy_IotDomainConfiguration) MoveFromId(id *string) {
+	if err := i.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (i *jsiiProxy_IotDomainConfiguration) MoveTo(moveTarget *string, index interface{}) {
 	if err := i.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -997,6 +1152,17 @@ func (i *jsiiProxy_IotDomainConfiguration) MoveTo(moveTarget *string, index inte
 		i,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (i *jsiiProxy_IotDomainConfiguration) MoveToId(id *string) {
+	if err := i.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1018,6 +1184,28 @@ func (i *jsiiProxy_IotDomainConfiguration) PutAuthorizerConfig(value *IotDomainC
 	_jsii_.InvokeVoid(
 		i,
 		"putAuthorizerConfig",
+		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IotDomainConfiguration) PutClientCertificateConfig(value *IotDomainConfigurationClientCertificateConfig) {
+	if err := i.validatePutClientCertificateConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putClientCertificateConfig",
+		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IotDomainConfiguration) PutServerCertificateConfig(value *IotDomainConfigurationServerCertificateConfig) {
+	if err := i.validatePutServerCertificateConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putServerCertificateConfig",
 		[]interface{}{value},
 	)
 }
@@ -1044,10 +1232,34 @@ func (i *jsiiProxy_IotDomainConfiguration) PutTlsConfig(value *IotDomainConfigur
 	)
 }
 
+func (i *jsiiProxy_IotDomainConfiguration) ResetApplicationProtocol() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetApplicationProtocol",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotDomainConfiguration) ResetAuthenticationType() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetAuthenticationType",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IotDomainConfiguration) ResetAuthorizerConfig() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetAuthorizerConfig",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotDomainConfiguration) ResetClientCertificateConfig() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetClientCertificateConfig",
 		nil, // no parameters
 	)
 }
@@ -1092,6 +1304,14 @@ func (i *jsiiProxy_IotDomainConfiguration) ResetServerCertificateArns() {
 	)
 }
 
+func (i *jsiiProxy_IotDomainConfiguration) ResetServerCertificateConfig() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetServerCertificateConfig",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IotDomainConfiguration) ResetServiceType() {
 	_jsii_.InvokeVoid(
 		i,
@@ -1130,6 +1350,32 @@ func (i *jsiiProxy_IotDomainConfiguration) SynthesizeAttributes() *map[string]in
 	_jsii_.Invoke(
 		i,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IotDomainConfiguration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		i,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IotDomainConfiguration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -19,23 +19,15 @@ type ApigatewayVpcLinkConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// A name for the VPC link.
-	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/apigateway_vpc_link#name ApigatewayVpcLink#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/apigateway_vpc_link#name ApigatewayVpcLink#name}.
 	Name *string `field:"required" json:"name" yaml:"name"`
-	// The ARN of network load balancer of the VPC targeted by the VPC link.
-	//
-	// The network load balancer must be owned by the same AWS account of the API owner.
-	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/apigateway_vpc_link#target_arns ApigatewayVpcLink#target_arns}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/apigateway_vpc_link#target_arns ApigatewayVpcLink#target_arns}.
 	TargetArns *[]*string `field:"required" json:"targetArns" yaml:"targetArns"`
-	// A description of the VPC link.
-	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/apigateway_vpc_link#description ApigatewayVpcLink#description}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/apigateway_vpc_link#description ApigatewayVpcLink#description}.
 	Description *string `field:"optional" json:"description" yaml:"description"`
-	// An array of arbitrary tags (key-value pairs) to associate with the stage.
+	// An array of arbitrary tags (key-value pairs) to associate with the VPC link.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/apigateway_vpc_link#tags ApigatewayVpcLink#tags}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/apigateway_vpc_link#tags ApigatewayVpcLink#tags}
 	Tags interface{} `field:"optional" json:"tags" yaml:"tags"`
 }
 

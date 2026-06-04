@@ -67,6 +67,8 @@ type SsoPermissionSetTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (s *jsiiProxy_SsoPermissionSetTagsOutputReference) InterpolationForAttribut
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SsoPermissionSetTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SsoPermissionSetTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SsoPermissionSetTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

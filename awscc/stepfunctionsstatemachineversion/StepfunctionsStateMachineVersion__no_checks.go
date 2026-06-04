@@ -56,7 +56,15 @@ func (s *jsiiProxy_StepfunctionsStateMachineVersion) validateInterpolationForAtt
 	return nil
 }
 
+func (s *jsiiProxy_StepfunctionsStateMachineVersion) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_StepfunctionsStateMachineVersion) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (s *jsiiProxy_StepfunctionsStateMachineVersion) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

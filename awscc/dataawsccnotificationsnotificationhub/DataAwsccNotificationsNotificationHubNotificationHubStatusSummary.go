@@ -1,0 +1,6 @@
+package dataawsccnotificationsnotificationhub
+
+
+type DataAwsccNotificationsNotificationHubNotificationHubStatusSummary struct {
+}
+

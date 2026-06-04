@@ -67,6 +67,8 @@ type ConnectQuickConnectQuickConnectConfigUserConfigOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetContactFlowArn()
+	ResetUserArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_ConnectQuickConnectQuickConnectConfigUserConfigOutputReferenc
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ConnectQuickConnectQuickConnectConfigUserConfigOutputReference) ResetContactFlowArn() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetContactFlowArn",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConnectQuickConnectQuickConnectConfigUserConfigOutputReference) ResetUserArn() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetUserArn",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ConnectQuickConnectQuickConnectConfigUserConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

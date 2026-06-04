@@ -64,6 +64,7 @@ type CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConf
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutItems(value interface{})
+	ResetItems()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -446,6 +447,14 @@ func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRem
 		c,
 		"putItems",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigRemoveHeadersConfigOutputReference) ResetItems() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetItems",
+		nil, // no parameters
 	)
 }
 

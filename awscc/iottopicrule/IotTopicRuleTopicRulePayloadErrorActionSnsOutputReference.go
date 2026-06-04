@@ -71,6 +71,8 @@ type IotTopicRuleTopicRulePayloadErrorActionSnsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetMessageFormat()
+	ResetRoleArn()
+	ResetTargetArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -522,6 +524,22 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionSnsOutputReference) Re
 	_jsii_.InvokeVoid(
 		i,
 		"resetMessageFormat",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionSnsOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionSnsOutputReference) ResetTargetArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTargetArn",
 		nil, // no parameters
 	)
 }

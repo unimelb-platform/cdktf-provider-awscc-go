@@ -73,7 +73,10 @@ type GameliftBuildStorageLocationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucket()
+	ResetKey()
 	ResetObjectVersion()
+	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -552,10 +555,34 @@ func (g *jsiiProxy_GameliftBuildStorageLocationOutputReference) InterpolationFor
 	return returns
 }
 
+func (g *jsiiProxy_GameliftBuildStorageLocationOutputReference) ResetBucket() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetBucket",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GameliftBuildStorageLocationOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
 func (g *jsiiProxy_GameliftBuildStorageLocationOutputReference) ResetObjectVersion() {
 	_jsii_.InvokeVoid(
 		g,
 		"resetObjectVersion",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GameliftBuildStorageLocationOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetRoleArn",
 		nil, // no parameters
 	)
 }

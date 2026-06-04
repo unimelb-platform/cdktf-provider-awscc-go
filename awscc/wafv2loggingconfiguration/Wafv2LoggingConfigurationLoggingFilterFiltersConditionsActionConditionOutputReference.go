@@ -64,6 +64,7 @@ type Wafv2LoggingConfigurationLoggingFilterFiltersConditionsActionConditionOutpu
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAction()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (w *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersConditionsAction
 	)
 
 	return returns
+}
+
+func (w *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersConditionsActionConditionOutputReference) ResetAction() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetAction",
+		nil, // no parameters
+	)
 }
 
 func (w *jsiiProxy_Wafv2LoggingConfigurationLoggingFilterFiltersConditionsActionConditionOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

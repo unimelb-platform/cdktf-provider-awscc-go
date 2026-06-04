@@ -35,6 +35,8 @@ type IotwirelessWirelessDeviceLoRaWanOutputReference interface {
 	DeviceProfileId() *string
 	SetDeviceProfileId(val *string)
 	DeviceProfileIdInput() *string
+	FPorts() IotwirelessWirelessDeviceLoRaWanFPortsOutputReference
+	FPortsInput() interface{}
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -80,12 +82,14 @@ type IotwirelessWirelessDeviceLoRaWanOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAbpV10X(value *IotwirelessWirelessDeviceLoRaWanAbpV10X)
 	PutAbpV11(value *IotwirelessWirelessDeviceLoRaWanAbpV11)
+	PutFPorts(value *IotwirelessWirelessDeviceLoRaWanFPorts)
 	PutOtaaV10X(value *IotwirelessWirelessDeviceLoRaWanOtaaV10X)
 	PutOtaaV11(value *IotwirelessWirelessDeviceLoRaWanOtaaV11)
 	ResetAbpV10X()
 	ResetAbpV11()
 	ResetDevEui()
 	ResetDeviceProfileId()
+	ResetFPorts()
 	ResetOtaaV10X()
 	ResetOtaaV11()
 	ResetServiceProfileId()
@@ -209,6 +213,26 @@ func (j *jsiiProxy_IotwirelessWirelessDeviceLoRaWanOutputReference) DeviceProfil
 	_jsii_.Get(
 		j,
 		"deviceProfileIdInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotwirelessWirelessDeviceLoRaWanOutputReference) FPorts() IotwirelessWirelessDeviceLoRaWanFPortsOutputReference {
+	var returns IotwirelessWirelessDeviceLoRaWanFPortsOutputReference
+	_jsii_.Get(
+		j,
+		"fPorts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotwirelessWirelessDeviceLoRaWanOutputReference) FPortsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"fPortsInput",
 		&returns,
 	)
 	return returns
@@ -638,6 +662,17 @@ func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanOutputReference) PutAbpV11(va
 	)
 }
 
+func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanOutputReference) PutFPorts(value *IotwirelessWirelessDeviceLoRaWanFPorts) {
+	if err := i.validatePutFPortsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putFPorts",
+		[]interface{}{value},
+	)
+}
+
 func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanOutputReference) PutOtaaV10X(value *IotwirelessWirelessDeviceLoRaWanOtaaV10X) {
 	if err := i.validatePutOtaaV10XParameters(value); err != nil {
 		panic(err)
@@ -688,6 +723,14 @@ func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanOutputReference) ResetDeviceP
 	_jsii_.InvokeVoid(
 		i,
 		"resetDeviceProfileId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotwirelessWirelessDeviceLoRaWanOutputReference) ResetFPorts() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetFPorts",
 		nil, // no parameters
 	)
 }

@@ -71,6 +71,7 @@ type IotSecurityProfileAdditionalMetricsToRetainV2OutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMetricDimension(value *IotSecurityProfileAdditionalMetricsToRetainV2MetricDimension)
 	ResetExportMetric()
+	ResetMetric()
 	ResetMetricDimension()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -523,6 +524,14 @@ func (i *jsiiProxy_IotSecurityProfileAdditionalMetricsToRetainV2OutputReference)
 	_jsii_.InvokeVoid(
 		i,
 		"resetExportMetric",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotSecurityProfileAdditionalMetricsToRetainV2OutputReference) ResetMetric() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetMetric",
 		nil, // no parameters
 	)
 }

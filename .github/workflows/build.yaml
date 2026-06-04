@@ -26,12 +26,11 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
-        run: yarn install
+      - uses: hashicorp/setup-terraform@v3
 
       - name: Generate module and provider bindings
         env:
-          CDKTF_CLI_VER: 0.19.1
+          CDKTF_CLI_VER: 0.21.0
         run: npx cdktf-cli@$CDKTF_CLI_VER get
 
       - name: go mod tidy

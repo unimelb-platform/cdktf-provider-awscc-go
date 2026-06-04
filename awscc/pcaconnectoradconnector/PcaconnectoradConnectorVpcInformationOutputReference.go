@@ -29,6 +29,9 @@ type PcaconnectoradConnectorVpcInformationOutputReference interface {
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	IpAddressType() *string
+	SetIpAddressType(val *string)
+	IpAddressTypeInput() *string
 	SecurityGroupIds() *[]*string
 	SetSecurityGroupIds(val *[]*string)
 	SecurityGroupIdsInput() *[]*string
@@ -64,6 +67,7 @@ type PcaconnectoradConnectorVpcInformationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetIpAddressType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -124,6 +128,26 @@ func (j *jsiiProxy_PcaconnectoradConnectorVpcInformationOutputReference) Interna
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_PcaconnectoradConnectorVpcInformationOutputReference) IpAddressType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipAddressType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_PcaconnectoradConnectorVpcInformationOutputReference) IpAddressTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipAddressTypeInput",
 		&returns,
 	)
 	return returns
@@ -226,6 +250,17 @@ func (j *jsiiProxy_PcaconnectoradConnectorVpcInformationOutputReference)SetInter
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_PcaconnectoradConnectorVpcInformationOutputReference)SetIpAddressType(val *string) {
+	if err := j.validateSetIpAddressTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ipAddressType",
 		val,
 	)
 }
@@ -447,6 +482,14 @@ func (p *jsiiProxy_PcaconnectoradConnectorVpcInformationOutputReference) Interpo
 	)
 
 	return returns
+}
+
+func (p *jsiiProxy_PcaconnectoradConnectorVpcInformationOutputReference) ResetIpAddressType() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetIpAddressType",
+		nil, // no parameters
+	)
 }
 
 func (p *jsiiProxy_PcaconnectoradConnectorVpcInformationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

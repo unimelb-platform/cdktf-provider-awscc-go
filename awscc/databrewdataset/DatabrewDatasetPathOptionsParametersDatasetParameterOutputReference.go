@@ -34,8 +34,8 @@ type DatabrewDatasetPathOptionsParametersDatasetParameterOutputReference interfa
 	FilterInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DatabrewDatasetPathOptionsParametersDatasetParameter
-	SetInternalValue(val *DatabrewDatasetPathOptionsParametersDatasetParameter)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -79,6 +79,8 @@ type DatabrewDatasetPathOptionsParametersDatasetParameterOutputReference interfa
 	ResetCreateColumn()
 	ResetDatetimeOptions()
 	ResetFilter()
+	ResetName()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -194,8 +196,8 @@ func (j *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterOutputRef
 	return returns
 }
 
-func (j *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterOutputReference) InternalValue() *DatabrewDatasetPathOptionsParametersDatasetParameter {
-	var returns *DatabrewDatasetPathOptionsParametersDatasetParameter
+func (j *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -325,7 +327,7 @@ func (j *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterOutputRef
 	)
 }
 
-func (j *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterOutputReference)SetInternalValue(val *DatabrewDatasetPathOptionsParametersDatasetParameter) {
+func (j *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -608,6 +610,22 @@ func (d *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterOutputRef
 	_jsii_.InvokeVoid(
 		d,
 		"resetFilter",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetType",
 		nil, // no parameters
 	)
 }

@@ -64,6 +64,7 @@ type SagemakerSpaceSpaceSettingsCustomFileSystemsEfsFileSystemOutputReference in
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetFileSystemId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_SagemakerSpaceSpaceSettingsCustomFileSystemsEfsFileSystemOutp
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SagemakerSpaceSpaceSettingsCustomFileSystemsEfsFileSystemOutputReference) ResetFileSystemId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetFileSystemId",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SagemakerSpaceSpaceSettingsCustomFileSystemsEfsFileSystemOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

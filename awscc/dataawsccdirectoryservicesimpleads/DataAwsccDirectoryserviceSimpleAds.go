@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdirectoryservicesimpleads/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/directoryservice_simple_ads awscc_directoryservice_simple_ads}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/directoryservice_simple_ads awscc_directoryservice_simple_ads}.
 type DataAwsccDirectoryserviceSimpleAds interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccDirectoryserviceSimpleAds interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccDirectoryserviceSimpleAds) TerraformResourceType() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/directoryservice_simple_ads awscc_directoryservice_simple_ads} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/directoryservice_simple_ads awscc_directoryservice_simple_ads} Data Source.
 func NewDataAwsccDirectoryserviceSimpleAds(scope constructs.Construct, id *string, config *DataAwsccDirectoryserviceSimpleAdsConfig) DataAwsccDirectoryserviceSimpleAds {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccDirectoryserviceSimpleAds(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/directoryservice_simple_ads awscc_directoryservice_simple_ads} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/directoryservice_simple_ads awscc_directoryservice_simple_ads} Data Source.
 func NewDataAwsccDirectoryserviceSimpleAds_Override(d DataAwsccDirectoryserviceSimpleAds, scope constructs.Construct, id *string, config *DataAwsccDirectoryserviceSimpleAdsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccDirectoryserviceSimpleAds) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDirectoryserviceSimpleAds) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDirectoryserviceSimpleAds) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

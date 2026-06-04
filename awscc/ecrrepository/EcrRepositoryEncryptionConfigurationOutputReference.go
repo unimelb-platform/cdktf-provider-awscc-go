@@ -67,6 +67,7 @@ type EcrRepositoryEncryptionConfigurationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEncryptionType()
 	ResetKmsKey()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (e *jsiiProxy_EcrRepositoryEncryptionConfigurationOutputReference) Interpol
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EcrRepositoryEncryptionConfigurationOutputReference) ResetEncryptionType() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetEncryptionType",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EcrRepositoryEncryptionConfigurationOutputReference) ResetKmsKey() {

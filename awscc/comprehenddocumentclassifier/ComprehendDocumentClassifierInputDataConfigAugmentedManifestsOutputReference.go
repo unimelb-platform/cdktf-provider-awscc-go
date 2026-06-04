@@ -70,6 +70,8 @@ type ComprehendDocumentClassifierInputDataConfigAugmentedManifestsOutputReferenc
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAttributeNames()
+	ResetS3Uri()
 	ResetSplit()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -516,6 +518,22 @@ func (c *jsiiProxy_ComprehendDocumentClassifierInputDataConfigAugmentedManifests
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ComprehendDocumentClassifierInputDataConfigAugmentedManifestsOutputReference) ResetAttributeNames() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAttributeNames",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ComprehendDocumentClassifierInputDataConfigAugmentedManifestsOutputReference) ResetS3Uri() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetS3Uri",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ComprehendDocumentClassifierInputDataConfigAugmentedManifestsOutputReference) ResetSplit() {

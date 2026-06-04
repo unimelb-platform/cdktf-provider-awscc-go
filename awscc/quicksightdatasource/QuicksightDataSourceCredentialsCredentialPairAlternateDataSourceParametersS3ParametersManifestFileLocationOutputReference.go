@@ -30,8 +30,8 @@ type QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersManifestFileLocation
-	SetInternalValue(val *QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersManifestFileLocation)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Key() *string
 	SetKey(val *string)
 	KeyInput() *string
@@ -67,6 +67,8 @@ type QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucket()
+	ResetKey()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -142,8 +144,8 @@ func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSou
 	return returns
 }
 
-func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersManifestFileLocationOutputReference) InternalValue() *QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersManifestFileLocation {
-	var returns *QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersManifestFileLocation
+func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersManifestFileLocationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -253,7 +255,7 @@ func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSou
 	)
 }
 
-func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersManifestFileLocationOutputReference)SetInternalValue(val *QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersManifestFileLocation) {
+func (j *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersManifestFileLocationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSou
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersManifestFileLocationOutputReference) ResetBucket() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetBucket",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersManifestFileLocationOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetKey",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersS3ParametersManifestFileLocationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

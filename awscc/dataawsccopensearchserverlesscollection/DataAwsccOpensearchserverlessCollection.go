@@ -9,13 +9,14 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccopensearchserverlesscollection/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/opensearchserverless_collection awscc_opensearchserverless_collection}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/opensearchserverless_collection awscc_opensearchserverless_collection}.
 type DataAwsccOpensearchserverlessCollection interface {
 	cdktf.TerraformDataSource
 	Arn() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	CollectionEndpoint() *string
+	CollectionId() *string
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -90,6 +91,10 @@ type DataAwsccOpensearchserverlessCollection interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -129,6 +134,16 @@ func (j *jsiiProxy_DataAwsccOpensearchserverlessCollection) CollectionEndpoint()
 	_jsii_.Get(
 		j,
 		"collectionEndpoint",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccOpensearchserverlessCollection) CollectionId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"collectionId",
 		&returns,
 	)
 	return returns
@@ -345,7 +360,7 @@ func (j *jsiiProxy_DataAwsccOpensearchserverlessCollection) Type() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/opensearchserverless_collection awscc_opensearchserverless_collection} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/opensearchserverless_collection awscc_opensearchserverless_collection} Data Source.
 func NewDataAwsccOpensearchserverlessCollection(scope constructs.Construct, id *string, config *DataAwsccOpensearchserverlessCollectionConfig) DataAwsccOpensearchserverlessCollection {
 	_init_.Initialize()
 
@@ -363,7 +378,7 @@ func NewDataAwsccOpensearchserverlessCollection(scope constructs.Construct, id *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/opensearchserverless_collection awscc_opensearchserverless_collection} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/opensearchserverless_collection awscc_opensearchserverless_collection} Data Source.
 func NewDataAwsccOpensearchserverlessCollection_Override(d DataAwsccOpensearchserverlessCollection, scope constructs.Construct, id *string, config *DataAwsccOpensearchserverlessCollectionConfig) {
 	_init_.Initialize()
 
@@ -730,6 +745,32 @@ func (d *jsiiProxy_DataAwsccOpensearchserverlessCollection) SynthesizeAttributes
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccOpensearchserverlessCollection) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccOpensearchserverlessCollection) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

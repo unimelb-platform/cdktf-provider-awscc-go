@@ -56,7 +56,15 @@ func (e *jsiiProxy_ElasticacheGlobalReplicationGroup) validateInterpolationForAt
 	return nil
 }
 
+func (e *jsiiProxy_ElasticacheGlobalReplicationGroup) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_ElasticacheGlobalReplicationGroup) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_ElasticacheGlobalReplicationGroup) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -105,6 +113,10 @@ func (j *jsiiProxy_ElasticacheGlobalReplicationGroup) validateSetConnectionParam
 }
 
 func (j *jsiiProxy_ElasticacheGlobalReplicationGroup) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ElasticacheGlobalReplicationGroup) validateSetEngineParameters(val *string) error {
 	return nil
 }
 

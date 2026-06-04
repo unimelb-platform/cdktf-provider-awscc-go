@@ -80,7 +80,7 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfiguratio
 	return nil
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationS3ConfigurationOutputReference) validateSetInternalValueParameters(val *KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationS3Configuration) error {
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationS3ConfigurationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

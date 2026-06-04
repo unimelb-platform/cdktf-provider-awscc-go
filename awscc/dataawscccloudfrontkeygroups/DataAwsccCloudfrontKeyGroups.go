@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccloudfrontkeygroups/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudfront_key_groups awscc_cloudfront_key_groups}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudfront_key_groups awscc_cloudfront_key_groups}.
 type DataAwsccCloudfrontKeyGroups interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccCloudfrontKeyGroups interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccCloudfrontKeyGroups) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudfront_key_groups awscc_cloudfront_key_groups} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudfront_key_groups awscc_cloudfront_key_groups} Data Source.
 func NewDataAwsccCloudfrontKeyGroups(scope constructs.Construct, id *string, config *DataAwsccCloudfrontKeyGroupsConfig) DataAwsccCloudfrontKeyGroups {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccCloudfrontKeyGroups(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudfront_key_groups awscc_cloudfront_key_groups} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudfront_key_groups awscc_cloudfront_key_groups} Data Source.
 func NewDataAwsccCloudfrontKeyGroups_Override(d DataAwsccCloudfrontKeyGroups, scope constructs.Construct, id *string, config *DataAwsccCloudfrontKeyGroupsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccCloudfrontKeyGroups) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontKeyGroups) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontKeyGroups) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

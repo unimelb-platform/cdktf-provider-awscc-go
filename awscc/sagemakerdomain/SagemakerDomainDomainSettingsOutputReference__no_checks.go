@@ -52,6 +52,10 @@ func (s *jsiiProxy_SagemakerDomainDomainSettingsOutputReference) validatePutRStu
 	return nil
 }
 
+func (s *jsiiProxy_SagemakerDomainDomainSettingsOutputReference) validatePutUnifiedStudioSettingsParameters(value *SagemakerDomainDomainSettingsUnifiedStudioSettings) error {
+	return nil
+}
+
 func (s *jsiiProxy_SagemakerDomainDomainSettingsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }
@@ -61,6 +65,10 @@ func (j *jsiiProxy_SagemakerDomainDomainSettingsOutputReference) validateSetComp
 }
 
 func (j *jsiiProxy_SagemakerDomainDomainSettingsOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_SagemakerDomainDomainSettingsOutputReference) validateSetExecutionRoleIdentityConfigParameters(val *string) error {
 	return nil
 }
 

@@ -36,7 +36,7 @@ type AppstreamAppBlockSetupScriptDetailsOutputReference interface {
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	ScriptS3Location() AppstreamAppBlockSetupScriptDetailsScriptS3LocationOutputReference
-	ScriptS3LocationInput() *AppstreamAppBlockSetupScriptDetailsScriptS3Location
+	ScriptS3LocationInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -74,6 +74,9 @@ type AppstreamAppBlockSetupScriptDetailsOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutScriptS3Location(value *AppstreamAppBlockSetupScriptDetailsScriptS3Location)
 	ResetExecutableParameters()
+	ResetExecutablePath()
+	ResetScriptS3Location()
+	ResetTimeoutInSeconds()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -189,8 +192,8 @@ func (j *jsiiProxy_AppstreamAppBlockSetupScriptDetailsOutputReference) ScriptS3L
 	return returns
 }
 
-func (j *jsiiProxy_AppstreamAppBlockSetupScriptDetailsOutputReference) ScriptS3LocationInput() *AppstreamAppBlockSetupScriptDetailsScriptS3Location {
-	var returns *AppstreamAppBlockSetupScriptDetailsScriptS3Location
+func (j *jsiiProxy_AppstreamAppBlockSetupScriptDetailsOutputReference) ScriptS3LocationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"scriptS3LocationInput",
@@ -556,6 +559,30 @@ func (a *jsiiProxy_AppstreamAppBlockSetupScriptDetailsOutputReference) ResetExec
 	_jsii_.InvokeVoid(
 		a,
 		"resetExecutableParameters",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppstreamAppBlockSetupScriptDetailsOutputReference) ResetExecutablePath() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetExecutablePath",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppstreamAppBlockSetupScriptDetailsOutputReference) ResetScriptS3Location() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetScriptS3Location",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppstreamAppBlockSetupScriptDetailsOutputReference) ResetTimeoutInSeconds() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetTimeoutInSeconds",
 		nil, // no parameters
 	)
 }

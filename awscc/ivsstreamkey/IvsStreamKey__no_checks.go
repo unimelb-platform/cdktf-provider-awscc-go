@@ -56,7 +56,15 @@ func (i *jsiiProxy_IvsStreamKey) validateInterpolationForAttributeParameters(ter
 	return nil
 }
 
+func (i *jsiiProxy_IvsStreamKey) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IvsStreamKey) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_IvsStreamKey) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

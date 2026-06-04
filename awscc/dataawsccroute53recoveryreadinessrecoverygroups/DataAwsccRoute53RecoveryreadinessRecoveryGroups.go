@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccroute53recoveryreadinessrecoverygroups/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53recoveryreadiness_recovery_groups awscc_route53recoveryreadiness_recovery_groups}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53recoveryreadiness_recovery_groups awscc_route53recoveryreadiness_recovery_groups}.
 type DataAwsccRoute53RecoveryreadinessRecoveryGroups interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccRoute53RecoveryreadinessRecoveryGroups interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccRoute53RecoveryreadinessRecoveryGroups) TerraformRes
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53recoveryreadiness_recovery_groups awscc_route53recoveryreadiness_recovery_groups} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53recoveryreadiness_recovery_groups awscc_route53recoveryreadiness_recovery_groups} Data Source.
 func NewDataAwsccRoute53RecoveryreadinessRecoveryGroups(scope constructs.Construct, id *string, config *DataAwsccRoute53RecoveryreadinessRecoveryGroupsConfig) DataAwsccRoute53RecoveryreadinessRecoveryGroups {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccRoute53RecoveryreadinessRecoveryGroups(scope constructs.Constru
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53recoveryreadiness_recovery_groups awscc_route53recoveryreadiness_recovery_groups} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53recoveryreadiness_recovery_groups awscc_route53recoveryreadiness_recovery_groups} Data Source.
 func NewDataAwsccRoute53RecoveryreadinessRecoveryGroups_Override(d DataAwsccRoute53RecoveryreadinessRecoveryGroups, scope constructs.Construct, id *string, config *DataAwsccRoute53RecoveryreadinessRecoveryGroupsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccRoute53RecoveryreadinessRecoveryGroups) SynthesizeAt
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53RecoveryreadinessRecoveryGroups) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53RecoveryreadinessRecoveryGroups) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

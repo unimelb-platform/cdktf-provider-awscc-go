@@ -56,7 +56,7 @@ func (j *jsiiProxy_DynamodbTableGlobalSecondaryIndexesProjectionOutputReference)
 	return nil
 }
 
-func (j *jsiiProxy_DynamodbTableGlobalSecondaryIndexesProjectionOutputReference) validateSetInternalValueParameters(val *DynamodbTableGlobalSecondaryIndexesProjection) error {
+func (j *jsiiProxy_DynamodbTableGlobalSecondaryIndexesProjectionOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

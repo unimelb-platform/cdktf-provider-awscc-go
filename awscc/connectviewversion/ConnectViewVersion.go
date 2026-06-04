@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/connectviewversion/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/connect_view_version awscc_connect_view_version}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/connect_view_version awscc_connect_view_version}.
 type ConnectViewVersion interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -94,12 +94,22 @@ type ConnectViewVersion interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -109,6 +119,9 @@ type ConnectViewVersion interface {
 	ResetVersionDescription()
 	ResetViewContentSha256()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -374,7 +387,7 @@ func (j *jsiiProxy_ConnectViewVersion) ViewVersionArn() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/connect_view_version awscc_connect_view_version} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/connect_view_version awscc_connect_view_version} Resource.
 func NewConnectViewVersion(scope constructs.Construct, id *string, config *ConnectViewVersionConfig) ConnectViewVersion {
 	_init_.Initialize()
 
@@ -392,7 +405,7 @@ func NewConnectViewVersion(scope constructs.Construct, id *string, config *Conne
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/connect_view_version awscc_connect_view_version} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/connect_view_version awscc_connect_view_version} Resource.
 func NewConnectViewVersion_Override(c ConnectViewVersion, scope constructs.Construct, id *string, config *ConnectViewVersionConfig) {
 	_init_.Initialize()
 
@@ -773,6 +786,19 @@ func (c *jsiiProxy_ConnectViewVersion) GetStringMapAttribute(terraformAttribute 
 	return returns
 }
 
+func (c *jsiiProxy_ConnectViewVersion) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_ConnectViewVersion) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -800,6 +826,17 @@ func (c *jsiiProxy_ConnectViewVersion) InterpolationForAttribute(terraformAttrib
 	return returns
 }
 
+func (c *jsiiProxy_ConnectViewVersion) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_ConnectViewVersion) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -808,6 +845,17 @@ func (c *jsiiProxy_ConnectViewVersion) MoveTo(moveTarget *string, index interfac
 		c,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (c *jsiiProxy_ConnectViewVersion) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -852,6 +900,32 @@ func (c *jsiiProxy_ConnectViewVersion) SynthesizeAttributes() *map[string]interf
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_ConnectViewVersion) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_ConnectViewVersion) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

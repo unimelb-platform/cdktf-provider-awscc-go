@@ -20,6 +20,9 @@ type CloudformationStackSetOperationPreferencesOutputReference interface {
 	ComplexObjectIsFromSet() *bool
 	// Experimental.
 	SetComplexObjectIsFromSet(val *bool)
+	ConcurrencyMode() *string
+	SetConcurrencyMode(val *string)
+	ConcurrencyModeInput() *string
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
 	//
 	// If this returns an empty array the stack will not be attached.
@@ -79,6 +82,7 @@ type CloudformationStackSetOperationPreferencesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetConcurrencyMode()
 	ResetFailureToleranceCount()
 	ResetFailureTolerancePercentage()
 	ResetMaxConcurrentCount()
@@ -115,6 +119,26 @@ func (j *jsiiProxy_CloudformationStackSetOperationPreferencesOutputReference) Co
 	_jsii_.Get(
 		j,
 		"complexObjectIsFromSet",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CloudformationStackSetOperationPreferencesOutputReference) ConcurrencyMode() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"concurrencyMode",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CloudformationStackSetOperationPreferencesOutputReference) ConcurrencyModeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"concurrencyModeInput",
 		&returns,
 	)
 	return returns
@@ -336,6 +360,17 @@ func (j *jsiiProxy_CloudformationStackSetOperationPreferencesOutputReference)Set
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CloudformationStackSetOperationPreferencesOutputReference)SetConcurrencyMode(val *string) {
+	if err := j.validateSetConcurrencyModeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"concurrencyMode",
 		val,
 	)
 }
@@ -623,6 +658,14 @@ func (c *jsiiProxy_CloudformationStackSetOperationPreferencesOutputReference) In
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CloudformationStackSetOperationPreferencesOutputReference) ResetConcurrencyMode() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetConcurrencyMode",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CloudformationStackSetOperationPreferencesOutputReference) ResetFailureToleranceCount() {

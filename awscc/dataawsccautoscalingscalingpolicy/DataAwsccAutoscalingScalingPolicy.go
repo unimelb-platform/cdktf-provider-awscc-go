@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccautoscalingscalingpolicy/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/autoscaling_scaling_policy awscc_autoscaling_scaling_policy}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/autoscaling_scaling_policy awscc_autoscaling_scaling_policy}.
 type DataAwsccAutoscalingScalingPolicy interface {
 	cdktf.TerraformDataSource
 	AdjustmentType() *string
@@ -95,6 +95,10 @@ type DataAwsccAutoscalingScalingPolicy interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -400,7 +404,7 @@ func (j *jsiiProxy_DataAwsccAutoscalingScalingPolicy) TerraformResourceType() *s
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/autoscaling_scaling_policy awscc_autoscaling_scaling_policy} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/autoscaling_scaling_policy awscc_autoscaling_scaling_policy} Data Source.
 func NewDataAwsccAutoscalingScalingPolicy(scope constructs.Construct, id *string, config *DataAwsccAutoscalingScalingPolicyConfig) DataAwsccAutoscalingScalingPolicy {
 	_init_.Initialize()
 
@@ -418,7 +422,7 @@ func NewDataAwsccAutoscalingScalingPolicy(scope constructs.Construct, id *string
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/autoscaling_scaling_policy awscc_autoscaling_scaling_policy} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/autoscaling_scaling_policy awscc_autoscaling_scaling_policy} Data Source.
 func NewDataAwsccAutoscalingScalingPolicy_Override(d DataAwsccAutoscalingScalingPolicy, scope constructs.Construct, id *string, config *DataAwsccAutoscalingScalingPolicyConfig) {
 	_init_.Initialize()
 
@@ -785,6 +789,32 @@ func (d *jsiiProxy_DataAwsccAutoscalingScalingPolicy) SynthesizeAttributes() *ma
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAutoscalingScalingPolicy) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAutoscalingScalingPolicy) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

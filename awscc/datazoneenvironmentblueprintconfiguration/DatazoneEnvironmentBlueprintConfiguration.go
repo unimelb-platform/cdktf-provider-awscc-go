@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/datazoneenvironmentblueprintconfiguration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datazone_environment_blueprint_configuration awscc_datazone_environment_blueprint_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datazone_environment_blueprint_configuration awscc_datazone_environment_blueprint_configuration}.
 type DatazoneEnvironmentBlueprintConfiguration interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -40,6 +40,9 @@ type DatazoneEnvironmentBlueprintConfiguration interface {
 	EnvironmentBlueprintIdentifier() *string
 	SetEnvironmentBlueprintIdentifier(val *string)
 	EnvironmentBlueprintIdentifierInput() *string
+	EnvironmentRolePermissionBoundary() *string
+	SetEnvironmentRolePermissionBoundary(val *string)
+	EnvironmentRolePermissionBoundaryInput() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -66,6 +69,8 @@ type DatazoneEnvironmentBlueprintConfiguration interface {
 	Provisioners() *[]interface{}
 	// Experimental.
 	SetProvisioners(val *[]interface{})
+	ProvisioningConfigurations() DatazoneEnvironmentBlueprintConfigurationProvisioningConfigurationsList
+	ProvisioningConfigurationsInput() interface{}
 	ProvisioningRoleArn() *string
 	SetProvisioningRoleArn(val *string)
 	ProvisioningRoleArnInput() *string
@@ -104,23 +109,39 @@ type DatazoneEnvironmentBlueprintConfiguration interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutProvisioningConfigurations(value interface{})
 	PutRegionalParameters(value interface{})
+	ResetEnvironmentRolePermissionBoundary()
 	ResetManageAccessRoleArn()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetProvisioningConfigurations()
 	ResetProvisioningRoleArn()
 	ResetRegionalParameters()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -275,6 +296,26 @@ func (j *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) EnvironmentBluepri
 	return returns
 }
 
+func (j *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) EnvironmentRolePermissionBoundary() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"environmentRolePermissionBoundary",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) EnvironmentRolePermissionBoundaryInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"environmentRolePermissionBoundaryInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
@@ -375,6 +416,26 @@ func (j *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) Provisioners() *[]
 	return returns
 }
 
+func (j *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) ProvisioningConfigurations() DatazoneEnvironmentBlueprintConfigurationProvisioningConfigurationsList {
+	var returns DatazoneEnvironmentBlueprintConfigurationProvisioningConfigurationsList
+	_jsii_.Get(
+		j,
+		"provisioningConfigurations",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) ProvisioningConfigurationsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"provisioningConfigurationsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) ProvisioningRoleArn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -466,7 +527,7 @@ func (j *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) UpdatedAt() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datazone_environment_blueprint_configuration awscc_datazone_environment_blueprint_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datazone_environment_blueprint_configuration awscc_datazone_environment_blueprint_configuration} Resource.
 func NewDatazoneEnvironmentBlueprintConfiguration(scope constructs.Construct, id *string, config *DatazoneEnvironmentBlueprintConfigurationConfig) DatazoneEnvironmentBlueprintConfiguration {
 	_init_.Initialize()
 
@@ -484,7 +545,7 @@ func NewDatazoneEnvironmentBlueprintConfiguration(scope constructs.Construct, id
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datazone_environment_blueprint_configuration awscc_datazone_environment_blueprint_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datazone_environment_blueprint_configuration awscc_datazone_environment_blueprint_configuration} Resource.
 func NewDatazoneEnvironmentBlueprintConfiguration_Override(d DatazoneEnvironmentBlueprintConfiguration, scope constructs.Construct, id *string, config *DatazoneEnvironmentBlueprintConfigurationConfig) {
 	_init_.Initialize()
 
@@ -554,6 +615,17 @@ func (j *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration)SetEnvironmentBluep
 	_jsii_.Set(
 		j,
 		"environmentBlueprintIdentifier",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration)SetEnvironmentRolePermissionBoundary(val *string) {
+	if err := j.validateSetEnvironmentRolePermissionBoundaryParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"environmentRolePermissionBoundary",
 		val,
 	)
 }
@@ -887,6 +959,19 @@ func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) GetStringMapAttrib
 	return returns
 }
 
+func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := d.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -914,6 +999,17 @@ func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) InterpolationForAt
 	return returns
 }
 
+func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) MoveFromId(id *string) {
+	if err := d.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) MoveTo(moveTarget *string, index interface{}) {
 	if err := d.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -922,6 +1018,17 @@ func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) MoveTo(moveTarget 
 		d,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) MoveToId(id *string) {
+	if err := d.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -936,6 +1043,17 @@ func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) OverrideLogicalId(
 	)
 }
 
+func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) PutProvisioningConfigurations(value interface{}) {
+	if err := d.validatePutProvisioningConfigurationsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putProvisioningConfigurations",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) PutRegionalParameters(value interface{}) {
 	if err := d.validatePutRegionalParametersParameters(value); err != nil {
 		panic(err)
@@ -944,6 +1062,14 @@ func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) PutRegionalParamet
 		d,
 		"putRegionalParameters",
 		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) ResetEnvironmentRolePermissionBoundary() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetEnvironmentRolePermissionBoundary",
+		nil, // no parameters
 	)
 }
 
@@ -959,6 +1085,14 @@ func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) ResetOverrideLogic
 	_jsii_.InvokeVoid(
 		d,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) ResetProvisioningConfigurations() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetProvisioningConfigurations",
 		nil, // no parameters
 	)
 }
@@ -985,6 +1119,32 @@ func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) SynthesizeAttribut
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DatazoneEnvironmentBlueprintConfiguration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

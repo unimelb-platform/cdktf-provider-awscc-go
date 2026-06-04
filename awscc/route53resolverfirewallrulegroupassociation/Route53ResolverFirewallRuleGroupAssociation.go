@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/route53resolverfirewallrulegroupassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/route53resolver_firewall_rule_group_association awscc_route53resolver_firewall_rule_group_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/route53resolver_firewall_rule_group_association awscc_route53resolver_firewall_rule_group_association}.
 type Route53ResolverFirewallRuleGroupAssociation interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -31,6 +31,7 @@ type Route53ResolverFirewallRuleGroupAssociation interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	FirewallRuleGroupAssociationId() *string
 	FirewallRuleGroupId() *string
 	SetFirewallRuleGroupId(val *string)
 	FirewallRuleGroupIdInput() *string
@@ -107,12 +108,22 @@ type Route53ResolverFirewallRuleGroupAssociation interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -124,6 +135,9 @@ type Route53ResolverFirewallRuleGroupAssociation interface {
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -213,6 +227,16 @@ func (j *jsiiProxy_Route53ResolverFirewallRuleGroupAssociation) DependsOn() *[]*
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Route53ResolverFirewallRuleGroupAssociation) FirewallRuleGroupAssociationId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"firewallRuleGroupAssociationId",
 		&returns,
 	)
 	return returns
@@ -499,7 +523,7 @@ func (j *jsiiProxy_Route53ResolverFirewallRuleGroupAssociation) VpcIdInput() *st
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/route53resolver_firewall_rule_group_association awscc_route53resolver_firewall_rule_group_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/route53resolver_firewall_rule_group_association awscc_route53resolver_firewall_rule_group_association} Resource.
 func NewRoute53ResolverFirewallRuleGroupAssociation(scope constructs.Construct, id *string, config *Route53ResolverFirewallRuleGroupAssociationConfig) Route53ResolverFirewallRuleGroupAssociation {
 	_init_.Initialize()
 
@@ -517,7 +541,7 @@ func NewRoute53ResolverFirewallRuleGroupAssociation(scope constructs.Construct, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/route53resolver_firewall_rule_group_association awscc_route53resolver_firewall_rule_group_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/route53resolver_firewall_rule_group_association awscc_route53resolver_firewall_rule_group_association} Resource.
 func NewRoute53ResolverFirewallRuleGroupAssociation_Override(r Route53ResolverFirewallRuleGroupAssociation, scope constructs.Construct, id *string, config *Route53ResolverFirewallRuleGroupAssociationConfig) {
 	_init_.Initialize()
 
@@ -920,6 +944,19 @@ func (r *jsiiProxy_Route53ResolverFirewallRuleGroupAssociation) GetStringMapAttr
 	return returns
 }
 
+func (r *jsiiProxy_Route53ResolverFirewallRuleGroupAssociation) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (r *jsiiProxy_Route53ResolverFirewallRuleGroupAssociation) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -947,6 +984,17 @@ func (r *jsiiProxy_Route53ResolverFirewallRuleGroupAssociation) InterpolationFor
 	return returns
 }
 
+func (r *jsiiProxy_Route53ResolverFirewallRuleGroupAssociation) MoveFromId(id *string) {
+	if err := r.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_Route53ResolverFirewallRuleGroupAssociation) MoveTo(moveTarget *string, index interface{}) {
 	if err := r.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -955,6 +1003,17 @@ func (r *jsiiProxy_Route53ResolverFirewallRuleGroupAssociation) MoveTo(moveTarge
 		r,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (r *jsiiProxy_Route53ResolverFirewallRuleGroupAssociation) MoveToId(id *string) {
+	if err := r.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1018,6 +1077,32 @@ func (r *jsiiProxy_Route53ResolverFirewallRuleGroupAssociation) SynthesizeAttrib
 	_jsii_.Invoke(
 		r,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_Route53ResolverFirewallRuleGroupAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		r,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_Route53ResolverFirewallRuleGroupAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

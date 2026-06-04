@@ -27,10 +27,10 @@ type LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageG
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListStruct
-	SetInternalValue(val *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListStruct)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Message() LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListMessageOutputReference
-	MessageInput() *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListMessage
+	MessageInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,6 +67,7 @@ type LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageG
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMessage(value *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListMessage)
 	PutVariations(value interface{})
+	ResetMessage()
 	ResetVariations()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -123,8 +124,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecifi
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListStructOutputReference) InternalValue() *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListStruct {
-	var returns *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListStruct
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListStructOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -143,8 +144,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecifi
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListStructOutputReference) MessageInput() *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListMessage {
-	var returns *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListMessage
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListStructOutputReference) MessageInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"messageInput",
@@ -243,7 +244,7 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecifi
 	)
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListStructOutputReference)SetInternalValue(val *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListStruct) {
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListStructOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +482,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecifi
 		l,
 		"putVariations",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationMessageGroupsListStructOutputReference) ResetMessage() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMessage",
+		nil, // no parameters
 	)
 }
 

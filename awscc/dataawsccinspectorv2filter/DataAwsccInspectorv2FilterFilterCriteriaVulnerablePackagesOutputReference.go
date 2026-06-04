@@ -27,12 +27,14 @@ type DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference i
 	// Experimental.
 	CreationStack() *[]*string
 	Epoch() DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackagesEpochOutputReference
+	FilePath() DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackagesFilePathOutputReference
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackages
 	SetInternalValue(val *DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackages)
 	Name() DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackagesNameOutputReference
 	Release() DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackagesReleaseOutputReference
+	SourceLambdaLayerArn() DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackagesSourceLambdaLayerArnOutputReference
 	SourceLayerHash() DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackagesSourceLayerHashOutputReference
 	// Experimental.
 	TerraformAttribute() *string
@@ -132,6 +134,16 @@ func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackagesOut
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) FilePath() DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackagesFilePathOutputReference {
+	var returns DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackagesFilePathOutputReference
+	_jsii_.Get(
+		j,
+		"filePath",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -167,6 +179,16 @@ func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackagesOut
 	_jsii_.Get(
 		j,
 		"release",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackagesOutputReference) SourceLambdaLayerArn() DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackagesSourceLambdaLayerArnOutputReference {
+	var returns DataAwsccInspectorv2FilterFilterCriteriaVulnerablePackagesSourceLambdaLayerArnOutputReference
+	_jsii_.Get(
+		j,
+		"sourceLambdaLayerArn",
 		&returns,
 	)
 	return returns

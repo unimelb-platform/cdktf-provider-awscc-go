@@ -30,8 +30,8 @@ type KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointCo
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointConfiguration
-	SetInternalValue(val *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointConfiguration)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -72,6 +72,7 @@ type KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointCo
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetAccessKey()
 	ResetName()
+	ResetUrl()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -147,8 +148,8 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigura
 	return returns
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointConfigurationOutputReference) InternalValue() *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointConfiguration {
-	var returns *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointConfiguration
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointConfigurationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -278,7 +279,7 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigura
 	)
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointConfigurationOutputReference)SetInternalValue(val *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointConfiguration) {
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointConfigurationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -531,6 +532,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigura
 	_jsii_.InvokeVoid(
 		k,
 		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointConfigurationOutputReference) ResetUrl() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetUrl",
 		nil, // no parameters
 	)
 }

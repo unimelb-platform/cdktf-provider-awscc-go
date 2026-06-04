@@ -27,8 +27,8 @@ type Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClassicLoadBalance
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancers
-	SetInternalValue(val *Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancers)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -64,6 +64,7 @@ type Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClassicLoadBalance
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -119,8 +120,8 @@ func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClas
 	return returns
 }
 
-func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancersOutputReference) InternalValue() *Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancers {
-	var returns *Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancers
+func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancersOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -219,7 +220,7 @@ func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClas
 	)
 }
 
-func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancersOutputReference)SetInternalValue(val *Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancers) {
+func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancersOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -447,6 +448,14 @@ func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClas
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancersOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetName",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

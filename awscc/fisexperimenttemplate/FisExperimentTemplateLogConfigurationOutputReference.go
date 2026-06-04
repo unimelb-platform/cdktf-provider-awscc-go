@@ -71,6 +71,7 @@ type FisExperimentTemplateLogConfigurationOutputReference interface {
 	PutCloudwatchLogsConfiguration(value *FisExperimentTemplateLogConfigurationCloudwatchLogsConfiguration)
 	PutS3Configuration(value *FisExperimentTemplateLogConfigurationS3Configuration)
 	ResetCloudwatchLogsConfiguration()
+	ResetLogSchemaVersion()
 	ResetS3Configuration()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -523,6 +524,14 @@ func (f *jsiiProxy_FisExperimentTemplateLogConfigurationOutputReference) ResetCl
 	_jsii_.InvokeVoid(
 		f,
 		"resetCloudwatchLogsConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (f *jsiiProxy_FisExperimentTemplateLogConfigurationOutputReference) ResetLogSchemaVersion() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetLogSchemaVersion",
 		nil, // no parameters
 	)
 }

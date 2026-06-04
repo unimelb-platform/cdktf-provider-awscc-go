@@ -29,8 +29,8 @@ type S3BucketAnalyticsConfigurationsStorageClassAnalysisOutputReference interfac
 	DataExportInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *S3BucketAnalyticsConfigurationsStorageClassAnalysis
-	SetInternalValue(val *S3BucketAnalyticsConfigurationsStorageClassAnalysis)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -140,8 +140,8 @@ func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisOutputRefe
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisOutputReference) InternalValue() *S3BucketAnalyticsConfigurationsStorageClassAnalysis {
-	var returns *S3BucketAnalyticsConfigurationsStorageClassAnalysis
+func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -220,7 +220,7 @@ func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisOutputRefe
 	)
 }
 
-func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisOutputReference)SetInternalValue(val *S3BucketAnalyticsConfigurationsStorageClassAnalysis) {
+func (j *jsiiProxy_S3BucketAnalyticsConfigurationsStorageClassAnalysisOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

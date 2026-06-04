@@ -56,7 +56,15 @@ func (r *jsiiProxy_RefactorspacesApplication) validateInterpolationForAttributeP
 	return nil
 }
 
+func (r *jsiiProxy_RefactorspacesApplication) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RefactorspacesApplication) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (r *jsiiProxy_RefactorspacesApplication) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

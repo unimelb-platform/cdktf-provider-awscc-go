@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdatasynclocationnfsplural/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_nfs_plural awscc_datasync_location_nfs_plural}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_nfs_plural awscc_datasync_location_nfs_plural}.
 type DataAwsccDatasyncLocationNfsPlural interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccDatasyncLocationNfsPlural interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccDatasyncLocationNfsPlural) TerraformResourceType() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_nfs_plural awscc_datasync_location_nfs_plural} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_nfs_plural awscc_datasync_location_nfs_plural} Data Source.
 func NewDataAwsccDatasyncLocationNfsPlural(scope constructs.Construct, id *string, config *DataAwsccDatasyncLocationNfsPluralConfig) DataAwsccDatasyncLocationNfsPlural {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccDatasyncLocationNfsPlural(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_nfs_plural awscc_datasync_location_nfs_plural} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_nfs_plural awscc_datasync_location_nfs_plural} Data Source.
 func NewDataAwsccDatasyncLocationNfsPlural_Override(d DataAwsccDatasyncLocationNfsPlural, scope constructs.Construct, id *string, config *DataAwsccDatasyncLocationNfsPluralConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccDatasyncLocationNfsPlural) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatasyncLocationNfsPlural) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatasyncLocationNfsPlural) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

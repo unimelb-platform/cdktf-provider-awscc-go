@@ -56,7 +56,7 @@ func (j *jsiiProxy_EventsRuleTargetsRunCommandParametersRunCommandTargetsOutputR
 	return nil
 }
 
-func (j *jsiiProxy_EventsRuleTargetsRunCommandParametersRunCommandTargetsOutputReference) validateSetInternalValueParameters(val *EventsRuleTargetsRunCommandParametersRunCommandTargets) error {
+func (j *jsiiProxy_EventsRuleTargetsRunCommandParametersRunCommandTargetsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

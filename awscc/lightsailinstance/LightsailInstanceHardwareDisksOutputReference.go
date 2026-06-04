@@ -84,8 +84,10 @@ type LightsailInstanceHardwareDisksOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetAttachedTo()
 	ResetAttachmentState()
+	ResetDiskName()
 	ResetIops()
 	ResetIsSystemDisk()
+	ResetPath()
 	ResetSizeInGb()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -674,6 +676,14 @@ func (l *jsiiProxy_LightsailInstanceHardwareDisksOutputReference) ResetAttachmen
 	)
 }
 
+func (l *jsiiProxy_LightsailInstanceHardwareDisksOutputReference) ResetDiskName() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetDiskName",
+		nil, // no parameters
+	)
+}
+
 func (l *jsiiProxy_LightsailInstanceHardwareDisksOutputReference) ResetIops() {
 	_jsii_.InvokeVoid(
 		l,
@@ -686,6 +696,14 @@ func (l *jsiiProxy_LightsailInstanceHardwareDisksOutputReference) ResetIsSystemD
 	_jsii_.InvokeVoid(
 		l,
 		"resetIsSystemDisk",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LightsailInstanceHardwareDisksOutputReference) ResetPath() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetPath",
 		nil, // no parameters
 	)
 }

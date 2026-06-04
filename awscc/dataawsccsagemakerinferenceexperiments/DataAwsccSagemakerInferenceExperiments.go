@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccsagemakerinferenceexperiments/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_inference_experiments awscc_sagemaker_inference_experiments}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_inference_experiments awscc_sagemaker_inference_experiments}.
 type DataAwsccSagemakerInferenceExperiments interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccSagemakerInferenceExperiments interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccSagemakerInferenceExperiments) TerraformResourceType
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_inference_experiments awscc_sagemaker_inference_experiments} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_inference_experiments awscc_sagemaker_inference_experiments} Data Source.
 func NewDataAwsccSagemakerInferenceExperiments(scope constructs.Construct, id *string, config *DataAwsccSagemakerInferenceExperimentsConfig) DataAwsccSagemakerInferenceExperiments {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccSagemakerInferenceExperiments(scope constructs.Construct, id *s
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_inference_experiments awscc_sagemaker_inference_experiments} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_inference_experiments awscc_sagemaker_inference_experiments} Data Source.
 func NewDataAwsccSagemakerInferenceExperiments_Override(d DataAwsccSagemakerInferenceExperiments, scope constructs.Construct, id *string, config *DataAwsccSagemakerInferenceExperimentsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccSagemakerInferenceExperiments) SynthesizeAttributes(
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerInferenceExperiments) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerInferenceExperiments) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

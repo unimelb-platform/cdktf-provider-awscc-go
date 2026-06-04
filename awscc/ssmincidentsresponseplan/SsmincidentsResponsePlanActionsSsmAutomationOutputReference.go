@@ -79,9 +79,11 @@ type SsmincidentsResponsePlanActionsSsmAutomationOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDynamicParameters(value interface{})
 	PutParameters(value interface{})
+	ResetDocumentName()
 	ResetDocumentVersion()
 	ResetDynamicParameters()
 	ResetParameters()
+	ResetRoleArn()
 	ResetTargetAccount()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -623,6 +625,14 @@ func (s *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationOutputReference) 
 	)
 }
 
+func (s *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationOutputReference) ResetDocumentName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDocumentName",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationOutputReference) ResetDocumentVersion() {
 	_jsii_.InvokeVoid(
 		s,
@@ -643,6 +653,14 @@ func (s *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationOutputReference) 
 	_jsii_.InvokeVoid(
 		s,
 		"resetParameters",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetRoleArn",
 		nil, // no parameters
 	)
 }

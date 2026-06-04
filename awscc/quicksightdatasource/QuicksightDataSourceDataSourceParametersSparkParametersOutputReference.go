@@ -67,6 +67,8 @@ type QuicksightDataSourceDataSourceParametersSparkParametersOutputReference inte
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetHost()
+	ResetPort()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersSparkParametersOutput
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersSparkParametersOutputReference) ResetHost() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetHost",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersSparkParametersOutputReference) ResetPort() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetPort",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersSparkParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

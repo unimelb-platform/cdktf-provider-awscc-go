@@ -52,6 +52,10 @@ func (d *jsiiProxy_DatazoneDataSourceConfigurationOutputReference) validatePutRe
 	return nil
 }
 
+func (d *jsiiProxy_DatazoneDataSourceConfigurationOutputReference) validatePutSageMakerRunConfigurationParameters(value *DatazoneDataSourceConfigurationSageMakerRunConfiguration) error {
+	return nil
+}
+
 func (d *jsiiProxy_DatazoneDataSourceConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

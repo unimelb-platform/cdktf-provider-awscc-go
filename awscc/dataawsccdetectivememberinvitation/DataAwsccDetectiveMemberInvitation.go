@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdetectivememberinvitation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/detective_member_invitation awscc_detective_member_invitation}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/detective_member_invitation awscc_detective_member_invitation}.
 type DataAwsccDetectiveMemberInvitation interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -87,6 +87,10 @@ type DataAwsccDetectiveMemberInvitation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -312,7 +316,7 @@ func (j *jsiiProxy_DataAwsccDetectiveMemberInvitation) TerraformResourceType() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/detective_member_invitation awscc_detective_member_invitation} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/detective_member_invitation awscc_detective_member_invitation} Data Source.
 func NewDataAwsccDetectiveMemberInvitation(scope constructs.Construct, id *string, config *DataAwsccDetectiveMemberInvitationConfig) DataAwsccDetectiveMemberInvitation {
 	_init_.Initialize()
 
@@ -330,7 +334,7 @@ func NewDataAwsccDetectiveMemberInvitation(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/detective_member_invitation awscc_detective_member_invitation} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/detective_member_invitation awscc_detective_member_invitation} Data Source.
 func NewDataAwsccDetectiveMemberInvitation_Override(d DataAwsccDetectiveMemberInvitation, scope constructs.Construct, id *string, config *DataAwsccDetectiveMemberInvitationConfig) {
 	_init_.Initialize()
 
@@ -697,6 +701,32 @@ func (d *jsiiProxy_DataAwsccDetectiveMemberInvitation) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDetectiveMemberInvitation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDetectiveMemberInvitation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

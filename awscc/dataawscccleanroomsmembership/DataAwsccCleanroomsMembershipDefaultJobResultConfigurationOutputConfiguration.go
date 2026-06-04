@@ -1,0 +1,6 @@
+package dataawscccleanroomsmembership
+
+
+type DataAwsccCleanroomsMembershipDefaultJobResultConfigurationOutputConfiguration struct {
+}
+

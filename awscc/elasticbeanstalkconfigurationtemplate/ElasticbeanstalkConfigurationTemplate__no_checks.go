@@ -56,7 +56,15 @@ func (e *jsiiProxy_ElasticbeanstalkConfigurationTemplate) validateInterpolationF
 	return nil
 }
 
+func (e *jsiiProxy_ElasticbeanstalkConfigurationTemplate) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_ElasticbeanstalkConfigurationTemplate) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_ElasticbeanstalkConfigurationTemplate) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

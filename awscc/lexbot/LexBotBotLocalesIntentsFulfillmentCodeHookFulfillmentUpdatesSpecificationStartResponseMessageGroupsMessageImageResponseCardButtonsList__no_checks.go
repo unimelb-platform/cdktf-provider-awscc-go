@@ -4,6 +4,10 @@ package lexbot
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (l *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupsMessageImageResponseCardButtonsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LexBotBotLocalesIntentsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupsMessageImageResponseCardButtonsList) validateGetParameters(index *float64) error {
 	return nil
 }

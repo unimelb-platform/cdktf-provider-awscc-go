@@ -34,6 +34,8 @@ type EntityresolutionIdMappingWorkflowIdMappingTechniquesOutputReference interfa
 	SetInternalValue(val interface{})
 	ProviderProperties() EntityresolutionIdMappingWorkflowIdMappingTechniquesProviderPropertiesOutputReference
 	ProviderPropertiesInput() interface{}
+	RuleBasedProperties() EntityresolutionIdMappingWorkflowIdMappingTechniquesRuleBasedPropertiesOutputReference
+	RuleBasedPropertiesInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,8 +69,10 @@ type EntityresolutionIdMappingWorkflowIdMappingTechniquesOutputReference interfa
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutProviderProperties(value *EntityresolutionIdMappingWorkflowIdMappingTechniquesProviderProperties)
+	PutRuleBasedProperties(value *EntityresolutionIdMappingWorkflowIdMappingTechniquesRuleBasedProperties)
 	ResetIdMappingType()
 	ResetProviderProperties()
+	ResetRuleBasedProperties()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -169,6 +173,26 @@ func (j *jsiiProxy_EntityresolutionIdMappingWorkflowIdMappingTechniquesOutputRef
 	_jsii_.Get(
 		j,
 		"providerPropertiesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EntityresolutionIdMappingWorkflowIdMappingTechniquesOutputReference) RuleBasedProperties() EntityresolutionIdMappingWorkflowIdMappingTechniquesRuleBasedPropertiesOutputReference {
+	var returns EntityresolutionIdMappingWorkflowIdMappingTechniquesRuleBasedPropertiesOutputReference
+	_jsii_.Get(
+		j,
+		"ruleBasedProperties",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EntityresolutionIdMappingWorkflowIdMappingTechniquesOutputReference) RuleBasedPropertiesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"ruleBasedPropertiesInput",
 		&returns,
 	)
 	return returns
@@ -485,6 +509,17 @@ func (e *jsiiProxy_EntityresolutionIdMappingWorkflowIdMappingTechniquesOutputRef
 	)
 }
 
+func (e *jsiiProxy_EntityresolutionIdMappingWorkflowIdMappingTechniquesOutputReference) PutRuleBasedProperties(value *EntityresolutionIdMappingWorkflowIdMappingTechniquesRuleBasedProperties) {
+	if err := e.validatePutRuleBasedPropertiesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putRuleBasedProperties",
+		[]interface{}{value},
+	)
+}
+
 func (e *jsiiProxy_EntityresolutionIdMappingWorkflowIdMappingTechniquesOutputReference) ResetIdMappingType() {
 	_jsii_.InvokeVoid(
 		e,
@@ -497,6 +532,14 @@ func (e *jsiiProxy_EntityresolutionIdMappingWorkflowIdMappingTechniquesOutputRef
 	_jsii_.InvokeVoid(
 		e,
 		"resetProviderProperties",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EntityresolutionIdMappingWorkflowIdMappingTechniquesOutputReference) ResetRuleBasedProperties() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetRuleBasedProperties",
 		nil, // no parameters
 	)
 }

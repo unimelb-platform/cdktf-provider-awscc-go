@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccchatbotmicrosoftteamschannelconfigurations/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/chatbot_microsoft_teams_channel_configurations awscc_chatbot_microsoft_teams_channel_configurations}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/chatbot_microsoft_teams_channel_configurations awscc_chatbot_microsoft_teams_channel_configurations}.
 type DataAwsccChatbotMicrosoftTeamsChannelConfigurations interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccChatbotMicrosoftTeamsChannelConfigurations interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccChatbotMicrosoftTeamsChannelConfigurations) Terrafor
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/chatbot_microsoft_teams_channel_configurations awscc_chatbot_microsoft_teams_channel_configurations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/chatbot_microsoft_teams_channel_configurations awscc_chatbot_microsoft_teams_channel_configurations} Data Source.
 func NewDataAwsccChatbotMicrosoftTeamsChannelConfigurations(scope constructs.Construct, id *string, config *DataAwsccChatbotMicrosoftTeamsChannelConfigurationsConfig) DataAwsccChatbotMicrosoftTeamsChannelConfigurations {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccChatbotMicrosoftTeamsChannelConfigurations(scope constructs.Con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/chatbot_microsoft_teams_channel_configurations awscc_chatbot_microsoft_teams_channel_configurations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/chatbot_microsoft_teams_channel_configurations awscc_chatbot_microsoft_teams_channel_configurations} Data Source.
 func NewDataAwsccChatbotMicrosoftTeamsChannelConfigurations_Override(d DataAwsccChatbotMicrosoftTeamsChannelConfigurations, scope constructs.Construct, id *string, config *DataAwsccChatbotMicrosoftTeamsChannelConfigurationsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccChatbotMicrosoftTeamsChannelConfigurations) Synthesi
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccChatbotMicrosoftTeamsChannelConfigurations) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccChatbotMicrosoftTeamsChannelConfigurations) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

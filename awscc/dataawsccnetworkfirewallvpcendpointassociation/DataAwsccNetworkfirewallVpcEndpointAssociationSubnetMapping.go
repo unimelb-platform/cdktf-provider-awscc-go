@@ -1,0 +1,6 @@
+package dataawsccnetworkfirewallvpcendpointassociation
+
+
+type DataAwsccNetworkfirewallVpcEndpointAssociationSubnetMapping struct {
+}
+

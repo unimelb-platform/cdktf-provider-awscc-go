@@ -56,7 +56,15 @@ func (d *jsiiProxy_DetectiveOrganizationAdmin) validateInterpolationForAttribute
 	return nil
 }
 
+func (d *jsiiProxy_DetectiveOrganizationAdmin) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DetectiveOrganizationAdmin) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DetectiveOrganizationAdmin) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

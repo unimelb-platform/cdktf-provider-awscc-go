@@ -68,7 +68,7 @@ func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceOutputReference) 
 	return nil
 }
 
-func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceOutputReference) validateSetInternalValueParameters(val *NetworkfirewallRuleGroupRuleGroupRulesSource) error {
+func (j *jsiiProxy_NetworkfirewallRuleGroupRuleGroupRulesSourceOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

@@ -67,6 +67,8 @@ type S3BucketReplicationConfigurationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutRules(value interface{})
+	ResetRole()
+	ResetRules()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -480,6 +482,22 @@ func (s *jsiiProxy_S3BucketReplicationConfigurationOutputReference) PutRules(val
 		s,
 		"putRules",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_S3BucketReplicationConfigurationOutputReference) ResetRole() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetRole",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketReplicationConfigurationOutputReference) ResetRules() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetRules",
+		nil, // no parameters
 	)
 }
 

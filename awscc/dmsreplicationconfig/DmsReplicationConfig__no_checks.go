@@ -56,7 +56,15 @@ func (d *jsiiProxy_DmsReplicationConfig) validateInterpolationForAttributeParame
 	return nil
 }
 
+func (d *jsiiProxy_DmsReplicationConfig) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DmsReplicationConfig) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DmsReplicationConfig) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -101,10 +109,6 @@ func (j *jsiiProxy_DmsReplicationConfig) validateSetLifecycleParameters(val *cdk
 }
 
 func (j *jsiiProxy_DmsReplicationConfig) validateSetProvisionersParameters(val *[]interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_DmsReplicationConfig) validateSetReplicationConfigArnParameters(val *string) error {
 	return nil
 }
 

@@ -60,7 +60,7 @@ func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationApplicat
 	return nil
 }
 
-func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentOutputReference) validateSetInternalValueParameters(val *Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent) error {
+func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

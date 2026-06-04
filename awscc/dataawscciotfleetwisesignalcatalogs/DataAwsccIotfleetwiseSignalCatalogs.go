@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciotfleetwisesignalcatalogs/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotfleetwise_signal_catalogs awscc_iotfleetwise_signal_catalogs}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotfleetwise_signal_catalogs awscc_iotfleetwise_signal_catalogs}.
 type DataAwsccIotfleetwiseSignalCatalogs interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccIotfleetwiseSignalCatalogs interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccIotfleetwiseSignalCatalogs) TerraformResourceType() 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotfleetwise_signal_catalogs awscc_iotfleetwise_signal_catalogs} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotfleetwise_signal_catalogs awscc_iotfleetwise_signal_catalogs} Data Source.
 func NewDataAwsccIotfleetwiseSignalCatalogs(scope constructs.Construct, id *string, config *DataAwsccIotfleetwiseSignalCatalogsConfig) DataAwsccIotfleetwiseSignalCatalogs {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccIotfleetwiseSignalCatalogs(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotfleetwise_signal_catalogs awscc_iotfleetwise_signal_catalogs} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotfleetwise_signal_catalogs awscc_iotfleetwise_signal_catalogs} Data Source.
 func NewDataAwsccIotfleetwiseSignalCatalogs_Override(d DataAwsccIotfleetwiseSignalCatalogs, scope constructs.Construct, id *string, config *DataAwsccIotfleetwiseSignalCatalogsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccIotfleetwiseSignalCatalogs) SynthesizeAttributes() *
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotfleetwiseSignalCatalogs) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotfleetwiseSignalCatalogs) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

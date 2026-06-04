@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciottwinmakersyncjob/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iottwinmaker_sync_job awscc_iottwinmaker_sync_job}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iottwinmaker_sync_job awscc_iottwinmaker_sync_job}.
 type DataAwsccIottwinmakerSyncJob interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -90,6 +90,10 @@ type DataAwsccIottwinmakerSyncJob interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -345,7 +349,7 @@ func (j *jsiiProxy_DataAwsccIottwinmakerSyncJob) WorkspaceId() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iottwinmaker_sync_job awscc_iottwinmaker_sync_job} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iottwinmaker_sync_job awscc_iottwinmaker_sync_job} Data Source.
 func NewDataAwsccIottwinmakerSyncJob(scope constructs.Construct, id *string, config *DataAwsccIottwinmakerSyncJobConfig) DataAwsccIottwinmakerSyncJob {
 	_init_.Initialize()
 
@@ -363,7 +367,7 @@ func NewDataAwsccIottwinmakerSyncJob(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iottwinmaker_sync_job awscc_iottwinmaker_sync_job} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iottwinmaker_sync_job awscc_iottwinmaker_sync_job} Data Source.
 func NewDataAwsccIottwinmakerSyncJob_Override(d DataAwsccIottwinmakerSyncJob, scope constructs.Construct, id *string, config *DataAwsccIottwinmakerSyncJobConfig) {
 	_init_.Initialize()
 
@@ -730,6 +734,32 @@ func (d *jsiiProxy_DataAwsccIottwinmakerSyncJob) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIottwinmakerSyncJob) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIottwinmakerSyncJob) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

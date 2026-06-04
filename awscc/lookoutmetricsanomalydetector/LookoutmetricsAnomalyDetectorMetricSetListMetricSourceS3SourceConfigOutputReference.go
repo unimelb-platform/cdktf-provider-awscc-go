@@ -26,7 +26,7 @@ type LookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3SourceConfigOutputR
 	// Experimental.
 	CreationStack() *[]*string
 	FileFormatDescriptor() LookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3SourceConfigFileFormatDescriptorOutputReference
-	FileFormatDescriptorInput() *LookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3SourceConfigFileFormatDescriptor
+	FileFormatDescriptorInput() interface{}
 	// Experimental.
 	Fqn() *string
 	HistoricalDataPathList() *[]*string
@@ -73,7 +73,9 @@ type LookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3SourceConfigOutputR
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutFileFormatDescriptor(value *LookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3SourceConfigFileFormatDescriptor)
+	ResetFileFormatDescriptor()
 	ResetHistoricalDataPathList()
+	ResetRoleArn()
 	ResetTemplatedPathList()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -130,8 +132,8 @@ func (j *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3Sourc
 	return returns
 }
 
-func (j *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3SourceConfigOutputReference) FileFormatDescriptorInput() *LookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3SourceConfigFileFormatDescriptor {
-	var returns *LookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3SourceConfigFileFormatDescriptor
+func (j *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3SourceConfigOutputReference) FileFormatDescriptorInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"fileFormatDescriptorInput",
@@ -553,10 +555,26 @@ func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3Sourc
 	)
 }
 
+func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3SourceConfigOutputReference) ResetFileFormatDescriptor() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetFileFormatDescriptor",
+		nil, // no parameters
+	)
+}
+
 func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3SourceConfigOutputReference) ResetHistoricalDataPathList() {
 	_jsii_.InvokeVoid(
 		l,
 		"resetHistoricalDataPathList",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceS3SourceConfigOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetRoleArn",
 		nil, // no parameters
 	)
 }

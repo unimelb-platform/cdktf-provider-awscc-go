@@ -90,7 +90,62 @@ func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validateInterpolation
 	return nil
 }
 
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validatePutDocDbSettingsParameters(value *DmsDataProviderSettingsDocDbSettings) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validatePutIbmDb2LuwSettingsParameters(value *DmsDataProviderSettingsIbmDb2LuwSettings) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validatePutIbmDb2ZOsSettingsParameters(value *DmsDataProviderSettingsIbmDb2ZOsSettings) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validatePutMariaDbSettingsParameters(value *DmsDataProviderSettingsMariaDbSettings) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validatePutMicrosoftSqlServerSettingsParameters(value *DmsDataProviderSettingsMicrosoftSqlServerSettings) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validatePutMongoDbSettingsParameters(value *DmsDataProviderSettingsMongoDbSettings) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -124,6 +179,17 @@ func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validatePutOracleSett
 }
 
 func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validatePutPostgreSqlSettingsParameters(value *DmsDataProviderSettingsPostgreSqlSettings) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DmsDataProviderSettingsOutputReference) validatePutRedshiftSettingsParameters(value *DmsDataProviderSettingsRedshiftSettings) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}

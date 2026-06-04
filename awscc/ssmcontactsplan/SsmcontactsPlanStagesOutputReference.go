@@ -67,6 +67,7 @@ type SsmcontactsPlanStagesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutTargets(value interface{})
+	ResetDurationInMinutes()
 	ResetTargets()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -481,6 +482,14 @@ func (s *jsiiProxy_SsmcontactsPlanStagesOutputReference) PutTargets(value interf
 		s,
 		"putTargets",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SsmcontactsPlanStagesOutputReference) ResetDurationInMinutes() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDurationInMinutes",
+		nil, // no parameters
 	)
 }
 

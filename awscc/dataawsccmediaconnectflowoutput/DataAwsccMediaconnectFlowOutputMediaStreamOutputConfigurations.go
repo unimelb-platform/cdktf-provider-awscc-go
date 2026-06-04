@@ -1,0 +1,6 @@
+package dataawsccmediaconnectflowoutput
+
+
+type DataAwsccMediaconnectFlowOutputMediaStreamOutputConfigurations struct {
+}
+

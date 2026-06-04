@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccguarddutythreatintelset/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/guardduty_threat_intel_set awscc_guardduty_threat_intel_set}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/guardduty_threat_intel_set awscc_guardduty_threat_intel_set}.
 type DataAwsccGuarddutyThreatIntelSet interface {
 	cdktf.TerraformDataSource
 	Activate() cdktf.IResolvable
@@ -59,6 +59,7 @@ type DataAwsccGuarddutyThreatIntelSet interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	ThreatIntelSetId() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -88,6 +89,10 @@ type DataAwsccGuarddutyThreatIntelSet interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -322,8 +327,18 @@ func (j *jsiiProxy_DataAwsccGuarddutyThreatIntelSet) TerraformResourceType() *st
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccGuarddutyThreatIntelSet) ThreatIntelSetId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"threatIntelSetId",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/guardduty_threat_intel_set awscc_guardduty_threat_intel_set} Data Source.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/guardduty_threat_intel_set awscc_guardduty_threat_intel_set} Data Source.
 func NewDataAwsccGuarddutyThreatIntelSet(scope constructs.Construct, id *string, config *DataAwsccGuarddutyThreatIntelSetConfig) DataAwsccGuarddutyThreatIntelSet {
 	_init_.Initialize()
 
@@ -341,7 +356,7 @@ func NewDataAwsccGuarddutyThreatIntelSet(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/guardduty_threat_intel_set awscc_guardduty_threat_intel_set} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/guardduty_threat_intel_set awscc_guardduty_threat_intel_set} Data Source.
 func NewDataAwsccGuarddutyThreatIntelSet_Override(d DataAwsccGuarddutyThreatIntelSet, scope constructs.Construct, id *string, config *DataAwsccGuarddutyThreatIntelSetConfig) {
 	_init_.Initialize()
 
@@ -708,6 +723,32 @@ func (d *jsiiProxy_DataAwsccGuarddutyThreatIntelSet) SynthesizeAttributes() *map
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGuarddutyThreatIntelSet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGuarddutyThreatIntelSet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -64,6 +64,7 @@ type LexBotBotLocalesIntentsSampleUtterancesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetUtterance()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsSampleUtterancesOutputReference) Inter
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSampleUtterancesOutputReference) ResetUtterance() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetUtterance",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotBotLocalesIntentsSampleUtterancesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

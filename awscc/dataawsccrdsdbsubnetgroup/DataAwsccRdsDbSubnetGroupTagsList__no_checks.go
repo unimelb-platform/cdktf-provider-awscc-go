@@ -4,6 +4,10 @@ package dataawsccrdsdbsubnetgroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccRdsDbSubnetGroupTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccRdsDbSubnetGroupTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -163,9 +163,25 @@ func (j *jsiiProxy_CleanroomsCollaborationCreatorPaymentConfigurationQueryComput
 	return nil
 }
 
-func (j *jsiiProxy_CleanroomsCollaborationCreatorPaymentConfigurationQueryComputeOutputReference) validateSetInternalValueParameters(val *CleanroomsCollaborationCreatorPaymentConfigurationQueryCompute) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_CleanroomsCollaborationCreatorPaymentConfigurationQueryComputeOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *CleanroomsCollaborationCreatorPaymentConfigurationQueryCompute:
+		val := val.(*CleanroomsCollaborationCreatorPaymentConfigurationQueryCompute)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case CleanroomsCollaborationCreatorPaymentConfigurationQueryCompute:
+		val_ := val.(CleanroomsCollaborationCreatorPaymentConfigurationQueryCompute)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *CleanroomsCollaborationCreatorPaymentConfigurationQueryCompute; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

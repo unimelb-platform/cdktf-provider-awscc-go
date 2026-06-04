@@ -29,7 +29,6 @@ type DataAwsccWafv2LoggingConfigurationRedactedFieldsOutputReference interface {
 	Fqn() *string
 	InternalValue() *DataAwsccWafv2LoggingConfigurationRedactedFields
 	SetInternalValue(val *DataAwsccWafv2LoggingConfigurationRedactedFields)
-	JsonBody() DataAwsccWafv2LoggingConfigurationRedactedFieldsJsonBodyOutputReference
 	Method() *string
 	QueryString() *string
 	SingleHeader() DataAwsccWafv2LoggingConfigurationRedactedFieldsSingleHeaderOutputReference
@@ -126,16 +125,6 @@ func (j *jsiiProxy_DataAwsccWafv2LoggingConfigurationRedactedFieldsOutputReferen
 	_jsii_.Get(
 		j,
 		"internalValue",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataAwsccWafv2LoggingConfigurationRedactedFieldsOutputReference) JsonBody() DataAwsccWafv2LoggingConfigurationRedactedFieldsJsonBodyOutputReference {
-	var returns DataAwsccWafv2LoggingConfigurationRedactedFieldsJsonBodyOutputReference
-	_jsii_.Get(
-		j,
-		"jsonBody",
 		&returns,
 	)
 	return returns

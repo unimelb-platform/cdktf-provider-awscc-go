@@ -19,7 +19,9 @@ type CloudfrontContinuousDeploymentPolicyConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudfront_continuous_deployment_policy#continuous_deployment_policy_config CloudfrontContinuousDeploymentPolicy#continuous_deployment_policy_config}.
+	// Contains the configuration for a continuous deployment policy.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudfront_continuous_deployment_policy#continuous_deployment_policy_config CloudfrontContinuousDeploymentPolicy#continuous_deployment_policy_config}
 	ContinuousDeploymentPolicyConfig *CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolicyConfig `field:"required" json:"continuousDeploymentPolicyConfig" yaml:"continuousDeploymentPolicyConfig"`
 }
 

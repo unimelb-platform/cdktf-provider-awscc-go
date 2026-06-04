@@ -67,6 +67,7 @@ type AthenaWorkGroupWorkGroupConfigurationUpdatesResultConfigurationUpdatesEncry
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEncryptionOption()
 	ResetKmsKey()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (a *jsiiProxy_AthenaWorkGroupWorkGroupConfigurationUpdatesResultConfigurati
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AthenaWorkGroupWorkGroupConfigurationUpdatesResultConfigurationUpdatesEncryptionConfigurationOutputReference) ResetEncryptionOption() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetEncryptionOption",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AthenaWorkGroupWorkGroupConfigurationUpdatesResultConfigurationUpdatesEncryptionConfigurationOutputReference) ResetKmsKey() {

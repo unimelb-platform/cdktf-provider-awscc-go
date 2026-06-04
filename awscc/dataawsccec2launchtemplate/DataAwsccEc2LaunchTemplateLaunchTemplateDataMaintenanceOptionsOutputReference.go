@@ -30,7 +30,6 @@ type DataAwsccEc2LaunchTemplateLaunchTemplateDataMaintenanceOptionsOutputReferen
 	Fqn() *string
 	InternalValue() *DataAwsccEc2LaunchTemplateLaunchTemplateDataMaintenanceOptions
 	SetInternalValue(val *DataAwsccEc2LaunchTemplateLaunchTemplateDataMaintenanceOptions)
-	RebootMigration() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -133,16 +132,6 @@ func (j *jsiiProxy_DataAwsccEc2LaunchTemplateLaunchTemplateDataMaintenanceOption
 	_jsii_.Get(
 		j,
 		"internalValue",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataAwsccEc2LaunchTemplateLaunchTemplateDataMaintenanceOptionsOutputReference) RebootMigration() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"rebootMigration",
 		&returns,
 	)
 	return returns

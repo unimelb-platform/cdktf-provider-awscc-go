@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccfsxdatarepositoryassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/fsx_data_repository_association awscc_fsx_data_repository_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/fsx_data_repository_association awscc_fsx_data_repository_association}.
 type DataAwsccFsxDataRepositoryAssociation interface {
 	cdktf.TerraformDataSource
 	AssociationId() *string
@@ -91,6 +91,10 @@ type DataAwsccFsxDataRepositoryAssociation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -356,7 +360,7 @@ func (j *jsiiProxy_DataAwsccFsxDataRepositoryAssociation) TerraformResourceType(
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/fsx_data_repository_association awscc_fsx_data_repository_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/fsx_data_repository_association awscc_fsx_data_repository_association} Data Source.
 func NewDataAwsccFsxDataRepositoryAssociation(scope constructs.Construct, id *string, config *DataAwsccFsxDataRepositoryAssociationConfig) DataAwsccFsxDataRepositoryAssociation {
 	_init_.Initialize()
 
@@ -374,7 +378,7 @@ func NewDataAwsccFsxDataRepositoryAssociation(scope constructs.Construct, id *st
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/fsx_data_repository_association awscc_fsx_data_repository_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/fsx_data_repository_association awscc_fsx_data_repository_association} Data Source.
 func NewDataAwsccFsxDataRepositoryAssociation_Override(d DataAwsccFsxDataRepositoryAssociation, scope constructs.Construct, id *string, config *DataAwsccFsxDataRepositoryAssociationConfig) {
 	_init_.Initialize()
 
@@ -741,6 +745,32 @@ func (d *jsiiProxy_DataAwsccFsxDataRepositoryAssociation) SynthesizeAttributes()
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccFsxDataRepositoryAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccFsxDataRepositoryAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

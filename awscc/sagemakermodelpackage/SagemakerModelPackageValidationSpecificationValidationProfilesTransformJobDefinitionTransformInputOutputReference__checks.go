@@ -190,9 +190,25 @@ func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 	return nil
 }
 
-func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputOutputReference) validateSetInternalValueParameters(val *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInput) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInput:
+		val := val.(*SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInput)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInput:
+		val_ := val.(SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInput)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInput; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

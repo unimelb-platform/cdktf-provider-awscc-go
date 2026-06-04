@@ -68,6 +68,7 @@ type IotfleetwiseSignalCatalogNodesBranchOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetDescription()
+	ResetFullyQualifiedName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (i *jsiiProxy_IotfleetwiseSignalCatalogNodesBranchOutputReference) ResetDes
 	_jsii_.InvokeVoid(
 		i,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotfleetwiseSignalCatalogNodesBranchOutputReference) ResetFullyQualifiedName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetFullyQualifiedName",
 		nil, // no parameters
 	)
 }

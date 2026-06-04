@@ -51,7 +51,7 @@ type LexBotBotLocalesIntentsSlotsOutputReference interface {
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	ValueElicitationSetting() LexBotBotLocalesIntentsSlotsValueElicitationSettingOutputReference
-	ValueElicitationSettingInput() *LexBotBotLocalesIntentsSlotsValueElicitationSetting
+	ValueElicitationSettingInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -81,7 +81,10 @@ type LexBotBotLocalesIntentsSlotsOutputReference interface {
 	PutValueElicitationSetting(value *LexBotBotLocalesIntentsSlotsValueElicitationSetting)
 	ResetDescription()
 	ResetMultipleValuesSetting()
+	ResetName()
 	ResetObfuscationSetting()
+	ResetSlotTypeName()
+	ResetValueElicitationSetting()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -277,8 +280,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsOutputReference) ValueElicitation
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsOutputReference) ValueElicitationSettingInput() *LexBotBotLocalesIntentsSlotsValueElicitationSetting {
-	var returns *LexBotBotLocalesIntentsSlotsValueElicitationSetting
+func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsOutputReference) ValueElicitationSettingInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"valueElicitationSettingInput",
@@ -638,10 +641,34 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsOutputReference) ResetMultipleVal
 	)
 }
 
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
 func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsOutputReference) ResetObfuscationSetting() {
 	_jsii_.InvokeVoid(
 		l,
 		"resetObfuscationSetting",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsOutputReference) ResetSlotTypeName() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetSlotTypeName",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsOutputReference) ResetValueElicitationSetting() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetValueElicitationSetting",
 		nil, // no parameters
 	)
 }

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/logsquerydefinition/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_query_definition awscc_logs_query_definition}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_query_definition awscc_logs_query_definition}.
 type LogsQueryDefinition interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -58,6 +58,9 @@ type LogsQueryDefinition interface {
 	// Experimental.
 	SetProvisioners(val *[]interface{})
 	QueryDefinitionId() *string
+	QueryLanguage() *string
+	SetQueryLanguage(val *string)
+	QueryLanguageInput() *string
 	QueryString() *string
 	SetQueryString(val *string)
 	QueryStringInput() *string
@@ -93,12 +96,22 @@ type LogsQueryDefinition interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -106,7 +119,11 @@ type LogsQueryDefinition interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetQueryLanguage()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -301,6 +318,26 @@ func (j *jsiiProxy_LogsQueryDefinition) QueryDefinitionId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_LogsQueryDefinition) QueryLanguage() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"queryLanguage",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LogsQueryDefinition) QueryLanguageInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"queryLanguageInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_LogsQueryDefinition) QueryString() *string {
 	var returns *string
 	_jsii_.Get(
@@ -362,7 +399,7 @@ func (j *jsiiProxy_LogsQueryDefinition) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_query_definition awscc_logs_query_definition} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_query_definition awscc_logs_query_definition} Resource.
 func NewLogsQueryDefinition(scope constructs.Construct, id *string, config *LogsQueryDefinitionConfig) LogsQueryDefinition {
 	_init_.Initialize()
 
@@ -380,7 +417,7 @@ func NewLogsQueryDefinition(scope constructs.Construct, id *string, config *Logs
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_query_definition awscc_logs_query_definition} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_query_definition awscc_logs_query_definition} Resource.
 func NewLogsQueryDefinition_Override(l LogsQueryDefinition, scope constructs.Construct, id *string, config *LogsQueryDefinitionConfig) {
 	_init_.Initialize()
 
@@ -477,6 +514,17 @@ func (j *jsiiProxy_LogsQueryDefinition)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LogsQueryDefinition)SetQueryLanguage(val *string) {
+	if err := j.validateSetQueryLanguageParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"queryLanguage",
 		val,
 	)
 }
@@ -761,6 +809,19 @@ func (l *jsiiProxy_LogsQueryDefinition) GetStringMapAttribute(terraformAttribute
 	return returns
 }
 
+func (l *jsiiProxy_LogsQueryDefinition) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (l *jsiiProxy_LogsQueryDefinition) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := l.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -788,6 +849,17 @@ func (l *jsiiProxy_LogsQueryDefinition) InterpolationForAttribute(terraformAttri
 	return returns
 }
 
+func (l *jsiiProxy_LogsQueryDefinition) MoveFromId(id *string) {
+	if err := l.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (l *jsiiProxy_LogsQueryDefinition) MoveTo(moveTarget *string, index interface{}) {
 	if err := l.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -796,6 +868,17 @@ func (l *jsiiProxy_LogsQueryDefinition) MoveTo(moveTarget *string, index interfa
 		l,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (l *jsiiProxy_LogsQueryDefinition) MoveToId(id *string) {
+	if err := l.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -826,12 +909,46 @@ func (l *jsiiProxy_LogsQueryDefinition) ResetOverrideLogicalId() {
 	)
 }
 
+func (l *jsiiProxy_LogsQueryDefinition) ResetQueryLanguage() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetQueryLanguage",
+		nil, // no parameters
+	)
+}
+
 func (l *jsiiProxy_LogsQueryDefinition) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		l,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LogsQueryDefinition) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		l,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LogsQueryDefinition) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

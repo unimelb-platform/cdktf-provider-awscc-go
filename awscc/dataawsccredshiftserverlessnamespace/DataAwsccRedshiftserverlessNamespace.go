@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccredshiftserverlessnamespace/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/redshiftserverless_namespace awscc_redshiftserverless_namespace}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/redshiftserverless_namespace awscc_redshiftserverless_namespace}.
 type DataAwsccRedshiftserverlessNamespace interface {
 	cdktf.TerraformDataSource
 	AdminPasswordSecretKmsKeyId() *string
@@ -62,6 +62,7 @@ type DataAwsccRedshiftserverlessNamespace interface {
 	// Experimental.
 	RawOverrides() interface{}
 	RedshiftIdcApplicationArn() *string
+	SnapshotCopyConfigurations() DataAwsccRedshiftserverlessNamespaceSnapshotCopyConfigurationsList
 	Tags() DataAwsccRedshiftserverlessNamespaceTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -98,6 +99,10 @@ type DataAwsccRedshiftserverlessNamespace interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -392,6 +397,16 @@ func (j *jsiiProxy_DataAwsccRedshiftserverlessNamespace) RedshiftIdcApplicationA
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRedshiftserverlessNamespace) SnapshotCopyConfigurations() DataAwsccRedshiftserverlessNamespaceSnapshotCopyConfigurationsList {
+	var returns DataAwsccRedshiftserverlessNamespaceSnapshotCopyConfigurationsList
+	_jsii_.Get(
+		j,
+		"snapshotCopyConfigurations",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRedshiftserverlessNamespace) Tags() DataAwsccRedshiftserverlessNamespaceTagsList {
 	var returns DataAwsccRedshiftserverlessNamespaceTagsList
 	_jsii_.Get(
@@ -433,7 +448,7 @@ func (j *jsiiProxy_DataAwsccRedshiftserverlessNamespace) TerraformResourceType()
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/redshiftserverless_namespace awscc_redshiftserverless_namespace} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/redshiftserverless_namespace awscc_redshiftserverless_namespace} Data Source.
 func NewDataAwsccRedshiftserverlessNamespace(scope constructs.Construct, id *string, config *DataAwsccRedshiftserverlessNamespaceConfig) DataAwsccRedshiftserverlessNamespace {
 	_init_.Initialize()
 
@@ -451,7 +466,7 @@ func NewDataAwsccRedshiftserverlessNamespace(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/redshiftserverless_namespace awscc_redshiftserverless_namespace} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/redshiftserverless_namespace awscc_redshiftserverless_namespace} Data Source.
 func NewDataAwsccRedshiftserverlessNamespace_Override(d DataAwsccRedshiftserverlessNamespace, scope constructs.Construct, id *string, config *DataAwsccRedshiftserverlessNamespaceConfig) {
 	_init_.Initialize()
 
@@ -818,6 +833,32 @@ func (d *jsiiProxy_DataAwsccRedshiftserverlessNamespace) SynthesizeAttributes() 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRedshiftserverlessNamespace) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRedshiftserverlessNamespace) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

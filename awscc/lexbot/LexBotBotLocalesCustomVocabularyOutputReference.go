@@ -64,6 +64,7 @@ type LexBotBotLocalesCustomVocabularyOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutCustomVocabularyItems(value interface{})
+	ResetCustomVocabularyItems()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -446,6 +447,14 @@ func (l *jsiiProxy_LexBotBotLocalesCustomVocabularyOutputReference) PutCustomVoc
 		l,
 		"putCustomVocabularyItems",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesCustomVocabularyOutputReference) ResetCustomVocabularyItems() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetCustomVocabularyItems",
+		nil, // no parameters
 	)
 }
 

@@ -37,6 +37,7 @@ type DataAwsccTransferConnectorAs2ConfigOutputReference interface {
 	MdnSigningAlgorithm() *string
 	MessageSubject() *string
 	PartnerProfileId() *string
+	PreserveContentType() *string
 	SigningAlgorithm() *string
 	// Experimental.
 	TerraformAttribute() *string
@@ -210,6 +211,16 @@ func (j *jsiiProxy_DataAwsccTransferConnectorAs2ConfigOutputReference) PartnerPr
 	_jsii_.Get(
 		j,
 		"partnerProfileId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccTransferConnectorAs2ConfigOutputReference) PreserveContentType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"preserveContentType",
 		&returns,
 	)
 	return returns

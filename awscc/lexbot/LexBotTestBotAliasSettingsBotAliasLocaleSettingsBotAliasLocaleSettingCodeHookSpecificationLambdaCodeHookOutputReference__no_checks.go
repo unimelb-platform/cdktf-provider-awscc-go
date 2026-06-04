@@ -60,7 +60,7 @@ func (j *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocal
 	return nil
 }
 
-func (j *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHookOutputReference) validateSetInternalValueParameters(val *LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHook) error {
+func (j *jsiiProxy_LexBotTestBotAliasSettingsBotAliasLocaleSettingsBotAliasLocaleSettingCodeHookSpecificationLambdaCodeHookOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

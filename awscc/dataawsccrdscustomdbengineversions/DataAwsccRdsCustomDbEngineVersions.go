@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccrdscustomdbengineversions/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_custom_db_engine_versions awscc_rds_custom_db_engine_versions}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_custom_db_engine_versions awscc_rds_custom_db_engine_versions}.
 type DataAwsccRdsCustomDbEngineVersions interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccRdsCustomDbEngineVersions interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccRdsCustomDbEngineVersions) TerraformResourceType() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_custom_db_engine_versions awscc_rds_custom_db_engine_versions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_custom_db_engine_versions awscc_rds_custom_db_engine_versions} Data Source.
 func NewDataAwsccRdsCustomDbEngineVersions(scope constructs.Construct, id *string, config *DataAwsccRdsCustomDbEngineVersionsConfig) DataAwsccRdsCustomDbEngineVersions {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccRdsCustomDbEngineVersions(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_custom_db_engine_versions awscc_rds_custom_db_engine_versions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_custom_db_engine_versions awscc_rds_custom_db_engine_versions} Data Source.
 func NewDataAwsccRdsCustomDbEngineVersions_Override(d DataAwsccRdsCustomDbEngineVersions, scope constructs.Construct, id *string, config *DataAwsccRdsCustomDbEngineVersionsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccRdsCustomDbEngineVersions) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRdsCustomDbEngineVersions) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRdsCustomDbEngineVersions) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

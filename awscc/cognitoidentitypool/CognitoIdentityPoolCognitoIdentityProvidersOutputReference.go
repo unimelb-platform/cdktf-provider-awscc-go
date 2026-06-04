@@ -70,6 +70,8 @@ type CognitoIdentityPoolCognitoIdentityProvidersOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetClientId()
+	ResetProviderName()
 	ResetServerSideTokenCheck()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -516,6 +518,22 @@ func (c *jsiiProxy_CognitoIdentityPoolCognitoIdentityProvidersOutputReference) I
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CognitoIdentityPoolCognitoIdentityProvidersOutputReference) ResetClientId() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetClientId",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CognitoIdentityPoolCognitoIdentityProvidersOutputReference) ResetProviderName() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetProviderName",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CognitoIdentityPoolCognitoIdentityProvidersOutputReference) ResetServerSideTokenCheck() {

@@ -76,6 +76,7 @@ type ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutputRefer
 	ResetBlockedDates()
 	ResetBlockedWindows()
 	ResetBlockingAlarms()
+	ResetOutcomeAlarms()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -574,6 +575,14 @@ func (a *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurat
 	_jsii_.InvokeVoid(
 		a,
 		"resetBlockingAlarms",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutputReference) ResetOutcomeAlarms() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetOutcomeAlarms",
 		nil, // no parameters
 	)
 }

@@ -4,6 +4,10 @@ package mediapackagepackaginggroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (m *jsiiProxy_MediapackagePackagingGroupTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_MediapackagePackagingGroupTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

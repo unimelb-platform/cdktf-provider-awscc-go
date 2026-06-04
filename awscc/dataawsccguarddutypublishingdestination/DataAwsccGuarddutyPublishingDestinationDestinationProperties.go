@@ -1,0 +1,6 @@
+package dataawsccguarddutypublishingdestination
+
+
+type DataAwsccGuarddutyPublishingDestinationDestinationProperties struct {
+}
+

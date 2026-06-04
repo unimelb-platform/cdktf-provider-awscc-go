@@ -43,7 +43,7 @@ type IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeM
 	Variables() IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeMetricVariablesList
 	VariablesInput() interface{}
 	Window() IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeMetricWindowOutputReference
-	WindowInput() *IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeMetricWindow
+	WindowInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -70,6 +70,9 @@ type IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeM
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutVariables(value interface{})
 	PutWindow(value *IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeMetricWindow)
+	ResetExpression()
+	ResetVariables()
+	ResetWindow()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -205,8 +208,8 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelP
 	return returns
 }
 
-func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeMetricOutputReference) WindowInput() *IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeMetricWindow {
-	var returns *IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeMetricWindow
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeMetricOutputReference) WindowInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"windowInput",
@@ -514,6 +517,30 @@ func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelP
 		i,
 		"putWindow",
 		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeMetricOutputReference) ResetExpression() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetExpression",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeMetricOutputReference) ResetVariables() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetVariables",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesTypeMetricOutputReference) ResetWindow() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetWindow",
+		nil, // no parameters
 	)
 }
 

@@ -21,11 +21,11 @@ type RobomakerFleetConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The name of the fleet.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/robomaker_fleet#name RobomakerFleet#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/robomaker_fleet#name RobomakerFleet#name}
 	Name *string `field:"optional" json:"name" yaml:"name"`
 	// A key-value pair to associate with a resource.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/robomaker_fleet#tags RobomakerFleet#tags}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/robomaker_fleet#tags RobomakerFleet#tags}
 	Tags *map[string]*string `field:"optional" json:"tags" yaml:"tags"`
 }
 

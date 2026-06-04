@@ -56,7 +56,15 @@ func (e *jsiiProxy_Ec2VerifiedAccessTrustProvider) validateInterpolationForAttri
 	return nil
 }
 
+func (e *jsiiProxy_Ec2VerifiedAccessTrustProvider) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VerifiedAccessTrustProvider) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VerifiedAccessTrustProvider) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -65,6 +73,10 @@ func (e *jsiiProxy_Ec2VerifiedAccessTrustProvider) validateOverrideLogicalIdPara
 }
 
 func (e *jsiiProxy_Ec2VerifiedAccessTrustProvider) validatePutDeviceOptionsParameters(value *Ec2VerifiedAccessTrustProviderDeviceOptions) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VerifiedAccessTrustProvider) validatePutNativeApplicationOidcOptionsParameters(value *Ec2VerifiedAccessTrustProviderNativeApplicationOidcOptions) error {
 	return nil
 }
 

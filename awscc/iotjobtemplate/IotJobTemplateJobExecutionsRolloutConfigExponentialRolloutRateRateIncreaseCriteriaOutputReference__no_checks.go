@@ -56,7 +56,7 @@ func (j *jsiiProxy_IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRat
 	return nil
 }
 
-func (j *jsiiProxy_IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateRateIncreaseCriteriaOutputReference) validateSetInternalValueParameters(val *IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateRateIncreaseCriteria) error {
+func (j *jsiiProxy_IotJobTemplateJobExecutionsRolloutConfigExponentialRolloutRateRateIncreaseCriteriaOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

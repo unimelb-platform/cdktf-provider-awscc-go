@@ -119,6 +119,14 @@ func (c *jsiiProxy_CassandraTable) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
+func (c *jsiiProxy_CassandraTable) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (c *jsiiProxy_CassandraTable) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (c *jsiiProxy_CassandraTable) validateMoveToParameters(moveTarget *string, 
 	return nil
 }
 
+func (c *jsiiProxy_CassandraTable) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (c *jsiiProxy_CassandraTable) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -200,6 +216,17 @@ func (c *jsiiProxy_CassandraTable) validatePutAutoScalingSpecificationsParameter
 }
 
 func (c *jsiiProxy_CassandraTable) validatePutBillingModeParameters(value *CassandraTableBillingMode) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (c *jsiiProxy_CassandraTable) validatePutCdcSpecificationParameters(value *CassandraTableCdcSpecification) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}

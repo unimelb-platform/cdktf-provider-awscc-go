@@ -27,9 +27,11 @@ type CleanroomsAnalysisTemplateSchemaOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *CleanroomsAnalysisTemplateSchema
-	SetInternalValue(val *CleanroomsAnalysisTemplateSchema)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	ReferencedTables() *[]*string
+	SetReferencedTables(val *[]*string)
+	ReferencedTablesInput() *[]*string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -62,6 +64,7 @@ type CleanroomsAnalysisTemplateSchemaOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetReferencedTables()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -117,8 +120,8 @@ func (j *jsiiProxy_CleanroomsAnalysisTemplateSchemaOutputReference) Fqn() *strin
 	return returns
 }
 
-func (j *jsiiProxy_CleanroomsAnalysisTemplateSchemaOutputReference) InternalValue() *CleanroomsAnalysisTemplateSchema {
-	var returns *CleanroomsAnalysisTemplateSchema
+func (j *jsiiProxy_CleanroomsAnalysisTemplateSchemaOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -132,6 +135,16 @@ func (j *jsiiProxy_CleanroomsAnalysisTemplateSchemaOutputReference) ReferencedTa
 	_jsii_.Get(
 		j,
 		"referencedTables",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsAnalysisTemplateSchemaOutputReference) ReferencedTablesInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"referencedTablesInput",
 		&returns,
 	)
 	return returns
@@ -207,13 +220,24 @@ func (j *jsiiProxy_CleanroomsAnalysisTemplateSchemaOutputReference)SetComplexObj
 	)
 }
 
-func (j *jsiiProxy_CleanroomsAnalysisTemplateSchemaOutputReference)SetInternalValue(val *CleanroomsAnalysisTemplateSchema) {
+func (j *jsiiProxy_CleanroomsAnalysisTemplateSchemaOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CleanroomsAnalysisTemplateSchemaOutputReference)SetReferencedTables(val *[]*string) {
+	if err := j.validateSetReferencedTablesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"referencedTables",
 		val,
 	)
 }
@@ -424,6 +448,14 @@ func (c *jsiiProxy_CleanroomsAnalysisTemplateSchemaOutputReference) Interpolatio
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CleanroomsAnalysisTemplateSchemaOutputReference) ResetReferencedTables() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetReferencedTables",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CleanroomsAnalysisTemplateSchemaOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

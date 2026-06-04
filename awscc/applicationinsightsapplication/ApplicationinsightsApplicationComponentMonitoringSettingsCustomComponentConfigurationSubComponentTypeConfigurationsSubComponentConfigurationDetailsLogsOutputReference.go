@@ -79,6 +79,7 @@ type ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentCon
 	ResetEncoding()
 	ResetLogGroupName()
 	ResetLogPath()
+	ResetLogType()
 	ResetPatternSet()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -609,6 +610,14 @@ func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsCust
 	_jsii_.InvokeVoid(
 		a,
 		"resetLogPath",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsLogsOutputReference) ResetLogType() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetLogType",
 		nil, // no parameters
 	)
 }

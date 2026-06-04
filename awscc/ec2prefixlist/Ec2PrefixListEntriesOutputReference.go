@@ -67,6 +67,7 @@ type Ec2PrefixListEntriesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCidr()
 	ResetDescription()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (e *jsiiProxy_Ec2PrefixListEntriesOutputReference) InterpolationForAttribut
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_Ec2PrefixListEntriesOutputReference) ResetCidr() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetCidr",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_Ec2PrefixListEntriesOutputReference) ResetDescription() {

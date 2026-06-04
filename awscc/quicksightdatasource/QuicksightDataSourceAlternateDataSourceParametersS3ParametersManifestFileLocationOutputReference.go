@@ -30,8 +30,8 @@ type QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLo
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocation
-	SetInternalValue(val *QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocation)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Key() *string
 	SetKey(val *string)
 	KeyInput() *string
@@ -67,6 +67,8 @@ type QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLo
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucket()
+	ResetKey()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -142,8 +144,8 @@ func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersS3Parameters
 	return returns
 }
 
-func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocationOutputReference) InternalValue() *QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocation {
-	var returns *QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocation
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -253,7 +255,7 @@ func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersS3Parameters
 	)
 }
 
-func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocationOutputReference)SetInternalValue(val *QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocation) {
+func (j *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersS3Parameters
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocationOutputReference) ResetBucket() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetBucket",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocationOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetKey",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersS3ParametersManifestFileLocationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

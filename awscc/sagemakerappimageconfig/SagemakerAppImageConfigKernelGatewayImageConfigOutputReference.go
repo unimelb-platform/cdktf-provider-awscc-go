@@ -68,6 +68,7 @@ type SagemakerAppImageConfigKernelGatewayImageConfigOutputReference interface {
 	PutFileSystemConfig(value *SagemakerAppImageConfigKernelGatewayImageConfigFileSystemConfig)
 	PutKernelSpecs(value interface{})
 	ResetFileSystemConfig()
+	ResetKernelSpecs()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (s *jsiiProxy_SagemakerAppImageConfigKernelGatewayImageConfigOutputReferenc
 	_jsii_.InvokeVoid(
 		s,
 		"resetFileSystemConfig",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerAppImageConfigKernelGatewayImageConfigOutputReference) ResetKernelSpecs() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetKernelSpecs",
 		nil, // no parameters
 	)
 }

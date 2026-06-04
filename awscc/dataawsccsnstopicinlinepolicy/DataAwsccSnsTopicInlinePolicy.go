@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccsnstopicinlinepolicy/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sns_topic_inline_policy awscc_sns_topic_inline_policy}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sns_topic_inline_policy awscc_sns_topic_inline_policy}.
 type DataAwsccSnsTopicInlinePolicy interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -84,6 +84,10 @@ type DataAwsccSnsTopicInlinePolicy interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -279,7 +283,7 @@ func (j *jsiiProxy_DataAwsccSnsTopicInlinePolicy) TopicArn() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sns_topic_inline_policy awscc_sns_topic_inline_policy} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sns_topic_inline_policy awscc_sns_topic_inline_policy} Data Source.
 func NewDataAwsccSnsTopicInlinePolicy(scope constructs.Construct, id *string, config *DataAwsccSnsTopicInlinePolicyConfig) DataAwsccSnsTopicInlinePolicy {
 	_init_.Initialize()
 
@@ -297,7 +301,7 @@ func NewDataAwsccSnsTopicInlinePolicy(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sns_topic_inline_policy awscc_sns_topic_inline_policy} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sns_topic_inline_policy awscc_sns_topic_inline_policy} Data Source.
 func NewDataAwsccSnsTopicInlinePolicy_Override(d DataAwsccSnsTopicInlinePolicy, scope constructs.Construct, id *string, config *DataAwsccSnsTopicInlinePolicyConfig) {
 	_init_.Initialize()
 
@@ -664,6 +668,32 @@ func (d *jsiiProxy_DataAwsccSnsTopicInlinePolicy) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSnsTopicInlinePolicy) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSnsTopicInlinePolicy) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

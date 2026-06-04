@@ -64,6 +64,7 @@ type KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfiguratio
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDefaultDocumentIdFormat()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinati
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationDocumentIdOptionsOutputReference) ResetDefaultDocumentIdFormat() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetDefaultDocumentIdFormat",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationDocumentIdOptionsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

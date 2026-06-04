@@ -56,7 +56,7 @@ func (j *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVe
 	return nil
 }
 
-func (j *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersionOutputReference) validateSetInternalValueParameters(val *ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersion) error {
+func (j *jsiiProxy_ApprunnerServiceSourceConfigurationCodeRepositorySourceCodeVersionOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

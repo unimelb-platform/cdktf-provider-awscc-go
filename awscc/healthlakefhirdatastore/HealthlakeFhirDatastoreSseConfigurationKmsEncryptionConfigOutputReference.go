@@ -30,8 +30,8 @@ type HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfigOutputReference i
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfig
-	SetInternalValue(val *HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfig)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	KmsKeyId() *string
 	SetKmsKeyId(val *string)
 	KmsKeyIdInput() *string
@@ -67,6 +67,7 @@ type HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfigOutputReference i
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCmkType()
 	ResetKmsKeyId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -143,8 +144,8 @@ func (j *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfigOut
 	return returns
 }
 
-func (j *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfigOutputReference) InternalValue() *HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfig {
-	var returns *HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfig
+func (j *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfigOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -254,7 +255,7 @@ func (j *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfigOut
 	)
 }
 
-func (j *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfigOutputReference)SetInternalValue(val *HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfig) {
+func (j *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfigOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -482,6 +483,14 @@ func (h *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfigOut
 	)
 
 	return returns
+}
+
+func (h *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfigOutputReference) ResetCmkType() {
+	_jsii_.InvokeVoid(
+		h,
+		"resetCmkType",
+		nil, // no parameters
+	)
 }
 
 func (h *jsiiProxy_HealthlakeFhirDatastoreSseConfigurationKmsEncryptionConfigOutputReference) ResetKmsKeyId() {

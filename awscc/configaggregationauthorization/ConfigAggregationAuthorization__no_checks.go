@@ -56,7 +56,15 @@ func (c *jsiiProxy_ConfigAggregationAuthorization) validateInterpolationForAttri
 	return nil
 }
 
+func (c *jsiiProxy_ConfigAggregationAuthorization) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_ConfigAggregationAuthorization) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_ConfigAggregationAuthorization) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

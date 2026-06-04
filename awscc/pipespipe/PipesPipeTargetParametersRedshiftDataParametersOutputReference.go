@@ -79,8 +79,10 @@ type PipesPipeTargetParametersRedshiftDataParametersOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDatabase()
 	ResetDbUser()
 	ResetSecretManagerArn()
+	ResetSqls()
 	ResetStatementName()
 	ResetWithEvent()
 	// Produce the Token's value at resolution time.
@@ -623,6 +625,14 @@ func (p *jsiiProxy_PipesPipeTargetParametersRedshiftDataParametersOutputReferenc
 	return returns
 }
 
+func (p *jsiiProxy_PipesPipeTargetParametersRedshiftDataParametersOutputReference) ResetDatabase() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetDatabase",
+		nil, // no parameters
+	)
+}
+
 func (p *jsiiProxy_PipesPipeTargetParametersRedshiftDataParametersOutputReference) ResetDbUser() {
 	_jsii_.InvokeVoid(
 		p,
@@ -635,6 +645,14 @@ func (p *jsiiProxy_PipesPipeTargetParametersRedshiftDataParametersOutputReferenc
 	_jsii_.InvokeVoid(
 		p,
 		"resetSecretManagerArn",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PipesPipeTargetParametersRedshiftDataParametersOutputReference) ResetSqls() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetSqls",
 		nil, // no parameters
 	)
 }

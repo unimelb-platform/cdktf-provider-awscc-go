@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/datasyncstoragesystem/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datasync_storage_system awscc_datasync_storage_system}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datasync_storage_system awscc_datasync_storage_system}.
 type DatasyncStorageSystem interface {
 	cdktf.TerraformResource
 	AgentArns() *[]*string
@@ -69,6 +69,7 @@ type DatasyncStorageSystem interface {
 	ServerCredentials() DatasyncStorageSystemServerCredentialsOutputReference
 	ServerCredentialsInput() interface{}
 	StorageSystemArn() *string
+	StorageSystemId() *string
 	SystemType() *string
 	SetSystemType(val *string)
 	SystemTypeInput() *string
@@ -104,12 +105,22 @@ type DatasyncStorageSystem interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -124,6 +135,9 @@ type DatasyncStorageSystem interface {
 	ResetServerCredentials()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -408,6 +422,16 @@ func (j *jsiiProxy_DatasyncStorageSystem) StorageSystemArn() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DatasyncStorageSystem) StorageSystemId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"storageSystemId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DatasyncStorageSystem) SystemType() *string {
 	var returns *string
 	_jsii_.Get(
@@ -479,7 +503,7 @@ func (j *jsiiProxy_DatasyncStorageSystem) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datasync_storage_system awscc_datasync_storage_system} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datasync_storage_system awscc_datasync_storage_system} Resource.
 func NewDatasyncStorageSystem(scope constructs.Construct, id *string, config *DatasyncStorageSystemConfig) DatasyncStorageSystem {
 	_init_.Initialize()
 
@@ -497,7 +521,7 @@ func NewDatasyncStorageSystem(scope constructs.Construct, id *string, config *Da
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datasync_storage_system awscc_datasync_storage_system} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datasync_storage_system awscc_datasync_storage_system} Resource.
 func NewDatasyncStorageSystem_Override(d DatasyncStorageSystem, scope constructs.Construct, id *string, config *DatasyncStorageSystemConfig) {
 	_init_.Initialize()
 
@@ -889,6 +913,19 @@ func (d *jsiiProxy_DatasyncStorageSystem) GetStringMapAttribute(terraformAttribu
 	return returns
 }
 
+func (d *jsiiProxy_DatasyncStorageSystem) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (d *jsiiProxy_DatasyncStorageSystem) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := d.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -916,6 +953,17 @@ func (d *jsiiProxy_DatasyncStorageSystem) InterpolationForAttribute(terraformAtt
 	return returns
 }
 
+func (d *jsiiProxy_DatasyncStorageSystem) MoveFromId(id *string) {
+	if err := d.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (d *jsiiProxy_DatasyncStorageSystem) MoveTo(moveTarget *string, index interface{}) {
 	if err := d.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -924,6 +972,17 @@ func (d *jsiiProxy_DatasyncStorageSystem) MoveTo(moveTarget *string, index inter
 		d,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (d *jsiiProxy_DatasyncStorageSystem) MoveToId(id *string) {
+	if err := d.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1017,6 +1076,32 @@ func (d *jsiiProxy_DatasyncStorageSystem) SynthesizeAttributes() *map[string]int
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DatasyncStorageSystem) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DatasyncStorageSystem) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

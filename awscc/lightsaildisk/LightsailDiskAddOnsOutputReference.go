@@ -70,6 +70,7 @@ type LightsailDiskAddOnsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAutoSnapshotAddOnRequest(value *LightsailDiskAddOnsAutoSnapshotAddOnRequest)
+	ResetAddOnType()
 	ResetAutoSnapshotAddOnRequest()
 	ResetStatus()
 	// Produce the Token's value at resolution time.
@@ -516,6 +517,14 @@ func (l *jsiiProxy_LightsailDiskAddOnsOutputReference) PutAutoSnapshotAddOnReque
 		l,
 		"putAutoSnapshotAddOnRequest",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LightsailDiskAddOnsOutputReference) ResetAddOnType() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetAddOnType",
+		nil, // no parameters
 	)
 }
 

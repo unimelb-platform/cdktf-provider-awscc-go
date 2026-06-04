@@ -39,7 +39,7 @@ type DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScali
 	SetSeedCapacity(val *float64)
 	SeedCapacityInput() *float64
 	TargetTrackingScalingPolicyConfiguration() DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfigurationOutputReference
-	TargetTrackingScalingPolicyConfigurationInput() *DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration
+	TargetTrackingScalingPolicyConfigurationInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -73,7 +73,10 @@ type DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScali
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutTargetTrackingScalingPolicyConfiguration(value *DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration)
+	ResetMaxCapacity()
+	ResetMinCapacity()
 	ResetSeedCapacity()
+	ResetTargetTrackingScalingPolicyConfiguration()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -209,8 +212,8 @@ func (j *jsiiProxy_DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCap
 	return returns
 }
 
-func (j *jsiiProxy_DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsOutputReference) TargetTrackingScalingPolicyConfigurationInput() *DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration {
-	var returns *DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration
+func (j *jsiiProxy_DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsOutputReference) TargetTrackingScalingPolicyConfigurationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"targetTrackingScalingPolicyConfigurationInput",
@@ -552,10 +555,34 @@ func (d *jsiiProxy_DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCap
 	)
 }
 
+func (d *jsiiProxy_DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsOutputReference) ResetMaxCapacity() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetMaxCapacity",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsOutputReference) ResetMinCapacity() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetMinCapacity",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsOutputReference) ResetSeedCapacity() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetSeedCapacity",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsOutputReference) ResetTargetTrackingScalingPolicyConfiguration() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetTargetTrackingScalingPolicyConfiguration",
 		nil, // no parameters
 	)
 }

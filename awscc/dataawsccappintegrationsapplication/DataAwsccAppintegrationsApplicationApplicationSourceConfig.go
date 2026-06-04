@@ -1,0 +1,6 @@
+package dataawsccappintegrationsapplication
+
+
+type DataAwsccAppintegrationsApplicationApplicationSourceConfig struct {
+}
+

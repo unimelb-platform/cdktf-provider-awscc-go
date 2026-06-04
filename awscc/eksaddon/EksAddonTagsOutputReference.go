@@ -67,6 +67,8 @@ type EksAddonTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (e *jsiiProxy_EksAddonTagsOutputReference) InterpolationForAttribute(proper
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EksAddonTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EksAddonTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EksAddonTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

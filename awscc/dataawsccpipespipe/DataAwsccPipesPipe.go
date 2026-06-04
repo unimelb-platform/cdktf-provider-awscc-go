@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccpipespipe/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/pipes_pipe awscc_pipes_pipe}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/pipes_pipe awscc_pipes_pipe}.
 type DataAwsccPipesPipe interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -42,6 +42,7 @@ type DataAwsccPipesPipe interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	KmsKeyIdentifier() *string
 	LastModifiedTime() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
@@ -99,6 +100,10 @@ type DataAwsccPipesPipe interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -268,6 +273,16 @@ func (j *jsiiProxy_DataAwsccPipesPipe) IdInput() *string {
 	_jsii_.Get(
 		j,
 		"idInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccPipesPipe) KmsKeyIdentifier() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kmsKeyIdentifier",
 		&returns,
 	)
 	return returns
@@ -444,7 +459,7 @@ func (j *jsiiProxy_DataAwsccPipesPipe) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/pipes_pipe awscc_pipes_pipe} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/pipes_pipe awscc_pipes_pipe} Data Source.
 func NewDataAwsccPipesPipe(scope constructs.Construct, id *string, config *DataAwsccPipesPipeConfig) DataAwsccPipesPipe {
 	_init_.Initialize()
 
@@ -462,7 +477,7 @@ func NewDataAwsccPipesPipe(scope constructs.Construct, id *string, config *DataA
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/pipes_pipe awscc_pipes_pipe} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/pipes_pipe awscc_pipes_pipe} Data Source.
 func NewDataAwsccPipesPipe_Override(d DataAwsccPipesPipe, scope constructs.Construct, id *string, config *DataAwsccPipesPipeConfig) {
 	_init_.Initialize()
 
@@ -829,6 +844,32 @@ func (d *jsiiProxy_DataAwsccPipesPipe) SynthesizeAttributes() *map[string]interf
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccPipesPipe) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccPipesPipe) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

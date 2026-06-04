@@ -70,6 +70,9 @@ type EvidentlyLaunchScheduledSplitsConfigSegmentOverridesOutputReference interfa
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutWeights(value interface{})
+	ResetEvaluationOrder()
+	ResetSegment()
+	ResetWeights()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -514,6 +517,30 @@ func (e *jsiiProxy_EvidentlyLaunchScheduledSplitsConfigSegmentOverridesOutputRef
 		e,
 		"putWeights",
 		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_EvidentlyLaunchScheduledSplitsConfigSegmentOverridesOutputReference) ResetEvaluationOrder() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetEvaluationOrder",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EvidentlyLaunchScheduledSplitsConfigSegmentOverridesOutputReference) ResetSegment() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetSegment",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EvidentlyLaunchScheduledSplitsConfigSegmentOverridesOutputReference) ResetWeights() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetWeights",
+		nil, // no parameters
 	)
 }
 

@@ -64,6 +64,7 @@ type NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefi
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDimensions(value interface{})
+	ResetDimensions()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -446,6 +447,14 @@ func (n *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomAct
 		n,
 		"putDimensions",
 		[]interface{}{value},
+	)
+}
+
+func (n *jsiiProxy_NetworkfirewallFirewallPolicyFirewallPolicyStatelessCustomActionsActionDefinitionPublishMetricActionOutputReference) ResetDimensions() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetDimensions",
+		nil, // no parameters
 	)
 }
 

@@ -56,7 +56,15 @@ func (m *jsiiProxy_M2Environment) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
+func (m *jsiiProxy_M2Environment) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_M2Environment) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (m *jsiiProxy_M2Environment) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -121,6 +129,10 @@ func (j *jsiiProxy_M2Environment) validateSetLifecycleParameters(val *cdktf.Terr
 }
 
 func (j *jsiiProxy_M2Environment) validateSetNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_M2Environment) validateSetNetworkTypeParameters(val *string) error {
 	return nil
 }
 

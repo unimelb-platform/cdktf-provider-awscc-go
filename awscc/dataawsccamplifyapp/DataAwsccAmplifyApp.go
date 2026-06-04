@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccamplifyapp/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/amplify_app awscc_amplify_app}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/amplify_app awscc_amplify_app}.
 type DataAwsccAmplifyApp interface {
 	cdktf.TerraformDataSource
 	AccessToken() *string
@@ -19,8 +19,10 @@ type DataAwsccAmplifyApp interface {
 	AutoBranchCreationConfig() DataAwsccAmplifyAppAutoBranchCreationConfigOutputReference
 	BasicAuthConfig() DataAwsccAmplifyAppBasicAuthConfigOutputReference
 	BuildSpec() *string
+	CacheConfig() DataAwsccAmplifyAppCacheConfigOutputReference
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	ComputeRoleArn() *string
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -49,6 +51,7 @@ type DataAwsccAmplifyApp interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	JobConfig() DataAwsccAmplifyAppJobConfigOutputReference
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -101,6 +104,10 @@ type DataAwsccAmplifyApp interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -185,11 +192,31 @@ func (j *jsiiProxy_DataAwsccAmplifyApp) BuildSpec() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccAmplifyApp) CacheConfig() DataAwsccAmplifyAppCacheConfigOutputReference {
+	var returns DataAwsccAmplifyAppCacheConfigOutputReference
+	_jsii_.Get(
+		j,
+		"cacheConfig",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccAmplifyApp) CdktfStack() cdktf.TerraformStack {
 	var returns cdktf.TerraformStack
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccAmplifyApp) ComputeRoleArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"computeRoleArn",
 		&returns,
 	)
 	return returns
@@ -345,6 +372,16 @@ func (j *jsiiProxy_DataAwsccAmplifyApp) IdInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccAmplifyApp) JobConfig() DataAwsccAmplifyAppJobConfigOutputReference {
+	var returns DataAwsccAmplifyAppJobConfigOutputReference
+	_jsii_.Get(
+		j,
+		"jobConfig",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccAmplifyApp) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -466,7 +503,7 @@ func (j *jsiiProxy_DataAwsccAmplifyApp) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/amplify_app awscc_amplify_app} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/amplify_app awscc_amplify_app} Data Source.
 func NewDataAwsccAmplifyApp(scope constructs.Construct, id *string, config *DataAwsccAmplifyAppConfig) DataAwsccAmplifyApp {
 	_init_.Initialize()
 
@@ -484,7 +521,7 @@ func NewDataAwsccAmplifyApp(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/amplify_app awscc_amplify_app} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/amplify_app awscc_amplify_app} Data Source.
 func NewDataAwsccAmplifyApp_Override(d DataAwsccAmplifyApp, scope constructs.Construct, id *string, config *DataAwsccAmplifyAppConfig) {
 	_init_.Initialize()
 
@@ -851,6 +888,32 @@ func (d *jsiiProxy_DataAwsccAmplifyApp) SynthesizeAttributes() *map[string]inter
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAmplifyApp) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAmplifyApp) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

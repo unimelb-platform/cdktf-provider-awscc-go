@@ -67,6 +67,8 @@ type QuicksightDashboardSourceEntitySourceTemplateOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDataSetReferences(value interface{})
+	ResetArn()
+	ResetDataSetReferences()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -480,6 +482,22 @@ func (q *jsiiProxy_QuicksightDashboardSourceEntitySourceTemplateOutputReference)
 		q,
 		"putDataSetReferences",
 		[]interface{}{value},
+	)
+}
+
+func (q *jsiiProxy_QuicksightDashboardSourceEntitySourceTemplateOutputReference) ResetArn() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetArn",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDashboardSourceEntitySourceTemplateOutputReference) ResetDataSetReferences() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDataSetReferences",
+		nil, // no parameters
 	)
 }
 

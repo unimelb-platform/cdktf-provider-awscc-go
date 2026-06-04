@@ -64,7 +64,7 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMes
 	return nil
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListStructOutputReference) validateSetInternalValueParameters(val *LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListStruct) error {
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListStructOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

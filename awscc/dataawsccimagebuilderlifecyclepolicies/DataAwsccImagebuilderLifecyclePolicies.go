@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccimagebuilderlifecyclepolicies/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/imagebuilder_lifecycle_policies awscc_imagebuilder_lifecycle_policies}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/imagebuilder_lifecycle_policies awscc_imagebuilder_lifecycle_policies}.
 type DataAwsccImagebuilderLifecyclePolicies interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccImagebuilderLifecyclePolicies interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccImagebuilderLifecyclePolicies) TerraformResourceType
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/imagebuilder_lifecycle_policies awscc_imagebuilder_lifecycle_policies} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/imagebuilder_lifecycle_policies awscc_imagebuilder_lifecycle_policies} Data Source.
 func NewDataAwsccImagebuilderLifecyclePolicies(scope constructs.Construct, id *string, config *DataAwsccImagebuilderLifecyclePoliciesConfig) DataAwsccImagebuilderLifecyclePolicies {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccImagebuilderLifecyclePolicies(scope constructs.Construct, id *s
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/imagebuilder_lifecycle_policies awscc_imagebuilder_lifecycle_policies} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/imagebuilder_lifecycle_policies awscc_imagebuilder_lifecycle_policies} Data Source.
 func NewDataAwsccImagebuilderLifecyclePolicies_Override(d DataAwsccImagebuilderLifecyclePolicies, scope constructs.Construct, id *string, config *DataAwsccImagebuilderLifecyclePoliciesConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccImagebuilderLifecyclePolicies) SynthesizeAttributes(
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccImagebuilderLifecyclePolicies) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccImagebuilderLifecyclePolicies) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

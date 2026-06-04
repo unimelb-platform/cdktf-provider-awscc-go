@@ -1,0 +1,6 @@
+package dataawscccustomerprofileseventtrigger
+
+
+type DataAwsccCustomerprofilesEventTriggerEventTriggerLimitsPeriods struct {
+}
+

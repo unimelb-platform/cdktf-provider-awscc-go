@@ -71,6 +71,7 @@ type DynamodbTableSseSpecificationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetKmsMasterKeyId()
+	ResetSseEnabled()
 	ResetSseType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -523,6 +524,14 @@ func (d *jsiiProxy_DynamodbTableSseSpecificationOutputReference) ResetKmsMasterK
 	_jsii_.InvokeVoid(
 		d,
 		"resetKmsMasterKeyId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbTableSseSpecificationOutputReference) ResetSseEnabled() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetSseEnabled",
 		nil, // no parameters
 	)
 }

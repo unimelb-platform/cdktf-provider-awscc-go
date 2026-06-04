@@ -73,8 +73,10 @@ type KendraIndexDocumentMetadataConfigurationsOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutRelevance(value *KendraIndexDocumentMetadataConfigurationsRelevance)
 	PutSearch(value *KendraIndexDocumentMetadataConfigurationsSearch)
+	ResetName()
 	ResetRelevance()
 	ResetSearch()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -553,6 +555,14 @@ func (k *jsiiProxy_KendraIndexDocumentMetadataConfigurationsOutputReference) Put
 	)
 }
 
+func (k *jsiiProxy_KendraIndexDocumentMetadataConfigurationsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KendraIndexDocumentMetadataConfigurationsOutputReference) ResetRelevance() {
 	_jsii_.InvokeVoid(
 		k,
@@ -565,6 +575,14 @@ func (k *jsiiProxy_KendraIndexDocumentMetadataConfigurationsOutputReference) Res
 	_jsii_.InvokeVoid(
 		k,
 		"resetSearch",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraIndexDocumentMetadataConfigurationsOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetType",
 		nil, // no parameters
 	)
 }

@@ -67,6 +67,8 @@ type ApplicationinsightsApplicationLogPatternSetsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutLogPatterns(value interface{})
+	ResetLogPatterns()
+	ResetPatternSetName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -480,6 +482,22 @@ func (a *jsiiProxy_ApplicationinsightsApplicationLogPatternSetsOutputReference) 
 		a,
 		"putLogPatterns",
 		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationLogPatternSetsOutputReference) ResetLogPatterns() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetLogPatterns",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationLogPatternSetsOutputReference) ResetPatternSetName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetPatternSetName",
+		nil, // no parameters
 	)
 }
 

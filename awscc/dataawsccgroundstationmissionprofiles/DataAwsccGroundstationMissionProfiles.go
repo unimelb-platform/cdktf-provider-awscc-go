@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccgroundstationmissionprofiles/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/groundstation_mission_profiles awscc_groundstation_mission_profiles}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/groundstation_mission_profiles awscc_groundstation_mission_profiles}.
 type DataAwsccGroundstationMissionProfiles interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccGroundstationMissionProfiles interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccGroundstationMissionProfiles) TerraformResourceType(
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/groundstation_mission_profiles awscc_groundstation_mission_profiles} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/groundstation_mission_profiles awscc_groundstation_mission_profiles} Data Source.
 func NewDataAwsccGroundstationMissionProfiles(scope constructs.Construct, id *string, config *DataAwsccGroundstationMissionProfilesConfig) DataAwsccGroundstationMissionProfiles {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccGroundstationMissionProfiles(scope constructs.Construct, id *st
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/groundstation_mission_profiles awscc_groundstation_mission_profiles} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/groundstation_mission_profiles awscc_groundstation_mission_profiles} Data Source.
 func NewDataAwsccGroundstationMissionProfiles_Override(d DataAwsccGroundstationMissionProfiles, scope constructs.Construct, id *string, config *DataAwsccGroundstationMissionProfilesConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccGroundstationMissionProfiles) SynthesizeAttributes()
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGroundstationMissionProfiles) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGroundstationMissionProfiles) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

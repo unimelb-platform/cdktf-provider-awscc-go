@@ -60,7 +60,7 @@ func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCus
 	return nil
 }
 
-func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCustomHeadersConfigItemsOutputReference) validateSetInternalValueParameters(val *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCustomHeadersConfigItems) error {
+func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCustomHeadersConfigItemsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

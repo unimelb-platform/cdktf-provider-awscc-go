@@ -73,6 +73,10 @@ type CleanroomsCollaborationDataEncryptionMetadataOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAllowCleartext()
+	ResetAllowDuplicates()
+	ResetAllowJoinsOnColumnsWithDifferentNames()
+	ResetPreserveNulls()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -549,6 +553,38 @@ func (c *jsiiProxy_CleanroomsCollaborationDataEncryptionMetadataOutputReference)
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CleanroomsCollaborationDataEncryptionMetadataOutputReference) ResetAllowCleartext() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAllowCleartext",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsCollaborationDataEncryptionMetadataOutputReference) ResetAllowDuplicates() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAllowDuplicates",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsCollaborationDataEncryptionMetadataOutputReference) ResetAllowJoinsOnColumnsWithDifferentNames() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAllowJoinsOnColumnsWithDifferentNames",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsCollaborationDataEncryptionMetadataOutputReference) ResetPreserveNulls() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetPreserveNulls",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CleanroomsCollaborationDataEncryptionMetadataOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

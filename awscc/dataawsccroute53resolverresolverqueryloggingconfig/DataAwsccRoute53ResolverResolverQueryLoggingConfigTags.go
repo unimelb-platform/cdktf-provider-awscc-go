@@ -1,0 +1,6 @@
+package dataawsccroute53resolverresolverqueryloggingconfig
+
+
+type DataAwsccRoute53ResolverResolverQueryLoggingConfigTags struct {
+}
+

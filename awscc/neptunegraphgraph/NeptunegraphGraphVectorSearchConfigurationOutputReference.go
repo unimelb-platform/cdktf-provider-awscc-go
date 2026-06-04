@@ -64,6 +64,7 @@ type NeptunegraphGraphVectorSearchConfigurationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetVectorSearchDimension()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (n *jsiiProxy_NeptunegraphGraphVectorSearchConfigurationOutputReference) In
 	)
 
 	return returns
+}
+
+func (n *jsiiProxy_NeptunegraphGraphVectorSearchConfigurationOutputReference) ResetVectorSearchDimension() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetVectorSearchDimension",
+		nil, // no parameters
+	)
 }
 
 func (n *jsiiProxy_NeptunegraphGraphVectorSearchConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

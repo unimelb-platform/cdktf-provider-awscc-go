@@ -31,6 +31,8 @@ type AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInsta
 	BareMetalInput() *string
 	BaselineEbsBandwidthMbps() AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselineEbsBandwidthMbpsOutputReference
 	BaselineEbsBandwidthMbpsInput() interface{}
+	BaselinePerformanceFactors() AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsOutputReference
+	BaselinePerformanceFactorsInput() interface{}
 	BurstablePerformance() *string
 	SetBurstablePerformance(val *string)
 	BurstablePerformanceInput() *string
@@ -74,7 +76,7 @@ type AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInsta
 	MemoryGiBPerVCpu() AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsMemoryGiBPerVCpuOutputReference
 	MemoryGiBPerVCpuInput() interface{}
 	MemoryMiB() AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsMemoryMiBOutputReference
-	MemoryMiBInput() *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsMemoryMiB
+	MemoryMiBInput() interface{}
 	NetworkBandwidthGbps() AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsNetworkBandwidthGbpsOutputReference
 	NetworkBandwidthGbpsInput() interface{}
 	NetworkInterfaceCount() AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsNetworkInterfaceCountOutputReference
@@ -99,7 +101,7 @@ type AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInsta
 	TotalLocalStorageGb() AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsTotalLocalStorageGbOutputReference
 	TotalLocalStorageGbInput() interface{}
 	VCpuCount() AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsVCpuCountOutputReference
-	VCpuCountInput() *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsVCpuCount
+	VCpuCountInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -127,6 +129,7 @@ type AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInsta
 	PutAcceleratorCount(value *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsAcceleratorCount)
 	PutAcceleratorTotalMemoryMiB(value *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsAcceleratorTotalMemoryMiB)
 	PutBaselineEbsBandwidthMbps(value *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselineEbsBandwidthMbps)
+	PutBaselinePerformanceFactors(value *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactors)
 	PutMemoryGiBPerVCpu(value *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsMemoryGiBPerVCpu)
 	PutMemoryMiB(value *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsMemoryMiB)
 	PutNetworkBandwidthGbps(value *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsNetworkBandwidthGbps)
@@ -141,6 +144,7 @@ type AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInsta
 	ResetAllowedInstanceTypes()
 	ResetBareMetal()
 	ResetBaselineEbsBandwidthMbps()
+	ResetBaselinePerformanceFactors()
 	ResetBurstablePerformance()
 	ResetCpuManufacturers()
 	ResetExcludedInstanceTypes()
@@ -149,12 +153,14 @@ type AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInsta
 	ResetLocalStorageTypes()
 	ResetMaxSpotPriceAsPercentageOfOptimalOnDemandPrice()
 	ResetMemoryGiBPerVCpu()
+	ResetMemoryMiB()
 	ResetNetworkBandwidthGbps()
 	ResetNetworkInterfaceCount()
 	ResetOnDemandMaxPricePercentageOverLowestPrice()
 	ResetRequireHibernateSupport()
 	ResetSpotMaxPricePercentageOverLowestPrice()
 	ResetTotalLocalStorageGb()
+	ResetVCpuCount()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -325,6 +331,26 @@ func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
 	_jsii_.Get(
 		j,
 		"baselineEbsBandwidthMbpsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsOutputReference) BaselinePerformanceFactors() AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsOutputReference {
+	var returns AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactorsOutputReference
+	_jsii_.Get(
+		j,
+		"baselinePerformanceFactors",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsOutputReference) BaselinePerformanceFactorsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"baselinePerformanceFactorsInput",
 		&returns,
 	)
 	return returns
@@ -550,8 +576,8 @@ func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
 	return returns
 }
 
-func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsOutputReference) MemoryMiBInput() *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsMemoryMiB {
-	var returns *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsMemoryMiB
+func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsOutputReference) MemoryMiBInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"memoryMiBInput",
@@ -710,8 +736,8 @@ func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
 	return returns
 }
 
-func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsOutputReference) VCpuCountInput() *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsVCpuCount {
-	var returns *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsVCpuCount
+func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsOutputReference) VCpuCountInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"vCpuCountInput",
@@ -1187,6 +1213,17 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
 	)
 }
 
+func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsOutputReference) PutBaselinePerformanceFactors(value *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsBaselinePerformanceFactors) {
+	if err := a.validatePutBaselinePerformanceFactorsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putBaselinePerformanceFactors",
+		[]interface{}{value},
+	)
+}
+
 func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsOutputReference) PutMemoryGiBPerVCpu(value *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsMemoryGiBPerVCpu) {
 	if err := a.validatePutMemoryGiBPerVCpuParameters(value); err != nil {
 		panic(err)
@@ -1317,6 +1354,14 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
 	)
 }
 
+func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsOutputReference) ResetBaselinePerformanceFactors() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetBaselinePerformanceFactors",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsOutputReference) ResetBurstablePerformance() {
 	_jsii_.InvokeVoid(
 		a,
@@ -1381,6 +1426,14 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
 	)
 }
 
+func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsOutputReference) ResetMemoryMiB() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetMemoryMiB",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsOutputReference) ResetNetworkBandwidthGbps() {
 	_jsii_.InvokeVoid(
 		a,
@@ -1425,6 +1478,14 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
 	_jsii_.InvokeVoid(
 		a,
 		"resetTotalLocalStorageGb",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesInstanceRequirementsOutputReference) ResetVCpuCount() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetVCpuCount",
 		nil, // no parameters
 	)
 }

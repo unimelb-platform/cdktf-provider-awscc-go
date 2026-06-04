@@ -44,6 +44,10 @@ func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeO
 	return nil
 }
 
+func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) validatePutValueRangeParameters(value *CustomerprofilesCalculatedAttributeDefinitionConditionsRangeValueRange) error {
+	return nil
+}
+
 func (c *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }
@@ -65,6 +69,14 @@ func (j *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeO
 }
 
 func (j *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func (j *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) validateSetTimestampFormatParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_CustomerprofilesCalculatedAttributeDefinitionConditionsRangeOutputReference) validateSetTimestampSourceParameters(val *string) error {
 	return nil
 }
 

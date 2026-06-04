@@ -119,6 +119,14 @@ func (m *jsiiProxy_MediaconnectFlowOutput) validateInterpolationForAttributePara
 	return nil
 }
 
+func (m *jsiiProxy_MediaconnectFlowOutput) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (m *jsiiProxy_MediaconnectFlowOutput) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (m *jsiiProxy_MediaconnectFlowOutput) validateMoveToParameters(moveTarget *
 	return nil
 }
 
+func (m *jsiiProxy_MediaconnectFlowOutput) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (m *jsiiProxy_MediaconnectFlowOutput) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -194,6 +210,37 @@ func (m *jsiiProxy_MediaconnectFlowOutput) validatePutEncryptionParameters(value
 	}
 	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
 		return err
+	}
+
+	return nil
+}
+
+func (m *jsiiProxy_MediaconnectFlowOutput) validatePutMediaStreamOutputConfigurationsParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*MediaconnectFlowOutputMediaStreamOutputConfigurations:
+		value := value.(*[]*MediaconnectFlowOutputMediaStreamOutputConfigurations)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*MediaconnectFlowOutputMediaStreamOutputConfigurations:
+		value_ := value.([]*MediaconnectFlowOutputMediaStreamOutputConfigurations)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*MediaconnectFlowOutputMediaStreamOutputConfigurations; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil
@@ -397,6 +444,30 @@ func (j *jsiiProxy_MediaconnectFlowOutput) validateSetMinLatencyParameters(val *
 }
 
 func (j *jsiiProxy_MediaconnectFlowOutput) validateSetNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_MediaconnectFlowOutput) validateSetNdiProgramNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_MediaconnectFlowOutput) validateSetNdiSpeedHqQualityParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_MediaconnectFlowOutput) validateSetOutputStatusParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

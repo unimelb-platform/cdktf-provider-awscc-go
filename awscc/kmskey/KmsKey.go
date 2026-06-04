@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/kmskey/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/kms_key awscc_kms_key}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/kms_key awscc_kms_key}.
 type KmsKey interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -85,6 +85,9 @@ type KmsKey interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RotationPeriodInDays() *float64
+	SetRotationPeriodInDays(val *float64)
+	RotationPeriodInDaysInput() *float64
 	Tags() KmsKeyTagsList
 	TagsInput() interface{}
 	// Experimental.
@@ -117,12 +120,22 @@ type KmsKey interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -140,8 +153,12 @@ type KmsKey interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPendingWindowInDays()
+	ResetRotationPeriodInDays()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -516,6 +533,26 @@ func (j *jsiiProxy_KmsKey) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_KmsKey) RotationPeriodInDays() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"rotationPeriodInDays",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_KmsKey) RotationPeriodInDaysInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"rotationPeriodInDaysInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_KmsKey) Tags() KmsKeyTagsList {
 	var returns KmsKeyTagsList
 	_jsii_.Get(
@@ -567,7 +604,7 @@ func (j *jsiiProxy_KmsKey) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/kms_key awscc_kms_key} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/kms_key awscc_kms_key} Resource.
 func NewKmsKey(scope constructs.Construct, id *string, config *KmsKeyConfig) KmsKey {
 	_init_.Initialize()
 
@@ -585,7 +622,7 @@ func NewKmsKey(scope constructs.Construct, id *string, config *KmsKeyConfig) Kms
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/kms_key awscc_kms_key} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/kms_key awscc_kms_key} Resource.
 func NewKmsKey_Override(k KmsKey, scope constructs.Construct, id *string, config *KmsKeyConfig) {
 	_init_.Initialize()
 
@@ -770,6 +807,17 @@ func (j *jsiiProxy_KmsKey)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_KmsKey)SetRotationPeriodInDays(val *float64) {
+	if err := j.validateSetRotationPeriodInDaysParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"rotationPeriodInDays",
 		val,
 	)
 }
@@ -1043,6 +1091,19 @@ func (k *jsiiProxy_KmsKey) GetStringMapAttribute(terraformAttribute *string) *ma
 	return returns
 }
 
+func (k *jsiiProxy_KmsKey) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		k,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (k *jsiiProxy_KmsKey) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := k.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1070,6 +1131,17 @@ func (k *jsiiProxy_KmsKey) InterpolationForAttribute(terraformAttribute *string)
 	return returns
 }
 
+func (k *jsiiProxy_KmsKey) MoveFromId(id *string) {
+	if err := k.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (k *jsiiProxy_KmsKey) MoveTo(moveTarget *string, index interface{}) {
 	if err := k.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1078,6 +1150,17 @@ func (k *jsiiProxy_KmsKey) MoveTo(moveTarget *string, index interface{}) {
 		k,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (k *jsiiProxy_KmsKey) MoveToId(id *string) {
+	if err := k.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1191,6 +1274,14 @@ func (k *jsiiProxy_KmsKey) ResetPendingWindowInDays() {
 	)
 }
 
+func (k *jsiiProxy_KmsKey) ResetRotationPeriodInDays() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetRotationPeriodInDays",
+		nil, // no parameters
+	)
+}
+
 func (k *jsiiProxy_KmsKey) ResetTags() {
 	_jsii_.InvokeVoid(
 		k,
@@ -1205,6 +1296,32 @@ func (k *jsiiProxy_KmsKey) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		k,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (k *jsiiProxy_KmsKey) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		k,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (k *jsiiProxy_KmsKey) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		k,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccfmspolicy/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/fms_policy awscc_fms_policy}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/fms_policy awscc_fms_policy}.
 type DataAwsccFmsPolicy interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -47,6 +47,7 @@ type DataAwsccFmsPolicy interface {
 	// The tree node.
 	Node() constructs.Node
 	PolicyDescription() *string
+	PolicyId() *string
 	PolicyName() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
@@ -57,6 +58,7 @@ type DataAwsccFmsPolicy interface {
 	RemediationEnabled() cdktf.IResolvable
 	ResourcesCleanUp() cdktf.IResolvable
 	ResourceSetIds() *[]*string
+	ResourceTagLogicalOperator() *string
 	ResourceTags() DataAwsccFmsPolicyResourceTagsList
 	ResourceType() *string
 	ResourceTypeList() *[]*string
@@ -97,6 +99,10 @@ type DataAwsccFmsPolicy interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -281,6 +287,16 @@ func (j *jsiiProxy_DataAwsccFmsPolicy) PolicyDescription() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccFmsPolicy) PolicyId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"policyId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccFmsPolicy) PolicyName() *string {
 	var returns *string
 	_jsii_.Get(
@@ -336,6 +352,16 @@ func (j *jsiiProxy_DataAwsccFmsPolicy) ResourceSetIds() *[]*string {
 	_jsii_.Get(
 		j,
 		"resourceSetIds",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccFmsPolicy) ResourceTagLogicalOperator() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"resourceTagLogicalOperator",
 		&returns,
 	)
 	return returns
@@ -422,7 +448,7 @@ func (j *jsiiProxy_DataAwsccFmsPolicy) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/fms_policy awscc_fms_policy} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/fms_policy awscc_fms_policy} Data Source.
 func NewDataAwsccFmsPolicy(scope constructs.Construct, id *string, config *DataAwsccFmsPolicyConfig) DataAwsccFmsPolicy {
 	_init_.Initialize()
 
@@ -440,7 +466,7 @@ func NewDataAwsccFmsPolicy(scope constructs.Construct, id *string, config *DataA
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/fms_policy awscc_fms_policy} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/fms_policy awscc_fms_policy} Data Source.
 func NewDataAwsccFmsPolicy_Override(d DataAwsccFmsPolicy, scope constructs.Construct, id *string, config *DataAwsccFmsPolicyConfig) {
 	_init_.Initialize()
 
@@ -807,6 +833,32 @@ func (d *jsiiProxy_DataAwsccFmsPolicy) SynthesizeAttributes() *map[string]interf
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccFmsPolicy) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccFmsPolicy) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

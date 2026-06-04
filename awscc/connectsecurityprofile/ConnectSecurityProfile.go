@@ -9,11 +9,16 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/connectsecurityprofile/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/connect_security_profile awscc_connect_security_profile}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/connect_security_profile awscc_connect_security_profile}.
 type ConnectSecurityProfile interface {
 	cdktf.TerraformResource
+	AllowedAccessControlHierarchyGroupId() *string
+	SetAllowedAccessControlHierarchyGroupId(val *string)
+	AllowedAccessControlHierarchyGroupIdInput() *string
 	AllowedAccessControlTags() ConnectSecurityProfileAllowedAccessControlTagsList
 	AllowedAccessControlTagsInput() interface{}
+	Applications() ConnectSecurityProfileApplicationsList
+	ApplicationsInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -41,10 +46,15 @@ type ConnectSecurityProfile interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	HierarchyRestrictedResources() *[]*string
+	SetHierarchyRestrictedResources(val *[]*string)
+	HierarchyRestrictedResourcesInput() *[]*string
 	Id() *string
 	InstanceArn() *string
 	SetInstanceArn(val *string)
 	InstanceArnInput() *string
+	LastModifiedRegion() *string
+	LastModifiedTime() *float64
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -103,19 +113,33 @@ type ConnectSecurityProfile interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutAllowedAccessControlTags(value interface{})
+	PutApplications(value interface{})
 	PutTags(value interface{})
+	ResetAllowedAccessControlHierarchyGroupId()
 	ResetAllowedAccessControlTags()
+	ResetApplications()
 	ResetDescription()
+	ResetHierarchyRestrictedResources()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -123,6 +147,9 @@ type ConnectSecurityProfile interface {
 	ResetTagRestrictedResources()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -135,6 +162,26 @@ type ConnectSecurityProfile interface {
 // The jsii proxy struct for ConnectSecurityProfile
 type jsiiProxy_ConnectSecurityProfile struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_ConnectSecurityProfile) AllowedAccessControlHierarchyGroupId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"allowedAccessControlHierarchyGroupId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ConnectSecurityProfile) AllowedAccessControlHierarchyGroupIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"allowedAccessControlHierarchyGroupIdInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_ConnectSecurityProfile) AllowedAccessControlTags() ConnectSecurityProfileAllowedAccessControlTagsList {
@@ -152,6 +199,26 @@ func (j *jsiiProxy_ConnectSecurityProfile) AllowedAccessControlTagsInput() inter
 	_jsii_.Get(
 		j,
 		"allowedAccessControlTagsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ConnectSecurityProfile) Applications() ConnectSecurityProfileApplicationsList {
+	var returns ConnectSecurityProfileApplicationsList
+	_jsii_.Get(
+		j,
+		"applications",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ConnectSecurityProfile) ApplicationsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"applicationsInput",
 		&returns,
 	)
 	return returns
@@ -257,6 +324,26 @@ func (j *jsiiProxy_ConnectSecurityProfile) FriendlyUniqueId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ConnectSecurityProfile) HierarchyRestrictedResources() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"hierarchyRestrictedResources",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ConnectSecurityProfile) HierarchyRestrictedResourcesInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"hierarchyRestrictedResourcesInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ConnectSecurityProfile) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -282,6 +369,26 @@ func (j *jsiiProxy_ConnectSecurityProfile) InstanceArnInput() *string {
 	_jsii_.Get(
 		j,
 		"instanceArnInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ConnectSecurityProfile) LastModifiedRegion() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"lastModifiedRegion",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ConnectSecurityProfile) LastModifiedTime() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"lastModifiedTime",
 		&returns,
 	)
 	return returns
@@ -458,7 +565,7 @@ func (j *jsiiProxy_ConnectSecurityProfile) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/connect_security_profile awscc_connect_security_profile} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/connect_security_profile awscc_connect_security_profile} Resource.
 func NewConnectSecurityProfile(scope constructs.Construct, id *string, config *ConnectSecurityProfileConfig) ConnectSecurityProfile {
 	_init_.Initialize()
 
@@ -476,7 +583,7 @@ func NewConnectSecurityProfile(scope constructs.Construct, id *string, config *C
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/connect_security_profile awscc_connect_security_profile} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/connect_security_profile awscc_connect_security_profile} Resource.
 func NewConnectSecurityProfile_Override(c ConnectSecurityProfile, scope constructs.Construct, id *string, config *ConnectSecurityProfileConfig) {
 	_init_.Initialize()
 
@@ -484,6 +591,17 @@ func NewConnectSecurityProfile_Override(c ConnectSecurityProfile, scope construc
 		"awscc.connectSecurityProfile.ConnectSecurityProfile",
 		[]interface{}{scope, id, config},
 		c,
+	)
+}
+
+func (j *jsiiProxy_ConnectSecurityProfile)SetAllowedAccessControlHierarchyGroupId(val *string) {
+	if err := j.validateSetAllowedAccessControlHierarchyGroupIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"allowedAccessControlHierarchyGroupId",
+		val,
 	)
 }
 
@@ -532,6 +650,17 @@ func (j *jsiiProxy_ConnectSecurityProfile)SetForEach(val cdktf.ITerraformIterato
 	_jsii_.Set(
 		j,
 		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ConnectSecurityProfile)SetHierarchyRestrictedResources(val *[]*string) {
+	if err := j.validateSetHierarchyRestrictedResourcesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"hierarchyRestrictedResources",
 		val,
 	)
 }
@@ -879,6 +1008,19 @@ func (c *jsiiProxy_ConnectSecurityProfile) GetStringMapAttribute(terraformAttrib
 	return returns
 }
 
+func (c *jsiiProxy_ConnectSecurityProfile) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_ConnectSecurityProfile) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -906,6 +1048,17 @@ func (c *jsiiProxy_ConnectSecurityProfile) InterpolationForAttribute(terraformAt
 	return returns
 }
 
+func (c *jsiiProxy_ConnectSecurityProfile) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_ConnectSecurityProfile) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -914,6 +1067,17 @@ func (c *jsiiProxy_ConnectSecurityProfile) MoveTo(moveTarget *string, index inte
 		c,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (c *jsiiProxy_ConnectSecurityProfile) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -939,6 +1103,17 @@ func (c *jsiiProxy_ConnectSecurityProfile) PutAllowedAccessControlTags(value int
 	)
 }
 
+func (c *jsiiProxy_ConnectSecurityProfile) PutApplications(value interface{}) {
+	if err := c.validatePutApplicationsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putApplications",
+		[]interface{}{value},
+	)
+}
+
 func (c *jsiiProxy_ConnectSecurityProfile) PutTags(value interface{}) {
 	if err := c.validatePutTagsParameters(value); err != nil {
 		panic(err)
@@ -950,6 +1125,14 @@ func (c *jsiiProxy_ConnectSecurityProfile) PutTags(value interface{}) {
 	)
 }
 
+func (c *jsiiProxy_ConnectSecurityProfile) ResetAllowedAccessControlHierarchyGroupId() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAllowedAccessControlHierarchyGroupId",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_ConnectSecurityProfile) ResetAllowedAccessControlTags() {
 	_jsii_.InvokeVoid(
 		c,
@@ -958,10 +1141,26 @@ func (c *jsiiProxy_ConnectSecurityProfile) ResetAllowedAccessControlTags() {
 	)
 }
 
+func (c *jsiiProxy_ConnectSecurityProfile) ResetApplications() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetApplications",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_ConnectSecurityProfile) ResetDescription() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConnectSecurityProfile) ResetHierarchyRestrictedResources() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetHierarchyRestrictedResources",
 		nil, // no parameters
 	)
 }
@@ -1004,6 +1203,32 @@ func (c *jsiiProxy_ConnectSecurityProfile) SynthesizeAttributes() *map[string]in
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_ConnectSecurityProfile) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_ConnectSecurityProfile) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

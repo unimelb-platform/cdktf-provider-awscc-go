@@ -1,0 +1,6 @@
+package dataawsccpcscomputenodegroup
+
+
+type DataAwsccPcsComputeNodeGroupSlurmConfigurationSlurmCustomSettings struct {
+}
+

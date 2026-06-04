@@ -95,6 +95,7 @@ type Ec2SecurityGroupSecurityGroupIngressOutputReference interface {
 	ResetCidrIpv6()
 	ResetDescription()
 	ResetFromPort()
+	ResetIpProtocol()
 	ResetSourcePrefixListId()
 	ResetSourceSecurityGroupId()
 	ResetSourceSecurityGroupName()
@@ -792,6 +793,14 @@ func (e *jsiiProxy_Ec2SecurityGroupSecurityGroupIngressOutputReference) ResetFro
 	_jsii_.InvokeVoid(
 		e,
 		"resetFromPort",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2SecurityGroupSecurityGroupIngressOutputReference) ResetIpProtocol() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetIpProtocol",
 		nil, // no parameters
 	)
 }

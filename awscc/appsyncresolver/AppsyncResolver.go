@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/appsyncresolver/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/appsync_resolver awscc_appsync_resolver}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/appsync_resolver awscc_appsync_resolver}.
 type AppsyncResolver interface {
 	cdktf.TerraformResource
 	ApiId() *string
@@ -64,6 +64,9 @@ type AppsyncResolver interface {
 	MaxBatchSize() *float64
 	SetMaxBatchSize(val *float64)
 	MaxBatchSizeInput() *float64
+	MetricsConfig() *string
+	SetMetricsConfig(val *string)
+	MetricsConfigInput() *string
 	// The tree node.
 	Node() constructs.Node
 	PipelineConfig() AppsyncResolverPipelineConfigOutputReference
@@ -128,12 +131,22 @@ type AppsyncResolver interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -147,6 +160,7 @@ type AppsyncResolver interface {
 	ResetDataSourceName()
 	ResetKind()
 	ResetMaxBatchSize()
+	ResetMetricsConfig()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -158,6 +172,9 @@ type AppsyncResolver interface {
 	ResetRuntime()
 	ResetSyncConfig()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -432,6 +449,26 @@ func (j *jsiiProxy_AppsyncResolver) MaxBatchSizeInput() *float64 {
 	return returns
 }
 
+func (j *jsiiProxy_AppsyncResolver) MetricsConfig() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"metricsConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AppsyncResolver) MetricsConfigInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"metricsConfigInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_AppsyncResolver) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -673,7 +710,7 @@ func (j *jsiiProxy_AppsyncResolver) TypeNameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/appsync_resolver awscc_appsync_resolver} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/appsync_resolver awscc_appsync_resolver} Resource.
 func NewAppsyncResolver(scope constructs.Construct, id *string, config *AppsyncResolverConfig) AppsyncResolver {
 	_init_.Initialize()
 
@@ -691,7 +728,7 @@ func NewAppsyncResolver(scope constructs.Construct, id *string, config *AppsyncR
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/appsync_resolver awscc_appsync_resolver} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/appsync_resolver awscc_appsync_resolver} Resource.
 func NewAppsyncResolver_Override(a AppsyncResolver, scope constructs.Construct, id *string, config *AppsyncResolverConfig) {
 	_init_.Initialize()
 
@@ -824,6 +861,17 @@ func (j *jsiiProxy_AppsyncResolver)SetMaxBatchSize(val *float64) {
 	_jsii_.Set(
 		j,
 		"maxBatchSize",
+		val,
+	)
+}
+
+func (j *jsiiProxy_AppsyncResolver)SetMetricsConfig(val *string) {
+	if err := j.validateSetMetricsConfigParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"metricsConfig",
 		val,
 	)
 }
@@ -1171,6 +1219,19 @@ func (a *jsiiProxy_AppsyncResolver) GetStringMapAttribute(terraformAttribute *st
 	return returns
 }
 
+func (a *jsiiProxy_AppsyncResolver) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (a *jsiiProxy_AppsyncResolver) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := a.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1198,6 +1259,17 @@ func (a *jsiiProxy_AppsyncResolver) InterpolationForAttribute(terraformAttribute
 	return returns
 }
 
+func (a *jsiiProxy_AppsyncResolver) MoveFromId(id *string) {
+	if err := a.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (a *jsiiProxy_AppsyncResolver) MoveTo(moveTarget *string, index interface{}) {
 	if err := a.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1206,6 +1278,17 @@ func (a *jsiiProxy_AppsyncResolver) MoveTo(moveTarget *string, index interface{}
 		a,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (a *jsiiProxy_AppsyncResolver) MoveToId(id *string) {
+	if err := a.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1312,6 +1395,14 @@ func (a *jsiiProxy_AppsyncResolver) ResetMaxBatchSize() {
 	)
 }
 
+func (a *jsiiProxy_AppsyncResolver) ResetMetricsConfig() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetMetricsConfig",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_AppsyncResolver) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		a,
@@ -1382,6 +1473,32 @@ func (a *jsiiProxy_AppsyncResolver) SynthesizeAttributes() *map[string]interface
 	_jsii_.Invoke(
 		a,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AppsyncResolver) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		a,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AppsyncResolver) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

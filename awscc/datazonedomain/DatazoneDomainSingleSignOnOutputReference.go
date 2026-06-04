@@ -27,6 +27,9 @@ type DatazoneDomainSingleSignOnOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
+	IdcInstanceArn() *string
+	SetIdcInstanceArn(val *string)
+	IdcInstanceArnInput() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	// Experimental.
@@ -67,6 +70,7 @@ type DatazoneDomainSingleSignOnOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetIdcInstanceArn()
 	ResetType()
 	ResetUserAssignment()
 	// Produce the Token's value at resolution time.
@@ -119,6 +123,26 @@ func (j *jsiiProxy_DatazoneDomainSingleSignOnOutputReference) Fqn() *string {
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneDomainSingleSignOnOutputReference) IdcInstanceArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"idcInstanceArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatazoneDomainSingleSignOnOutputReference) IdcInstanceArnInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"idcInstanceArnInput",
 		&returns,
 	)
 	return returns
@@ -240,6 +264,17 @@ func (j *jsiiProxy_DatazoneDomainSingleSignOnOutputReference)SetComplexObjectIsF
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DatazoneDomainSingleSignOnOutputReference)SetIdcInstanceArn(val *string) {
+	if err := j.validateSetIdcInstanceArnParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"idcInstanceArn",
 		val,
 	)
 }
@@ -483,6 +518,14 @@ func (d *jsiiProxy_DatazoneDomainSingleSignOnOutputReference) InterpolationForAt
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatazoneDomainSingleSignOnOutputReference) ResetIdcInstanceArn() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetIdcInstanceArn",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatazoneDomainSingleSignOnOutputReference) ResetType() {

@@ -60,6 +60,10 @@ func (j *jsiiProxy_SesConfigurationSetDeliveryOptionsOutputReference) validateSe
 	return nil
 }
 
+func (j *jsiiProxy_SesConfigurationSetDeliveryOptionsOutputReference) validateSetMaxDeliverySecondsParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_SesConfigurationSetDeliveryOptionsOutputReference) validateSetSendingPoolNameParameters(val *string) error {
 	return nil
 }

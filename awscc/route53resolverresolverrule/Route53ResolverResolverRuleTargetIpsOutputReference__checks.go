@@ -219,6 +219,14 @@ func (j *jsiiProxy_Route53ResolverResolverRuleTargetIpsOutputReference) validate
 	return nil
 }
 
+func (j *jsiiProxy_Route53ResolverResolverRuleTargetIpsOutputReference) validateSetServerNameIndicationParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Route53ResolverResolverRuleTargetIpsOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

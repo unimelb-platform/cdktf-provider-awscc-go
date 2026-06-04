@@ -22,6 +22,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "assumeRoleWithWebIdentityInput", GoGetter: "AssumeRoleWithWebIdentityInput"},
 			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
 			_jsii_.MemberProperty{JsiiProperty: "constructNodeMetadata", GoGetter: "ConstructNodeMetadata"},
+			_jsii_.MemberProperty{JsiiProperty: "endpoints", GoGetter: "Endpoints"},
+			_jsii_.MemberProperty{JsiiProperty: "endpointsInput", GoGetter: "EndpointsInput"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
 			_jsii_.MemberProperty{JsiiProperty: "friendlyUniqueId", GoGetter: "FriendlyUniqueId"},
 			_jsii_.MemberProperty{JsiiProperty: "httpProxy", GoGetter: "HttpProxy"},
@@ -46,6 +48,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetAlias", GoMethod: "ResetAlias"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAssumeRole", GoMethod: "ResetAssumeRole"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAssumeRoleWithWebIdentity", GoMethod: "ResetAssumeRoleWithWebIdentity"},
+			_jsii_.MemberMethod{JsiiMethod: "resetEndpoints", GoMethod: "ResetEndpoints"},
 			_jsii_.MemberMethod{JsiiMethod: "resetHttpProxy", GoMethod: "ResetHttpProxy"},
 			_jsii_.MemberMethod{JsiiMethod: "resetHttpsProxy", GoMethod: "ResetHttpsProxy"},
 			_jsii_.MemberMethod{JsiiMethod: "resetInsecure", GoMethod: "ResetInsecure"},
@@ -75,9 +78,11 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "skipMetadataApiCheck", GoGetter: "SkipMetadataApiCheck"},
 			_jsii_.MemberProperty{JsiiProperty: "skipMetadataApiCheckInput", GoGetter: "SkipMetadataApiCheckInput"},
 			_jsii_.MemberMethod{JsiiMethod: "synthesizeAttributes", GoMethod: "SynthesizeAttributes"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesizeHclAttributes", GoMethod: "SynthesizeHclAttributes"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformGeneratorMetadata", GoGetter: "TerraformGeneratorMetadata"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformProviderSource", GoGetter: "TerraformProviderSource"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResourceType", GoGetter: "TerraformResourceType"},
+			_jsii_.MemberMethod{JsiiMethod: "toHclTerraform", GoMethod: "ToHclTerraform"},
 			_jsii_.MemberProperty{JsiiProperty: "token", GoGetter: "Token"},
 			_jsii_.MemberProperty{JsiiProperty: "tokenInput", GoGetter: "TokenInput"},
 			_jsii_.MemberMethod{JsiiMethod: "toMetadata", GoMethod: "ToMetadata"},
@@ -103,6 +108,10 @@ func init() {
 	_jsii_.RegisterStruct(
 		"awscc.provider.AwsccProviderConfig",
 		reflect.TypeOf((*AwsccProviderConfig)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"awscc.provider.AwsccProviderEndpoints",
+		reflect.TypeOf((*AwsccProviderEndpoints)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
 		"awscc.provider.AwsccProviderUserAgent",

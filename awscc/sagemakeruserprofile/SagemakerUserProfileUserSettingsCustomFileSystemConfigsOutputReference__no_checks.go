@@ -48,6 +48,10 @@ func (s *jsiiProxy_SagemakerUserProfileUserSettingsCustomFileSystemConfigsOutput
 	return nil
 }
 
+func (s *jsiiProxy_SagemakerUserProfileUserSettingsCustomFileSystemConfigsOutputReference) validatePutFsxLustreFileSystemConfigParameters(value *SagemakerUserProfileUserSettingsCustomFileSystemConfigsFsxLustreFileSystemConfig) error {
+	return nil
+}
+
 func (s *jsiiProxy_SagemakerUserProfileUserSettingsCustomFileSystemConfigsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

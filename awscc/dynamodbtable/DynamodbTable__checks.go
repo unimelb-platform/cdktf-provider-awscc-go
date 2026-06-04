@@ -119,6 +119,14 @@ func (d *jsiiProxy_DynamodbTable) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
+func (d *jsiiProxy_DynamodbTable) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (d *jsiiProxy_DynamodbTable) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (d *jsiiProxy_DynamodbTable) validateMoveToParameters(moveTarget *string, i
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbTable) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -314,6 +330,17 @@ func (d *jsiiProxy_DynamodbTable) validatePutLocalSecondaryIndexesParameters(val
 	return nil
 }
 
+func (d *jsiiProxy_DynamodbTable) validatePutOnDemandThroughputParameters(value *DynamodbTableOnDemandThroughput) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (d *jsiiProxy_DynamodbTable) validatePutPointInTimeRecoverySpecificationParameters(value *DynamodbTablePointInTimeRecoverySpecification) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
@@ -326,6 +353,17 @@ func (d *jsiiProxy_DynamodbTable) validatePutPointInTimeRecoverySpecificationPar
 }
 
 func (d *jsiiProxy_DynamodbTable) validatePutProvisionedThroughputParameters(value *DynamodbTableProvisionedThroughput) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbTable) validatePutResourcePolicyParameters(value *DynamodbTableResourcePolicy) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -390,6 +428,17 @@ func (d *jsiiProxy_DynamodbTable) validatePutTagsParameters(value interface{}) e
 }
 
 func (d *jsiiProxy_DynamodbTable) validatePutTimeToLiveSpecificationParameters(value *DynamodbTableTimeToLiveSpecification) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbTable) validatePutWarmThroughputParameters(value *DynamodbTableWarmThroughput) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}

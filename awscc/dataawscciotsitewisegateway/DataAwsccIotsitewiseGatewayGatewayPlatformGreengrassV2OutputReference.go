@@ -20,6 +20,7 @@ type DataAwsccIotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference inter
 	ComplexObjectIsFromSet() *bool
 	// Experimental.
 	SetComplexObjectIsFromSet(val *bool)
+	CoreDeviceOperatingSystem() *string
 	CoreDeviceThingName() *string
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
 	//
@@ -92,6 +93,16 @@ func (j *jsiiProxy_DataAwsccIotsitewiseGatewayGatewayPlatformGreengrassV2OutputR
 	_jsii_.Get(
 		j,
 		"complexObjectIsFromSet",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference) CoreDeviceOperatingSystem() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"coreDeviceOperatingSystem",
 		&returns,
 	)
 	return returns

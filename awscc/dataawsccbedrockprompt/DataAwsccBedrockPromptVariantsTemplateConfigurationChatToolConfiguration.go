@@ -1,0 +1,6 @@
+package dataawsccbedrockprompt
+
+
+type DataAwsccBedrockPromptVariantsTemplateConfigurationChatToolConfiguration struct {
+}
+

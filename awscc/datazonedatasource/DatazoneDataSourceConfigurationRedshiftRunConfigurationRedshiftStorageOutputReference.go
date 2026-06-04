@@ -27,8 +27,8 @@ type DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorageOutpu
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorage
-	SetInternalValue(val *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorage)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	RedshiftClusterSource() DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorageRedshiftClusterSourceOutputReference
 	RedshiftClusterSourceInput() interface{}
 	RedshiftServerlessSource() DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorageRedshiftServerlessSourceOutputReference
@@ -124,8 +124,8 @@ func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshi
 	return returns
 }
 
-func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorageOutputReference) InternalValue() *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorage {
-	var returns *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorage
+func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorageOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -244,7 +244,7 @@ func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshi
 	)
 }
 
-func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorageOutputReference)SetInternalValue(val *DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorage) {
+func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRedshiftStorageOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

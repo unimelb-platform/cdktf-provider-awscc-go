@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscceventsrule/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/events_rule awscc_events_rule}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/events_rule awscc_events_rule}.
 type DataAwsccEventsRule interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -91,6 +91,10 @@ type DataAwsccEventsRule interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -356,7 +360,7 @@ func (j *jsiiProxy_DataAwsccEventsRule) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/events_rule awscc_events_rule} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/events_rule awscc_events_rule} Data Source.
 func NewDataAwsccEventsRule(scope constructs.Construct, id *string, config *DataAwsccEventsRuleConfig) DataAwsccEventsRule {
 	_init_.Initialize()
 
@@ -374,7 +378,7 @@ func NewDataAwsccEventsRule(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/events_rule awscc_events_rule} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/events_rule awscc_events_rule} Data Source.
 func NewDataAwsccEventsRule_Override(d DataAwsccEventsRule, scope constructs.Construct, id *string, config *DataAwsccEventsRuleConfig) {
 	_init_.Initialize()
 
@@ -741,6 +745,32 @@ func (d *jsiiProxy_DataAwsccEventsRule) SynthesizeAttributes() *map[string]inter
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEventsRule) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEventsRule) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

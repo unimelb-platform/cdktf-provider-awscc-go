@@ -30,8 +30,8 @@ type AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifier
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifier
-	SetInternalValue(val *AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifier)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifier
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCpsUri()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -139,8 +140,8 @@ func (j *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesP
 	return returns
 }
 
-func (j *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifierOutputReference) InternalValue() *AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifier {
-	var returns *AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifier
+func (j *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifierOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -230,7 +231,7 @@ func (j *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesP
 	)
 }
 
-func (j *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifierOutputReference)SetInternalValue(val *AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifier) {
+func (j *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifierOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -447,6 +448,14 @@ func (a *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesP
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifierOutputReference) ResetCpsUri() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetCpsUri",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AcmpcaCertificateApiPassthroughExtensionsCertificatePoliciesPolicyQualifiersQualifierOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

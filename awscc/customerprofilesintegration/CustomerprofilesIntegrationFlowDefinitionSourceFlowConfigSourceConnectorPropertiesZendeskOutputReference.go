@@ -64,6 +64,7 @@ type CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorPro
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetObject()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSour
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorPropertiesZendeskOutputReference) ResetObject() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetObject",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorPropertiesZendeskOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

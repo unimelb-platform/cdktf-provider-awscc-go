@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccrdsglobalcluster/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_global_cluster awscc_rds_global_cluster}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_global_cluster awscc_rds_global_cluster}.
 type DataAwsccRdsGlobalCluster interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -26,6 +26,7 @@ type DataAwsccRdsGlobalCluster interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	Engine() *string
+	EngineLifecycleSupport() *string
 	EngineVersion() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
@@ -36,6 +37,7 @@ type DataAwsccRdsGlobalCluster interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	GlobalClusterIdentifier() *string
+	GlobalEndpoint() DataAwsccRdsGlobalClusterGlobalEndpointOutputReference
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -53,6 +55,7 @@ type DataAwsccRdsGlobalCluster interface {
 	RawOverrides() interface{}
 	SourceDbClusterIdentifier() *string
 	StorageEncrypted() cdktf.IResolvable
+	Tags() DataAwsccRdsGlobalClusterTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -88,6 +91,10 @@ type DataAwsccRdsGlobalCluster interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -162,6 +169,16 @@ func (j *jsiiProxy_DataAwsccRdsGlobalCluster) Engine() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRdsGlobalCluster) EngineLifecycleSupport() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"engineLifecycleSupport",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRdsGlobalCluster) EngineVersion() *string {
 	var returns *string
 	_jsii_.Get(
@@ -207,6 +224,16 @@ func (j *jsiiProxy_DataAwsccRdsGlobalCluster) GlobalClusterIdentifier() *string 
 	_jsii_.Get(
 		j,
 		"globalClusterIdentifier",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRdsGlobalCluster) GlobalEndpoint() DataAwsccRdsGlobalClusterGlobalEndpointOutputReference {
+	var returns DataAwsccRdsGlobalClusterGlobalEndpointOutputReference
+	_jsii_.Get(
+		j,
+		"globalEndpoint",
 		&returns,
 	)
 	return returns
@@ -292,6 +319,16 @@ func (j *jsiiProxy_DataAwsccRdsGlobalCluster) StorageEncrypted() cdktf.IResolvab
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccRdsGlobalCluster) Tags() DataAwsccRdsGlobalClusterTagsList {
+	var returns DataAwsccRdsGlobalClusterTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccRdsGlobalCluster) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -323,7 +360,7 @@ func (j *jsiiProxy_DataAwsccRdsGlobalCluster) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_global_cluster awscc_rds_global_cluster} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_global_cluster awscc_rds_global_cluster} Data Source.
 func NewDataAwsccRdsGlobalCluster(scope constructs.Construct, id *string, config *DataAwsccRdsGlobalClusterConfig) DataAwsccRdsGlobalCluster {
 	_init_.Initialize()
 
@@ -341,7 +378,7 @@ func NewDataAwsccRdsGlobalCluster(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rds_global_cluster awscc_rds_global_cluster} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rds_global_cluster awscc_rds_global_cluster} Data Source.
 func NewDataAwsccRdsGlobalCluster_Override(d DataAwsccRdsGlobalCluster, scope constructs.Construct, id *string, config *DataAwsccRdsGlobalClusterConfig) {
 	_init_.Initialize()
 
@@ -708,6 +745,32 @@ func (d *jsiiProxy_DataAwsccRdsGlobalCluster) SynthesizeAttributes() *map[string
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRdsGlobalCluster) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRdsGlobalCluster) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

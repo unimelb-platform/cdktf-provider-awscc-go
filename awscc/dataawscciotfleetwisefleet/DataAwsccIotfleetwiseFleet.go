@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciotfleetwisefleet/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotfleetwise_fleet awscc_iotfleetwise_fleet}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotfleetwise_fleet awscc_iotfleetwise_fleet}.
 type DataAwsccIotfleetwiseFleet interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -27,6 +27,7 @@ type DataAwsccIotfleetwiseFleet interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	Description() *string
+	FleetId() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -88,6 +89,10 @@ type DataAwsccIotfleetwiseFleet interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -167,6 +172,16 @@ func (j *jsiiProxy_DataAwsccIotfleetwiseFleet) Description() *string {
 	_jsii_.Get(
 		j,
 		"description",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotfleetwiseFleet) FleetId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fleetId",
 		&returns,
 	)
 	return returns
@@ -323,7 +338,7 @@ func (j *jsiiProxy_DataAwsccIotfleetwiseFleet) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotfleetwise_fleet awscc_iotfleetwise_fleet} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotfleetwise_fleet awscc_iotfleetwise_fleet} Data Source.
 func NewDataAwsccIotfleetwiseFleet(scope constructs.Construct, id *string, config *DataAwsccIotfleetwiseFleetConfig) DataAwsccIotfleetwiseFleet {
 	_init_.Initialize()
 
@@ -341,7 +356,7 @@ func NewDataAwsccIotfleetwiseFleet(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotfleetwise_fleet awscc_iotfleetwise_fleet} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotfleetwise_fleet awscc_iotfleetwise_fleet} Data Source.
 func NewDataAwsccIotfleetwiseFleet_Override(d DataAwsccIotfleetwiseFleet, scope constructs.Construct, id *string, config *DataAwsccIotfleetwiseFleetConfig) {
 	_init_.Initialize()
 
@@ -708,6 +723,32 @@ func (d *jsiiProxy_DataAwsccIotfleetwiseFleet) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotfleetwiseFleet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotfleetwiseFleet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

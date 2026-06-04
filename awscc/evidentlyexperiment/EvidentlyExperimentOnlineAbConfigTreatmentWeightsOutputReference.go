@@ -67,6 +67,8 @@ type EvidentlyExperimentOnlineAbConfigTreatmentWeightsOutputReference interface 
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetSplitWeight()
+	ResetTreatment()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (e *jsiiProxy_EvidentlyExperimentOnlineAbConfigTreatmentWeightsOutputRefere
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EvidentlyExperimentOnlineAbConfigTreatmentWeightsOutputReference) ResetSplitWeight() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetSplitWeight",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EvidentlyExperimentOnlineAbConfigTreatmentWeightsOutputReference) ResetTreatment() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetTreatment",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EvidentlyExperimentOnlineAbConfigTreatmentWeightsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

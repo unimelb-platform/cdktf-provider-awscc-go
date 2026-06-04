@@ -67,6 +67,8 @@ type BackupBackupPlanBackupPlanAdvancedBackupSettingsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBackupOptions()
+	ResetResourceType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (b *jsiiProxy_BackupBackupPlanBackupPlanAdvancedBackupSettingsOutputReferen
 	)
 
 	return returns
+}
+
+func (b *jsiiProxy_BackupBackupPlanBackupPlanAdvancedBackupSettingsOutputReference) ResetBackupOptions() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetBackupOptions",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BackupBackupPlanBackupPlanAdvancedBackupSettingsOutputReference) ResetResourceType() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetResourceType",
+		nil, // no parameters
+	)
 }
 
 func (b *jsiiProxy_BackupBackupPlanBackupPlanAdvancedBackupSettingsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

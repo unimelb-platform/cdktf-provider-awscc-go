@@ -4,6 +4,10 @@ package dataawscctimestreamdatabase
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccTimestreamDatabaseTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccTimestreamDatabaseTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -68,6 +68,7 @@ type IoteventsAlarmModelAlarmEventActionsAlarmActionsDynamoDBv2OutputReference i
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutPayload(value *IoteventsAlarmModelAlarmEventActionsAlarmActionsDynamoDBv2Payload)
 	ResetPayload()
+	ResetTableName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsDynamoDBv2Out
 	_jsii_.InvokeVoid(
 		i,
 		"resetPayload",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsDynamoDBv2OutputReference) ResetTableName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTableName",
 		nil, // no parameters
 	)
 }

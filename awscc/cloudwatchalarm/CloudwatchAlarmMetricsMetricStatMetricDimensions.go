@@ -2,13 +2,13 @@ package cloudwatchalarm
 
 
 type CloudwatchAlarmMetricsMetricStatMetricDimensions struct {
-	// The name of the dimension.
+	// The name of the dimension, from 1?255 characters in length. This dimension name must have been included when the metric was published.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudwatch_alarm#name CloudwatchAlarm#name}
-	Name *string `field:"required" json:"name" yaml:"name"`
-	// The value for the dimension.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudwatch_alarm#name CloudwatchAlarm#name}
+	Name *string `field:"optional" json:"name" yaml:"name"`
+	// The value for the dimension, from 1?255 characters in length.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudwatch_alarm#value CloudwatchAlarm#value}
-	Value *string `field:"required" json:"value" yaml:"value"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudwatch_alarm#value CloudwatchAlarm#value}
+	Value *string `field:"optional" json:"value" yaml:"value"`
 }
 

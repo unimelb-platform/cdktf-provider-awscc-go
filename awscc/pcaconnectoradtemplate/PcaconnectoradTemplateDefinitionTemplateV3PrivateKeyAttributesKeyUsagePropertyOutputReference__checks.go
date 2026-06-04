@@ -174,9 +174,25 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttribute
 	return nil
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsagePropertyOutputReference) validateSetInternalValueParameters(val *PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsageProperty) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsagePropertyOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsageProperty:
+		val := val.(*PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsageProperty)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsageProperty:
+		val_ := val.(PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsageProperty)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *PcaconnectoradTemplateDefinitionTemplateV3PrivateKeyAttributesKeyUsageProperty; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

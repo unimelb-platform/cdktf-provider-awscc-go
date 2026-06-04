@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdatasyncstoragesystem/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_storage_system awscc_datasync_storage_system}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_storage_system awscc_datasync_storage_system}.
 type DataAwsccDatasyncStorageSystem interface {
 	cdktf.TerraformDataSource
 	AgentArns() *[]*string
@@ -55,6 +55,7 @@ type DataAwsccDatasyncStorageSystem interface {
 	ServerConfiguration() DataAwsccDatasyncStorageSystemServerConfigurationOutputReference
 	ServerCredentials() DataAwsccDatasyncStorageSystemServerCredentialsOutputReference
 	StorageSystemArn() *string
+	StorageSystemId() *string
 	SystemType() *string
 	Tags() DataAwsccDatasyncStorageSystemTagsList
 	// Experimental.
@@ -92,6 +93,10 @@ type DataAwsccDatasyncStorageSystem interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -316,6 +321,16 @@ func (j *jsiiProxy_DataAwsccDatasyncStorageSystem) StorageSystemArn() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccDatasyncStorageSystem) StorageSystemId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"storageSystemId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccDatasyncStorageSystem) SystemType() *string {
 	var returns *string
 	_jsii_.Get(
@@ -367,7 +382,7 @@ func (j *jsiiProxy_DataAwsccDatasyncStorageSystem) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_storage_system awscc_datasync_storage_system} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_storage_system awscc_datasync_storage_system} Data Source.
 func NewDataAwsccDatasyncStorageSystem(scope constructs.Construct, id *string, config *DataAwsccDatasyncStorageSystemConfig) DataAwsccDatasyncStorageSystem {
 	_init_.Initialize()
 
@@ -385,7 +400,7 @@ func NewDataAwsccDatasyncStorageSystem(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_storage_system awscc_datasync_storage_system} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_storage_system awscc_datasync_storage_system} Data Source.
 func NewDataAwsccDatasyncStorageSystem_Override(d DataAwsccDatasyncStorageSystem, scope constructs.Construct, id *string, config *DataAwsccDatasyncStorageSystemConfig) {
 	_init_.Initialize()
 
@@ -752,6 +767,32 @@ func (d *jsiiProxy_DataAwsccDatasyncStorageSystem) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatasyncStorageSystem) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatasyncStorageSystem) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

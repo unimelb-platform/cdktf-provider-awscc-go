@@ -27,8 +27,8 @@ type GrafanaWorkspaceSamlConfigurationIdpMetadataOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *GrafanaWorkspaceSamlConfigurationIdpMetadata
-	SetInternalValue(val *GrafanaWorkspaceSamlConfigurationIdpMetadata)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -124,8 +124,8 @@ func (j *jsiiProxy_GrafanaWorkspaceSamlConfigurationIdpMetadataOutputReference) 
 	return returns
 }
 
-func (j *jsiiProxy_GrafanaWorkspaceSamlConfigurationIdpMetadataOutputReference) InternalValue() *GrafanaWorkspaceSamlConfigurationIdpMetadata {
-	var returns *GrafanaWorkspaceSamlConfigurationIdpMetadata
+func (j *jsiiProxy_GrafanaWorkspaceSamlConfigurationIdpMetadataOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -244,7 +244,7 @@ func (j *jsiiProxy_GrafanaWorkspaceSamlConfigurationIdpMetadataOutputReference)S
 	)
 }
 
-func (j *jsiiProxy_GrafanaWorkspaceSamlConfigurationIdpMetadataOutputReference)SetInternalValue(val *GrafanaWorkspaceSamlConfigurationIdpMetadata) {
+func (j *jsiiProxy_GrafanaWorkspaceSamlConfigurationIdpMetadataOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

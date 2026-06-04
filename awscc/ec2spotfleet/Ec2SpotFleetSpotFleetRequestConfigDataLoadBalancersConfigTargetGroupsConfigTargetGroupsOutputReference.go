@@ -30,8 +30,8 @@ type Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTargetGroupsConfig
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTargetGroupsConfigTargetGroups
-	SetInternalValue(val *Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTargetGroupsConfigTargetGroups)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTargetGroupsConfig
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -139,8 +140,8 @@ func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTarg
 	return returns
 }
 
-func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTargetGroupsConfigTargetGroupsOutputReference) InternalValue() *Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTargetGroupsConfigTargetGroups {
-	var returns *Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTargetGroupsConfigTargetGroups
+func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTargetGroupsConfigTargetGroupsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -230,7 +231,7 @@ func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTarg
 	)
 }
 
-func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTargetGroupsConfigTargetGroupsOutputReference)SetInternalValue(val *Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTargetGroupsConfigTargetGroups) {
+func (j *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTargetGroupsConfigTargetGroupsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -447,6 +448,14 @@ func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTarg
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTargetGroupsConfigTargetGroupsOutputReference) ResetArn() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetArn",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLoadBalancersConfigTargetGroupsConfigTargetGroupsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

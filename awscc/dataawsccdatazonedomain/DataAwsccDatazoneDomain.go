@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdatazonedomain/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datazone_domain awscc_datazone_domain}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datazone_domain awscc_datazone_domain}.
 type DataAwsccDatazoneDomain interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -28,6 +28,8 @@ type DataAwsccDatazoneDomain interface {
 	SetDependsOn(val *[]*string)
 	Description() *string
 	DomainExecutionRole() *string
+	DomainId() *string
+	DomainVersion() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -56,6 +58,8 @@ type DataAwsccDatazoneDomain interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	RootDomainUnitId() *string
+	ServiceRole() *string
 	SingleSignOn() DataAwsccDatazoneDomainSingleSignOnOutputReference
 	Status() *string
 	Tags() DataAwsccDatazoneDomainTagsList
@@ -94,6 +98,10 @@ type DataAwsccDatazoneDomain interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -183,6 +191,26 @@ func (j *jsiiProxy_DataAwsccDatazoneDomain) DomainExecutionRole() *string {
 	_jsii_.Get(
 		j,
 		"domainExecutionRole",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatazoneDomain) DomainId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"domainId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatazoneDomain) DomainVersion() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"domainVersion",
 		&returns,
 	)
 	return returns
@@ -328,6 +356,26 @@ func (j *jsiiProxy_DataAwsccDatazoneDomain) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccDatazoneDomain) RootDomainUnitId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"rootDomainUnitId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatazoneDomain) ServiceRole() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"serviceRole",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccDatazoneDomain) SingleSignOn() DataAwsccDatazoneDomainSingleSignOnOutputReference {
 	var returns DataAwsccDatazoneDomainSingleSignOnOutputReference
 	_jsii_.Get(
@@ -389,7 +437,7 @@ func (j *jsiiProxy_DataAwsccDatazoneDomain) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datazone_domain awscc_datazone_domain} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datazone_domain awscc_datazone_domain} Data Source.
 func NewDataAwsccDatazoneDomain(scope constructs.Construct, id *string, config *DataAwsccDatazoneDomainConfig) DataAwsccDatazoneDomain {
 	_init_.Initialize()
 
@@ -407,7 +455,7 @@ func NewDataAwsccDatazoneDomain(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datazone_domain awscc_datazone_domain} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datazone_domain awscc_datazone_domain} Data Source.
 func NewDataAwsccDatazoneDomain_Override(d DataAwsccDatazoneDomain, scope constructs.Construct, id *string, config *DataAwsccDatazoneDomainConfig) {
 	_init_.Initialize()
 
@@ -774,6 +822,32 @@ func (d *jsiiProxy_DataAwsccDatazoneDomain) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatazoneDomain) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatazoneDomain) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

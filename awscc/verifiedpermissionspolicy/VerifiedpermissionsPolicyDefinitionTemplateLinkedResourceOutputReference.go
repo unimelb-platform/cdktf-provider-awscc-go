@@ -67,6 +67,8 @@ type VerifiedpermissionsPolicyDefinitionTemplateLinkedResourceOutputReference in
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEntityId()
+	ResetEntityType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyDefinitionTemplateLinkedResourceOutp
 	)
 
 	return returns
+}
+
+func (v *jsiiProxy_VerifiedpermissionsPolicyDefinitionTemplateLinkedResourceOutputReference) ResetEntityId() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetEntityId",
+		nil, // no parameters
+	)
+}
+
+func (v *jsiiProxy_VerifiedpermissionsPolicyDefinitionTemplateLinkedResourceOutputReference) ResetEntityType() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetEntityType",
+		nil, // no parameters
+	)
 }
 
 func (v *jsiiProxy_VerifiedpermissionsPolicyDefinitionTemplateLinkedResourceOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

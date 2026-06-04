@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccb2biprofile/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/b2bi_profile awscc_b2bi_profile}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/b2bi_profile awscc_b2bi_profile}.
 type DataAwsccB2BiProfile interface {
 	cdktf.TerraformDataSource
 	BusinessName() *string
@@ -93,6 +93,10 @@ type DataAwsccB2BiProfile interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -378,7 +382,7 @@ func (j *jsiiProxy_DataAwsccB2BiProfile) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/b2bi_profile awscc_b2bi_profile} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/b2bi_profile awscc_b2bi_profile} Data Source.
 func NewDataAwsccB2BiProfile(scope constructs.Construct, id *string, config *DataAwsccB2BiProfileConfig) DataAwsccB2BiProfile {
 	_init_.Initialize()
 
@@ -396,7 +400,7 @@ func NewDataAwsccB2BiProfile(scope constructs.Construct, id *string, config *Dat
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/b2bi_profile awscc_b2bi_profile} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/b2bi_profile awscc_b2bi_profile} Data Source.
 func NewDataAwsccB2BiProfile_Override(d DataAwsccB2BiProfile, scope constructs.Construct, id *string, config *DataAwsccB2BiProfileConfig) {
 	_init_.Initialize()
 
@@ -763,6 +767,32 @@ func (d *jsiiProxy_DataAwsccB2BiProfile) SynthesizeAttributes() *map[string]inte
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccB2BiProfile) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccB2BiProfile) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -9,11 +9,12 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/rumappmonitor/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rum_app_monitor awscc_rum_app_monitor}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rum_app_monitor awscc_rum_app_monitor}.
 type RumAppMonitor interface {
 	cdktf.TerraformResource
 	AppMonitorConfiguration() RumAppMonitorAppMonitorConfigurationOutputReference
 	AppMonitorConfigurationInput() interface{}
+	AppMonitorId() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -31,6 +32,8 @@ type RumAppMonitor interface {
 	CwLogEnabled() interface{}
 	SetCwLogEnabled(val interface{})
 	CwLogEnabledInput() interface{}
+	DeobfuscationConfiguration() RumAppMonitorDeobfuscationConfigurationOutputReference
+	DeobfuscationConfigurationInput() interface{}
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -38,6 +41,9 @@ type RumAppMonitor interface {
 	Domain() *string
 	SetDomain(val *string)
 	DomainInput() *string
+	DomainList() *[]*string
+	SetDomainList(val *[]*string)
+	DomainListInput() *[]*string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -66,6 +72,8 @@ type RumAppMonitor interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	ResourcePolicy() RumAppMonitorResourcePolicyOutputReference
+	ResourcePolicyInput() interface{}
 	Tags() RumAppMonitorTagsList
 	TagsInput() interface{}
 	// Experimental.
@@ -98,26 +106,45 @@ type RumAppMonitor interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutAppMonitorConfiguration(value *RumAppMonitorAppMonitorConfiguration)
 	PutCustomEvents(value *RumAppMonitorCustomEvents)
+	PutDeobfuscationConfiguration(value *RumAppMonitorDeobfuscationConfiguration)
+	PutResourcePolicy(value *RumAppMonitorResourcePolicy)
 	PutTags(value interface{})
 	ResetAppMonitorConfiguration()
 	ResetCustomEvents()
 	ResetCwLogEnabled()
+	ResetDeobfuscationConfiguration()
+	ResetDomain()
+	ResetDomainList()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetResourcePolicy()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -147,6 +174,16 @@ func (j *jsiiProxy_RumAppMonitor) AppMonitorConfigurationInput() interface{} {
 	_jsii_.Get(
 		j,
 		"appMonitorConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RumAppMonitor) AppMonitorId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"appMonitorId",
 		&returns,
 	)
 	return returns
@@ -232,6 +269,26 @@ func (j *jsiiProxy_RumAppMonitor) CwLogEnabledInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RumAppMonitor) DeobfuscationConfiguration() RumAppMonitorDeobfuscationConfigurationOutputReference {
+	var returns RumAppMonitorDeobfuscationConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"deobfuscationConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RumAppMonitor) DeobfuscationConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"deobfuscationConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RumAppMonitor) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -257,6 +314,26 @@ func (j *jsiiProxy_RumAppMonitor) DomainInput() *string {
 	_jsii_.Get(
 		j,
 		"domainInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RumAppMonitor) DomainList() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"domainList",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RumAppMonitor) DomainListInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"domainListInput",
 		&returns,
 	)
 	return returns
@@ -372,6 +449,26 @@ func (j *jsiiProxy_RumAppMonitor) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RumAppMonitor) ResourcePolicy() RumAppMonitorResourcePolicyOutputReference {
+	var returns RumAppMonitorResourcePolicyOutputReference
+	_jsii_.Get(
+		j,
+		"resourcePolicy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RumAppMonitor) ResourcePolicyInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"resourcePolicyInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RumAppMonitor) Tags() RumAppMonitorTagsList {
 	var returns RumAppMonitorTagsList
 	_jsii_.Get(
@@ -423,7 +520,7 @@ func (j *jsiiProxy_RumAppMonitor) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rum_app_monitor awscc_rum_app_monitor} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rum_app_monitor awscc_rum_app_monitor} Resource.
 func NewRumAppMonitor(scope constructs.Construct, id *string, config *RumAppMonitorConfig) RumAppMonitor {
 	_init_.Initialize()
 
@@ -441,7 +538,7 @@ func NewRumAppMonitor(scope constructs.Construct, id *string, config *RumAppMoni
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rum_app_monitor awscc_rum_app_monitor} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rum_app_monitor awscc_rum_app_monitor} Resource.
 func NewRumAppMonitor_Override(r RumAppMonitor, scope constructs.Construct, id *string, config *RumAppMonitorConfig) {
 	_init_.Initialize()
 
@@ -500,6 +597,17 @@ func (j *jsiiProxy_RumAppMonitor)SetDomain(val *string) {
 	_jsii_.Set(
 		j,
 		"domain",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RumAppMonitor)SetDomainList(val *[]*string) {
+	if err := j.validateSetDomainListParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"domainList",
 		val,
 	)
 }
@@ -822,6 +930,19 @@ func (r *jsiiProxy_RumAppMonitor) GetStringMapAttribute(terraformAttribute *stri
 	return returns
 }
 
+func (r *jsiiProxy_RumAppMonitor) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (r *jsiiProxy_RumAppMonitor) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -849,6 +970,17 @@ func (r *jsiiProxy_RumAppMonitor) InterpolationForAttribute(terraformAttribute *
 	return returns
 }
 
+func (r *jsiiProxy_RumAppMonitor) MoveFromId(id *string) {
+	if err := r.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_RumAppMonitor) MoveTo(moveTarget *string, index interface{}) {
 	if err := r.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -857,6 +989,17 @@ func (r *jsiiProxy_RumAppMonitor) MoveTo(moveTarget *string, index interface{}) 
 		r,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (r *jsiiProxy_RumAppMonitor) MoveToId(id *string) {
+	if err := r.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -889,6 +1032,28 @@ func (r *jsiiProxy_RumAppMonitor) PutCustomEvents(value *RumAppMonitorCustomEven
 	_jsii_.InvokeVoid(
 		r,
 		"putCustomEvents",
+		[]interface{}{value},
+	)
+}
+
+func (r *jsiiProxy_RumAppMonitor) PutDeobfuscationConfiguration(value *RumAppMonitorDeobfuscationConfiguration) {
+	if err := r.validatePutDeobfuscationConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putDeobfuscationConfiguration",
+		[]interface{}{value},
+	)
+}
+
+func (r *jsiiProxy_RumAppMonitor) PutResourcePolicy(value *RumAppMonitorResourcePolicy) {
+	if err := r.validatePutResourcePolicyParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putResourcePolicy",
 		[]interface{}{value},
 	)
 }
@@ -928,10 +1093,42 @@ func (r *jsiiProxy_RumAppMonitor) ResetCwLogEnabled() {
 	)
 }
 
+func (r *jsiiProxy_RumAppMonitor) ResetDeobfuscationConfiguration() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetDeobfuscationConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RumAppMonitor) ResetDomain() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetDomain",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RumAppMonitor) ResetDomainList() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetDomainList",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_RumAppMonitor) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RumAppMonitor) ResetResourcePolicy() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetResourcePolicy",
 		nil, // no parameters
 	)
 }
@@ -950,6 +1147,32 @@ func (r *jsiiProxy_RumAppMonitor) SynthesizeAttributes() *map[string]interface{}
 	_jsii_.Invoke(
 		r,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RumAppMonitor) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		r,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RumAppMonitor) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -31,8 +31,8 @@ type KafkaconnectConnectorLogDeliveryWorkerLogDeliveryOutputReference interface 
 	FirehoseInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *KafkaconnectConnectorLogDeliveryWorkerLogDelivery
-	SetInternalValue(val *KafkaconnectConnectorLogDeliveryWorkerLogDelivery)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	S3() KafkaconnectConnectorLogDeliveryWorkerLogDeliveryS3OutputReference
 	S3Input() interface{}
 	// Experimental.
@@ -168,8 +168,8 @@ func (j *jsiiProxy_KafkaconnectConnectorLogDeliveryWorkerLogDeliveryOutputRefere
 	return returns
 }
 
-func (j *jsiiProxy_KafkaconnectConnectorLogDeliveryWorkerLogDeliveryOutputReference) InternalValue() *KafkaconnectConnectorLogDeliveryWorkerLogDelivery {
-	var returns *KafkaconnectConnectorLogDeliveryWorkerLogDelivery
+func (j *jsiiProxy_KafkaconnectConnectorLogDeliveryWorkerLogDeliveryOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -268,7 +268,7 @@ func (j *jsiiProxy_KafkaconnectConnectorLogDeliveryWorkerLogDeliveryOutputRefere
 	)
 }
 
-func (j *jsiiProxy_KafkaconnectConnectorLogDeliveryWorkerLogDeliveryOutputReference)SetInternalValue(val *KafkaconnectConnectorLogDeliveryWorkerLogDelivery) {
+func (j *jsiiProxy_KafkaconnectConnectorLogDeliveryWorkerLogDeliveryOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

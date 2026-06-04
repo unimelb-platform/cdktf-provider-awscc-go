@@ -64,6 +64,7 @@ type ApprunnerObservabilityConfigurationTraceConfigurationOutputReference interf
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetVendor()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (a *jsiiProxy_ApprunnerObservabilityConfigurationTraceConfigurationOutputRe
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_ApprunnerObservabilityConfigurationTraceConfigurationOutputReference) ResetVendor() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetVendor",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_ApprunnerObservabilityConfigurationTraceConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

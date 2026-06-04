@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccappconfigextensionassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appconfig_extension_association awscc_appconfig_extension_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appconfig_extension_association awscc_appconfig_extension_association}.
 type DataAwsccAppconfigExtensionAssociation interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -26,6 +26,7 @@ type DataAwsccAppconfigExtensionAssociation interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	ExtensionArn() *string
+	ExtensionAssociationId() *string
 	ExtensionIdentifier() *string
 	ExtensionVersionNumber() *float64
 	// Experimental.
@@ -90,6 +91,10 @@ type DataAwsccAppconfigExtensionAssociation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -159,6 +164,16 @@ func (j *jsiiProxy_DataAwsccAppconfigExtensionAssociation) ExtensionArn() *strin
 	_jsii_.Get(
 		j,
 		"extensionArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccAppconfigExtensionAssociation) ExtensionAssociationId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"extensionAssociationId",
 		&returns,
 	)
 	return returns
@@ -345,7 +360,7 @@ func (j *jsiiProxy_DataAwsccAppconfigExtensionAssociation) TerraformResourceType
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appconfig_extension_association awscc_appconfig_extension_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appconfig_extension_association awscc_appconfig_extension_association} Data Source.
 func NewDataAwsccAppconfigExtensionAssociation(scope constructs.Construct, id *string, config *DataAwsccAppconfigExtensionAssociationConfig) DataAwsccAppconfigExtensionAssociation {
 	_init_.Initialize()
 
@@ -363,7 +378,7 @@ func NewDataAwsccAppconfigExtensionAssociation(scope constructs.Construct, id *s
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appconfig_extension_association awscc_appconfig_extension_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appconfig_extension_association awscc_appconfig_extension_association} Data Source.
 func NewDataAwsccAppconfigExtensionAssociation_Override(d DataAwsccAppconfigExtensionAssociation, scope constructs.Construct, id *string, config *DataAwsccAppconfigExtensionAssociationConfig) {
 	_init_.Initialize()
 
@@ -730,6 +745,32 @@ func (d *jsiiProxy_DataAwsccAppconfigExtensionAssociation) SynthesizeAttributes(
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppconfigExtensionAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppconfigExtensionAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

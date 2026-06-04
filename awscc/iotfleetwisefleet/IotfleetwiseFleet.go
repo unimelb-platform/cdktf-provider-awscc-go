@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/iotfleetwisefleet/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iotfleetwise_fleet awscc_iotfleetwise_fleet}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iotfleetwise_fleet awscc_iotfleetwise_fleet}.
 type IotfleetwiseFleet interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -33,6 +33,9 @@ type IotfleetwiseFleet interface {
 	Description() *string
 	SetDescription(val *string)
 	DescriptionInput() *string
+	FleetId() *string
+	SetFleetId(val *string)
+	FleetIdInput() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -42,8 +45,6 @@ type IotfleetwiseFleet interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	LastModificationTime() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
@@ -96,12 +97,22 @@ type IotfleetwiseFleet interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -112,6 +123,9 @@ type IotfleetwiseFleet interface {
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -216,6 +230,26 @@ func (j *jsiiProxy_IotfleetwiseFleet) DescriptionInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_IotfleetwiseFleet) FleetId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fleetId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotfleetwiseFleet) FleetIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fleetIdInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_IotfleetwiseFleet) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
@@ -251,16 +285,6 @@ func (j *jsiiProxy_IotfleetwiseFleet) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_IotfleetwiseFleet) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
 		&returns,
 	)
 	return returns
@@ -397,7 +421,7 @@ func (j *jsiiProxy_IotfleetwiseFleet) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iotfleetwise_fleet awscc_iotfleetwise_fleet} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iotfleetwise_fleet awscc_iotfleetwise_fleet} Resource.
 func NewIotfleetwiseFleet(scope constructs.Construct, id *string, config *IotfleetwiseFleetConfig) IotfleetwiseFleet {
 	_init_.Initialize()
 
@@ -415,7 +439,7 @@ func NewIotfleetwiseFleet(scope constructs.Construct, id *string, config *Iotfle
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iotfleetwise_fleet awscc_iotfleetwise_fleet} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iotfleetwise_fleet awscc_iotfleetwise_fleet} Resource.
 func NewIotfleetwiseFleet_Override(i IotfleetwiseFleet, scope constructs.Construct, id *string, config *IotfleetwiseFleetConfig) {
 	_init_.Initialize()
 
@@ -467,21 +491,21 @@ func (j *jsiiProxy_IotfleetwiseFleet)SetDescription(val *string) {
 	)
 }
 
-func (j *jsiiProxy_IotfleetwiseFleet)SetForEach(val cdktf.ITerraformIterator) {
-	_jsii_.Set(
-		j,
-		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_IotfleetwiseFleet)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
+func (j *jsiiProxy_IotfleetwiseFleet)SetFleetId(val *string) {
+	if err := j.validateSetFleetIdParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"id",
+		"fleetId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IotfleetwiseFleet)SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -796,6 +820,19 @@ func (i *jsiiProxy_IotfleetwiseFleet) GetStringMapAttribute(terraformAttribute *
 	return returns
 }
 
+func (i *jsiiProxy_IotfleetwiseFleet) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (i *jsiiProxy_IotfleetwiseFleet) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := i.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -823,6 +860,17 @@ func (i *jsiiProxy_IotfleetwiseFleet) InterpolationForAttribute(terraformAttribu
 	return returns
 }
 
+func (i *jsiiProxy_IotfleetwiseFleet) MoveFromId(id *string) {
+	if err := i.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (i *jsiiProxy_IotfleetwiseFleet) MoveTo(moveTarget *string, index interface{}) {
 	if err := i.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -831,6 +879,17 @@ func (i *jsiiProxy_IotfleetwiseFleet) MoveTo(moveTarget *string, index interface
 		i,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (i *jsiiProxy_IotfleetwiseFleet) MoveToId(id *string) {
+	if err := i.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -886,6 +945,32 @@ func (i *jsiiProxy_IotfleetwiseFleet) SynthesizeAttributes() *map[string]interfa
 	_jsii_.Invoke(
 		i,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IotfleetwiseFleet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		i,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IotfleetwiseFleet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

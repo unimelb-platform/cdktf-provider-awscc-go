@@ -31,6 +31,7 @@ type DataAwsccKinesisfirehoseDeliveryStreamMskSourceConfigurationOutputReference
 	InternalValue() *DataAwsccKinesisfirehoseDeliveryStreamMskSourceConfiguration
 	SetInternalValue(val *DataAwsccKinesisfirehoseDeliveryStreamMskSourceConfiguration)
 	MskClusterArn() *string
+	ReadFromTimestamp() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -144,6 +145,16 @@ func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamMskSourceConfigurationO
 	_jsii_.Get(
 		j,
 		"mskClusterArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamMskSourceConfigurationOutputReference) ReadFromTimestamp() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"readFromTimestamp",
 		&returns,
 	)
 	return returns

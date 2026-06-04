@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/iamoidcprovider/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iam_oidc_provider awscc_iam_oidc_provider}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iam_oidc_provider awscc_iam_oidc_provider}.
 type IamOidcProvider interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -95,12 +95,22 @@ type IamOidcProvider interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -110,8 +120,12 @@ type IamOidcProvider interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetTags()
+	ResetThumbprintList()
 	ResetUrl()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -387,7 +401,7 @@ func (j *jsiiProxy_IamOidcProvider) UrlInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iam_oidc_provider awscc_iam_oidc_provider} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iam_oidc_provider awscc_iam_oidc_provider} Resource.
 func NewIamOidcProvider(scope constructs.Construct, id *string, config *IamOidcProviderConfig) IamOidcProvider {
 	_init_.Initialize()
 
@@ -405,7 +419,7 @@ func NewIamOidcProvider(scope constructs.Construct, id *string, config *IamOidcP
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iam_oidc_provider awscc_iam_oidc_provider} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iam_oidc_provider awscc_iam_oidc_provider} Resource.
 func NewIamOidcProvider_Override(i IamOidcProvider, scope constructs.Construct, id *string, config *IamOidcProviderConfig) {
 	_init_.Initialize()
 
@@ -786,6 +800,19 @@ func (i *jsiiProxy_IamOidcProvider) GetStringMapAttribute(terraformAttribute *st
 	return returns
 }
 
+func (i *jsiiProxy_IamOidcProvider) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (i *jsiiProxy_IamOidcProvider) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := i.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -813,6 +840,17 @@ func (i *jsiiProxy_IamOidcProvider) InterpolationForAttribute(terraformAttribute
 	return returns
 }
 
+func (i *jsiiProxy_IamOidcProvider) MoveFromId(id *string) {
+	if err := i.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (i *jsiiProxy_IamOidcProvider) MoveTo(moveTarget *string, index interface{}) {
 	if err := i.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -821,6 +859,17 @@ func (i *jsiiProxy_IamOidcProvider) MoveTo(moveTarget *string, index interface{}
 		i,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (i *jsiiProxy_IamOidcProvider) MoveToId(id *string) {
+	if err := i.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -870,6 +919,14 @@ func (i *jsiiProxy_IamOidcProvider) ResetTags() {
 	)
 }
 
+func (i *jsiiProxy_IamOidcProvider) ResetThumbprintList() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetThumbprintList",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IamOidcProvider) ResetUrl() {
 	_jsii_.InvokeVoid(
 		i,
@@ -884,6 +941,32 @@ func (i *jsiiProxy_IamOidcProvider) SynthesizeAttributes() *map[string]interface
 	_jsii_.Invoke(
 		i,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IamOidcProvider) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		i,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IamOidcProvider) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

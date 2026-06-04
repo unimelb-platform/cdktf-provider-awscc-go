@@ -56,11 +56,23 @@ func (i *jsiiProxy_IotfleetwiseVehicle) validateInterpolationForAttributeParamet
 	return nil
 }
 
+func (i *jsiiProxy_IotfleetwiseVehicle) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotfleetwiseVehicle) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (i *jsiiProxy_IotfleetwiseVehicle) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotfleetwiseVehicle) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotfleetwiseVehicle) validatePutStateTemplatesParameters(value interface{}) error {
 	return nil
 }
 

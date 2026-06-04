@@ -67,6 +67,7 @@ type CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigServerTimingHeade
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEnabled()
 	ResetSamplingRate()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigSer
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigServerTimingHeadersConfigOutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetEnabled",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigServerTimingHeadersConfigOutputReference) ResetSamplingRate() {

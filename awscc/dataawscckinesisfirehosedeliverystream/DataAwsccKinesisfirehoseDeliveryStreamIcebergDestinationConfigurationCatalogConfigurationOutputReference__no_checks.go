@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawscckinesisfirehosedeliverystream
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationCatalogConfigurationOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationCatalogConfigurationOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationCatalogConfigurationOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationCatalogConfigurationOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationCatalogConfigurationOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationCatalogConfigurationOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationCatalogConfigurationOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationCatalogConfigurationOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationCatalogConfigurationOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationCatalogConfigurationOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationCatalogConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationCatalogConfigurationOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationCatalogConfigurationOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationCatalogConfigurationOutputReference) validateSetInternalValueParameters(val *DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationCatalogConfiguration) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationCatalogConfigurationOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationCatalogConfigurationOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationCatalogConfigurationOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

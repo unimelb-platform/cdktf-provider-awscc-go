@@ -64,7 +64,7 @@ func (j *jsiiProxy_SagemakerModelQualityJobDefinitionModelQualityJobInputBatchTr
 	return nil
 }
 
-func (j *jsiiProxy_SagemakerModelQualityJobDefinitionModelQualityJobInputBatchTransformInputDatasetFormatOutputReference) validateSetInternalValueParameters(val *SagemakerModelQualityJobDefinitionModelQualityJobInputBatchTransformInputDatasetFormat) error {
+func (j *jsiiProxy_SagemakerModelQualityJobDefinitionModelQualityJobInputBatchTransformInputDatasetFormatOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

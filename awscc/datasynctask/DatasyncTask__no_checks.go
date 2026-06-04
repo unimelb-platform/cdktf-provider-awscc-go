@@ -56,7 +56,15 @@ func (d *jsiiProxy_DatasyncTask) validateInterpolationForAttributeParameters(ter
 	return nil
 }
 
+func (d *jsiiProxy_DatasyncTask) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DatasyncTask) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DatasyncTask) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -69,6 +77,10 @@ func (d *jsiiProxy_DatasyncTask) validatePutExcludesParameters(value interface{}
 }
 
 func (d *jsiiProxy_DatasyncTask) validatePutIncludesParameters(value interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DatasyncTask) validatePutManifestConfigParameters(value *DatasyncTaskManifestConfig) error {
 	return nil
 }
 
@@ -133,6 +145,10 @@ func (j *jsiiProxy_DatasyncTask) validateSetProvisionersParameters(val *[]interf
 }
 
 func (j *jsiiProxy_DatasyncTask) validateSetSourceLocationArnParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DatasyncTask) validateSetTaskModeParameters(val *string) error {
 	return nil
 }
 

@@ -56,7 +56,15 @@ func (s *jsiiProxy_SagemakerApp) validateInterpolationForAttributeParameters(ter
 	return nil
 }
 
+func (s *jsiiProxy_SagemakerApp) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_SagemakerApp) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (s *jsiiProxy_SagemakerApp) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -113,6 +121,10 @@ func (j *jsiiProxy_SagemakerApp) validateSetLifecycleParameters(val *cdktf.Terra
 }
 
 func (j *jsiiProxy_SagemakerApp) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_SagemakerApp) validateSetRecoveryModeParameters(val interface{}) error {
 	return nil
 }
 

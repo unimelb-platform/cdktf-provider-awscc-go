@@ -10,6 +10,9 @@ import (
 
 type CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference interface {
 	cdktf.ComplexObject
+	AdditionalAnalyses() *string
+	SetAdditionalAnalyses(val *string)
+	AdditionalAnalysesInput() *string
 	AggregateColumns() CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggregateColumnsList
 	AggregateColumnsInput() interface{}
 	AllowedJoinOperators() *[]*string
@@ -82,8 +85,14 @@ type CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference in
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAggregateColumns(value interface{})
 	PutOutputConstraints(value interface{})
+	ResetAdditionalAnalyses()
+	ResetAggregateColumns()
 	ResetAllowedJoinOperators()
+	ResetDimensionColumns()
+	ResetJoinColumns()
 	ResetJoinRequired()
+	ResetOutputConstraints()
+	ResetScalarFunctions()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -97,6 +106,26 @@ type CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference in
 // The jsii proxy struct for CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference
 type jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference) AdditionalAnalyses() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"additionalAnalyses",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference) AdditionalAnalysesInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"additionalAnalysesInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference) AggregateColumns() CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationAggregateColumnsList {
@@ -334,6 +363,17 @@ func NewCleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference
 		"awscc.cleanroomsConfiguredTable.CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference",
 		[]interface{}{terraformResource, terraformAttribute},
 		c,
+	)
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference)SetAdditionalAnalyses(val *string) {
+	if err := j.validateSetAdditionalAnalysesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"additionalAnalyses",
+		val,
 	)
 }
 
@@ -655,6 +695,22 @@ func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutp
 	)
 }
 
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference) ResetAdditionalAnalyses() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAdditionalAnalyses",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference) ResetAggregateColumns() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAggregateColumns",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference) ResetAllowedJoinOperators() {
 	_jsii_.InvokeVoid(
 		c,
@@ -663,10 +719,42 @@ func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutp
 	)
 }
 
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference) ResetDimensionColumns() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetDimensionColumns",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference) ResetJoinColumns() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetJoinColumns",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference) ResetJoinRequired() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetJoinRequired",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference) ResetOutputConstraints() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetOutputConstraints",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputReference) ResetScalarFunctions() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetScalarFunctions",
 		nil, // no parameters
 	)
 }

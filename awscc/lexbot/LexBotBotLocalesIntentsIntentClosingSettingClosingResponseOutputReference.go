@@ -30,8 +30,8 @@ type LexBotBotLocalesIntentsIntentClosingSettingClosingResponseOutputReference i
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotBotLocalesIntentsIntentClosingSettingClosingResponse
-	SetInternalValue(val *LexBotBotLocalesIntentsIntentClosingSettingClosingResponse)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	MessageGroupsList() LexBotBotLocalesIntentsIntentClosingSettingClosingResponseMessageGroupsListStructList
 	MessageGroupsListInput() interface{}
 	// Experimental.
@@ -68,6 +68,7 @@ type LexBotBotLocalesIntentsIntentClosingSettingClosingResponseOutputReference i
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMessageGroupsList(value interface{})
 	ResetAllowInterrupt()
+	ResetMessageGroupsList()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -143,8 +144,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseOut
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseOutputReference) InternalValue() *LexBotBotLocalesIntentsIntentClosingSettingClosingResponse {
-	var returns *LexBotBotLocalesIntentsIntentClosingSettingClosingResponse
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -254,7 +255,7 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseOut
 	)
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseOutputReference)SetInternalValue(val *LexBotBotLocalesIntentsIntentClosingSettingClosingResponse) {
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -488,6 +489,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseOut
 	_jsii_.InvokeVoid(
 		l,
 		"resetAllowInterrupt",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsIntentClosingSettingClosingResponseOutputReference) ResetMessageGroupsList() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMessageGroupsList",
 		nil, // no parameters
 	)
 }

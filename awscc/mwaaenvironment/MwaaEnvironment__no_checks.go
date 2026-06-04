@@ -56,7 +56,15 @@ func (m *jsiiProxy_MwaaEnvironment) validateInterpolationForAttributeParameters(
 	return nil
 }
 
+func (m *jsiiProxy_MwaaEnvironment) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_MwaaEnvironment) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (m *jsiiProxy_MwaaEnvironment) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -128,7 +136,15 @@ func (j *jsiiProxy_MwaaEnvironment) validateSetLifecycleParameters(val *cdktf.Te
 	return nil
 }
 
+func (j *jsiiProxy_MwaaEnvironment) validateSetMaxWebserversParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_MwaaEnvironment) validateSetMaxWorkersParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_MwaaEnvironment) validateSetMinWebserversParameters(val *float64) error {
 	return nil
 }
 
@@ -185,6 +201,10 @@ func (j *jsiiProxy_MwaaEnvironment) validateSetWebserverAccessModeParameters(val
 }
 
 func (j *jsiiProxy_MwaaEnvironment) validateSetWeeklyMaintenanceWindowStartParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_MwaaEnvironment) validateSetWorkerReplacementStrategyParameters(val *string) error {
 	return nil
 }
 

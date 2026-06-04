@@ -205,9 +205,25 @@ func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate
 	return nil
 }
 
-func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOutputReference) validateSetInternalValueParameters(val *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate:
+		val := val.(*AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate:
+		val_ := val.(AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *AutoscalingAutoScalingGroupMixedInstancesPolicyLaunchTemplate; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

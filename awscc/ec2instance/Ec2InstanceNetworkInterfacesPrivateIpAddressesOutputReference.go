@@ -67,6 +67,8 @@ type Ec2InstanceNetworkInterfacesPrivateIpAddressesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPrimary()
+	ResetPrivateIpAddress()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (e *jsiiProxy_Ec2InstanceNetworkInterfacesPrivateIpAddressesOutputReference
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_Ec2InstanceNetworkInterfacesPrivateIpAddressesOutputReference) ResetPrimary() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetPrimary",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2InstanceNetworkInterfacesPrivateIpAddressesOutputReference) ResetPrivateIpAddress() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetPrivateIpAddress",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_Ec2InstanceNetworkInterfacesPrivateIpAddressesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

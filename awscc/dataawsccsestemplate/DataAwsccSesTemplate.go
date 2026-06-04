@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccsestemplate/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ses_template awscc_ses_template}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ses_template awscc_ses_template}.
 type DataAwsccSesTemplate interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -48,6 +48,7 @@ type DataAwsccSesTemplate interface {
 	// Experimental.
 	RawOverrides() interface{}
 	Template() DataAwsccSesTemplateTemplateOutputReference
+	TemplateId() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -83,6 +84,10 @@ type DataAwsccSesTemplate interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -237,6 +242,16 @@ func (j *jsiiProxy_DataAwsccSesTemplate) Template() DataAwsccSesTemplateTemplate
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccSesTemplate) TemplateId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"templateId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccSesTemplate) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -268,7 +283,7 @@ func (j *jsiiProxy_DataAwsccSesTemplate) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ses_template awscc_ses_template} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ses_template awscc_ses_template} Data Source.
 func NewDataAwsccSesTemplate(scope constructs.Construct, id *string, config *DataAwsccSesTemplateConfig) DataAwsccSesTemplate {
 	_init_.Initialize()
 
@@ -286,7 +301,7 @@ func NewDataAwsccSesTemplate(scope constructs.Construct, id *string, config *Dat
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ses_template awscc_ses_template} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ses_template awscc_ses_template} Data Source.
 func NewDataAwsccSesTemplate_Override(d DataAwsccSesTemplate, scope constructs.Construct, id *string, config *DataAwsccSesTemplateConfig) {
 	_init_.Initialize()
 
@@ -653,6 +668,32 @@ func (d *jsiiProxy_DataAwsccSesTemplate) SynthesizeAttributes() *map[string]inte
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSesTemplate) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSesTemplate) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

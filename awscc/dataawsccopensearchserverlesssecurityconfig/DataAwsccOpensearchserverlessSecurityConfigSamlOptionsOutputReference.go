@@ -31,6 +31,7 @@ type DataAwsccOpensearchserverlessSecurityConfigSamlOptionsOutputReference inter
 	InternalValue() *DataAwsccOpensearchserverlessSecurityConfigSamlOptions
 	SetInternalValue(val *DataAwsccOpensearchserverlessSecurityConfigSamlOptions)
 	Metadata() *string
+	OpenSearchServerlessEntityId() *string
 	SessionTimeout() *float64
 	// Experimental.
 	TerraformAttribute() *string
@@ -145,6 +146,16 @@ func (j *jsiiProxy_DataAwsccOpensearchserverlessSecurityConfigSamlOptionsOutputR
 	_jsii_.Get(
 		j,
 		"metadata",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccOpensearchserverlessSecurityConfigSamlOptionsOutputReference) OpenSearchServerlessEntityId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"openSearchServerlessEntityId",
 		&returns,
 	)
 	return returns

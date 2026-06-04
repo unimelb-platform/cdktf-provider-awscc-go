@@ -60,7 +60,7 @@ func (j *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurat
 	return nil
 }
 
-func (j *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutcomeAlarmsOutputReference) validateSetInternalValueParameters(val *ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutcomeAlarms) error {
+func (j *jsiiProxy_ArczonalshiftZonalAutoshiftConfigurationPracticeRunConfigurationOutcomeAlarmsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

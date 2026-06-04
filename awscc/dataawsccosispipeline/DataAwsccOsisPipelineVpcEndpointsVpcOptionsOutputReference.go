@@ -39,6 +39,8 @@ type DataAwsccOsisPipelineVpcEndpointsVpcOptionsOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	VpcAttachmentOptions() DataAwsccOsisPipelineVpcEndpointsVpcOptionsVpcAttachmentOptionsOutputReference
+	VpcEndpointManagement() *string
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -163,6 +165,26 @@ func (j *jsiiProxy_DataAwsccOsisPipelineVpcEndpointsVpcOptionsOutputReference) T
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccOsisPipelineVpcEndpointsVpcOptionsOutputReference) VpcAttachmentOptions() DataAwsccOsisPipelineVpcEndpointsVpcOptionsVpcAttachmentOptionsOutputReference {
+	var returns DataAwsccOsisPipelineVpcEndpointsVpcOptionsVpcAttachmentOptionsOutputReference
+	_jsii_.Get(
+		j,
+		"vpcAttachmentOptions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccOsisPipelineVpcEndpointsVpcOptionsOutputReference) VpcEndpointManagement() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"vpcEndpointManagement",
 		&returns,
 	)
 	return returns

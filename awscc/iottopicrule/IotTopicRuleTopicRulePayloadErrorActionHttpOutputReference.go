@@ -76,6 +76,7 @@ type IotTopicRuleTopicRulePayloadErrorActionHttpOutputReference interface {
 	ResetAuth()
 	ResetConfirmationUrl()
 	ResetHeaders()
+	ResetUrl()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -574,6 +575,14 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionHttpOutputReference) R
 	_jsii_.InvokeVoid(
 		i,
 		"resetHeaders",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionHttpOutputReference) ResetUrl() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetUrl",
 		nil, // no parameters
 	)
 }

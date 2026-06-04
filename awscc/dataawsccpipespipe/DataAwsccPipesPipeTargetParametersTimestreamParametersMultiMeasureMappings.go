@@ -1,0 +1,6 @@
+package dataawsccpipespipe
+
+
+type DataAwsccPipesPipeTargetParametersTimestreamParametersMultiMeasureMappings struct {
+}
+

@@ -68,6 +68,7 @@ type EntityresolutionIdMappingWorkflowOutputSourceConfigOutputReference interfac
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetKmsArn()
+	ResetOutputS3Path()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (e *jsiiProxy_EntityresolutionIdMappingWorkflowOutputSourceConfigOutputRefe
 	_jsii_.InvokeVoid(
 		e,
 		"resetKmsArn",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EntityresolutionIdMappingWorkflowOutputSourceConfigOutputReference) ResetOutputS3Path() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetOutputS3Path",
 		nil, // no parameters
 	)
 }

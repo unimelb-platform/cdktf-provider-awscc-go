@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2networkinterface/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_network_interface awscc_ec2_network_interface}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_network_interface awscc_ec2_network_interface}.
 type DataAwsccEc2NetworkInterface interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -50,6 +50,7 @@ type DataAwsccEc2NetworkInterface interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	NetworkInterfaceId() *string
 	// The tree node.
 	Node() constructs.Node
 	PrimaryIpv6Address() *string
@@ -73,6 +74,7 @@ type DataAwsccEc2NetworkInterface interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	VpcId() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -102,6 +104,10 @@ type DataAwsccEc2NetworkInterface interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -326,6 +332,16 @@ func (j *jsiiProxy_DataAwsccEc2NetworkInterface) Lifecycle() *cdktf.TerraformRes
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2NetworkInterface) NetworkInterfaceId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"networkInterfaceId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2NetworkInterface) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -476,8 +492,18 @@ func (j *jsiiProxy_DataAwsccEc2NetworkInterface) TerraformResourceType() *string
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2NetworkInterface) VpcId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"vpcId",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_network_interface awscc_ec2_network_interface} Data Source.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_network_interface awscc_ec2_network_interface} Data Source.
 func NewDataAwsccEc2NetworkInterface(scope constructs.Construct, id *string, config *DataAwsccEc2NetworkInterfaceConfig) DataAwsccEc2NetworkInterface {
 	_init_.Initialize()
 
@@ -495,7 +521,7 @@ func NewDataAwsccEc2NetworkInterface(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_network_interface awscc_ec2_network_interface} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_network_interface awscc_ec2_network_interface} Data Source.
 func NewDataAwsccEc2NetworkInterface_Override(d DataAwsccEc2NetworkInterface, scope constructs.Construct, id *string, config *DataAwsccEc2NetworkInterfaceConfig) {
 	_init_.Initialize()
 
@@ -862,6 +888,32 @@ func (d *jsiiProxy_DataAwsccEc2NetworkInterface) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2NetworkInterface) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2NetworkInterface) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

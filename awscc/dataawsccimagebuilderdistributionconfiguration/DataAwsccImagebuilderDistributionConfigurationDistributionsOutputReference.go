@@ -35,6 +35,7 @@ type DataAwsccImagebuilderDistributionConfigurationDistributionsOutputReference 
 	LaunchTemplateConfigurations() DataAwsccImagebuilderDistributionConfigurationDistributionsLaunchTemplateConfigurationsList
 	LicenseConfigurationArns() *[]*string
 	Region() *string
+	SsmParameterConfigurations() DataAwsccImagebuilderDistributionConfigurationDistributionsSsmParameterConfigurationsList
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -187,6 +188,16 @@ func (j *jsiiProxy_DataAwsccImagebuilderDistributionConfigurationDistributionsOu
 	_jsii_.Get(
 		j,
 		"region",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccImagebuilderDistributionConfigurationDistributionsOutputReference) SsmParameterConfigurations() DataAwsccImagebuilderDistributionConfigurationDistributionsSsmParameterConfigurationsList {
+	var returns DataAwsccImagebuilderDistributionConfigurationDistributionsSsmParameterConfigurationsList
+	_jsii_.Get(
+		j,
+		"ssmParameterConfigurations",
 		&returns,
 	)
 	return returns

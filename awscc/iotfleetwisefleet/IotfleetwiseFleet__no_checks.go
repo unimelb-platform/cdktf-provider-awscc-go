@@ -56,7 +56,15 @@ func (i *jsiiProxy_IotfleetwiseFleet) validateInterpolationForAttributeParameter
 	return nil
 }
 
+func (i *jsiiProxy_IotfleetwiseFleet) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotfleetwiseFleet) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotfleetwiseFleet) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -96,7 +104,7 @@ func (j *jsiiProxy_IotfleetwiseFleet) validateSetDescriptionParameters(val *stri
 	return nil
 }
 
-func (j *jsiiProxy_IotfleetwiseFleet) validateSetIdParameters(val *string) error {
+func (j *jsiiProxy_IotfleetwiseFleet) validateSetFleetIdParameters(val *string) error {
 	return nil
 }
 

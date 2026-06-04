@@ -194,7 +194,31 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsOutputReference
 	return nil
 }
 
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsOutputReference) validateSetComposedAssetModelIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsOutputReference) validateSetDescriptionParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsOutputReference) validateSetExternalIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsOutputReference) validateSetIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -227,6 +251,22 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsOutputReference
 }
 
 func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsOutputReference) validateSetNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsOutputReference) validateSetParentAssetModelCompositeModelExternalIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsOutputReference) validateSetPathParameters(val *[]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

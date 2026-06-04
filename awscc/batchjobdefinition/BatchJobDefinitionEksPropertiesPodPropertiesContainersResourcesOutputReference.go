@@ -29,12 +29,12 @@ type BatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputRefere
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
-	Limits() *string
-	SetLimits(val *string)
-	LimitsInput() *string
-	Requests() *string
-	SetRequests(val *string)
-	RequestsInput() *string
+	Limits() *map[string]*string
+	SetLimits(val *map[string]*string)
+	LimitsInput() *map[string]*string
+	Requests() *map[string]*string
+	SetRequests(val *map[string]*string)
+	RequestsInput() *map[string]*string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -134,8 +134,8 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourc
 	return returns
 }
 
-func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference) Limits() *string {
-	var returns *string
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference) Limits() *map[string]*string {
+	var returns *map[string]*string
 	_jsii_.Get(
 		j,
 		"limits",
@@ -144,8 +144,8 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourc
 	return returns
 }
 
-func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference) LimitsInput() *string {
-	var returns *string
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference) LimitsInput() *map[string]*string {
+	var returns *map[string]*string
 	_jsii_.Get(
 		j,
 		"limitsInput",
@@ -154,8 +154,8 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourc
 	return returns
 }
 
-func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference) Requests() *string {
-	var returns *string
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference) Requests() *map[string]*string {
+	var returns *map[string]*string
 	_jsii_.Get(
 		j,
 		"requests",
@@ -164,8 +164,8 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourc
 	return returns
 }
 
-func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference) RequestsInput() *string {
-	var returns *string
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference) RequestsInput() *map[string]*string {
+	var returns *map[string]*string
 	_jsii_.Get(
 		j,
 		"requestsInput",
@@ -255,7 +255,7 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourc
 	)
 }
 
-func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference)SetLimits(val *string) {
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference)SetLimits(val *map[string]*string) {
 	if err := j.validateSetLimitsParameters(val); err != nil {
 		panic(err)
 	}
@@ -266,7 +266,7 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourc
 	)
 }
 
-func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference)SetRequests(val *string) {
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersResourcesOutputReference)SetRequests(val *map[string]*string) {
 	if err := j.validateSetRequestsParameters(val); err != nil {
 		panic(err)
 	}

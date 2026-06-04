@@ -30,6 +30,7 @@ type DataAwsccSagemakerSpaceSpaceSettingsCodeEditorAppSettingsDefaultResourceSpe
 	InstanceType() *string
 	InternalValue() *DataAwsccSagemakerSpaceSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec
 	SetInternalValue(val *DataAwsccSagemakerSpaceSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec)
+	LifecycleConfigArn() *string
 	SageMakerImageArn() *string
 	SageMakerImageVersionArn() *string
 	// Experimental.
@@ -134,6 +135,16 @@ func (j *jsiiProxy_DataAwsccSagemakerSpaceSpaceSettingsCodeEditorAppSettingsDefa
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerSpaceSpaceSettingsCodeEditorAppSettingsDefaultResourceSpecOutputReference) LifecycleConfigArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"lifecycleConfigArn",
 		&returns,
 	)
 	return returns

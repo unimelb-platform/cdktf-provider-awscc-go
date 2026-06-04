@@ -67,6 +67,8 @@ type ConfigOrganizationConformancePackConformancePackInputParametersOutputRefere
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetParameterName()
+	ResetParameterValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_ConfigOrganizationConformancePackConformancePackInputParamete
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ConfigOrganizationConformancePackConformancePackInputParametersOutputReference) ResetParameterName() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetParameterName",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConfigOrganizationConformancePackConformancePackInputParametersOutputReference) ResetParameterValue() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetParameterValue",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ConfigOrganizationConformancePackConformancePackInputParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

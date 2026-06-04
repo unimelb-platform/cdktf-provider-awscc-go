@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccroute53resolverfirewallrulegroups/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53resolver_firewall_rule_groups awscc_route53resolver_firewall_rule_groups}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53resolver_firewall_rule_groups awscc_route53resolver_firewall_rule_groups}.
 type DataAwsccRoute53ResolverFirewallRuleGroups interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccRoute53ResolverFirewallRuleGroups interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccRoute53ResolverFirewallRuleGroups) TerraformResource
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53resolver_firewall_rule_groups awscc_route53resolver_firewall_rule_groups} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53resolver_firewall_rule_groups awscc_route53resolver_firewall_rule_groups} Data Source.
 func NewDataAwsccRoute53ResolverFirewallRuleGroups(scope constructs.Construct, id *string, config *DataAwsccRoute53ResolverFirewallRuleGroupsConfig) DataAwsccRoute53ResolverFirewallRuleGroups {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccRoute53ResolverFirewallRuleGroups(scope constructs.Construct, i
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/route53resolver_firewall_rule_groups awscc_route53resolver_firewall_rule_groups} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/route53resolver_firewall_rule_groups awscc_route53resolver_firewall_rule_groups} Data Source.
 func NewDataAwsccRoute53ResolverFirewallRuleGroups_Override(d DataAwsccRoute53ResolverFirewallRuleGroups, scope constructs.Construct, id *string, config *DataAwsccRoute53ResolverFirewallRuleGroupsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccRoute53ResolverFirewallRuleGroups) SynthesizeAttribu
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53ResolverFirewallRuleGroups) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRoute53ResolverFirewallRuleGroups) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

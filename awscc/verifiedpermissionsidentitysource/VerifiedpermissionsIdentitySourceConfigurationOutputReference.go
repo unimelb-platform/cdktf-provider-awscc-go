@@ -31,6 +31,8 @@ type VerifiedpermissionsIdentitySourceConfigurationOutputReference interface {
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	OpenIdConnectConfiguration() VerifiedpermissionsIdentitySourceConfigurationOpenIdConnectConfigurationOutputReference
+	OpenIdConnectConfigurationInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +66,9 @@ type VerifiedpermissionsIdentitySourceConfigurationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutCognitoUserPoolConfiguration(value *VerifiedpermissionsIdentitySourceConfigurationCognitoUserPoolConfiguration)
+	PutOpenIdConnectConfiguration(value *VerifiedpermissionsIdentitySourceConfigurationOpenIdConnectConfiguration)
+	ResetCognitoUserPoolConfiguration()
+	ResetOpenIdConnectConfiguration()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -144,6 +149,26 @@ func (j *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationOutputReference
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationOutputReference) OpenIdConnectConfiguration() VerifiedpermissionsIdentitySourceConfigurationOpenIdConnectConfigurationOutputReference {
+	var returns VerifiedpermissionsIdentitySourceConfigurationOpenIdConnectConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"openIdConnectConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationOutputReference) OpenIdConnectConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"openIdConnectConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -446,6 +471,33 @@ func (v *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationOutputReference
 		v,
 		"putCognitoUserPoolConfiguration",
 		[]interface{}{value},
+	)
+}
+
+func (v *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationOutputReference) PutOpenIdConnectConfiguration(value *VerifiedpermissionsIdentitySourceConfigurationOpenIdConnectConfiguration) {
+	if err := v.validatePutOpenIdConnectConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		v,
+		"putOpenIdConnectConfiguration",
+		[]interface{}{value},
+	)
+}
+
+func (v *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationOutputReference) ResetCognitoUserPoolConfiguration() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetCognitoUserPoolConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (v *jsiiProxy_VerifiedpermissionsIdentitySourceConfigurationOutputReference) ResetOpenIdConnectConfiguration() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetOpenIdConnectConfiguration",
+		nil, // no parameters
 	)
 }
 

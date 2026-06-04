@@ -73,6 +73,10 @@ type IotTopicRuleTopicRulePayloadErrorActionCloudwatchAlarmOutputReference inter
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAlarmName()
+	ResetRoleArn()
+	ResetStateReason()
+	ResetStateValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -549,6 +553,38 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionCloudwatchAlarmOutputR
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionCloudwatchAlarmOutputReference) ResetAlarmName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetAlarmName",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionCloudwatchAlarmOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionCloudwatchAlarmOutputReference) ResetStateReason() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetStateReason",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionCloudwatchAlarmOutputReference) ResetStateValue() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetStateValue",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionCloudwatchAlarmOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

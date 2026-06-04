@@ -67,6 +67,8 @@ type FisExperimentTemplateTargetsFiltersOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPath()
+	ResetValues()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (f *jsiiProxy_FisExperimentTemplateTargetsFiltersOutputReference) Interpola
 	)
 
 	return returns
+}
+
+func (f *jsiiProxy_FisExperimentTemplateTargetsFiltersOutputReference) ResetPath() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetPath",
+		nil, // no parameters
+	)
+}
+
+func (f *jsiiProxy_FisExperimentTemplateTargetsFiltersOutputReference) ResetValues() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetValues",
+		nil, // no parameters
+	)
 }
 
 func (f *jsiiProxy_FisExperimentTemplateTargetsFiltersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

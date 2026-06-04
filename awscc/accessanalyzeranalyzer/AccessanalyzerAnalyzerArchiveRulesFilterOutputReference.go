@@ -36,8 +36,8 @@ type AccessanalyzerAnalyzerArchiveRulesFilterOutputReference interface {
 	ExistsInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *AccessanalyzerAnalyzerArchiveRulesFilter
-	SetInternalValue(val *AccessanalyzerAnalyzerArchiveRulesFilter)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Neq() *[]*string
 	SetNeq(val *[]*string)
 	NeqInput() *[]*string
@@ -80,6 +80,7 @@ type AccessanalyzerAnalyzerArchiveRulesFilterOutputReference interface {
 	ResetEq()
 	ResetExists()
 	ResetNeq()
+	ResetProperty()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -195,8 +196,8 @@ func (j *jsiiProxy_AccessanalyzerAnalyzerArchiveRulesFilterOutputReference) Fqn(
 	return returns
 }
 
-func (j *jsiiProxy_AccessanalyzerAnalyzerArchiveRulesFilterOutputReference) InternalValue() *AccessanalyzerAnalyzerArchiveRulesFilter {
-	var returns *AccessanalyzerAnalyzerArchiveRulesFilter
+func (j *jsiiProxy_AccessanalyzerAnalyzerArchiveRulesFilterOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -348,7 +349,7 @@ func (j *jsiiProxy_AccessanalyzerAnalyzerArchiveRulesFilterOutputReference)SetEx
 	)
 }
 
-func (j *jsiiProxy_AccessanalyzerAnalyzerArchiveRulesFilterOutputReference)SetInternalValue(val *AccessanalyzerAnalyzerArchiveRulesFilter) {
+func (j *jsiiProxy_AccessanalyzerAnalyzerArchiveRulesFilterOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -617,6 +618,14 @@ func (a *jsiiProxy_AccessanalyzerAnalyzerArchiveRulesFilterOutputReference) Rese
 	_jsii_.InvokeVoid(
 		a,
 		"resetNeq",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AccessanalyzerAnalyzerArchiveRulesFilterOutputReference) ResetProperty() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetProperty",
 		nil, // no parameters
 	)
 }

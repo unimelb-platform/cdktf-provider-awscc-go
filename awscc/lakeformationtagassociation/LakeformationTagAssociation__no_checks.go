@@ -56,7 +56,15 @@ func (l *jsiiProxy_LakeformationTagAssociation) validateInterpolationForAttribut
 	return nil
 }
 
+func (l *jsiiProxy_LakeformationTagAssociation) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LakeformationTagAssociation) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (l *jsiiProxy_LakeformationTagAssociation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -67,6 +67,7 @@ type IamUserLoginProfileOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPassword()
 	ResetPasswordResetRequired()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (i *jsiiProxy_IamUserLoginProfileOutputReference) InterpolationForAttribute
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IamUserLoginProfileOutputReference) ResetPassword() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetPassword",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IamUserLoginProfileOutputReference) ResetPasswordResetRequired() {

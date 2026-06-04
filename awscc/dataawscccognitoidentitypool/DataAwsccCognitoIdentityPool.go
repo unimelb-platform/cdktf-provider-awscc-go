@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccognitoidentitypool/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cognito_identity_pool awscc_cognito_identity_pool}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cognito_identity_pool awscc_cognito_identity_pool}.
 type DataAwsccCognitoIdentityPool interface {
 	cdktf.TerraformDataSource
 	AllowClassicFlow() cdktf.IResolvable
@@ -40,7 +40,9 @@ type DataAwsccCognitoIdentityPool interface {
 	FriendlyUniqueId() *string
 	Id() *string
 	SetId(val *string)
+	IdentityPoolId() *string
 	IdentityPoolName() *string
+	IdentityPoolTags() DataAwsccCognitoIdentityPoolIdentityPoolTagsList
 	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
@@ -94,6 +96,10 @@ type DataAwsccCognitoIdentityPool interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -248,11 +254,31 @@ func (j *jsiiProxy_DataAwsccCognitoIdentityPool) Id() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccCognitoIdentityPool) IdentityPoolId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"identityPoolId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccCognitoIdentityPool) IdentityPoolName() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"identityPoolName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCognitoIdentityPool) IdentityPoolTags() DataAwsccCognitoIdentityPoolIdentityPoolTagsList {
+	var returns DataAwsccCognitoIdentityPoolIdentityPoolTagsList
+	_jsii_.Get(
+		j,
+		"identityPoolTags",
 		&returns,
 	)
 	return returns
@@ -389,7 +415,7 @@ func (j *jsiiProxy_DataAwsccCognitoIdentityPool) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cognito_identity_pool awscc_cognito_identity_pool} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cognito_identity_pool awscc_cognito_identity_pool} Data Source.
 func NewDataAwsccCognitoIdentityPool(scope constructs.Construct, id *string, config *DataAwsccCognitoIdentityPoolConfig) DataAwsccCognitoIdentityPool {
 	_init_.Initialize()
 
@@ -407,7 +433,7 @@ func NewDataAwsccCognitoIdentityPool(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cognito_identity_pool awscc_cognito_identity_pool} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cognito_identity_pool awscc_cognito_identity_pool} Data Source.
 func NewDataAwsccCognitoIdentityPool_Override(d DataAwsccCognitoIdentityPool, scope constructs.Construct, id *string, config *DataAwsccCognitoIdentityPoolConfig) {
 	_init_.Initialize()
 
@@ -774,6 +800,32 @@ func (d *jsiiProxy_DataAwsccCognitoIdentityPool) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCognitoIdentityPool) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCognitoIdentityPool) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

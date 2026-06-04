@@ -56,7 +56,15 @@ func (c *jsiiProxy_CloudfrontCloudfrontOriginAccessIdentity) validateInterpolati
 	return nil
 }
 
+func (c *jsiiProxy_CloudfrontCloudfrontOriginAccessIdentity) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CloudfrontCloudfrontOriginAccessIdentity) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_CloudfrontCloudfrontOriginAccessIdentity) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

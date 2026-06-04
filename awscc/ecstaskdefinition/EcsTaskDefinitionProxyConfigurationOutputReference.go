@@ -70,6 +70,7 @@ type EcsTaskDefinitionProxyConfigurationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutProxyConfigurationProperties(value interface{})
+	ResetContainerName()
 	ResetProxyConfigurationProperties()
 	ResetType()
 	// Produce the Token's value at resolution time.
@@ -516,6 +517,14 @@ func (e *jsiiProxy_EcsTaskDefinitionProxyConfigurationOutputReference) PutProxyC
 		e,
 		"putProxyConfigurationProperties",
 		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_EcsTaskDefinitionProxyConfigurationOutputReference) ResetContainerName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetContainerName",
+		nil, // no parameters
 	)
 }
 

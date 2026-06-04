@@ -90,6 +90,17 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfiguratio
 	return nil
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationOutputReference) validatePutBufferingHintsParameters(value *KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationBufferingHints) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationOutputReference) validatePutCloudwatchLoggingOptionsParameters(value *KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationCloudwatchLoggingOptions) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
@@ -124,6 +135,17 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfiguratio
 }
 
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationOutputReference) validatePutS3ConfigurationParameters(value *KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationS3Configuration) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationOutputReference) validatePutSecretsManagerConfigurationParameters(value *KinesisfirehoseDeliveryStreamSnowflakeDestinationConfigurationSecretsManagerConfiguration) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}

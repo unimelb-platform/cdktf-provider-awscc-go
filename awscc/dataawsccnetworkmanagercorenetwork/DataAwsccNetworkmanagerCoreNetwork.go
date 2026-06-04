@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccnetworkmanagercorenetwork/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_core_network awscc_networkmanager_core_network}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_core_network awscc_networkmanager_core_network}.
 type DataAwsccNetworkmanagerCoreNetwork interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -45,6 +45,7 @@ type DataAwsccNetworkmanagerCoreNetwork interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	NetworkFunctionGroups() DataAwsccNetworkmanagerCoreNetworkNetworkFunctionGroupsList
 	// The tree node.
 	Node() constructs.Node
 	OwnerAccount() *string
@@ -93,6 +94,10 @@ type DataAwsccNetworkmanagerCoreNetwork interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -267,6 +272,16 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerCoreNetwork) Lifecycle() *cdktf.Terraf
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccNetworkmanagerCoreNetwork) NetworkFunctionGroups() DataAwsccNetworkmanagerCoreNetworkNetworkFunctionGroupsList {
+	var returns DataAwsccNetworkmanagerCoreNetworkNetworkFunctionGroupsList
+	_jsii_.Get(
+		j,
+		"networkFunctionGroups",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccNetworkmanagerCoreNetwork) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -378,7 +393,7 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerCoreNetwork) TerraformResourceType() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_core_network awscc_networkmanager_core_network} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_core_network awscc_networkmanager_core_network} Data Source.
 func NewDataAwsccNetworkmanagerCoreNetwork(scope constructs.Construct, id *string, config *DataAwsccNetworkmanagerCoreNetworkConfig) DataAwsccNetworkmanagerCoreNetwork {
 	_init_.Initialize()
 
@@ -396,7 +411,7 @@ func NewDataAwsccNetworkmanagerCoreNetwork(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_core_network awscc_networkmanager_core_network} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_core_network awscc_networkmanager_core_network} Data Source.
 func NewDataAwsccNetworkmanagerCoreNetwork_Override(d DataAwsccNetworkmanagerCoreNetwork, scope constructs.Construct, id *string, config *DataAwsccNetworkmanagerCoreNetworkConfig) {
 	_init_.Initialize()
 
@@ -763,6 +778,32 @@ func (d *jsiiProxy_DataAwsccNetworkmanagerCoreNetwork) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkmanagerCoreNetwork) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkmanagerCoreNetwork) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

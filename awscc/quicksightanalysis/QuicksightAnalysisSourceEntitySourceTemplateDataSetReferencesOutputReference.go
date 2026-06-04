@@ -33,8 +33,8 @@ type QuicksightAnalysisSourceEntitySourceTemplateDataSetReferencesOutputReferenc
 	DataSetPlaceholderInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *QuicksightAnalysisSourceEntitySourceTemplateDataSetReferences
-	SetInternalValue(val *QuicksightAnalysisSourceEntitySourceTemplateDataSetReferences)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,6 +67,8 @@ type QuicksightAnalysisSourceEntitySourceTemplateDataSetReferencesOutputReferenc
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDataSetArn()
+	ResetDataSetPlaceholder()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -162,8 +164,8 @@ func (j *jsiiProxy_QuicksightAnalysisSourceEntitySourceTemplateDataSetReferences
 	return returns
 }
 
-func (j *jsiiProxy_QuicksightAnalysisSourceEntitySourceTemplateDataSetReferencesOutputReference) InternalValue() *QuicksightAnalysisSourceEntitySourceTemplateDataSetReferences {
-	var returns *QuicksightAnalysisSourceEntitySourceTemplateDataSetReferences
+func (j *jsiiProxy_QuicksightAnalysisSourceEntitySourceTemplateDataSetReferencesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -264,7 +266,7 @@ func (j *jsiiProxy_QuicksightAnalysisSourceEntitySourceTemplateDataSetReferences
 	)
 }
 
-func (j *jsiiProxy_QuicksightAnalysisSourceEntitySourceTemplateDataSetReferencesOutputReference)SetInternalValue(val *QuicksightAnalysisSourceEntitySourceTemplateDataSetReferences) {
+func (j *jsiiProxy_QuicksightAnalysisSourceEntitySourceTemplateDataSetReferencesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (q *jsiiProxy_QuicksightAnalysisSourceEntitySourceTemplateDataSetReferences
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightAnalysisSourceEntitySourceTemplateDataSetReferencesOutputReference) ResetDataSetArn() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDataSetArn",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightAnalysisSourceEntitySourceTemplateDataSetReferencesOutputReference) ResetDataSetPlaceholder() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDataSetPlaceholder",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightAnalysisSourceEntitySourceTemplateDataSetReferencesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

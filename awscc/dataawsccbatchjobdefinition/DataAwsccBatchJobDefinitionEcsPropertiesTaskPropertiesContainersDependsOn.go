@@ -1,0 +1,6 @@
+package dataawsccbatchjobdefinition
+
+
+type DataAwsccBatchJobDefinitionEcsPropertiesTaskPropertiesContainersDependsOn struct {
+}
+

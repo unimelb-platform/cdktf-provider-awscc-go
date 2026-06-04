@@ -73,6 +73,7 @@ type Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappin
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutEbs(value *Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappingsEbs)
+	ResetDeviceName()
 	ResetEbs()
 	ResetNoDevice()
 	ResetVirtualName()
@@ -551,6 +552,14 @@ func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlo
 		e,
 		"putEbs",
 		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_Ec2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappingsOutputReference) ResetDeviceName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetDeviceName",
+		nil, // no parameters
 	)
 }
 

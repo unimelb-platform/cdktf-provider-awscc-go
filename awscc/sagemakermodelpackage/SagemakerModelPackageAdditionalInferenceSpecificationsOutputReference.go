@@ -82,7 +82,9 @@ type SagemakerModelPackageAdditionalInferenceSpecificationsOutputReference inter
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutContainers(value interface{})
+	ResetContainers()
 	ResetDescription()
+	ResetName()
 	ResetSupportedContentTypes()
 	ResetSupportedRealtimeInferenceInstanceTypes()
 	ResetSupportedResponseMimeTypes()
@@ -658,10 +660,26 @@ func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsOutputR
 	)
 }
 
+func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsOutputReference) ResetContainers() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetContainers",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsOutputReference) ResetDescription() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackageAdditionalInferenceSpecificationsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetName",
 		nil, // no parameters
 	)
 }

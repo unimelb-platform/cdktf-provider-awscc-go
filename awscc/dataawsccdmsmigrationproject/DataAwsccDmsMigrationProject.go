@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdmsmigrationproject/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/dms_migration_project awscc_dms_migration_project}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/dms_migration_project awscc_dms_migration_project}.
 type DataAwsccDmsMigrationProject interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -95,6 +95,10 @@ type DataAwsccDmsMigrationProject interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -400,7 +404,7 @@ func (j *jsiiProxy_DataAwsccDmsMigrationProject) TransformationRules() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/dms_migration_project awscc_dms_migration_project} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/dms_migration_project awscc_dms_migration_project} Data Source.
 func NewDataAwsccDmsMigrationProject(scope constructs.Construct, id *string, config *DataAwsccDmsMigrationProjectConfig) DataAwsccDmsMigrationProject {
 	_init_.Initialize()
 
@@ -418,7 +422,7 @@ func NewDataAwsccDmsMigrationProject(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/dms_migration_project awscc_dms_migration_project} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/dms_migration_project awscc_dms_migration_project} Data Source.
 func NewDataAwsccDmsMigrationProject_Override(d DataAwsccDmsMigrationProject, scope constructs.Construct, id *string, config *DataAwsccDmsMigrationProjectConfig) {
 	_init_.Initialize()
 
@@ -785,6 +789,32 @@ func (d *jsiiProxy_DataAwsccDmsMigrationProject) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDmsMigrationProject) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDmsMigrationProject) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

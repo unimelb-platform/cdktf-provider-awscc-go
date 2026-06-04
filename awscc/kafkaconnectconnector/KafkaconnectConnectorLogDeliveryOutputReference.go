@@ -38,7 +38,7 @@ type KafkaconnectConnectorLogDeliveryOutputReference interface {
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	WorkerLogDelivery() KafkaconnectConnectorLogDeliveryWorkerLogDeliveryOutputReference
-	WorkerLogDeliveryInput() *KafkaconnectConnectorLogDeliveryWorkerLogDelivery
+	WorkerLogDeliveryInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type KafkaconnectConnectorLogDeliveryOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutWorkerLogDelivery(value *KafkaconnectConnectorLogDeliveryWorkerLogDelivery)
+	ResetWorkerLogDelivery()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -159,8 +160,8 @@ func (j *jsiiProxy_KafkaconnectConnectorLogDeliveryOutputReference) WorkerLogDel
 	return returns
 }
 
-func (j *jsiiProxy_KafkaconnectConnectorLogDeliveryOutputReference) WorkerLogDeliveryInput() *KafkaconnectConnectorLogDeliveryWorkerLogDelivery {
-	var returns *KafkaconnectConnectorLogDeliveryWorkerLogDelivery
+func (j *jsiiProxy_KafkaconnectConnectorLogDeliveryOutputReference) WorkerLogDeliveryInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"workerLogDeliveryInput",
@@ -446,6 +447,14 @@ func (k *jsiiProxy_KafkaconnectConnectorLogDeliveryOutputReference) PutWorkerLog
 		k,
 		"putWorkerLogDelivery",
 		[]interface{}{value},
+	)
+}
+
+func (k *jsiiProxy_KafkaconnectConnectorLogDeliveryOutputReference) ResetWorkerLogDelivery() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetWorkerLogDelivery",
+		nil, // no parameters
 	)
 }
 

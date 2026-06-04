@@ -85,9 +85,14 @@ type SagemakerMonitoringScheduleLastMonitoringExecutionSummaryOutputReference in
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCreationTime()
 	ResetEndpointName()
 	ResetFailureReason()
+	ResetLastModifiedTime()
+	ResetMonitoringExecutionStatus()
+	ResetMonitoringScheduleName()
 	ResetProcessingJobArn()
+	ResetScheduledTime()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -690,6 +695,14 @@ func (s *jsiiProxy_SagemakerMonitoringScheduleLastMonitoringExecutionSummaryOutp
 	return returns
 }
 
+func (s *jsiiProxy_SagemakerMonitoringScheduleLastMonitoringExecutionSummaryOutputReference) ResetCreationTime() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetCreationTime",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerMonitoringScheduleLastMonitoringExecutionSummaryOutputReference) ResetEndpointName() {
 	_jsii_.InvokeVoid(
 		s,
@@ -706,10 +719,42 @@ func (s *jsiiProxy_SagemakerMonitoringScheduleLastMonitoringExecutionSummaryOutp
 	)
 }
 
+func (s *jsiiProxy_SagemakerMonitoringScheduleLastMonitoringExecutionSummaryOutputReference) ResetLastModifiedTime() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetLastModifiedTime",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerMonitoringScheduleLastMonitoringExecutionSummaryOutputReference) ResetMonitoringExecutionStatus() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetMonitoringExecutionStatus",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerMonitoringScheduleLastMonitoringExecutionSummaryOutputReference) ResetMonitoringScheduleName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetMonitoringScheduleName",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerMonitoringScheduleLastMonitoringExecutionSummaryOutputReference) ResetProcessingJobArn() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetProcessingJobArn",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerMonitoringScheduleLastMonitoringExecutionSummaryOutputReference) ResetScheduledTime() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetScheduledTime",
 		nil, // no parameters
 	)
 }

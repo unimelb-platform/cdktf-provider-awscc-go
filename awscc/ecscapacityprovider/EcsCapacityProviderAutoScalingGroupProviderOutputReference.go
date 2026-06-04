@@ -73,6 +73,7 @@ type EcsCapacityProviderAutoScalingGroupProviderOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutManagedScaling(value *EcsCapacityProviderAutoScalingGroupProviderManagedScaling)
+	ResetAutoScalingGroupArn()
 	ResetManagedDraining()
 	ResetManagedScaling()
 	ResetManagedTerminationProtection()
@@ -551,6 +552,14 @@ func (e *jsiiProxy_EcsCapacityProviderAutoScalingGroupProviderOutputReference) P
 		e,
 		"putManagedScaling",
 		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_EcsCapacityProviderAutoScalingGroupProviderOutputReference) ResetAutoScalingGroupArn() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetAutoScalingGroupArn",
+		nil, // no parameters
 	)
 }
 

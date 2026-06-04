@@ -29,8 +29,8 @@ type AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsC
 	DimensionsInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetric
-	SetInternalValue(val *AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetric)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	MetricName() *string
 	SetMetricName(val *string)
 	MetricNameInput() *string
@@ -71,6 +71,8 @@ type AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsC
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDimensions(value interface{})
 	ResetDimensions()
+	ResetMetricName()
+	ResetNamespace()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -146,8 +148,8 @@ func (j *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricS
 	return returns
 }
 
-func (j *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricOutputReference) InternalValue() *AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetric {
-	var returns *AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetric
+func (j *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -266,7 +268,7 @@ func (j *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricS
 	)
 }
 
-func (j *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricOutputReference)SetInternalValue(val *AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetric) {
+func (j *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -522,6 +524,22 @@ func (a *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricS
 	_jsii_.InvokeVoid(
 		a,
 		"resetDimensions",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricOutputReference) ResetMetricName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetMetricName",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatMetricOutputReference) ResetNamespace() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetNamespace",
 		nil, // no parameters
 	)
 }

@@ -18,6 +18,7 @@ type DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesInstanceRequirementsOutpu
 	AllowedInstanceTypes() *[]*string
 	BareMetal() *string
 	BaselineEbsBandwidthMbps() DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesInstanceRequirementsBaselineEbsBandwidthMbpsOutputReference
+	BaselinePerformanceFactors() DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesInstanceRequirementsBaselinePerformanceFactorsOutputReference
 	BurstablePerformance() *string
 	// the index of the complex object in a list.
 	// Experimental.
@@ -43,6 +44,7 @@ type DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesInstanceRequirementsOutpu
 	SetInternalValue(val *DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesInstanceRequirements)
 	LocalStorage() *string
 	LocalStorageTypes() *[]*string
+	MaxSpotPriceAsPercentageOfOptimalOnDemandPrice() *float64
 	MemoryGiBPerVCpu() DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesInstanceRequirementsMemoryGiBPerVCpuOutputReference
 	MemoryMiB() DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesInstanceRequirementsMemoryMiBOutputReference
 	NetworkBandwidthGbps() DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesInstanceRequirementsNetworkBandwidthGbpsOutputReference
@@ -179,6 +181,16 @@ func (j *jsiiProxy_DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesInstanceReq
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesInstanceRequirementsOutputReference) BaselinePerformanceFactors() DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesInstanceRequirementsBaselinePerformanceFactorsOutputReference {
+	var returns DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesInstanceRequirementsBaselinePerformanceFactorsOutputReference
+	_jsii_.Get(
+		j,
+		"baselinePerformanceFactors",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesInstanceRequirementsOutputReference) BurstablePerformance() *string {
 	var returns *string
 	_jsii_.Get(
@@ -284,6 +296,16 @@ func (j *jsiiProxy_DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesInstanceReq
 	_jsii_.Get(
 		j,
 		"localStorageTypes",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesInstanceRequirementsOutputReference) MaxSpotPriceAsPercentageOfOptimalOnDemandPrice() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxSpotPriceAsPercentageOfOptimalOnDemandPrice",
 		&returns,
 	)
 	return returns

@@ -56,7 +56,15 @@ func (m *jsiiProxy_MemorydbCluster) validateInterpolationForAttributeParameters(
 	return nil
 }
 
+func (m *jsiiProxy_MemorydbCluster) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_MemorydbCluster) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (m *jsiiProxy_MemorydbCluster) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -116,11 +124,19 @@ func (j *jsiiProxy_MemorydbCluster) validateSetDescriptionParameters(val *string
 	return nil
 }
 
+func (j *jsiiProxy_MemorydbCluster) validateSetEngineParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_MemorydbCluster) validateSetEngineVersionParameters(val *string) error {
 	return nil
 }
 
 func (j *jsiiProxy_MemorydbCluster) validateSetFinalSnapshotNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_MemorydbCluster) validateSetIpDiscoveryParameters(val *string) error {
 	return nil
 }
 
@@ -133,6 +149,14 @@ func (j *jsiiProxy_MemorydbCluster) validateSetLifecycleParameters(val *cdktf.Te
 }
 
 func (j *jsiiProxy_MemorydbCluster) validateSetMaintenanceWindowParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_MemorydbCluster) validateSetMultiRegionClusterNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_MemorydbCluster) validateSetNetworkTypeParameters(val *string) error {
 	return nil
 }
 

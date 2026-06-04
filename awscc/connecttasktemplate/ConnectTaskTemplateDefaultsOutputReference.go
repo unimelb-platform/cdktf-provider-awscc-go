@@ -31,7 +31,7 @@ type ConnectTaskTemplateDefaultsOutputReference interface {
 	// Experimental.
 	Fqn() *string
 	Id() ConnectTaskTemplateDefaultsIdOutputReference
-	IdInput() *ConnectTaskTemplateDefaultsId
+	IdInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	// Experimental.
@@ -67,6 +67,8 @@ type ConnectTaskTemplateDefaultsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutId(value *ConnectTaskTemplateDefaultsId)
+	ResetDefaultValue()
+	ResetId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -152,8 +154,8 @@ func (j *jsiiProxy_ConnectTaskTemplateDefaultsOutputReference) Id() ConnectTaskT
 	return returns
 }
 
-func (j *jsiiProxy_ConnectTaskTemplateDefaultsOutputReference) IdInput() *ConnectTaskTemplateDefaultsId {
-	var returns *ConnectTaskTemplateDefaultsId
+func (j *jsiiProxy_ConnectTaskTemplateDefaultsOutputReference) IdInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"idInput",
@@ -480,6 +482,22 @@ func (c *jsiiProxy_ConnectTaskTemplateDefaultsOutputReference) PutId(value *Conn
 		c,
 		"putId",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_ConnectTaskTemplateDefaultsOutputReference) ResetDefaultValue() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetDefaultValue",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConnectTaskTemplateDefaultsOutputReference) ResetId() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetId",
+		nil, // no parameters
 	)
 }
 

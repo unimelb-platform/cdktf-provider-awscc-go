@@ -67,6 +67,8 @@ type ImagebuilderContainerRecipeComponentsParametersOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (i *jsiiProxy_ImagebuilderContainerRecipeComponentsParametersOutputReferenc
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_ImagebuilderContainerRecipeComponentsParametersOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_ImagebuilderContainerRecipeComponentsParametersOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_ImagebuilderContainerRecipeComponentsParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

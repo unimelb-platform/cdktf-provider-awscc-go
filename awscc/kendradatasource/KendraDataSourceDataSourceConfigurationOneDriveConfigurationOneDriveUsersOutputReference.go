@@ -27,8 +27,8 @@ type KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsersOu
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsers
-	SetInternalValue(val *KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsers)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	OneDriveUserList() *[]*string
 	SetOneDriveUserList(val *[]*string)
 	OneDriveUserListInput() *[]*string
@@ -124,8 +124,8 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationO
 	return returns
 }
 
-func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsersOutputReference) InternalValue() *KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsers {
-	var returns *KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsers
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsersOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -244,7 +244,7 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationO
 	)
 }
 
-func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsersOutputReference)SetInternalValue(val *KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsers) {
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsersOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

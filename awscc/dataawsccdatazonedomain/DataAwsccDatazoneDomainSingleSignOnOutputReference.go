@@ -27,6 +27,7 @@ type DataAwsccDatazoneDomainSingleSignOnOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
+	IdcInstanceArn() *string
 	InternalValue() *DataAwsccDatazoneDomainSingleSignOn
 	SetInternalValue(val *DataAwsccDatazoneDomainSingleSignOn)
 	// Experimental.
@@ -113,6 +114,16 @@ func (j *jsiiProxy_DataAwsccDatazoneDomainSingleSignOnOutputReference) Fqn() *st
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDatazoneDomainSingleSignOnOutputReference) IdcInstanceArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"idcInstanceArn",
 		&returns,
 	)
 	return returns

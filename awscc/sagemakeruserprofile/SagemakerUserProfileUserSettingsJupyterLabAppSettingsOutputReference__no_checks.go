@@ -44,6 +44,10 @@ func (s *jsiiProxy_SagemakerUserProfileUserSettingsJupyterLabAppSettingsOutputRe
 	return nil
 }
 
+func (s *jsiiProxy_SagemakerUserProfileUserSettingsJupyterLabAppSettingsOutputReference) validatePutAppLifecycleManagementParameters(value *SagemakerUserProfileUserSettingsJupyterLabAppSettingsAppLifecycleManagement) error {
+	return nil
+}
+
 func (s *jsiiProxy_SagemakerUserProfileUserSettingsJupyterLabAppSettingsOutputReference) validatePutCodeRepositoriesParameters(value interface{}) error {
 	return nil
 }
@@ -57,6 +61,10 @@ func (s *jsiiProxy_SagemakerUserProfileUserSettingsJupyterLabAppSettingsOutputRe
 }
 
 func (s *jsiiProxy_SagemakerUserProfileUserSettingsJupyterLabAppSettingsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_SagemakerUserProfileUserSettingsJupyterLabAppSettingsOutputReference) validateSetBuiltInLifecycleConfigArnParameters(val *string) error {
 	return nil
 }
 

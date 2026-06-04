@@ -67,6 +67,7 @@ type CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorPro
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucketName()
 	ResetBucketPrefix()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSour
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorPropertiesS3OutputReference) ResetBucketName() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetBucketName",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorPropertiesS3OutputReference) ResetBucketPrefix() {

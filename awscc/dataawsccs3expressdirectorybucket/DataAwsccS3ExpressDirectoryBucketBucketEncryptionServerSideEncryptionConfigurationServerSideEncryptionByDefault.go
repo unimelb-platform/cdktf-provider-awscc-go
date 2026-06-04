@@ -1,0 +1,6 @@
+package dataawsccs3expressdirectorybucket
+
+
+type DataAwsccS3ExpressDirectoryBucketBucketEncryptionServerSideEncryptionConfigurationServerSideEncryptionByDefault struct {
+}
+

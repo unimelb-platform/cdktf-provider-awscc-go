@@ -1,0 +1,6 @@
+package dataawsccdeadlinefleet
+
+
+type DataAwsccDeadlineFleetConfigurationCustomerManagedWorkerCapabilitiesVCpuCount struct {
+}
+

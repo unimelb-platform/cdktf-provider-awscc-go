@@ -11,6 +11,7 @@ import (
 type DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesOutputReference interface {
 	cdktf.ComplexObject
 	AvailabilityZone() *string
+	BlockDeviceMappings() DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesBlockDeviceMappingsList
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -89,6 +90,16 @@ func (j *jsiiProxy_DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesOutputRefer
 	_jsii_.Get(
 		j,
 		"availabilityZone",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesOutputReference) BlockDeviceMappings() DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesBlockDeviceMappingsList {
+	var returns DataAwsccEc2Ec2FleetLaunchTemplateConfigsOverridesBlockDeviceMappingsList
+	_jsii_.Get(
+		j,
+		"blockDeviceMappings",
 		&returns,
 	)
 	return returns

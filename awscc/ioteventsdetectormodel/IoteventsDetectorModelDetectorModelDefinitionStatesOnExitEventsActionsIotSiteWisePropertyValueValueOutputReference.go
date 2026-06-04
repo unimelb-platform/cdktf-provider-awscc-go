@@ -36,8 +36,8 @@ type IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSi
 	IntegerValue() *string
 	SetIntegerValue(val *string)
 	IntegerValueInput() *string
-	InternalValue() *IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSiteWisePropertyValueValue
-	SetInternalValue(val *IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSiteWisePropertyValueValue)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	StringValue() *string
 	SetStringValue(val *string)
 	StringValueInput() *string
@@ -192,8 +192,8 @@ func (j *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEven
 	return returns
 }
 
-func (j *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSiteWisePropertyValueValueOutputReference) InternalValue() *IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSiteWisePropertyValueValue {
-	var returns *IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSiteWisePropertyValueValue
+func (j *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSiteWisePropertyValueValueOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -325,7 +325,7 @@ func (j *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEven
 	)
 }
 
-func (j *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSiteWisePropertyValueValueOutputReference)SetInternalValue(val *IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSiteWisePropertyValueValue) {
+func (j *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSiteWisePropertyValueValueOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

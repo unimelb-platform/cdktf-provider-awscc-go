@@ -40,11 +40,17 @@ type DynamodbGlobalTableReplicasOutputReference interface {
 	KinesisStreamSpecificationInput() interface{}
 	PointInTimeRecoverySpecification() DynamodbGlobalTableReplicasPointInTimeRecoverySpecificationOutputReference
 	PointInTimeRecoverySpecificationInput() interface{}
+	ReadOnDemandThroughputSettings() DynamodbGlobalTableReplicasReadOnDemandThroughputSettingsOutputReference
+	ReadOnDemandThroughputSettingsInput() interface{}
 	ReadProvisionedThroughputSettings() DynamodbGlobalTableReplicasReadProvisionedThroughputSettingsOutputReference
 	ReadProvisionedThroughputSettingsInput() interface{}
 	Region() *string
 	SetRegion(val *string)
 	RegionInput() *string
+	ReplicaStreamSpecification() DynamodbGlobalTableReplicasReplicaStreamSpecificationOutputReference
+	ReplicaStreamSpecificationInput() interface{}
+	ResourcePolicy() DynamodbGlobalTableReplicasResourcePolicyOutputReference
+	ResourcePolicyInput() interface{}
 	SseSpecification() DynamodbGlobalTableReplicasSseSpecificationOutputReference
 	SseSpecificationInput() interface{}
 	TableClass() *string
@@ -88,7 +94,10 @@ type DynamodbGlobalTableReplicasOutputReference interface {
 	PutGlobalSecondaryIndexes(value interface{})
 	PutKinesisStreamSpecification(value *DynamodbGlobalTableReplicasKinesisStreamSpecification)
 	PutPointInTimeRecoverySpecification(value *DynamodbGlobalTableReplicasPointInTimeRecoverySpecification)
+	PutReadOnDemandThroughputSettings(value *DynamodbGlobalTableReplicasReadOnDemandThroughputSettings)
 	PutReadProvisionedThroughputSettings(value *DynamodbGlobalTableReplicasReadProvisionedThroughputSettings)
+	PutReplicaStreamSpecification(value *DynamodbGlobalTableReplicasReplicaStreamSpecification)
+	PutResourcePolicy(value *DynamodbGlobalTableReplicasResourcePolicy)
 	PutSseSpecification(value *DynamodbGlobalTableReplicasSseSpecification)
 	PutTags(value interface{})
 	ResetContributorInsightsSpecification()
@@ -96,7 +105,10 @@ type DynamodbGlobalTableReplicasOutputReference interface {
 	ResetGlobalSecondaryIndexes()
 	ResetKinesisStreamSpecification()
 	ResetPointInTimeRecoverySpecification()
+	ResetReadOnDemandThroughputSettings()
 	ResetReadProvisionedThroughputSettings()
+	ResetReplicaStreamSpecification()
+	ResetResourcePolicy()
 	ResetSseSpecification()
 	ResetTableClass()
 	ResetTags()
@@ -265,6 +277,26 @@ func (j *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) PointInTimeRecove
 	return returns
 }
 
+func (j *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) ReadOnDemandThroughputSettings() DynamodbGlobalTableReplicasReadOnDemandThroughputSettingsOutputReference {
+	var returns DynamodbGlobalTableReplicasReadOnDemandThroughputSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"readOnDemandThroughputSettings",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) ReadOnDemandThroughputSettingsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"readOnDemandThroughputSettingsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) ReadProvisionedThroughputSettings() DynamodbGlobalTableReplicasReadProvisionedThroughputSettingsOutputReference {
 	var returns DynamodbGlobalTableReplicasReadProvisionedThroughputSettingsOutputReference
 	_jsii_.Get(
@@ -300,6 +332,46 @@ func (j *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) RegionInput() *st
 	_jsii_.Get(
 		j,
 		"regionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) ReplicaStreamSpecification() DynamodbGlobalTableReplicasReplicaStreamSpecificationOutputReference {
+	var returns DynamodbGlobalTableReplicasReplicaStreamSpecificationOutputReference
+	_jsii_.Get(
+		j,
+		"replicaStreamSpecification",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) ReplicaStreamSpecificationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"replicaStreamSpecificationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) ResourcePolicy() DynamodbGlobalTableReplicasResourcePolicyOutputReference {
+	var returns DynamodbGlobalTableReplicasResourcePolicyOutputReference
+	_jsii_.Get(
+		j,
+		"resourcePolicy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) ResourcePolicyInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"resourcePolicyInput",
 		&returns,
 	)
 	return returns
@@ -731,6 +803,17 @@ func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) PutPointInTimeRec
 	)
 }
 
+func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) PutReadOnDemandThroughputSettings(value *DynamodbGlobalTableReplicasReadOnDemandThroughputSettings) {
+	if err := d.validatePutReadOnDemandThroughputSettingsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putReadOnDemandThroughputSettings",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) PutReadProvisionedThroughputSettings(value *DynamodbGlobalTableReplicasReadProvisionedThroughputSettings) {
 	if err := d.validatePutReadProvisionedThroughputSettingsParameters(value); err != nil {
 		panic(err)
@@ -738,6 +821,28 @@ func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) PutReadProvisione
 	_jsii_.InvokeVoid(
 		d,
 		"putReadProvisionedThroughputSettings",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) PutReplicaStreamSpecification(value *DynamodbGlobalTableReplicasReplicaStreamSpecification) {
+	if err := d.validatePutReplicaStreamSpecificationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putReplicaStreamSpecification",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) PutResourcePolicy(value *DynamodbGlobalTableReplicasResourcePolicy) {
+	if err := d.validatePutResourcePolicyParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putResourcePolicy",
 		[]interface{}{value},
 	)
 }
@@ -804,10 +909,34 @@ func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) ResetPointInTimeR
 	)
 }
 
+func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) ResetReadOnDemandThroughputSettings() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetReadOnDemandThroughputSettings",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) ResetReadProvisionedThroughputSettings() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetReadProvisionedThroughputSettings",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) ResetReplicaStreamSpecification() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetReplicaStreamSpecification",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableReplicasOutputReference) ResetResourcePolicy() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetResourcePolicy",
 		nil, // no parameters
 	)
 }

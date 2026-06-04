@@ -64,6 +64,7 @@ type LexBotBotLocalesIntentsDialogCodeHookOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEnabled()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsDialogCodeHookOutputReference) Interpo
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsDialogCodeHookOutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetEnabled",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotBotLocalesIntentsDialogCodeHookOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

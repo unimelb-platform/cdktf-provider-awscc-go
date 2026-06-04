@@ -40,8 +40,8 @@ type S3OutpostsBucketLifecycleConfigurationRulesOutputReference interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
-	InternalValue() *S3OutpostsBucketLifecycleConfigurationRules
-	SetInternalValue(val *S3OutpostsBucketLifecycleConfigurationRules)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Status() *string
 	SetStatus(val *string)
 	StatusInput() *string
@@ -240,8 +240,8 @@ func (j *jsiiProxy_S3OutpostsBucketLifecycleConfigurationRulesOutputReference) I
 	return returns
 }
 
-func (j *jsiiProxy_S3OutpostsBucketLifecycleConfigurationRulesOutputReference) InternalValue() *S3OutpostsBucketLifecycleConfigurationRules {
-	var returns *S3OutpostsBucketLifecycleConfigurationRules
+func (j *jsiiProxy_S3OutpostsBucketLifecycleConfigurationRulesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -373,7 +373,7 @@ func (j *jsiiProxy_S3OutpostsBucketLifecycleConfigurationRulesOutputReference)Se
 	)
 }
 
-func (j *jsiiProxy_S3OutpostsBucketLifecycleConfigurationRulesOutputReference)SetInternalValue(val *S3OutpostsBucketLifecycleConfigurationRules) {
+func (j *jsiiProxy_S3OutpostsBucketLifecycleConfigurationRulesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

@@ -1,0 +1,6 @@
+package dataawsccwisdommessagetemplate
+
+
+type DataAwsccWisdomMessageTemplateContentEmailMessageTemplateContentBodyHtml struct {
+}
+

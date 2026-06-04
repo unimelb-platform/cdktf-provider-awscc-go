@@ -56,7 +56,15 @@ func (d *jsiiProxy_DatazoneDataSource) validateInterpolationForAttributeParamete
 	return nil
 }
 
+func (d *jsiiProxy_DatazoneDataSource) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DatazoneDataSource) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DatazoneDataSource) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -97,6 +105,10 @@ func validateDatazoneDataSource_IsTerraformResourceParameters(x interface{}) err
 }
 
 func (j *jsiiProxy_DatazoneDataSource) validateSetConnectionParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DatazoneDataSource) validateSetConnectionIdentifierParameters(val *string) error {
 	return nil
 }
 

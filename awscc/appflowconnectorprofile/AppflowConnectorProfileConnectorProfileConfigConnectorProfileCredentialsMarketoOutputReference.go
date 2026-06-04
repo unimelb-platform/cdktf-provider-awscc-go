@@ -74,6 +74,8 @@ type AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMar
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutConnectorOAuthRequest(value *AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoConnectorOAuthRequest)
 	ResetAccessToken()
+	ResetClientId()
+	ResetClientSecret()
 	ResetConnectorOAuthRequest()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -557,6 +559,22 @@ func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfile
 	_jsii_.InvokeVoid(
 		a,
 		"resetAccessToken",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoOutputReference) ResetClientId() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetClientId",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoOutputReference) ResetClientSecret() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetClientSecret",
 		nil, // no parameters
 	)
 }

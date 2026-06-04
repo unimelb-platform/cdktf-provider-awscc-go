@@ -38,7 +38,7 @@ type TimestreamScheduledQueryTargetConfigurationOutputReference interface {
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	TimestreamConfiguration() TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationOutputReference
-	TimestreamConfigurationInput() *TimestreamScheduledQueryTargetConfigurationTimestreamConfiguration
+	TimestreamConfigurationInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type TimestreamScheduledQueryTargetConfigurationOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutTimestreamConfiguration(value *TimestreamScheduledQueryTargetConfigurationTimestreamConfiguration)
+	ResetTimestreamConfiguration()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -159,8 +160,8 @@ func (j *jsiiProxy_TimestreamScheduledQueryTargetConfigurationOutputReference) T
 	return returns
 }
 
-func (j *jsiiProxy_TimestreamScheduledQueryTargetConfigurationOutputReference) TimestreamConfigurationInput() *TimestreamScheduledQueryTargetConfigurationTimestreamConfiguration {
-	var returns *TimestreamScheduledQueryTargetConfigurationTimestreamConfiguration
+func (j *jsiiProxy_TimestreamScheduledQueryTargetConfigurationOutputReference) TimestreamConfigurationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"timestreamConfigurationInput",
@@ -446,6 +447,14 @@ func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationOutputReference) P
 		t,
 		"putTimestreamConfiguration",
 		[]interface{}{value},
+	)
+}
+
+func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationOutputReference) ResetTimestreamConfiguration() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetTimestreamConfiguration",
+		nil, // no parameters
 	)
 }
 

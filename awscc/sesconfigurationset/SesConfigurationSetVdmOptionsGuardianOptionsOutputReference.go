@@ -64,6 +64,7 @@ type SesConfigurationSetVdmOptionsGuardianOptionsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetOptimizedSharedDelivery()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_SesConfigurationSetVdmOptionsGuardianOptionsOutputReference) 
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SesConfigurationSetVdmOptionsGuardianOptionsOutputReference) ResetOptimizedSharedDelivery() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOptimizedSharedDelivery",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SesConfigurationSetVdmOptionsGuardianOptionsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -56,11 +56,27 @@ func (e *jsiiProxy_Ec2VpcEndpoint) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
+func (e *jsiiProxy_Ec2VpcEndpoint) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VpcEndpoint) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (e *jsiiProxy_Ec2VpcEndpoint) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VpcEndpoint) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VpcEndpoint) validatePutDnsOptionsParameters(value *Ec2VpcEndpointDnsOptions) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VpcEndpoint) validatePutTagsParameters(value interface{}) error {
 	return nil
 }
 
@@ -88,6 +104,10 @@ func (j *jsiiProxy_Ec2VpcEndpoint) validateSetCountParameters(val interface{}) e
 	return nil
 }
 
+func (j *jsiiProxy_Ec2VpcEndpoint) validateSetIpAddressTypeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Ec2VpcEndpoint) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }
@@ -104,6 +124,10 @@ func (j *jsiiProxy_Ec2VpcEndpoint) validateSetProvisionersParameters(val *[]inte
 	return nil
 }
 
+func (j *jsiiProxy_Ec2VpcEndpoint) validateSetResourceConfigurationArnParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Ec2VpcEndpoint) validateSetRouteTableIdsParameters(val *[]*string) error {
 	return nil
 }
@@ -113,6 +137,14 @@ func (j *jsiiProxy_Ec2VpcEndpoint) validateSetSecurityGroupIdsParameters(val *[]
 }
 
 func (j *jsiiProxy_Ec2VpcEndpoint) validateSetServiceNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpcEndpoint) validateSetServiceNetworkArnParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpcEndpoint) validateSetServiceRegionParameters(val *string) error {
 	return nil
 }
 

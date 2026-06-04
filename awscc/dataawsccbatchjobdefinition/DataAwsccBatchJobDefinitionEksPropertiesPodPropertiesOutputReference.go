@@ -30,10 +30,13 @@ type DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesOutputReference interf
 	// Experimental.
 	Fqn() *string
 	HostNetwork() cdktf.IResolvable
+	ImagePullSecrets() DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesImagePullSecretsList
+	InitContainers() DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesInitContainersList
 	InternalValue() *DataAwsccBatchJobDefinitionEksPropertiesPodProperties
 	SetInternalValue(val *DataAwsccBatchJobDefinitionEksPropertiesPodProperties)
 	Metadata() DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesMetadataOutputReference
 	ServiceAccountName() *string
+	ShareProcessNamespace() cdktf.IResolvable
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -152,6 +155,26 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesOutputRe
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesOutputReference) ImagePullSecrets() DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesImagePullSecretsList {
+	var returns DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesImagePullSecretsList
+	_jsii_.Get(
+		j,
+		"imagePullSecrets",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesOutputReference) InitContainers() DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesInitContainersList {
+	var returns DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesInitContainersList
+	_jsii_.Get(
+		j,
+		"initContainers",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesOutputReference) InternalValue() *DataAwsccBatchJobDefinitionEksPropertiesPodProperties {
 	var returns *DataAwsccBatchJobDefinitionEksPropertiesPodProperties
 	_jsii_.Get(
@@ -177,6 +200,16 @@ func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesOutputRe
 	_jsii_.Get(
 		j,
 		"serviceAccountName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccBatchJobDefinitionEksPropertiesPodPropertiesOutputReference) ShareProcessNamespace() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"shareProcessNamespace",
 		&returns,
 	)
 	return returns

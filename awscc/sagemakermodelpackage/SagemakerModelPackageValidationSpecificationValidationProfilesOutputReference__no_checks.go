@@ -60,7 +60,7 @@ func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 	return nil
 }
 
-func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesOutputReference) validateSetInternalValueParameters(val *SagemakerModelPackageValidationSpecificationValidationProfiles) error {
+func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

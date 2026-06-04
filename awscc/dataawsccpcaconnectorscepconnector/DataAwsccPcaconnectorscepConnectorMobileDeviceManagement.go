@@ -1,0 +1,6 @@
+package dataawsccpcaconnectorscepconnector
+
+
+type DataAwsccPcaconnectorscepConnectorMobileDeviceManagement struct {
+}
+

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/nimblestudiostudiocomponent/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/nimblestudio_studio_component awscc_nimblestudio_studio_component}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/nimblestudio_studio_component awscc_nimblestudio_studio_component}.
 type NimblestudioStudioComponent interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -66,14 +66,8 @@ type NimblestudioStudioComponent interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
-	RuntimeRoleArn() *string
-	SetRuntimeRoleArn(val *string)
-	RuntimeRoleArnInput() *string
 	ScriptParameters() NimblestudioStudioComponentScriptParametersList
 	ScriptParametersInput() interface{}
-	SecureInitializationRoleArn() *string
-	SetSecureInitializationRoleArn(val *string)
-	SecureInitializationRoleArnInput() *string
 	StudioComponentId() *string
 	StudioId() *string
 	SetStudioId(val *string)
@@ -117,12 +111,22 @@ type NimblestudioStudioComponent interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -136,12 +140,13 @@ type NimblestudioStudioComponent interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
-	ResetRuntimeRoleArn()
 	ResetScriptParameters()
-	ResetSecureInitializationRoleArn()
 	ResetSubtype()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -396,26 +401,6 @@ func (j *jsiiProxy_NimblestudioStudioComponent) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_NimblestudioStudioComponent) RuntimeRoleArn() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"runtimeRoleArn",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_NimblestudioStudioComponent) RuntimeRoleArnInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"runtimeRoleArnInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_NimblestudioStudioComponent) ScriptParameters() NimblestudioStudioComponentScriptParametersList {
 	var returns NimblestudioStudioComponentScriptParametersList
 	_jsii_.Get(
@@ -431,26 +416,6 @@ func (j *jsiiProxy_NimblestudioStudioComponent) ScriptParametersInput() interfac
 	_jsii_.Get(
 		j,
 		"scriptParametersInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_NimblestudioStudioComponent) SecureInitializationRoleArn() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"secureInitializationRoleArn",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_NimblestudioStudioComponent) SecureInitializationRoleArnInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"secureInitializationRoleArnInput",
 		&returns,
 	)
 	return returns
@@ -577,7 +542,7 @@ func (j *jsiiProxy_NimblestudioStudioComponent) TypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/nimblestudio_studio_component awscc_nimblestudio_studio_component} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/nimblestudio_studio_component awscc_nimblestudio_studio_component} Resource.
 func NewNimblestudioStudioComponent(scope constructs.Construct, id *string, config *NimblestudioStudioComponentConfig) NimblestudioStudioComponent {
 	_init_.Initialize()
 
@@ -595,7 +560,7 @@ func NewNimblestudioStudioComponent(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/nimblestudio_studio_component awscc_nimblestudio_studio_component} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/nimblestudio_studio_component awscc_nimblestudio_studio_component} Resource.
 func NewNimblestudioStudioComponent_Override(n NimblestudioStudioComponent, scope constructs.Construct, id *string, config *NimblestudioStudioComponentConfig) {
 	_init_.Initialize()
 
@@ -703,28 +668,6 @@ func (j *jsiiProxy_NimblestudioStudioComponent)SetProvisioners(val *[]interface{
 	_jsii_.Set(
 		j,
 		"provisioners",
-		val,
-	)
-}
-
-func (j *jsiiProxy_NimblestudioStudioComponent)SetRuntimeRoleArn(val *string) {
-	if err := j.validateSetRuntimeRoleArnParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"runtimeRoleArn",
-		val,
-	)
-}
-
-func (j *jsiiProxy_NimblestudioStudioComponent)SetSecureInitializationRoleArn(val *string) {
-	if err := j.validateSetSecureInitializationRoleArnParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"secureInitializationRoleArn",
 		val,
 	)
 }
@@ -1042,6 +985,19 @@ func (n *jsiiProxy_NimblestudioStudioComponent) GetStringMapAttribute(terraformA
 	return returns
 }
 
+func (n *jsiiProxy_NimblestudioStudioComponent) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		n,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (n *jsiiProxy_NimblestudioStudioComponent) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := n.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1069,6 +1025,17 @@ func (n *jsiiProxy_NimblestudioStudioComponent) InterpolationForAttribute(terraf
 	return returns
 }
 
+func (n *jsiiProxy_NimblestudioStudioComponent) MoveFromId(id *string) {
+	if err := n.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		n,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (n *jsiiProxy_NimblestudioStudioComponent) MoveTo(moveTarget *string, index interface{}) {
 	if err := n.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1077,6 +1044,17 @@ func (n *jsiiProxy_NimblestudioStudioComponent) MoveTo(moveTarget *string, index
 		n,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (n *jsiiProxy_NimblestudioStudioComponent) MoveToId(id *string) {
+	if err := n.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		n,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1164,26 +1142,10 @@ func (n *jsiiProxy_NimblestudioStudioComponent) ResetOverrideLogicalId() {
 	)
 }
 
-func (n *jsiiProxy_NimblestudioStudioComponent) ResetRuntimeRoleArn() {
-	_jsii_.InvokeVoid(
-		n,
-		"resetRuntimeRoleArn",
-		nil, // no parameters
-	)
-}
-
 func (n *jsiiProxy_NimblestudioStudioComponent) ResetScriptParameters() {
 	_jsii_.InvokeVoid(
 		n,
 		"resetScriptParameters",
-		nil, // no parameters
-	)
-}
-
-func (n *jsiiProxy_NimblestudioStudioComponent) ResetSecureInitializationRoleArn() {
-	_jsii_.InvokeVoid(
-		n,
-		"resetSecureInitializationRoleArn",
 		nil, // no parameters
 	)
 }
@@ -1210,6 +1172,32 @@ func (n *jsiiProxy_NimblestudioStudioComponent) SynthesizeAttributes() *map[stri
 	_jsii_.Invoke(
 		n,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (n *jsiiProxy_NimblestudioStudioComponent) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		n,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (n *jsiiProxy_NimblestudioStudioComponent) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		n,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

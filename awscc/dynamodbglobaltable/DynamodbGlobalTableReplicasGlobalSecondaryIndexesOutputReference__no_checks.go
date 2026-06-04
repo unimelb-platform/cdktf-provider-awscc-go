@@ -48,6 +48,10 @@ func (d *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesOutputRefere
 	return nil
 }
 
+func (d *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesOutputReference) validatePutReadOnDemandThroughputSettingsParameters(value *DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadOnDemandThroughputSettings) error {
+	return nil
+}
+
 func (d *jsiiProxy_DynamodbGlobalTableReplicasGlobalSecondaryIndexesOutputReference) validatePutReadProvisionedThroughputSettingsParameters(value *DynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisionedThroughputSettings) error {
 	return nil
 }

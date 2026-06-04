@@ -67,6 +67,7 @@ type IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotTo
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutPayload(value *IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotTopicPublishPayload)
+	ResetMqttTopic()
 	ResetPayload()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -481,6 +482,14 @@ func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEven
 		i,
 		"putPayload",
 		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotTopicPublishOutputReference) ResetMqttTopic() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetMqttTopic",
+		nil, // no parameters
 	)
 }
 

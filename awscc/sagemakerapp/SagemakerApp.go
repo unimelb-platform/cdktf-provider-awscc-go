@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/sagemakerapp/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/sagemaker_app awscc_sagemaker_app}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/sagemaker_app awscc_sagemaker_app}.
 type SagemakerApp interface {
 	cdktf.TerraformResource
 	AppArn() *string
@@ -19,6 +19,7 @@ type SagemakerApp interface {
 	AppType() *string
 	SetAppType(val *string)
 	AppTypeInput() *string
+	BuiltInLifecycleConfigArn() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -63,6 +64,9 @@ type SagemakerApp interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RecoveryMode() interface{}
+	SetRecoveryMode(val interface{})
+	RecoveryModeInput() interface{}
 	ResourceSpec() SagemakerAppResourceSpecOutputReference
 	ResourceSpecInput() interface{}
 	Tags() SagemakerAppTagsList
@@ -100,12 +104,22 @@ type SagemakerApp interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -114,9 +128,13 @@ type SagemakerApp interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetRecoveryMode()
 	ResetResourceSpec()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -176,6 +194,16 @@ func (j *jsiiProxy_SagemakerApp) AppTypeInput() *string {
 	_jsii_.Get(
 		j,
 		"appTypeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerApp) BuiltInLifecycleConfigArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"builtInLifecycleConfigArn",
 		&returns,
 	)
 	return returns
@@ -341,6 +369,26 @@ func (j *jsiiProxy_SagemakerApp) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_SagemakerApp) RecoveryMode() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"recoveryMode",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerApp) RecoveryModeInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"recoveryModeInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SagemakerApp) ResourceSpec() SagemakerAppResourceSpecOutputReference {
 	var returns SagemakerAppResourceSpecOutputReference
 	_jsii_.Get(
@@ -432,7 +480,7 @@ func (j *jsiiProxy_SagemakerApp) UserProfileNameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/sagemaker_app awscc_sagemaker_app} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/sagemaker_app awscc_sagemaker_app} Resource.
 func NewSagemakerApp(scope constructs.Construct, id *string, config *SagemakerAppConfig) SagemakerApp {
 	_init_.Initialize()
 
@@ -450,7 +498,7 @@ func NewSagemakerApp(scope constructs.Construct, id *string, config *SagemakerAp
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/sagemaker_app awscc_sagemaker_app} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/sagemaker_app awscc_sagemaker_app} Resource.
 func NewSagemakerApp_Override(s SagemakerApp, scope constructs.Construct, id *string, config *SagemakerAppConfig) {
 	_init_.Initialize()
 
@@ -558,6 +606,17 @@ func (j *jsiiProxy_SagemakerApp)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SagemakerApp)SetRecoveryMode(val interface{}) {
+	if err := j.validateSetRecoveryModeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"recoveryMode",
 		val,
 	)
 }
@@ -842,6 +901,19 @@ func (s *jsiiProxy_SagemakerApp) GetStringMapAttribute(terraformAttribute *strin
 	return returns
 }
 
+func (s *jsiiProxy_SagemakerApp) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (s *jsiiProxy_SagemakerApp) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := s.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -869,6 +941,17 @@ func (s *jsiiProxy_SagemakerApp) InterpolationForAttribute(terraformAttribute *s
 	return returns
 }
 
+func (s *jsiiProxy_SagemakerApp) MoveFromId(id *string) {
+	if err := s.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (s *jsiiProxy_SagemakerApp) MoveTo(moveTarget *string, index interface{}) {
 	if err := s.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -877,6 +960,17 @@ func (s *jsiiProxy_SagemakerApp) MoveTo(moveTarget *string, index interface{}) {
 		s,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (s *jsiiProxy_SagemakerApp) MoveToId(id *string) {
+	if err := s.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -921,6 +1015,14 @@ func (s *jsiiProxy_SagemakerApp) ResetOverrideLogicalId() {
 	)
 }
 
+func (s *jsiiProxy_SagemakerApp) ResetRecoveryMode() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetRecoveryMode",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerApp) ResetResourceSpec() {
 	_jsii_.InvokeVoid(
 		s,
@@ -943,6 +1045,32 @@ func (s *jsiiProxy_SagemakerApp) SynthesizeAttributes() *map[string]interface{} 
 	_jsii_.Invoke(
 		s,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SagemakerApp) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		s,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SagemakerApp) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

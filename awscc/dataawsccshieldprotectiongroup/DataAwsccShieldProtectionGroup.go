@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccshieldprotectiongroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/shield_protection_group awscc_shield_protection_group}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/shield_protection_group awscc_shield_protection_group}.
 type DataAwsccShieldProtectionGroup interface {
 	cdktf.TerraformDataSource
 	Aggregation() *string
@@ -89,6 +89,10 @@ type DataAwsccShieldProtectionGroup interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -334,7 +338,7 @@ func (j *jsiiProxy_DataAwsccShieldProtectionGroup) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/shield_protection_group awscc_shield_protection_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/shield_protection_group awscc_shield_protection_group} Data Source.
 func NewDataAwsccShieldProtectionGroup(scope constructs.Construct, id *string, config *DataAwsccShieldProtectionGroupConfig) DataAwsccShieldProtectionGroup {
 	_init_.Initialize()
 
@@ -352,7 +356,7 @@ func NewDataAwsccShieldProtectionGroup(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/shield_protection_group awscc_shield_protection_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/shield_protection_group awscc_shield_protection_group} Data Source.
 func NewDataAwsccShieldProtectionGroup_Override(d DataAwsccShieldProtectionGroup, scope constructs.Construct, id *string, config *DataAwsccShieldProtectionGroupConfig) {
 	_init_.Initialize()
 
@@ -719,6 +723,32 @@ func (d *jsiiProxy_DataAwsccShieldProtectionGroup) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccShieldProtectionGroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccShieldProtectionGroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

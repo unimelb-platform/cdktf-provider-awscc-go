@@ -71,6 +71,8 @@ type SagemakerModelPackageModelMetricsModelDataQualityStatisticsOutputReference 
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetContentDigest()
+	ResetContentType()
+	ResetS3Uri()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -522,6 +524,22 @@ func (s *jsiiProxy_SagemakerModelPackageModelMetricsModelDataQualityStatisticsOu
 	_jsii_.InvokeVoid(
 		s,
 		"resetContentDigest",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackageModelMetricsModelDataQualityStatisticsOutputReference) ResetContentType() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetContentType",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackageModelMetricsModelDataQualityStatisticsOutputReference) ResetS3Uri() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetS3Uri",
 		nil, // no parameters
 	)
 }

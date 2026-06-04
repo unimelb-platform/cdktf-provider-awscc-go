@@ -48,6 +48,10 @@ func (w *jsiiProxy_WisdomKnowledgeBaseSourceConfigurationOutputReference) valida
 	return nil
 }
 
+func (w *jsiiProxy_WisdomKnowledgeBaseSourceConfigurationOutputReference) validatePutManagedSourceConfigurationParameters(value *WisdomKnowledgeBaseSourceConfigurationManagedSourceConfiguration) error {
+	return nil
+}
+
 func (w *jsiiProxy_WisdomKnowledgeBaseSourceConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

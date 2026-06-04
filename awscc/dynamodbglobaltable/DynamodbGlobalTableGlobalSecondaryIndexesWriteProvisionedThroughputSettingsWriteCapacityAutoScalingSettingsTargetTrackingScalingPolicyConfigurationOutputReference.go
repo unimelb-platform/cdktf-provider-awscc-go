@@ -30,8 +30,8 @@ type DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThroughputSettings
 	DisableScaleInInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration
-	SetInternalValue(val *DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	ScaleInCooldown() *float64
 	SetScaleInCooldown(val *float64)
 	ScaleInCooldownInput() *float64
@@ -76,6 +76,7 @@ type DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThroughputSettings
 	ResetDisableScaleIn()
 	ResetScaleInCooldown()
 	ResetScaleOutCooldown()
+	ResetTargetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -151,8 +152,8 @@ func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThro
 	return returns
 }
 
-func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfigurationOutputReference) InternalValue() *DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration {
-	var returns *DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration
+func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfigurationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -302,7 +303,7 @@ func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThro
 	)
 }
 
-func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfigurationOutputReference)SetInternalValue(val *DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfiguration) {
+func (j *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfigurationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -574,6 +575,14 @@ func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThro
 	_jsii_.InvokeVoid(
 		d,
 		"resetScaleOutCooldown",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThroughputSettingsWriteCapacityAutoScalingSettingsTargetTrackingScalingPolicyConfigurationOutputReference) ResetTargetValue() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetTargetValue",
 		nil, // no parameters
 	)
 }

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdatapipelinepipeline/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datapipeline_pipeline awscc_datapipeline_pipeline}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datapipeline_pipeline awscc_datapipeline_pipeline}.
 type DataAwsccDatapipelinePipeline interface {
 	cdktf.TerraformDataSource
 	Activate() cdktf.IResolvable
@@ -90,6 +90,10 @@ type DataAwsccDatapipelinePipeline interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -345,7 +349,7 @@ func (j *jsiiProxy_DataAwsccDatapipelinePipeline) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datapipeline_pipeline awscc_datapipeline_pipeline} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datapipeline_pipeline awscc_datapipeline_pipeline} Data Source.
 func NewDataAwsccDatapipelinePipeline(scope constructs.Construct, id *string, config *DataAwsccDatapipelinePipelineConfig) DataAwsccDatapipelinePipeline {
 	_init_.Initialize()
 
@@ -363,7 +367,7 @@ func NewDataAwsccDatapipelinePipeline(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datapipeline_pipeline awscc_datapipeline_pipeline} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datapipeline_pipeline awscc_datapipeline_pipeline} Data Source.
 func NewDataAwsccDatapipelinePipeline_Override(d DataAwsccDatapipelinePipeline, scope constructs.Construct, id *string, config *DataAwsccDatapipelinePipelineConfig) {
 	_init_.Initialize()
 
@@ -730,6 +734,32 @@ func (d *jsiiProxy_DataAwsccDatapipelinePipeline) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatapipelinePipeline) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatapipelinePipeline) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

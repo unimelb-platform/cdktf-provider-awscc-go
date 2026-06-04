@@ -29,8 +29,8 @@ type RdsDbInstanceEndpointOutputReference interface {
 	// Experimental.
 	Fqn() *string
 	HostedZoneId() *string
-	InternalValue() interface{}
-	SetInternalValue(val interface{})
+	InternalValue() *RdsDbInstanceEndpoint
+	SetInternalValue(val *RdsDbInstanceEndpoint)
 	Port() *string
 	// Experimental.
 	TerraformAttribute() *string
@@ -139,8 +139,8 @@ func (j *jsiiProxy_RdsDbInstanceEndpointOutputReference) HostedZoneId() *string 
 	return returns
 }
 
-func (j *jsiiProxy_RdsDbInstanceEndpointOutputReference) InternalValue() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_RdsDbInstanceEndpointOutputReference) InternalValue() *RdsDbInstanceEndpoint {
+	var returns *RdsDbInstanceEndpoint
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -229,7 +229,7 @@ func (j *jsiiProxy_RdsDbInstanceEndpointOutputReference)SetComplexObjectIsFromSe
 	)
 }
 
-func (j *jsiiProxy_RdsDbInstanceEndpointOutputReference)SetInternalValue(val interface{}) {
+func (j *jsiiProxy_RdsDbInstanceEndpointOutputReference)SetInternalValue(val *RdsDbInstanceEndpoint) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

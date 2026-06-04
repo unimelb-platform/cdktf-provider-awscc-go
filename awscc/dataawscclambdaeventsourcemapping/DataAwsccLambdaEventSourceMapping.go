@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscclambdaeventsourcemapping/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lambda_event_source_mapping awscc_lambda_event_source_mapping}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lambda_event_source_mapping awscc_lambda_event_source_mapping}.
 type DataAwsccLambdaEventSourceMapping interface {
 	cdktf.TerraformDataSource
 	AmazonManagedKafkaEventSourceConfig() DataAwsccLambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigOutputReference
@@ -31,6 +31,8 @@ type DataAwsccLambdaEventSourceMapping interface {
 	DocumentDbEventSourceConfig() DataAwsccLambdaEventSourceMappingDocumentDbEventSourceConfigOutputReference
 	Enabled() cdktf.IResolvable
 	EventSourceArn() *string
+	EventSourceMappingArn() *string
+	EventSourceMappingId() *string
 	FilterCriteria() DataAwsccLambdaEventSourceMappingFilterCriteriaOutputReference
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
@@ -45,6 +47,7 @@ type DataAwsccLambdaEventSourceMapping interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	KmsKeyArn() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -52,6 +55,7 @@ type DataAwsccLambdaEventSourceMapping interface {
 	MaximumBatchingWindowInSeconds() *float64
 	MaximumRecordAgeInSeconds() *float64
 	MaximumRetryAttempts() *float64
+	MetricsConfig() DataAwsccLambdaEventSourceMappingMetricsConfigOutputReference
 	// The tree node.
 	Node() constructs.Node
 	ParallelizationFactor() *float64
@@ -59,6 +63,7 @@ type DataAwsccLambdaEventSourceMapping interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	ProvisionedPollerConfig() DataAwsccLambdaEventSourceMappingProvisionedPollerConfigOutputReference
 	Queues() *[]*string
 	// Experimental.
 	RawOverrides() interface{}
@@ -68,6 +73,7 @@ type DataAwsccLambdaEventSourceMapping interface {
 	SourceAccessConfigurations() DataAwsccLambdaEventSourceMappingSourceAccessConfigurationsList
 	StartingPosition() *string
 	StartingPositionTimestamp() *float64
+	Tags() DataAwsccLambdaEventSourceMappingTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -105,6 +111,10 @@ type DataAwsccLambdaEventSourceMapping interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -229,6 +239,26 @@ func (j *jsiiProxy_DataAwsccLambdaEventSourceMapping) EventSourceArn() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccLambdaEventSourceMapping) EventSourceMappingArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"eventSourceMappingArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccLambdaEventSourceMapping) EventSourceMappingId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"eventSourceMappingId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccLambdaEventSourceMapping) FilterCriteria() DataAwsccLambdaEventSourceMappingFilterCriteriaOutputReference {
 	var returns DataAwsccLambdaEventSourceMappingFilterCriteriaOutputReference
 	_jsii_.Get(
@@ -309,6 +339,16 @@ func (j *jsiiProxy_DataAwsccLambdaEventSourceMapping) IdInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccLambdaEventSourceMapping) KmsKeyArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kmsKeyArn",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccLambdaEventSourceMapping) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -349,6 +389,16 @@ func (j *jsiiProxy_DataAwsccLambdaEventSourceMapping) MaximumRetryAttempts() *fl
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccLambdaEventSourceMapping) MetricsConfig() DataAwsccLambdaEventSourceMappingMetricsConfigOutputReference {
+	var returns DataAwsccLambdaEventSourceMappingMetricsConfigOutputReference
+	_jsii_.Get(
+		j,
+		"metricsConfig",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccLambdaEventSourceMapping) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -374,6 +424,16 @@ func (j *jsiiProxy_DataAwsccLambdaEventSourceMapping) Provider() cdktf.Terraform
 	_jsii_.Get(
 		j,
 		"provider",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccLambdaEventSourceMapping) ProvisionedPollerConfig() DataAwsccLambdaEventSourceMappingProvisionedPollerConfigOutputReference {
+	var returns DataAwsccLambdaEventSourceMappingProvisionedPollerConfigOutputReference
+	_jsii_.Get(
+		j,
+		"provisionedPollerConfig",
 		&returns,
 	)
 	return returns
@@ -459,6 +519,16 @@ func (j *jsiiProxy_DataAwsccLambdaEventSourceMapping) StartingPositionTimestamp(
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccLambdaEventSourceMapping) Tags() DataAwsccLambdaEventSourceMappingTagsList {
+	var returns DataAwsccLambdaEventSourceMappingTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccLambdaEventSourceMapping) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -510,7 +580,7 @@ func (j *jsiiProxy_DataAwsccLambdaEventSourceMapping) TumblingWindowInSeconds() 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lambda_event_source_mapping awscc_lambda_event_source_mapping} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lambda_event_source_mapping awscc_lambda_event_source_mapping} Data Source.
 func NewDataAwsccLambdaEventSourceMapping(scope constructs.Construct, id *string, config *DataAwsccLambdaEventSourceMappingConfig) DataAwsccLambdaEventSourceMapping {
 	_init_.Initialize()
 
@@ -528,7 +598,7 @@ func NewDataAwsccLambdaEventSourceMapping(scope constructs.Construct, id *string
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lambda_event_source_mapping awscc_lambda_event_source_mapping} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lambda_event_source_mapping awscc_lambda_event_source_mapping} Data Source.
 func NewDataAwsccLambdaEventSourceMapping_Override(d DataAwsccLambdaEventSourceMapping, scope constructs.Construct, id *string, config *DataAwsccLambdaEventSourceMappingConfig) {
 	_init_.Initialize()
 
@@ -895,6 +965,32 @@ func (d *jsiiProxy_DataAwsccLambdaEventSourceMapping) SynthesizeAttributes() *ma
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLambdaEventSourceMapping) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLambdaEventSourceMapping) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

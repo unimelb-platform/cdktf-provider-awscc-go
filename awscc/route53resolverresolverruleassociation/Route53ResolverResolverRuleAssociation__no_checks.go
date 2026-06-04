@@ -56,7 +56,15 @@ func (r *jsiiProxy_Route53ResolverResolverRuleAssociation) validateInterpolation
 	return nil
 }
 
+func (r *jsiiProxy_Route53ResolverResolverRuleAssociation) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_Route53ResolverResolverRuleAssociation) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (r *jsiiProxy_Route53ResolverResolverRuleAssociation) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

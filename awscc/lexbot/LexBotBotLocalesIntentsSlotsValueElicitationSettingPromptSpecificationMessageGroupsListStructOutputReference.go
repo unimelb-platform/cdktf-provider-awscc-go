@@ -27,10 +27,10 @@ type LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessa
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListStruct
-	SetInternalValue(val *LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListStruct)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Message() LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListMessageOutputReference
-	MessageInput() *LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListMessage
+	MessageInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,6 +67,7 @@ type LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessa
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMessage(value *LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListMessage)
 	PutVariations(value interface{})
+	ResetMessage()
 	ResetVariations()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -123,8 +124,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpec
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListStructOutputReference) InternalValue() *LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListStruct {
-	var returns *LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListStruct
+func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListStructOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -143,8 +144,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpec
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListStructOutputReference) MessageInput() *LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListMessage {
-	var returns *LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListMessage
+func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListStructOutputReference) MessageInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"messageInput",
@@ -243,7 +244,7 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpec
 	)
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListStructOutputReference)SetInternalValue(val *LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListStruct) {
+func (j *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListStructOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +482,14 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpec
 		l,
 		"putVariations",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingPromptSpecificationMessageGroupsListStructOutputReference) ResetMessage() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMessage",
+		nil, // no parameters
 	)
 }
 

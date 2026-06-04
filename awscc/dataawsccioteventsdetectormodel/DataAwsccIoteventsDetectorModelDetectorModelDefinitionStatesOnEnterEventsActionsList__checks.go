@@ -8,6 +8,14 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
+func (d *jsiiProxy_DataAwsccIoteventsDetectorModelDetectorModelDefinitionStatesOnEnterEventsActionsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	if mapKeyAttributeName == nil {
+		return fmt.Errorf("parameter mapKeyAttributeName is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccIoteventsDetectorModelDetectorModelDefinitionStatesOnEnterEventsActionsList) validateGetParameters(index *float64) error {
 	if index == nil {
 		return fmt.Errorf("parameter index is required, but nil was provided")

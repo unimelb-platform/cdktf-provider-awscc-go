@@ -30,7 +30,7 @@ type DatasyncLocationFsxOntapProtocolNfsOutputReference interface {
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	MountOptions() DatasyncLocationFsxOntapProtocolNfsMountOptionsOutputReference
-	MountOptionsInput() *DatasyncLocationFsxOntapProtocolNfsMountOptions
+	MountOptionsInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -64,6 +64,7 @@ type DatasyncLocationFsxOntapProtocolNfsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMountOptions(value *DatasyncLocationFsxOntapProtocolNfsMountOptions)
+	ResetMountOptions()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -139,8 +140,8 @@ func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolNfsOutputReference) MountOpti
 	return returns
 }
 
-func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolNfsOutputReference) MountOptionsInput() *DatasyncLocationFsxOntapProtocolNfsMountOptions {
-	var returns *DatasyncLocationFsxOntapProtocolNfsMountOptions
+func (j *jsiiProxy_DatasyncLocationFsxOntapProtocolNfsOutputReference) MountOptionsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"mountOptionsInput",
@@ -446,6 +447,14 @@ func (d *jsiiProxy_DatasyncLocationFsxOntapProtocolNfsOutputReference) PutMountO
 		d,
 		"putMountOptions",
 		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DatasyncLocationFsxOntapProtocolNfsOutputReference) ResetMountOptions() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetMountOptions",
+		nil, // no parameters
 	)
 }
 

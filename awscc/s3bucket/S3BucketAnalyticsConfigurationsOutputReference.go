@@ -36,7 +36,7 @@ type S3BucketAnalyticsConfigurationsOutputReference interface {
 	SetPrefix(val *string)
 	PrefixInput() *string
 	StorageClassAnalysis() S3BucketAnalyticsConfigurationsStorageClassAnalysisOutputReference
-	StorageClassAnalysisInput() *S3BucketAnalyticsConfigurationsStorageClassAnalysis
+	StorageClassAnalysisInput() interface{}
 	TagFilters() S3BucketAnalyticsConfigurationsTagFiltersList
 	TagFiltersInput() interface{}
 	// Experimental.
@@ -73,7 +73,9 @@ type S3BucketAnalyticsConfigurationsOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutStorageClassAnalysis(value *S3BucketAnalyticsConfigurationsStorageClassAnalysis)
 	PutTagFilters(value interface{})
+	ResetId()
 	ResetPrefix()
+	ResetStorageClassAnalysis()
 	ResetTagFilters()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -190,8 +192,8 @@ func (j *jsiiProxy_S3BucketAnalyticsConfigurationsOutputReference) StorageClassA
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketAnalyticsConfigurationsOutputReference) StorageClassAnalysisInput() *S3BucketAnalyticsConfigurationsStorageClassAnalysis {
-	var returns *S3BucketAnalyticsConfigurationsStorageClassAnalysis
+func (j *jsiiProxy_S3BucketAnalyticsConfigurationsOutputReference) StorageClassAnalysisInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"storageClassAnalysisInput",
@@ -553,10 +555,26 @@ func (s *jsiiProxy_S3BucketAnalyticsConfigurationsOutputReference) PutTagFilters
 	)
 }
 
+func (s *jsiiProxy_S3BucketAnalyticsConfigurationsOutputReference) ResetId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetId",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_S3BucketAnalyticsConfigurationsOutputReference) ResetPrefix() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetPrefix",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketAnalyticsConfigurationsOutputReference) ResetStorageClassAnalysis() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStorageClassAnalysis",
 		nil, // no parameters
 	)
 }

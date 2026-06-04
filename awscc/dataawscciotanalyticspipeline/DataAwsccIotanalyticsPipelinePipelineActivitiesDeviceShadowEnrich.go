@@ -1,0 +1,6 @@
+package dataawscciotanalyticspipeline
+
+
+type DataAwsccIotanalyticsPipelinePipelineActivitiesDeviceShadowEnrich struct {
+}
+

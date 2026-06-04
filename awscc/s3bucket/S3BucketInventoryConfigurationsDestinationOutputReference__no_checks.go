@@ -68,7 +68,7 @@ func (j *jsiiProxy_S3BucketInventoryConfigurationsDestinationOutputReference) va
 	return nil
 }
 
-func (j *jsiiProxy_S3BucketInventoryConfigurationsDestinationOutputReference) validateSetInternalValueParameters(val *S3BucketInventoryConfigurationsDestination) error {
+func (j *jsiiProxy_S3BucketInventoryConfigurationsDestinationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

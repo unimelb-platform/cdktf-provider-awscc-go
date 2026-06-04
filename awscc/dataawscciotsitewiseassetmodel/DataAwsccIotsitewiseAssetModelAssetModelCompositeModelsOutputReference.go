@@ -20,6 +20,7 @@ type DataAwsccIotsitewiseAssetModelAssetModelCompositeModelsOutputReference inte
 	ComplexObjectIsFromSet() *bool
 	// Experimental.
 	SetComplexObjectIsFromSet(val *bool)
+	ComposedAssetModelId() *string
 	CompositeModelProperties() DataAwsccIotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesList
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
 	//
@@ -27,11 +28,15 @@ type DataAwsccIotsitewiseAssetModelAssetModelCompositeModelsOutputReference inte
 	// Experimental.
 	CreationStack() *[]*string
 	Description() *string
+	ExternalId() *string
 	// Experimental.
 	Fqn() *string
+	Id() *string
 	InternalValue() *DataAwsccIotsitewiseAssetModelAssetModelCompositeModels
 	SetInternalValue(val *DataAwsccIotsitewiseAssetModelAssetModelCompositeModels)
 	Name() *string
+	ParentAssetModelCompositeModelExternalId() *string
+	Path() *[]*string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -100,6 +105,16 @@ func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelCompositeModelsOutput
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelCompositeModelsOutputReference) ComposedAssetModelId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"composedAssetModelId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelCompositeModelsOutputReference) CompositeModelProperties() DataAwsccIotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesList {
 	var returns DataAwsccIotsitewiseAssetModelAssetModelCompositeModelsCompositeModelPropertiesList
 	_jsii_.Get(
@@ -130,11 +145,31 @@ func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelCompositeModelsOutput
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelCompositeModelsOutputReference) ExternalId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelCompositeModelsOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelCompositeModelsOutputReference) Id() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"id",
 		&returns,
 	)
 	return returns
@@ -155,6 +190,26 @@ func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelCompositeModelsOutput
 	_jsii_.Get(
 		j,
 		"name",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelCompositeModelsOutputReference) ParentAssetModelCompositeModelExternalId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"parentAssetModelCompositeModelExternalId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelCompositeModelsOutputReference) Path() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"path",
 		&returns,
 	)
 	return returns

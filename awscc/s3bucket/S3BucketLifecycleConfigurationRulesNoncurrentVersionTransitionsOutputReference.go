@@ -71,6 +71,8 @@ type S3BucketLifecycleConfigurationRulesNoncurrentVersionTransitionsOutputRefere
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetNewerNoncurrentVersions()
+	ResetStorageClass()
+	ResetTransitionInDays()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -522,6 +524,22 @@ func (s *jsiiProxy_S3BucketLifecycleConfigurationRulesNoncurrentVersionTransitio
 	_jsii_.InvokeVoid(
 		s,
 		"resetNewerNoncurrentVersions",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketLifecycleConfigurationRulesNoncurrentVersionTransitionsOutputReference) ResetStorageClass() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStorageClass",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketLifecycleConfigurationRulesNoncurrentVersionTransitionsOutputReference) ResetTransitionInDays() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTransitionInDays",
 		nil, // no parameters
 	)
 }

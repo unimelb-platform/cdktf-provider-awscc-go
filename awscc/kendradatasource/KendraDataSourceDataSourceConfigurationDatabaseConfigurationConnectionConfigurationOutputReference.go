@@ -36,8 +36,8 @@ type KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfi
 	DatabasePortInput() *float64
 	// Experimental.
 	Fqn() *string
-	InternalValue() *KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfiguration
-	SetInternalValue(val *KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfiguration)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	SecretArn() *string
 	SetSecretArn(val *string)
 	SecretArnInput() *string
@@ -76,6 +76,11 @@ type KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfi
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDatabaseHost()
+	ResetDatabaseName()
+	ResetDatabasePort()
+	ResetSecretArn()
+	ResetTableName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -191,8 +196,8 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationC
 	return returns
 }
 
-func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfigurationOutputReference) InternalValue() *KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfiguration {
-	var returns *KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfiguration
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfigurationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -344,7 +349,7 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationC
 	)
 }
 
-func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfigurationOutputReference)SetInternalValue(val *KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfiguration) {
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfigurationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -583,6 +588,46 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationC
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfigurationOutputReference) ResetDatabaseHost() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetDatabaseHost",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfigurationOutputReference) ResetDatabaseName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetDatabaseName",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfigurationOutputReference) ResetDatabasePort() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetDatabasePort",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfigurationOutputReference) ResetSecretArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetSecretArn",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfigurationOutputReference) ResetTableName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetTableName",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationDatabaseConfigurationConnectionConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -71,6 +71,7 @@ type EcsServiceVolumeConfigurationsManagedEbsVolumeTagSpecificationsOutputRefere
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutTags(value interface{})
 	ResetPropagateTags()
+	ResetResourceType()
 	ResetTags()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -523,6 +524,14 @@ func (e *jsiiProxy_EcsServiceVolumeConfigurationsManagedEbsVolumeTagSpecificatio
 	_jsii_.InvokeVoid(
 		e,
 		"resetPropagateTags",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcsServiceVolumeConfigurationsManagedEbsVolumeTagSpecificationsOutputReference) ResetResourceType() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetResourceType",
 		nil, // no parameters
 	)
 }

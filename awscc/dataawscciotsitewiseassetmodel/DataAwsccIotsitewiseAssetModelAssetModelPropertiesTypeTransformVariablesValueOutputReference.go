@@ -27,10 +27,15 @@ type DataAwsccIotsitewiseAssetModelAssetModelPropertiesTypeTransformVariablesVal
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
+	HierarchyExternalId() *string
+	HierarchyId() *string
 	HierarchyLogicalId() *string
 	InternalValue() *DataAwsccIotsitewiseAssetModelAssetModelPropertiesTypeTransformVariablesValue
 	SetInternalValue(val *DataAwsccIotsitewiseAssetModelAssetModelPropertiesTypeTransformVariablesValue)
+	PropertyExternalId() *string
+	PropertyId() *string
 	PropertyLogicalId() *string
+	PropertyPath() DataAwsccIotsitewiseAssetModelAssetModelPropertiesTypeTransformVariablesValuePropertyPathList
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -118,6 +123,26 @@ func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelPropertiesTypeTransfo
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelPropertiesTypeTransformVariablesValueOutputReference) HierarchyExternalId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"hierarchyExternalId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelPropertiesTypeTransformVariablesValueOutputReference) HierarchyId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"hierarchyId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelPropertiesTypeTransformVariablesValueOutputReference) HierarchyLogicalId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -138,11 +163,41 @@ func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelPropertiesTypeTransfo
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelPropertiesTypeTransformVariablesValueOutputReference) PropertyExternalId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"propertyExternalId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelPropertiesTypeTransformVariablesValueOutputReference) PropertyId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"propertyId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelPropertiesTypeTransformVariablesValueOutputReference) PropertyLogicalId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"propertyLogicalId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotsitewiseAssetModelAssetModelPropertiesTypeTransformVariablesValueOutputReference) PropertyPath() DataAwsccIotsitewiseAssetModelAssetModelPropertiesTypeTransformVariablesValuePropertyPathList {
+	var returns DataAwsccIotsitewiseAssetModelAssetModelPropertiesTypeTransformVariablesValuePropertyPathList
+	_jsii_.Get(
+		j,
+		"propertyPath",
 		&returns,
 	)
 	return returns

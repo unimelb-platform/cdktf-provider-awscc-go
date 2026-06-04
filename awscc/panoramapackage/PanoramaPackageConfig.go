@@ -19,11 +19,17 @@ type PanoramaPackageConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/panorama_package#package_name PanoramaPackage#package_name}.
+	// A name for the package.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/panorama_package#package_name PanoramaPackage#package_name}
 	PackageName *string `field:"required" json:"packageName" yaml:"packageName"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/panorama_package#storage_location PanoramaPackage#storage_location}.
+	// A storage location.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/panorama_package#storage_location PanoramaPackage#storage_location}
 	StorageLocation *PanoramaPackageStorageLocation `field:"optional" json:"storageLocation" yaml:"storageLocation"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/panorama_package#tags PanoramaPackage#tags}.
+	// Tags for the package.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/panorama_package#tags PanoramaPackage#tags}
 	Tags interface{} `field:"optional" json:"tags" yaml:"tags"`
 }
 

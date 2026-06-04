@@ -44,7 +44,19 @@ func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputRefe
 	return nil
 }
 
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) validatePutConsumableResourcePropertiesParameters(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesConsumableResourceProperties) error {
+	return nil
+}
+
 func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) validatePutContainerParameters(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesContainer) error {
+	return nil
+}
+
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) validatePutEcsPropertiesParameters(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesEcsProperties) error {
+	return nil
+}
+
+func (b *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) validatePutEksPropertiesParameters(value *BatchJobDefinitionNodePropertiesNodeRangePropertiesEksProperties) error {
 	return nil
 }
 
@@ -60,7 +72,11 @@ func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputRefe
 	return nil
 }
 
-func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) validateSetInternalValueParameters(val *BatchJobDefinitionNodePropertiesNodeRangeProperties) error {
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) validateSetInstanceTypesParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_BatchJobDefinitionNodePropertiesNodeRangePropertiesOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

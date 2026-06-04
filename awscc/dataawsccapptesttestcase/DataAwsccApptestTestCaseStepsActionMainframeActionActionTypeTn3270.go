@@ -1,0 +1,6 @@
+package dataawsccapptesttestcase
+
+
+type DataAwsccApptestTestCaseStepsActionMainframeActionActionTypeTn3270 struct {
+}
+

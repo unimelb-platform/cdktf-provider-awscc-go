@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccmwaaenvironment/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mwaa_environment awscc_mwaa_environment}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mwaa_environment awscc_mwaa_environment}.
 type DataAwsccMwaaEnvironment interface {
 	cdktf.TerraformDataSource
 	AirflowConfigurationOptions() *string
@@ -50,7 +50,9 @@ type DataAwsccMwaaEnvironment interface {
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	LoggingConfiguration() DataAwsccMwaaEnvironmentLoggingConfigurationOutputReference
+	MaxWebservers() *float64
 	MaxWorkers() *float64
+	MinWebservers() *float64
 	MinWorkers() *float64
 	Name() *string
 	NetworkConfiguration() DataAwsccMwaaEnvironmentNetworkConfigurationOutputReference
@@ -81,6 +83,7 @@ type DataAwsccMwaaEnvironment interface {
 	WebserverUrl() *string
 	WebserverVpcEndpointService() *string
 	WeeklyMaintenanceWindowStart() *string
+	WorkerReplacementStrategy() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -110,6 +113,10 @@ type DataAwsccMwaaEnvironment interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -334,11 +341,31 @@ func (j *jsiiProxy_DataAwsccMwaaEnvironment) LoggingConfiguration() DataAwsccMwa
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccMwaaEnvironment) MaxWebservers() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxWebservers",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccMwaaEnvironment) MaxWorkers() *float64 {
 	var returns *float64
 	_jsii_.Get(
 		j,
 		"maxWorkers",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccMwaaEnvironment) MinWebservers() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"minWebservers",
 		&returns,
 	)
 	return returns
@@ -564,8 +591,18 @@ func (j *jsiiProxy_DataAwsccMwaaEnvironment) WeeklyMaintenanceWindowStart() *str
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccMwaaEnvironment) WorkerReplacementStrategy() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"workerReplacementStrategy",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mwaa_environment awscc_mwaa_environment} Data Source.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mwaa_environment awscc_mwaa_environment} Data Source.
 func NewDataAwsccMwaaEnvironment(scope constructs.Construct, id *string, config *DataAwsccMwaaEnvironmentConfig) DataAwsccMwaaEnvironment {
 	_init_.Initialize()
 
@@ -583,7 +620,7 @@ func NewDataAwsccMwaaEnvironment(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/mwaa_environment awscc_mwaa_environment} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/mwaa_environment awscc_mwaa_environment} Data Source.
 func NewDataAwsccMwaaEnvironment_Override(d DataAwsccMwaaEnvironment, scope constructs.Construct, id *string, config *DataAwsccMwaaEnvironmentConfig) {
 	_init_.Initialize()
 
@@ -950,6 +987,32 @@ func (d *jsiiProxy_DataAwsccMwaaEnvironment) SynthesizeAttributes() *map[string]
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMwaaEnvironment) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccMwaaEnvironment) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

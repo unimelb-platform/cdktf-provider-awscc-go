@@ -68,6 +68,10 @@ func (j *jsiiProxy_OpensearchserverlessSecurityConfigSamlOptionsOutputReference)
 	return nil
 }
 
+func (j *jsiiProxy_OpensearchserverlessSecurityConfigSamlOptionsOutputReference) validateSetOpenSearchServerlessEntityIdParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_OpensearchserverlessSecurityConfigSamlOptionsOutputReference) validateSetSessionTimeoutParameters(val *float64) error {
 	return nil
 }

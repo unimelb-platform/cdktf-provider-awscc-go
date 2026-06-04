@@ -35,7 +35,7 @@ type DynamodbGlobalTableLocalSecondaryIndexesOutputReference interface {
 	KeySchema() DynamodbGlobalTableLocalSecondaryIndexesKeySchemaList
 	KeySchemaInput() interface{}
 	Projection() DynamodbGlobalTableLocalSecondaryIndexesProjectionOutputReference
-	ProjectionInput() *DynamodbGlobalTableLocalSecondaryIndexesProjection
+	ProjectionInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -70,6 +70,9 @@ type DynamodbGlobalTableLocalSecondaryIndexesOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutKeySchema(value interface{})
 	PutProjection(value *DynamodbGlobalTableLocalSecondaryIndexesProjection)
+	ResetIndexName()
+	ResetKeySchema()
+	ResetProjection()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -185,8 +188,8 @@ func (j *jsiiProxy_DynamodbGlobalTableLocalSecondaryIndexesOutputReference) Proj
 	return returns
 }
 
-func (j *jsiiProxy_DynamodbGlobalTableLocalSecondaryIndexesOutputReference) ProjectionInput() *DynamodbGlobalTableLocalSecondaryIndexesProjection {
-	var returns *DynamodbGlobalTableLocalSecondaryIndexesProjection
+func (j *jsiiProxy_DynamodbGlobalTableLocalSecondaryIndexesOutputReference) ProjectionInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"projectionInput",
@@ -514,6 +517,30 @@ func (d *jsiiProxy_DynamodbGlobalTableLocalSecondaryIndexesOutputReference) PutP
 		d,
 		"putProjection",
 		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableLocalSecondaryIndexesOutputReference) ResetIndexName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetIndexName",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableLocalSecondaryIndexesOutputReference) ResetKeySchema() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetKeySchema",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableLocalSecondaryIndexesOutputReference) ResetProjection() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetProjection",
+		nil, // no parameters
 	)
 }
 

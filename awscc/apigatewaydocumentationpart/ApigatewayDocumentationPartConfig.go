@@ -19,19 +19,16 @@ type ApigatewayDocumentationPartConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// The location of the targeted API entity of the to-be-created documentation part.
+	// The ``Location`` property specifies the location of the Amazon API Gateway API entity that the documentation applies to.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/apigateway_documentation_part#location ApigatewayDocumentationPart#location}
+	// ``Location`` is a property of the [AWS::ApiGateway::DocumentationPart](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationpart.html) resource.
+	//  For more information about each property, including constraints and valid values, see [DocumentationPart](https://docs.aws.amazon.com/apigateway/latest/api/API_DocumentationPartLocation.html) in the *Amazon API Gateway REST API Reference*.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/apigateway_documentation_part#location ApigatewayDocumentationPart#location}
 	Location *ApigatewayDocumentationPartLocation `field:"required" json:"location" yaml:"location"`
-	// The new documentation content map of the targeted API entity.
-	//
-	// Enclosed key-value pairs are API-specific, but only OpenAPI-compliant key-value pairs can be exported and, hence, published.
-	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/apigateway_documentation_part#properties ApigatewayDocumentationPart#properties}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/apigateway_documentation_part#properties ApigatewayDocumentationPart#properties}.
 	Properties *string `field:"required" json:"properties" yaml:"properties"`
-	// The string identifier of the associated RestApi.
-	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/apigateway_documentation_part#rest_api_id ApigatewayDocumentationPart#rest_api_id}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/apigateway_documentation_part#rest_api_id ApigatewayDocumentationPart#rest_api_id}.
 	RestApiId *string `field:"required" json:"restApiId" yaml:"restApiId"`
 }
 

@@ -1,0 +1,6 @@
+package dataawscccodepipelinepipeline
+
+
+type DataAwsccCodepipelinePipelineStagesOnSuccessConditionsRulesRuleTypeId struct {
+}
+

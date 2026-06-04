@@ -9,7 +9,7 @@ type FsxDataRepositoryAssociationS3AutoExportPolicy struct {
 	//
 	//  You can define any combination of event types for your ``AutoExportPolicy``.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/fsx_data_repository_association#events FsxDataRepositoryAssociation#events}
-	Events *[]*string `field:"required" json:"events" yaml:"events"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/fsx_data_repository_association#events FsxDataRepositoryAssociation#events}
+	Events *[]*string `field:"optional" json:"events" yaml:"events"`
 }
 

@@ -56,7 +56,15 @@ func (n *jsiiProxy_NetworkmanagerConnectAttachment) validateInterpolationForAttr
 	return nil
 }
 
+func (n *jsiiProxy_NetworkmanagerConnectAttachment) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (n *jsiiProxy_NetworkmanagerConnectAttachment) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (n *jsiiProxy_NetworkmanagerConnectAttachment) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -65,6 +73,10 @@ func (n *jsiiProxy_NetworkmanagerConnectAttachment) validateOverrideLogicalIdPar
 }
 
 func (n *jsiiProxy_NetworkmanagerConnectAttachment) validatePutOptionsParameters(value *NetworkmanagerConnectAttachmentOptions) error {
+	return nil
+}
+
+func (n *jsiiProxy_NetworkmanagerConnectAttachment) validatePutProposedNetworkFunctionGroupChangeParameters(value *NetworkmanagerConnectAttachmentProposedNetworkFunctionGroupChange) error {
 	return nil
 }
 
@@ -109,6 +121,10 @@ func (j *jsiiProxy_NetworkmanagerConnectAttachment) validateSetEdgeLocationParam
 }
 
 func (j *jsiiProxy_NetworkmanagerConnectAttachment) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
+	return nil
+}
+
+func (j *jsiiProxy_NetworkmanagerConnectAttachment) validateSetNetworkFunctionGroupNameParameters(val *string) error {
 	return nil
 }
 

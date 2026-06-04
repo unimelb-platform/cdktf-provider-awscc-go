@@ -9,9 +9,12 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2eip/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_eip awscc_ec2_eip}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_eip awscc_ec2_eip}.
 type Ec2Eip interface {
 	cdktf.TerraformResource
+	Address() *string
+	SetAddress(val *string)
+	AddressInput() *string
 	AllocationId() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
@@ -44,6 +47,9 @@ type Ec2Eip interface {
 	InstanceId() *string
 	SetInstanceId(val *string)
 	InstanceIdInput() *string
+	IpamPoolId() *string
+	SetIpamPoolId(val *string)
+	IpamPoolIdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -102,18 +108,30 @@ type Ec2Eip interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutTags(value interface{})
+	ResetAddress()
 	ResetDomain()
 	ResetInstanceId()
+	ResetIpamPoolId()
 	ResetNetworkBorderGroup()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -122,6 +140,9 @@ type Ec2Eip interface {
 	ResetTags()
 	ResetTransferAddress()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -134,6 +155,26 @@ type Ec2Eip interface {
 // The jsii proxy struct for Ec2Eip
 type jsiiProxy_Ec2Eip struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_Ec2Eip) Address() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"address",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2Eip) AddressInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"addressInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_Ec2Eip) AllocationId() *string {
@@ -271,6 +312,26 @@ func (j *jsiiProxy_Ec2Eip) InstanceIdInput() *string {
 	_jsii_.Get(
 		j,
 		"instanceIdInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2Eip) IpamPoolId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipamPoolId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ec2Eip) IpamPoolIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipamPoolIdInput",
 		&returns,
 	)
 	return returns
@@ -447,7 +508,7 @@ func (j *jsiiProxy_Ec2Eip) TransferAddressInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_eip awscc_ec2_eip} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_eip awscc_ec2_eip} Resource.
 func NewEc2Eip(scope constructs.Construct, id *string, config *Ec2EipConfig) Ec2Eip {
 	_init_.Initialize()
 
@@ -465,7 +526,7 @@ func NewEc2Eip(scope constructs.Construct, id *string, config *Ec2EipConfig) Ec2
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_eip awscc_ec2_eip} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_eip awscc_ec2_eip} Resource.
 func NewEc2Eip_Override(e Ec2Eip, scope constructs.Construct, id *string, config *Ec2EipConfig) {
 	_init_.Initialize()
 
@@ -473,6 +534,17 @@ func NewEc2Eip_Override(e Ec2Eip, scope constructs.Construct, id *string, config
 		"awscc.ec2Eip.Ec2Eip",
 		[]interface{}{scope, id, config},
 		e,
+	)
+}
+
+func (j *jsiiProxy_Ec2Eip)SetAddress(val *string) {
+	if err := j.validateSetAddressParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"address",
+		val,
 	)
 }
 
@@ -532,6 +604,17 @@ func (j *jsiiProxy_Ec2Eip)SetInstanceId(val *string) {
 	_jsii_.Set(
 		j,
 		"instanceId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Ec2Eip)SetIpamPoolId(val *string) {
+	if err := j.validateSetIpamPoolIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ipamPoolId",
 		val,
 	)
 }
@@ -868,6 +951,19 @@ func (e *jsiiProxy_Ec2Eip) GetStringMapAttribute(terraformAttribute *string) *ma
 	return returns
 }
 
+func (e *jsiiProxy_Ec2Eip) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2Eip) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -895,6 +991,17 @@ func (e *jsiiProxy_Ec2Eip) InterpolationForAttribute(terraformAttribute *string)
 	return returns
 }
 
+func (e *jsiiProxy_Ec2Eip) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2Eip) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -903,6 +1010,17 @@ func (e *jsiiProxy_Ec2Eip) MoveTo(moveTarget *string, index interface{}) {
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Ec2Eip) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -928,6 +1046,14 @@ func (e *jsiiProxy_Ec2Eip) PutTags(value interface{}) {
 	)
 }
 
+func (e *jsiiProxy_Ec2Eip) ResetAddress() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetAddress",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_Ec2Eip) ResetDomain() {
 	_jsii_.InvokeVoid(
 		e,
@@ -940,6 +1066,14 @@ func (e *jsiiProxy_Ec2Eip) ResetInstanceId() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetInstanceId",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2Eip) ResetIpamPoolId() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetIpamPoolId",
 		nil, // no parameters
 	)
 }
@@ -990,6 +1124,32 @@ func (e *jsiiProxy_Ec2Eip) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2Eip) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2Eip) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

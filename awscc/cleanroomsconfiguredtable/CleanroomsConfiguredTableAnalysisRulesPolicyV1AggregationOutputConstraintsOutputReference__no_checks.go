@@ -60,7 +60,7 @@ func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutp
 	return nil
 }
 
-func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputConstraintsOutputReference) validateSetInternalValueParameters(val *CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputConstraints) error {
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1AggregationOutputConstraintsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

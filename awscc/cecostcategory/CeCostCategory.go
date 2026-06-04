@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/cecostcategory/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ce_cost_category awscc_ce_cost_category}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ce_cost_category awscc_ce_cost_category}.
 type CeCostCategory interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -70,6 +70,8 @@ type CeCostCategory interface {
 	SplitChargeRules() *string
 	SetSplitChargeRules(val *string)
 	SplitChargeRulesInput() *string
+	Tags() CeCostCategoryTagsList
+	TagsInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -100,21 +102,36 @@ type CeCostCategory interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTags(value interface{})
 	ResetDefaultValue()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetSplitChargeRules()
+	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -389,6 +406,26 @@ func (j *jsiiProxy_CeCostCategory) SplitChargeRulesInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_CeCostCategory) Tags() CeCostCategoryTagsList {
+	var returns CeCostCategoryTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CeCostCategory) TagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_CeCostCategory) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -420,7 +457,7 @@ func (j *jsiiProxy_CeCostCategory) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ce_cost_category awscc_ce_cost_category} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ce_cost_category awscc_ce_cost_category} Resource.
 func NewCeCostCategory(scope constructs.Construct, id *string, config *CeCostCategoryConfig) CeCostCategory {
 	_init_.Initialize()
 
@@ -438,7 +475,7 @@ func NewCeCostCategory(scope constructs.Construct, id *string, config *CeCostCat
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ce_cost_category awscc_ce_cost_category} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ce_cost_category awscc_ce_cost_category} Resource.
 func NewCeCostCategory_Override(c CeCostCategory, scope constructs.Construct, id *string, config *CeCostCategoryConfig) {
 	_init_.Initialize()
 
@@ -841,6 +878,19 @@ func (c *jsiiProxy_CeCostCategory) GetStringMapAttribute(terraformAttribute *str
 	return returns
 }
 
+func (c *jsiiProxy_CeCostCategory) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_CeCostCategory) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -868,6 +918,17 @@ func (c *jsiiProxy_CeCostCategory) InterpolationForAttribute(terraformAttribute 
 	return returns
 }
 
+func (c *jsiiProxy_CeCostCategory) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CeCostCategory) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -879,6 +940,17 @@ func (c *jsiiProxy_CeCostCategory) MoveTo(moveTarget *string, index interface{})
 	)
 }
 
+func (c *jsiiProxy_CeCostCategory) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CeCostCategory) OverrideLogicalId(newLogicalId *string) {
 	if err := c.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -887,6 +959,17 @@ func (c *jsiiProxy_CeCostCategory) OverrideLogicalId(newLogicalId *string) {
 		c,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (c *jsiiProxy_CeCostCategory) PutTags(value interface{}) {
+	if err := c.validatePutTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putTags",
+		[]interface{}{value},
 	)
 }
 
@@ -914,12 +997,46 @@ func (c *jsiiProxy_CeCostCategory) ResetSplitChargeRules() {
 	)
 }
 
+func (c *jsiiProxy_CeCostCategory) ResetTags() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetTags",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CeCostCategory) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CeCostCategory) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CeCostCategory) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

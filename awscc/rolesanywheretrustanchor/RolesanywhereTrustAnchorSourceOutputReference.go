@@ -67,8 +67,6 @@ type RolesanywhereTrustAnchorSourceOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutSourceData(value *RolesanywhereTrustAnchorSourceSourceData)
-	ResetSourceData()
-	ResetSourceType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -482,22 +480,6 @@ func (r *jsiiProxy_RolesanywhereTrustAnchorSourceOutputReference) PutSourceData(
 		r,
 		"putSourceData",
 		[]interface{}{value},
-	)
-}
-
-func (r *jsiiProxy_RolesanywhereTrustAnchorSourceOutputReference) ResetSourceData() {
-	_jsii_.InvokeVoid(
-		r,
-		"resetSourceData",
-		nil, // no parameters
-	)
-}
-
-func (r *jsiiProxy_RolesanywhereTrustAnchorSourceOutputReference) ResetSourceType() {
-	_jsii_.InvokeVoid(
-		r,
-		"resetSourceType",
-		nil, // no parameters
 	)
 }
 

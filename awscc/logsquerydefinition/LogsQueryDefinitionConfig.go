@@ -21,15 +21,19 @@ type LogsQueryDefinitionConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// A name for the saved query definition.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_query_definition#name LogsQueryDefinition#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_query_definition#name LogsQueryDefinition#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// The query string to use for this definition.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_query_definition#query_string LogsQueryDefinition#query_string}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_query_definition#query_string LogsQueryDefinition#query_string}
 	QueryString *string `field:"required" json:"queryString" yaml:"queryString"`
 	// Optionally define specific log groups as part of your query definition.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/logs_query_definition#log_group_names LogsQueryDefinition#log_group_names}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_query_definition#log_group_names LogsQueryDefinition#log_group_names}
 	LogGroupNames *[]*string `field:"optional" json:"logGroupNames" yaml:"logGroupNames"`
+	// Query language of the query string. Possible values are CWLI, SQL, PPL, with CWLI being the default.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/logs_query_definition#query_language LogsQueryDefinition#query_language}
+	QueryLanguage *string `field:"optional" json:"queryLanguage" yaml:"queryLanguage"`
 }
 

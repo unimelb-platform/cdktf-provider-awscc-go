@@ -68,6 +68,7 @@ type ComprehendFlywheelTaskConfigDocumentClassificationConfigOutputReference int
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetLabels()
+	ResetMode()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (c *jsiiProxy_ComprehendFlywheelTaskConfigDocumentClassificationConfigOutpu
 	_jsii_.InvokeVoid(
 		c,
 		"resetLabels",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ComprehendFlywheelTaskConfigDocumentClassificationConfigOutputReference) ResetMode() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetMode",
 		nil, // no parameters
 	)
 }

@@ -67,6 +67,8 @@ type DynamodbTableProvisionedThroughputOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetReadCapacityUnits()
+	ResetWriteCapacityUnits()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (d *jsiiProxy_DynamodbTableProvisionedThroughputOutputReference) Interpolat
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DynamodbTableProvisionedThroughputOutputReference) ResetReadCapacityUnits() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetReadCapacityUnits",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbTableProvisionedThroughputOutputReference) ResetWriteCapacityUnits() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetWriteCapacityUnits",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DynamodbTableProvisionedThroughputOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

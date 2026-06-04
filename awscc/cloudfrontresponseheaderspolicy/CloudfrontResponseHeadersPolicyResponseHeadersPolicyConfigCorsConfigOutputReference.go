@@ -14,11 +14,11 @@ type CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigOutputR
 	SetAccessControlAllowCredentials(val interface{})
 	AccessControlAllowCredentialsInput() interface{}
 	AccessControlAllowHeaders() CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigAccessControlAllowHeadersOutputReference
-	AccessControlAllowHeadersInput() *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigAccessControlAllowHeaders
+	AccessControlAllowHeadersInput() interface{}
 	AccessControlAllowMethods() CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigAccessControlAllowMethodsOutputReference
-	AccessControlAllowMethodsInput() *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigAccessControlAllowMethods
+	AccessControlAllowMethodsInput() interface{}
 	AccessControlAllowOrigins() CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigAccessControlAllowOriginsOutputReference
-	AccessControlAllowOriginsInput() *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigAccessControlAllowOrigins
+	AccessControlAllowOriginsInput() interface{}
 	AccessControlExposeHeaders() CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigAccessControlExposeHeadersOutputReference
 	AccessControlExposeHeadersInput() interface{}
 	AccessControlMaxAgeSec() *float64
@@ -82,8 +82,13 @@ type CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigOutputR
 	PutAccessControlAllowMethods(value *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigAccessControlAllowMethods)
 	PutAccessControlAllowOrigins(value *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigAccessControlAllowOrigins)
 	PutAccessControlExposeHeaders(value *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigAccessControlExposeHeaders)
+	ResetAccessControlAllowCredentials()
+	ResetAccessControlAllowHeaders()
+	ResetAccessControlAllowMethods()
+	ResetAccessControlAllowOrigins()
 	ResetAccessControlExposeHeaders()
 	ResetAccessControlMaxAgeSec()
+	ResetOriginOverride()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -129,8 +134,8 @@ func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCor
 	return returns
 }
 
-func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigOutputReference) AccessControlAllowHeadersInput() *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigAccessControlAllowHeaders {
-	var returns *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigAccessControlAllowHeaders
+func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigOutputReference) AccessControlAllowHeadersInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"accessControlAllowHeadersInput",
@@ -149,8 +154,8 @@ func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCor
 	return returns
 }
 
-func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigOutputReference) AccessControlAllowMethodsInput() *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigAccessControlAllowMethods {
-	var returns *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigAccessControlAllowMethods
+func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigOutputReference) AccessControlAllowMethodsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"accessControlAllowMethodsInput",
@@ -169,8 +174,8 @@ func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCor
 	return returns
 }
 
-func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigOutputReference) AccessControlAllowOriginsInput() *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigAccessControlAllowOrigins {
-	var returns *CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigAccessControlAllowOrigins
+func (j *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigOutputReference) AccessControlAllowOriginsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"accessControlAllowOriginsInput",
@@ -655,6 +660,38 @@ func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCor
 	)
 }
 
+func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigOutputReference) ResetAccessControlAllowCredentials() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAccessControlAllowCredentials",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigOutputReference) ResetAccessControlAllowHeaders() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAccessControlAllowHeaders",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigOutputReference) ResetAccessControlAllowMethods() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAccessControlAllowMethods",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigOutputReference) ResetAccessControlAllowOrigins() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAccessControlAllowOrigins",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigOutputReference) ResetAccessControlExposeHeaders() {
 	_jsii_.InvokeVoid(
 		c,
@@ -667,6 +704,14 @@ func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCor
 	_jsii_.InvokeVoid(
 		c,
 		"resetAccessControlMaxAgeSec",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudfrontResponseHeadersPolicyResponseHeadersPolicyConfigCorsConfigOutputReference) ResetOriginOverride() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetOriginOverride",
 		nil, // no parameters
 	)
 }

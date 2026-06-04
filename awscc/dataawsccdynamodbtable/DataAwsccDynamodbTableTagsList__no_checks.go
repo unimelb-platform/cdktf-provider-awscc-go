@@ -4,6 +4,10 @@ package dataawsccdynamodbtable
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccDynamodbTableTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccDynamodbTableTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

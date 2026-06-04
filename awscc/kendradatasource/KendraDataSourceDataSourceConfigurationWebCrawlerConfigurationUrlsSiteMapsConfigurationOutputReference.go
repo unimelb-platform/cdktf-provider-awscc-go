@@ -64,6 +64,7 @@ type KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsC
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetSiteMaps()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfiguratio
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationOutputReference) ResetSiteMaps() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetSiteMaps",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

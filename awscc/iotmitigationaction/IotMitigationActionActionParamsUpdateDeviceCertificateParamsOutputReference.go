@@ -64,6 +64,7 @@ type IotMitigationActionActionParamsUpdateDeviceCertificateParamsOutputReference
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAction()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (i *jsiiProxy_IotMitigationActionActionParamsUpdateDeviceCertificateParamsO
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotMitigationActionActionParamsUpdateDeviceCertificateParamsOutputReference) ResetAction() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetAction",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotMitigationActionActionParamsUpdateDeviceCertificateParamsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

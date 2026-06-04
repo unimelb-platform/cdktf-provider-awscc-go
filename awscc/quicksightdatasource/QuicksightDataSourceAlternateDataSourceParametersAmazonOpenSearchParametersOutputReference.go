@@ -64,6 +64,7 @@ type QuicksightDataSourceAlternateDataSourceParametersAmazonOpenSearchParameters
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDomain()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersAmazonOpenSe
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersAmazonOpenSearchParametersOutputReference) ResetDomain() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDomain",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSourceAlternateDataSourceParametersAmazonOpenSearchParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

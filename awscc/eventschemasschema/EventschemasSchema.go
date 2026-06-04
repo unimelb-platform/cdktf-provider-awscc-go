@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/eventschemasschema/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/eventschemas_schema awscc_eventschemas_schema}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/eventschemas_schema awscc_eventschemas_schema}.
 type EventschemasSchema interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -104,12 +104,22 @@ type EventschemasSchema interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -121,6 +131,9 @@ type EventschemasSchema interface {
 	ResetSchemaName()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -466,7 +479,7 @@ func (j *jsiiProxy_EventschemasSchema) VersionCreatedDate() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/eventschemas_schema awscc_eventschemas_schema} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/eventschemas_schema awscc_eventschemas_schema} Resource.
 func NewEventschemasSchema(scope constructs.Construct, id *string, config *EventschemasSchemaConfig) EventschemasSchema {
 	_init_.Initialize()
 
@@ -484,7 +497,7 @@ func NewEventschemasSchema(scope constructs.Construct, id *string, config *Event
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/eventschemas_schema awscc_eventschemas_schema} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/eventschemas_schema awscc_eventschemas_schema} Resource.
 func NewEventschemasSchema_Override(e EventschemasSchema, scope constructs.Construct, id *string, config *EventschemasSchemaConfig) {
 	_init_.Initialize()
 
@@ -887,6 +900,19 @@ func (e *jsiiProxy_EventschemasSchema) GetStringMapAttribute(terraformAttribute 
 	return returns
 }
 
+func (e *jsiiProxy_EventschemasSchema) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_EventschemasSchema) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -914,6 +940,17 @@ func (e *jsiiProxy_EventschemasSchema) InterpolationForAttribute(terraformAttrib
 	return returns
 }
 
+func (e *jsiiProxy_EventschemasSchema) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_EventschemasSchema) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -922,6 +959,17 @@ func (e *jsiiProxy_EventschemasSchema) MoveTo(moveTarget *string, index interfac
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_EventschemasSchema) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -985,6 +1033,32 @@ func (e *jsiiProxy_EventschemasSchema) SynthesizeAttributes() *map[string]interf
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_EventschemasSchema) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_EventschemasSchema) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -56,7 +56,15 @@ func (a *jsiiProxy_ApplicationinsightsApplication) validateInterpolationForAttri
 	return nil
 }
 
+func (a *jsiiProxy_ApplicationinsightsApplication) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_ApplicationinsightsApplication) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplication) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -93,6 +101,10 @@ func validateApplicationinsightsApplication_IsTerraformElementParameters(x inter
 }
 
 func validateApplicationinsightsApplication_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ApplicationinsightsApplication) validateSetAttachMissingPermissionParameters(val interface{}) error {
 	return nil
 }
 
@@ -133,6 +145,10 @@ func (j *jsiiProxy_ApplicationinsightsApplication) validateSetProvisionersParame
 }
 
 func (j *jsiiProxy_ApplicationinsightsApplication) validateSetResourceGroupNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ApplicationinsightsApplication) validateSetSnsNotificationArnParameters(val *string) error {
 	return nil
 }
 

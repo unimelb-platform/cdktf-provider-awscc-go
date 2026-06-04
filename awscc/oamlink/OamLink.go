@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/oamlink/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/oam_link awscc_oam_link}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/oam_link awscc_oam_link}.
 type OamLink interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -46,6 +46,8 @@ type OamLink interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	LinkConfiguration() OamLinkLinkConfigurationOutputReference
+	LinkConfigurationInput() interface{}
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
@@ -97,21 +99,36 @@ type OamLink interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutLinkConfiguration(value *OamLinkLinkConfiguration)
 	ResetLabelTemplate()
+	ResetLinkConfiguration()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -266,6 +283,26 @@ func (j *jsiiProxy_OamLink) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	return returns
 }
 
+func (j *jsiiProxy_OamLink) LinkConfiguration() OamLinkLinkConfigurationOutputReference {
+	var returns OamLinkLinkConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"linkConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OamLink) LinkConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"linkConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_OamLink) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -397,7 +434,7 @@ func (j *jsiiProxy_OamLink) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/oam_link awscc_oam_link} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/oam_link awscc_oam_link} Resource.
 func NewOamLink(scope constructs.Construct, id *string, config *OamLinkConfig) OamLink {
 	_init_.Initialize()
 
@@ -415,7 +452,7 @@ func NewOamLink(scope constructs.Construct, id *string, config *OamLinkConfig) O
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/oam_link awscc_oam_link} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/oam_link awscc_oam_link} Resource.
 func NewOamLink_Override(o OamLink, scope constructs.Construct, id *string, config *OamLinkConfig) {
 	_init_.Initialize()
 
@@ -807,6 +844,19 @@ func (o *jsiiProxy_OamLink) GetStringMapAttribute(terraformAttribute *string) *m
 	return returns
 }
 
+func (o *jsiiProxy_OamLink) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		o,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (o *jsiiProxy_OamLink) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := o.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -834,6 +884,17 @@ func (o *jsiiProxy_OamLink) InterpolationForAttribute(terraformAttribute *string
 	return returns
 }
 
+func (o *jsiiProxy_OamLink) MoveFromId(id *string) {
+	if err := o.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (o *jsiiProxy_OamLink) MoveTo(moveTarget *string, index interface{}) {
 	if err := o.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -842,6 +903,17 @@ func (o *jsiiProxy_OamLink) MoveTo(moveTarget *string, index interface{}) {
 		o,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (o *jsiiProxy_OamLink) MoveToId(id *string) {
+	if err := o.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -856,10 +928,29 @@ func (o *jsiiProxy_OamLink) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (o *jsiiProxy_OamLink) PutLinkConfiguration(value *OamLinkLinkConfiguration) {
+	if err := o.validatePutLinkConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"putLinkConfiguration",
+		[]interface{}{value},
+	)
+}
+
 func (o *jsiiProxy_OamLink) ResetLabelTemplate() {
 	_jsii_.InvokeVoid(
 		o,
 		"resetLabelTemplate",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OamLink) ResetLinkConfiguration() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetLinkConfiguration",
 		nil, // no parameters
 	)
 }
@@ -886,6 +977,32 @@ func (o *jsiiProxy_OamLink) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		o,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (o *jsiiProxy_OamLink) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		o,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (o *jsiiProxy_OamLink) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		o,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

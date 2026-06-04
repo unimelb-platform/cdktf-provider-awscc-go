@@ -74,6 +74,8 @@ type RolesanywhereTrustAnchorNotificationSettingsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetChannel()
+	ResetEnabled()
+	ResetEvent()
 	ResetThreshold()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -557,6 +559,22 @@ func (r *jsiiProxy_RolesanywhereTrustAnchorNotificationSettingsOutputReference) 
 	_jsii_.InvokeVoid(
 		r,
 		"resetChannel",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RolesanywhereTrustAnchorNotificationSettingsOutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetEnabled",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RolesanywhereTrustAnchorNotificationSettingsOutputReference) ResetEvent() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetEvent",
 		nil, // no parameters
 	)
 }

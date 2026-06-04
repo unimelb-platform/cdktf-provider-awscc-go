@@ -119,6 +119,14 @@ func (c *jsiiProxy_CloudtrailEventDataStore) validateInterpolationForAttributePa
 	return nil
 }
 
+func (c *jsiiProxy_CloudtrailEventDataStore) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (c *jsiiProxy_CloudtrailEventDataStore) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (c *jsiiProxy_CloudtrailEventDataStore) validateMoveToParameters(moveTarget
 	return nil
 }
 
+func (c *jsiiProxy_CloudtrailEventDataStore) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (c *jsiiProxy_CloudtrailEventDataStore) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -213,6 +229,37 @@ func (c *jsiiProxy_CloudtrailEventDataStore) validatePutAdvancedEventSelectorsPa
 	default:
 		if !_jsii_.IsAnonymousProxy(value) {
 			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*CloudtrailEventDataStoreAdvancedEventSelectors; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (c *jsiiProxy_CloudtrailEventDataStore) validatePutContextKeySelectorsParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*CloudtrailEventDataStoreContextKeySelectors:
+		value := value.(*[]*CloudtrailEventDataStoreContextKeySelectors)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*CloudtrailEventDataStoreContextKeySelectors:
+		value_ := value.([]*CloudtrailEventDataStoreContextKeySelectors)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*CloudtrailEventDataStoreContextKeySelectors; received %#v (a %T)", value, value)
 		}
 	}
 
@@ -486,6 +533,14 @@ func (j *jsiiProxy_CloudtrailEventDataStore) validateSetKmsKeyIdParameters(val *
 func (j *jsiiProxy_CloudtrailEventDataStore) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 		return err
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_CloudtrailEventDataStore) validateSetMaxEventSizeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil

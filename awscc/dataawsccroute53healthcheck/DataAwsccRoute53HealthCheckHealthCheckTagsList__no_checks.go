@@ -4,6 +4,10 @@ package dataawsccroute53healthcheck
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccRoute53HealthCheckHealthCheckTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccRoute53HealthCheckHealthCheckTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

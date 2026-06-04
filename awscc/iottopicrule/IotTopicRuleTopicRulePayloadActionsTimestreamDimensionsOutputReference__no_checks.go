@@ -56,7 +56,7 @@ func (j *jsiiProxy_IotTopicRuleTopicRulePayloadActionsTimestreamDimensionsOutput
 	return nil
 }
 
-func (j *jsiiProxy_IotTopicRuleTopicRulePayloadActionsTimestreamDimensionsOutputReference) validateSetInternalValueParameters(val *IotTopicRuleTopicRulePayloadActionsTimestreamDimensions) error {
+func (j *jsiiProxy_IotTopicRuleTopicRulePayloadActionsTimestreamDimensionsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

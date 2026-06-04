@@ -163,9 +163,25 @@ func (j *jsiiProxy_ConnectTaskTemplateDefaultsIdOutputReference) validateSetComp
 	return nil
 }
 
-func (j *jsiiProxy_ConnectTaskTemplateDefaultsIdOutputReference) validateSetInternalValueParameters(val *ConnectTaskTemplateDefaultsId) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_ConnectTaskTemplateDefaultsIdOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *ConnectTaskTemplateDefaultsId:
+		val := val.(*ConnectTaskTemplateDefaultsId)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case ConnectTaskTemplateDefaultsId:
+		val_ := val.(ConnectTaskTemplateDefaultsId)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *ConnectTaskTemplateDefaultsId; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

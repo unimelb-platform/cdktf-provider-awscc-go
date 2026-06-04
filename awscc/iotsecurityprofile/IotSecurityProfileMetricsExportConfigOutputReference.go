@@ -67,6 +67,8 @@ type IotSecurityProfileMetricsExportConfigOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetMqttTopic()
+	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (i *jsiiProxy_IotSecurityProfileMetricsExportConfigOutputReference) Interpo
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotSecurityProfileMetricsExportConfigOutputReference) ResetMqttTopic() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetMqttTopic",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotSecurityProfileMetricsExportConfigOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArn",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotSecurityProfileMetricsExportConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

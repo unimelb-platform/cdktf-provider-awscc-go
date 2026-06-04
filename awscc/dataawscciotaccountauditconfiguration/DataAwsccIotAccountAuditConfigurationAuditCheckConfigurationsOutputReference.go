@@ -29,6 +29,7 @@ type DataAwsccIotAccountAuditConfigurationAuditCheckConfigurationsOutputReferenc
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	DeviceCertificateAgeCheck() DataAwsccIotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateAgeCheckOutputReference
 	DeviceCertificateExpiringCheck() DataAwsccIotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateExpiringCheckOutputReference
 	DeviceCertificateKeyQualityCheck() DataAwsccIotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateKeyQualityCheckOutputReference
 	DeviceCertificateSharedCheck() DataAwsccIotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateSharedCheckOutputReference
@@ -157,6 +158,16 @@ func (j *jsiiProxy_DataAwsccIotAccountAuditConfigurationAuditCheckConfigurations
 	_jsii_.Get(
 		j,
 		"creationStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotAccountAuditConfigurationAuditCheckConfigurationsOutputReference) DeviceCertificateAgeCheck() DataAwsccIotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateAgeCheckOutputReference {
+	var returns DataAwsccIotAccountAuditConfigurationAuditCheckConfigurationsDeviceCertificateAgeCheckOutputReference
+	_jsii_.Get(
+		j,
+		"deviceCertificateAgeCheck",
 		&returns,
 	)
 	return returns

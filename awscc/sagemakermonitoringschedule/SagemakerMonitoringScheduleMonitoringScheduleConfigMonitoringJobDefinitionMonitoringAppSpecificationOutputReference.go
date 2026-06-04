@@ -36,8 +36,8 @@ type SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionM
 	ImageUri() *string
 	SetImageUri(val *string)
 	ImageUriInput() *string
-	InternalValue() *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringAppSpecification
-	SetInternalValue(val *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringAppSpecification)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	PostAnalyticsProcessorSourceUri() *string
 	SetPostAnalyticsProcessorSourceUri(val *string)
 	PostAnalyticsProcessorSourceUriInput() *string
@@ -78,6 +78,7 @@ type SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionM
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetContainerArguments()
 	ResetContainerEntrypoint()
+	ResetImageUri()
 	ResetPostAnalyticsProcessorSourceUri()
 	ResetRecordPreprocessorSourceUri()
 	// Produce the Token's value at resolution time.
@@ -195,8 +196,8 @@ func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoring
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringAppSpecificationOutputReference) InternalValue() *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringAppSpecification {
-	var returns *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringAppSpecification
+func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringAppSpecificationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -348,7 +349,7 @@ func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoring
 	)
 }
 
-func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringAppSpecificationOutputReference)SetInternalValue(val *SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringAppSpecification) {
+func (j *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringAppSpecificationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -601,6 +602,14 @@ func (s *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoring
 	_jsii_.InvokeVoid(
 		s,
 		"resetContainerEntrypoint",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerMonitoringScheduleMonitoringScheduleConfigMonitoringJobDefinitionMonitoringAppSpecificationOutputReference) ResetImageUri() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetImageUri",
 		nil, // no parameters
 	)
 }

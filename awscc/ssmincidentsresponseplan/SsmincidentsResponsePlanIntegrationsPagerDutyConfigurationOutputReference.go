@@ -33,7 +33,7 @@ type SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationOutputReference i
 	SetName(val *string)
 	NameInput() *string
 	PagerDutyIncidentConfiguration() SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfigurationOutputReference
-	PagerDutyIncidentConfigurationInput() *SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfiguration
+	PagerDutyIncidentConfigurationInput() interface{}
 	SecretId() *string
 	SetSecretId(val *string)
 	SecretIdInput() *string
@@ -70,6 +70,9 @@ type SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationOutputReference i
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutPagerDutyIncidentConfiguration(value *SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfiguration)
+	ResetName()
+	ResetPagerDutyIncidentConfiguration()
+	ResetSecretId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -165,8 +168,8 @@ func (j *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationOut
 	return returns
 }
 
-func (j *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationOutputReference) PagerDutyIncidentConfigurationInput() *SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfiguration {
-	var returns *SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationPagerDutyIncidentConfiguration
+func (j *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationOutputReference) PagerDutyIncidentConfigurationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"pagerDutyIncidentConfigurationInput",
@@ -514,6 +517,30 @@ func (s *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationOut
 		s,
 		"putPagerDutyIncidentConfiguration",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationOutputReference) ResetPagerDutyIncidentConfiguration() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetPagerDutyIncidentConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SsmincidentsResponsePlanIntegrationsPagerDutyConfigurationOutputReference) ResetSecretId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSecretId",
+		nil, // no parameters
 	)
 }
 

@@ -70,6 +70,9 @@ type ConnectUserUserProficienciesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAttributeName()
+	ResetAttributeValue()
+	ResetLevel()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (c *jsiiProxy_ConnectUserUserProficienciesOutputReference) InterpolationFor
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ConnectUserUserProficienciesOutputReference) ResetAttributeName() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAttributeName",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConnectUserUserProficienciesOutputReference) ResetAttributeValue() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAttributeValue",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConnectUserUserProficienciesOutputReference) ResetLevel() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetLevel",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ConnectUserUserProficienciesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

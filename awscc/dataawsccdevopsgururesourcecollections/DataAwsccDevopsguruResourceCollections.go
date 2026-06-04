@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdevopsgururesourcecollections/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/devopsguru_resource_collections awscc_devopsguru_resource_collections}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/devopsguru_resource_collections awscc_devopsguru_resource_collections}.
 type DataAwsccDevopsguruResourceCollections interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccDevopsguruResourceCollections interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccDevopsguruResourceCollections) TerraformResourceType
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/devopsguru_resource_collections awscc_devopsguru_resource_collections} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/devopsguru_resource_collections awscc_devopsguru_resource_collections} Data Source.
 func NewDataAwsccDevopsguruResourceCollections(scope constructs.Construct, id *string, config *DataAwsccDevopsguruResourceCollectionsConfig) DataAwsccDevopsguruResourceCollections {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccDevopsguruResourceCollections(scope constructs.Construct, id *s
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/devopsguru_resource_collections awscc_devopsguru_resource_collections} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/devopsguru_resource_collections awscc_devopsguru_resource_collections} Data Source.
 func NewDataAwsccDevopsguruResourceCollections_Override(d DataAwsccDevopsguruResourceCollections, scope constructs.Construct, id *string, config *DataAwsccDevopsguruResourceCollectionsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccDevopsguruResourceCollections) SynthesizeAttributes(
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDevopsguruResourceCollections) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDevopsguruResourceCollections) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

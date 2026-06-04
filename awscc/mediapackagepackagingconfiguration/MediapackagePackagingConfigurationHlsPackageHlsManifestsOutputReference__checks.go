@@ -202,9 +202,25 @@ func (j *jsiiProxy_MediapackagePackagingConfigurationHlsPackageHlsManifestsOutpu
 	return nil
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfigurationHlsPackageHlsManifestsOutputReference) validateSetInternalValueParameters(val *MediapackagePackagingConfigurationHlsPackageHlsManifests) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_MediapackagePackagingConfigurationHlsPackageHlsManifestsOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *MediapackagePackagingConfigurationHlsPackageHlsManifests:
+		val := val.(*MediapackagePackagingConfigurationHlsPackageHlsManifests)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case MediapackagePackagingConfigurationHlsPackageHlsManifests:
+		val_ := val.(MediapackagePackagingConfigurationHlsPackageHlsManifests)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *MediapackagePackagingConfigurationHlsPackageHlsManifests; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccpinpointinapptemplate/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/pinpoint_in_app_template awscc_pinpoint_in_app_template}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/pinpoint_in_app_template awscc_pinpoint_in_app_template}.
 type DataAwsccPinpointInAppTemplate interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -89,6 +89,10 @@ type DataAwsccPinpointInAppTemplate interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -334,7 +338,7 @@ func (j *jsiiProxy_DataAwsccPinpointInAppTemplate) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/pinpoint_in_app_template awscc_pinpoint_in_app_template} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/pinpoint_in_app_template awscc_pinpoint_in_app_template} Data Source.
 func NewDataAwsccPinpointInAppTemplate(scope constructs.Construct, id *string, config *DataAwsccPinpointInAppTemplateConfig) DataAwsccPinpointInAppTemplate {
 	_init_.Initialize()
 
@@ -352,7 +356,7 @@ func NewDataAwsccPinpointInAppTemplate(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/pinpoint_in_app_template awscc_pinpoint_in_app_template} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/pinpoint_in_app_template awscc_pinpoint_in_app_template} Data Source.
 func NewDataAwsccPinpointInAppTemplate_Override(d DataAwsccPinpointInAppTemplate, scope constructs.Construct, id *string, config *DataAwsccPinpointInAppTemplateConfig) {
 	_init_.Initialize()
 
@@ -719,6 +723,32 @@ func (d *jsiiProxy_DataAwsccPinpointInAppTemplate) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccPinpointInAppTemplate) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccPinpointInAppTemplate) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

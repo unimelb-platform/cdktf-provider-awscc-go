@@ -67,6 +67,8 @@ type KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsersOn
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucket()
+	ResetKey()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationO
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsersOneDriveUserS3PathOutputReference) ResetBucket() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetBucket",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsersOneDriveUserS3PathOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetKey",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationOneDriveConfigurationOneDriveUsersOneDriveUserS3PathOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -26,7 +26,7 @@ type LexBotAliasConversationLogSettingsAudioLogSettingsOutputReference interface
 	// Experimental.
 	CreationStack() *[]*string
 	Destination() LexBotAliasConversationLogSettingsAudioLogSettingsDestinationOutputReference
-	DestinationInput() *LexBotAliasConversationLogSettingsAudioLogSettingsDestination
+	DestinationInput() interface{}
 	Enabled() interface{}
 	SetEnabled(val interface{})
 	EnabledInput() interface{}
@@ -67,6 +67,8 @@ type LexBotAliasConversationLogSettingsAudioLogSettingsOutputReference interface
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDestination(value *LexBotAliasConversationLogSettingsAudioLogSettingsDestination)
+	ResetDestination()
+	ResetEnabled()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsOutputRefer
 	return returns
 }
 
-func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsOutputReference) DestinationInput() *LexBotAliasConversationLogSettingsAudioLogSettingsDestination {
-	var returns *LexBotAliasConversationLogSettingsAudioLogSettingsDestination
+func (j *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsOutputReference) DestinationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"destinationInput",
@@ -480,6 +482,22 @@ func (l *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsOutputRefer
 		l,
 		"putDestination",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsOutputReference) ResetDestination() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetDestination",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotAliasConversationLogSettingsAudioLogSettingsOutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetEnabled",
+		nil, // no parameters
 	)
 }
 

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/eventsarchive/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/events_archive awscc_events_archive}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/events_archive awscc_events_archive}.
 type EventsArchive interface {
 	cdktf.TerraformResource
 	ArchiveName() *string
@@ -47,6 +47,9 @@ type EventsArchive interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
+	KmsKeyIdentifier() *string
+	SetKmsKeyIdentifier(val *string)
+	KmsKeyIdentifierInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -99,23 +102,37 @@ type EventsArchive interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetArchiveName()
 	ResetDescription()
 	ResetEventPattern()
+	ResetKmsKeyIdentifier()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetRetentionDays()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -290,6 +307,26 @@ func (j *jsiiProxy_EventsArchive) Id() *string {
 	return returns
 }
 
+func (j *jsiiProxy_EventsArchive) KmsKeyIdentifier() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kmsKeyIdentifier",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EventsArchive) KmsKeyIdentifierInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kmsKeyIdentifierInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_EventsArchive) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -411,7 +448,7 @@ func (j *jsiiProxy_EventsArchive) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/events_archive awscc_events_archive} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/events_archive awscc_events_archive} Resource.
 func NewEventsArchive(scope constructs.Construct, id *string, config *EventsArchiveConfig) EventsArchive {
 	_init_.Initialize()
 
@@ -429,7 +466,7 @@ func NewEventsArchive(scope constructs.Construct, id *string, config *EventsArch
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/events_archive awscc_events_archive} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/events_archive awscc_events_archive} Resource.
 func NewEventsArchive_Override(e EventsArchive, scope constructs.Construct, id *string, config *EventsArchiveConfig) {
 	_init_.Initialize()
 
@@ -507,6 +544,17 @@ func (j *jsiiProxy_EventsArchive)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_EventsArchive)SetKmsKeyIdentifier(val *string) {
+	if err := j.validateSetKmsKeyIdentifierParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"kmsKeyIdentifier",
 		val,
 	)
 }
@@ -832,6 +880,19 @@ func (e *jsiiProxy_EventsArchive) GetStringMapAttribute(terraformAttribute *stri
 	return returns
 }
 
+func (e *jsiiProxy_EventsArchive) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_EventsArchive) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -859,6 +920,17 @@ func (e *jsiiProxy_EventsArchive) InterpolationForAttribute(terraformAttribute *
 	return returns
 }
 
+func (e *jsiiProxy_EventsArchive) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_EventsArchive) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -867,6 +939,17 @@ func (e *jsiiProxy_EventsArchive) MoveTo(moveTarget *string, index interface{}) 
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_EventsArchive) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -905,6 +988,14 @@ func (e *jsiiProxy_EventsArchive) ResetEventPattern() {
 	)
 }
 
+func (e *jsiiProxy_EventsArchive) ResetKmsKeyIdentifier() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetKmsKeyIdentifier",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_EventsArchive) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		e,
@@ -927,6 +1018,32 @@ func (e *jsiiProxy_EventsArchive) SynthesizeAttributes() *map[string]interface{}
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_EventsArchive) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_EventsArchive) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

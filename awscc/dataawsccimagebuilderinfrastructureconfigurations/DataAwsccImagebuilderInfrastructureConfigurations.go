@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccimagebuilderinfrastructureconfigurations/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/imagebuilder_infrastructure_configurations awscc_imagebuilder_infrastructure_configurations}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/imagebuilder_infrastructure_configurations awscc_imagebuilder_infrastructure_configurations}.
 type DataAwsccImagebuilderInfrastructureConfigurations interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccImagebuilderInfrastructureConfigurations interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccImagebuilderInfrastructureConfigurations) TerraformR
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/imagebuilder_infrastructure_configurations awscc_imagebuilder_infrastructure_configurations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/imagebuilder_infrastructure_configurations awscc_imagebuilder_infrastructure_configurations} Data Source.
 func NewDataAwsccImagebuilderInfrastructureConfigurations(scope constructs.Construct, id *string, config *DataAwsccImagebuilderInfrastructureConfigurationsConfig) DataAwsccImagebuilderInfrastructureConfigurations {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccImagebuilderInfrastructureConfigurations(scope constructs.Const
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/imagebuilder_infrastructure_configurations awscc_imagebuilder_infrastructure_configurations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/imagebuilder_infrastructure_configurations awscc_imagebuilder_infrastructure_configurations} Data Source.
 func NewDataAwsccImagebuilderInfrastructureConfigurations_Override(d DataAwsccImagebuilderInfrastructureConfigurations, scope constructs.Construct, id *string, config *DataAwsccImagebuilderInfrastructureConfigurationsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccImagebuilderInfrastructureConfigurations) Synthesize
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccImagebuilderInfrastructureConfigurations) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccImagebuilderInfrastructureConfigurations) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

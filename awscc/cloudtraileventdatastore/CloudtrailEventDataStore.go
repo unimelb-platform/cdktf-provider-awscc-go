@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/cloudtraileventdatastore/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudtrail_event_data_store awscc_cloudtrail_event_data_store}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudtrail_event_data_store awscc_cloudtrail_event_data_store}.
 type CloudtrailEventDataStore interface {
 	cdktf.TerraformResource
 	AdvancedEventSelectors() CloudtrailEventDataStoreAdvancedEventSelectorsList
@@ -25,6 +25,8 @@ type CloudtrailEventDataStore interface {
 	SetConnection(val interface{})
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
+	ContextKeySelectors() CloudtrailEventDataStoreContextKeySelectorsList
+	ContextKeySelectorsInput() interface{}
 	// Experimental.
 	Count() interface{}
 	// Experimental.
@@ -65,6 +67,9 @@ type CloudtrailEventDataStore interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	MaxEventSize() *string
+	SetMaxEventSize(val *string)
+	MaxEventSizeInput() *string
 	MultiRegionEnabled() interface{}
 	SetMultiRegionEnabled(val interface{})
 	MultiRegionEnabledInput() interface{}
@@ -126,26 +131,39 @@ type CloudtrailEventDataStore interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutAdvancedEventSelectors(value interface{})
+	PutContextKeySelectors(value interface{})
 	PutInsightSelectors(value interface{})
 	PutTags(value interface{})
 	ResetAdvancedEventSelectors()
 	ResetBillingMode()
+	ResetContextKeySelectors()
 	ResetFederationEnabled()
 	ResetFederationRoleArn()
 	ResetIngestionEnabled()
 	ResetInsightsDestination()
 	ResetInsightSelectors()
 	ResetKmsKeyId()
+	ResetMaxEventSize()
 	ResetMultiRegionEnabled()
 	ResetName()
 	ResetOrganizationEnabled()
@@ -156,6 +174,9 @@ type CloudtrailEventDataStore interface {
 	ResetTags()
 	ResetTerminationProtectionEnabled()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -235,6 +256,26 @@ func (j *jsiiProxy_CloudtrailEventDataStore) ConstructNodeMetadata() *map[string
 	_jsii_.Get(
 		j,
 		"constructNodeMetadata",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CloudtrailEventDataStore) ContextKeySelectors() CloudtrailEventDataStoreContextKeySelectorsList {
+	var returns CloudtrailEventDataStoreContextKeySelectorsList
+	_jsii_.Get(
+		j,
+		"contextKeySelectors",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CloudtrailEventDataStore) ContextKeySelectorsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"contextKeySelectorsInput",
 		&returns,
 	)
 	return returns
@@ -445,6 +486,26 @@ func (j *jsiiProxy_CloudtrailEventDataStore) Lifecycle() *cdktf.TerraformResourc
 	_jsii_.Get(
 		j,
 		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CloudtrailEventDataStore) MaxEventSize() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"maxEventSize",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CloudtrailEventDataStore) MaxEventSizeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"maxEventSizeInput",
 		&returns,
 	)
 	return returns
@@ -661,7 +722,7 @@ func (j *jsiiProxy_CloudtrailEventDataStore) UpdatedTimestamp() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudtrail_event_data_store awscc_cloudtrail_event_data_store} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudtrail_event_data_store awscc_cloudtrail_event_data_store} Resource.
 func NewCloudtrailEventDataStore(scope constructs.Construct, id *string, config *CloudtrailEventDataStoreConfig) CloudtrailEventDataStore {
 	_init_.Initialize()
 
@@ -679,7 +740,7 @@ func NewCloudtrailEventDataStore(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudtrail_event_data_store awscc_cloudtrail_event_data_store} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudtrail_event_data_store awscc_cloudtrail_event_data_store} Resource.
 func NewCloudtrailEventDataStore_Override(c CloudtrailEventDataStore, scope constructs.Construct, id *string, config *CloudtrailEventDataStoreConfig) {
 	_init_.Initialize()
 
@@ -801,6 +862,17 @@ func (j *jsiiProxy_CloudtrailEventDataStore)SetLifecycle(val *cdktf.TerraformRes
 	_jsii_.Set(
 		j,
 		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CloudtrailEventDataStore)SetMaxEventSize(val *string) {
+	if err := j.validateSetMaxEventSizeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"maxEventSize",
 		val,
 	)
 }
@@ -1148,6 +1220,19 @@ func (c *jsiiProxy_CloudtrailEventDataStore) GetStringMapAttribute(terraformAttr
 	return returns
 }
 
+func (c *jsiiProxy_CloudtrailEventDataStore) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_CloudtrailEventDataStore) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1175,6 +1260,17 @@ func (c *jsiiProxy_CloudtrailEventDataStore) InterpolationForAttribute(terraform
 	return returns
 }
 
+func (c *jsiiProxy_CloudtrailEventDataStore) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CloudtrailEventDataStore) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1183,6 +1279,17 @@ func (c *jsiiProxy_CloudtrailEventDataStore) MoveTo(moveTarget *string, index in
 		c,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (c *jsiiProxy_CloudtrailEventDataStore) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1204,6 +1311,17 @@ func (c *jsiiProxy_CloudtrailEventDataStore) PutAdvancedEventSelectors(value int
 	_jsii_.InvokeVoid(
 		c,
 		"putAdvancedEventSelectors",
+		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CloudtrailEventDataStore) PutContextKeySelectors(value interface{}) {
+	if err := c.validatePutContextKeySelectorsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putContextKeySelectors",
 		[]interface{}{value},
 	)
 }
@@ -1242,6 +1360,14 @@ func (c *jsiiProxy_CloudtrailEventDataStore) ResetBillingMode() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetBillingMode",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudtrailEventDataStore) ResetContextKeySelectors() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetContextKeySelectors",
 		nil, // no parameters
 	)
 }
@@ -1290,6 +1416,14 @@ func (c *jsiiProxy_CloudtrailEventDataStore) ResetKmsKeyId() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetKmsKeyId",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudtrailEventDataStore) ResetMaxEventSize() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetMaxEventSize",
 		nil, // no parameters
 	)
 }
@@ -1356,6 +1490,32 @@ func (c *jsiiProxy_CloudtrailEventDataStore) SynthesizeAttributes() *map[string]
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CloudtrailEventDataStore) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CloudtrailEventDataStore) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

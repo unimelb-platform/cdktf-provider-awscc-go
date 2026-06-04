@@ -75,6 +75,8 @@ type AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesRedshiftO
 	PutErrorHandlingConfig(value *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesRedshiftErrorHandlingConfig)
 	ResetBucketPrefix()
 	ResetErrorHandlingConfig()
+	ResetIntermediateBucketName()
+	ResetObject()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -565,6 +567,22 @@ func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPrope
 	_jsii_.InvokeVoid(
 		a,
 		"resetErrorHandlingConfig",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesRedshiftOutputReference) ResetIntermediateBucketName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetIntermediateBucketName",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesRedshiftOutputReference) ResetObject() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetObject",
 		nil, // no parameters
 	)
 }

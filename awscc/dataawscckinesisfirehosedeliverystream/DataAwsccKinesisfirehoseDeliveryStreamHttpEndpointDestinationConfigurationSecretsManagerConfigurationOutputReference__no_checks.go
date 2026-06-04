@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawscckinesisfirehosedeliverystream
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference) validateSetInternalValueParameters(val *DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfiguration) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

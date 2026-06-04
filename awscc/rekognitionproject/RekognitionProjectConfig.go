@@ -21,7 +21,7 @@ type RekognitionProjectConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The name of the project.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rekognition_project#project_name RekognitionProject#project_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rekognition_project#project_name RekognitionProject#project_name}
 	ProjectName *string `field:"required" json:"projectName" yaml:"projectName"`
 }
 

@@ -67,6 +67,8 @@ type Ec2CapacityReservationTagSpecificationsTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (e *jsiiProxy_Ec2CapacityReservationTagSpecificationsTagsOutputReference) I
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_Ec2CapacityReservationTagSpecificationsTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2CapacityReservationTagSpecificationsTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_Ec2CapacityReservationTagSpecificationsTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

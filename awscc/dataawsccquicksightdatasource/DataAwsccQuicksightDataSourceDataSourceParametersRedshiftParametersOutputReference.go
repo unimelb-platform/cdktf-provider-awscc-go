@@ -30,6 +30,8 @@ type DataAwsccQuicksightDataSourceDataSourceParametersRedshiftParametersOutputRe
 	// Experimental.
 	Fqn() *string
 	Host() *string
+	IamParameters() DataAwsccQuicksightDataSourceDataSourceParametersRedshiftParametersIamParametersOutputReference
+	IdentityCenterConfiguration() DataAwsccQuicksightDataSourceDataSourceParametersRedshiftParametersIdentityCenterConfigurationOutputReference
 	InternalValue() *DataAwsccQuicksightDataSourceDataSourceParametersRedshiftParameters
 	SetInternalValue(val *DataAwsccQuicksightDataSourceDataSourceParametersRedshiftParameters)
 	Port() *float64
@@ -145,6 +147,26 @@ func (j *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersRedshiftPara
 	_jsii_.Get(
 		j,
 		"host",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersRedshiftParametersOutputReference) IamParameters() DataAwsccQuicksightDataSourceDataSourceParametersRedshiftParametersIamParametersOutputReference {
+	var returns DataAwsccQuicksightDataSourceDataSourceParametersRedshiftParametersIamParametersOutputReference
+	_jsii_.Get(
+		j,
+		"iamParameters",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccQuicksightDataSourceDataSourceParametersRedshiftParametersOutputReference) IdentityCenterConfiguration() DataAwsccQuicksightDataSourceDataSourceParametersRedshiftParametersIdentityCenterConfigurationOutputReference {
+	var returns DataAwsccQuicksightDataSourceDataSourceParametersRedshiftParametersIdentityCenterConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"identityCenterConfiguration",
 		&returns,
 	)
 	return returns

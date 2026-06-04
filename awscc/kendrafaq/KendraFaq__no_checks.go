@@ -56,7 +56,15 @@ func (k *jsiiProxy_KendraFaq) validateInterpolationForAttributeParameters(terraf
 	return nil
 }
 
+func (k *jsiiProxy_KendraFaq) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (k *jsiiProxy_KendraFaq) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (k *jsiiProxy_KendraFaq) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -105,6 +113,10 @@ func (j *jsiiProxy_KendraFaq) validateSetFileFormatParameters(val *string) error
 }
 
 func (j *jsiiProxy_KendraFaq) validateSetIndexIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_KendraFaq) validateSetLanguageCodeParameters(val *string) error {
 	return nil
 }
 

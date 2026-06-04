@@ -67,6 +67,8 @@ type SagemakerAppImageConfigTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (s *jsiiProxy_SagemakerAppImageConfigTagsOutputReference) InterpolationForA
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SagemakerAppImageConfigTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerAppImageConfigTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SagemakerAppImageConfigTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

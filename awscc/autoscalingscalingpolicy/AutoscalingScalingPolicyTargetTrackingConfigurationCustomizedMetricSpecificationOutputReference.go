@@ -34,9 +34,14 @@ type AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecific
 	MetricName() *string
 	SetMetricName(val *string)
 	MetricNameInput() *string
+	Metrics() AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsList
+	MetricsInput() interface{}
 	Namespace() *string
 	SetNamespace(val *string)
 	NamespaceInput() *string
+	Period() *float64
+	SetPeriod(val *float64)
+	PeriodInput() *float64
 	Statistic() *string
 	SetStatistic(val *string)
 	StatisticInput() *string
@@ -76,7 +81,13 @@ type AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecific
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDimensions(value interface{})
+	PutMetrics(value interface{})
 	ResetDimensions()
+	ResetMetricName()
+	ResetMetrics()
+	ResetNamespace()
+	ResetPeriod()
+	ResetStatistic()
 	ResetUnit()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -183,6 +194,26 @@ func (j *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomized
 	return returns
 }
 
+func (j *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) Metrics() AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsList {
+	var returns AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricsList
+	_jsii_.Get(
+		j,
+		"metrics",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) MetricsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"metricsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) Namespace() *string {
 	var returns *string
 	_jsii_.Get(
@@ -198,6 +229,26 @@ func (j *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomized
 	_jsii_.Get(
 		j,
 		"namespaceInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) Period() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"period",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) PeriodInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"periodInput",
 		&returns,
 	)
 	return returns
@@ -342,6 +393,17 @@ func (j *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomized
 	_jsii_.Set(
 		j,
 		"namespace",
+		val,
+	)
+}
+
+func (j *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference)SetPeriod(val *float64) {
+	if err := j.validateSetPeriodParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"period",
 		val,
 	)
 }
@@ -587,10 +649,61 @@ func (a *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomized
 	)
 }
 
+func (a *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) PutMetrics(value interface{}) {
+	if err := a.validatePutMetricsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putMetrics",
+		[]interface{}{value},
+	)
+}
+
 func (a *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) ResetDimensions() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetDimensions",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) ResetMetricName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetMetricName",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) ResetMetrics() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetMetrics",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) ResetNamespace() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetNamespace",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) ResetPeriod() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetPeriod",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingScalingPolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutputReference) ResetStatistic() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetStatistic",
 		nil, // no parameters
 	)
 }

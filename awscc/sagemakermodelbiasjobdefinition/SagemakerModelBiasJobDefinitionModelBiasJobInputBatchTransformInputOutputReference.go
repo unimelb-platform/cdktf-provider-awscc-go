@@ -29,7 +29,7 @@ type SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputOutputRe
 	SetDataCapturedDestinationS3Uri(val *string)
 	DataCapturedDestinationS3UriInput() *string
 	DatasetFormat() SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputDatasetFormatOutputReference
-	DatasetFormatInput() *SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputDatasetFormat
+	DatasetFormatInput() interface{}
 	EndTimeOffset() *string
 	SetEndTimeOffset(val *string)
 	EndTimeOffsetInput() *string
@@ -94,9 +94,12 @@ type SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputOutputRe
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDatasetFormat(value *SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputDatasetFormat)
+	ResetDataCapturedDestinationS3Uri()
+	ResetDatasetFormat()
 	ResetEndTimeOffset()
 	ResetFeaturesAttribute()
 	ResetInferenceAttribute()
+	ResetLocalPath()
 	ResetProbabilityAttribute()
 	ResetProbabilityThresholdAttribute()
 	ResetS3DataDistributionType()
@@ -177,8 +180,8 @@ func (j *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransfor
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputOutputReference) DatasetFormatInput() *SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputDatasetFormat {
-	var returns *SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputDatasetFormat
+func (j *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputOutputReference) DatasetFormatInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"datasetFormatInput",
@@ -797,6 +800,22 @@ func (s *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransfor
 	)
 }
 
+func (s *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputOutputReference) ResetDataCapturedDestinationS3Uri() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDataCapturedDestinationS3Uri",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputOutputReference) ResetDatasetFormat() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDatasetFormat",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputOutputReference) ResetEndTimeOffset() {
 	_jsii_.InvokeVoid(
 		s,
@@ -817,6 +836,14 @@ func (s *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransfor
 	_jsii_.InvokeVoid(
 		s,
 		"resetInferenceAttribute",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelBiasJobDefinitionModelBiasJobInputBatchTransformInputOutputReference) ResetLocalPath() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetLocalPath",
 		nil, // no parameters
 	)
 }

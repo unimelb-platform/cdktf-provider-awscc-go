@@ -56,11 +56,23 @@ func (i *jsiiProxy_IvsChannel) validateInterpolationForAttributeParameters(terra
 	return nil
 }
 
+func (i *jsiiProxy_IvsChannel) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IvsChannel) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (i *jsiiProxy_IvsChannel) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IvsChannel) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (i *jsiiProxy_IvsChannel) validatePutMultitrackInputConfigurationParameters(value *IvsChannelMultitrackInputConfiguration) error {
 	return nil
 }
 
@@ -89,6 +101,10 @@ func (j *jsiiProxy_IvsChannel) validateSetAuthorizedParameters(val interface{}) 
 }
 
 func (j *jsiiProxy_IvsChannel) validateSetConnectionParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_IvsChannel) validateSetContainerFormatParameters(val *string) error {
 	return nil
 }
 

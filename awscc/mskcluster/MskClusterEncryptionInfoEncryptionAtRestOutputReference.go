@@ -64,6 +64,7 @@ type MskClusterEncryptionInfoEncryptionAtRestOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDataVolumeKmsKeyId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (m *jsiiProxy_MskClusterEncryptionInfoEncryptionAtRestOutputReference) Inte
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_MskClusterEncryptionInfoEncryptionAtRestOutputReference) ResetDataVolumeKmsKeyId() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetDataVolumeKmsKeyId",
+		nil, // no parameters
+	)
 }
 
 func (m *jsiiProxy_MskClusterEncryptionInfoEncryptionAtRestOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

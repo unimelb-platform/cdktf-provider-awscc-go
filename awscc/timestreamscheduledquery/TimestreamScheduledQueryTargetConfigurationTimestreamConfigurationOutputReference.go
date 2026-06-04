@@ -32,8 +32,8 @@ type TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationOutputRef
 	DimensionMappingsInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *TimestreamScheduledQueryTargetConfigurationTimestreamConfiguration
-	SetInternalValue(val *TimestreamScheduledQueryTargetConfigurationTimestreamConfiguration)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	MeasureNameColumn() *string
 	SetMeasureNameColumn(val *string)
 	MeasureNameColumnInput() *string
@@ -82,9 +82,13 @@ type TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationOutputRef
 	PutDimensionMappings(value interface{})
 	PutMixedMeasureMappings(value interface{})
 	PutMultiMeasureMappings(value *TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationMultiMeasureMappings)
+	ResetDatabaseName()
+	ResetDimensionMappings()
 	ResetMeasureNameColumn()
 	ResetMixedMeasureMappings()
 	ResetMultiMeasureMappings()
+	ResetTableName()
+	ResetTimeColumn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -180,8 +184,8 @@ func (j *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigur
 	return returns
 }
 
-func (j *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationOutputReference) InternalValue() *TimestreamScheduledQueryTargetConfigurationTimestreamConfiguration {
-	var returns *TimestreamScheduledQueryTargetConfigurationTimestreamConfiguration
+func (j *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -371,7 +375,7 @@ func (j *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigur
 	)
 }
 
-func (j *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationOutputReference)SetInternalValue(val *TimestreamScheduledQueryTargetConfigurationTimestreamConfiguration) {
+func (j *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -656,6 +660,22 @@ func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigur
 	)
 }
 
+func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationOutputReference) ResetDatabaseName() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetDatabaseName",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationOutputReference) ResetDimensionMappings() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetDimensionMappings",
+		nil, // no parameters
+	)
+}
+
 func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationOutputReference) ResetMeasureNameColumn() {
 	_jsii_.InvokeVoid(
 		t,
@@ -676,6 +696,22 @@ func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigur
 	_jsii_.InvokeVoid(
 		t,
 		"resetMultiMeasureMappings",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationOutputReference) ResetTableName() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetTableName",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TimestreamScheduledQueryTargetConfigurationTimestreamConfigurationOutputReference) ResetTimeColumn() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetTimeColumn",
 		nil, // no parameters
 	)
 }

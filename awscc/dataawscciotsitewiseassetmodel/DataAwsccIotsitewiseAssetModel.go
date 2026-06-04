@@ -9,16 +9,18 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciotsitewiseassetmodel/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotsitewise_asset_model awscc_iotsitewise_asset_model}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotsitewise_asset_model awscc_iotsitewise_asset_model}.
 type DataAwsccIotsitewiseAssetModel interface {
 	cdktf.TerraformDataSource
 	AssetModelArn() *string
 	AssetModelCompositeModels() DataAwsccIotsitewiseAssetModelAssetModelCompositeModelsList
 	AssetModelDescription() *string
+	AssetModelExternalId() *string
 	AssetModelHierarchies() DataAwsccIotsitewiseAssetModelAssetModelHierarchiesList
 	AssetModelId() *string
 	AssetModelName() *string
 	AssetModelProperties() DataAwsccIotsitewiseAssetModelAssetModelPropertiesList
+	AssetModelType() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -90,6 +92,10 @@ type DataAwsccIotsitewiseAssetModel interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -134,6 +140,16 @@ func (j *jsiiProxy_DataAwsccIotsitewiseAssetModel) AssetModelDescription() *stri
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccIotsitewiseAssetModel) AssetModelExternalId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"assetModelExternalId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccIotsitewiseAssetModel) AssetModelHierarchies() DataAwsccIotsitewiseAssetModelAssetModelHierarchiesList {
 	var returns DataAwsccIotsitewiseAssetModelAssetModelHierarchiesList
 	_jsii_.Get(
@@ -169,6 +185,16 @@ func (j *jsiiProxy_DataAwsccIotsitewiseAssetModel) AssetModelProperties() DataAw
 	_jsii_.Get(
 		j,
 		"assetModelProperties",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotsitewiseAssetModel) AssetModelType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"assetModelType",
 		&returns,
 	)
 	return returns
@@ -345,7 +371,7 @@ func (j *jsiiProxy_DataAwsccIotsitewiseAssetModel) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotsitewise_asset_model awscc_iotsitewise_asset_model} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotsitewise_asset_model awscc_iotsitewise_asset_model} Data Source.
 func NewDataAwsccIotsitewiseAssetModel(scope constructs.Construct, id *string, config *DataAwsccIotsitewiseAssetModelConfig) DataAwsccIotsitewiseAssetModel {
 	_init_.Initialize()
 
@@ -363,7 +389,7 @@ func NewDataAwsccIotsitewiseAssetModel(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iotsitewise_asset_model awscc_iotsitewise_asset_model} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iotsitewise_asset_model awscc_iotsitewise_asset_model} Data Source.
 func NewDataAwsccIotsitewiseAssetModel_Override(d DataAwsccIotsitewiseAssetModel, scope constructs.Construct, id *string, config *DataAwsccIotsitewiseAssetModelConfig) {
 	_init_.Initialize()
 
@@ -730,6 +756,32 @@ func (d *jsiiProxy_DataAwsccIotsitewiseAssetModel) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotsitewiseAssetModel) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotsitewiseAssetModel) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

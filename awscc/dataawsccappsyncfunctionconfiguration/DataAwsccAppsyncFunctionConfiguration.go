@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccappsyncfunctionconfiguration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appsync_function_configuration awscc_appsync_function_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appsync_function_configuration awscc_appsync_function_configuration}.
 type DataAwsccAppsyncFunctionConfiguration interface {
 	cdktf.TerraformDataSource
 	ApiId() *string
@@ -98,6 +98,10 @@ type DataAwsccAppsyncFunctionConfiguration interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -433,7 +437,7 @@ func (j *jsiiProxy_DataAwsccAppsyncFunctionConfiguration) TerraformResourceType(
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appsync_function_configuration awscc_appsync_function_configuration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appsync_function_configuration awscc_appsync_function_configuration} Data Source.
 func NewDataAwsccAppsyncFunctionConfiguration(scope constructs.Construct, id *string, config *DataAwsccAppsyncFunctionConfigurationConfig) DataAwsccAppsyncFunctionConfiguration {
 	_init_.Initialize()
 
@@ -451,7 +455,7 @@ func NewDataAwsccAppsyncFunctionConfiguration(scope constructs.Construct, id *st
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/appsync_function_configuration awscc_appsync_function_configuration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/appsync_function_configuration awscc_appsync_function_configuration} Data Source.
 func NewDataAwsccAppsyncFunctionConfiguration_Override(d DataAwsccAppsyncFunctionConfiguration, scope constructs.Construct, id *string, config *DataAwsccAppsyncFunctionConfigurationConfig) {
 	_init_.Initialize()
 
@@ -818,6 +822,32 @@ func (d *jsiiProxy_DataAwsccAppsyncFunctionConfiguration) SynthesizeAttributes()
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppsyncFunctionConfiguration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAppsyncFunctionConfiguration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

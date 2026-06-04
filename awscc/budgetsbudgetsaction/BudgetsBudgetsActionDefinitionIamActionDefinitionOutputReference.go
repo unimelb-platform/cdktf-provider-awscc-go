@@ -74,6 +74,7 @@ type BudgetsBudgetsActionDefinitionIamActionDefinitionOutputReference interface 
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetGroups()
+	ResetPolicyArn()
 	ResetRoles()
 	ResetUsers()
 	// Produce the Token's value at resolution time.
@@ -558,6 +559,14 @@ func (b *jsiiProxy_BudgetsBudgetsActionDefinitionIamActionDefinitionOutputRefere
 	_jsii_.InvokeVoid(
 		b,
 		"resetGroups",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BudgetsBudgetsActionDefinitionIamActionDefinitionOutputReference) ResetPolicyArn() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetPolicyArn",
 		nil, // no parameters
 	)
 }

@@ -90,6 +90,37 @@ func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesV
 	return nil
 }
 
+func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference) validatePutPropertyPathParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValuePropertyPath:
+		value := value.(*[]*IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValuePropertyPath)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValuePropertyPath:
+		value_ := value.([]*IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValuePropertyPath)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValuePropertyPath; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
 func (i *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	if _context == nil {
 		return fmt.Errorf("parameter _context is required, but nil was provided")
@@ -163,6 +194,22 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesV
 	return nil
 }
 
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference) validateSetHierarchyExternalIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference) validateSetHierarchyIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference) validateSetHierarchyLogicalIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -171,9 +218,41 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesV
 	return nil
 }
 
-func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference) validateSetInternalValueParameters(val *IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValue) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValue:
+		val := val.(*IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValue)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValue:
+		val_ := val.(IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValue)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValue; received %#v (a %T)", val, val)
+		}
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference) validateSetPropertyExternalIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelPropertiesTypeMetricVariablesValueOutputReference) validateSetPropertyIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil

@@ -29,8 +29,8 @@ type MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProviderOutpu
 	EncryptionContractConfigurationInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProvider
-	SetInternalValue(val *MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProvider)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	RoleArn() *string
 	SetRoleArn(val *string)
 	RoleArnInput() *string
@@ -74,6 +74,9 @@ type MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProviderOutpu
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutEncryptionContractConfiguration(value *MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProviderEncryptionContractConfiguration)
 	ResetEncryptionContractConfiguration()
+	ResetRoleArn()
+	ResetSystemIds()
+	ResetUrl()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -149,8 +152,8 @@ func (j *jsiiProxy_MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKe
 	return returns
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProviderOutputReference) InternalValue() *MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProvider {
-	var returns *MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProvider
+func (j *jsiiProxy_MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProviderOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -289,7 +292,7 @@ func (j *jsiiProxy_MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKe
 	)
 }
 
-func (j *jsiiProxy_MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProviderOutputReference)SetInternalValue(val *MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProvider) {
+func (j *jsiiProxy_MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProviderOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -556,6 +559,30 @@ func (m *jsiiProxy_MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKe
 	_jsii_.InvokeVoid(
 		m,
 		"resetEncryptionContractConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProviderOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProviderOutputReference) ResetSystemIds() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetSystemIds",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MediapackagePackagingConfigurationHlsPackageEncryptionSpekeKeyProviderOutputReference) ResetUrl() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetUrl",
 		nil, // no parameters
 	)
 }

@@ -56,7 +56,15 @@ func (w *jsiiProxy_WorkspacesConnectionAlias) validateInterpolationForAttributeP
 	return nil
 }
 
+func (w *jsiiProxy_WorkspacesConnectionAlias) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (w *jsiiProxy_WorkspacesConnectionAlias) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (w *jsiiProxy_WorkspacesConnectionAlias) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

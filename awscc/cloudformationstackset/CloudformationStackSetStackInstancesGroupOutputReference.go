@@ -26,7 +26,7 @@ type CloudformationStackSetStackInstancesGroupOutputReference interface {
 	// Experimental.
 	CreationStack() *[]*string
 	DeploymentTargets() CloudformationStackSetStackInstancesGroupDeploymentTargetsOutputReference
-	DeploymentTargetsInput() *CloudformationStackSetStackInstancesGroupDeploymentTargets
+	DeploymentTargetsInput() interface{}
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -70,7 +70,9 @@ type CloudformationStackSetStackInstancesGroupOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDeploymentTargets(value *CloudformationStackSetStackInstancesGroupDeploymentTargets)
 	PutParameterOverrides(value interface{})
+	ResetDeploymentTargets()
 	ResetParameterOverrides()
+	ResetRegions()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -126,8 +128,8 @@ func (j *jsiiProxy_CloudformationStackSetStackInstancesGroupOutputReference) Dep
 	return returns
 }
 
-func (j *jsiiProxy_CloudformationStackSetStackInstancesGroupOutputReference) DeploymentTargetsInput() *CloudformationStackSetStackInstancesGroupDeploymentTargets {
-	var returns *CloudformationStackSetStackInstancesGroupDeploymentTargets
+func (j *jsiiProxy_CloudformationStackSetStackInstancesGroupOutputReference) DeploymentTargetsInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"deploymentTargetsInput",
@@ -518,10 +520,26 @@ func (c *jsiiProxy_CloudformationStackSetStackInstancesGroupOutputReference) Put
 	)
 }
 
+func (c *jsiiProxy_CloudformationStackSetStackInstancesGroupOutputReference) ResetDeploymentTargets() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetDeploymentTargets",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CloudformationStackSetStackInstancesGroupOutputReference) ResetParameterOverrides() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetParameterOverrides",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudformationStackSetStackInstancesGroupOutputReference) ResetRegions() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetRegions",
 		nil, // no parameters
 	)
 }

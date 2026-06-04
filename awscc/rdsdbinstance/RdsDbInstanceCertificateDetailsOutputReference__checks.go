@@ -163,25 +163,9 @@ func (j *jsiiProxy_RdsDbInstanceCertificateDetailsOutputReference) validateSetCo
 	return nil
 }
 
-func (j *jsiiProxy_RdsDbInstanceCertificateDetailsOutputReference) validateSetInternalValueParameters(val interface{}) error {
-	switch val.(type) {
-	case cdktf.IResolvable:
-		// ok
-	case *RdsDbInstanceCertificateDetails:
-		val := val.(*RdsDbInstanceCertificateDetails)
-		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-			return err
-		}
-	case RdsDbInstanceCertificateDetails:
-		val_ := val.(RdsDbInstanceCertificateDetails)
-		val := &val_
-		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-			return err
-		}
-	default:
-		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *RdsDbInstanceCertificateDetails; received %#v (a %T)", val, val)
-		}
+func (j *jsiiProxy_RdsDbInstanceCertificateDetailsOutputReference) validateSetInternalValueParameters(val *RdsDbInstanceCertificateDetails) error {
+	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+		return err
 	}
 
 	return nil

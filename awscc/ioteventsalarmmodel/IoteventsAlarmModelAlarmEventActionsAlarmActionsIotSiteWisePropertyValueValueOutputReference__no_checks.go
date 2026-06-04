@@ -68,7 +68,7 @@ func (j *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePr
 	return nil
 }
 
-func (j *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueValueOutputReference) validateSetInternalValueParameters(val *IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueValue) error {
+func (j *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueValueOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

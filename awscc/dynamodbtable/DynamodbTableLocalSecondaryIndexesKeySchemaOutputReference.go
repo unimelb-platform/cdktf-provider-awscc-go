@@ -30,8 +30,8 @@ type DynamodbTableLocalSecondaryIndexesKeySchemaOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DynamodbTableLocalSecondaryIndexesKeySchema
-	SetInternalValue(val *DynamodbTableLocalSecondaryIndexesKeySchema)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	KeyType() *string
 	SetKeyType(val *string)
 	KeyTypeInput() *string
@@ -67,6 +67,8 @@ type DynamodbTableLocalSecondaryIndexesKeySchemaOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAttributeName()
+	ResetKeyType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -142,8 +144,8 @@ func (j *jsiiProxy_DynamodbTableLocalSecondaryIndexesKeySchemaOutputReference) F
 	return returns
 }
 
-func (j *jsiiProxy_DynamodbTableLocalSecondaryIndexesKeySchemaOutputReference) InternalValue() *DynamodbTableLocalSecondaryIndexesKeySchema {
-	var returns *DynamodbTableLocalSecondaryIndexesKeySchema
+func (j *jsiiProxy_DynamodbTableLocalSecondaryIndexesKeySchemaOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -253,7 +255,7 @@ func (j *jsiiProxy_DynamodbTableLocalSecondaryIndexesKeySchemaOutputReference)Se
 	)
 }
 
-func (j *jsiiProxy_DynamodbTableLocalSecondaryIndexesKeySchemaOutputReference)SetInternalValue(val *DynamodbTableLocalSecondaryIndexesKeySchema) {
+func (j *jsiiProxy_DynamodbTableLocalSecondaryIndexesKeySchemaOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -481,6 +483,22 @@ func (d *jsiiProxy_DynamodbTableLocalSecondaryIndexesKeySchemaOutputReference) I
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DynamodbTableLocalSecondaryIndexesKeySchemaOutputReference) ResetAttributeName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetAttributeName",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamodbTableLocalSecondaryIndexesKeySchemaOutputReference) ResetKeyType() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetKeyType",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DynamodbTableLocalSecondaryIndexesKeySchemaOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

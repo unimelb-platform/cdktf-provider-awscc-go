@@ -42,7 +42,7 @@ type IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSi
 	SetPropertyId(val *string)
 	PropertyIdInput() *string
 	PropertyValue() IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSiteWisePropertyValueOutputReference
-	PropertyValueInput() *IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSiteWisePropertyValue
+	PropertyValueInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -80,6 +80,7 @@ type IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSi
 	ResetEntryId()
 	ResetPropertyAlias()
 	ResetPropertyId()
+	ResetPropertyValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -235,8 +236,8 @@ func (j *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEven
 	return returns
 }
 
-func (j *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSiteWiseOutputReference) PropertyValueInput() *IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSiteWisePropertyValue {
-	var returns *IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSiteWisePropertyValue
+func (j *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSiteWiseOutputReference) PropertyValueInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"propertyValueInput",
@@ -617,6 +618,14 @@ func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEven
 	_jsii_.InvokeVoid(
 		i,
 		"resetPropertyId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnExitEventsActionsIotSiteWiseOutputReference) ResetPropertyValue() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetPropertyValue",
 		nil, // no parameters
 	)
 }

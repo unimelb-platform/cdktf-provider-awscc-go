@@ -27,8 +27,8 @@ type SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersValueOutputRef
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersValue
-	SetInternalValue(val *SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersValue)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -120,8 +120,8 @@ func (j *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationDynamicParameters
 	return returns
 }
 
-func (j *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersValueOutputReference) InternalValue() *SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersValue {
-	var returns *SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersValue
+func (j *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersValueOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -220,7 +220,7 @@ func (j *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationDynamicParameters
 	)
 }
 
-func (j *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersValueOutputReference)SetInternalValue(val *SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersValue) {
+func (j *jsiiProxy_SsmincidentsResponsePlanActionsSsmAutomationDynamicParametersValueOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

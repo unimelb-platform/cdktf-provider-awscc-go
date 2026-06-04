@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccrefactorspacesservice/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/refactorspaces_service awscc_refactorspaces_service}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/refactorspaces_service awscc_refactorspaces_service}.
 type DataAwsccRefactorspacesService interface {
 	cdktf.TerraformDataSource
 	ApplicationIdentifier() *string
@@ -93,6 +93,10 @@ type DataAwsccRefactorspacesService interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -378,7 +382,7 @@ func (j *jsiiProxy_DataAwsccRefactorspacesService) VpcId() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/refactorspaces_service awscc_refactorspaces_service} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/refactorspaces_service awscc_refactorspaces_service} Data Source.
 func NewDataAwsccRefactorspacesService(scope constructs.Construct, id *string, config *DataAwsccRefactorspacesServiceConfig) DataAwsccRefactorspacesService {
 	_init_.Initialize()
 
@@ -396,7 +400,7 @@ func NewDataAwsccRefactorspacesService(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/refactorspaces_service awscc_refactorspaces_service} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/refactorspaces_service awscc_refactorspaces_service} Data Source.
 func NewDataAwsccRefactorspacesService_Override(d DataAwsccRefactorspacesService, scope constructs.Construct, id *string, config *DataAwsccRefactorspacesServiceConfig) {
 	_init_.Initialize()
 
@@ -763,6 +767,32 @@ func (d *jsiiProxy_DataAwsccRefactorspacesService) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRefactorspacesService) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRefactorspacesService) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

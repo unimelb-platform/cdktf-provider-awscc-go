@@ -73,6 +73,7 @@ type KendraDataSourceDataSourceConfigurationSalesforceConfigurationChatterFeedCo
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutFieldMappings(value interface{})
+	ResetDocumentDataFieldName()
 	ResetDocumentTitleFieldName()
 	ResetFieldMappings()
 	ResetIncludeFilterTypes()
@@ -551,6 +552,14 @@ func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSalesforceConfiguratio
 		k,
 		"putFieldMappings",
 		[]interface{}{value},
+	)
+}
+
+func (k *jsiiProxy_KendraDataSourceDataSourceConfigurationSalesforceConfigurationChatterFeedConfigurationOutputReference) ResetDocumentDataFieldName() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetDocumentDataFieldName",
+		nil, // no parameters
 	)
 }
 

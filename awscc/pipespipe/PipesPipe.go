@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/pipespipe/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/pipes_pipe awscc_pipes_pipe}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/pipes_pipe awscc_pipes_pipe}.
 type PipesPipe interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -51,6 +51,9 @@ type PipesPipe interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
+	KmsKeyIdentifier() *string
+	SetKmsKeyIdentifier(val *string)
+	KmsKeyIdentifierInput() *string
 	LastModifiedTime() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
@@ -120,12 +123,22 @@ type PipesPipe interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -137,6 +150,7 @@ type PipesPipe interface {
 	ResetDesiredState()
 	ResetEnrichment()
 	ResetEnrichmentParameters()
+	ResetKmsKeyIdentifier()
 	ResetLogConfiguration()
 	ResetName()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -146,6 +160,9 @@ type PipesPipe interface {
 	ResetTags()
 	ResetTargetParameters()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -355,6 +372,26 @@ func (j *jsiiProxy_PipesPipe) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_PipesPipe) KmsKeyIdentifier() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kmsKeyIdentifier",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_PipesPipe) KmsKeyIdentifierInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kmsKeyIdentifierInput",
 		&returns,
 	)
 	return returns
@@ -621,7 +658,7 @@ func (j *jsiiProxy_PipesPipe) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/pipes_pipe awscc_pipes_pipe} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/pipes_pipe awscc_pipes_pipe} Resource.
 func NewPipesPipe(scope constructs.Construct, id *string, config *PipesPipeConfig) PipesPipe {
 	_init_.Initialize()
 
@@ -639,7 +676,7 @@ func NewPipesPipe(scope constructs.Construct, id *string, config *PipesPipeConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/pipes_pipe awscc_pipes_pipe} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/pipes_pipe awscc_pipes_pipe} Resource.
 func NewPipesPipe_Override(p PipesPipe, scope constructs.Construct, id *string, config *PipesPipeConfig) {
 	_init_.Initialize()
 
@@ -717,6 +754,17 @@ func (j *jsiiProxy_PipesPipe)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_PipesPipe)SetKmsKeyIdentifier(val *string) {
+	if err := j.validateSetKmsKeyIdentifierParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"kmsKeyIdentifier",
 		val,
 	)
 }
@@ -1075,6 +1123,19 @@ func (p *jsiiProxy_PipesPipe) GetStringMapAttribute(terraformAttribute *string) 
 	return returns
 }
 
+func (p *jsiiProxy_PipesPipe) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		p,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (p *jsiiProxy_PipesPipe) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := p.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1102,6 +1163,17 @@ func (p *jsiiProxy_PipesPipe) InterpolationForAttribute(terraformAttribute *stri
 	return returns
 }
 
+func (p *jsiiProxy_PipesPipe) MoveFromId(id *string) {
+	if err := p.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		p,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (p *jsiiProxy_PipesPipe) MoveTo(moveTarget *string, index interface{}) {
 	if err := p.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1110,6 +1182,17 @@ func (p *jsiiProxy_PipesPipe) MoveTo(moveTarget *string, index interface{}) {
 		p,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (p *jsiiProxy_PipesPipe) MoveToId(id *string) {
+	if err := p.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		p,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1200,6 +1283,14 @@ func (p *jsiiProxy_PipesPipe) ResetEnrichmentParameters() {
 	)
 }
 
+func (p *jsiiProxy_PipesPipe) ResetKmsKeyIdentifier() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetKmsKeyIdentifier",
+		nil, // no parameters
+	)
+}
+
 func (p *jsiiProxy_PipesPipe) ResetLogConfiguration() {
 	_jsii_.InvokeVoid(
 		p,
@@ -1254,6 +1345,32 @@ func (p *jsiiProxy_PipesPipe) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		p,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (p *jsiiProxy_PipesPipe) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		p,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (p *jsiiProxy_PipesPipe) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		p,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -1,0 +1,6 @@
+package dataawscccodeartifactpackagegroup
+
+
+type DataAwsccCodeartifactPackageGroupOriginConfigurationRestrictionsPublish struct {
+}
+

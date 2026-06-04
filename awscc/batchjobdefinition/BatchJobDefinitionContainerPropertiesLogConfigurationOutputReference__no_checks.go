@@ -68,7 +68,7 @@ func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesLogConfigurationOutputRe
 	return nil
 }
 
-func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesLogConfigurationOutputReference) validateSetOptionsParameters(val *string) error {
+func (j *jsiiProxy_BatchJobDefinitionContainerPropertiesLogConfigurationOutputReference) validateSetOptionsParameters(val *map[string]*string) error {
 	return nil
 }
 

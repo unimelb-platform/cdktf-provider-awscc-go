@@ -4,6 +4,10 @@ package dataawsccec2launchtemplate
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccEc2LaunchTemplateLaunchTemplateDataNetworkInterfacesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccEc2LaunchTemplateLaunchTemplateDataNetworkInterfacesList) validateGetParameters(index *float64) error {
 	return nil
 }

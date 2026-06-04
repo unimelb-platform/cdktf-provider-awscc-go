@@ -14,6 +14,8 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationOutputReference interf
 	ApplicationCodeConfigurationInput() interface{}
 	ApplicationSnapshotConfiguration() Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationSnapshotConfigurationOutputReference
 	ApplicationSnapshotConfigurationInput() interface{}
+	ApplicationSystemRollbackConfiguration() Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationSystemRollbackConfigurationOutputReference
+	ApplicationSystemRollbackConfigurationInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -77,6 +79,7 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationOutputReference interf
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutApplicationCodeConfiguration(value *Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfiguration)
 	PutApplicationSnapshotConfiguration(value *Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationSnapshotConfiguration)
+	PutApplicationSystemRollbackConfiguration(value *Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationSystemRollbackConfiguration)
 	PutEnvironmentProperties(value *Kinesisanalyticsv2ApplicationApplicationConfigurationEnvironmentProperties)
 	PutFlinkApplicationConfiguration(value *Kinesisanalyticsv2ApplicationApplicationConfigurationFlinkApplicationConfiguration)
 	PutSqlApplicationConfiguration(value *Kinesisanalyticsv2ApplicationApplicationConfigurationSqlApplicationConfiguration)
@@ -84,6 +87,7 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationOutputReference interf
 	PutZeppelinApplicationConfiguration(value *Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfiguration)
 	ResetApplicationCodeConfiguration()
 	ResetApplicationSnapshotConfiguration()
+	ResetApplicationSystemRollbackConfiguration()
 	ResetEnvironmentProperties()
 	ResetFlinkApplicationConfiguration()
 	ResetSqlApplicationConfiguration()
@@ -139,6 +143,26 @@ func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationOutputRe
 	_jsii_.Get(
 		j,
 		"applicationSnapshotConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationOutputReference) ApplicationSystemRollbackConfiguration() Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationSystemRollbackConfigurationOutputReference {
+	var returns Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationSystemRollbackConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"applicationSystemRollbackConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationOutputReference) ApplicationSystemRollbackConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"applicationSystemRollbackConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -605,6 +629,17 @@ func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationOutputRe
 	)
 }
 
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationOutputReference) PutApplicationSystemRollbackConfiguration(value *Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationSystemRollbackConfiguration) {
+	if err := k.validatePutApplicationSystemRollbackConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		k,
+		"putApplicationSystemRollbackConfiguration",
+		[]interface{}{value},
+	)
+}
+
 func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationOutputReference) PutEnvironmentProperties(value *Kinesisanalyticsv2ApplicationApplicationConfigurationEnvironmentProperties) {
 	if err := k.validatePutEnvironmentPropertiesParameters(value); err != nil {
 		panic(err)
@@ -672,6 +707,14 @@ func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationOutputRe
 	_jsii_.InvokeVoid(
 		k,
 		"resetApplicationSnapshotConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationOutputReference) ResetApplicationSystemRollbackConfiguration() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetApplicationSystemRollbackConfiguration",
 		nil, // no parameters
 	)
 }

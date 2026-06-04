@@ -56,7 +56,7 @@ func (j *jsiiProxy_ApplicationinsightsApplicationLogPatternSetsLogPatternsOutput
 	return nil
 }
 
-func (j *jsiiProxy_ApplicationinsightsApplicationLogPatternSetsLogPatternsOutputReference) validateSetInternalValueParameters(val *ApplicationinsightsApplicationLogPatternSetsLogPatterns) error {
+func (j *jsiiProxy_ApplicationinsightsApplicationLogPatternSetsLogPatternsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

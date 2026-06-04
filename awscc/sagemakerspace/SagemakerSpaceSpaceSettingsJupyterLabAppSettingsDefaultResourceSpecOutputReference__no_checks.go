@@ -64,6 +64,10 @@ func (j *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsDefaultResour
 	return nil
 }
 
+func (j *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecOutputReference) validateSetLifecycleConfigArnParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsDefaultResourceSpecOutputReference) validateSetSageMakerImageArnParameters(val *string) error {
 	return nil
 }

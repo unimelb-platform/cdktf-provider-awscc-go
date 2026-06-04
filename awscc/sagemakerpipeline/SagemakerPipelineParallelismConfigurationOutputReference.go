@@ -64,6 +64,7 @@ type SagemakerPipelineParallelismConfigurationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetMaxParallelExecutionSteps()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_SagemakerPipelineParallelismConfigurationOutputReference) Int
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SagemakerPipelineParallelismConfigurationOutputReference) ResetMaxParallelExecutionSteps() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetMaxParallelExecutionSteps",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SagemakerPipelineParallelismConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

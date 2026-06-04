@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/autoscalingscalingpolicy/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/autoscaling_scaling_policy awscc_autoscaling_scaling_policy}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/autoscaling_scaling_policy awscc_autoscaling_scaling_policy}.
 type AutoscalingScalingPolicy interface {
 	cdktf.TerraformResource
 	AdjustmentType() *string
@@ -115,12 +115,22 @@ type AutoscalingScalingPolicy interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -141,6 +151,9 @@ type AutoscalingScalingPolicy interface {
 	ResetStepAdjustments()
 	ResetTargetTrackingConfiguration()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -566,7 +579,7 @@ func (j *jsiiProxy_AutoscalingScalingPolicy) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/autoscaling_scaling_policy awscc_autoscaling_scaling_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/autoscaling_scaling_policy awscc_autoscaling_scaling_policy} Resource.
 func NewAutoscalingScalingPolicy(scope constructs.Construct, id *string, config *AutoscalingScalingPolicyConfig) AutoscalingScalingPolicy {
 	_init_.Initialize()
 
@@ -584,7 +597,7 @@ func NewAutoscalingScalingPolicy(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/autoscaling_scaling_policy awscc_autoscaling_scaling_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/autoscaling_scaling_policy awscc_autoscaling_scaling_policy} Resource.
 func NewAutoscalingScalingPolicy_Override(a AutoscalingScalingPolicy, scope constructs.Construct, id *string, config *AutoscalingScalingPolicyConfig) {
 	_init_.Initialize()
 
@@ -1020,6 +1033,19 @@ func (a *jsiiProxy_AutoscalingScalingPolicy) GetStringMapAttribute(terraformAttr
 	return returns
 }
 
+func (a *jsiiProxy_AutoscalingScalingPolicy) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (a *jsiiProxy_AutoscalingScalingPolicy) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := a.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1047,6 +1073,17 @@ func (a *jsiiProxy_AutoscalingScalingPolicy) InterpolationForAttribute(terraform
 	return returns
 }
 
+func (a *jsiiProxy_AutoscalingScalingPolicy) MoveFromId(id *string) {
+	if err := a.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (a *jsiiProxy_AutoscalingScalingPolicy) MoveTo(moveTarget *string, index interface{}) {
 	if err := a.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1055,6 +1092,17 @@ func (a *jsiiProxy_AutoscalingScalingPolicy) MoveTo(moveTarget *string, index in
 		a,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (a *jsiiProxy_AutoscalingScalingPolicy) MoveToId(id *string) {
+	if err := a.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1196,6 +1244,32 @@ func (a *jsiiProxy_AutoscalingScalingPolicy) SynthesizeAttributes() *map[string]
 	_jsii_.Invoke(
 		a,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AutoscalingScalingPolicy) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		a,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (a *jsiiProxy_AutoscalingScalingPolicy) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		a,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

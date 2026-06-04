@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawscccognitouserpoolriskconfigurationattachment
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationOutputReference) validateSetInternalValueParameters(val *DataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfiguration) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccCognitoUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

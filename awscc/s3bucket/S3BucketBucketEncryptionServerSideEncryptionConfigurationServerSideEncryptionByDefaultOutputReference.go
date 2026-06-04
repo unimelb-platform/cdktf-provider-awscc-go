@@ -68,6 +68,7 @@ type S3BucketBucketEncryptionServerSideEncryptionConfigurationServerSideEncrypti
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetKmsMasterKeyId()
+	ResetSseAlgorithm()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (s *jsiiProxy_S3BucketBucketEncryptionServerSideEncryptionConfigurationServ
 	_jsii_.InvokeVoid(
 		s,
 		"resetKmsMasterKeyId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketBucketEncryptionServerSideEncryptionConfigurationServerSideEncryptionByDefaultOutputReference) ResetSseAlgorithm() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSseAlgorithm",
 		nil, // no parameters
 	)
 }

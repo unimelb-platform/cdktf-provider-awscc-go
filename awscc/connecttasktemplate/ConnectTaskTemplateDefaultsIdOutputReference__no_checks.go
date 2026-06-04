@@ -56,7 +56,7 @@ func (j *jsiiProxy_ConnectTaskTemplateDefaultsIdOutputReference) validateSetComp
 	return nil
 }
 
-func (j *jsiiProxy_ConnectTaskTemplateDefaultsIdOutputReference) validateSetInternalValueParameters(val *ConnectTaskTemplateDefaultsId) error {
+func (j *jsiiProxy_ConnectTaskTemplateDefaultsIdOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

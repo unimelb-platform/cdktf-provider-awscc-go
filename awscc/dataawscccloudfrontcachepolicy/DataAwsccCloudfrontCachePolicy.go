@@ -9,10 +9,11 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccloudfrontcachepolicy/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudfront_cache_policy awscc_cloudfront_cache_policy}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudfront_cache_policy awscc_cloudfront_cache_policy}.
 type DataAwsccCloudfrontCachePolicy interface {
 	cdktf.TerraformDataSource
 	CachePolicyConfig() DataAwsccCloudfrontCachePolicyCachePolicyConfigOutputReference
+	CachePolicyId() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -84,6 +85,10 @@ type DataAwsccCloudfrontCachePolicy interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -103,6 +108,16 @@ func (j *jsiiProxy_DataAwsccCloudfrontCachePolicy) CachePolicyConfig() DataAwscc
 	_jsii_.Get(
 		j,
 		"cachePolicyConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccCloudfrontCachePolicy) CachePolicyId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"cachePolicyId",
 		&returns,
 	)
 	return returns
@@ -279,7 +294,7 @@ func (j *jsiiProxy_DataAwsccCloudfrontCachePolicy) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudfront_cache_policy awscc_cloudfront_cache_policy} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudfront_cache_policy awscc_cloudfront_cache_policy} Data Source.
 func NewDataAwsccCloudfrontCachePolicy(scope constructs.Construct, id *string, config *DataAwsccCloudfrontCachePolicyConfig) DataAwsccCloudfrontCachePolicy {
 	_init_.Initialize()
 
@@ -297,7 +312,7 @@ func NewDataAwsccCloudfrontCachePolicy(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudfront_cache_policy awscc_cloudfront_cache_policy} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudfront_cache_policy awscc_cloudfront_cache_policy} Data Source.
 func NewDataAwsccCloudfrontCachePolicy_Override(d DataAwsccCloudfrontCachePolicy, scope constructs.Construct, id *string, config *DataAwsccCloudfrontCachePolicyConfig) {
 	_init_.Initialize()
 
@@ -664,6 +679,32 @@ func (d *jsiiProxy_DataAwsccCloudfrontCachePolicy) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontCachePolicy) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudfrontCachePolicy) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

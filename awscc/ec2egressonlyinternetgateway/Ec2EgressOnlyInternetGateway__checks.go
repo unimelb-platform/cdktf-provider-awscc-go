@@ -119,6 +119,14 @@ func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) validateInterpolationForAttribu
 	return nil
 }
 
+func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,9 +188,48 @@ func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) validateMoveToParameters(moveTa
 	return nil
 }
 
+func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (e *jsiiProxy_Ec2EgressOnlyInternetGateway) validatePutTagsParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*Ec2EgressOnlyInternetGatewayTags:
+		value := value.(*[]*Ec2EgressOnlyInternetGatewayTags)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*Ec2EgressOnlyInternetGatewayTags:
+		value_ := value.([]*Ec2EgressOnlyInternetGatewayTags)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*Ec2EgressOnlyInternetGatewayTags; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil

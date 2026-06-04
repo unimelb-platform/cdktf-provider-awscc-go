@@ -10,6 +10,7 @@ import (
 
 type DataAwsccQuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersSnowflakeParametersOutputReference interface {
 	cdktf.ComplexObject
+	AuthenticationType() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -26,11 +27,13 @@ type DataAwsccQuicksightDataSourceCredentialsCredentialPairAlternateDataSourcePa
 	// Experimental.
 	CreationStack() *[]*string
 	Database() *string
+	DatabaseAccessControlRole() *string
 	// Experimental.
 	Fqn() *string
 	Host() *string
 	InternalValue() *DataAwsccQuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersSnowflakeParameters
 	SetInternalValue(val *DataAwsccQuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersSnowflakeParameters)
+	OAuthParameters() DataAwsccQuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersSnowflakeParametersOAuthParametersOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -79,6 +82,16 @@ type jsiiProxy_DataAwsccQuicksightDataSourceCredentialsCredentialPairAlternateDa
 	internal.Type__cdktfComplexObject
 }
 
+func (j *jsiiProxy_DataAwsccQuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersSnowflakeParametersOutputReference) AuthenticationType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"authenticationType",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccQuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersSnowflakeParametersOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -119,6 +132,16 @@ func (j *jsiiProxy_DataAwsccQuicksightDataSourceCredentialsCredentialPairAlterna
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccQuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersSnowflakeParametersOutputReference) DatabaseAccessControlRole() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseAccessControlRole",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccQuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersSnowflakeParametersOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -144,6 +167,16 @@ func (j *jsiiProxy_DataAwsccQuicksightDataSourceCredentialsCredentialPairAlterna
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccQuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersSnowflakeParametersOutputReference) OAuthParameters() DataAwsccQuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersSnowflakeParametersOAuthParametersOutputReference {
+	var returns DataAwsccQuicksightDataSourceCredentialsCredentialPairAlternateDataSourceParametersSnowflakeParametersOAuthParametersOutputReference
+	_jsii_.Get(
+		j,
+		"oAuthParameters",
 		&returns,
 	)
 	return returns

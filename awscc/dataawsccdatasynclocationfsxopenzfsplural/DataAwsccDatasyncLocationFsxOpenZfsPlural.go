@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccdatasynclocationfsxopenzfsplural/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_fsx_open_zfs_plural awscc_datasync_location_fsx_open_zfs_plural}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_fsx_open_zfs_plural awscc_datasync_location_fsx_open_zfs_plural}.
 type DataAwsccDatasyncLocationFsxOpenZfsPlural interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccDatasyncLocationFsxOpenZfsPlural interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccDatasyncLocationFsxOpenZfsPlural) TerraformResourceT
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_fsx_open_zfs_plural awscc_datasync_location_fsx_open_zfs_plural} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_fsx_open_zfs_plural awscc_datasync_location_fsx_open_zfs_plural} Data Source.
 func NewDataAwsccDatasyncLocationFsxOpenZfsPlural(scope constructs.Construct, id *string, config *DataAwsccDatasyncLocationFsxOpenZfsPluralConfig) DataAwsccDatasyncLocationFsxOpenZfsPlural {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccDatasyncLocationFsxOpenZfsPlural(scope constructs.Construct, id
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/datasync_location_fsx_open_zfs_plural awscc_datasync_location_fsx_open_zfs_plural} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/datasync_location_fsx_open_zfs_plural awscc_datasync_location_fsx_open_zfs_plural} Data Source.
 func NewDataAwsccDatasyncLocationFsxOpenZfsPlural_Override(d DataAwsccDatasyncLocationFsxOpenZfsPlural, scope constructs.Construct, id *string, config *DataAwsccDatasyncLocationFsxOpenZfsPluralConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccDatasyncLocationFsxOpenZfsPlural) SynthesizeAttribut
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatasyncLocationFsxOpenZfsPlural) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccDatasyncLocationFsxOpenZfsPlural) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

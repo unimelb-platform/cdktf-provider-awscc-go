@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccapigatewayv2domainname/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigatewayv2_domain_name awscc_apigatewayv2_domain_name}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigatewayv2_domain_name awscc_apigatewayv2_domain_name}.
 type DataAwsccApigatewayv2DomainName interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -25,6 +25,7 @@ type DataAwsccApigatewayv2DomainName interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	DomainName() *string
+	DomainNameArn() *string
 	DomainNameConfigurations() DataAwsccApigatewayv2DomainNameDomainNameConfigurationsList
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
@@ -52,6 +53,7 @@ type DataAwsccApigatewayv2DomainName interface {
 	RawOverrides() interface{}
 	RegionalDomainName() *string
 	RegionalHostedZoneId() *string
+	RoutingMode() *string
 	Tags() cdktf.StringMap
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -88,6 +90,10 @@ type DataAwsccApigatewayv2DomainName interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -147,6 +153,16 @@ func (j *jsiiProxy_DataAwsccApigatewayv2DomainName) DomainName() *string {
 	_jsii_.Get(
 		j,
 		"domainName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccApigatewayv2DomainName) DomainNameArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"domainNameArn",
 		&returns,
 	)
 	return returns
@@ -282,6 +298,16 @@ func (j *jsiiProxy_DataAwsccApigatewayv2DomainName) RegionalHostedZoneId() *stri
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccApigatewayv2DomainName) RoutingMode() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"routingMode",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccApigatewayv2DomainName) Tags() cdktf.StringMap {
 	var returns cdktf.StringMap
 	_jsii_.Get(
@@ -323,7 +349,7 @@ func (j *jsiiProxy_DataAwsccApigatewayv2DomainName) TerraformResourceType() *str
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigatewayv2_domain_name awscc_apigatewayv2_domain_name} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigatewayv2_domain_name awscc_apigatewayv2_domain_name} Data Source.
 func NewDataAwsccApigatewayv2DomainName(scope constructs.Construct, id *string, config *DataAwsccApigatewayv2DomainNameConfig) DataAwsccApigatewayv2DomainName {
 	_init_.Initialize()
 
@@ -341,7 +367,7 @@ func NewDataAwsccApigatewayv2DomainName(scope constructs.Construct, id *string, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/apigatewayv2_domain_name awscc_apigatewayv2_domain_name} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/apigatewayv2_domain_name awscc_apigatewayv2_domain_name} Data Source.
 func NewDataAwsccApigatewayv2DomainName_Override(d DataAwsccApigatewayv2DomainName, scope constructs.Construct, id *string, config *DataAwsccApigatewayv2DomainNameConfig) {
 	_init_.Initialize()
 
@@ -708,6 +734,32 @@ func (d *jsiiProxy_DataAwsccApigatewayv2DomainName) SynthesizeAttributes() *map[
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApigatewayv2DomainName) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccApigatewayv2DomainName) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

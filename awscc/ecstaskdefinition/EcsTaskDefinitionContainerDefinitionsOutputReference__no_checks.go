@@ -92,6 +92,10 @@ func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) validat
 	return nil
 }
 
+func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) validatePutRestartPolicyParameters(value *EcsTaskDefinitionContainerDefinitionsRestartPolicy) error {
+	return nil
+}
+
 func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) validatePutSecretsParameters(value interface{}) error {
 	return nil
 }
@@ -221,6 +225,10 @@ func (j *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) validat
 }
 
 func (j *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) validateSetUserParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_EcsTaskDefinitionContainerDefinitionsOutputReference) validateSetVersionConsistencyParameters(val *string) error {
 	return nil
 }
 

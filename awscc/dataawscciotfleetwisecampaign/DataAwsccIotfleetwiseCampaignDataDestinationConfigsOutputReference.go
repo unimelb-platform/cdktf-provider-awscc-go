@@ -29,6 +29,7 @@ type DataAwsccIotfleetwiseCampaignDataDestinationConfigsOutputReference interfac
 	Fqn() *string
 	InternalValue() *DataAwsccIotfleetwiseCampaignDataDestinationConfigs
 	SetInternalValue(val *DataAwsccIotfleetwiseCampaignDataDestinationConfigs)
+	MqttTopicConfig() DataAwsccIotfleetwiseCampaignDataDestinationConfigsMqttTopicConfigOutputReference
 	S3Config() DataAwsccIotfleetwiseCampaignDataDestinationConfigsS3ConfigOutputReference
 	// Experimental.
 	TerraformAttribute() *string
@@ -123,6 +124,16 @@ func (j *jsiiProxy_DataAwsccIotfleetwiseCampaignDataDestinationConfigsOutputRefe
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccIotfleetwiseCampaignDataDestinationConfigsOutputReference) MqttTopicConfig() DataAwsccIotfleetwiseCampaignDataDestinationConfigsMqttTopicConfigOutputReference {
+	var returns DataAwsccIotfleetwiseCampaignDataDestinationConfigsMqttTopicConfigOutputReference
+	_jsii_.Get(
+		j,
+		"mqttTopicConfig",
 		&returns,
 	)
 	return returns

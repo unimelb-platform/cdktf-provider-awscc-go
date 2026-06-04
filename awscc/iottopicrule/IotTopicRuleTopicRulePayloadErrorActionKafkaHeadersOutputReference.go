@@ -67,6 +67,8 @@ type IotTopicRuleTopicRulePayloadErrorActionKafkaHeadersOutputReference interfac
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionKafkaHeadersOutputRefe
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionKafkaHeadersOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionKafkaHeadersOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionKafkaHeadersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

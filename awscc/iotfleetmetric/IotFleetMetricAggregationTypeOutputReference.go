@@ -67,6 +67,8 @@ type IotFleetMetricAggregationTypeOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
+	ResetValues()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (i *jsiiProxy_IotFleetMetricAggregationTypeOutputReference) InterpolationFo
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotFleetMetricAggregationTypeOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotFleetMetricAggregationTypeOutputReference) ResetValues() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetValues",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotFleetMetricAggregationTypeOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

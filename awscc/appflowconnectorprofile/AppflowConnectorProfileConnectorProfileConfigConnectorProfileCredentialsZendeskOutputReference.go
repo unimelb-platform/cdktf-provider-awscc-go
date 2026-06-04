@@ -74,6 +74,8 @@ type AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZen
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutConnectorOAuthRequest(value *AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskConnectorOAuthRequest)
 	ResetAccessToken()
+	ResetClientId()
+	ResetClientSecret()
 	ResetConnectorOAuthRequest()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -557,6 +559,22 @@ func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfile
 	_jsii_.InvokeVoid(
 		a,
 		"resetAccessToken",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskOutputReference) ResetClientId() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetClientId",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskOutputReference) ResetClientSecret() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetClientSecret",
 		nil, // no parameters
 	)
 }

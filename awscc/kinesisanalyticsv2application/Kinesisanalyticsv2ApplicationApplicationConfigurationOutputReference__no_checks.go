@@ -52,6 +52,10 @@ func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationOutputRe
 	return nil
 }
 
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationOutputReference) validatePutApplicationSystemRollbackConfigurationParameters(value *Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationSystemRollbackConfiguration) error {
+	return nil
+}
+
 func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationOutputReference) validatePutEnvironmentPropertiesParameters(value *Kinesisanalyticsv2ApplicationApplicationConfigurationEnvironmentProperties) error {
 	return nil
 }

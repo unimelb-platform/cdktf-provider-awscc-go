@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/lexbot/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lex_bot awscc_lex_bot}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lex_bot awscc_lex_bot}.
 type LexBot interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -18,6 +18,7 @@ type LexBot interface {
 	AutoBuildBotLocalesInput() interface{}
 	BotFileS3Location() LexBotBotFileS3LocationOutputReference
 	BotFileS3LocationInput() interface{}
+	BotId() *string
 	BotLocales() LexBotBotLocalesList
 	BotLocalesInput() interface{}
 	BotTags() LexBotBotTagsList
@@ -111,12 +112,22 @@ type LexBot interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -137,6 +148,9 @@ type LexBot interface {
 	ResetTestBotAliasSettings()
 	ResetTestBotAliasTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -196,6 +210,16 @@ func (j *jsiiProxy_LexBot) BotFileS3LocationInput() interface{} {
 	_jsii_.Get(
 		j,
 		"botFileS3LocationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LexBot) BotId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"botId",
 		&returns,
 	)
 	return returns
@@ -552,7 +576,7 @@ func (j *jsiiProxy_LexBot) TestBotAliasTagsInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lex_bot awscc_lex_bot} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lex_bot awscc_lex_bot} Resource.
 func NewLexBot(scope constructs.Construct, id *string, config *LexBotConfig) LexBot {
 	_init_.Initialize()
 
@@ -570,7 +594,7 @@ func NewLexBot(scope constructs.Construct, id *string, config *LexBotConfig) Lex
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lex_bot awscc_lex_bot} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lex_bot awscc_lex_bot} Resource.
 func NewLexBot_Override(l LexBot, scope constructs.Construct, id *string, config *LexBotConfig) {
 	_init_.Initialize()
 
@@ -973,6 +997,19 @@ func (l *jsiiProxy_LexBot) GetStringMapAttribute(terraformAttribute *string) *ma
 	return returns
 }
 
+func (l *jsiiProxy_LexBot) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (l *jsiiProxy_LexBot) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := l.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1000,6 +1037,17 @@ func (l *jsiiProxy_LexBot) InterpolationForAttribute(terraformAttribute *string)
 	return returns
 }
 
+func (l *jsiiProxy_LexBot) MoveFromId(id *string) {
+	if err := l.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (l *jsiiProxy_LexBot) MoveTo(moveTarget *string, index interface{}) {
 	if err := l.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1008,6 +1056,17 @@ func (l *jsiiProxy_LexBot) MoveTo(moveTarget *string, index interface{}) {
 		l,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (l *jsiiProxy_LexBot) MoveToId(id *string) {
+	if err := l.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1158,6 +1217,32 @@ func (l *jsiiProxy_LexBot) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		l,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LexBot) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		l,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LexBot) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

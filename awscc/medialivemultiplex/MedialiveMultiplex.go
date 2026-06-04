@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/medialivemultiplex/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/medialive_multiplex awscc_medialive_multiplex}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/medialive_multiplex awscc_medialive_multiplex}.
 type MedialiveMultiplex interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -47,6 +47,7 @@ type MedialiveMultiplex interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	MultiplexId() *string
 	MultiplexSettings() MedialiveMultiplexMultiplexSettingsOutputReference
 	MultiplexSettingsInput() interface{}
 	Name() *string
@@ -99,12 +100,22 @@ type MedialiveMultiplex interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -117,6 +128,9 @@ type MedialiveMultiplex interface {
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -276,6 +290,16 @@ func (j *jsiiProxy_MedialiveMultiplex) Lifecycle() *cdktf.TerraformResourceLifec
 	_jsii_.Get(
 		j,
 		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MedialiveMultiplex) MultiplexId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"multiplexId",
 		&returns,
 	)
 	return returns
@@ -442,7 +466,7 @@ func (j *jsiiProxy_MedialiveMultiplex) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/medialive_multiplex awscc_medialive_multiplex} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/medialive_multiplex awscc_medialive_multiplex} Resource.
 func NewMedialiveMultiplex(scope constructs.Construct, id *string, config *MedialiveMultiplexConfig) MedialiveMultiplex {
 	_init_.Initialize()
 
@@ -460,7 +484,7 @@ func NewMedialiveMultiplex(scope constructs.Construct, id *string, config *Media
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/medialive_multiplex awscc_medialive_multiplex} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/medialive_multiplex awscc_medialive_multiplex} Resource.
 func NewMedialiveMultiplex_Override(m MedialiveMultiplex, scope constructs.Construct, id *string, config *MedialiveMultiplexConfig) {
 	_init_.Initialize()
 
@@ -830,6 +854,19 @@ func (m *jsiiProxy_MedialiveMultiplex) GetStringMapAttribute(terraformAttribute 
 	return returns
 }
 
+func (m *jsiiProxy_MedialiveMultiplex) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (m *jsiiProxy_MedialiveMultiplex) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -857,6 +894,17 @@ func (m *jsiiProxy_MedialiveMultiplex) InterpolationForAttribute(terraformAttrib
 	return returns
 }
 
+func (m *jsiiProxy_MedialiveMultiplex) MoveFromId(id *string) {
+	if err := m.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_MedialiveMultiplex) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -865,6 +913,17 @@ func (m *jsiiProxy_MedialiveMultiplex) MoveTo(moveTarget *string, index interfac
 		m,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (m *jsiiProxy_MedialiveMultiplex) MoveToId(id *string) {
+	if err := m.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -942,6 +1001,32 @@ func (m *jsiiProxy_MedialiveMultiplex) SynthesizeAttributes() *map[string]interf
 	_jsii_.Invoke(
 		m,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MedialiveMultiplex) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		m,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MedialiveMultiplex) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

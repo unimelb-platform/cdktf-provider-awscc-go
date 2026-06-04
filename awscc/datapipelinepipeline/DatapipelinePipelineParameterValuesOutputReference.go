@@ -67,6 +67,8 @@ type DatapipelinePipelineParameterValuesOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetId()
+	ResetStringValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (d *jsiiProxy_DatapipelinePipelineParameterValuesOutputReference) Interpola
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatapipelinePipelineParameterValuesOutputReference) ResetId() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatapipelinePipelineParameterValuesOutputReference) ResetStringValue() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetStringValue",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatapipelinePipelineParameterValuesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

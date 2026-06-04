@@ -1,0 +1,6 @@
+package dataawsccresiliencehubresiliencypolicy
+
+
+type DataAwsccResiliencehubResiliencyPolicyPolicySoftware struct {
+}
+

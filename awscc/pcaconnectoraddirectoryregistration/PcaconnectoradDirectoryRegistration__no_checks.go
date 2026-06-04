@@ -56,7 +56,15 @@ func (p *jsiiProxy_PcaconnectoradDirectoryRegistration) validateInterpolationFor
 	return nil
 }
 
+func (p *jsiiProxy_PcaconnectoradDirectoryRegistration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (p *jsiiProxy_PcaconnectoradDirectoryRegistration) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (p *jsiiProxy_PcaconnectoradDirectoryRegistration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

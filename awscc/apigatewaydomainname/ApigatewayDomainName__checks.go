@@ -119,6 +119,14 @@ func (a *jsiiProxy_ApigatewayDomainName) validateInterpolationForAttributeParame
 	return nil
 }
 
+func (a *jsiiProxy_ApigatewayDomainName) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (a *jsiiProxy_ApigatewayDomainName) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (a *jsiiProxy_ApigatewayDomainName) validateMoveToParameters(moveTarget *st
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (a *jsiiProxy_ApigatewayDomainName) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -450,6 +466,14 @@ func (j *jsiiProxy_ApigatewayDomainName) validateSetProvisionersParameters(val *
 }
 
 func (j *jsiiProxy_ApigatewayDomainName) validateSetRegionalCertificateArnParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ApigatewayDomainName) validateSetRoutingModeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

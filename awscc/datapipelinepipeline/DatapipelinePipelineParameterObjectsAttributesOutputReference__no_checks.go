@@ -56,7 +56,7 @@ func (j *jsiiProxy_DatapipelinePipelineParameterObjectsAttributesOutputReference
 	return nil
 }
 
-func (j *jsiiProxy_DatapipelinePipelineParameterObjectsAttributesOutputReference) validateSetInternalValueParameters(val *DatapipelinePipelineParameterObjectsAttributes) error {
+func (j *jsiiProxy_DatapipelinePipelineParameterObjectsAttributesOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

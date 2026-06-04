@@ -56,7 +56,15 @@ func (l *jsiiProxy_LexResourcePolicy) validateInterpolationForAttributeParameter
 	return nil
 }
 
+func (l *jsiiProxy_LexResourcePolicy) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (l *jsiiProxy_LexResourcePolicy) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (l *jsiiProxy_LexResourcePolicy) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -36,8 +36,8 @@ type IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueVal
 	IntegerValue() *string
 	SetIntegerValue(val *string)
 	IntegerValueInput() *string
-	InternalValue() *IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueValue
-	SetInternalValue(val *IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueValue)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	StringValue() *string
 	SetStringValue(val *string)
 	StringValueInput() *string
@@ -192,8 +192,8 @@ func (j *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePr
 	return returns
 }
 
-func (j *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueValueOutputReference) InternalValue() *IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueValue {
-	var returns *IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueValue
+func (j *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueValueOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -325,7 +325,7 @@ func (j *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePr
 	)
 }
 
-func (j *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueValueOutputReference)SetInternalValue(val *IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueValue) {
+func (j *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueValueOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

@@ -119,6 +119,14 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyStore) validateInterpolationForAttri
 	return nil
 }
 
+func (v *jsiiProxy_VerifiedpermissionsPolicyStore) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (v *jsiiProxy_VerifiedpermissionsPolicyStore) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,9 +188,28 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyStore) validateMoveToParameters(move
 	return nil
 }
 
+func (v *jsiiProxy_VerifiedpermissionsPolicyStore) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (v *jsiiProxy_VerifiedpermissionsPolicyStore) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (v *jsiiProxy_VerifiedpermissionsPolicyStore) validatePutDeletionProtectionParameters(value *VerifiedpermissionsPolicyStoreDeletionProtection) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
 	}
 
 	return nil
@@ -194,6 +221,37 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyStore) validatePutSchemaParameters(v
 	}
 	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
 		return err
+	}
+
+	return nil
+}
+
+func (v *jsiiProxy_VerifiedpermissionsPolicyStore) validatePutTagsParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*VerifiedpermissionsPolicyStoreTags:
+		value := value.(*[]*VerifiedpermissionsPolicyStoreTags)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*VerifiedpermissionsPolicyStoreTags:
+		value_ := value.([]*VerifiedpermissionsPolicyStoreTags)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*VerifiedpermissionsPolicyStoreTags; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil

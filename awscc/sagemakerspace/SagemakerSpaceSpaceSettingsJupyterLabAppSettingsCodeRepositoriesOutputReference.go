@@ -64,6 +64,7 @@ type SagemakerSpaceSpaceSettingsJupyterLabAppSettingsCodeRepositoriesOutputRefer
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetRepositoryUrl()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsCodeRepositor
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsCodeRepositoriesOutputReference) ResetRepositoryUrl() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetRepositoryUrl",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsCodeRepositoriesOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

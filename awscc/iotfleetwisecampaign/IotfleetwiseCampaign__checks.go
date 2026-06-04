@@ -119,6 +119,14 @@ func (i *jsiiProxy_IotfleetwiseCampaign) validateInterpolationForAttributeParame
 	return nil
 }
 
+func (i *jsiiProxy_IotfleetwiseCampaign) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (i *jsiiProxy_IotfleetwiseCampaign) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (i *jsiiProxy_IotfleetwiseCampaign) validateMoveToParameters(moveTarget *st
 	return nil
 }
 
+func (i *jsiiProxy_IotfleetwiseCampaign) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (i *jsiiProxy_IotfleetwiseCampaign) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -230,6 +246,37 @@ func (i *jsiiProxy_IotfleetwiseCampaign) validatePutDataDestinationConfigsParame
 	return nil
 }
 
+func (i *jsiiProxy_IotfleetwiseCampaign) validatePutDataPartitionsParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*IotfleetwiseCampaignDataPartitions:
+		value := value.(*[]*IotfleetwiseCampaignDataPartitions)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*IotfleetwiseCampaignDataPartitions:
+		value_ := value.([]*IotfleetwiseCampaignDataPartitions)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*IotfleetwiseCampaignDataPartitions; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
 func (i *jsiiProxy_IotfleetwiseCampaign) validatePutSignalsToCollectParameters(value interface{}) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
@@ -255,6 +302,37 @@ func (i *jsiiProxy_IotfleetwiseCampaign) validatePutSignalsToCollectParameters(v
 	default:
 		if !_jsii_.IsAnonymousProxy(value) {
 			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*IotfleetwiseCampaignSignalsToCollect; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_IotfleetwiseCampaign) validatePutSignalsToFetchParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*IotfleetwiseCampaignSignalsToFetch:
+		value := value.(*[]*IotfleetwiseCampaignSignalsToFetch)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*IotfleetwiseCampaignSignalsToFetch:
+		value_ := value.([]*IotfleetwiseCampaignSignalsToFetch)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*IotfleetwiseCampaignSignalsToFetch; received %#v (a %T)", value, value)
 		}
 	}
 

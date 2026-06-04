@@ -64,6 +64,7 @@ type RefactorspacesRouteDefaultRouteOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetActivationState()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (r *jsiiProxy_RefactorspacesRouteDefaultRouteOutputReference) Interpolation
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_RefactorspacesRouteDefaultRouteOutputReference) ResetActivationState() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetActivationState",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_RefactorspacesRouteDefaultRouteOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

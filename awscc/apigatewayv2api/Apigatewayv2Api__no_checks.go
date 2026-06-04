@@ -56,7 +56,15 @@ func (a *jsiiProxy_Apigatewayv2Api) validateInterpolationForAttributeParameters(
 	return nil
 }
 
+func (a *jsiiProxy_Apigatewayv2Api) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_Apigatewayv2Api) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (a *jsiiProxy_Apigatewayv2Api) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -125,6 +133,10 @@ func (j *jsiiProxy_Apigatewayv2Api) validateSetDisableSchemaValidationParameters
 }
 
 func (j *jsiiProxy_Apigatewayv2Api) validateSetFailOnWarningsParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Apigatewayv2Api) validateSetIpAddressTypeParameters(val *string) error {
 	return nil
 }
 

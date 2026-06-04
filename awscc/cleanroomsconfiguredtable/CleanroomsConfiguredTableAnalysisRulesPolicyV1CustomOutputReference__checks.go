@@ -90,9 +90,28 @@ func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputRef
 	return nil
 }
 
+func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) validatePutDifferentialPrivacyParameters(value *CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomDifferentialPrivacy) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	if _context == nil {
 		return fmt.Errorf("parameter _context is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) validateSetAdditionalAnalysesParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil
@@ -172,6 +191,14 @@ func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputRef
 }
 
 func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1CustomOutputReference) validateSetDisallowedOutputColumnsParameters(val *[]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

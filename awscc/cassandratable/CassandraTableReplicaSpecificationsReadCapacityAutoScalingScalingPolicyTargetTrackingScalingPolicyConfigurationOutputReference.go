@@ -76,6 +76,7 @@ type CassandraTableReplicaSpecificationsReadCapacityAutoScalingScalingPolicyTarg
 	ResetDisableScaleIn()
 	ResetScaleInCooldown()
 	ResetScaleOutCooldown()
+	ResetTargetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -574,6 +575,14 @@ func (c *jsiiProxy_CassandraTableReplicaSpecificationsReadCapacityAutoScalingSca
 	_jsii_.InvokeVoid(
 		c,
 		"resetScaleOutCooldown",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CassandraTableReplicaSpecificationsReadCapacityAutoScalingScalingPolicyTargetTrackingScalingPolicyConfigurationOutputReference) ResetTargetValue() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetTargetValue",
 		nil, // no parameters
 	)
 }

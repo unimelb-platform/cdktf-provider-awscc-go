@@ -1,0 +1,14 @@
+package securityhubinsight
+
+
+type SecurityhubInsightFiltersCreatedAtDateRange struct {
+	// A date range unit for the date filter.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/securityhub_insight#unit SecurityhubInsight#unit}
+	Unit *string `field:"optional" json:"unit" yaml:"unit"`
+	// A date range value for the date filter.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/securityhub_insight#value SecurityhubInsight#value}
+	Value *float64 `field:"optional" json:"value" yaml:"value"`
+}
+

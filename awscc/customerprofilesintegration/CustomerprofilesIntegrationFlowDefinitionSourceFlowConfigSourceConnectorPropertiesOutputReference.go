@@ -27,8 +27,8 @@ type CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorPro
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorProperties
-	SetInternalValue(val *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorProperties)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Marketo() CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorPropertiesMarketoOutputReference
 	MarketoInput() interface{}
 	S3() CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorPropertiesS3OutputReference
@@ -136,8 +136,8 @@ func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSour
 	return returns
 }
 
-func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorPropertiesOutputReference) InternalValue() *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorProperties {
-	var returns *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorProperties
+func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorPropertiesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -316,7 +316,7 @@ func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSour
 	)
 }
 
-func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorPropertiesOutputReference)SetInternalValue(val *CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorProperties) {
+func (j *jsiiProxy_CustomerprofilesIntegrationFlowDefinitionSourceFlowConfigSourceConnectorPropertiesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

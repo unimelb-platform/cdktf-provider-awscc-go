@@ -71,6 +71,8 @@ type SagemakerModelPackageModelPackageStatusDetailsValidationStatusesOutputRefer
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetFailureReason()
+	ResetName()
+	ResetStatus()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -522,6 +524,22 @@ func (s *jsiiProxy_SagemakerModelPackageModelPackageStatusDetailsValidationStatu
 	_jsii_.InvokeVoid(
 		s,
 		"resetFailureReason",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackageModelPackageStatusDetailsValidationStatusesOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackageModelPackageStatusDetailsValidationStatusesOutputReference) ResetStatus() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStatus",
 		nil, // no parameters
 	)
 }

@@ -67,6 +67,8 @@ type DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConf
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetExpression()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (d *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRelati
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConfigurationsFilterExpressionsOutputReference) ResetExpression() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetExpression",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConfigurationsFilterExpressionsOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetType",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConfigurationsFilterExpressionsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

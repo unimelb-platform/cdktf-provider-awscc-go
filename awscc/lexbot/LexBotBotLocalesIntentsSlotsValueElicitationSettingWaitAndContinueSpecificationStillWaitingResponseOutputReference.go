@@ -74,6 +74,9 @@ type LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecifica
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMessageGroupsList(value interface{})
 	ResetAllowInterrupt()
+	ResetFrequencyInSeconds()
+	ResetMessageGroupsList()
+	ResetTimeoutInSeconds()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -556,6 +559,30 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndCon
 	_jsii_.InvokeVoid(
 		l,
 		"resetAllowInterrupt",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseOutputReference) ResetFrequencyInSeconds() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetFrequencyInSeconds",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseOutputReference) ResetMessageGroupsList() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMessageGroupsList",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsSlotsValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseOutputReference) ResetTimeoutInSeconds() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetTimeoutInSeconds",
 		nil, // no parameters
 	)
 }

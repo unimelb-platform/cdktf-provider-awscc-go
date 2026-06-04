@@ -38,6 +38,7 @@ type DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationO
 	RoleArn() *string
 	S3BackupMode() *string
 	S3Configuration() DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationS3ConfigurationOutputReference
+	SecretsManagerConfiguration() DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -220,6 +221,16 @@ func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestination
 	_jsii_.Get(
 		j,
 		"s3Configuration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationOutputReference) SecretsManagerConfiguration() DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference {
+	var returns DataAwsccKinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationSecretsManagerConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"secretsManagerConfiguration",
 		&returns,
 	)
 	return returns

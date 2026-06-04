@@ -131,6 +131,14 @@ func (s *jsiiProxy_SagemakerInferenceComponentSpecificationOutputReference) vali
 	return nil
 }
 
+func (j *jsiiProxy_SagemakerInferenceComponentSpecificationOutputReference) validateSetBaseInferenceComponentNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_SagemakerInferenceComponentSpecificationOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	switch val.(type) {
 	case *string:

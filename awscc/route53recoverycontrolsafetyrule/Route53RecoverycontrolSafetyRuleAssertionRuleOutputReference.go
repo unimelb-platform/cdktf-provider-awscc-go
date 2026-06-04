@@ -67,6 +67,8 @@ type Route53RecoverycontrolSafetyRuleAssertionRuleOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAssertedControls()
+	ResetWaitPeriodMs()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (r *jsiiProxy_Route53RecoverycontrolSafetyRuleAssertionRuleOutputReference)
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_Route53RecoverycontrolSafetyRuleAssertionRuleOutputReference) ResetAssertedControls() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetAssertedControls",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Route53RecoverycontrolSafetyRuleAssertionRuleOutputReference) ResetWaitPeriodMs() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetWaitPeriodMs",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_Route53RecoverycontrolSafetyRuleAssertionRuleOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -56,7 +56,15 @@ func (e *jsiiProxy_EcsService) validateInterpolationForAttributeParameters(terra
 	return nil
 }
 
+func (e *jsiiProxy_EcsService) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_EcsService) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_EcsService) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -108,6 +116,10 @@ func (e *jsiiProxy_EcsService) validatePutVolumeConfigurationsParameters(value i
 	return nil
 }
 
+func (e *jsiiProxy_EcsService) validatePutVpcLatticeConfigurationsParameters(value interface{}) error {
+	return nil
+}
+
 func validateEcsService_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
@@ -121,6 +133,10 @@ func validateEcsService_IsTerraformElementParameters(x interface{}) error {
 }
 
 func validateEcsService_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_EcsService) validateSetAvailabilityZoneRebalancingParameters(val *string) error {
 	return nil
 }
 

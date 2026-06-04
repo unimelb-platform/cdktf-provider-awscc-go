@@ -64,6 +64,7 @@ type ConnectRoutingProfileMediaConcurrenciesCrossChannelBehaviorOutputReference 
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBehaviorType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (c *jsiiProxy_ConnectRoutingProfileMediaConcurrenciesCrossChannelBehaviorOu
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ConnectRoutingProfileMediaConcurrenciesCrossChannelBehaviorOutputReference) ResetBehaviorType() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetBehaviorType",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ConnectRoutingProfileMediaConcurrenciesCrossChannelBehaviorOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

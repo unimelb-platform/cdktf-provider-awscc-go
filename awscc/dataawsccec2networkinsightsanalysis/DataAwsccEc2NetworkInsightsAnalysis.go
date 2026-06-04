@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2networkinsightsanalysis/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_network_insights_analysis awscc_ec2_network_insights_analysis}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_network_insights_analysis awscc_ec2_network_insights_analysis}.
 type DataAwsccEc2NetworkInsightsAnalysis interface {
 	cdktf.TerraformDataSource
 	AlternatePathHints() DataAwsccEc2NetworkInsightsAnalysisAlternatePathHintsList
@@ -95,6 +95,10 @@ type DataAwsccEc2NetworkInsightsAnalysis interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -400,7 +404,7 @@ func (j *jsiiProxy_DataAwsccEc2NetworkInsightsAnalysis) TerraformResourceType() 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_network_insights_analysis awscc_ec2_network_insights_analysis} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_network_insights_analysis awscc_ec2_network_insights_analysis} Data Source.
 func NewDataAwsccEc2NetworkInsightsAnalysis(scope constructs.Construct, id *string, config *DataAwsccEc2NetworkInsightsAnalysisConfig) DataAwsccEc2NetworkInsightsAnalysis {
 	_init_.Initialize()
 
@@ -418,7 +422,7 @@ func NewDataAwsccEc2NetworkInsightsAnalysis(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_network_insights_analysis awscc_ec2_network_insights_analysis} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_network_insights_analysis awscc_ec2_network_insights_analysis} Data Source.
 func NewDataAwsccEc2NetworkInsightsAnalysis_Override(d DataAwsccEc2NetworkInsightsAnalysis, scope constructs.Construct, id *string, config *DataAwsccEc2NetworkInsightsAnalysisConfig) {
 	_init_.Initialize()
 
@@ -785,6 +789,32 @@ func (d *jsiiProxy_DataAwsccEc2NetworkInsightsAnalysis) SynthesizeAttributes() *
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2NetworkInsightsAnalysis) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2NetworkInsightsAnalysis) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -32,8 +32,8 @@ type DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConf
 	FilterExpressionsInput() interface{}
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConfigurations
-	SetInternalValue(val *DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConfigurations)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	SchemaName() *string
 	SetSchemaName(val *string)
 	SchemaNameInput() *string
@@ -70,6 +70,7 @@ type DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConf
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutFilterExpressions(value interface{})
+	ResetDatabaseName()
 	ResetFilterExpressions()
 	ResetSchemaName()
 	// Produce the Token's value at resolution time.
@@ -167,8 +168,8 @@ func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRelati
 	return returns
 }
 
-func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConfigurationsOutputReference) InternalValue() *DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConfigurations {
-	var returns *DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConfigurations
+func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConfigurationsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -278,7 +279,7 @@ func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRelati
 	)
 }
 
-func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConfigurationsOutputReference)SetInternalValue(val *DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConfigurations) {
+func (j *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConfigurationsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -516,6 +517,14 @@ func (d *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRelati
 		d,
 		"putFilterExpressions",
 		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DatazoneDataSourceConfigurationRedshiftRunConfigurationRelationalFilterConfigurationsOutputReference) ResetDatabaseName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetDatabaseName",
+		nil, // no parameters
 	)
 }
 

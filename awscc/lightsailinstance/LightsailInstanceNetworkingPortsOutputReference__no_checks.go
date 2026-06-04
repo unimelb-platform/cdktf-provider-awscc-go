@@ -84,7 +84,7 @@ func (j *jsiiProxy_LightsailInstanceNetworkingPortsOutputReference) validateSetF
 	return nil
 }
 
-func (j *jsiiProxy_LightsailInstanceNetworkingPortsOutputReference) validateSetInternalValueParameters(val *LightsailInstanceNetworkingPorts) error {
+func (j *jsiiProxy_LightsailInstanceNetworkingPortsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

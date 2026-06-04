@@ -1,0 +1,6 @@
+package dataawsccdynamodbglobaltable
+
+
+type DataAwsccDynamodbGlobalTableReplicasReplicaStreamSpecification struct {
+}
+

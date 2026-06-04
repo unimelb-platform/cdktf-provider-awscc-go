@@ -68,7 +68,7 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfiguration
 	return nil
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommandOutputReference) validateSetInternalValueParameters(val *KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommand) error {
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommandOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

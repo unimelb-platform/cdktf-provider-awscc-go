@@ -67,6 +67,8 @@ type CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolicyConfigTraffic
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetIdleTtl()
+	ResetMaximumTtl()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (c *jsiiProxy_CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolic
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolicyConfigTrafficConfigSingleWeightConfigSessionStickinessConfigOutputReference) ResetIdleTtl() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetIdleTtl",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolicyConfigTrafficConfigSingleWeightConfigSessionStickinessConfigOutputReference) ResetMaximumTtl() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetMaximumTtl",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CloudfrontContinuousDeploymentPolicyContinuousDeploymentPolicyConfigTrafficConfigSingleWeightConfigSessionStickinessConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

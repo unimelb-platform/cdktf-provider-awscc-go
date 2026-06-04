@@ -56,7 +56,15 @@ func (c *jsiiProxy_CodestarnotificationsNotificationRule) validateInterpolationF
 	return nil
 }
 
+func (c *jsiiProxy_CodestarnotificationsNotificationRule) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CodestarnotificationsNotificationRule) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_CodestarnotificationsNotificationRule) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

@@ -1,0 +1,8 @@
+package dynamodbglobaltable
+
+
+type DynamodbGlobalTableReplicasReadOnDemandThroughputSettings struct {
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/dynamodb_global_table#max_read_request_units DynamodbGlobalTable#max_read_request_units}.
+	MaxReadRequestUnits *float64 `field:"optional" json:"maxReadRequestUnits" yaml:"maxReadRequestUnits"`
+}
+

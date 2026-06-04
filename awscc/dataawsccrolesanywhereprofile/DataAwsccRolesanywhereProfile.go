@@ -9,9 +9,11 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccrolesanywhereprofile/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rolesanywhere_profile awscc_rolesanywhere_profile}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rolesanywhere_profile awscc_rolesanywhere_profile}.
 type DataAwsccRolesanywhereProfile interface {
 	cdktf.TerraformDataSource
+	AcceptRoleSessionName() cdktf.IResolvable
+	AttributeMappings() DataAwsccRolesanywhereProfileAttributeMappingsList
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -92,6 +94,10 @@ type DataAwsccRolesanywhereProfile interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -104,6 +110,26 @@ type DataAwsccRolesanywhereProfile interface {
 // The jsii proxy struct for DataAwsccRolesanywhereProfile
 type jsiiProxy_DataAwsccRolesanywhereProfile struct {
 	internal.Type__cdktfTerraformDataSource
+}
+
+func (j *jsiiProxy_DataAwsccRolesanywhereProfile) AcceptRoleSessionName() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"acceptRoleSessionName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccRolesanywhereProfile) AttributeMappings() DataAwsccRolesanywhereProfileAttributeMappingsList {
+	var returns DataAwsccRolesanywhereProfileAttributeMappingsList
+	_jsii_.Get(
+		j,
+		"attributeMappings",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccRolesanywhereProfile) CdktfStack() cdktf.TerraformStack {
@@ -367,7 +393,7 @@ func (j *jsiiProxy_DataAwsccRolesanywhereProfile) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rolesanywhere_profile awscc_rolesanywhere_profile} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rolesanywhere_profile awscc_rolesanywhere_profile} Data Source.
 func NewDataAwsccRolesanywhereProfile(scope constructs.Construct, id *string, config *DataAwsccRolesanywhereProfileConfig) DataAwsccRolesanywhereProfile {
 	_init_.Initialize()
 
@@ -385,7 +411,7 @@ func NewDataAwsccRolesanywhereProfile(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/rolesanywhere_profile awscc_rolesanywhere_profile} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/rolesanywhere_profile awscc_rolesanywhere_profile} Data Source.
 func NewDataAwsccRolesanywhereProfile_Override(d DataAwsccRolesanywhereProfile, scope constructs.Construct, id *string, config *DataAwsccRolesanywhereProfileConfig) {
 	_init_.Initialize()
 
@@ -752,6 +778,32 @@ func (d *jsiiProxy_DataAwsccRolesanywhereProfile) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRolesanywhereProfile) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccRolesanywhereProfile) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

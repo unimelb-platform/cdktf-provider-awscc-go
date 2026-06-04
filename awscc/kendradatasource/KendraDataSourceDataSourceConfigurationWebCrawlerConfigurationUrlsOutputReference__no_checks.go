@@ -64,7 +64,7 @@ func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfiguratio
 	return nil
 }
 
-func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrlsOutputReference) validateSetInternalValueParameters(val *KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrls) error {
+func (j *jsiiProxy_KendraDataSourceDataSourceConfigurationWebCrawlerConfigurationUrlsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

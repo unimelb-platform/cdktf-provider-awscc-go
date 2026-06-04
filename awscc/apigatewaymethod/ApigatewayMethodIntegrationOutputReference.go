@@ -115,6 +115,7 @@ type ApigatewayMethodIntegrationOutputReference interface {
 	ResetRequestParameters()
 	ResetRequestTemplates()
 	ResetTimeoutInMillis()
+	ResetType()
 	ResetUri()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -996,6 +997,14 @@ func (a *jsiiProxy_ApigatewayMethodIntegrationOutputReference) ResetTimeoutInMil
 	_jsii_.InvokeVoid(
 		a,
 		"resetTimeoutInMillis",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApigatewayMethodIntegrationOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetType",
 		nil, // no parameters
 	)
 }

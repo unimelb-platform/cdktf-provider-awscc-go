@@ -4,6 +4,10 @@ package dataawsccec2vpngateway
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccEc2VpnGatewayTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccEc2VpnGatewayTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

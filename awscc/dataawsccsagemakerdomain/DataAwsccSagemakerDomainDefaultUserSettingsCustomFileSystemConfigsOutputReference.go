@@ -28,6 +28,7 @@ type DataAwsccSagemakerDomainDefaultUserSettingsCustomFileSystemConfigsOutputRef
 	EfsFileSystemConfig() DataAwsccSagemakerDomainDefaultUserSettingsCustomFileSystemConfigsEfsFileSystemConfigOutputReference
 	// Experimental.
 	Fqn() *string
+	FsxLustreFileSystemConfig() DataAwsccSagemakerDomainDefaultUserSettingsCustomFileSystemConfigsFsxLustreFileSystemConfigOutputReference
 	InternalValue() *DataAwsccSagemakerDomainDefaultUserSettingsCustomFileSystemConfigs
 	SetInternalValue(val *DataAwsccSagemakerDomainDefaultUserSettingsCustomFileSystemConfigs)
 	// Experimental.
@@ -122,6 +123,16 @@ func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultUserSettingsCustomFileSystemCo
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultUserSettingsCustomFileSystemConfigsOutputReference) FsxLustreFileSystemConfig() DataAwsccSagemakerDomainDefaultUserSettingsCustomFileSystemConfigsFsxLustreFileSystemConfigOutputReference {
+	var returns DataAwsccSagemakerDomainDefaultUserSettingsCustomFileSystemConfigsFsxLustreFileSystemConfigOutputReference
+	_jsii_.Get(
+		j,
+		"fsxLustreFileSystemConfig",
 		&returns,
 	)
 	return returns

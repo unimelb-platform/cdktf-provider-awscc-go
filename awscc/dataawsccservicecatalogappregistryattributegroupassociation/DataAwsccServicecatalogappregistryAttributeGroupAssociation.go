@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccservicecatalogappregistryattributegroupassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/servicecatalogappregistry_attribute_group_association awscc_servicecatalogappregistry_attribute_group_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/servicecatalogappregistry_attribute_group_association awscc_servicecatalogappregistry_attribute_group_association}.
 type DataAwsccServicecatalogappregistryAttributeGroupAssociation interface {
 	cdktf.TerraformDataSource
 	Application() *string
@@ -86,6 +86,10 @@ type DataAwsccServicecatalogappregistryAttributeGroupAssociation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -301,7 +305,7 @@ func (j *jsiiProxy_DataAwsccServicecatalogappregistryAttributeGroupAssociation) 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/servicecatalogappregistry_attribute_group_association awscc_servicecatalogappregistry_attribute_group_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/servicecatalogappregistry_attribute_group_association awscc_servicecatalogappregistry_attribute_group_association} Data Source.
 func NewDataAwsccServicecatalogappregistryAttributeGroupAssociation(scope constructs.Construct, id *string, config *DataAwsccServicecatalogappregistryAttributeGroupAssociationConfig) DataAwsccServicecatalogappregistryAttributeGroupAssociation {
 	_init_.Initialize()
 
@@ -319,7 +323,7 @@ func NewDataAwsccServicecatalogappregistryAttributeGroupAssociation(scope constr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/servicecatalogappregistry_attribute_group_association awscc_servicecatalogappregistry_attribute_group_association} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/servicecatalogappregistry_attribute_group_association awscc_servicecatalogappregistry_attribute_group_association} Data Source.
 func NewDataAwsccServicecatalogappregistryAttributeGroupAssociation_Override(d DataAwsccServicecatalogappregistryAttributeGroupAssociation, scope constructs.Construct, id *string, config *DataAwsccServicecatalogappregistryAttributeGroupAssociationConfig) {
 	_init_.Initialize()
 
@@ -686,6 +690,32 @@ func (d *jsiiProxy_DataAwsccServicecatalogappregistryAttributeGroupAssociation) 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccServicecatalogappregistryAttributeGroupAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccServicecatalogappregistryAttributeGroupAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

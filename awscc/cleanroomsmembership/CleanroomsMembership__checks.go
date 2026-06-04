@@ -119,6 +119,14 @@ func (c *jsiiProxy_CleanroomsMembership) validateInterpolationForAttributeParame
 	return nil
 }
 
+func (c *jsiiProxy_CleanroomsMembership) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (c *jsiiProxy_CleanroomsMembership) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,9 +188,28 @@ func (c *jsiiProxy_CleanroomsMembership) validateMoveToParameters(moveTarget *st
 	return nil
 }
 
+func (c *jsiiProxy_CleanroomsMembership) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (c *jsiiProxy_CleanroomsMembership) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (c *jsiiProxy_CleanroomsMembership) validatePutDefaultJobResultConfigurationParameters(value *CleanroomsMembershipDefaultJobResultConfiguration) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
 	}
 
 	return nil
@@ -374,6 +401,14 @@ func (j *jsiiProxy_CleanroomsMembership) validateSetCountParameters(val interfac
 		if !_jsii_.IsAnonymousProxy(val) {
 			return fmt.Errorf("parameter val must be one of the allowed types: *float64, cdktf.TerraformCount; received %#v (a %T)", val, val)
 		}
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_CleanroomsMembership) validateSetJobLogStatusParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil

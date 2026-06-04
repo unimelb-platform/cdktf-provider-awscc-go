@@ -44,10 +44,6 @@ func (w *jsiiProxy_Wafv2LoggingConfigurationRedactedFieldsOutputReference) valid
 	return nil
 }
 
-func (w *jsiiProxy_Wafv2LoggingConfigurationRedactedFieldsOutputReference) validatePutJsonBodyParameters(value *Wafv2LoggingConfigurationRedactedFieldsJsonBody) error {
-	return nil
-}
-
 func (w *jsiiProxy_Wafv2LoggingConfigurationRedactedFieldsOutputReference) validatePutSingleHeaderParameters(value *Wafv2LoggingConfigurationRedactedFieldsSingleHeader) error {
 	return nil
 }

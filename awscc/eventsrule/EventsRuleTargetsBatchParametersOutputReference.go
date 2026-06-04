@@ -74,6 +74,8 @@ type EventsRuleTargetsBatchParametersOutputReference interface {
 	PutArrayProperties(value *EventsRuleTargetsBatchParametersArrayProperties)
 	PutRetryStrategy(value *EventsRuleTargetsBatchParametersRetryStrategy)
 	ResetArrayProperties()
+	ResetJobDefinition()
+	ResetJobName()
 	ResetRetryStrategy()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -557,6 +559,22 @@ func (e *jsiiProxy_EventsRuleTargetsBatchParametersOutputReference) ResetArrayPr
 	_jsii_.InvokeVoid(
 		e,
 		"resetArrayProperties",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EventsRuleTargetsBatchParametersOutputReference) ResetJobDefinition() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetJobDefinition",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EventsRuleTargetsBatchParametersOutputReference) ResetJobName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetJobName",
 		nil, // no parameters
 	)
 }

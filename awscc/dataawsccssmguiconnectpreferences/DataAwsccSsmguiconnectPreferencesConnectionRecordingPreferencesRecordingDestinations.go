@@ -1,0 +1,6 @@
+package dataawsccssmguiconnectpreferences
+
+
+type DataAwsccSsmguiconnectPreferencesConnectionRecordingPreferencesRecordingDestinations struct {
+}
+

@@ -67,6 +67,8 @@ type LicensemanagerLicenseConsumptionConfigurationBorrowConfigurationOutputRefer
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAllowEarlyCheckIn()
+	ResetMaxTimeToLiveInMinutes()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (l *jsiiProxy_LicensemanagerLicenseConsumptionConfigurationBorrowConfigurat
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LicensemanagerLicenseConsumptionConfigurationBorrowConfigurationOutputReference) ResetAllowEarlyCheckIn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetAllowEarlyCheckIn",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LicensemanagerLicenseConsumptionConfigurationBorrowConfigurationOutputReference) ResetMaxTimeToLiveInMinutes() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMaxTimeToLiveInMinutes",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LicensemanagerLicenseConsumptionConfigurationBorrowConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

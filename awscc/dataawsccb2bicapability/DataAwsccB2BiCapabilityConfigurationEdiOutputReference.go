@@ -10,6 +10,7 @@ import (
 
 type DataAwsccB2BiCapabilityConfigurationEdiOutputReference interface {
 	cdktf.ComplexObject
+	CapabilityDirection() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -78,6 +79,16 @@ type DataAwsccB2BiCapabilityConfigurationEdiOutputReference interface {
 // The jsii proxy struct for DataAwsccB2BiCapabilityConfigurationEdiOutputReference
 type jsiiProxy_DataAwsccB2BiCapabilityConfigurationEdiOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_DataAwsccB2BiCapabilityConfigurationEdiOutputReference) CapabilityDirection() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"capabilityDirection",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccB2BiCapabilityConfigurationEdiOutputReference) ComplexObjectIndex() interface{} {

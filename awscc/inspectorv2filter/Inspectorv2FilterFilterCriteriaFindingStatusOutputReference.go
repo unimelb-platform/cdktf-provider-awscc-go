@@ -67,6 +67,8 @@ type Inspectorv2FilterFilterCriteriaFindingStatusOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetComparison()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaFindingStatusOutputReference) 
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaFindingStatusOutputReference) ResetComparison() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetComparison",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaFindingStatusOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaFindingStatusOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

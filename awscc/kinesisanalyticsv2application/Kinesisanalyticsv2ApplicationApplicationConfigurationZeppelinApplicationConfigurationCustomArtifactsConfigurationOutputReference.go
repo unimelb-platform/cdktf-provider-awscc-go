@@ -70,6 +70,7 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationCon
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutMavenReference(value *Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationCustomArtifactsConfigurationMavenReference)
 	PutS3ContentLocation(value *Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationCustomArtifactsConfigurationS3ContentLocation)
+	ResetArtifactType()
 	ResetMavenReference()
 	ResetS3ContentLocation()
 	// Produce the Token's value at resolution time.
@@ -516,6 +517,14 @@ func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelin
 		k,
 		"putS3ContentLocation",
 		[]interface{}{value},
+	)
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationZeppelinApplicationConfigurationCustomArtifactsConfigurationOutputReference) ResetArtifactType() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetArtifactType",
+		nil, // no parameters
 	)
 }
 

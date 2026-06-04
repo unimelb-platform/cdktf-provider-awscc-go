@@ -56,7 +56,7 @@ func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationReplicationTi
 	return nil
 }
 
-func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationReplicationTimeTimeOutputReference) validateSetInternalValueParameters(val *S3BucketReplicationConfigurationRulesDestinationReplicationTimeTime) error {
+func (j *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationReplicationTimeTimeOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

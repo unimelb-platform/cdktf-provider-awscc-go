@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccservicecatalogserviceactions/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/servicecatalog_service_actions awscc_servicecatalog_service_actions}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/servicecatalog_service_actions awscc_servicecatalog_service_actions}.
 type DataAwsccServicecatalogServiceActions interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccServicecatalogServiceActions interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccServicecatalogServiceActions) TerraformResourceType(
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/servicecatalog_service_actions awscc_servicecatalog_service_actions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/servicecatalog_service_actions awscc_servicecatalog_service_actions} Data Source.
 func NewDataAwsccServicecatalogServiceActions(scope constructs.Construct, id *string, config *DataAwsccServicecatalogServiceActionsConfig) DataAwsccServicecatalogServiceActions {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccServicecatalogServiceActions(scope constructs.Construct, id *st
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/servicecatalog_service_actions awscc_servicecatalog_service_actions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/servicecatalog_service_actions awscc_servicecatalog_service_actions} Data Source.
 func NewDataAwsccServicecatalogServiceActions_Override(d DataAwsccServicecatalogServiceActions, scope constructs.Construct, id *string, config *DataAwsccServicecatalogServiceActionsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccServicecatalogServiceActions) SynthesizeAttributes()
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccServicecatalogServiceActions) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccServicecatalogServiceActions) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/verifiedpermissionspolicystore/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/verifiedpermissions_policy_store awscc_verifiedpermissions_policy_store}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/verifiedpermissions_policy_store awscc_verifiedpermissions_policy_store}.
 type VerifiedpermissionsPolicyStore interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -25,6 +25,8 @@ type VerifiedpermissionsPolicyStore interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	DeletionProtection() VerifiedpermissionsPolicyStoreDeletionProtectionOutputReference
+	DeletionProtectionInput() interface{}
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -60,6 +62,8 @@ type VerifiedpermissionsPolicyStore interface {
 	RawOverrides() interface{}
 	Schema() VerifiedpermissionsPolicyStoreSchemaOutputReference
 	SchemaInput() interface{}
+	Tags() VerifiedpermissionsPolicyStoreTagsList
+	TagsInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -92,23 +96,40 @@ type VerifiedpermissionsPolicyStore interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutDeletionProtection(value *VerifiedpermissionsPolicyStoreDeletionProtection)
 	PutSchema(value *VerifiedpermissionsPolicyStoreSchema)
+	PutTags(value interface{})
 	PutValidationSettings(value *VerifiedpermissionsPolicyStoreValidationSettings)
+	ResetDeletionProtection()
 	ResetDescription()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetSchema()
+	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -168,6 +189,26 @@ func (j *jsiiProxy_VerifiedpermissionsPolicyStore) Count() interface{} {
 	_jsii_.Get(
 		j,
 		"count",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_VerifiedpermissionsPolicyStore) DeletionProtection() VerifiedpermissionsPolicyStoreDeletionProtectionOutputReference {
+	var returns VerifiedpermissionsPolicyStoreDeletionProtectionOutputReference
+	_jsii_.Get(
+		j,
+		"deletionProtection",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_VerifiedpermissionsPolicyStore) DeletionProtectionInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"deletionProtectionInput",
 		&returns,
 	)
 	return returns
@@ -323,6 +364,26 @@ func (j *jsiiProxy_VerifiedpermissionsPolicyStore) SchemaInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_VerifiedpermissionsPolicyStore) Tags() VerifiedpermissionsPolicyStoreTagsList {
+	var returns VerifiedpermissionsPolicyStoreTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_VerifiedpermissionsPolicyStore) TagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_VerifiedpermissionsPolicyStore) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -374,7 +435,7 @@ func (j *jsiiProxy_VerifiedpermissionsPolicyStore) ValidationSettingsInput() int
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/verifiedpermissions_policy_store awscc_verifiedpermissions_policy_store} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/verifiedpermissions_policy_store awscc_verifiedpermissions_policy_store} Resource.
 func NewVerifiedpermissionsPolicyStore(scope constructs.Construct, id *string, config *VerifiedpermissionsPolicyStoreConfig) VerifiedpermissionsPolicyStore {
 	_init_.Initialize()
 
@@ -392,7 +453,7 @@ func NewVerifiedpermissionsPolicyStore(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/verifiedpermissions_policy_store awscc_verifiedpermissions_policy_store} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/verifiedpermissions_policy_store awscc_verifiedpermissions_policy_store} Resource.
 func NewVerifiedpermissionsPolicyStore_Override(v VerifiedpermissionsPolicyStore, scope constructs.Construct, id *string, config *VerifiedpermissionsPolicyStoreConfig) {
 	_init_.Initialize()
 
@@ -751,6 +812,19 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyStore) GetStringMapAttribute(terrafo
 	return returns
 }
 
+func (v *jsiiProxy_VerifiedpermissionsPolicyStore) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		v,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (v *jsiiProxy_VerifiedpermissionsPolicyStore) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := v.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -778,6 +852,17 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyStore) InterpolationForAttribute(ter
 	return returns
 }
 
+func (v *jsiiProxy_VerifiedpermissionsPolicyStore) MoveFromId(id *string) {
+	if err := v.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		v,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (v *jsiiProxy_VerifiedpermissionsPolicyStore) MoveTo(moveTarget *string, index interface{}) {
 	if err := v.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -786,6 +871,17 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyStore) MoveTo(moveTarget *string, in
 		v,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (v *jsiiProxy_VerifiedpermissionsPolicyStore) MoveToId(id *string) {
+	if err := v.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		v,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -800,6 +896,17 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyStore) OverrideLogicalId(newLogicalI
 	)
 }
 
+func (v *jsiiProxy_VerifiedpermissionsPolicyStore) PutDeletionProtection(value *VerifiedpermissionsPolicyStoreDeletionProtection) {
+	if err := v.validatePutDeletionProtectionParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		v,
+		"putDeletionProtection",
+		[]interface{}{value},
+	)
+}
+
 func (v *jsiiProxy_VerifiedpermissionsPolicyStore) PutSchema(value *VerifiedpermissionsPolicyStoreSchema) {
 	if err := v.validatePutSchemaParameters(value); err != nil {
 		panic(err)
@@ -807,6 +914,17 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyStore) PutSchema(value *Verifiedperm
 	_jsii_.InvokeVoid(
 		v,
 		"putSchema",
+		[]interface{}{value},
+	)
+}
+
+func (v *jsiiProxy_VerifiedpermissionsPolicyStore) PutTags(value interface{}) {
+	if err := v.validatePutTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		v,
+		"putTags",
 		[]interface{}{value},
 	)
 }
@@ -819,6 +937,14 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyStore) PutValidationSettings(value *
 		v,
 		"putValidationSettings",
 		[]interface{}{value},
+	)
+}
+
+func (v *jsiiProxy_VerifiedpermissionsPolicyStore) ResetDeletionProtection() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetDeletionProtection",
+		nil, // no parameters
 	)
 }
 
@@ -846,12 +972,46 @@ func (v *jsiiProxy_VerifiedpermissionsPolicyStore) ResetSchema() {
 	)
 }
 
+func (v *jsiiProxy_VerifiedpermissionsPolicyStore) ResetTags() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetTags",
+		nil, // no parameters
+	)
+}
+
 func (v *jsiiProxy_VerifiedpermissionsPolicyStore) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		v,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (v *jsiiProxy_VerifiedpermissionsPolicyStore) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		v,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (v *jsiiProxy_VerifiedpermissionsPolicyStore) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		v,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

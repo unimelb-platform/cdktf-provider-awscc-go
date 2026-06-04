@@ -32,6 +32,7 @@ type DataAwsccApigatewayv2DomainNameDomainNameConfigurationsOutputReference inte
 	Fqn() *string
 	InternalValue() *DataAwsccApigatewayv2DomainNameDomainNameConfigurations
 	SetInternalValue(val *DataAwsccApigatewayv2DomainNameDomainNameConfigurations)
+	IpAddressType() *string
 	OwnershipVerificationCertificateArn() *string
 	SecurityPolicy() *string
 	// Experimental.
@@ -156,6 +157,16 @@ func (j *jsiiProxy_DataAwsccApigatewayv2DomainNameDomainNameConfigurationsOutput
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccApigatewayv2DomainNameDomainNameConfigurationsOutputReference) IpAddressType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipAddressType",
 		&returns,
 	)
 	return returns

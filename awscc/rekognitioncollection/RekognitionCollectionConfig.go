@@ -21,11 +21,11 @@ type RekognitionCollectionConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The name of the collection.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rekognition_collection#collection_id RekognitionCollection#collection_id}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rekognition_collection#collection_id RekognitionCollection#collection_id}
 	CollectionId *string `field:"required" json:"collectionId" yaml:"collectionId"`
 	// An array of key-value pairs to apply to this resource.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rekognition_collection#tags RekognitionCollection#tags}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rekognition_collection#tags RekognitionCollection#tags}
 	Tags interface{} `field:"optional" json:"tags" yaml:"tags"`
 }
 

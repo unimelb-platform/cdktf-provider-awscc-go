@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccneptunegraphgraph/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/neptunegraph_graph awscc_neptunegraph_graph}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/neptunegraph_graph awscc_neptunegraph_graph}.
 type DataAwsccNeptunegraphGraph interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -92,6 +92,10 @@ type DataAwsccNeptunegraphGraph interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -367,7 +371,7 @@ func (j *jsiiProxy_DataAwsccNeptunegraphGraph) VectorSearchConfiguration() DataA
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/neptunegraph_graph awscc_neptunegraph_graph} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/neptunegraph_graph awscc_neptunegraph_graph} Data Source.
 func NewDataAwsccNeptunegraphGraph(scope constructs.Construct, id *string, config *DataAwsccNeptunegraphGraphConfig) DataAwsccNeptunegraphGraph {
 	_init_.Initialize()
 
@@ -385,7 +389,7 @@ func NewDataAwsccNeptunegraphGraph(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/neptunegraph_graph awscc_neptunegraph_graph} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/neptunegraph_graph awscc_neptunegraph_graph} Data Source.
 func NewDataAwsccNeptunegraphGraph_Override(d DataAwsccNeptunegraphGraph, scope constructs.Construct, id *string, config *DataAwsccNeptunegraphGraphConfig) {
 	_init_.Initialize()
 
@@ -752,6 +756,32 @@ func (d *jsiiProxy_DataAwsccNeptunegraphGraph) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNeptunegraphGraph) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNeptunegraphGraph) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

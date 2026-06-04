@@ -26,7 +26,7 @@ type LexBotBotLocalesIntentsIntentConfirmationSettingOutputReference interface {
 	// Experimental.
 	CreationStack() *[]*string
 	DeclinationResponse() LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponseOutputReference
-	DeclinationResponseInput() *LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponse
+	DeclinationResponseInput() interface{}
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -35,7 +35,7 @@ type LexBotBotLocalesIntentsIntentConfirmationSettingOutputReference interface {
 	SetIsActive(val interface{})
 	IsActiveInput() interface{}
 	PromptSpecification() LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationOutputReference
-	PromptSpecificationInput() *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecification
+	PromptSpecificationInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -70,7 +70,9 @@ type LexBotBotLocalesIntentsIntentConfirmationSettingOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDeclinationResponse(value *LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponse)
 	PutPromptSpecification(value *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecification)
+	ResetDeclinationResponse()
 	ResetIsActive()
+	ResetPromptSpecification()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -126,8 +128,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingOutputReferen
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingOutputReference) DeclinationResponseInput() *LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponse {
-	var returns *LexBotBotLocalesIntentsIntentConfirmationSettingDeclinationResponse
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingOutputReference) DeclinationResponseInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"declinationResponseInput",
@@ -186,8 +188,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingOutputReferen
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingOutputReference) PromptSpecificationInput() *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecification {
-	var returns *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecification
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingOutputReference) PromptSpecificationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"promptSpecificationInput",
@@ -518,10 +520,26 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingOutputReferen
 	)
 }
 
+func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingOutputReference) ResetDeclinationResponse() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetDeclinationResponse",
+		nil, // no parameters
+	)
+}
+
 func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingOutputReference) ResetIsActive() {
 	_jsii_.InvokeVoid(
 		l,
 		"resetIsActive",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingOutputReference) ResetPromptSpecification() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetPromptSpecification",
 		nil, // no parameters
 	)
 }

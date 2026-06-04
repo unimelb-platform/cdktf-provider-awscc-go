@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/timestreamdatabase/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/timestream_database awscc_timestream_database}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/timestream_database awscc_timestream_database}.
 type TimestreamDatabase interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -92,12 +92,22 @@ type TimestreamDatabase interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -109,6 +119,9 @@ type TimestreamDatabase interface {
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -364,7 +377,7 @@ func (j *jsiiProxy_TimestreamDatabase) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/timestream_database awscc_timestream_database} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/timestream_database awscc_timestream_database} Resource.
 func NewTimestreamDatabase(scope constructs.Construct, id *string, config *TimestreamDatabaseConfig) TimestreamDatabase {
 	_init_.Initialize()
 
@@ -382,7 +395,7 @@ func NewTimestreamDatabase(scope constructs.Construct, id *string, config *Times
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/timestream_database awscc_timestream_database} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/timestream_database awscc_timestream_database} Resource.
 func NewTimestreamDatabase_Override(t TimestreamDatabase, scope constructs.Construct, id *string, config *TimestreamDatabaseConfig) {
 	_init_.Initialize()
 
@@ -752,6 +765,19 @@ func (t *jsiiProxy_TimestreamDatabase) GetStringMapAttribute(terraformAttribute 
 	return returns
 }
 
+func (t *jsiiProxy_TimestreamDatabase) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		t,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (t *jsiiProxy_TimestreamDatabase) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := t.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -779,6 +805,17 @@ func (t *jsiiProxy_TimestreamDatabase) InterpolationForAttribute(terraformAttrib
 	return returns
 }
 
+func (t *jsiiProxy_TimestreamDatabase) MoveFromId(id *string) {
+	if err := t.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		t,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (t *jsiiProxy_TimestreamDatabase) MoveTo(moveTarget *string, index interface{}) {
 	if err := t.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -787,6 +824,17 @@ func (t *jsiiProxy_TimestreamDatabase) MoveTo(moveTarget *string, index interfac
 		t,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (t *jsiiProxy_TimestreamDatabase) MoveToId(id *string) {
+	if err := t.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		t,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -850,6 +898,32 @@ func (t *jsiiProxy_TimestreamDatabase) SynthesizeAttributes() *map[string]interf
 	_jsii_.Invoke(
 		t,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (t *jsiiProxy_TimestreamDatabase) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		t,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (t *jsiiProxy_TimestreamDatabase) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		t,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

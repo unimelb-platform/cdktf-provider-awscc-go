@@ -64,6 +64,7 @@ type KendrarankingExecutionPlanCapacityUnitsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetRescoreCapacityUnits()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (k *jsiiProxy_KendrarankingExecutionPlanCapacityUnitsOutputReference) Inter
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KendrarankingExecutionPlanCapacityUnitsOutputReference) ResetRescoreCapacityUnits() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetRescoreCapacityUnits",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KendrarankingExecutionPlanCapacityUnitsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

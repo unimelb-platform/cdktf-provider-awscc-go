@@ -78,6 +78,7 @@ type AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesSapoDataO
 	PutSuccessResponseHandlingConfig(value *AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesSapoDataSuccessResponseHandlingConfig)
 	ResetErrorHandlingConfig()
 	ResetIdFieldNames()
+	ResetObjectPath()
 	ResetSuccessResponseHandlingConfig()
 	ResetWriteOperationType()
 	// Produce the Token's value at resolution time.
@@ -601,6 +602,14 @@ func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPrope
 	_jsii_.InvokeVoid(
 		a,
 		"resetIdFieldNames",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AppflowFlowDestinationFlowConfigListDestinationConnectorPropertiesSapoDataOutputReference) ResetObjectPath() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetObjectPath",
 		nil, // no parameters
 	)
 }

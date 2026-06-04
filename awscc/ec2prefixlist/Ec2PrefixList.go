@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2prefixlist/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_prefix_list awscc_ec2_prefix_list}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_prefix_list awscc_ec2_prefix_list}.
 type Ec2PrefixList interface {
 	cdktf.TerraformResource
 	AddressFamily() *string
@@ -100,23 +100,37 @@ type Ec2PrefixList interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutEntries(value interface{})
 	PutTags(value interface{})
 	ResetEntries()
+	ResetMaxEntries()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -442,7 +456,7 @@ func (j *jsiiProxy_Ec2PrefixList) Version() *float64 {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_prefix_list awscc_ec2_prefix_list} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_prefix_list awscc_ec2_prefix_list} Resource.
 func NewEc2PrefixList(scope constructs.Construct, id *string, config *Ec2PrefixListConfig) Ec2PrefixList {
 	_init_.Initialize()
 
@@ -460,7 +474,7 @@ func NewEc2PrefixList(scope constructs.Construct, id *string, config *Ec2PrefixL
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_prefix_list awscc_ec2_prefix_list} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_prefix_list awscc_ec2_prefix_list} Resource.
 func NewEc2PrefixList_Override(e Ec2PrefixList, scope constructs.Construct, id *string, config *Ec2PrefixListConfig) {
 	_init_.Initialize()
 
@@ -841,6 +855,19 @@ func (e *jsiiProxy_Ec2PrefixList) GetStringMapAttribute(terraformAttribute *stri
 	return returns
 }
 
+func (e *jsiiProxy_Ec2PrefixList) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2PrefixList) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -868,6 +895,17 @@ func (e *jsiiProxy_Ec2PrefixList) InterpolationForAttribute(terraformAttribute *
 	return returns
 }
 
+func (e *jsiiProxy_Ec2PrefixList) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2PrefixList) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -876,6 +914,17 @@ func (e *jsiiProxy_Ec2PrefixList) MoveTo(moveTarget *string, index interface{}) 
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Ec2PrefixList) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -920,6 +969,14 @@ func (e *jsiiProxy_Ec2PrefixList) ResetEntries() {
 	)
 }
 
+func (e *jsiiProxy_Ec2PrefixList) ResetMaxEntries() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetMaxEntries",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_Ec2PrefixList) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		e,
@@ -942,6 +999,32 @@ func (e *jsiiProxy_Ec2PrefixList) SynthesizeAttributes() *map[string]interface{}
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2PrefixList) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2PrefixList) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

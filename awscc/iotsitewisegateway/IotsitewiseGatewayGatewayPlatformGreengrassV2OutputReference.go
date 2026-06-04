@@ -20,6 +20,9 @@ type IotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference interface {
 	ComplexObjectIsFromSet() *bool
 	// Experimental.
 	SetComplexObjectIsFromSet(val *bool)
+	CoreDeviceOperatingSystem() *string
+	SetCoreDeviceOperatingSystem(val *string)
+	CoreDeviceOperatingSystemInput() *string
 	CoreDeviceThingName() *string
 	SetCoreDeviceThingName(val *string)
 	CoreDeviceThingNameInput() *string
@@ -64,6 +67,8 @@ type IotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCoreDeviceOperatingSystem()
+	ResetCoreDeviceThingName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -94,6 +99,26 @@ func (j *jsiiProxy_IotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference)
 	_jsii_.Get(
 		j,
 		"complexObjectIsFromSet",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference) CoreDeviceOperatingSystem() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"coreDeviceOperatingSystem",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference) CoreDeviceOperatingSystemInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"coreDeviceOperatingSystemInput",
 		&returns,
 	)
 	return returns
@@ -215,6 +240,17 @@ func (j *jsiiProxy_IotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference)
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference)SetCoreDeviceOperatingSystem(val *string) {
+	if err := j.validateSetCoreDeviceOperatingSystemParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"coreDeviceOperatingSystem",
 		val,
 	)
 }
@@ -447,6 +483,22 @@ func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference)
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference) ResetCoreDeviceOperatingSystem() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetCoreDeviceOperatingSystem",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference) ResetCoreDeviceThingName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetCoreDeviceThingName",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformGreengrassV2OutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

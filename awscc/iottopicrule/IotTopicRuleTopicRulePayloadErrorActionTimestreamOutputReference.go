@@ -76,6 +76,10 @@ type IotTopicRuleTopicRulePayloadErrorActionTimestreamOutputReference interface 
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDimensions(value interface{})
 	PutTimestamp(value *IotTopicRuleTopicRulePayloadErrorActionTimestreamTimestamp)
+	ResetDatabaseName()
+	ResetDimensions()
+	ResetRoleArn()
+	ResetTableName()
 	ResetTimestamp()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -583,6 +587,38 @@ func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionTimestreamOutputRefere
 		i,
 		"putTimestamp",
 		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionTimestreamOutputReference) ResetDatabaseName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetDatabaseName",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionTimestreamOutputReference) ResetDimensions() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetDimensions",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionTimestreamOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotTopicRuleTopicRulePayloadErrorActionTimestreamOutputReference) ResetTableName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTableName",
+		nil, // no parameters
 	)
 }
 

@@ -9,9 +9,10 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccgameliftbuild/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/gamelift_build awscc_gamelift_build}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/gamelift_build awscc_gamelift_build}.
 type DataAwsccGameliftBuild interface {
 	cdktf.TerraformDataSource
+	BuildArn() *string
 	BuildId() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
@@ -52,6 +53,7 @@ type DataAwsccGameliftBuild interface {
 	RawOverrides() interface{}
 	ServerSdkVersion() *string
 	StorageLocation() DataAwsccGameliftBuildStorageLocationOutputReference
+	Tags() DataAwsccGameliftBuildTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -88,6 +90,10 @@ type DataAwsccGameliftBuild interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -100,6 +106,16 @@ type DataAwsccGameliftBuild interface {
 // The jsii proxy struct for DataAwsccGameliftBuild
 type jsiiProxy_DataAwsccGameliftBuild struct {
 	internal.Type__cdktfTerraformDataSource
+}
+
+func (j *jsiiProxy_DataAwsccGameliftBuild) BuildArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"buildArn",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccGameliftBuild) BuildId() *string {
@@ -282,6 +298,16 @@ func (j *jsiiProxy_DataAwsccGameliftBuild) StorageLocation() DataAwsccGameliftBu
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccGameliftBuild) Tags() DataAwsccGameliftBuildTagsList {
+	var returns DataAwsccGameliftBuildTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccGameliftBuild) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -323,7 +349,7 @@ func (j *jsiiProxy_DataAwsccGameliftBuild) Version() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/gamelift_build awscc_gamelift_build} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/gamelift_build awscc_gamelift_build} Data Source.
 func NewDataAwsccGameliftBuild(scope constructs.Construct, id *string, config *DataAwsccGameliftBuildConfig) DataAwsccGameliftBuild {
 	_init_.Initialize()
 
@@ -341,7 +367,7 @@ func NewDataAwsccGameliftBuild(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/gamelift_build awscc_gamelift_build} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/gamelift_build awscc_gamelift_build} Data Source.
 func NewDataAwsccGameliftBuild_Override(d DataAwsccGameliftBuild, scope constructs.Construct, id *string, config *DataAwsccGameliftBuildConfig) {
 	_init_.Initialize()
 
@@ -708,6 +734,32 @@ func (d *jsiiProxy_DataAwsccGameliftBuild) SynthesizeAttributes() *map[string]in
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGameliftBuild) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccGameliftBuild) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

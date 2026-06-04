@@ -56,7 +56,15 @@ func (a *jsiiProxy_AthenaDataCatalog) validateInterpolationForAttributeParameter
 	return nil
 }
 
+func (a *jsiiProxy_AthenaDataCatalog) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_AthenaDataCatalog) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (a *jsiiProxy_AthenaDataCatalog) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -88,11 +96,19 @@ func (j *jsiiProxy_AthenaDataCatalog) validateSetConnectionParameters(val interf
 	return nil
 }
 
+func (j *jsiiProxy_AthenaDataCatalog) validateSetConnectionTypeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_AthenaDataCatalog) validateSetCountParameters(val interface{}) error {
 	return nil
 }
 
 func (j *jsiiProxy_AthenaDataCatalog) validateSetDescriptionParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_AthenaDataCatalog) validateSetErrorParameters(val *string) error {
 	return nil
 }
 
@@ -109,6 +125,10 @@ func (j *jsiiProxy_AthenaDataCatalog) validateSetParametersParameters(val *map[s
 }
 
 func (j *jsiiProxy_AthenaDataCatalog) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_AthenaDataCatalog) validateSetStatusParameters(val *string) error {
 	return nil
 }
 

@@ -44,6 +44,10 @@ func (b *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputRe
 	return nil
 }
 
+func (b *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference) validatePutOverridesParameters(value interface{}) error {
+	return nil
+}
+
 func (b *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }
@@ -73,6 +77,10 @@ func (j *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputRe
 }
 
 func (j *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func (j *jsiiProxy_BatchComputeEnvironmentComputeResourcesLaunchTemplateOutputReference) validateSetUserdataTypeParameters(val *string) error {
 	return nil
 }
 

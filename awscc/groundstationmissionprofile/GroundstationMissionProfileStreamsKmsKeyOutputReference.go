@@ -32,6 +32,9 @@ type GroundstationMissionProfileStreamsKmsKeyOutputReference interface {
 	KmsAliasArn() *string
 	SetKmsAliasArn(val *string)
 	KmsAliasArnInput() *string
+	KmsAliasName() *string
+	SetKmsAliasName(val *string)
+	KmsAliasNameInput() *string
 	KmsKeyArn() *string
 	SetKmsKeyArn(val *string)
 	KmsKeyArnInput() *string
@@ -68,6 +71,7 @@ type GroundstationMissionProfileStreamsKmsKeyOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetKmsAliasArn()
+	ResetKmsAliasName()
 	ResetKmsKeyArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -149,6 +153,26 @@ func (j *jsiiProxy_GroundstationMissionProfileStreamsKmsKeyOutputReference) KmsA
 	_jsii_.Get(
 		j,
 		"kmsAliasArnInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_GroundstationMissionProfileStreamsKmsKeyOutputReference) KmsAliasName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kmsAliasName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_GroundstationMissionProfileStreamsKmsKeyOutputReference) KmsAliasNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kmsAliasNameInput",
 		&returns,
 	)
 	return returns
@@ -262,6 +286,17 @@ func (j *jsiiProxy_GroundstationMissionProfileStreamsKmsKeyOutputReference)SetKm
 	_jsii_.Set(
 		j,
 		"kmsAliasArn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_GroundstationMissionProfileStreamsKmsKeyOutputReference)SetKmsAliasName(val *string) {
+	if err := j.validateSetKmsAliasNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"kmsAliasName",
 		val,
 	)
 }
@@ -489,6 +524,14 @@ func (g *jsiiProxy_GroundstationMissionProfileStreamsKmsKeyOutputReference) Rese
 	_jsii_.InvokeVoid(
 		g,
 		"resetKmsAliasArn",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GroundstationMissionProfileStreamsKmsKeyOutputReference) ResetKmsAliasName() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetKmsAliasName",
 		nil, // no parameters
 	)
 }

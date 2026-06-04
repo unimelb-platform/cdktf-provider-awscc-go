@@ -123,6 +123,17 @@ func (e *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutput
 	return nil
 }
 
+func (e *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutputReference) validatePutBaselinePerformanceFactorsParameters(value *Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselinePerformanceFactors) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsOutputReference) validatePutMemoryGiBPerVCpuParameters(value *Ec2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpu) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")

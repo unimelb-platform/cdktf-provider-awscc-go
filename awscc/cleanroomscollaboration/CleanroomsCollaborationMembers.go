@@ -2,13 +2,15 @@ package cleanroomscollaboration
 
 
 type CleanroomsCollaborationMembers struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cleanrooms_collaboration#account_id CleanroomsCollaboration#account_id}.
-	AccountId *string `field:"required" json:"accountId" yaml:"accountId"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cleanrooms_collaboration#display_name CleanroomsCollaboration#display_name}.
-	DisplayName *string `field:"required" json:"displayName" yaml:"displayName"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cleanrooms_collaboration#member_abilities CleanroomsCollaboration#member_abilities}.
-	MemberAbilities *[]*string `field:"required" json:"memberAbilities" yaml:"memberAbilities"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cleanrooms_collaboration#payment_configuration CleanroomsCollaboration#payment_configuration}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cleanrooms_collaboration#account_id CleanroomsCollaboration#account_id}.
+	AccountId *string `field:"optional" json:"accountId" yaml:"accountId"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cleanrooms_collaboration#display_name CleanroomsCollaboration#display_name}.
+	DisplayName *string `field:"optional" json:"displayName" yaml:"displayName"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cleanrooms_collaboration#member_abilities CleanroomsCollaboration#member_abilities}.
+	MemberAbilities *[]*string `field:"optional" json:"memberAbilities" yaml:"memberAbilities"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cleanrooms_collaboration#ml_member_abilities CleanroomsCollaboration#ml_member_abilities}.
+	MlMemberAbilities *CleanroomsCollaborationMembersMlMemberAbilities `field:"optional" json:"mlMemberAbilities" yaml:"mlMemberAbilities"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cleanrooms_collaboration#payment_configuration CleanroomsCollaboration#payment_configuration}.
 	PaymentConfiguration *CleanroomsCollaborationMembersPaymentConfiguration `field:"optional" json:"paymentConfiguration" yaml:"paymentConfiguration"`
 }
 

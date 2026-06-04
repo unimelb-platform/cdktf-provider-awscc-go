@@ -56,7 +56,7 @@ func (j *jsiiProxy_GrafanaWorkspaceSamlConfigurationIdpMetadataOutputReference) 
 	return nil
 }
 
-func (j *jsiiProxy_GrafanaWorkspaceSamlConfigurationIdpMetadataOutputReference) validateSetInternalValueParameters(val *GrafanaWorkspaceSamlConfigurationIdpMetadata) error {
+func (j *jsiiProxy_GrafanaWorkspaceSamlConfigurationIdpMetadataOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

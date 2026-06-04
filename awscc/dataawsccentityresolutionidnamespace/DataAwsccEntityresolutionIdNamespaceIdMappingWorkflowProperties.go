@@ -1,0 +1,6 @@
+package dataawsccentityresolutionidnamespace
+
+
+type DataAwsccEntityresolutionIdNamespaceIdMappingWorkflowProperties struct {
+}
+

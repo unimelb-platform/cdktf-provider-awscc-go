@@ -30,6 +30,7 @@ type DataAwsccWisdomKnowledgeBaseSourceConfigurationOutputReference interface {
 	Fqn() *string
 	InternalValue() *DataAwsccWisdomKnowledgeBaseSourceConfiguration
 	SetInternalValue(val *DataAwsccWisdomKnowledgeBaseSourceConfiguration)
+	ManagedSourceConfiguration() DataAwsccWisdomKnowledgeBaseSourceConfigurationManagedSourceConfigurationOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -132,6 +133,16 @@ func (j *jsiiProxy_DataAwsccWisdomKnowledgeBaseSourceConfigurationOutputReferenc
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccWisdomKnowledgeBaseSourceConfigurationOutputReference) ManagedSourceConfiguration() DataAwsccWisdomKnowledgeBaseSourceConfigurationManagedSourceConfigurationOutputReference {
+	var returns DataAwsccWisdomKnowledgeBaseSourceConfigurationManagedSourceConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"managedSourceConfiguration",
 		&returns,
 	)
 	return returns

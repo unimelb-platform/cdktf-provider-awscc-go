@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/networkmanagerlinkassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/networkmanager_link_association awscc_networkmanager_link_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/networkmanager_link_association awscc_networkmanager_link_association}.
 type NetworkmanagerLinkAssociation interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -92,12 +92,22 @@ type NetworkmanagerLinkAssociation interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -105,6 +115,9 @@ type NetworkmanagerLinkAssociation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -350,7 +363,7 @@ func (j *jsiiProxy_NetworkmanagerLinkAssociation) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/networkmanager_link_association awscc_networkmanager_link_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/networkmanager_link_association awscc_networkmanager_link_association} Resource.
 func NewNetworkmanagerLinkAssociation(scope constructs.Construct, id *string, config *NetworkmanagerLinkAssociationConfig) NetworkmanagerLinkAssociation {
 	_init_.Initialize()
 
@@ -368,7 +381,7 @@ func NewNetworkmanagerLinkAssociation(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/networkmanager_link_association awscc_networkmanager_link_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/networkmanager_link_association awscc_networkmanager_link_association} Resource.
 func NewNetworkmanagerLinkAssociation_Override(n NetworkmanagerLinkAssociation, scope constructs.Construct, id *string, config *NetworkmanagerLinkAssociationConfig) {
 	_init_.Initialize()
 
@@ -749,6 +762,19 @@ func (n *jsiiProxy_NetworkmanagerLinkAssociation) GetStringMapAttribute(terrafor
 	return returns
 }
 
+func (n *jsiiProxy_NetworkmanagerLinkAssociation) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		n,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (n *jsiiProxy_NetworkmanagerLinkAssociation) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := n.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -776,6 +802,17 @@ func (n *jsiiProxy_NetworkmanagerLinkAssociation) InterpolationForAttribute(terr
 	return returns
 }
 
+func (n *jsiiProxy_NetworkmanagerLinkAssociation) MoveFromId(id *string) {
+	if err := n.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		n,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (n *jsiiProxy_NetworkmanagerLinkAssociation) MoveTo(moveTarget *string, index interface{}) {
 	if err := n.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -784,6 +821,17 @@ func (n *jsiiProxy_NetworkmanagerLinkAssociation) MoveTo(moveTarget *string, ind
 		n,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (n *jsiiProxy_NetworkmanagerLinkAssociation) MoveToId(id *string) {
+	if err := n.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		n,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -812,6 +860,32 @@ func (n *jsiiProxy_NetworkmanagerLinkAssociation) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		n,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (n *jsiiProxy_NetworkmanagerLinkAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		n,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (n *jsiiProxy_NetworkmanagerLinkAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		n,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

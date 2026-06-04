@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscchealthlakefhirdatastores/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/healthlake_fhir_datastores awscc_healthlake_fhir_datastores}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/healthlake_fhir_datastores awscc_healthlake_fhir_datastores}.
 type DataAwsccHealthlakeFhirDatastores interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccHealthlakeFhirDatastores interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccHealthlakeFhirDatastores) TerraformResourceType() *s
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/healthlake_fhir_datastores awscc_healthlake_fhir_datastores} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/healthlake_fhir_datastores awscc_healthlake_fhir_datastores} Data Source.
 func NewDataAwsccHealthlakeFhirDatastores(scope constructs.Construct, id *string, config *DataAwsccHealthlakeFhirDatastoresConfig) DataAwsccHealthlakeFhirDatastores {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccHealthlakeFhirDatastores(scope constructs.Construct, id *string
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/healthlake_fhir_datastores awscc_healthlake_fhir_datastores} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/healthlake_fhir_datastores awscc_healthlake_fhir_datastores} Data Source.
 func NewDataAwsccHealthlakeFhirDatastores_Override(d DataAwsccHealthlakeFhirDatastores, scope constructs.Construct, id *string, config *DataAwsccHealthlakeFhirDatastoresConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccHealthlakeFhirDatastores) SynthesizeAttributes() *ma
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccHealthlakeFhirDatastores) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccHealthlakeFhirDatastores) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

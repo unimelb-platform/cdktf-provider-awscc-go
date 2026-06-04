@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/wafv2ipset/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/wafv2_ip_set awscc_wafv2_ip_set}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/wafv2_ip_set awscc_wafv2_ip_set}.
 type Wafv2IpSet interface {
 	cdktf.TerraformResource
 	Addresses() *[]*string
@@ -47,6 +47,7 @@ type Wafv2IpSet interface {
 	IpAddressVersion() *string
 	SetIpAddressVersion(val *string)
 	IpAddressVersionInput() *string
+	IpSetId() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -101,12 +102,22 @@ type Wafv2IpSet interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -118,6 +129,9 @@ type Wafv2IpSet interface {
 	ResetOverrideLogicalId()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -292,6 +306,16 @@ func (j *jsiiProxy_Wafv2IpSet) IpAddressVersionInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Wafv2IpSet) IpSetId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ipSetId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Wafv2IpSet) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -433,7 +457,7 @@ func (j *jsiiProxy_Wafv2IpSet) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/wafv2_ip_set awscc_wafv2_ip_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/wafv2_ip_set awscc_wafv2_ip_set} Resource.
 func NewWafv2IpSet(scope constructs.Construct, id *string, config *Wafv2IpSetConfig) Wafv2IpSet {
 	_init_.Initialize()
 
@@ -451,7 +475,7 @@ func NewWafv2IpSet(scope constructs.Construct, id *string, config *Wafv2IpSetCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/wafv2_ip_set awscc_wafv2_ip_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/wafv2_ip_set awscc_wafv2_ip_set} Resource.
 func NewWafv2IpSet_Override(w Wafv2IpSet, scope constructs.Construct, id *string, config *Wafv2IpSetConfig) {
 	_init_.Initialize()
 
@@ -854,6 +878,19 @@ func (w *jsiiProxy_Wafv2IpSet) GetStringMapAttribute(terraformAttribute *string)
 	return returns
 }
 
+func (w *jsiiProxy_Wafv2IpSet) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		w,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (w *jsiiProxy_Wafv2IpSet) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := w.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -881,6 +918,17 @@ func (w *jsiiProxy_Wafv2IpSet) InterpolationForAttribute(terraformAttribute *str
 	return returns
 }
 
+func (w *jsiiProxy_Wafv2IpSet) MoveFromId(id *string) {
+	if err := w.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		w,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (w *jsiiProxy_Wafv2IpSet) MoveTo(moveTarget *string, index interface{}) {
 	if err := w.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -889,6 +937,17 @@ func (w *jsiiProxy_Wafv2IpSet) MoveTo(moveTarget *string, index interface{}) {
 		w,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (w *jsiiProxy_Wafv2IpSet) MoveToId(id *string) {
+	if err := w.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		w,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -952,6 +1011,32 @@ func (w *jsiiProxy_Wafv2IpSet) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		w,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (w *jsiiProxy_Wafv2IpSet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		w,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (w *jsiiProxy_Wafv2IpSet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		w,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2verifiedaccessgroup/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_verified_access_group awscc_ec2_verified_access_group}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_verified_access_group awscc_ec2_verified_access_group}.
 type DataAwsccEc2VerifiedAccessGroup interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -93,6 +93,10 @@ type DataAwsccEc2VerifiedAccessGroup interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -378,7 +382,7 @@ func (j *jsiiProxy_DataAwsccEc2VerifiedAccessGroup) VerifiedAccessInstanceId() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_verified_access_group awscc_ec2_verified_access_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_verified_access_group awscc_ec2_verified_access_group} Data Source.
 func NewDataAwsccEc2VerifiedAccessGroup(scope constructs.Construct, id *string, config *DataAwsccEc2VerifiedAccessGroupConfig) DataAwsccEc2VerifiedAccessGroup {
 	_init_.Initialize()
 
@@ -396,7 +400,7 @@ func NewDataAwsccEc2VerifiedAccessGroup(scope constructs.Construct, id *string, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_verified_access_group awscc_ec2_verified_access_group} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_verified_access_group awscc_ec2_verified_access_group} Data Source.
 func NewDataAwsccEc2VerifiedAccessGroup_Override(d DataAwsccEc2VerifiedAccessGroup, scope constructs.Construct, id *string, config *DataAwsccEc2VerifiedAccessGroupConfig) {
 	_init_.Initialize()
 
@@ -763,6 +767,32 @@ func (d *jsiiProxy_DataAwsccEc2VerifiedAccessGroup) SynthesizeAttributes() *map[
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2VerifiedAccessGroup) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2VerifiedAccessGroup) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

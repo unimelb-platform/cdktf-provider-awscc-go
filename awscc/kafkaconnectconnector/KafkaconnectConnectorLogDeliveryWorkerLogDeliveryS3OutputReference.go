@@ -71,6 +71,7 @@ type KafkaconnectConnectorLogDeliveryWorkerLogDeliveryS3OutputReference interfac
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetBucket()
+	ResetEnabled()
 	ResetPrefix()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -523,6 +524,14 @@ func (k *jsiiProxy_KafkaconnectConnectorLogDeliveryWorkerLogDeliveryS3OutputRefe
 	_jsii_.InvokeVoid(
 		k,
 		"resetBucket",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KafkaconnectConnectorLogDeliveryWorkerLogDeliveryS3OutputReference) ResetEnabled() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetEnabled",
 		nil, // no parameters
 	)
 }

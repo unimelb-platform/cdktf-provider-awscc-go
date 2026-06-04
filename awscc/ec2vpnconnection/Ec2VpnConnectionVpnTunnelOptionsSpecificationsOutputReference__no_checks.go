@@ -44,6 +44,38 @@ func (e *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference
 	return nil
 }
 
+func (e *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validatePutIkeVersionsParameters(value interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validatePutLogOptionsParameters(value *Ec2VpnConnectionVpnTunnelOptionsSpecificationsLogOptions) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validatePutPhase1DhGroupNumbersParameters(value interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validatePutPhase1EncryptionAlgorithmsParameters(value interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validatePutPhase1IntegrityAlgorithmsParameters(value interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validatePutPhase2DhGroupNumbersParameters(value interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validatePutPhase2EncryptionAlgorithmsParameters(value interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validatePutPhase2IntegrityAlgorithmsParameters(value interface{}) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }
@@ -56,11 +88,47 @@ func (j *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference
 	return nil
 }
 
+func (j *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validateSetDpdTimeoutActionParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validateSetDpdTimeoutSecondsParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validateSetEnableTunnelLifecycleControlParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 
+func (j *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validateSetPhase1LifetimeSecondsParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validateSetPhase2LifetimeSecondsParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validateSetPreSharedKeyParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validateSetRekeyFuzzPercentageParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validateSetRekeyMarginTimeSecondsParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validateSetReplayWindowSizeParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validateSetStartupActionParameters(val *string) error {
 	return nil
 }
 
@@ -73,6 +141,10 @@ func (j *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference
 }
 
 func (j *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validateSetTunnelInsideCidrParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnectionVpnTunnelOptionsSpecificationsOutputReference) validateSetTunnelInsideIpv6CidrParameters(val *string) error {
 	return nil
 }
 

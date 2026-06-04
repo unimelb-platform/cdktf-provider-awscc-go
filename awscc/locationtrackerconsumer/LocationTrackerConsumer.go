@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/locationtrackerconsumer/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/location_tracker_consumer awscc_location_tracker_consumer}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/location_tracker_consumer awscc_location_tracker_consumer}.
 type LocationTrackerConsumer interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -89,12 +89,22 @@ type LocationTrackerConsumer interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -102,6 +112,9 @@ type LocationTrackerConsumer interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -327,7 +340,7 @@ func (j *jsiiProxy_LocationTrackerConsumer) TrackerNameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/location_tracker_consumer awscc_location_tracker_consumer} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/location_tracker_consumer awscc_location_tracker_consumer} Resource.
 func NewLocationTrackerConsumer(scope constructs.Construct, id *string, config *LocationTrackerConsumerConfig) LocationTrackerConsumer {
 	_init_.Initialize()
 
@@ -345,7 +358,7 @@ func NewLocationTrackerConsumer(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/location_tracker_consumer awscc_location_tracker_consumer} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/location_tracker_consumer awscc_location_tracker_consumer} Resource.
 func NewLocationTrackerConsumer_Override(l LocationTrackerConsumer, scope constructs.Construct, id *string, config *LocationTrackerConsumerConfig) {
 	_init_.Initialize()
 
@@ -715,6 +728,19 @@ func (l *jsiiProxy_LocationTrackerConsumer) GetStringMapAttribute(terraformAttri
 	return returns
 }
 
+func (l *jsiiProxy_LocationTrackerConsumer) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (l *jsiiProxy_LocationTrackerConsumer) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := l.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -742,6 +768,17 @@ func (l *jsiiProxy_LocationTrackerConsumer) InterpolationForAttribute(terraformA
 	return returns
 }
 
+func (l *jsiiProxy_LocationTrackerConsumer) MoveFromId(id *string) {
+	if err := l.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (l *jsiiProxy_LocationTrackerConsumer) MoveTo(moveTarget *string, index interface{}) {
 	if err := l.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -750,6 +787,17 @@ func (l *jsiiProxy_LocationTrackerConsumer) MoveTo(moveTarget *string, index int
 		l,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (l *jsiiProxy_LocationTrackerConsumer) MoveToId(id *string) {
+	if err := l.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -778,6 +826,32 @@ func (l *jsiiProxy_LocationTrackerConsumer) SynthesizeAttributes() *map[string]i
 	_jsii_.Invoke(
 		l,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LocationTrackerConsumer) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		l,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LocationTrackerConsumer) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

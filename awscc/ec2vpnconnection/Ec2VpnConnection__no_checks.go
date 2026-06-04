@@ -56,7 +56,15 @@ func (e *jsiiProxy_Ec2VpnConnection) validateInterpolationForAttributeParameters
 	return nil
 }
 
+func (e *jsiiProxy_Ec2VpnConnection) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VpnConnection) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VpnConnection) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -100,11 +108,35 @@ func (j *jsiiProxy_Ec2VpnConnection) validateSetCustomerGatewayIdParameters(val 
 	return nil
 }
 
+func (j *jsiiProxy_Ec2VpnConnection) validateSetEnableAccelerationParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Ec2VpnConnection) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }
 
+func (j *jsiiProxy_Ec2VpnConnection) validateSetLocalIpv4NetworkCidrParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) validateSetLocalIpv6NetworkCidrParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) validateSetOutsideIpAddressTypeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Ec2VpnConnection) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) validateSetRemoteIpv4NetworkCidrParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) validateSetRemoteIpv6NetworkCidrParameters(val *string) error {
 	return nil
 }
 
@@ -113,6 +145,14 @@ func (j *jsiiProxy_Ec2VpnConnection) validateSetStaticRoutesOnlyParameters(val i
 }
 
 func (j *jsiiProxy_Ec2VpnConnection) validateSetTransitGatewayIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) validateSetTransportTransitGatewayAttachmentIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) validateSetTunnelInsideIpVersionParameters(val *string) error {
 	return nil
 }
 

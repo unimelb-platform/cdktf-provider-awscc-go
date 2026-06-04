@@ -1,0 +1,6 @@
+package dataawsccbackuplogicallyairgappedbackupvault
+
+
+type DataAwsccBackupLogicallyAirGappedBackupVaultNotifications struct {
+}
+

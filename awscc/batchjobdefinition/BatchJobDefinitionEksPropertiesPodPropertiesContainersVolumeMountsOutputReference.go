@@ -38,6 +38,9 @@ type BatchJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsOutputRef
 	ReadOnly() interface{}
 	SetReadOnly(val interface{})
 	ReadOnlyInput() interface{}
+	SubPath() *string
+	SetSubPath(val *string)
+	SubPathInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -73,6 +76,7 @@ type BatchJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsOutputRef
 	ResetMountPath()
 	ResetName()
 	ResetReadOnly()
+	ResetSubPath()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -198,6 +202,26 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersVolumeM
 	return returns
 }
 
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsOutputReference) SubPath() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"subPath",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsOutputReference) SubPathInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"subPathInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -308,6 +332,17 @@ func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersVolumeM
 	_jsii_.Set(
 		j,
 		"readOnly",
+		val,
+	)
+}
+
+func (j *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsOutputReference)SetSubPath(val *string) {
+	if err := j.validateSetSubPathParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"subPath",
 		val,
 	)
 }
@@ -540,6 +575,14 @@ func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersVolumeM
 	_jsii_.InvokeVoid(
 		b,
 		"resetReadOnly",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BatchJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsOutputReference) ResetSubPath() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetSubPath",
 		nil, // no parameters
 	)
 }

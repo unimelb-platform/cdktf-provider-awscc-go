@@ -64,6 +64,7 @@ type ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentCon
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAlarmMetricName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsCust
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfigurationConfigurationDetailsAlarmMetricsOutputReference) ResetAlarmMetricName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetAlarmMetricName",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsCustomComponentConfigurationConfigurationDetailsAlarmMetricsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

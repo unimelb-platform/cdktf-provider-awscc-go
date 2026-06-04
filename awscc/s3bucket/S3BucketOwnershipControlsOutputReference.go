@@ -64,6 +64,7 @@ type S3BucketOwnershipControlsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutRules(value interface{})
+	ResetRules()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -446,6 +447,14 @@ func (s *jsiiProxy_S3BucketOwnershipControlsOutputReference) PutRules(value inte
 		s,
 		"putRules",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_S3BucketOwnershipControlsOutputReference) ResetRules() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetRules",
+		nil, // no parameters
 	)
 }
 

@@ -68,6 +68,7 @@ type KinesisfirehoseDeliveryStreamAmazonOpenSearchServerlessDestinationConfigura
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutParameters(value interface{})
 	ResetParameters()
+	ResetType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonOpenSearchServerlessDestin
 	_jsii_.InvokeVoid(
 		k,
 		"resetParameters",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonOpenSearchServerlessDestinationConfigurationProcessingConfigurationProcessorsOutputReference) ResetType() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetType",
 		nil, // no parameters
 	)
 }

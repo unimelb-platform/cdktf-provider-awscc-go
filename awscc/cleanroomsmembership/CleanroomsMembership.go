@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/cleanroomsmembership/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cleanrooms_membership awscc_cleanrooms_membership}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cleanrooms_membership awscc_cleanrooms_membership}.
 type CleanroomsMembership interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -30,6 +30,8 @@ type CleanroomsMembership interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	DefaultJobResultConfiguration() CleanroomsMembershipDefaultJobResultConfigurationOutputReference
+	DefaultJobResultConfigurationInput() interface{}
 	DefaultResultConfiguration() CleanroomsMembershipDefaultResultConfigurationOutputReference
 	DefaultResultConfigurationInput() interface{}
 	// Experimental.
@@ -45,6 +47,9 @@ type CleanroomsMembership interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
+	JobLogStatus() *string
+	SetJobLogStatus(val *string)
+	JobLogStatusInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -99,25 +104,41 @@ type CleanroomsMembership interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutDefaultJobResultConfiguration(value *CleanroomsMembershipDefaultJobResultConfiguration)
 	PutDefaultResultConfiguration(value *CleanroomsMembershipDefaultResultConfiguration)
 	PutPaymentConfiguration(value *CleanroomsMembershipPaymentConfiguration)
 	PutTags(value interface{})
+	ResetDefaultJobResultConfiguration()
 	ResetDefaultResultConfiguration()
+	ResetJobLogStatus()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPaymentConfiguration()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -222,6 +243,26 @@ func (j *jsiiProxy_CleanroomsMembership) Count() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_CleanroomsMembership) DefaultJobResultConfiguration() CleanroomsMembershipDefaultJobResultConfigurationOutputReference {
+	var returns CleanroomsMembershipDefaultJobResultConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"defaultJobResultConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsMembership) DefaultJobResultConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"defaultJobResultConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_CleanroomsMembership) DefaultResultConfiguration() CleanroomsMembershipDefaultResultConfigurationOutputReference {
 	var returns CleanroomsMembershipDefaultResultConfigurationOutputReference
 	_jsii_.Get(
@@ -287,6 +328,26 @@ func (j *jsiiProxy_CleanroomsMembership) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsMembership) JobLogStatus() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"jobLogStatus",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsMembership) JobLogStatusInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"jobLogStatusInput",
 		&returns,
 	)
 	return returns
@@ -443,7 +504,7 @@ func (j *jsiiProxy_CleanroomsMembership) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cleanrooms_membership awscc_cleanrooms_membership} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cleanrooms_membership awscc_cleanrooms_membership} Resource.
 func NewCleanroomsMembership(scope constructs.Construct, id *string, config *CleanroomsMembershipConfig) CleanroomsMembership {
 	_init_.Initialize()
 
@@ -461,7 +522,7 @@ func NewCleanroomsMembership(scope constructs.Construct, id *string, config *Cle
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cleanrooms_membership awscc_cleanrooms_membership} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cleanrooms_membership awscc_cleanrooms_membership} Resource.
 func NewCleanroomsMembership_Override(c CleanroomsMembership, scope constructs.Construct, id *string, config *CleanroomsMembershipConfig) {
 	_init_.Initialize()
 
@@ -517,6 +578,17 @@ func (j *jsiiProxy_CleanroomsMembership)SetForEach(val cdktf.ITerraformIterator)
 	_jsii_.Set(
 		j,
 		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CleanroomsMembership)SetJobLogStatus(val *string) {
+	if err := j.validateSetJobLogStatusParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"jobLogStatus",
 		val,
 	)
 }
@@ -831,6 +903,19 @@ func (c *jsiiProxy_CleanroomsMembership) GetStringMapAttribute(terraformAttribut
 	return returns
 }
 
+func (c *jsiiProxy_CleanroomsMembership) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_CleanroomsMembership) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -858,6 +943,17 @@ func (c *jsiiProxy_CleanroomsMembership) InterpolationForAttribute(terraformAttr
 	return returns
 }
 
+func (c *jsiiProxy_CleanroomsMembership) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CleanroomsMembership) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -869,6 +965,17 @@ func (c *jsiiProxy_CleanroomsMembership) MoveTo(moveTarget *string, index interf
 	)
 }
 
+func (c *jsiiProxy_CleanroomsMembership) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CleanroomsMembership) OverrideLogicalId(newLogicalId *string) {
 	if err := c.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -877,6 +984,17 @@ func (c *jsiiProxy_CleanroomsMembership) OverrideLogicalId(newLogicalId *string)
 		c,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (c *jsiiProxy_CleanroomsMembership) PutDefaultJobResultConfiguration(value *CleanroomsMembershipDefaultJobResultConfiguration) {
+	if err := c.validatePutDefaultJobResultConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putDefaultJobResultConfiguration",
+		[]interface{}{value},
 	)
 }
 
@@ -913,10 +1031,26 @@ func (c *jsiiProxy_CleanroomsMembership) PutTags(value interface{}) {
 	)
 }
 
+func (c *jsiiProxy_CleanroomsMembership) ResetDefaultJobResultConfiguration() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetDefaultJobResultConfiguration",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CleanroomsMembership) ResetDefaultResultConfiguration() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetDefaultResultConfiguration",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsMembership) ResetJobLogStatus() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetJobLogStatus",
 		nil, // no parameters
 	)
 }
@@ -951,6 +1085,32 @@ func (c *jsiiProxy_CleanroomsMembership) SynthesizeAttributes() *map[string]inte
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CleanroomsMembership) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CleanroomsMembership) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

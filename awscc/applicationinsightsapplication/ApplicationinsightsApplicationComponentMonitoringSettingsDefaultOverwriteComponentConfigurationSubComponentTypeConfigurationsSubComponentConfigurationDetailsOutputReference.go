@@ -29,10 +29,12 @@ type ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteCo
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetails
-	SetInternalValue(val *ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetails)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Logs() ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsLogsList
 	LogsInput() interface{}
+	Processes() ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsProcessesList
+	ProcessesInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -69,9 +71,11 @@ type ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteCo
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAlarmMetrics(value interface{})
 	PutLogs(value interface{})
+	PutProcesses(value interface{})
 	PutWindowsEvents(value interface{})
 	ResetAlarmMetrics()
 	ResetLogs()
+	ResetProcesses()
 	ResetWindowsEvents()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -148,8 +152,8 @@ func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefa
 	return returns
 }
 
-func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsOutputReference) InternalValue() *ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetails {
-	var returns *ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetails
+func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -173,6 +177,26 @@ func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefa
 	_jsii_.Get(
 		j,
 		"logsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsOutputReference) Processes() ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsProcessesList {
+	var returns ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsProcessesList
+	_jsii_.Get(
+		j,
+		"processes",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsOutputReference) ProcessesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"processesInput",
 		&returns,
 	)
 	return returns
@@ -268,7 +292,7 @@ func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefa
 	)
 }
 
-func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsOutputReference)SetInternalValue(val *ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetails) {
+func (j *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -509,6 +533,17 @@ func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefa
 	)
 }
 
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsOutputReference) PutProcesses(value interface{}) {
+	if err := a.validatePutProcessesParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putProcesses",
+		[]interface{}{value},
+	)
+}
+
 func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsOutputReference) PutWindowsEvents(value interface{}) {
 	if err := a.validatePutWindowsEventsParameters(value); err != nil {
 		panic(err)
@@ -532,6 +567,14 @@ func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefa
 	_jsii_.InvokeVoid(
 		a,
 		"resetLogs",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApplicationinsightsApplicationComponentMonitoringSettingsDefaultOverwriteComponentConfigurationSubComponentTypeConfigurationsSubComponentConfigurationDetailsOutputReference) ResetProcesses() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetProcesses",
 		nil, // no parameters
 	)
 }

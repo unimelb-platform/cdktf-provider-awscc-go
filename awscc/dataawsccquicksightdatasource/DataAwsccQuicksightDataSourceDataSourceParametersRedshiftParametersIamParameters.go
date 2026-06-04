@@ -1,0 +1,6 @@
+package dataawsccquicksightdatasource
+
+
+type DataAwsccQuicksightDataSourceDataSourceParametersRedshiftParametersIamParameters struct {
+}
+

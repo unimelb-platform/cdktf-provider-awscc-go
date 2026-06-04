@@ -101,8 +101,17 @@ type XraySamplingRuleSamplingRuleRecordSamplingRuleOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetAttributes()
+	ResetFixedRate()
+	ResetHost()
+	ResetHttpMethod()
+	ResetPriority()
+	ResetReservoirSize()
+	ResetResourceArn()
 	ResetRuleArn()
 	ResetRuleName()
+	ResetServiceName()
+	ResetServiceType()
+	ResetUrlPath()
 	ResetVersion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -869,6 +878,54 @@ func (x *jsiiProxy_XraySamplingRuleSamplingRuleRecordSamplingRuleOutputReference
 	)
 }
 
+func (x *jsiiProxy_XraySamplingRuleSamplingRuleRecordSamplingRuleOutputReference) ResetFixedRate() {
+	_jsii_.InvokeVoid(
+		x,
+		"resetFixedRate",
+		nil, // no parameters
+	)
+}
+
+func (x *jsiiProxy_XraySamplingRuleSamplingRuleRecordSamplingRuleOutputReference) ResetHost() {
+	_jsii_.InvokeVoid(
+		x,
+		"resetHost",
+		nil, // no parameters
+	)
+}
+
+func (x *jsiiProxy_XraySamplingRuleSamplingRuleRecordSamplingRuleOutputReference) ResetHttpMethod() {
+	_jsii_.InvokeVoid(
+		x,
+		"resetHttpMethod",
+		nil, // no parameters
+	)
+}
+
+func (x *jsiiProxy_XraySamplingRuleSamplingRuleRecordSamplingRuleOutputReference) ResetPriority() {
+	_jsii_.InvokeVoid(
+		x,
+		"resetPriority",
+		nil, // no parameters
+	)
+}
+
+func (x *jsiiProxy_XraySamplingRuleSamplingRuleRecordSamplingRuleOutputReference) ResetReservoirSize() {
+	_jsii_.InvokeVoid(
+		x,
+		"resetReservoirSize",
+		nil, // no parameters
+	)
+}
+
+func (x *jsiiProxy_XraySamplingRuleSamplingRuleRecordSamplingRuleOutputReference) ResetResourceArn() {
+	_jsii_.InvokeVoid(
+		x,
+		"resetResourceArn",
+		nil, // no parameters
+	)
+}
+
 func (x *jsiiProxy_XraySamplingRuleSamplingRuleRecordSamplingRuleOutputReference) ResetRuleArn() {
 	_jsii_.InvokeVoid(
 		x,
@@ -881,6 +938,30 @@ func (x *jsiiProxy_XraySamplingRuleSamplingRuleRecordSamplingRuleOutputReference
 	_jsii_.InvokeVoid(
 		x,
 		"resetRuleName",
+		nil, // no parameters
+	)
+}
+
+func (x *jsiiProxy_XraySamplingRuleSamplingRuleRecordSamplingRuleOutputReference) ResetServiceName() {
+	_jsii_.InvokeVoid(
+		x,
+		"resetServiceName",
+		nil, // no parameters
+	)
+}
+
+func (x *jsiiProxy_XraySamplingRuleSamplingRuleRecordSamplingRuleOutputReference) ResetServiceType() {
+	_jsii_.InvokeVoid(
+		x,
+		"resetServiceType",
+		nil, // no parameters
+	)
+}
+
+func (x *jsiiProxy_XraySamplingRuleSamplingRuleRecordSamplingRuleOutputReference) ResetUrlPath() {
+	_jsii_.InvokeVoid(
+		x,
+		"resetUrlPath",
 		nil, // no parameters
 	)
 }

@@ -179,9 +179,25 @@ func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaL
 	return nil
 }
 
-func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStructOutputReference) validateSetInternalValueParameters(val *Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStruct) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStructOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStruct:
+		val := val.(*Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStruct)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStruct:
+		val_ := val.(Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStruct)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *Greengrassv2DeploymentIotJobConfigurationAbortConfigCriteriaListStruct; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

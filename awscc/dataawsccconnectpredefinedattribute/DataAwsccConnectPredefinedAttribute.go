@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccconnectpredefinedattribute/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/connect_predefined_attribute awscc_connect_predefined_attribute}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/connect_predefined_attribute awscc_connect_predefined_attribute}.
 type DataAwsccConnectPredefinedAttribute interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -36,6 +36,8 @@ type DataAwsccConnectPredefinedAttribute interface {
 	SetId(val *string)
 	IdInput() *string
 	InstanceArn() *string
+	LastModifiedRegion() *string
+	LastModifiedTime() *float64
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -85,6 +87,10 @@ type DataAwsccConnectPredefinedAttribute interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -199,6 +205,26 @@ func (j *jsiiProxy_DataAwsccConnectPredefinedAttribute) InstanceArn() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccConnectPredefinedAttribute) LastModifiedRegion() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"lastModifiedRegion",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccConnectPredefinedAttribute) LastModifiedTime() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"lastModifiedTime",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccConnectPredefinedAttribute) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -290,7 +316,7 @@ func (j *jsiiProxy_DataAwsccConnectPredefinedAttribute) Values() DataAwsccConnec
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/connect_predefined_attribute awscc_connect_predefined_attribute} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/connect_predefined_attribute awscc_connect_predefined_attribute} Data Source.
 func NewDataAwsccConnectPredefinedAttribute(scope constructs.Construct, id *string, config *DataAwsccConnectPredefinedAttributeConfig) DataAwsccConnectPredefinedAttribute {
 	_init_.Initialize()
 
@@ -308,7 +334,7 @@ func NewDataAwsccConnectPredefinedAttribute(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/connect_predefined_attribute awscc_connect_predefined_attribute} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/connect_predefined_attribute awscc_connect_predefined_attribute} Data Source.
 func NewDataAwsccConnectPredefinedAttribute_Override(d DataAwsccConnectPredefinedAttribute, scope constructs.Construct, id *string, config *DataAwsccConnectPredefinedAttributeConfig) {
 	_init_.Initialize()
 
@@ -675,6 +701,32 @@ func (d *jsiiProxy_DataAwsccConnectPredefinedAttribute) SynthesizeAttributes() *
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccConnectPredefinedAttribute) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccConnectPredefinedAttribute) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

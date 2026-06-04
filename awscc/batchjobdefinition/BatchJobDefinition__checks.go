@@ -119,6 +119,14 @@ func (b *jsiiProxy_BatchJobDefinition) validateInterpolationForAttributeParamete
 	return nil
 }
 
+func (b *jsiiProxy_BatchJobDefinition) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (b *jsiiProxy_BatchJobDefinition) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (b *jsiiProxy_BatchJobDefinition) validateMoveToParameters(moveTarget *stri
 	return nil
 }
 
+func (b *jsiiProxy_BatchJobDefinition) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (b *jsiiProxy_BatchJobDefinition) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -188,7 +204,29 @@ func (b *jsiiProxy_BatchJobDefinition) validateOverrideLogicalIdParameters(newLo
 	return nil
 }
 
+func (b *jsiiProxy_BatchJobDefinition) validatePutConsumableResourcePropertiesParameters(value *BatchJobDefinitionConsumableResourceProperties) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (b *jsiiProxy_BatchJobDefinition) validatePutContainerPropertiesParameters(value *BatchJobDefinitionContainerProperties) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (b *jsiiProxy_BatchJobDefinition) validatePutEcsPropertiesParameters(value *BatchJobDefinitionEcsProperties) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -389,7 +427,7 @@ func (j *jsiiProxy_BatchJobDefinition) validateSetLifecycleParameters(val *cdktf
 	return nil
 }
 
-func (j *jsiiProxy_BatchJobDefinition) validateSetParametersParameters(val *string) error {
+func (j *jsiiProxy_BatchJobDefinition) validateSetParametersParameters(val *map[string]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -479,7 +517,7 @@ func (j *jsiiProxy_BatchJobDefinition) validateSetSchedulingPriorityParameters(v
 	return nil
 }
 
-func (j *jsiiProxy_BatchJobDefinition) validateSetTagsParameters(val *string) error {
+func (j *jsiiProxy_BatchJobDefinition) validateSetTagsParameters(val *map[string]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

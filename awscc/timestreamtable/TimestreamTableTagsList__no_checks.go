@@ -4,6 +4,10 @@ package timestreamtable
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (t *jsiiProxy_TimestreamTableTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (t *jsiiProxy_TimestreamTableTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

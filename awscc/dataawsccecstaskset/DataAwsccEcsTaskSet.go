@@ -9,9 +9,10 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccecstaskset/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ecs_task_set awscc_ecs_task_set}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ecs_task_set awscc_ecs_task_set}.
 type DataAwsccEcsTaskSet interface {
 	cdktf.TerraformDataSource
+	CapacityProviderStrategy() DataAwsccEcsTaskSetCapacityProviderStrategyList
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	Cluster() *string
@@ -56,7 +57,9 @@ type DataAwsccEcsTaskSet interface {
 	Scale() DataAwsccEcsTaskSetScaleOutputReference
 	Service() *string
 	ServiceRegistries() DataAwsccEcsTaskSetServiceRegistriesList
+	Tags() DataAwsccEcsTaskSetTagsList
 	TaskDefinition() *string
+	TaskSetId() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -92,6 +95,10 @@ type DataAwsccEcsTaskSet interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -104,6 +111,16 @@ type DataAwsccEcsTaskSet interface {
 // The jsii proxy struct for DataAwsccEcsTaskSet
 type jsiiProxy_DataAwsccEcsTaskSet struct {
 	internal.Type__cdktfTerraformDataSource
+}
+
+func (j *jsiiProxy_DataAwsccEcsTaskSet) CapacityProviderStrategy() DataAwsccEcsTaskSetCapacityProviderStrategyList {
+	var returns DataAwsccEcsTaskSetCapacityProviderStrategyList
+	_jsii_.Get(
+		j,
+		"capacityProviderStrategy",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataAwsccEcsTaskSet) CdktfStack() cdktf.TerraformStack {
@@ -326,11 +343,31 @@ func (j *jsiiProxy_DataAwsccEcsTaskSet) ServiceRegistries() DataAwsccEcsTaskSetS
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEcsTaskSet) Tags() DataAwsccEcsTaskSetTagsList {
+	var returns DataAwsccEcsTaskSetTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEcsTaskSet) TaskDefinition() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"taskDefinition",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEcsTaskSet) TaskSetId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"taskSetId",
 		&returns,
 	)
 	return returns
@@ -367,7 +404,7 @@ func (j *jsiiProxy_DataAwsccEcsTaskSet) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ecs_task_set awscc_ecs_task_set} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ecs_task_set awscc_ecs_task_set} Data Source.
 func NewDataAwsccEcsTaskSet(scope constructs.Construct, id *string, config *DataAwsccEcsTaskSetConfig) DataAwsccEcsTaskSet {
 	_init_.Initialize()
 
@@ -385,7 +422,7 @@ func NewDataAwsccEcsTaskSet(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ecs_task_set awscc_ecs_task_set} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ecs_task_set awscc_ecs_task_set} Data Source.
 func NewDataAwsccEcsTaskSet_Override(d DataAwsccEcsTaskSet, scope constructs.Construct, id *string, config *DataAwsccEcsTaskSetConfig) {
 	_init_.Initialize()
 
@@ -752,6 +789,32 @@ func (d *jsiiProxy_DataAwsccEcsTaskSet) SynthesizeAttributes() *map[string]inter
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEcsTaskSet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEcsTaskSet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccbackupbackupvault/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/backup_backup_vault awscc_backup_backup_vault}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/backup_backup_vault awscc_backup_backup_vault}.
 type DataAwsccBackupBackupVault interface {
 	cdktf.TerraformDataSource
 	AccessPolicy() *string
@@ -89,6 +89,10 @@ type DataAwsccBackupBackupVault interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -334,7 +338,7 @@ func (j *jsiiProxy_DataAwsccBackupBackupVault) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/backup_backup_vault awscc_backup_backup_vault} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/backup_backup_vault awscc_backup_backup_vault} Data Source.
 func NewDataAwsccBackupBackupVault(scope constructs.Construct, id *string, config *DataAwsccBackupBackupVaultConfig) DataAwsccBackupBackupVault {
 	_init_.Initialize()
 
@@ -352,7 +356,7 @@ func NewDataAwsccBackupBackupVault(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/backup_backup_vault awscc_backup_backup_vault} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/backup_backup_vault awscc_backup_backup_vault} Data Source.
 func NewDataAwsccBackupBackupVault_Override(d DataAwsccBackupBackupVault, scope constructs.Construct, id *string, config *DataAwsccBackupBackupVaultConfig) {
 	_init_.Initialize()
 
@@ -719,6 +723,32 @@ func (d *jsiiProxy_DataAwsccBackupBackupVault) SynthesizeAttributes() *map[strin
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccBackupBackupVault) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccBackupBackupVault) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

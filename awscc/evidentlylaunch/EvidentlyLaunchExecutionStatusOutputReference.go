@@ -72,6 +72,7 @@ type EvidentlyLaunchExecutionStatusOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetDesiredState()
 	ResetReason()
+	ResetStatus()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (e *jsiiProxy_EvidentlyLaunchExecutionStatusOutputReference) ResetReason() 
 	_jsii_.InvokeVoid(
 		e,
 		"resetReason",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EvidentlyLaunchExecutionStatusOutputReference) ResetStatus() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetStatus",
 		nil, // no parameters
 	)
 }

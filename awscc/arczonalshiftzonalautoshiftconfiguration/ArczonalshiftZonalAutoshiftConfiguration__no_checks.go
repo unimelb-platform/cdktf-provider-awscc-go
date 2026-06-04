@@ -56,7 +56,15 @@ func (a *jsiiProxy_ArczonalshiftZonalAutoshiftConfiguration) validateInterpolati
 	return nil
 }
 
+func (a *jsiiProxy_ArczonalshiftZonalAutoshiftConfiguration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_ArczonalshiftZonalAutoshiftConfiguration) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (a *jsiiProxy_ArczonalshiftZonalAutoshiftConfiguration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

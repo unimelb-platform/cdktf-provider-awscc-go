@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/iotfleetwisecampaign/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iotfleetwise_campaign awscc_iotfleetwise_campaign}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iotfleetwise_campaign awscc_iotfleetwise_campaign}.
 type IotfleetwiseCampaign interface {
 	cdktf.TerraformResource
 	Action() *string
@@ -39,6 +39,8 @@ type IotfleetwiseCampaign interface {
 	DataExtraDimensions() *[]*string
 	SetDataExtraDimensions(val *[]*string)
 	DataExtraDimensionsInput() *[]*string
+	DataPartitions() IotfleetwiseCampaignDataPartitionsList
+	DataPartitionsInput() interface{}
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -92,6 +94,8 @@ type IotfleetwiseCampaign interface {
 	SignalCatalogArnInput() *string
 	SignalsToCollect() IotfleetwiseCampaignSignalsToCollectList
 	SignalsToCollectInput() interface{}
+	SignalsToFetch() IotfleetwiseCampaignSignalsToFetchList
+	SignalsToFetchInput() interface{}
 	SpoolingMode() *string
 	SetSpoolingMode(val *string)
 	SpoolingModeInput() *string
@@ -134,22 +138,36 @@ type IotfleetwiseCampaign interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutCollectionScheme(value *IotfleetwiseCampaignCollectionScheme)
 	PutDataDestinationConfigs(value interface{})
+	PutDataPartitions(value interface{})
 	PutSignalsToCollect(value interface{})
+	PutSignalsToFetch(value interface{})
 	PutTags(value interface{})
+	ResetAction()
 	ResetCompression()
 	ResetDataDestinationConfigs()
 	ResetDataExtraDimensions()
+	ResetDataPartitions()
 	ResetDescription()
 	ResetDiagnosticsMode()
 	ResetExpiryTime()
@@ -159,10 +177,14 @@ type IotfleetwiseCampaign interface {
 	ResetPostTriggerCollectionDuration()
 	ResetPriority()
 	ResetSignalsToCollect()
+	ResetSignalsToFetch()
 	ResetSpoolingMode()
 	ResetStartTime()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -332,6 +354,26 @@ func (j *jsiiProxy_IotfleetwiseCampaign) DataExtraDimensionsInput() *[]*string {
 	_jsii_.Get(
 		j,
 		"dataExtraDimensionsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotfleetwiseCampaign) DataPartitions() IotfleetwiseCampaignDataPartitionsList {
+	var returns IotfleetwiseCampaignDataPartitionsList
+	_jsii_.Get(
+		j,
+		"dataPartitions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotfleetwiseCampaign) DataPartitionsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"dataPartitionsInput",
 		&returns,
 	)
 	return returns
@@ -607,6 +649,26 @@ func (j *jsiiProxy_IotfleetwiseCampaign) SignalsToCollectInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_IotfleetwiseCampaign) SignalsToFetch() IotfleetwiseCampaignSignalsToFetchList {
+	var returns IotfleetwiseCampaignSignalsToFetchList
+	_jsii_.Get(
+		j,
+		"signalsToFetch",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IotfleetwiseCampaign) SignalsToFetchInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"signalsToFetchInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_IotfleetwiseCampaign) SpoolingMode() *string {
 	var returns *string
 	_jsii_.Get(
@@ -728,7 +790,7 @@ func (j *jsiiProxy_IotfleetwiseCampaign) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iotfleetwise_campaign awscc_iotfleetwise_campaign} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iotfleetwise_campaign awscc_iotfleetwise_campaign} Resource.
 func NewIotfleetwiseCampaign(scope constructs.Construct, id *string, config *IotfleetwiseCampaignConfig) IotfleetwiseCampaign {
 	_init_.Initialize()
 
@@ -746,7 +808,7 @@ func NewIotfleetwiseCampaign(scope constructs.Construct, id *string, config *Iot
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iotfleetwise_campaign awscc_iotfleetwise_campaign} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iotfleetwise_campaign awscc_iotfleetwise_campaign} Resource.
 func NewIotfleetwiseCampaign_Override(i IotfleetwiseCampaign, scope constructs.Construct, id *string, config *IotfleetwiseCampaignConfig) {
 	_init_.Initialize()
 
@@ -1237,6 +1299,19 @@ func (i *jsiiProxy_IotfleetwiseCampaign) GetStringMapAttribute(terraformAttribut
 	return returns
 }
 
+func (i *jsiiProxy_IotfleetwiseCampaign) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (i *jsiiProxy_IotfleetwiseCampaign) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := i.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1264,6 +1339,17 @@ func (i *jsiiProxy_IotfleetwiseCampaign) InterpolationForAttribute(terraformAttr
 	return returns
 }
 
+func (i *jsiiProxy_IotfleetwiseCampaign) MoveFromId(id *string) {
+	if err := i.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (i *jsiiProxy_IotfleetwiseCampaign) MoveTo(moveTarget *string, index interface{}) {
 	if err := i.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1272,6 +1358,17 @@ func (i *jsiiProxy_IotfleetwiseCampaign) MoveTo(moveTarget *string, index interf
 		i,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (i *jsiiProxy_IotfleetwiseCampaign) MoveToId(id *string) {
+	if err := i.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1308,6 +1405,17 @@ func (i *jsiiProxy_IotfleetwiseCampaign) PutDataDestinationConfigs(value interfa
 	)
 }
 
+func (i *jsiiProxy_IotfleetwiseCampaign) PutDataPartitions(value interface{}) {
+	if err := i.validatePutDataPartitionsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putDataPartitions",
+		[]interface{}{value},
+	)
+}
+
 func (i *jsiiProxy_IotfleetwiseCampaign) PutSignalsToCollect(value interface{}) {
 	if err := i.validatePutSignalsToCollectParameters(value); err != nil {
 		panic(err)
@@ -1315,6 +1423,17 @@ func (i *jsiiProxy_IotfleetwiseCampaign) PutSignalsToCollect(value interface{}) 
 	_jsii_.InvokeVoid(
 		i,
 		"putSignalsToCollect",
+		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IotfleetwiseCampaign) PutSignalsToFetch(value interface{}) {
+	if err := i.validatePutSignalsToFetchParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putSignalsToFetch",
 		[]interface{}{value},
 	)
 }
@@ -1327,6 +1446,14 @@ func (i *jsiiProxy_IotfleetwiseCampaign) PutTags(value interface{}) {
 		i,
 		"putTags",
 		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_IotfleetwiseCampaign) ResetAction() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetAction",
+		nil, // no parameters
 	)
 }
 
@@ -1350,6 +1477,14 @@ func (i *jsiiProxy_IotfleetwiseCampaign) ResetDataExtraDimensions() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetDataExtraDimensions",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IotfleetwiseCampaign) ResetDataPartitions() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetDataPartitions",
 		nil, // no parameters
 	)
 }
@@ -1410,6 +1545,14 @@ func (i *jsiiProxy_IotfleetwiseCampaign) ResetSignalsToCollect() {
 	)
 }
 
+func (i *jsiiProxy_IotfleetwiseCampaign) ResetSignalsToFetch() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetSignalsToFetch",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_IotfleetwiseCampaign) ResetSpoolingMode() {
 	_jsii_.InvokeVoid(
 		i,
@@ -1440,6 +1583,32 @@ func (i *jsiiProxy_IotfleetwiseCampaign) SynthesizeAttributes() *map[string]inte
 	_jsii_.Invoke(
 		i,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IotfleetwiseCampaign) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		i,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_IotfleetwiseCampaign) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

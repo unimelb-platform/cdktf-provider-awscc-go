@@ -56,7 +56,7 @@ func (j *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterFilterVal
 	return nil
 }
 
-func (j *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterFilterValuesMapOutputReference) validateSetInternalValueParameters(val *DatabrewDatasetPathOptionsParametersDatasetParameterFilterValuesMap) error {
+func (j *jsiiProxy_DatabrewDatasetPathOptionsParametersDatasetParameterFilterValuesMapOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

@@ -67,6 +67,7 @@ type AutoscalingAutoScalingGroupMetricsCollectionOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetGranularity()
 	ResetMetrics()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroupMetricsCollectionOutputReference) 
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroupMetricsCollectionOutputReference) ResetGranularity() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetGranularity",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AutoscalingAutoScalingGroupMetricsCollectionOutputReference) ResetMetrics() {

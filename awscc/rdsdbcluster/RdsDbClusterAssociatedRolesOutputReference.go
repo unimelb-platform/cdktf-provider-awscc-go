@@ -68,6 +68,7 @@ type RdsDbClusterAssociatedRolesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetFeatureName()
+	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (r *jsiiProxy_RdsDbClusterAssociatedRolesOutputReference) ResetFeatureName(
 	_jsii_.InvokeVoid(
 		r,
 		"resetFeatureName",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RdsDbClusterAssociatedRolesOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetRoleArn",
 		nil, // no parameters
 	)
 }

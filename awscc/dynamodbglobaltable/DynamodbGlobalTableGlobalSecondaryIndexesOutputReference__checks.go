@@ -132,6 +132,28 @@ func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) val
 	return nil
 }
 
+func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) validatePutWarmThroughputParameters(value *DynamodbGlobalTableGlobalSecondaryIndexesWarmThroughput) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) validatePutWriteOnDemandThroughputSettingsParameters(value *DynamodbGlobalTableGlobalSecondaryIndexesWriteOnDemandThroughputSettings) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) validatePutWriteProvisionedThroughputSettingsParameters(value *DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThroughputSettings) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")

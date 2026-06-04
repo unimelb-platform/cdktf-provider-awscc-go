@@ -2,13 +2,21 @@ package resiliencehubresiliencypolicy
 
 
 type ResiliencehubResiliencyPolicyPolicy struct {
-	// RPO in seconds.
+	// Failure Policy.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/resiliencehub_resiliency_policy#rpo_in_secs ResiliencehubResiliencyPolicy#rpo_in_secs}
-	RpoInSecs *float64 `field:"optional" json:"rpoInSecs" yaml:"rpoInSecs"`
-	// RTO in seconds.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/resiliencehub_resiliency_policy#az ResiliencehubResiliencyPolicy#az}
+	Az *ResiliencehubResiliencyPolicyPolicyAz `field:"required" json:"az" yaml:"az"`
+	// Failure Policy.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/resiliencehub_resiliency_policy#rto_in_secs ResiliencehubResiliencyPolicy#rto_in_secs}
-	RtoInSecs *float64 `field:"optional" json:"rtoInSecs" yaml:"rtoInSecs"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/resiliencehub_resiliency_policy#hardware ResiliencehubResiliencyPolicy#hardware}
+	Hardware *ResiliencehubResiliencyPolicyPolicyHardware `field:"required" json:"hardware" yaml:"hardware"`
+	// Failure Policy.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/resiliencehub_resiliency_policy#software ResiliencehubResiliencyPolicy#software}
+	SoftwareAttribute *ResiliencehubResiliencyPolicyPolicySoftware `field:"required" json:"softwareAttribute" yaml:"softwareAttribute"`
+	// Failure Policy.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/resiliencehub_resiliency_policy#region ResiliencehubResiliencyPolicy#region}
+	Region *ResiliencehubResiliencyPolicyPolicyRegion `field:"optional" json:"region" yaml:"region"`
 }
 

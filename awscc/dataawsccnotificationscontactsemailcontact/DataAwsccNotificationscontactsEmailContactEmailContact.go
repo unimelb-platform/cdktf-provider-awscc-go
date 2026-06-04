@@ -1,0 +1,6 @@
+package dataawsccnotificationscontactsemailcontact
+
+
+type DataAwsccNotificationscontactsEmailContactEmailContact struct {
+}
+

@@ -60,7 +60,7 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigura
 	return nil
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointConfigurationOutputReference) validateSetInternalValueParameters(val *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointConfiguration) error {
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfigurationEndpointConfigurationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

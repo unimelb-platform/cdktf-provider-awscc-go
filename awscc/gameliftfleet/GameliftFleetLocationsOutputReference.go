@@ -67,6 +67,7 @@ type GameliftFleetLocationsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutLocationCapacity(value *GameliftFleetLocationsLocationCapacity)
+	ResetLocation()
 	ResetLocationCapacity()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -481,6 +482,14 @@ func (g *jsiiProxy_GameliftFleetLocationsOutputReference) PutLocationCapacity(va
 		g,
 		"putLocationCapacity",
 		[]interface{}{value},
+	)
+}
+
+func (g *jsiiProxy_GameliftFleetLocationsOutputReference) ResetLocation() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetLocation",
+		nil, // no parameters
 	)
 }
 

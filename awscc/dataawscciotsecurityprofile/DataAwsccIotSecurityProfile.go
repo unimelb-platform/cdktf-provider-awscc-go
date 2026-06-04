@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscciotsecurityprofile/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iot_security_profile awscc_iot_security_profile}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iot_security_profile awscc_iot_security_profile}.
 type DataAwsccIotSecurityProfile interface {
 	cdktf.TerraformDataSource
 	AdditionalMetricsToRetainV2() DataAwsccIotSecurityProfileAdditionalMetricsToRetainV2List
@@ -91,6 +91,10 @@ type DataAwsccIotSecurityProfile interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -356,7 +360,7 @@ func (j *jsiiProxy_DataAwsccIotSecurityProfile) TerraformResourceType() *string 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iot_security_profile awscc_iot_security_profile} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iot_security_profile awscc_iot_security_profile} Data Source.
 func NewDataAwsccIotSecurityProfile(scope constructs.Construct, id *string, config *DataAwsccIotSecurityProfileConfig) DataAwsccIotSecurityProfile {
 	_init_.Initialize()
 
@@ -374,7 +378,7 @@ func NewDataAwsccIotSecurityProfile(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/iot_security_profile awscc_iot_security_profile} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/iot_security_profile awscc_iot_security_profile} Data Source.
 func NewDataAwsccIotSecurityProfile_Override(d DataAwsccIotSecurityProfile, scope constructs.Construct, id *string, config *DataAwsccIotSecurityProfileConfig) {
 	_init_.Initialize()
 
@@ -741,6 +745,32 @@ func (d *jsiiProxy_DataAwsccIotSecurityProfile) SynthesizeAttributes() *map[stri
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotSecurityProfile) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIotSecurityProfile) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

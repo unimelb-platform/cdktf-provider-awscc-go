@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/maciefindingsfilter/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/macie_findings_filter awscc_macie_findings_filter}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/macie_findings_filter awscc_macie_findings_filter}.
 type MacieFindingsFilter interface {
 	cdktf.TerraformResource
 	Action() *string
@@ -37,6 +37,7 @@ type MacieFindingsFilter interface {
 	DescriptionInput() *string
 	FindingCriteria() MacieFindingsFilterFindingCriteriaOutputReference
 	FindingCriteriaInput() interface{}
+	FindingsFilterId() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -100,12 +101,22 @@ type MacieFindingsFilter interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -119,6 +130,9 @@ type MacieFindingsFilter interface {
 	ResetPosition()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -248,6 +262,16 @@ func (j *jsiiProxy_MacieFindingsFilter) FindingCriteriaInput() interface{} {
 	_jsii_.Get(
 		j,
 		"findingCriteriaInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MacieFindingsFilter) FindingsFilterId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"findingsFilterId",
 		&returns,
 	)
 	return returns
@@ -434,7 +458,7 @@ func (j *jsiiProxy_MacieFindingsFilter) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/macie_findings_filter awscc_macie_findings_filter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/macie_findings_filter awscc_macie_findings_filter} Resource.
 func NewMacieFindingsFilter(scope constructs.Construct, id *string, config *MacieFindingsFilterConfig) MacieFindingsFilter {
 	_init_.Initialize()
 
@@ -452,7 +476,7 @@ func NewMacieFindingsFilter(scope constructs.Construct, id *string, config *Maci
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/macie_findings_filter awscc_macie_findings_filter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/macie_findings_filter awscc_macie_findings_filter} Resource.
 func NewMacieFindingsFilter_Override(m MacieFindingsFilter, scope constructs.Construct, id *string, config *MacieFindingsFilterConfig) {
 	_init_.Initialize()
 
@@ -844,6 +868,19 @@ func (m *jsiiProxy_MacieFindingsFilter) GetStringMapAttribute(terraformAttribute
 	return returns
 }
 
+func (m *jsiiProxy_MacieFindingsFilter) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (m *jsiiProxy_MacieFindingsFilter) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -871,6 +908,17 @@ func (m *jsiiProxy_MacieFindingsFilter) InterpolationForAttribute(terraformAttri
 	return returns
 }
 
+func (m *jsiiProxy_MacieFindingsFilter) MoveFromId(id *string) {
+	if err := m.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_MacieFindingsFilter) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -879,6 +927,17 @@ func (m *jsiiProxy_MacieFindingsFilter) MoveTo(moveTarget *string, index interfa
 		m,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (m *jsiiProxy_MacieFindingsFilter) MoveToId(id *string) {
+	if err := m.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -961,6 +1020,32 @@ func (m *jsiiProxy_MacieFindingsFilter) SynthesizeAttributes() *map[string]inter
 	_jsii_.Invoke(
 		m,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MacieFindingsFilter) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		m,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MacieFindingsFilter) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

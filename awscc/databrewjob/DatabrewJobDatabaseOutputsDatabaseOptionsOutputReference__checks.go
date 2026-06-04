@@ -174,9 +174,25 @@ func (j *jsiiProxy_DatabrewJobDatabaseOutputsDatabaseOptionsOutputReference) val
 	return nil
 }
 
-func (j *jsiiProxy_DatabrewJobDatabaseOutputsDatabaseOptionsOutputReference) validateSetInternalValueParameters(val *DatabrewJobDatabaseOutputsDatabaseOptions) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_DatabrewJobDatabaseOutputsDatabaseOptionsOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *DatabrewJobDatabaseOutputsDatabaseOptions:
+		val := val.(*DatabrewJobDatabaseOutputsDatabaseOptions)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case DatabrewJobDatabaseOutputsDatabaseOptions:
+		val_ := val.(DatabrewJobDatabaseOutputsDatabaseOptions)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *DatabrewJobDatabaseOutputsDatabaseOptions; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

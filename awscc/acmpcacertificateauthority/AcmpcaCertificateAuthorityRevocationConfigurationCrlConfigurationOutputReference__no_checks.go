@@ -60,7 +60,15 @@ func (j *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigura
 	return nil
 }
 
+func (j *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputReference) validateSetCrlTypeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputReference) validateSetCustomCnameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_AcmpcaCertificateAuthorityRevocationConfigurationCrlConfigurationOutputReference) validateSetCustomPathParameters(val *string) error {
 	return nil
 }
 

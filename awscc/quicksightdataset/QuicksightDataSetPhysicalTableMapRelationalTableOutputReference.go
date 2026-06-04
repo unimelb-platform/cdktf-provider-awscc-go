@@ -77,6 +77,9 @@ type QuicksightDataSetPhysicalTableMapRelationalTableOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutInputColumns(value interface{})
 	ResetCatalog()
+	ResetDataSourceArn()
+	ResetInputColumns()
+	ResetName()
 	ResetSchema()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -591,6 +594,30 @@ func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapRelationalTableOutputReferen
 	_jsii_.InvokeVoid(
 		q,
 		"resetCatalog",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapRelationalTableOutputReference) ResetDataSourceArn() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDataSourceArn",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapRelationalTableOutputReference) ResetInputColumns() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetInputColumns",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetPhysicalTableMapRelationalTableOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetName",
 		nil, // no parameters
 	)
 }

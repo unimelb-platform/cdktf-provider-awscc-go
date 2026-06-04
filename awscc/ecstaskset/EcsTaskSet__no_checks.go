@@ -56,11 +56,23 @@ func (e *jsiiProxy_EcsTaskSet) validateInterpolationForAttributeParameters(terra
 	return nil
 }
 
+func (e *jsiiProxy_EcsTaskSet) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_EcsTaskSet) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (e *jsiiProxy_EcsTaskSet) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_EcsTaskSet) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (e *jsiiProxy_EcsTaskSet) validatePutCapacityProviderStrategyParameters(value interface{}) error {
 	return nil
 }
 
@@ -77,6 +89,10 @@ func (e *jsiiProxy_EcsTaskSet) validatePutScaleParameters(value *EcsTaskSetScale
 }
 
 func (e *jsiiProxy_EcsTaskSet) validatePutServiceRegistriesParameters(value interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_EcsTaskSet) validatePutTagsParameters(value interface{}) error {
 	return nil
 }
 

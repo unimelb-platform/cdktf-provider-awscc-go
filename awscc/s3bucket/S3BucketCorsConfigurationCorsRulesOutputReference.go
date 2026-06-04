@@ -42,8 +42,8 @@ type S3BucketCorsConfigurationCorsRulesOutputReference interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
-	InternalValue() *S3BucketCorsConfigurationCorsRules
-	SetInternalValue(val *S3BucketCorsConfigurationCorsRules)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	MaxAge() *float64
 	SetMaxAge(val *float64)
 	MaxAgeInput() *float64
@@ -80,6 +80,8 @@ type S3BucketCorsConfigurationCorsRulesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetAllowedHeaders()
+	ResetAllowedMethods()
+	ResetAllowedOrigins()
 	ResetExposedHeaders()
 	ResetId()
 	ResetMaxAge()
@@ -238,8 +240,8 @@ func (j *jsiiProxy_S3BucketCorsConfigurationCorsRulesOutputReference) IdInput() 
 	return returns
 }
 
-func (j *jsiiProxy_S3BucketCorsConfigurationCorsRulesOutputReference) InternalValue() *S3BucketCorsConfigurationCorsRules {
-	var returns *S3BucketCorsConfigurationCorsRules
+func (j *jsiiProxy_S3BucketCorsConfigurationCorsRulesOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -393,7 +395,7 @@ func (j *jsiiProxy_S3BucketCorsConfigurationCorsRulesOutputReference)SetId(val *
 	)
 }
 
-func (j *jsiiProxy_S3BucketCorsConfigurationCorsRulesOutputReference)SetInternalValue(val *S3BucketCorsConfigurationCorsRules) {
+func (j *jsiiProxy_S3BucketCorsConfigurationCorsRulesOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -627,6 +629,22 @@ func (s *jsiiProxy_S3BucketCorsConfigurationCorsRulesOutputReference) ResetAllow
 	_jsii_.InvokeVoid(
 		s,
 		"resetAllowedHeaders",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketCorsConfigurationCorsRulesOutputReference) ResetAllowedMethods() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetAllowedMethods",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3BucketCorsConfigurationCorsRulesOutputReference) ResetAllowedOrigins() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetAllowedOrigins",
 		nil, // no parameters
 	)
 }

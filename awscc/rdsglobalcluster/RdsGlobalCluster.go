@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/rdsglobalcluster/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rds_global_cluster awscc_rds_global_cluster}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_global_cluster awscc_rds_global_cluster}.
 type RdsGlobalCluster interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -34,6 +34,9 @@ type RdsGlobalCluster interface {
 	Engine() *string
 	SetEngine(val *string)
 	EngineInput() *string
+	EngineLifecycleSupport() *string
+	SetEngineLifecycleSupport(val *string)
+	EngineLifecycleSupportInput() *string
 	EngineVersion() *string
 	SetEngineVersion(val *string)
 	EngineVersionInput() *string
@@ -48,6 +51,7 @@ type RdsGlobalCluster interface {
 	GlobalClusterIdentifier() *string
 	SetGlobalClusterIdentifier(val *string)
 	GlobalClusterIdentifierInput() *string
+	GlobalEndpoint() RdsGlobalClusterGlobalEndpointOutputReference
 	Id() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
@@ -71,6 +75,8 @@ type RdsGlobalCluster interface {
 	StorageEncrypted() interface{}
 	SetStorageEncrypted(val interface{})
 	StorageEncryptedInput() interface{}
+	Tags() RdsGlobalClusterTagsList
+	TagsInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -101,17 +107,29 @@ type RdsGlobalCluster interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTags(value interface{})
 	ResetDeletionProtection()
 	ResetEngine()
+	ResetEngineLifecycleSupport()
 	ResetEngineVersion()
 	ResetGlobalClusterIdentifier()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -119,7 +137,11 @@ type RdsGlobalCluster interface {
 	ResetOverrideLogicalId()
 	ResetSourceDbClusterIdentifier()
 	ResetStorageEncrypted()
+	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -224,6 +246,26 @@ func (j *jsiiProxy_RdsGlobalCluster) EngineInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_RdsGlobalCluster) EngineLifecycleSupport() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"engineLifecycleSupport",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsGlobalCluster) EngineLifecycleSupportInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"engineLifecycleSupportInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RdsGlobalCluster) EngineVersion() *string {
 	var returns *string
 	_jsii_.Get(
@@ -289,6 +331,16 @@ func (j *jsiiProxy_RdsGlobalCluster) GlobalClusterIdentifierInput() *string {
 	_jsii_.Get(
 		j,
 		"globalClusterIdentifierInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsGlobalCluster) GlobalEndpoint() RdsGlobalClusterGlobalEndpointOutputReference {
+	var returns RdsGlobalClusterGlobalEndpointOutputReference
+	_jsii_.Get(
+		j,
+		"globalEndpoint",
 		&returns,
 	)
 	return returns
@@ -394,6 +446,26 @@ func (j *jsiiProxy_RdsGlobalCluster) StorageEncryptedInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RdsGlobalCluster) Tags() RdsGlobalClusterTagsList {
+	var returns RdsGlobalClusterTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RdsGlobalCluster) TagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RdsGlobalCluster) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -425,7 +497,7 @@ func (j *jsiiProxy_RdsGlobalCluster) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rds_global_cluster awscc_rds_global_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_global_cluster awscc_rds_global_cluster} Resource.
 func NewRdsGlobalCluster(scope constructs.Construct, id *string, config *RdsGlobalClusterConfig) RdsGlobalCluster {
 	_init_.Initialize()
 
@@ -443,7 +515,7 @@ func NewRdsGlobalCluster(scope constructs.Construct, id *string, config *RdsGlob
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/rds_global_cluster awscc_rds_global_cluster} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/rds_global_cluster awscc_rds_global_cluster} Resource.
 func NewRdsGlobalCluster_Override(r RdsGlobalCluster, scope constructs.Construct, id *string, config *RdsGlobalClusterConfig) {
 	_init_.Initialize()
 
@@ -502,6 +574,17 @@ func (j *jsiiProxy_RdsGlobalCluster)SetEngine(val *string) {
 	_jsii_.Set(
 		j,
 		"engine",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RdsGlobalCluster)SetEngineLifecycleSupport(val *string) {
+	if err := j.validateSetEngineLifecycleSupportParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"engineLifecycleSupport",
 		val,
 	)
 }
@@ -857,6 +940,19 @@ func (r *jsiiProxy_RdsGlobalCluster) GetStringMapAttribute(terraformAttribute *s
 	return returns
 }
 
+func (r *jsiiProxy_RdsGlobalCluster) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (r *jsiiProxy_RdsGlobalCluster) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -884,6 +980,17 @@ func (r *jsiiProxy_RdsGlobalCluster) InterpolationForAttribute(terraformAttribut
 	return returns
 }
 
+func (r *jsiiProxy_RdsGlobalCluster) MoveFromId(id *string) {
+	if err := r.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_RdsGlobalCluster) MoveTo(moveTarget *string, index interface{}) {
 	if err := r.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -895,6 +1002,17 @@ func (r *jsiiProxy_RdsGlobalCluster) MoveTo(moveTarget *string, index interface{
 	)
 }
 
+func (r *jsiiProxy_RdsGlobalCluster) MoveToId(id *string) {
+	if err := r.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_RdsGlobalCluster) OverrideLogicalId(newLogicalId *string) {
 	if err := r.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -903,6 +1021,17 @@ func (r *jsiiProxy_RdsGlobalCluster) OverrideLogicalId(newLogicalId *string) {
 		r,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (r *jsiiProxy_RdsGlobalCluster) PutTags(value interface{}) {
+	if err := r.validatePutTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putTags",
+		[]interface{}{value},
 	)
 }
 
@@ -918,6 +1047,14 @@ func (r *jsiiProxy_RdsGlobalCluster) ResetEngine() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetEngine",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RdsGlobalCluster) ResetEngineLifecycleSupport() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetEngineLifecycleSupport",
 		nil, // no parameters
 	)
 }
@@ -962,12 +1099,46 @@ func (r *jsiiProxy_RdsGlobalCluster) ResetStorageEncrypted() {
 	)
 }
 
+func (r *jsiiProxy_RdsGlobalCluster) ResetTags() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetTags",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_RdsGlobalCluster) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		r,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RdsGlobalCluster) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		r,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RdsGlobalCluster) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

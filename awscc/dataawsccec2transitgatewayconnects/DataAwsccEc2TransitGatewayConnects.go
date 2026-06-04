@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2transitgatewayconnects/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_transit_gateway_connects awscc_ec2_transit_gateway_connects}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_transit_gateway_connects awscc_ec2_transit_gateway_connects}.
 type DataAwsccEc2TransitGatewayConnects interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccEc2TransitGatewayConnects interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccEc2TransitGatewayConnects) TerraformResourceType() *
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_transit_gateway_connects awscc_ec2_transit_gateway_connects} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_transit_gateway_connects awscc_ec2_transit_gateway_connects} Data Source.
 func NewDataAwsccEc2TransitGatewayConnects(scope constructs.Construct, id *string, config *DataAwsccEc2TransitGatewayConnectsConfig) DataAwsccEc2TransitGatewayConnects {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccEc2TransitGatewayConnects(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_transit_gateway_connects awscc_ec2_transit_gateway_connects} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_transit_gateway_connects awscc_ec2_transit_gateway_connects} Data Source.
 func NewDataAwsccEc2TransitGatewayConnects_Override(d DataAwsccEc2TransitGatewayConnects, scope constructs.Construct, id *string, config *DataAwsccEc2TransitGatewayConnectsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccEc2TransitGatewayConnects) SynthesizeAttributes() *m
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2TransitGatewayConnects) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2TransitGatewayConnects) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

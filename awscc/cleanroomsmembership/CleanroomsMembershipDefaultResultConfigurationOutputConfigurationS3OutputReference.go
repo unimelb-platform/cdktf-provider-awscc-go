@@ -30,14 +30,17 @@ type CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputRe
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3
-	SetInternalValue(val *CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	KeyPrefix() *string
 	SetKeyPrefix(val *string)
 	KeyPrefixInput() *string
 	ResultFormat() *string
 	SetResultFormat(val *string)
 	ResultFormatInput() *string
+	SingleFileOutput() interface{}
+	SetSingleFileOutput(val interface{})
+	SingleFileOutputInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -70,7 +73,10 @@ type CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputRe
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucket()
 	ResetKeyPrefix()
+	ResetResultFormat()
+	ResetSingleFileOutput()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -146,8 +152,8 @@ func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigura
 	return returns
 }
 
-func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference) InternalValue() *CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3 {
-	var returns *CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3
+func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -191,6 +197,26 @@ func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigura
 	_jsii_.Get(
 		j,
 		"resultFormatInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference) SingleFileOutput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"singleFileOutput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference) SingleFileOutputInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"singleFileOutputInput",
 		&returns,
 	)
 	return returns
@@ -277,7 +303,7 @@ func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigura
 	)
 }
 
-func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference)SetInternalValue(val *CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3) {
+func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -306,6 +332,17 @@ func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigura
 	_jsii_.Set(
 		j,
 		"resultFormat",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference)SetSingleFileOutput(val interface{}) {
+	if err := j.validateSetSingleFileOutputParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"singleFileOutput",
 		val,
 	)
 }
@@ -518,10 +555,34 @@ func (c *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigura
 	return returns
 }
 
+func (c *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference) ResetBucket() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetBucket",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference) ResetKeyPrefix() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetKeyPrefix",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference) ResetResultFormat() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetResultFormat",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsMembershipDefaultResultConfigurationOutputConfigurationS3OutputReference) ResetSingleFileOutput() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetSingleFileOutput",
 		nil, // no parameters
 	)
 }

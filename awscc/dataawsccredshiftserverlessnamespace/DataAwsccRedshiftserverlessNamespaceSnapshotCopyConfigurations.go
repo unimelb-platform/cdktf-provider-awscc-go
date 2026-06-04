@@ -1,0 +1,6 @@
+package dataawsccredshiftserverlessnamespace
+
+
+type DataAwsccRedshiftserverlessNamespaceSnapshotCopyConfigurations struct {
+}
+

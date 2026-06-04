@@ -67,6 +67,8 @@ type LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationPromptAt
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetEndTimeoutMs()
+	ResetMaxLengthMs()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecifi
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationOutputReference) ResetEndTimeoutMs() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetEndTimeoutMs",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationOutputReference) ResetMaxLengthMs() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMaxLengthMs",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

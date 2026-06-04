@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscclambdaeventinvokeconfig/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lambda_event_invoke_config awscc_lambda_event_invoke_config}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lambda_event_invoke_config awscc_lambda_event_invoke_config}.
 type DataAwsccLambdaEventInvokeConfig interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -87,6 +87,10 @@ type DataAwsccLambdaEventInvokeConfig interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -312,7 +316,7 @@ func (j *jsiiProxy_DataAwsccLambdaEventInvokeConfig) TerraformResourceType() *st
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lambda_event_invoke_config awscc_lambda_event_invoke_config} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lambda_event_invoke_config awscc_lambda_event_invoke_config} Data Source.
 func NewDataAwsccLambdaEventInvokeConfig(scope constructs.Construct, id *string, config *DataAwsccLambdaEventInvokeConfigConfig) DataAwsccLambdaEventInvokeConfig {
 	_init_.Initialize()
 
@@ -330,7 +334,7 @@ func NewDataAwsccLambdaEventInvokeConfig(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lambda_event_invoke_config awscc_lambda_event_invoke_config} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lambda_event_invoke_config awscc_lambda_event_invoke_config} Data Source.
 func NewDataAwsccLambdaEventInvokeConfig_Override(d DataAwsccLambdaEventInvokeConfig, scope constructs.Construct, id *string, config *DataAwsccLambdaEventInvokeConfigConfig) {
 	_init_.Initialize()
 
@@ -697,6 +701,32 @@ func (d *jsiiProxy_DataAwsccLambdaEventInvokeConfig) SynthesizeAttributes() *map
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLambdaEventInvokeConfig) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLambdaEventInvokeConfig) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

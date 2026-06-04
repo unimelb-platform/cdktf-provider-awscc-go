@@ -72,6 +72,10 @@ func (j *jsiiProxy_RumAppMonitorAppMonitorConfigurationMetricDestinationsMetricD
 	return nil
 }
 
+func (j *jsiiProxy_RumAppMonitorAppMonitorConfigurationMetricDestinationsMetricDefinitionsOutputReference) validateSetNamespaceParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_RumAppMonitorAppMonitorConfigurationMetricDestinationsMetricDefinitionsOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

@@ -4,6 +4,10 @@ package ioteventsdetectormodel
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputTransitionEventsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IoteventsDetectorModelDetectorModelDefinitionStatesOnInputTransitionEventsList) validateGetParameters(index *float64) error {
 	return nil
 }

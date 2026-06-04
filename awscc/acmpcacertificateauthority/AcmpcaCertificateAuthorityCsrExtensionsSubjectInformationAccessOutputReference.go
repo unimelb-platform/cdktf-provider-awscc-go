@@ -11,9 +11,9 @@ import (
 type AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessOutputReference interface {
 	cdktf.ComplexObject
 	AccessLocation() AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocationOutputReference
-	AccessLocationInput() *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocation
+	AccessLocationInput() interface{}
 	AccessMethod() AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessMethodOutputReference
-	AccessMethodInput() *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessMethod
+	AccessMethodInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -67,6 +67,8 @@ type AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessOutputRefere
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAccessLocation(value *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocation)
 	PutAccessMethod(value *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessMethod)
+	ResetAccessLocation()
+	ResetAccessMethod()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -92,8 +94,8 @@ func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAcce
 	return returns
 }
 
-func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessOutputReference) AccessLocationInput() *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocation {
-	var returns *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessLocation
+func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessOutputReference) AccessLocationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"accessLocationInput",
@@ -112,8 +114,8 @@ func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAcce
 	return returns
 }
 
-func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessOutputReference) AccessMethodInput() *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessMethod {
-	var returns *AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessAccessMethod
+func (j *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessOutputReference) AccessMethodInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"accessMethodInput",
@@ -480,6 +482,22 @@ func (a *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAcce
 		a,
 		"putAccessMethod",
 		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessOutputReference) ResetAccessLocation() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetAccessLocation",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AcmpcaCertificateAuthorityCsrExtensionsSubjectInformationAccessOutputReference) ResetAccessMethod() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetAccessMethod",
+		nil, // no parameters
 	)
 }
 

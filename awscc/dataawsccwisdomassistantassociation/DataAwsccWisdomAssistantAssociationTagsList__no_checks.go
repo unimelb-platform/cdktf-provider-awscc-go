@@ -4,6 +4,10 @@ package dataawsccwisdomassistantassociation
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataAwsccWisdomAssistantAssociationTagsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataAwsccWisdomAssistantAssociationTagsList) validateGetParameters(index *float64) error {
 	return nil
 }

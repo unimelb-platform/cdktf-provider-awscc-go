@@ -29,10 +29,10 @@ type PcaconnectoradTemplateDefinitionTemplateV3ExtensionsOutputReference interfa
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *PcaconnectoradTemplateDefinitionTemplateV3Extensions
-	SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV3Extensions)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	KeyUsage() PcaconnectoradTemplateDefinitionTemplateV3ExtensionsKeyUsageOutputReference
-	KeyUsageInput() *PcaconnectoradTemplateDefinitionTemplateV3ExtensionsKeyUsage
+	KeyUsageInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -68,6 +68,7 @@ type PcaconnectoradTemplateDefinitionTemplateV3ExtensionsOutputReference interfa
 	PutApplicationPolicies(value *PcaconnectoradTemplateDefinitionTemplateV3ExtensionsApplicationPolicies)
 	PutKeyUsage(value *PcaconnectoradTemplateDefinitionTemplateV3ExtensionsKeyUsage)
 	ResetApplicationPolicies()
+	ResetKeyUsage()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -143,8 +144,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3ExtensionsOutputRef
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3ExtensionsOutputReference) InternalValue() *PcaconnectoradTemplateDefinitionTemplateV3Extensions {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV3Extensions
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3ExtensionsOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -163,8 +164,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3ExtensionsOutputRef
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3ExtensionsOutputReference) KeyUsageInput() *PcaconnectoradTemplateDefinitionTemplateV3ExtensionsKeyUsage {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV3ExtensionsKeyUsage
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3ExtensionsOutputReference) KeyUsageInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"keyUsageInput",
@@ -243,7 +244,7 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3ExtensionsOutputRef
 	)
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3ExtensionsOutputReference)SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV3Extensions) {
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3ExtensionsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -488,6 +489,14 @@ func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3ExtensionsOutputRef
 	_jsii_.InvokeVoid(
 		p,
 		"resetApplicationPolicies",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV3ExtensionsOutputReference) ResetKeyUsage() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetKeyUsage",
 		nil, // no parameters
 	)
 }

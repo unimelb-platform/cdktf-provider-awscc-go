@@ -1,0 +1,6 @@
+package dataawsccconnectuserhierarchystructure
+
+
+type DataAwsccConnectUserHierarchyStructureUserHierarchyStructureLevelOne struct {
+}
+

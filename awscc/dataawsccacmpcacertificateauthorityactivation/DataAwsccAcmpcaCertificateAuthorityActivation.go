@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccacmpcacertificateauthorityactivation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/acmpca_certificate_authority_activation awscc_acmpca_certificate_authority_activation}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/acmpca_certificate_authority_activation awscc_acmpca_certificate_authority_activation}.
 type DataAwsccAcmpcaCertificateAuthorityActivation interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -87,6 +87,10 @@ type DataAwsccAcmpcaCertificateAuthorityActivation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -312,7 +316,7 @@ func (j *jsiiProxy_DataAwsccAcmpcaCertificateAuthorityActivation) TerraformResou
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/acmpca_certificate_authority_activation awscc_acmpca_certificate_authority_activation} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/acmpca_certificate_authority_activation awscc_acmpca_certificate_authority_activation} Data Source.
 func NewDataAwsccAcmpcaCertificateAuthorityActivation(scope constructs.Construct, id *string, config *DataAwsccAcmpcaCertificateAuthorityActivationConfig) DataAwsccAcmpcaCertificateAuthorityActivation {
 	_init_.Initialize()
 
@@ -330,7 +334,7 @@ func NewDataAwsccAcmpcaCertificateAuthorityActivation(scope constructs.Construct
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/acmpca_certificate_authority_activation awscc_acmpca_certificate_authority_activation} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/acmpca_certificate_authority_activation awscc_acmpca_certificate_authority_activation} Data Source.
 func NewDataAwsccAcmpcaCertificateAuthorityActivation_Override(d DataAwsccAcmpcaCertificateAuthorityActivation, scope constructs.Construct, id *string, config *DataAwsccAcmpcaCertificateAuthorityActivationConfig) {
 	_init_.Initialize()
 
@@ -697,6 +701,32 @@ func (d *jsiiProxy_DataAwsccAcmpcaCertificateAuthorityActivation) SynthesizeAttr
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAcmpcaCertificateAuthorityActivation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccAcmpcaCertificateAuthorityActivation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

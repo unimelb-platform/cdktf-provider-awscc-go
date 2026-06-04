@@ -27,6 +27,7 @@ type DataAwsccSesConfigurationSetEventDestinationEventDestinationOutputReference
 	// Experimental.
 	CreationStack() *[]*string
 	Enabled() cdktf.IResolvable
+	EventBridgeDestination() DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataAwsccSesConfigurationSetEventDestinationEventDestination
@@ -127,6 +128,16 @@ func (j *jsiiProxy_DataAwsccSesConfigurationSetEventDestinationEventDestinationO
 	_jsii_.Get(
 		j,
 		"enabled",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSesConfigurationSetEventDestinationEventDestinationOutputReference) EventBridgeDestination() DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference {
+	var returns DataAwsccSesConfigurationSetEventDestinationEventDestinationEventBridgeDestinationOutputReference
+	_jsii_.Get(
+		j,
+		"eventBridgeDestination",
 		&returns,
 	)
 	return returns

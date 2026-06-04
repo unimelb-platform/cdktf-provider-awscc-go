@@ -25,14 +25,18 @@ type DataAwsccSagemakerDomainDefaultSpaceSettingsOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	CustomFileSystemConfigs() DataAwsccSagemakerDomainDefaultSpaceSettingsCustomFileSystemConfigsList
+	CustomPosixUserConfig() DataAwsccSagemakerDomainDefaultSpaceSettingsCustomPosixUserConfigOutputReference
 	ExecutionRole() *string
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataAwsccSagemakerDomainDefaultSpaceSettings
 	SetInternalValue(val *DataAwsccSagemakerDomainDefaultSpaceSettings)
+	JupyterLabAppSettings() DataAwsccSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsOutputReference
 	JupyterServerAppSettings() DataAwsccSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsOutputReference
 	KernelGatewayAppSettings() DataAwsccSagemakerDomainDefaultSpaceSettingsKernelGatewayAppSettingsOutputReference
 	SecurityGroups() *[]*string
+	SpaceStorageSettings() DataAwsccSagemakerDomainDefaultSpaceSettingsSpaceStorageSettingsOutputReference
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -110,6 +114,26 @@ func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultSpaceSettingsOutputReference) 
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultSpaceSettingsOutputReference) CustomFileSystemConfigs() DataAwsccSagemakerDomainDefaultSpaceSettingsCustomFileSystemConfigsList {
+	var returns DataAwsccSagemakerDomainDefaultSpaceSettingsCustomFileSystemConfigsList
+	_jsii_.Get(
+		j,
+		"customFileSystemConfigs",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultSpaceSettingsOutputReference) CustomPosixUserConfig() DataAwsccSagemakerDomainDefaultSpaceSettingsCustomPosixUserConfigOutputReference {
+	var returns DataAwsccSagemakerDomainDefaultSpaceSettingsCustomPosixUserConfigOutputReference
+	_jsii_.Get(
+		j,
+		"customPosixUserConfig",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultSpaceSettingsOutputReference) ExecutionRole() *string {
 	var returns *string
 	_jsii_.Get(
@@ -140,6 +164,16 @@ func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultSpaceSettingsOutputReference) 
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultSpaceSettingsOutputReference) JupyterLabAppSettings() DataAwsccSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsOutputReference {
+	var returns DataAwsccSagemakerDomainDefaultSpaceSettingsJupyterLabAppSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"jupyterLabAppSettings",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultSpaceSettingsOutputReference) JupyterServerAppSettings() DataAwsccSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsOutputReference {
 	var returns DataAwsccSagemakerDomainDefaultSpaceSettingsJupyterServerAppSettingsOutputReference
 	_jsii_.Get(
@@ -165,6 +199,16 @@ func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultSpaceSettingsOutputReference) 
 	_jsii_.Get(
 		j,
 		"securityGroups",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerDomainDefaultSpaceSettingsOutputReference) SpaceStorageSettings() DataAwsccSagemakerDomainDefaultSpaceSettingsSpaceStorageSettingsOutputReference {
+	var returns DataAwsccSagemakerDomainDefaultSpaceSettingsSpaceStorageSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"spaceStorageSettings",
 		&returns,
 	)
 	return returns

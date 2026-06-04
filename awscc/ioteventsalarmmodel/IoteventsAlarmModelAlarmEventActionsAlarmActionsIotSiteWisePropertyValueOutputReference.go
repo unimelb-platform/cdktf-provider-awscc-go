@@ -43,7 +43,7 @@ type IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueOut
 	Timestamp() IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueTimestampOutputReference
 	TimestampInput() interface{}
 	Value() IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueValueOutputReference
-	ValueInput() *IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueValue
+	ValueInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -72,6 +72,7 @@ type IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueOut
 	PutValue(value *IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueValue)
 	ResetQuality()
 	ResetTimestamp()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -207,8 +208,8 @@ func (j *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePr
 	return returns
 }
 
-func (j *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueOutputReference) ValueInput() *IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueValue {
-	var returns *IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueValue
+func (j *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueOutputReference) ValueInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"valueInput",
@@ -531,6 +532,14 @@ func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePr
 	_jsii_.InvokeVoid(
 		i,
 		"resetTimestamp",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_IoteventsAlarmModelAlarmEventActionsAlarmActionsIotSiteWisePropertyValueOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetValue",
 		nil, // no parameters
 	)
 }

@@ -64,6 +64,7 @@ type LexBotBotLocalesSlotTypesValueSelectionSettingRegexFilterOutputReference in
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPattern()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (l *jsiiProxy_LexBotBotLocalesSlotTypesValueSelectionSettingRegexFilterOutp
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LexBotBotLocalesSlotTypesValueSelectionSettingRegexFilterOutputReference) ResetPattern() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetPattern",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LexBotBotLocalesSlotTypesValueSelectionSettingRegexFilterOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

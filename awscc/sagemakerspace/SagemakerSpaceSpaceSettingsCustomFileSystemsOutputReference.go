@@ -29,6 +29,8 @@ type SagemakerSpaceSpaceSettingsCustomFileSystemsOutputReference interface {
 	EfsFileSystemInput() interface{}
 	// Experimental.
 	Fqn() *string
+	FsxLustreFileSystem() SagemakerSpaceSpaceSettingsCustomFileSystemsFsxLustreFileSystemOutputReference
+	FsxLustreFileSystemInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	// Experimental.
@@ -64,7 +66,9 @@ type SagemakerSpaceSpaceSettingsCustomFileSystemsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutEfsFileSystem(value *SagemakerSpaceSpaceSettingsCustomFileSystemsEfsFileSystem)
+	PutFsxLustreFileSystem(value *SagemakerSpaceSpaceSettingsCustomFileSystemsFsxLustreFileSystem)
 	ResetEfsFileSystem()
+	ResetFsxLustreFileSystem()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -135,6 +139,26 @@ func (j *jsiiProxy_SagemakerSpaceSpaceSettingsCustomFileSystemsOutputReference) 
 	_jsii_.Get(
 		j,
 		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerSpaceSpaceSettingsCustomFileSystemsOutputReference) FsxLustreFileSystem() SagemakerSpaceSpaceSettingsCustomFileSystemsFsxLustreFileSystemOutputReference {
+	var returns SagemakerSpaceSpaceSettingsCustomFileSystemsFsxLustreFileSystemOutputReference
+	_jsii_.Get(
+		j,
+		"fsxLustreFileSystem",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerSpaceSpaceSettingsCustomFileSystemsOutputReference) FsxLustreFileSystemInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"fsxLustreFileSystemInput",
 		&returns,
 	)
 	return returns
@@ -450,10 +474,29 @@ func (s *jsiiProxy_SagemakerSpaceSpaceSettingsCustomFileSystemsOutputReference) 
 	)
 }
 
+func (s *jsiiProxy_SagemakerSpaceSpaceSettingsCustomFileSystemsOutputReference) PutFsxLustreFileSystem(value *SagemakerSpaceSpaceSettingsCustomFileSystemsFsxLustreFileSystem) {
+	if err := s.validatePutFsxLustreFileSystemParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putFsxLustreFileSystem",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_SagemakerSpaceSpaceSettingsCustomFileSystemsOutputReference) ResetEfsFileSystem() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetEfsFileSystem",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerSpaceSpaceSettingsCustomFileSystemsOutputReference) ResetFsxLustreFileSystem() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetFsxLustreFileSystem",
 		nil, // no parameters
 	)
 }

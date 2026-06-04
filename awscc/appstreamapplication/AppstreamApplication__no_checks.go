@@ -56,7 +56,15 @@ func (a *jsiiProxy_AppstreamApplication) validateInterpolationForAttributeParame
 	return nil
 }
 
+func (a *jsiiProxy_AppstreamApplication) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_AppstreamApplication) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (a *jsiiProxy_AppstreamApplication) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

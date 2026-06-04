@@ -67,6 +67,8 @@ type EcsTaskDefinitionContainerDefinitionsSecretsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
+	ResetValueFrom()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsSecretsOutputReference) 
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsSecretsOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsSecretsOutputReference) ResetValueFrom() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetValueFrom",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EcsTaskDefinitionContainerDefinitionsSecretsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

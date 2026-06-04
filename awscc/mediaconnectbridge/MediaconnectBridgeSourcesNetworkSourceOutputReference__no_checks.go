@@ -44,6 +44,10 @@ func (m *jsiiProxy_MediaconnectBridgeSourcesNetworkSourceOutputReference) valida
 	return nil
 }
 
+func (m *jsiiProxy_MediaconnectBridgeSourcesNetworkSourceOutputReference) validatePutMulticastSourceSettingsParameters(value *MediaconnectBridgeSourcesNetworkSourceMulticastSourceSettings) error {
+	return nil
+}
+
 func (m *jsiiProxy_MediaconnectBridgeSourcesNetworkSourceOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }

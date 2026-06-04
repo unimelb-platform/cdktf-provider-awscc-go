@@ -34,8 +34,11 @@ type DataAwsccDynamodbGlobalTableReplicasOutputReference interface {
 	SetInternalValue(val *DataAwsccDynamodbGlobalTableReplicas)
 	KinesisStreamSpecification() DataAwsccDynamodbGlobalTableReplicasKinesisStreamSpecificationOutputReference
 	PointInTimeRecoverySpecification() DataAwsccDynamodbGlobalTableReplicasPointInTimeRecoverySpecificationOutputReference
+	ReadOnDemandThroughputSettings() DataAwsccDynamodbGlobalTableReplicasReadOnDemandThroughputSettingsOutputReference
 	ReadProvisionedThroughputSettings() DataAwsccDynamodbGlobalTableReplicasReadProvisionedThroughputSettingsOutputReference
 	Region() *string
+	ReplicaStreamSpecification() DataAwsccDynamodbGlobalTableReplicasReplicaStreamSpecificationOutputReference
+	ResourcePolicy() DataAwsccDynamodbGlobalTableReplicasResourcePolicyOutputReference
 	SseSpecification() DataAwsccDynamodbGlobalTableReplicasSseSpecificationOutputReference
 	TableClass() *string
 	Tags() DataAwsccDynamodbGlobalTableReplicasTagsList
@@ -186,6 +189,16 @@ func (j *jsiiProxy_DataAwsccDynamodbGlobalTableReplicasOutputReference) PointInT
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccDynamodbGlobalTableReplicasOutputReference) ReadOnDemandThroughputSettings() DataAwsccDynamodbGlobalTableReplicasReadOnDemandThroughputSettingsOutputReference {
+	var returns DataAwsccDynamodbGlobalTableReplicasReadOnDemandThroughputSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"readOnDemandThroughputSettings",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccDynamodbGlobalTableReplicasOutputReference) ReadProvisionedThroughputSettings() DataAwsccDynamodbGlobalTableReplicasReadProvisionedThroughputSettingsOutputReference {
 	var returns DataAwsccDynamodbGlobalTableReplicasReadProvisionedThroughputSettingsOutputReference
 	_jsii_.Get(
@@ -201,6 +214,26 @@ func (j *jsiiProxy_DataAwsccDynamodbGlobalTableReplicasOutputReference) Region()
 	_jsii_.Get(
 		j,
 		"region",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDynamodbGlobalTableReplicasOutputReference) ReplicaStreamSpecification() DataAwsccDynamodbGlobalTableReplicasReplicaStreamSpecificationOutputReference {
+	var returns DataAwsccDynamodbGlobalTableReplicasReplicaStreamSpecificationOutputReference
+	_jsii_.Get(
+		j,
+		"replicaStreamSpecification",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDynamodbGlobalTableReplicasOutputReference) ResourcePolicy() DataAwsccDynamodbGlobalTableReplicasResourcePolicyOutputReference {
+	var returns DataAwsccDynamodbGlobalTableReplicasResourcePolicyOutputReference
+	_jsii_.Get(
+		j,
+		"resourcePolicy",
 		&returns,
 	)
 	return returns

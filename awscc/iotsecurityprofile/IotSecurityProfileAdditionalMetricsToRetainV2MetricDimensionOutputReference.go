@@ -67,6 +67,7 @@ type IotSecurityProfileAdditionalMetricsToRetainV2MetricDimensionOutputReference
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDimensionName()
 	ResetOperator()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (i *jsiiProxy_IotSecurityProfileAdditionalMetricsToRetainV2MetricDimensionO
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_IotSecurityProfileAdditionalMetricsToRetainV2MetricDimensionOutputReference) ResetDimensionName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetDimensionName",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_IotSecurityProfileAdditionalMetricsToRetainV2MetricDimensionOutputReference) ResetOperator() {

@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscclexbotalias/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lex_bot_alias awscc_lex_bot_alias}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lex_bot_alias awscc_lex_bot_alias}.
 type DataAwsccLexBotAlias interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -93,6 +93,10 @@ type DataAwsccLexBotAlias interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -378,7 +382,7 @@ func (j *jsiiProxy_DataAwsccLexBotAlias) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lex_bot_alias awscc_lex_bot_alias} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lex_bot_alias awscc_lex_bot_alias} Data Source.
 func NewDataAwsccLexBotAlias(scope constructs.Construct, id *string, config *DataAwsccLexBotAliasConfig) DataAwsccLexBotAlias {
 	_init_.Initialize()
 
@@ -396,7 +400,7 @@ func NewDataAwsccLexBotAlias(scope constructs.Construct, id *string, config *Dat
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lex_bot_alias awscc_lex_bot_alias} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lex_bot_alias awscc_lex_bot_alias} Data Source.
 func NewDataAwsccLexBotAlias_Override(d DataAwsccLexBotAlias, scope constructs.Construct, id *string, config *DataAwsccLexBotAliasConfig) {
 	_init_.Initialize()
 
@@ -763,6 +767,32 @@ func (d *jsiiProxy_DataAwsccLexBotAlias) SynthesizeAttributes() *map[string]inte
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLexBotAlias) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLexBotAlias) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

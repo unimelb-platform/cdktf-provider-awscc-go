@@ -56,7 +56,7 @@ func (j *jsiiProxy_EksAccessEntryAccessPoliciesAccessScopeOutputReference) valid
 	return nil
 }
 
-func (j *jsiiProxy_EksAccessEntryAccessPoliciesAccessScopeOutputReference) validateSetInternalValueParameters(val *EksAccessEntryAccessPoliciesAccessScope) error {
+func (j *jsiiProxy_EksAccessEntryAccessPoliciesAccessScopeOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

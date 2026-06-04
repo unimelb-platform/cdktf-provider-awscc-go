@@ -119,6 +119,14 @@ func (b *jsiiProxy_BatchComputeEnvironment) validateInterpolationForAttributePar
 	return nil
 }
 
+func (b *jsiiProxy_BatchComputeEnvironment) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (b *jsiiProxy_BatchComputeEnvironment) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (b *jsiiProxy_BatchComputeEnvironment) validateMoveToParameters(moveTarget 
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (b *jsiiProxy_BatchComputeEnvironment) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -297,6 +313,14 @@ func (j *jsiiProxy_BatchComputeEnvironment) validateSetConnectionParameters(val 
 		if !_jsii_.IsAnonymousProxy(val) {
 			return fmt.Errorf("parameter val must be one of the allowed types: *cdktf.SSHProvisionerConnection, *cdktf.WinrmProvisionerConnection; received %#v (a %T)", val, val)
 		}
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_BatchComputeEnvironment) validateSetContextParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil

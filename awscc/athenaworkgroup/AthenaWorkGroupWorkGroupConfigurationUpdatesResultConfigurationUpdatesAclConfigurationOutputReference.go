@@ -64,6 +64,7 @@ type AthenaWorkGroupWorkGroupConfigurationUpdatesResultConfigurationUpdatesAclCo
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetS3AclOption()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (a *jsiiProxy_AthenaWorkGroupWorkGroupConfigurationUpdatesResultConfigurati
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AthenaWorkGroupWorkGroupConfigurationUpdatesResultConfigurationUpdatesAclConfigurationOutputReference) ResetS3AclOption() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetS3AclOption",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AthenaWorkGroupWorkGroupConfigurationUpdatesResultConfigurationUpdatesAclConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

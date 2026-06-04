@@ -67,6 +67,8 @@ type KendraIndexUserTokenConfigurationsJsonTokenTypeConfigurationOutputReference
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetGroupAttributeField()
+	ResetUserNameAttributeField()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (k *jsiiProxy_KendraIndexUserTokenConfigurationsJsonTokenTypeConfigurationO
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KendraIndexUserTokenConfigurationsJsonTokenTypeConfigurationOutputReference) ResetGroupAttributeField() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetGroupAttributeField",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KendraIndexUserTokenConfigurationsJsonTokenTypeConfigurationOutputReference) ResetUserNameAttributeField() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetUserNameAttributeField",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KendraIndexUserTokenConfigurationsJsonTokenTypeConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

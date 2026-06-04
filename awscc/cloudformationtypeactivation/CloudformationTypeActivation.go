@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/cloudformationtypeactivation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudformation_type_activation awscc_cloudformation_type_activation}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudformation_type_activation awscc_cloudformation_type_activation}.
 type CloudformationTypeActivation interface {
 	cdktf.TerraformResource
 	Arn() *string
@@ -113,12 +113,22 @@ type CloudformationTypeActivation interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -137,6 +147,9 @@ type CloudformationTypeActivation interface {
 	ResetTypeNameAlias()
 	ResetVersionBump()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -532,7 +545,7 @@ func (j *jsiiProxy_CloudformationTypeActivation) VersionBumpInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudformation_type_activation awscc_cloudformation_type_activation} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudformation_type_activation awscc_cloudformation_type_activation} Resource.
 func NewCloudformationTypeActivation(scope constructs.Construct, id *string, config *CloudformationTypeActivationConfig) CloudformationTypeActivation {
 	_init_.Initialize()
 
@@ -550,7 +563,7 @@ func NewCloudformationTypeActivation(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/cloudformation_type_activation awscc_cloudformation_type_activation} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/cloudformation_type_activation awscc_cloudformation_type_activation} Resource.
 func NewCloudformationTypeActivation_Override(c CloudformationTypeActivation, scope constructs.Construct, id *string, config *CloudformationTypeActivationConfig) {
 	_init_.Initialize()
 
@@ -997,6 +1010,19 @@ func (c *jsiiProxy_CloudformationTypeActivation) GetStringMapAttribute(terraform
 	return returns
 }
 
+func (c *jsiiProxy_CloudformationTypeActivation) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (c *jsiiProxy_CloudformationTypeActivation) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := c.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1024,6 +1050,17 @@ func (c *jsiiProxy_CloudformationTypeActivation) InterpolationForAttribute(terra
 	return returns
 }
 
+func (c *jsiiProxy_CloudformationTypeActivation) MoveFromId(id *string) {
+	if err := c.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (c *jsiiProxy_CloudformationTypeActivation) MoveTo(moveTarget *string, index interface{}) {
 	if err := c.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1032,6 +1069,17 @@ func (c *jsiiProxy_CloudformationTypeActivation) MoveTo(moveTarget *string, inde
 		c,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (c *jsiiProxy_CloudformationTypeActivation) MoveToId(id *string) {
+	if err := c.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1151,6 +1199,32 @@ func (c *jsiiProxy_CloudformationTypeActivation) SynthesizeAttributes() *map[str
 	_jsii_.Invoke(
 		c,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CloudformationTypeActivation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		c,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (c *jsiiProxy_CloudformationTypeActivation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		c,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

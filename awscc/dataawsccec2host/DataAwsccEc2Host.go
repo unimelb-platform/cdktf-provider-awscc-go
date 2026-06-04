@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2host/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_host awscc_ec2_host}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_host awscc_ec2_host}.
 type DataAwsccEc2Host interface {
 	cdktf.TerraformDataSource
 	AssetId() *string
@@ -56,6 +56,7 @@ type DataAwsccEc2Host interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	Tags() DataAwsccEc2HostTagsList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -91,6 +92,10 @@ type DataAwsccEc2Host interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -325,6 +330,16 @@ func (j *jsiiProxy_DataAwsccEc2Host) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2Host) Tags() DataAwsccEc2HostTagsList {
+	var returns DataAwsccEc2HostTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2Host) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -356,7 +371,7 @@ func (j *jsiiProxy_DataAwsccEc2Host) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_host awscc_ec2_host} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_host awscc_ec2_host} Data Source.
 func NewDataAwsccEc2Host(scope constructs.Construct, id *string, config *DataAwsccEc2HostConfig) DataAwsccEc2Host {
 	_init_.Initialize()
 
@@ -374,7 +389,7 @@ func NewDataAwsccEc2Host(scope constructs.Construct, id *string, config *DataAws
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_host awscc_ec2_host} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_host awscc_ec2_host} Data Source.
 func NewDataAwsccEc2Host_Override(d DataAwsccEc2Host, scope constructs.Construct, id *string, config *DataAwsccEc2HostConfig) {
 	_init_.Initialize()
 
@@ -741,6 +756,32 @@ func (d *jsiiProxy_DataAwsccEc2Host) SynthesizeAttributes() *map[string]interfac
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2Host) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2Host) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

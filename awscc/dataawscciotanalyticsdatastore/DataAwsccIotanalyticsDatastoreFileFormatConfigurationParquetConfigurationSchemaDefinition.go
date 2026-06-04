@@ -1,0 +1,6 @@
+package dataawscciotanalyticsdatastore
+
+
+type DataAwsccIotanalyticsDatastoreFileFormatConfigurationParquetConfigurationSchemaDefinition struct {
+}
+

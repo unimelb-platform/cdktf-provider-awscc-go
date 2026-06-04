@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscclightsailcertificate/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lightsail_certificate awscc_lightsail_certificate}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lightsail_certificate awscc_lightsail_certificate}.
 type DataAwsccLightsailCertificate interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -88,6 +88,10 @@ type DataAwsccLightsailCertificate interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -323,7 +327,7 @@ func (j *jsiiProxy_DataAwsccLightsailCertificate) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lightsail_certificate awscc_lightsail_certificate} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lightsail_certificate awscc_lightsail_certificate} Data Source.
 func NewDataAwsccLightsailCertificate(scope constructs.Construct, id *string, config *DataAwsccLightsailCertificateConfig) DataAwsccLightsailCertificate {
 	_init_.Initialize()
 
@@ -341,7 +345,7 @@ func NewDataAwsccLightsailCertificate(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/lightsail_certificate awscc_lightsail_certificate} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/lightsail_certificate awscc_lightsail_certificate} Data Source.
 func NewDataAwsccLightsailCertificate_Override(d DataAwsccLightsailCertificate, scope constructs.Construct, id *string, config *DataAwsccLightsailCertificateConfig) {
 	_init_.Initialize()
 
@@ -708,6 +712,32 @@ func (d *jsiiProxy_DataAwsccLightsailCertificate) SynthesizeAttributes() *map[st
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLightsailCertificate) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccLightsailCertificate) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

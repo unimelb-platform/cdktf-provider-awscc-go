@@ -1,0 +1,6 @@
+package dataawscccleanroomsanalysistemplate
+
+
+type DataAwsccCleanroomsAnalysisTemplateSourceArtifactsEntryPoint struct {
+}
+

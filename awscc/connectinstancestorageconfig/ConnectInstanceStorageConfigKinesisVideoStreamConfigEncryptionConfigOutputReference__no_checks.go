@@ -60,7 +60,7 @@ func (j *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptio
 	return nil
 }
 
-func (j *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfigOutputReference) validateSetInternalValueParameters(val *ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfig) error {
+func (j *jsiiProxy_ConnectInstanceStorageConfigKinesisVideoStreamConfigEncryptionConfigOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

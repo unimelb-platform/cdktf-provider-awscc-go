@@ -26,6 +26,7 @@ type DataAwsccSagemakerDomainDomainSettingsOutputReference interface {
 	// Experimental.
 	CreationStack() *[]*string
 	DockerSettings() DataAwsccSagemakerDomainDomainSettingsDockerSettingsOutputReference
+	ExecutionRoleIdentityConfig() *string
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataAwsccSagemakerDomainDomainSettings
@@ -40,6 +41,7 @@ type DataAwsccSagemakerDomainDomainSettingsOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	UnifiedStudioSettings() DataAwsccSagemakerDomainDomainSettingsUnifiedStudioSettingsOutputReference
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -119,6 +121,16 @@ func (j *jsiiProxy_DataAwsccSagemakerDomainDomainSettingsOutputReference) Docker
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccSagemakerDomainDomainSettingsOutputReference) ExecutionRoleIdentityConfig() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"executionRoleIdentityConfig",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccSagemakerDomainDomainSettingsOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -174,6 +186,16 @@ func (j *jsiiProxy_DataAwsccSagemakerDomainDomainSettingsOutputReference) Terraf
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerDomainDomainSettingsOutputReference) UnifiedStudioSettings() DataAwsccSagemakerDomainDomainSettingsUnifiedStudioSettingsOutputReference {
+	var returns DataAwsccSagemakerDomainDomainSettingsUnifiedStudioSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"unifiedStudioSettings",
 		&returns,
 	)
 	return returns

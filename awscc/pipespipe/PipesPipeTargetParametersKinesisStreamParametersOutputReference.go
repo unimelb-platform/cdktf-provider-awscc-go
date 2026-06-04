@@ -64,6 +64,7 @@ type PipesPipeTargetParametersKinesisStreamParametersOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPartitionKey()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (p *jsiiProxy_PipesPipeTargetParametersKinesisStreamParametersOutputReferen
 	)
 
 	return returns
+}
+
+func (p *jsiiProxy_PipesPipeTargetParametersKinesisStreamParametersOutputReference) ResetPartitionKey() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetPartitionKey",
+		nil, // no parameters
+	)
 }
 
 func (p *jsiiProxy_PipesPipeTargetParametersKinesisStreamParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

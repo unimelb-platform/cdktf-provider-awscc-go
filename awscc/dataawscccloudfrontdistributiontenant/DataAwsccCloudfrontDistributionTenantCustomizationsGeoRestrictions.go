@@ -1,0 +1,6 @@
+package dataawscccloudfrontdistributiontenant
+
+
+type DataAwsccCloudfrontDistributionTenantCustomizationsGeoRestrictions struct {
+}
+

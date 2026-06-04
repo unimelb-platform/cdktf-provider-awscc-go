@@ -70,6 +70,7 @@ type DatabrewJobDataCatalogOutputsDatabaseOptionsTempDirectoryOutputReference in
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBucket()
 	ResetBucketOwner()
 	ResetKey()
 	// Produce the Token's value at resolution time.
@@ -517,6 +518,14 @@ func (d *jsiiProxy_DatabrewJobDataCatalogOutputsDatabaseOptionsTempDirectoryOutp
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatabrewJobDataCatalogOutputsDatabaseOptionsTempDirectoryOutputReference) ResetBucket() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetBucket",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatabrewJobDataCatalogOutputsDatabaseOptionsTempDirectoryOutputReference) ResetBucketOwner() {

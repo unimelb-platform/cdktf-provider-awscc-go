@@ -1,0 +1,6 @@
+package dataawsccwisdomaiagent
+
+
+type DataAwsccWisdomAiAgentConfigurationSelfServiceAiAgentConfigurationAssociationConfigurations struct {
+}
+

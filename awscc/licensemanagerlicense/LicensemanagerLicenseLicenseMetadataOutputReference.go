@@ -67,6 +67,8 @@ type LicensemanagerLicenseLicenseMetadataOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetName()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (l *jsiiProxy_LicensemanagerLicenseLicenseMetadataOutputReference) Interpol
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LicensemanagerLicenseLicenseMetadataOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LicensemanagerLicenseLicenseMetadataOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LicensemanagerLicenseLicenseMetadataOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

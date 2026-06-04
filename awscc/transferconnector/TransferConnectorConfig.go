@@ -21,29 +21,33 @@ type TransferConnectorConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Specifies the access role for the connector.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/transfer_connector#access_role TransferConnector#access_role}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/transfer_connector#access_role TransferConnector#access_role}
 	AccessRole *string `field:"required" json:"accessRole" yaml:"accessRole"`
 	// URL for Connector.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/transfer_connector#url TransferConnector#url}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/transfer_connector#url TransferConnector#url}
 	Url *string `field:"required" json:"url" yaml:"url"`
 	// Configuration for an AS2 connector.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/transfer_connector#as_2_config TransferConnector#as_2_config}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/transfer_connector#as_2_config TransferConnector#as_2_config}
 	As2Config *TransferConnectorAs2Config `field:"optional" json:"as2Config" yaml:"as2Config"`
 	// Specifies the logging role for the connector.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/transfer_connector#logging_role TransferConnector#logging_role}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/transfer_connector#logging_role TransferConnector#logging_role}
 	LoggingRole *string `field:"optional" json:"loggingRole" yaml:"loggingRole"`
+	// Security policy for SFTP Connector.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/transfer_connector#security_policy_name TransferConnector#security_policy_name}
+	SecurityPolicyName *string `field:"optional" json:"securityPolicyName" yaml:"securityPolicyName"`
 	// Configuration for an SFTP connector.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/transfer_connector#sftp_config TransferConnector#sftp_config}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/transfer_connector#sftp_config TransferConnector#sftp_config}
 	SftpConfig *TransferConnectorSftpConfig `field:"optional" json:"sftpConfig" yaml:"sftpConfig"`
 	// Key-value pairs that can be used to group and search for connectors.
 	//
 	// Tags are metadata attached to connectors for any purpose.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/transfer_connector#tags TransferConnector#tags}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/transfer_connector#tags TransferConnector#tags}
 	Tags interface{} `field:"optional" json:"tags" yaml:"tags"`
 }
 

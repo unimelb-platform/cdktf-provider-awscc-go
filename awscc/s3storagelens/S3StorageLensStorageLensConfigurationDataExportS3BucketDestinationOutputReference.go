@@ -79,7 +79,11 @@ type S3StorageLensStorageLensConfigurationDataExportS3BucketDestinationOutputRef
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutEncryption(value *S3StorageLensStorageLensConfigurationDataExportS3BucketDestinationEncryption)
+	ResetAccountId()
+	ResetArn()
 	ResetEncryption()
+	ResetFormat()
+	ResetOutputSchemaVersion()
 	ResetPrefix()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -621,10 +625,42 @@ func (s *jsiiProxy_S3StorageLensStorageLensConfigurationDataExportS3BucketDestin
 	)
 }
 
+func (s *jsiiProxy_S3StorageLensStorageLensConfigurationDataExportS3BucketDestinationOutputReference) ResetAccountId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetAccountId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3StorageLensStorageLensConfigurationDataExportS3BucketDestinationOutputReference) ResetArn() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetArn",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_S3StorageLensStorageLensConfigurationDataExportS3BucketDestinationOutputReference) ResetEncryption() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetEncryption",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3StorageLensStorageLensConfigurationDataExportS3BucketDestinationOutputReference) ResetFormat() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetFormat",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_S3StorageLensStorageLensConfigurationDataExportS3BucketDestinationOutputReference) ResetOutputSchemaVersion() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOutputSchemaVersion",
 		nil, // no parameters
 	)
 }

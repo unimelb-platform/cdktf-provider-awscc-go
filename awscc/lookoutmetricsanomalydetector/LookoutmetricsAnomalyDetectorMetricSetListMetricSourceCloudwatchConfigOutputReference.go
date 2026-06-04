@@ -64,6 +64,7 @@ type LookoutmetricsAnomalyDetectorMetricSetListMetricSourceCloudwatchConfigOutpu
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceCloudwa
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceCloudwatchConfigOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetRoleArn",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LookoutmetricsAnomalyDetectorMetricSetListMetricSourceCloudwatchConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

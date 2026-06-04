@@ -11,7 +11,7 @@ import (
 type CassandraTableClusteringKeyColumnsOutputReference interface {
 	cdktf.ComplexObject
 	Column() CassandraTableClusteringKeyColumnsColumnOutputReference
-	ColumnInput() *CassandraTableClusteringKeyColumnsColumn
+	ColumnInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -67,6 +67,7 @@ type CassandraTableClusteringKeyColumnsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutColumn(value *CassandraTableClusteringKeyColumnsColumn)
+	ResetColumn()
 	ResetOrderBy()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -93,8 +94,8 @@ func (j *jsiiProxy_CassandraTableClusteringKeyColumnsOutputReference) Column() C
 	return returns
 }
 
-func (j *jsiiProxy_CassandraTableClusteringKeyColumnsOutputReference) ColumnInput() *CassandraTableClusteringKeyColumnsColumn {
-	var returns *CassandraTableClusteringKeyColumnsColumn
+func (j *jsiiProxy_CassandraTableClusteringKeyColumnsOutputReference) ColumnInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"columnInput",
@@ -481,6 +482,14 @@ func (c *jsiiProxy_CassandraTableClusteringKeyColumnsOutputReference) PutColumn(
 		c,
 		"putColumn",
 		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CassandraTableClusteringKeyColumnsOutputReference) ResetColumn() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetColumn",
+		nil, // no parameters
 	)
 }
 

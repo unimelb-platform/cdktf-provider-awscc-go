@@ -1,0 +1,6 @@
+package dataawscciotfleetwisevehicle
+
+
+type DataAwsccIotfleetwiseVehicleStateTemplatesStateTemplateUpdateStrategyPeriodicStateTemplateUpdateRate struct {
+}
+

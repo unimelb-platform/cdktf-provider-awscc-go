@@ -1,0 +1,6 @@
+package dataawsccmediatailorsourcelocation
+
+
+type DataAwsccMediatailorSourceLocationDefaultSegmentDeliveryConfiguration struct {
+}
+

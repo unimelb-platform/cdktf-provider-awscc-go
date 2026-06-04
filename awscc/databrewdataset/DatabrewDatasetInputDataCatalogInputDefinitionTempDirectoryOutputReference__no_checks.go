@@ -52,6 +52,10 @@ func (j *jsiiProxy_DatabrewDatasetInputDataCatalogInputDefinitionTempDirectoryOu
 	return nil
 }
 
+func (j *jsiiProxy_DatabrewDatasetInputDataCatalogInputDefinitionTempDirectoryOutputReference) validateSetBucketOwnerParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DatabrewDatasetInputDataCatalogInputDefinitionTempDirectoryOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	return nil
 }

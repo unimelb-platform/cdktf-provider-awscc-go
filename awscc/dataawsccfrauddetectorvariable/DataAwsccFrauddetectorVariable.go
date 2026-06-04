@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccfrauddetectorvariable/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/frauddetector_variable awscc_frauddetector_variable}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/frauddetector_variable awscc_frauddetector_variable}.
 type DataAwsccFrauddetectorVariable interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -92,6 +92,10 @@ type DataAwsccFrauddetectorVariable interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -367,7 +371,7 @@ func (j *jsiiProxy_DataAwsccFrauddetectorVariable) VariableType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/frauddetector_variable awscc_frauddetector_variable} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/frauddetector_variable awscc_frauddetector_variable} Data Source.
 func NewDataAwsccFrauddetectorVariable(scope constructs.Construct, id *string, config *DataAwsccFrauddetectorVariableConfig) DataAwsccFrauddetectorVariable {
 	_init_.Initialize()
 
@@ -385,7 +389,7 @@ func NewDataAwsccFrauddetectorVariable(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/frauddetector_variable awscc_frauddetector_variable} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/frauddetector_variable awscc_frauddetector_variable} Data Source.
 func NewDataAwsccFrauddetectorVariable_Override(d DataAwsccFrauddetectorVariable, scope constructs.Construct, id *string, config *DataAwsccFrauddetectorVariableConfig) {
 	_init_.Initialize()
 
@@ -752,6 +756,32 @@ func (d *jsiiProxy_DataAwsccFrauddetectorVariable) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccFrauddetectorVariable) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccFrauddetectorVariable) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

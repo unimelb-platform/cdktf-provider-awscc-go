@@ -73,6 +73,10 @@ type Ec2IpamPoolSourceResourceOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetResourceId()
+	ResetResourceOwner()
+	ResetResourceRegion()
+	ResetResourceType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -549,6 +553,38 @@ func (e *jsiiProxy_Ec2IpamPoolSourceResourceOutputReference) InterpolationForAtt
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_Ec2IpamPoolSourceResourceOutputReference) ResetResourceId() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetResourceId",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2IpamPoolSourceResourceOutputReference) ResetResourceOwner() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetResourceOwner",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2IpamPoolSourceResourceOutputReference) ResetResourceRegion() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetResourceRegion",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Ec2IpamPoolSourceResourceOutputReference) ResetResourceType() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetResourceType",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_Ec2IpamPoolSourceResourceOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

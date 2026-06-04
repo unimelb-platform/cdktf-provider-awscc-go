@@ -68,6 +68,7 @@ type SecretsmanagerSecretReplicaRegionsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetKmsKeyId()
+	ResetRegion()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -488,6 +489,14 @@ func (s *jsiiProxy_SecretsmanagerSecretReplicaRegionsOutputReference) ResetKmsKe
 	_jsii_.InvokeVoid(
 		s,
 		"resetKmsKeyId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SecretsmanagerSecretReplicaRegionsOutputReference) ResetRegion() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetRegion",
 		nil, // no parameters
 	)
 }

@@ -60,7 +60,19 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsOutputReference
 	return nil
 }
 
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsOutputReference) validateSetComposedAssetModelIdParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsOutputReference) validateSetDescriptionParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsOutputReference) validateSetExternalIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsOutputReference) validateSetIdParameters(val *string) error {
 	return nil
 }
 
@@ -69,6 +81,14 @@ func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsOutputReference
 }
 
 func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsOutputReference) validateSetNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsOutputReference) validateSetParentAssetModelCompositeModelExternalIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_IotsitewiseAssetModelAssetModelCompositeModelsOutputReference) validateSetPathParameters(val *[]*string) error {
 	return nil
 }
 

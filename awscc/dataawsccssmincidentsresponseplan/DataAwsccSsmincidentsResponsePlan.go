@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccssmincidentsresponseplan/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ssmincidents_response_plan awscc_ssmincidents_response_plan}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ssmincidents_response_plan awscc_ssmincidents_response_plan}.
 type DataAwsccSsmincidentsResponsePlan interface {
 	cdktf.TerraformDataSource
 	Actions() DataAwsccSsmincidentsResponsePlanActionsList
@@ -91,6 +91,10 @@ type DataAwsccSsmincidentsResponsePlan interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -356,7 +360,7 @@ func (j *jsiiProxy_DataAwsccSsmincidentsResponsePlan) TerraformResourceType() *s
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ssmincidents_response_plan awscc_ssmincidents_response_plan} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ssmincidents_response_plan awscc_ssmincidents_response_plan} Data Source.
 func NewDataAwsccSsmincidentsResponsePlan(scope constructs.Construct, id *string, config *DataAwsccSsmincidentsResponsePlanConfig) DataAwsccSsmincidentsResponsePlan {
 	_init_.Initialize()
 
@@ -374,7 +378,7 @@ func NewDataAwsccSsmincidentsResponsePlan(scope constructs.Construct, id *string
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ssmincidents_response_plan awscc_ssmincidents_response_plan} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ssmincidents_response_plan awscc_ssmincidents_response_plan} Data Source.
 func NewDataAwsccSsmincidentsResponsePlan_Override(d DataAwsccSsmincidentsResponsePlan, scope constructs.Construct, id *string, config *DataAwsccSsmincidentsResponsePlanConfig) {
 	_init_.Initialize()
 
@@ -741,6 +745,32 @@ func (d *jsiiProxy_DataAwsccSsmincidentsResponsePlan) SynthesizeAttributes() *ma
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSsmincidentsResponsePlan) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSsmincidentsResponsePlan) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

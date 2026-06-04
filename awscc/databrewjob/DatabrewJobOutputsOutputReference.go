@@ -38,7 +38,7 @@ type DatabrewJobOutputsOutputReference interface {
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	Location() DatabrewJobOutputsLocationOutputReference
-	LocationInput() *DatabrewJobOutputsLocation
+	LocationInput() interface{}
 	MaxOutputFiles() *float64
 	SetMaxOutputFiles(val *float64)
 	MaxOutputFilesInput() *float64
@@ -85,6 +85,7 @@ type DatabrewJobOutputsOutputReference interface {
 	ResetCompressionFormat()
 	ResetFormat()
 	ResetFormatOptions()
+	ResetLocation()
 	ResetMaxOutputFiles()
 	ResetOverwrite()
 	ResetPartitionColumns()
@@ -223,8 +224,8 @@ func (j *jsiiProxy_DatabrewJobOutputsOutputReference) Location() DatabrewJobOutp
 	return returns
 }
 
-func (j *jsiiProxy_DatabrewJobOutputsOutputReference) LocationInput() *DatabrewJobOutputsLocation {
-	var returns *DatabrewJobOutputsLocation
+func (j *jsiiProxy_DatabrewJobOutputsOutputReference) LocationInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"locationInput",
@@ -679,6 +680,14 @@ func (d *jsiiProxy_DatabrewJobOutputsOutputReference) ResetFormatOptions() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetFormatOptions",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatabrewJobOutputsOutputReference) ResetLocation() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetLocation",
 		nil, // no parameters
 	)
 }

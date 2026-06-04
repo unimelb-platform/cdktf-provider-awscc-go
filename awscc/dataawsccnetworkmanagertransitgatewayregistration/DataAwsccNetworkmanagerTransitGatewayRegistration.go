@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccnetworkmanagertransitgatewayregistration/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_transit_gateway_registration awscc_networkmanager_transit_gateway_registration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_transit_gateway_registration awscc_networkmanager_transit_gateway_registration}.
 type DataAwsccNetworkmanagerTransitGatewayRegistration interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -84,6 +84,10 @@ type DataAwsccNetworkmanagerTransitGatewayRegistration interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -279,7 +283,7 @@ func (j *jsiiProxy_DataAwsccNetworkmanagerTransitGatewayRegistration) TransitGat
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_transit_gateway_registration awscc_networkmanager_transit_gateway_registration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_transit_gateway_registration awscc_networkmanager_transit_gateway_registration} Data Source.
 func NewDataAwsccNetworkmanagerTransitGatewayRegistration(scope constructs.Construct, id *string, config *DataAwsccNetworkmanagerTransitGatewayRegistrationConfig) DataAwsccNetworkmanagerTransitGatewayRegistration {
 	_init_.Initialize()
 
@@ -297,7 +301,7 @@ func NewDataAwsccNetworkmanagerTransitGatewayRegistration(scope constructs.Const
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/networkmanager_transit_gateway_registration awscc_networkmanager_transit_gateway_registration} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/networkmanager_transit_gateway_registration awscc_networkmanager_transit_gateway_registration} Data Source.
 func NewDataAwsccNetworkmanagerTransitGatewayRegistration_Override(d DataAwsccNetworkmanagerTransitGatewayRegistration, scope constructs.Construct, id *string, config *DataAwsccNetworkmanagerTransitGatewayRegistrationConfig) {
 	_init_.Initialize()
 
@@ -664,6 +668,32 @@ func (d *jsiiProxy_DataAwsccNetworkmanagerTransitGatewayRegistration) Synthesize
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkmanagerTransitGatewayRegistration) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccNetworkmanagerTransitGatewayRegistration) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

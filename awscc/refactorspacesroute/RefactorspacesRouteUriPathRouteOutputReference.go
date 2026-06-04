@@ -76,6 +76,7 @@ type RefactorspacesRouteUriPathRouteOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetActivationState()
 	ResetAppendSourcePath()
 	ResetIncludeChildPaths()
 	ResetMethods()
@@ -587,6 +588,14 @@ func (r *jsiiProxy_RefactorspacesRouteUriPathRouteOutputReference) Interpolation
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_RefactorspacesRouteUriPathRouteOutputReference) ResetActivationState() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetActivationState",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_RefactorspacesRouteUriPathRouteOutputReference) ResetAppendSourcePath() {

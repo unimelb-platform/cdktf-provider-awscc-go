@@ -21,15 +21,15 @@ type IotLoggingConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iot_logging#account_id IotLogging#account_id}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iot_logging#account_id IotLogging#account_id}
 	AccountId *string `field:"required" json:"accountId" yaml:"accountId"`
 	// The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iot_logging#default_log_level IotLogging#default_log_level}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iot_logging#default_log_level IotLogging#default_log_level}
 	DefaultLogLevel *string `field:"required" json:"defaultLogLevel" yaml:"defaultLogLevel"`
 	// The ARN of the role that allows IoT to write to Cloudwatch logs.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/iot_logging#role_arn IotLogging#role_arn}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/iot_logging#role_arn IotLogging#role_arn}
 	RoleArn *string `field:"required" json:"roleArn" yaml:"roleArn"`
 }
 

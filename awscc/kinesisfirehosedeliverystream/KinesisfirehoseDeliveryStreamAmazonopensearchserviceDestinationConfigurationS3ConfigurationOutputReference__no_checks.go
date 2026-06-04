@@ -80,7 +80,7 @@ func (j *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinati
 	return nil
 }
 
-func (j *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3ConfigurationOutputReference) validateSetInternalValueParameters(val *KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3Configuration) error {
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonopensearchserviceDestinationConfigurationS3ConfigurationOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

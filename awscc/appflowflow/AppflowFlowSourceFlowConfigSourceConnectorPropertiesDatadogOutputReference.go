@@ -64,6 +64,7 @@ type AppflowFlowSourceFlowConfigSourceConnectorPropertiesDatadogOutputReference 
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetObject()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (a *jsiiProxy_AppflowFlowSourceFlowConfigSourceConnectorPropertiesDatadogOu
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AppflowFlowSourceFlowConfigSourceConnectorPropertiesDatadogOutputReference) ResetObject() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetObject",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AppflowFlowSourceFlowConfigSourceConnectorPropertiesDatadogOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

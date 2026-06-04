@@ -70,6 +70,7 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationFlinkApplicationConfig
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetConfigurationType()
 	ResetLogLevel()
 	ResetMetricsLevel()
 	// Produce the Token's value at resolution time.
@@ -517,6 +518,14 @@ func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationFlinkApp
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationOutputReference) ResetConfigurationType() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetConfigurationType",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationOutputReference) ResetLogLevel() {

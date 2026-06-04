@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2instance/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_instance awscc_ec2_instance}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_instance awscc_ec2_instance}.
 type DataAwsccEc2Instance interface {
 	cdktf.TerraformDataSource
 	AdditionalInfo() *string
@@ -51,6 +51,7 @@ type DataAwsccEc2Instance interface {
 	SetId(val *string)
 	IdInput() *string
 	ImageId() *string
+	InstanceId() *string
 	InstanceInitiatedShutdownBehavior() *string
 	InstanceType() *string
 	Ipv6AddressCount() *float64
@@ -63,6 +64,7 @@ type DataAwsccEc2Instance interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	MetadataOptions() DataAwsccEc2InstanceMetadataOptionsOutputReference
 	Monitoring() cdktf.IResolvable
 	NetworkInterfaces() DataAwsccEc2InstanceNetworkInterfacesList
 	// The tree node.
@@ -86,6 +88,7 @@ type DataAwsccEc2Instance interface {
 	SecurityGroups() *[]*string
 	SourceDestCheck() cdktf.IResolvable
 	SsmAssociations() DataAwsccEc2InstanceSsmAssociationsList
+	State() DataAwsccEc2InstanceStateOutputReference
 	SubnetId() *string
 	Tags() DataAwsccEc2InstanceTagsList
 	Tenancy() *string
@@ -97,6 +100,7 @@ type DataAwsccEc2Instance interface {
 	TerraformResourceType() *string
 	UserData() *string
 	Volumes() DataAwsccEc2InstanceVolumesList
+	VpcId() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -126,6 +130,10 @@ type DataAwsccEc2Instance interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -390,6 +398,16 @@ func (j *jsiiProxy_DataAwsccEc2Instance) ImageId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2Instance) InstanceId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"instanceId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2Instance) InstanceInitiatedShutdownBehavior() *string {
 	var returns *string
 	_jsii_.Get(
@@ -475,6 +493,16 @@ func (j *jsiiProxy_DataAwsccEc2Instance) Lifecycle() *cdktf.TerraformResourceLif
 	_jsii_.Get(
 		j,
 		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccEc2Instance) MetadataOptions() DataAwsccEc2InstanceMetadataOptionsOutputReference {
+	var returns DataAwsccEc2InstanceMetadataOptionsOutputReference
+	_jsii_.Get(
+		j,
+		"metadataOptions",
 		&returns,
 	)
 	return returns
@@ -660,6 +688,16 @@ func (j *jsiiProxy_DataAwsccEc2Instance) SsmAssociations() DataAwsccEc2InstanceS
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2Instance) State() DataAwsccEc2InstanceStateOutputReference {
+	var returns DataAwsccEc2InstanceStateOutputReference
+	_jsii_.Get(
+		j,
+		"state",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2Instance) SubnetId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -740,8 +778,18 @@ func (j *jsiiProxy_DataAwsccEc2Instance) Volumes() DataAwsccEc2InstanceVolumesLi
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2Instance) VpcId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"vpcId",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_instance awscc_ec2_instance} Data Source.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_instance awscc_ec2_instance} Data Source.
 func NewDataAwsccEc2Instance(scope constructs.Construct, id *string, config *DataAwsccEc2InstanceConfig) DataAwsccEc2Instance {
 	_init_.Initialize()
 
@@ -759,7 +807,7 @@ func NewDataAwsccEc2Instance(scope constructs.Construct, id *string, config *Dat
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_instance awscc_ec2_instance} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_instance awscc_ec2_instance} Data Source.
 func NewDataAwsccEc2Instance_Override(d DataAwsccEc2Instance, scope constructs.Construct, id *string, config *DataAwsccEc2InstanceConfig) {
 	_init_.Initialize()
 
@@ -1126,6 +1174,32 @@ func (d *jsiiProxy_DataAwsccEc2Instance) SynthesizeAttributes() *map[string]inte
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2Instance) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2Instance) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

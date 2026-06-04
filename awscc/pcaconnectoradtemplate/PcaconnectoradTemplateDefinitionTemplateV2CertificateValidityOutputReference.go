@@ -27,10 +27,10 @@ type PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityOutputReferenc
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidity
-	SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidity)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	RenewalPeriod() PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityRenewalPeriodOutputReference
-	RenewalPeriodInput() *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityRenewalPeriod
+	RenewalPeriodInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -40,7 +40,7 @@ type PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityOutputReferenc
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	ValidityPeriod() PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriodOutputReference
-	ValidityPeriodInput() *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriod
+	ValidityPeriodInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -67,6 +67,8 @@ type PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityOutputReferenc
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutRenewalPeriod(value *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityRenewalPeriod)
 	PutValidityPeriod(value *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriod)
+	ResetRenewalPeriod()
+	ResetValidityPeriod()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -122,8 +124,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidity
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityOutputReference) InternalValue() *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidity {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidity
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -142,8 +144,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidity
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityOutputReference) RenewalPeriodInput() *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityRenewalPeriod {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityRenewalPeriod
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityOutputReference) RenewalPeriodInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"renewalPeriodInput",
@@ -182,8 +184,8 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidity
 	return returns
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityOutputReference) ValidityPeriodInput() *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriod {
-	var returns *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityValidityPeriod
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityOutputReference) ValidityPeriodInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"validityPeriodInput",
@@ -242,7 +244,7 @@ func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidity
 	)
 }
 
-func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityOutputReference)SetInternalValue(val *PcaconnectoradTemplateDefinitionTemplateV2CertificateValidity) {
+func (j *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -480,6 +482,22 @@ func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidity
 		p,
 		"putValidityPeriod",
 		[]interface{}{value},
+	)
+}
+
+func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityOutputReference) ResetRenewalPeriod() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetRenewalPeriod",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PcaconnectoradTemplateDefinitionTemplateV2CertificateValidityOutputReference) ResetValidityPeriod() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetValidityPeriod",
+		nil, // no parameters
 	)
 }
 

@@ -30,8 +30,8 @@ type LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationOutputRe
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecification
-	SetInternalValue(val *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecification)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	MaxRetries() *float64
 	SetMaxRetries(val *float64)
 	MaxRetriesInput() *float64
@@ -77,6 +77,8 @@ type LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationOutputRe
 	PutMessageGroupsList(value interface{})
 	PutPromptAttemptsSpecification(value interface{})
 	ResetAllowInterrupt()
+	ResetMaxRetries()
+	ResetMessageGroupsList()
 	ResetMessageSelectionStrategy()
 	ResetPromptAttemptsSpecification()
 	// Produce the Token's value at resolution time.
@@ -154,8 +156,8 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecifi
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationOutputReference) InternalValue() *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecification {
-	var returns *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecification
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -325,7 +327,7 @@ func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecifi
 	)
 }
 
-func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationOutputReference)SetInternalValue(val *LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecification) {
+func (j *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -592,6 +594,22 @@ func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecifi
 	_jsii_.InvokeVoid(
 		l,
 		"resetAllowInterrupt",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationOutputReference) ResetMaxRetries() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMaxRetries",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesIntentsIntentConfirmationSettingPromptSpecificationOutputReference) ResetMessageGroupsList() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMessageGroupsList",
 		nil, // no parameters
 	)
 }

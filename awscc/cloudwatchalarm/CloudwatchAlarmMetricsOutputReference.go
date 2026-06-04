@@ -84,6 +84,7 @@ type CloudwatchAlarmMetricsOutputReference interface {
 	PutMetricStat(value *CloudwatchAlarmMetricsMetricStat)
 	ResetAccountId()
 	ResetExpression()
+	ResetId()
 	ResetLabel()
 	ResetMetricStat()
 	ResetPeriod()
@@ -671,6 +672,14 @@ func (c *jsiiProxy_CloudwatchAlarmMetricsOutputReference) ResetExpression() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetExpression",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CloudwatchAlarmMetricsOutputReference) ResetId() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetId",
 		nil, // no parameters
 	)
 }

@@ -67,6 +67,8 @@ type QuicksightDataSourceDataSourceParametersRdsParametersOutputReference interf
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetDatabase()
+	ResetInstanceId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersRdsParametersOutputRe
 	)
 
 	return returns
+}
+
+func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersRdsParametersOutputReference) ResetDatabase() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetDatabase",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersRdsParametersOutputReference) ResetInstanceId() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetInstanceId",
+		nil, // no parameters
+	)
 }
 
 func (q *jsiiProxy_QuicksightDataSourceDataSourceParametersRdsParametersOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

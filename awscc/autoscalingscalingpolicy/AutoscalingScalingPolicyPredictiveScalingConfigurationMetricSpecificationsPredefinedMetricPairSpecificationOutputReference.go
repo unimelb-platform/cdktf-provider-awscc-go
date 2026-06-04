@@ -67,6 +67,7 @@ type AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsP
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetPredefinedMetricType()
 	ResetResourceLabel()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -482,6 +483,14 @@ func (a *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricS
 	)
 
 	return returns
+}
+
+func (a *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsPredefinedMetricPairSpecificationOutputReference) ResetPredefinedMetricType() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetPredefinedMetricType",
+		nil, // no parameters
+	)
 }
 
 func (a *jsiiProxy_AutoscalingScalingPolicyPredictiveScalingConfigurationMetricSpecificationsPredefinedMetricPairSpecificationOutputReference) ResetResourceLabel() {

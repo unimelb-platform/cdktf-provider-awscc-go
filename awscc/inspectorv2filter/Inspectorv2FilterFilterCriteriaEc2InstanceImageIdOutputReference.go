@@ -67,6 +67,8 @@ type Inspectorv2FilterFilterCriteriaEc2InstanceImageIdOutputReference interface 
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetComparison()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaEc2InstanceImageIdOutputRefere
 	)
 
 	return returns
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaEc2InstanceImageIdOutputReference) ResetComparison() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetComparison",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaEc2InstanceImageIdOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaEc2InstanceImageIdOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

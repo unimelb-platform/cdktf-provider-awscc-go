@@ -96,6 +96,10 @@ func (j *jsiiProxy_QuicksightTopicDataSetsCalculatedFieldsOutputReference) valid
 	return nil
 }
 
+func (j *jsiiProxy_QuicksightTopicDataSetsCalculatedFieldsOutputReference) validateSetDisableIndexingParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_QuicksightTopicDataSetsCalculatedFieldsOutputReference) validateSetExpressionParameters(val *string) error {
 	return nil
 }

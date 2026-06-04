@@ -1,0 +1,74 @@
+//go:build no_runtime_type_checking
+
+package dataawsccsagemakermodelpackage
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (d *jsiiProxy_DataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSourceOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSourceOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSourceOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSourceOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSourceOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSourceOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSourceOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSourceOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSourceOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSourceOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSourceOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSourceOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSourceOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSourceOutputReference) validateSetInternalValueParameters(val *DataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSource) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSourceOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSourceOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewDataAwsccSagemakerModelPackageInferenceSpecificationContainersModelDataSourceS3DataSourceOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+	return nil
+}
+

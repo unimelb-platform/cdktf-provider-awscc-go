@@ -67,6 +67,8 @@ type DatabrewDatasetPathOptionsLastModifiedDateConditionOutputReference interfac
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutValuesMap(value interface{})
+	ResetExpression()
+	ResetValuesMap()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -480,6 +482,22 @@ func (d *jsiiProxy_DatabrewDatasetPathOptionsLastModifiedDateConditionOutputRefe
 		d,
 		"putValuesMap",
 		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DatabrewDatasetPathOptionsLastModifiedDateConditionOutputReference) ResetExpression() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetExpression",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatabrewDatasetPathOptionsLastModifiedDateConditionOutputReference) ResetValuesMap() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetValuesMap",
+		nil, // no parameters
 	)
 }
 

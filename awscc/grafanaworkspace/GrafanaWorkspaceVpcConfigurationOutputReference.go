@@ -67,6 +67,8 @@ type GrafanaWorkspaceVpcConfigurationOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetSecurityGroupIds()
+	ResetSubnetIds()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (g *jsiiProxy_GrafanaWorkspaceVpcConfigurationOutputReference) Interpolatio
 	)
 
 	return returns
+}
+
+func (g *jsiiProxy_GrafanaWorkspaceVpcConfigurationOutputReference) ResetSecurityGroupIds() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetSecurityGroupIds",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GrafanaWorkspaceVpcConfigurationOutputReference) ResetSubnetIds() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetSubnetIds",
+		nil, // no parameters
+	)
 }
 
 func (g *jsiiProxy_GrafanaWorkspaceVpcConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

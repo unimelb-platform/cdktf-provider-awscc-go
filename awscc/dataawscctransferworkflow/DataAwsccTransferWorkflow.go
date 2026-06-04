@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscctransferworkflow/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/transfer_workflow awscc_transfer_workflow}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/transfer_workflow awscc_transfer_workflow}.
 type DataAwsccTransferWorkflow interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -88,6 +88,10 @@ type DataAwsccTransferWorkflow interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -323,7 +327,7 @@ func (j *jsiiProxy_DataAwsccTransferWorkflow) WorkflowId() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/transfer_workflow awscc_transfer_workflow} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/transfer_workflow awscc_transfer_workflow} Data Source.
 func NewDataAwsccTransferWorkflow(scope constructs.Construct, id *string, config *DataAwsccTransferWorkflowConfig) DataAwsccTransferWorkflow {
 	_init_.Initialize()
 
@@ -341,7 +345,7 @@ func NewDataAwsccTransferWorkflow(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/transfer_workflow awscc_transfer_workflow} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/transfer_workflow awscc_transfer_workflow} Data Source.
 func NewDataAwsccTransferWorkflow_Override(d DataAwsccTransferWorkflow, scope constructs.Construct, id *string, config *DataAwsccTransferWorkflowConfig) {
 	_init_.Initialize()
 
@@ -708,6 +712,32 @@ func (d *jsiiProxy_DataAwsccTransferWorkflow) SynthesizeAttributes() *map[string
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccTransferWorkflow) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccTransferWorkflow) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

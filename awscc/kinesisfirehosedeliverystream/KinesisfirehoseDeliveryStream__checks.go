@@ -119,6 +119,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validateInterpolationForAttrib
 	return nil
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -180,6 +188,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validateMoveToParameters(moveT
 	return nil
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
@@ -210,7 +226,29 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validatePutAmazonopensearchser
 	return nil
 }
 
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validatePutDatabaseSourceConfigurationParameters(value *KinesisfirehoseDeliveryStreamDatabaseSourceConfiguration) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validatePutDeliveryStreamEncryptionConfigurationInputParameters(value *KinesisfirehoseDeliveryStreamDeliveryStreamEncryptionConfigurationInput) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validatePutDirectPutSourceConfigurationParameters(value *KinesisfirehoseDeliveryStreamDirectPutSourceConfiguration) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -244,6 +282,17 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validatePutExtendedS3Destinati
 }
 
 func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validatePutHttpEndpointDestinationConfigurationParameters(value *KinesisfirehoseDeliveryStreamHttpEndpointDestinationConfiguration) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStream) validatePutIcebergDestinationConfigurationParameters(value *KinesisfirehoseDeliveryStreamIcebergDestinationConfiguration) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}

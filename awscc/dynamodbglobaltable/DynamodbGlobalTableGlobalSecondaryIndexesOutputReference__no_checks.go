@@ -52,6 +52,14 @@ func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) val
 	return nil
 }
 
+func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) validatePutWarmThroughputParameters(value *DynamodbGlobalTableGlobalSecondaryIndexesWarmThroughput) error {
+	return nil
+}
+
+func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) validatePutWriteOnDemandThroughputSettingsParameters(value *DynamodbGlobalTableGlobalSecondaryIndexesWriteOnDemandThroughputSettings) error {
+	return nil
+}
+
 func (d *jsiiProxy_DynamodbGlobalTableGlobalSecondaryIndexesOutputReference) validatePutWriteProvisionedThroughputSettingsParameters(value *DynamodbGlobalTableGlobalSecondaryIndexesWriteProvisionedThroughputSettings) error {
 	return nil
 }

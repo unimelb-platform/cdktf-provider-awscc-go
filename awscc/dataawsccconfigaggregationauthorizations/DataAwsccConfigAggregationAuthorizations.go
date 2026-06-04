@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccconfigaggregationauthorizations/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/config_aggregation_authorizations awscc_config_aggregation_authorizations}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/config_aggregation_authorizations awscc_config_aggregation_authorizations}.
 type DataAwsccConfigAggregationAuthorizations interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -81,6 +81,10 @@ type DataAwsccConfigAggregationAuthorizations interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -256,7 +260,7 @@ func (j *jsiiProxy_DataAwsccConfigAggregationAuthorizations) TerraformResourceTy
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/config_aggregation_authorizations awscc_config_aggregation_authorizations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/config_aggregation_authorizations awscc_config_aggregation_authorizations} Data Source.
 func NewDataAwsccConfigAggregationAuthorizations(scope constructs.Construct, id *string, config *DataAwsccConfigAggregationAuthorizationsConfig) DataAwsccConfigAggregationAuthorizations {
 	_init_.Initialize()
 
@@ -274,7 +278,7 @@ func NewDataAwsccConfigAggregationAuthorizations(scope constructs.Construct, id 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/config_aggregation_authorizations awscc_config_aggregation_authorizations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/config_aggregation_authorizations awscc_config_aggregation_authorizations} Data Source.
 func NewDataAwsccConfigAggregationAuthorizations_Override(d DataAwsccConfigAggregationAuthorizations, scope constructs.Construct, id *string, config *DataAwsccConfigAggregationAuthorizationsConfig) {
 	_init_.Initialize()
 
@@ -630,6 +634,32 @@ func (d *jsiiProxy_DataAwsccConfigAggregationAuthorizations) SynthesizeAttribute
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccConfigAggregationAuthorizations) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccConfigAggregationAuthorizations) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

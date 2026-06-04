@@ -31,6 +31,7 @@ type DataAwsccDynamodbGlobalTableReplicasGlobalSecondaryIndexesOutputReference i
 	IndexName() *string
 	InternalValue() *DataAwsccDynamodbGlobalTableReplicasGlobalSecondaryIndexes
 	SetInternalValue(val *DataAwsccDynamodbGlobalTableReplicasGlobalSecondaryIndexes)
+	ReadOnDemandThroughputSettings() DataAwsccDynamodbGlobalTableReplicasGlobalSecondaryIndexesReadOnDemandThroughputSettingsOutputReference
 	ReadProvisionedThroughputSettings() DataAwsccDynamodbGlobalTableReplicasGlobalSecondaryIndexesReadProvisionedThroughputSettingsOutputReference
 	// Experimental.
 	TerraformAttribute() *string
@@ -144,6 +145,16 @@ func (j *jsiiProxy_DataAwsccDynamodbGlobalTableReplicasGlobalSecondaryIndexesOut
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccDynamodbGlobalTableReplicasGlobalSecondaryIndexesOutputReference) ReadOnDemandThroughputSettings() DataAwsccDynamodbGlobalTableReplicasGlobalSecondaryIndexesReadOnDemandThroughputSettingsOutputReference {
+	var returns DataAwsccDynamodbGlobalTableReplicasGlobalSecondaryIndexesReadOnDemandThroughputSettingsOutputReference
+	_jsii_.Get(
+		j,
+		"readOnDemandThroughputSettings",
 		&returns,
 	)
 	return returns

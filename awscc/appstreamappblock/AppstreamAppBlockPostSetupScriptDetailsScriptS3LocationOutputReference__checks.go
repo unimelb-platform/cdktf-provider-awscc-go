@@ -163,9 +163,25 @@ func (j *jsiiProxy_AppstreamAppBlockPostSetupScriptDetailsScriptS3LocationOutput
 	return nil
 }
 
-func (j *jsiiProxy_AppstreamAppBlockPostSetupScriptDetailsScriptS3LocationOutputReference) validateSetInternalValueParameters(val *AppstreamAppBlockPostSetupScriptDetailsScriptS3Location) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_AppstreamAppBlockPostSetupScriptDetailsScriptS3LocationOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *AppstreamAppBlockPostSetupScriptDetailsScriptS3Location:
+		val := val.(*AppstreamAppBlockPostSetupScriptDetailsScriptS3Location)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case AppstreamAppBlockPostSetupScriptDetailsScriptS3Location:
+		val_ := val.(AppstreamAppBlockPostSetupScriptDetailsScriptS3Location)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *AppstreamAppBlockPostSetupScriptDetailsScriptS3Location; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

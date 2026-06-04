@@ -60,7 +60,7 @@ func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethod
 	return nil
 }
 
-func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethodOutputReference) validateSetInternalValueParameters(val *Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethod) error {
+func (j *jsiiProxy_Mediapackagev2OriginEndpointSegmentEncryptionEncryptionMethodOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

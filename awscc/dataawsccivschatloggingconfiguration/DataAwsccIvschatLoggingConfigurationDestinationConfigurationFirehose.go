@@ -1,0 +1,6 @@
+package dataawsccivschatloggingconfiguration
+
+
+type DataAwsccIvschatLoggingConfigurationDestinationConfigurationFirehose struct {
+}
+

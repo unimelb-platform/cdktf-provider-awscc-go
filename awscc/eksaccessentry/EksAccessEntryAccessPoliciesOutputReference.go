@@ -11,7 +11,7 @@ import (
 type EksAccessEntryAccessPoliciesOutputReference interface {
 	cdktf.ComplexObject
 	AccessScope() EksAccessEntryAccessPoliciesAccessScopeOutputReference
-	AccessScopeInput() *EksAccessEntryAccessPoliciesAccessScope
+	AccessScopeInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -67,6 +67,8 @@ type EksAccessEntryAccessPoliciesOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAccessScope(value *EksAccessEntryAccessPoliciesAccessScope)
+	ResetAccessScope()
+	ResetPolicyArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -92,8 +94,8 @@ func (j *jsiiProxy_EksAccessEntryAccessPoliciesOutputReference) AccessScope() Ek
 	return returns
 }
 
-func (j *jsiiProxy_EksAccessEntryAccessPoliciesOutputReference) AccessScopeInput() *EksAccessEntryAccessPoliciesAccessScope {
-	var returns *EksAccessEntryAccessPoliciesAccessScope
+func (j *jsiiProxy_EksAccessEntryAccessPoliciesOutputReference) AccessScopeInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"accessScopeInput",
@@ -480,6 +482,22 @@ func (e *jsiiProxy_EksAccessEntryAccessPoliciesOutputReference) PutAccessScope(v
 		e,
 		"putAccessScope",
 		[]interface{}{value},
+	)
+}
+
+func (e *jsiiProxy_EksAccessEntryAccessPoliciesOutputReference) ResetAccessScope() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetAccessScope",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EksAccessEntryAccessPoliciesOutputReference) ResetPolicyArn() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetPolicyArn",
+		nil, // no parameters
 	)
 }
 

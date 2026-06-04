@@ -119,6 +119,14 @@ func (e *jsiiProxy_Ec2VpnConnection) validateInterpolationForAttributeParameters
 	return nil
 }
 
+func (e *jsiiProxy_Ec2VpnConnection) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (e *jsiiProxy_Ec2VpnConnection) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -175,6 +183,14 @@ func (e *jsiiProxy_Ec2VpnConnection) validateMoveToParameters(moveTarget *string
 		// ok
 	default:
 		return fmt.Errorf("parameter index must be one of the allowed types: *string, *float64; received %#v (a %T)", index, index)
+	}
+
+	return nil
+}
+
+func (e *jsiiProxy_Ec2VpnConnection) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
 
 	return nil
@@ -388,9 +404,53 @@ func (j *jsiiProxy_Ec2VpnConnection) validateSetCustomerGatewayIdParameters(val 
 	return nil
 }
 
+func (j *jsiiProxy_Ec2VpnConnection) validateSetEnableAccelerationParameters(val interface{}) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+	switch val.(type) {
+	case *bool:
+		// ok
+	case bool:
+		// ok
+	case cdktf.IResolvable:
+		// ok
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: *bool, cdktf.IResolvable; received %#v (a %T)", val, val)
+		}
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Ec2VpnConnection) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 		return err
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) validateSetLocalIpv4NetworkCidrParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) validateSetLocalIpv6NetworkCidrParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) validateSetOutsideIpAddressTypeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil
@@ -442,6 +502,22 @@ func (j *jsiiProxy_Ec2VpnConnection) validateSetProvisionersParameters(val *[]in
 	return nil
 }
 
+func (j *jsiiProxy_Ec2VpnConnection) validateSetRemoteIpv4NetworkCidrParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) validateSetRemoteIpv6NetworkCidrParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Ec2VpnConnection) validateSetStaticRoutesOnlyParameters(val interface{}) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -463,6 +539,22 @@ func (j *jsiiProxy_Ec2VpnConnection) validateSetStaticRoutesOnlyParameters(val i
 }
 
 func (j *jsiiProxy_Ec2VpnConnection) validateSetTransitGatewayIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) validateSetTransportTransitGatewayAttachmentIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Ec2VpnConnection) validateSetTunnelInsideIpVersionParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

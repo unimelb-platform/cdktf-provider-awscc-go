@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccivsstreamkey/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ivs_stream_key awscc_ivs_stream_key}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ivs_stream_key awscc_ivs_stream_key}.
 type DataAwsccIvsStreamKey interface {
 	cdktf.TerraformDataSource
 	Arn() *string
@@ -86,6 +86,10 @@ type DataAwsccIvsStreamKey interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -301,7 +305,7 @@ func (j *jsiiProxy_DataAwsccIvsStreamKey) Value() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ivs_stream_key awscc_ivs_stream_key} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ivs_stream_key awscc_ivs_stream_key} Data Source.
 func NewDataAwsccIvsStreamKey(scope constructs.Construct, id *string, config *DataAwsccIvsStreamKeyConfig) DataAwsccIvsStreamKey {
 	_init_.Initialize()
 
@@ -319,7 +323,7 @@ func NewDataAwsccIvsStreamKey(scope constructs.Construct, id *string, config *Da
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ivs_stream_key awscc_ivs_stream_key} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ivs_stream_key awscc_ivs_stream_key} Data Source.
 func NewDataAwsccIvsStreamKey_Override(d DataAwsccIvsStreamKey, scope constructs.Construct, id *string, config *DataAwsccIvsStreamKeyConfig) {
 	_init_.Initialize()
 
@@ -686,6 +690,32 @@ func (d *jsiiProxy_DataAwsccIvsStreamKey) SynthesizeAttributes() *map[string]int
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIvsStreamKey) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccIvsStreamKey) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

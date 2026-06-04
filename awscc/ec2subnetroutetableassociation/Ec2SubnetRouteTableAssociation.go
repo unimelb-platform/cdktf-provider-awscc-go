@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/ec2subnetroutetableassociation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_subnet_route_table_association awscc_ec2_subnet_route_table_association}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_subnet_route_table_association awscc_ec2_subnet_route_table_association}.
 type Ec2SubnetRouteTableAssociation interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -59,6 +59,7 @@ type Ec2SubnetRouteTableAssociation interface {
 	SubnetId() *string
 	SetSubnetId(val *string)
 	SubnetIdInput() *string
+	SubnetRouteTableAssociationId() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -89,12 +90,22 @@ type Ec2SubnetRouteTableAssociation interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -102,6 +113,9 @@ type Ec2SubnetRouteTableAssociation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -296,6 +310,16 @@ func (j *jsiiProxy_Ec2SubnetRouteTableAssociation) SubnetIdInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Ec2SubnetRouteTableAssociation) SubnetRouteTableAssociationId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"subnetRouteTableAssociationId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Ec2SubnetRouteTableAssociation) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -327,7 +351,7 @@ func (j *jsiiProxy_Ec2SubnetRouteTableAssociation) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_subnet_route_table_association awscc_ec2_subnet_route_table_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_subnet_route_table_association awscc_ec2_subnet_route_table_association} Resource.
 func NewEc2SubnetRouteTableAssociation(scope constructs.Construct, id *string, config *Ec2SubnetRouteTableAssociationConfig) Ec2SubnetRouteTableAssociation {
 	_init_.Initialize()
 
@@ -345,7 +369,7 @@ func NewEc2SubnetRouteTableAssociation(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/ec2_subnet_route_table_association awscc_ec2_subnet_route_table_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/ec2_subnet_route_table_association awscc_ec2_subnet_route_table_association} Resource.
 func NewEc2SubnetRouteTableAssociation_Override(e Ec2SubnetRouteTableAssociation, scope constructs.Construct, id *string, config *Ec2SubnetRouteTableAssociationConfig) {
 	_init_.Initialize()
 
@@ -715,6 +739,19 @@ func (e *jsiiProxy_Ec2SubnetRouteTableAssociation) GetStringMapAttribute(terrafo
 	return returns
 }
 
+func (e *jsiiProxy_Ec2SubnetRouteTableAssociation) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (e *jsiiProxy_Ec2SubnetRouteTableAssociation) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := e.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -742,6 +779,17 @@ func (e *jsiiProxy_Ec2SubnetRouteTableAssociation) InterpolationForAttribute(ter
 	return returns
 }
 
+func (e *jsiiProxy_Ec2SubnetRouteTableAssociation) MoveFromId(id *string) {
+	if err := e.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (e *jsiiProxy_Ec2SubnetRouteTableAssociation) MoveTo(moveTarget *string, index interface{}) {
 	if err := e.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -750,6 +798,17 @@ func (e *jsiiProxy_Ec2SubnetRouteTableAssociation) MoveTo(moveTarget *string, in
 		e,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (e *jsiiProxy_Ec2SubnetRouteTableAssociation) MoveToId(id *string) {
+	if err := e.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -778,6 +837,32 @@ func (e *jsiiProxy_Ec2SubnetRouteTableAssociation) SynthesizeAttributes() *map[s
 	_jsii_.Invoke(
 		e,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2SubnetRouteTableAssociation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		e,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (e *jsiiProxy_Ec2SubnetRouteTableAssociation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		e,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

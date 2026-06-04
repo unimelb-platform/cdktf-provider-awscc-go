@@ -1,0 +1,82 @@
+//go:build no_runtime_type_checking
+
+package kinesisfirehosedeliverystream
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+	return nil
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) validateSetParameterNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) validateSetParameterValueParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_KinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func validateNewKinesisfirehoseDeliveryStreamIcebergDestinationConfigurationProcessingConfigurationProcessorsParametersOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
+	return nil
+}
+

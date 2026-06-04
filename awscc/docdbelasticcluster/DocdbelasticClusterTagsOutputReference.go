@@ -67,6 +67,8 @@ type DocdbelasticClusterTagsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKey()
+	ResetValue()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (d *jsiiProxy_DocdbelasticClusterTagsOutputReference) InterpolationForAttri
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DocdbelasticClusterTagsOutputReference) ResetKey() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DocdbelasticClusterTagsOutputReference) ResetValue() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetValue",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DocdbelasticClusterTagsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

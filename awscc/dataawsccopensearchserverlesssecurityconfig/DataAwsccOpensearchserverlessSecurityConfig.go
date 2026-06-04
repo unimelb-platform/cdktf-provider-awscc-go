@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccopensearchserverlesssecurityconfig/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/opensearchserverless_security_config awscc_opensearchserverless_security_config}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/opensearchserverless_security_config awscc_opensearchserverless_security_config}.
 type DataAwsccOpensearchserverlessSecurityConfig interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -33,6 +33,7 @@ type DataAwsccOpensearchserverlessSecurityConfig interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	IamIdentityCenterOptions() DataAwsccOpensearchserverlessSecurityConfigIamIdentityCenterOptionsOutputReference
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -50,6 +51,7 @@ type DataAwsccOpensearchserverlessSecurityConfig interface {
 	// Experimental.
 	RawOverrides() interface{}
 	SamlOptions() DataAwsccOpensearchserverlessSecurityConfigSamlOptionsOutputReference
+	SecurityConfigId() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -86,6 +88,10 @@ type DataAwsccOpensearchserverlessSecurityConfig interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -180,6 +186,16 @@ func (j *jsiiProxy_DataAwsccOpensearchserverlessSecurityConfig) FriendlyUniqueId
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccOpensearchserverlessSecurityConfig) IamIdentityCenterOptions() DataAwsccOpensearchserverlessSecurityConfigIamIdentityCenterOptionsOutputReference {
+	var returns DataAwsccOpensearchserverlessSecurityConfigIamIdentityCenterOptionsOutputReference
+	_jsii_.Get(
+		j,
+		"iamIdentityCenterOptions",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccOpensearchserverlessSecurityConfig) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -260,6 +276,16 @@ func (j *jsiiProxy_DataAwsccOpensearchserverlessSecurityConfig) SamlOptions() Da
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccOpensearchserverlessSecurityConfig) SecurityConfigId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"securityConfigId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccOpensearchserverlessSecurityConfig) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -301,7 +327,7 @@ func (j *jsiiProxy_DataAwsccOpensearchserverlessSecurityConfig) Type() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/opensearchserverless_security_config awscc_opensearchserverless_security_config} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/opensearchserverless_security_config awscc_opensearchserverless_security_config} Data Source.
 func NewDataAwsccOpensearchserverlessSecurityConfig(scope constructs.Construct, id *string, config *DataAwsccOpensearchserverlessSecurityConfigConfig) DataAwsccOpensearchserverlessSecurityConfig {
 	_init_.Initialize()
 
@@ -319,7 +345,7 @@ func NewDataAwsccOpensearchserverlessSecurityConfig(scope constructs.Construct, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/opensearchserverless_security_config awscc_opensearchserverless_security_config} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/opensearchserverless_security_config awscc_opensearchserverless_security_config} Data Source.
 func NewDataAwsccOpensearchserverlessSecurityConfig_Override(d DataAwsccOpensearchserverlessSecurityConfig, scope constructs.Construct, id *string, config *DataAwsccOpensearchserverlessSecurityConfigConfig) {
 	_init_.Initialize()
 
@@ -686,6 +712,32 @@ func (d *jsiiProxy_DataAwsccOpensearchserverlessSecurityConfig) SynthesizeAttrib
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccOpensearchserverlessSecurityConfig) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccOpensearchserverlessSecurityConfig) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

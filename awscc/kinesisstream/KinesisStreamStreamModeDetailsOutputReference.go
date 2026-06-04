@@ -64,6 +64,7 @@ type KinesisStreamStreamModeDetailsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetStreamMode()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (k *jsiiProxy_KinesisStreamStreamModeDetailsOutputReference) InterpolationF
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KinesisStreamStreamModeDetailsOutputReference) ResetStreamMode() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetStreamMode",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KinesisStreamStreamModeDetailsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

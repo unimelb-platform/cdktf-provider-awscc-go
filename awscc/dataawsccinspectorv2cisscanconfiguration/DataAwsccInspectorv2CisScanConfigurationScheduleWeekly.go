@@ -1,0 +1,6 @@
+package dataawsccinspectorv2cisscanconfiguration
+
+
+type DataAwsccInspectorv2CisScanConfigurationScheduleWeekly struct {
+}
+

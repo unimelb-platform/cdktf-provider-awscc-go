@@ -84,6 +84,8 @@ type AutoscalingAutoScalingGroupLifecycleHookSpecificationListStructOutputRefere
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetDefaultResult()
 	ResetHeartbeatTimeout()
+	ResetLifecycleHookName()
+	ResetLifecycleTransition()
 	ResetNotificationMetadata()
 	ResetNotificationTargetArn()
 	ResetRoleArn()
@@ -670,6 +672,22 @@ func (a *jsiiProxy_AutoscalingAutoScalingGroupLifecycleHookSpecificationListStru
 	_jsii_.InvokeVoid(
 		a,
 		"resetHeartbeatTimeout",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroupLifecycleHookSpecificationListStructOutputReference) ResetLifecycleHookName() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetLifecycleHookName",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AutoscalingAutoScalingGroupLifecycleHookSpecificationListStructOutputReference) ResetLifecycleTransition() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetLifecycleTransition",
 		nil, // no parameters
 	)
 }

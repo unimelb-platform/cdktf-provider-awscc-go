@@ -56,7 +56,15 @@ func (m *jsiiProxy_MediapackageAsset) validateInterpolationForAttributeParameter
 	return nil
 }
 
+func (m *jsiiProxy_MediapackageAsset) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_MediapackageAsset) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (m *jsiiProxy_MediapackageAsset) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -88,15 +96,15 @@ func validateMediapackageAsset_IsTerraformResourceParameters(x interface{}) erro
 	return nil
 }
 
+func (j *jsiiProxy_MediapackageAsset) validateSetAssetIdParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_MediapackageAsset) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }
 
 func (j *jsiiProxy_MediapackageAsset) validateSetCountParameters(val interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_MediapackageAsset) validateSetIdParameters(val *string) error {
 	return nil
 }
 

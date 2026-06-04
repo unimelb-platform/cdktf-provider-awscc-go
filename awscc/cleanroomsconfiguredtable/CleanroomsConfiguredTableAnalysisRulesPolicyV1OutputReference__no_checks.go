@@ -68,7 +68,7 @@ func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1OutputReference
 	return nil
 }
 
-func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1OutputReference) validateSetInternalValueParameters(val *CleanroomsConfiguredTableAnalysisRulesPolicyV1) error {
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1OutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

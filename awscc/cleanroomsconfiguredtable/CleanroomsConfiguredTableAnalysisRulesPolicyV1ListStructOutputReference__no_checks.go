@@ -48,6 +48,10 @@ func (c *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutpu
 	return nil
 }
 
+func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference) validateSetAdditionalAnalysesParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_CleanroomsConfiguredTableAnalysisRulesPolicyV1ListStructOutputReference) validateSetAllowedJoinOperatorsParameters(val *[]*string) error {
 	return nil
 }

@@ -70,7 +70,9 @@ type QuicksightDataSetColumnGroupsGeoSpatialColumnGroupOutputReference interface
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetColumns()
 	ResetCountryCode()
+	ResetName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -518,10 +520,26 @@ func (q *jsiiProxy_QuicksightDataSetColumnGroupsGeoSpatialColumnGroupOutputRefer
 	return returns
 }
 
+func (q *jsiiProxy_QuicksightDataSetColumnGroupsGeoSpatialColumnGroupOutputReference) ResetColumns() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetColumns",
+		nil, // no parameters
+	)
+}
+
 func (q *jsiiProxy_QuicksightDataSetColumnGroupsGeoSpatialColumnGroupOutputReference) ResetCountryCode() {
 	_jsii_.InvokeVoid(
 		q,
 		"resetCountryCode",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetColumnGroupsGeoSpatialColumnGroupOutputReference) ResetName() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetName",
 		nil, // no parameters
 	)
 }

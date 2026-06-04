@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/lambdaeventsourcemapping/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lambda_event_source_mapping awscc_lambda_event_source_mapping}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lambda_event_source_mapping awscc_lambda_event_source_mapping}.
 type LambdaEventSourceMapping interface {
 	cdktf.TerraformResource
 	AmazonManagedKafkaEventSourceConfig() LambdaEventSourceMappingAmazonManagedKafkaEventSourceConfigOutputReference
@@ -46,6 +46,8 @@ type LambdaEventSourceMapping interface {
 	EventSourceArn() *string
 	SetEventSourceArn(val *string)
 	EventSourceArnInput() *string
+	EventSourceMappingArn() *string
+	EventSourceMappingId() *string
 	FilterCriteria() LambdaEventSourceMappingFilterCriteriaOutputReference
 	FilterCriteriaInput() interface{}
 	// Experimental.
@@ -63,6 +65,9 @@ type LambdaEventSourceMapping interface {
 	SetFunctionResponseTypes(val *[]*string)
 	FunctionResponseTypesInput() *[]*string
 	Id() *string
+	KmsKeyArn() *string
+	SetKmsKeyArn(val *string)
+	KmsKeyArnInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -76,6 +81,8 @@ type LambdaEventSourceMapping interface {
 	MaximumRetryAttempts() *float64
 	SetMaximumRetryAttempts(val *float64)
 	MaximumRetryAttemptsInput() *float64
+	MetricsConfig() LambdaEventSourceMappingMetricsConfigOutputReference
+	MetricsConfigInput() interface{}
 	// The tree node.
 	Node() constructs.Node
 	ParallelizationFactor() *float64
@@ -85,6 +92,8 @@ type LambdaEventSourceMapping interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	ProvisionedPollerConfig() LambdaEventSourceMappingProvisionedPollerConfigOutputReference
+	ProvisionedPollerConfigInput() interface{}
 	// Experimental.
 	Provisioners() *[]interface{}
 	// Experimental.
@@ -108,6 +117,8 @@ type LambdaEventSourceMapping interface {
 	StartingPositionTimestamp() *float64
 	SetStartingPositionTimestamp(val *float64)
 	StartingPositionTimestampInput() *float64
+	Tags() LambdaEventSourceMappingTagsList
+	TagsInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -144,12 +155,22 @@ type LambdaEventSourceMapping interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -157,10 +178,13 @@ type LambdaEventSourceMapping interface {
 	PutDestinationConfig(value *LambdaEventSourceMappingDestinationConfig)
 	PutDocumentDbEventSourceConfig(value *LambdaEventSourceMappingDocumentDbEventSourceConfig)
 	PutFilterCriteria(value *LambdaEventSourceMappingFilterCriteria)
+	PutMetricsConfig(value *LambdaEventSourceMappingMetricsConfig)
+	PutProvisionedPollerConfig(value *LambdaEventSourceMappingProvisionedPollerConfig)
 	PutScalingConfig(value *LambdaEventSourceMappingScalingConfig)
 	PutSelfManagedEventSource(value *LambdaEventSourceMappingSelfManagedEventSource)
 	PutSelfManagedKafkaEventSourceConfig(value *LambdaEventSourceMappingSelfManagedKafkaEventSourceConfig)
 	PutSourceAccessConfigurations(value interface{})
+	PutTags(value interface{})
 	ResetAmazonManagedKafkaEventSourceConfig()
 	ResetBatchSize()
 	ResetBisectBatchOnFunctionError()
@@ -170,13 +194,16 @@ type LambdaEventSourceMapping interface {
 	ResetEventSourceArn()
 	ResetFilterCriteria()
 	ResetFunctionResponseTypes()
+	ResetKmsKeyArn()
 	ResetMaximumBatchingWindowInSeconds()
 	ResetMaximumRecordAgeInSeconds()
 	ResetMaximumRetryAttempts()
+	ResetMetricsConfig()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetParallelizationFactor()
+	ResetProvisionedPollerConfig()
 	ResetQueues()
 	ResetScalingConfig()
 	ResetSelfManagedEventSource()
@@ -184,9 +211,13 @@ type LambdaEventSourceMapping interface {
 	ResetSourceAccessConfigurations()
 	ResetStartingPosition()
 	ResetStartingPositionTimestamp()
+	ResetTags()
 	ResetTopics()
 	ResetTumblingWindowInSeconds()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -391,6 +422,26 @@ func (j *jsiiProxy_LambdaEventSourceMapping) EventSourceArnInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_LambdaEventSourceMapping) EventSourceMappingArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"eventSourceMappingArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LambdaEventSourceMapping) EventSourceMappingId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"eventSourceMappingId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_LambdaEventSourceMapping) FilterCriteria() LambdaEventSourceMappingFilterCriteriaOutputReference {
 	var returns LambdaEventSourceMappingFilterCriteriaOutputReference
 	_jsii_.Get(
@@ -491,6 +542,26 @@ func (j *jsiiProxy_LambdaEventSourceMapping) Id() *string {
 	return returns
 }
 
+func (j *jsiiProxy_LambdaEventSourceMapping) KmsKeyArn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kmsKeyArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LambdaEventSourceMapping) KmsKeyArnInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kmsKeyArnInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_LambdaEventSourceMapping) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -561,6 +632,26 @@ func (j *jsiiProxy_LambdaEventSourceMapping) MaximumRetryAttemptsInput() *float6
 	return returns
 }
 
+func (j *jsiiProxy_LambdaEventSourceMapping) MetricsConfig() LambdaEventSourceMappingMetricsConfigOutputReference {
+	var returns LambdaEventSourceMappingMetricsConfigOutputReference
+	_jsii_.Get(
+		j,
+		"metricsConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LambdaEventSourceMapping) MetricsConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"metricsConfigInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_LambdaEventSourceMapping) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -596,6 +687,26 @@ func (j *jsiiProxy_LambdaEventSourceMapping) Provider() cdktf.TerraformProvider 
 	_jsii_.Get(
 		j,
 		"provider",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LambdaEventSourceMapping) ProvisionedPollerConfig() LambdaEventSourceMappingProvisionedPollerConfigOutputReference {
+	var returns LambdaEventSourceMappingProvisionedPollerConfigOutputReference
+	_jsii_.Get(
+		j,
+		"provisionedPollerConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LambdaEventSourceMapping) ProvisionedPollerConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"provisionedPollerConfigInput",
 		&returns,
 	)
 	return returns
@@ -761,6 +872,26 @@ func (j *jsiiProxy_LambdaEventSourceMapping) StartingPositionTimestampInput() *f
 	return returns
 }
 
+func (j *jsiiProxy_LambdaEventSourceMapping) Tags() LambdaEventSourceMappingTagsList {
+	var returns LambdaEventSourceMappingTagsList
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LambdaEventSourceMapping) TagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_LambdaEventSourceMapping) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -832,7 +963,7 @@ func (j *jsiiProxy_LambdaEventSourceMapping) TumblingWindowInSecondsInput() *flo
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lambda_event_source_mapping awscc_lambda_event_source_mapping} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lambda_event_source_mapping awscc_lambda_event_source_mapping} Resource.
 func NewLambdaEventSourceMapping(scope constructs.Construct, id *string, config *LambdaEventSourceMappingConfig) LambdaEventSourceMapping {
 	_init_.Initialize()
 
@@ -850,7 +981,7 @@ func NewLambdaEventSourceMapping(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/lambda_event_source_mapping awscc_lambda_event_source_mapping} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/lambda_event_source_mapping awscc_lambda_event_source_mapping} Resource.
 func NewLambdaEventSourceMapping_Override(l LambdaEventSourceMapping, scope constructs.Construct, id *string, config *LambdaEventSourceMappingConfig) {
 	_init_.Initialize()
 
@@ -961,6 +1092,17 @@ func (j *jsiiProxy_LambdaEventSourceMapping)SetFunctionResponseTypes(val *[]*str
 	_jsii_.Set(
 		j,
 		"functionResponseTypes",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LambdaEventSourceMapping)SetKmsKeyArn(val *string) {
+	if err := j.validateSetKmsKeyArnParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"kmsKeyArn",
 		val,
 	)
 }
@@ -1363,6 +1505,19 @@ func (l *jsiiProxy_LambdaEventSourceMapping) GetStringMapAttribute(terraformAttr
 	return returns
 }
 
+func (l *jsiiProxy_LambdaEventSourceMapping) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (l *jsiiProxy_LambdaEventSourceMapping) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := l.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1390,6 +1545,17 @@ func (l *jsiiProxy_LambdaEventSourceMapping) InterpolationForAttribute(terraform
 	return returns
 }
 
+func (l *jsiiProxy_LambdaEventSourceMapping) MoveFromId(id *string) {
+	if err := l.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (l *jsiiProxy_LambdaEventSourceMapping) MoveTo(moveTarget *string, index interface{}) {
 	if err := l.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1398,6 +1564,17 @@ func (l *jsiiProxy_LambdaEventSourceMapping) MoveTo(moveTarget *string, index in
 		l,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (l *jsiiProxy_LambdaEventSourceMapping) MoveToId(id *string) {
+	if err := l.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1456,6 +1633,28 @@ func (l *jsiiProxy_LambdaEventSourceMapping) PutFilterCriteria(value *LambdaEven
 	)
 }
 
+func (l *jsiiProxy_LambdaEventSourceMapping) PutMetricsConfig(value *LambdaEventSourceMappingMetricsConfig) {
+	if err := l.validatePutMetricsConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"putMetricsConfig",
+		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LambdaEventSourceMapping) PutProvisionedPollerConfig(value *LambdaEventSourceMappingProvisionedPollerConfig) {
+	if err := l.validatePutProvisionedPollerConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"putProvisionedPollerConfig",
+		[]interface{}{value},
+	)
+}
+
 func (l *jsiiProxy_LambdaEventSourceMapping) PutScalingConfig(value *LambdaEventSourceMappingScalingConfig) {
 	if err := l.validatePutScalingConfigParameters(value); err != nil {
 		panic(err)
@@ -1496,6 +1695,17 @@ func (l *jsiiProxy_LambdaEventSourceMapping) PutSourceAccessConfigurations(value
 	_jsii_.InvokeVoid(
 		l,
 		"putSourceAccessConfigurations",
+		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LambdaEventSourceMapping) PutTags(value interface{}) {
+	if err := l.validatePutTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		l,
+		"putTags",
 		[]interface{}{value},
 	)
 }
@@ -1572,6 +1782,14 @@ func (l *jsiiProxy_LambdaEventSourceMapping) ResetFunctionResponseTypes() {
 	)
 }
 
+func (l *jsiiProxy_LambdaEventSourceMapping) ResetKmsKeyArn() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetKmsKeyArn",
+		nil, // no parameters
+	)
+}
+
 func (l *jsiiProxy_LambdaEventSourceMapping) ResetMaximumBatchingWindowInSeconds() {
 	_jsii_.InvokeVoid(
 		l,
@@ -1596,6 +1814,14 @@ func (l *jsiiProxy_LambdaEventSourceMapping) ResetMaximumRetryAttempts() {
 	)
 }
 
+func (l *jsiiProxy_LambdaEventSourceMapping) ResetMetricsConfig() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetMetricsConfig",
+		nil, // no parameters
+	)
+}
+
 func (l *jsiiProxy_LambdaEventSourceMapping) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		l,
@@ -1608,6 +1834,14 @@ func (l *jsiiProxy_LambdaEventSourceMapping) ResetParallelizationFactor() {
 	_jsii_.InvokeVoid(
 		l,
 		"resetParallelizationFactor",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LambdaEventSourceMapping) ResetProvisionedPollerConfig() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetProvisionedPollerConfig",
 		nil, // no parameters
 	)
 }
@@ -1668,6 +1902,14 @@ func (l *jsiiProxy_LambdaEventSourceMapping) ResetStartingPositionTimestamp() {
 	)
 }
 
+func (l *jsiiProxy_LambdaEventSourceMapping) ResetTags() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetTags",
+		nil, // no parameters
+	)
+}
+
 func (l *jsiiProxy_LambdaEventSourceMapping) ResetTopics() {
 	_jsii_.InvokeVoid(
 		l,
@@ -1690,6 +1932,32 @@ func (l *jsiiProxy_LambdaEventSourceMapping) SynthesizeAttributes() *map[string]
 	_jsii_.Invoke(
 		l,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LambdaEventSourceMapping) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		l,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (l *jsiiProxy_LambdaEventSourceMapping) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		l,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

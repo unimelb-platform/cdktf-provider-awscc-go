@@ -67,6 +67,8 @@ type KinesisfirehoseDeliveryStreamKinesisStreamSourceConfigurationOutputReferenc
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetKinesisStreamArn()
+	ResetRoleArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamKinesisStreamSourceConfiguration
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamKinesisStreamSourceConfigurationOutputReference) ResetKinesisStreamArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetKinesisStreamArn",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamKinesisStreamSourceConfigurationOutputReference) ResetRoleArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetRoleArn",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamKinesisStreamSourceConfigurationOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

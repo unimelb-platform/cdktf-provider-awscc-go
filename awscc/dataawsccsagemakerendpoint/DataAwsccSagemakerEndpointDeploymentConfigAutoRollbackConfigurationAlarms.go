@@ -1,0 +1,6 @@
+package dataawsccsagemakerendpoint
+
+
+type DataAwsccSagemakerEndpointDeploymentConfigAutoRollbackConfigurationAlarms struct {
+}
+

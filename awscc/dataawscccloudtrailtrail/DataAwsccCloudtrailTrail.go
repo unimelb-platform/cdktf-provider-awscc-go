@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawscccloudtrailtrail/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudtrail_trail awscc_cloudtrail_trail}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudtrail_trail awscc_cloudtrail_trail}.
 type DataAwsccCloudtrailTrail interface {
 	cdktf.TerraformDataSource
 	AdvancedEventSelectors() DataAwsccCloudtrailTrailAdvancedEventSelectorsList
@@ -100,6 +100,10 @@ type DataAwsccCloudtrailTrail interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -455,7 +459,7 @@ func (j *jsiiProxy_DataAwsccCloudtrailTrail) TrailName() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudtrail_trail awscc_cloudtrail_trail} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudtrail_trail awscc_cloudtrail_trail} Data Source.
 func NewDataAwsccCloudtrailTrail(scope constructs.Construct, id *string, config *DataAwsccCloudtrailTrailConfig) DataAwsccCloudtrailTrail {
 	_init_.Initialize()
 
@@ -473,7 +477,7 @@ func NewDataAwsccCloudtrailTrail(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/cloudtrail_trail awscc_cloudtrail_trail} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/cloudtrail_trail awscc_cloudtrail_trail} Data Source.
 func NewDataAwsccCloudtrailTrail_Override(d DataAwsccCloudtrailTrail, scope constructs.Construct, id *string, config *DataAwsccCloudtrailTrailConfig) {
 	_init_.Initialize()
 
@@ -840,6 +844,32 @@ func (d *jsiiProxy_DataAwsccCloudtrailTrail) SynthesizeAttributes() *map[string]
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudtrailTrail) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccCloudtrailTrail) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

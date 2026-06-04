@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccsagemakerinferencecomponent/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_inference_component awscc_sagemaker_inference_component}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_inference_component awscc_sagemaker_inference_component}.
 type DataAwsccSagemakerInferenceComponent interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -25,6 +25,7 @@ type DataAwsccSagemakerInferenceComponent interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DeploymentConfig() DataAwsccSagemakerInferenceComponentDeploymentConfigOutputReference
 	EndpointArn() *string
 	EndpointName() *string
 	FailureReason() *string
@@ -94,6 +95,10 @@ type DataAwsccSagemakerInferenceComponent interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -153,6 +158,16 @@ func (j *jsiiProxy_DataAwsccSagemakerInferenceComponent) DependsOn() *[]*string 
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccSagemakerInferenceComponent) DeploymentConfig() DataAwsccSagemakerInferenceComponentDeploymentConfigOutputReference {
+	var returns DataAwsccSagemakerInferenceComponentDeploymentConfigOutputReference
+	_jsii_.Get(
+		j,
+		"deploymentConfig",
 		&returns,
 	)
 	return returns
@@ -389,7 +404,7 @@ func (j *jsiiProxy_DataAwsccSagemakerInferenceComponent) VariantName() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_inference_component awscc_sagemaker_inference_component} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_inference_component awscc_sagemaker_inference_component} Data Source.
 func NewDataAwsccSagemakerInferenceComponent(scope constructs.Construct, id *string, config *DataAwsccSagemakerInferenceComponentConfig) DataAwsccSagemakerInferenceComponent {
 	_init_.Initialize()
 
@@ -407,7 +422,7 @@ func NewDataAwsccSagemakerInferenceComponent(scope constructs.Construct, id *str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/sagemaker_inference_component awscc_sagemaker_inference_component} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/sagemaker_inference_component awscc_sagemaker_inference_component} Data Source.
 func NewDataAwsccSagemakerInferenceComponent_Override(d DataAwsccSagemakerInferenceComponent, scope constructs.Construct, id *string, config *DataAwsccSagemakerInferenceComponentConfig) {
 	_init_.Initialize()
 
@@ -774,6 +789,32 @@ func (d *jsiiProxy_DataAwsccSagemakerInferenceComponent) SynthesizeAttributes() 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerInferenceComponent) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccSagemakerInferenceComponent) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

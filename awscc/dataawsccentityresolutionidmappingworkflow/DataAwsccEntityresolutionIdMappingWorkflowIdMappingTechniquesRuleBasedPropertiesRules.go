@@ -1,0 +1,6 @@
+package dataawsccentityresolutionidmappingworkflow
+
+
+type DataAwsccEntityresolutionIdMappingWorkflowIdMappingTechniquesRuleBasedPropertiesRules struct {
+}
+

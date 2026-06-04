@@ -1,0 +1,6 @@
+package dataawscciotfleetwisecampaign
+
+
+type DataAwsccIotfleetwiseCampaignSignalsToFetchSignalFetchConfigTimeBased struct {
+}
+

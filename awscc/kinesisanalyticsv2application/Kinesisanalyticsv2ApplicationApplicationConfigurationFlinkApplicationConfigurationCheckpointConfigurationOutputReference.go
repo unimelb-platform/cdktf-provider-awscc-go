@@ -75,6 +75,7 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationFlinkApplicationConfig
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetCheckpointingEnabled()
 	ResetCheckpointInterval()
+	ResetConfigurationType()
 	ResetMinPauseBetweenCheckpoints()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -566,6 +567,14 @@ func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationFlinkApp
 	_jsii_.InvokeVoid(
 		k,
 		"resetCheckpointInterval",
+		nil, // no parameters
+	)
+}
+
+func (k *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationOutputReference) ResetConfigurationType() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetConfigurationType",
 		nil, // no parameters
 	)
 }

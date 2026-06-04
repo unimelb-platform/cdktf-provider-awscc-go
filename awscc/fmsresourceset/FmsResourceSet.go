@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/fmsresourceset/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/fms_resource_set awscc_fms_resource_set}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/fms_resource_set awscc_fms_resource_set}.
 type FmsResourceSet interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -61,6 +61,7 @@ type FmsResourceSet interface {
 	RawOverrides() interface{}
 	Resources() *[]*string
 	SetResources(val *[]*string)
+	ResourceSetId() *string
 	ResourcesInput() *[]*string
 	ResourceTypeList() *[]*string
 	SetResourceTypeList(val *[]*string)
@@ -97,12 +98,22 @@ type FmsResourceSet interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -114,6 +125,9 @@ type FmsResourceSet interface {
 	ResetResources()
 	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -318,6 +332,16 @@ func (j *jsiiProxy_FmsResourceSet) Resources() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_FmsResourceSet) ResourceSetId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"resourceSetId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_FmsResourceSet) ResourcesInput() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -399,7 +423,7 @@ func (j *jsiiProxy_FmsResourceSet) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/fms_resource_set awscc_fms_resource_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/fms_resource_set awscc_fms_resource_set} Resource.
 func NewFmsResourceSet(scope constructs.Construct, id *string, config *FmsResourceSetConfig) FmsResourceSet {
 	_init_.Initialize()
 
@@ -417,7 +441,7 @@ func NewFmsResourceSet(scope constructs.Construct, id *string, config *FmsResour
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/fms_resource_set awscc_fms_resource_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/fms_resource_set awscc_fms_resource_set} Resource.
 func NewFmsResourceSet_Override(f FmsResourceSet, scope constructs.Construct, id *string, config *FmsResourceSetConfig) {
 	_init_.Initialize()
 
@@ -809,6 +833,19 @@ func (f *jsiiProxy_FmsResourceSet) GetStringMapAttribute(terraformAttribute *str
 	return returns
 }
 
+func (f *jsiiProxy_FmsResourceSet) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		f,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (f *jsiiProxy_FmsResourceSet) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := f.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -836,6 +873,17 @@ func (f *jsiiProxy_FmsResourceSet) InterpolationForAttribute(terraformAttribute 
 	return returns
 }
 
+func (f *jsiiProxy_FmsResourceSet) MoveFromId(id *string) {
+	if err := f.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (f *jsiiProxy_FmsResourceSet) MoveTo(moveTarget *string, index interface{}) {
 	if err := f.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -844,6 +892,17 @@ func (f *jsiiProxy_FmsResourceSet) MoveTo(moveTarget *string, index interface{})
 		f,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (f *jsiiProxy_FmsResourceSet) MoveToId(id *string) {
+	if err := f.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -907,6 +966,32 @@ func (f *jsiiProxy_FmsResourceSet) SynthesizeAttributes() *map[string]interface{
 	_jsii_.Invoke(
 		f,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (f *jsiiProxy_FmsResourceSet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		f,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (f *jsiiProxy_FmsResourceSet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		f,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

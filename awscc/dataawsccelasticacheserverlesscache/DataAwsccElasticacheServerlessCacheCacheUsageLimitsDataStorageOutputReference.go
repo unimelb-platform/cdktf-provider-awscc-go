@@ -30,6 +30,7 @@ type DataAwsccElasticacheServerlessCacheCacheUsageLimitsDataStorageOutputReferen
 	InternalValue() *DataAwsccElasticacheServerlessCacheCacheUsageLimitsDataStorage
 	SetInternalValue(val *DataAwsccElasticacheServerlessCacheCacheUsageLimitsDataStorage)
 	Maximum() *float64
+	Minimum() *float64
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -133,6 +134,16 @@ func (j *jsiiProxy_DataAwsccElasticacheServerlessCacheCacheUsageLimitsDataStorag
 	_jsii_.Get(
 		j,
 		"maximum",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccElasticacheServerlessCacheCacheUsageLimitsDataStorageOutputReference) Minimum() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"minimum",
 		&returns,
 	)
 	return returns

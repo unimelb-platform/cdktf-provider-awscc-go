@@ -10,6 +10,8 @@ import (
 
 type CleanroomsAnalysisTemplateSourceOutputReference interface {
 	cdktf.ComplexObject
+	Artifacts() CleanroomsAnalysisTemplateSourceArtifactsOutputReference
+	ArtifactsInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -64,6 +66,9 @@ type CleanroomsAnalysisTemplateSourceOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutArtifacts(value *CleanroomsAnalysisTemplateSourceArtifacts)
+	ResetArtifacts()
+	ResetText()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -77,6 +82,26 @@ type CleanroomsAnalysisTemplateSourceOutputReference interface {
 // The jsii proxy struct for CleanroomsAnalysisTemplateSourceOutputReference
 type jsiiProxy_CleanroomsAnalysisTemplateSourceOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_CleanroomsAnalysisTemplateSourceOutputReference) Artifacts() CleanroomsAnalysisTemplateSourceArtifactsOutputReference {
+	var returns CleanroomsAnalysisTemplateSourceArtifactsOutputReference
+	_jsii_.Get(
+		j,
+		"artifacts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CleanroomsAnalysisTemplateSourceOutputReference) ArtifactsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"artifactsInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_CleanroomsAnalysisTemplateSourceOutputReference) ComplexObjectIndex() interface{} {
@@ -447,6 +472,33 @@ func (c *jsiiProxy_CleanroomsAnalysisTemplateSourceOutputReference) Interpolatio
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_CleanroomsAnalysisTemplateSourceOutputReference) PutArtifacts(value *CleanroomsAnalysisTemplateSourceArtifacts) {
+	if err := c.validatePutArtifactsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putArtifacts",
+		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CleanroomsAnalysisTemplateSourceOutputReference) ResetArtifacts() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetArtifacts",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CleanroomsAnalysisTemplateSourceOutputReference) ResetText() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetText",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_CleanroomsAnalysisTemplateSourceOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

@@ -70,6 +70,9 @@ type LakeformationPrincipalPermissionsResourceLfTagOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetCatalogId()
+	ResetTagKey()
+	ResetTagValues()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -515,6 +518,30 @@ func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceLfTagOutputReference
 	)
 
 	return returns
+}
+
+func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceLfTagOutputReference) ResetCatalogId() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetCatalogId",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceLfTagOutputReference) ResetTagKey() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetTagKey",
+		nil, // no parameters
+	)
+}
+
+func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceLfTagOutputReference) ResetTagValues() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetTagValues",
+		nil, // no parameters
+	)
 }
 
 func (l *jsiiProxy_LakeformationPrincipalPermissionsResourceLfTagOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

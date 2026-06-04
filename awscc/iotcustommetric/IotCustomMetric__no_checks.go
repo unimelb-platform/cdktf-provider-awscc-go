@@ -56,7 +56,15 @@ func (i *jsiiProxy_IotCustomMetric) validateInterpolationForAttributeParameters(
 	return nil
 }
 
+func (i *jsiiProxy_IotCustomMetric) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (i *jsiiProxy_IotCustomMetric) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (i *jsiiProxy_IotCustomMetric) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

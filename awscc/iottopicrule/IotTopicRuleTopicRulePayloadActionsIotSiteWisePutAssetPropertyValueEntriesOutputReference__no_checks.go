@@ -68,7 +68,7 @@ func (j *jsiiProxy_IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropert
 	return nil
 }
 
-func (j *jsiiProxy_IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropertyValueEntriesOutputReference) validateSetInternalValueParameters(val *IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropertyValueEntries) error {
+func (j *jsiiProxy_IotTopicRuleTopicRulePayloadActionsIotSiteWisePutAssetPropertyValueEntriesOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 

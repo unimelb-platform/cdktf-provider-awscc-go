@@ -10,6 +10,9 @@ import (
 
 type ConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutputReference interface {
 	cdktf.ComplexObject
+	AwaitAnswerMachinePrompt() interface{}
+	SetAwaitAnswerMachinePrompt(val interface{})
+	AwaitAnswerMachinePromptInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -64,6 +67,8 @@ type ConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutpu
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAwaitAnswerMachinePrompt()
+	ResetEnableAnswerMachineDetection()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -77,6 +82,26 @@ type ConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutpu
 // The jsii proxy struct for ConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutputReference
 type jsiiProxy_ConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_ConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutputReference) AwaitAnswerMachinePrompt() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"awaitAnswerMachinePrompt",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutputReference) AwaitAnswerMachinePromptInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"awaitAnswerMachinePromptInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_ConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutputReference) ComplexObjectIndex() interface{} {
@@ -194,6 +219,17 @@ func NewConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOu
 		"awscc.connectcampaignsCampaign.ConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutputReference",
 		[]interface{}{terraformResource, terraformAttribute},
 		c,
+	)
+}
+
+func (j *jsiiProxy_ConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutputReference)SetAwaitAnswerMachinePrompt(val interface{}) {
+	if err := j.validateSetAwaitAnswerMachinePromptParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"awaitAnswerMachinePrompt",
+		val,
 	)
 }
 
@@ -447,6 +483,22 @@ func (c *jsiiProxy_ConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetect
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutputReference) ResetAwaitAnswerMachinePrompt() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetAwaitAnswerMachinePrompt",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutputReference) ResetEnableAnswerMachineDetection() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetEnableAnswerMachineDetection",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ConnectcampaignsCampaignOutboundCallConfigAnswerMachineDetectionConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

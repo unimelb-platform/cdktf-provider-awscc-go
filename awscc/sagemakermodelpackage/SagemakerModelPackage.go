@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/sagemakermodelpackage/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/sagemaker_model_package awscc_sagemaker_model_package}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/sagemaker_model_package awscc_sagemaker_model_package}.
 type SagemakerModelPackage interface {
 	cdktf.TerraformResource
 	AdditionalInferenceSpecifications() SagemakerModelPackageAdditionalInferenceSpecificationsList
@@ -73,6 +73,8 @@ type SagemakerModelPackage interface {
 	ModelApprovalStatus() *string
 	SetModelApprovalStatus(val *string)
 	ModelApprovalStatusInput() *string
+	ModelCard() SagemakerModelPackageModelCardOutputReference
+	ModelCardInput() interface{}
 	ModelMetrics() SagemakerModelPackageModelMetricsOutputReference
 	ModelMetricsInput() interface{}
 	ModelPackageArn() *string
@@ -106,11 +108,16 @@ type SagemakerModelPackage interface {
 	SamplePayloadUrl() *string
 	SetSamplePayloadUrl(val *string)
 	SamplePayloadUrlInput() *string
+	SecurityConfig() SagemakerModelPackageSecurityConfigOutputReference
+	SecurityConfigInput() interface{}
 	SkipModelValidation() *string
 	SetSkipModelValidation(val *string)
 	SkipModelValidationInput() *string
 	SourceAlgorithmSpecification() SagemakerModelPackageSourceAlgorithmSpecificationOutputReference
 	SourceAlgorithmSpecificationInput() interface{}
+	SourceUri() *string
+	SetSourceUri(val *string)
+	SourceUriInput() *string
 	Tags() SagemakerModelPackageTagsList
 	TagsInput() interface{}
 	Task() *string
@@ -148,12 +155,22 @@ type SagemakerModelPackage interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -162,8 +179,10 @@ type SagemakerModelPackage interface {
 	PutDriftCheckBaselines(value *SagemakerModelPackageDriftCheckBaselines)
 	PutInferenceSpecification(value *SagemakerModelPackageInferenceSpecification)
 	PutMetadataProperties(value *SagemakerModelPackageMetadataProperties)
+	PutModelCard(value *SagemakerModelPackageModelCard)
 	PutModelMetrics(value *SagemakerModelPackageModelMetrics)
 	PutModelPackageStatusDetails(value *SagemakerModelPackageModelPackageStatusDetails)
+	PutSecurityConfig(value *SagemakerModelPackageSecurityConfig)
 	PutSourceAlgorithmSpecification(value *SagemakerModelPackageSourceAlgorithmSpecification)
 	PutTags(value interface{})
 	PutValidationSpecification(value *SagemakerModelPackageValidationSpecification)
@@ -179,6 +198,7 @@ type SagemakerModelPackage interface {
 	ResetLastModifiedTime()
 	ResetMetadataProperties()
 	ResetModelApprovalStatus()
+	ResetModelCard()
 	ResetModelMetrics()
 	ResetModelPackageDescription()
 	ResetModelPackageGroupName()
@@ -189,12 +209,17 @@ type SagemakerModelPackage interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetSamplePayloadUrl()
+	ResetSecurityConfig()
 	ResetSkipModelValidation()
 	ResetSourceAlgorithmSpecification()
+	ResetSourceUri()
 	ResetTags()
 	ResetTask()
 	ResetValidationSpecification()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -559,6 +584,26 @@ func (j *jsiiProxy_SagemakerModelPackage) ModelApprovalStatusInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_SagemakerModelPackage) ModelCard() SagemakerModelPackageModelCardOutputReference {
+	var returns SagemakerModelPackageModelCardOutputReference
+	_jsii_.Get(
+		j,
+		"modelCard",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerModelPackage) ModelCardInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"modelCardInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SagemakerModelPackage) ModelMetrics() SagemakerModelPackageModelMetricsOutputReference {
 	var returns SagemakerModelPackageModelMetricsOutputReference
 	_jsii_.Get(
@@ -759,6 +804,26 @@ func (j *jsiiProxy_SagemakerModelPackage) SamplePayloadUrlInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_SagemakerModelPackage) SecurityConfig() SagemakerModelPackageSecurityConfigOutputReference {
+	var returns SagemakerModelPackageSecurityConfigOutputReference
+	_jsii_.Get(
+		j,
+		"securityConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerModelPackage) SecurityConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"securityConfigInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SagemakerModelPackage) SkipModelValidation() *string {
 	var returns *string
 	_jsii_.Get(
@@ -794,6 +859,26 @@ func (j *jsiiProxy_SagemakerModelPackage) SourceAlgorithmSpecificationInput() in
 	_jsii_.Get(
 		j,
 		"sourceAlgorithmSpecificationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerModelPackage) SourceUri() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"sourceUri",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerModelPackage) SourceUriInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"sourceUriInput",
 		&returns,
 	)
 	return returns
@@ -890,7 +975,7 @@ func (j *jsiiProxy_SagemakerModelPackage) ValidationSpecificationInput() interfa
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/sagemaker_model_package awscc_sagemaker_model_package} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/sagemaker_model_package awscc_sagemaker_model_package} Resource.
 func NewSagemakerModelPackage(scope constructs.Construct, id *string, config *SagemakerModelPackageConfig) SagemakerModelPackage {
 	_init_.Initialize()
 
@@ -908,7 +993,7 @@ func NewSagemakerModelPackage(scope constructs.Construct, id *string, config *Sa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/sagemaker_model_package awscc_sagemaker_model_package} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/sagemaker_model_package awscc_sagemaker_model_package} Resource.
 func NewSagemakerModelPackage_Override(s SagemakerModelPackage, scope constructs.Construct, id *string, config *SagemakerModelPackageConfig) {
 	_init_.Initialize()
 
@@ -1126,6 +1211,17 @@ func (j *jsiiProxy_SagemakerModelPackage)SetSkipModelValidation(val *string) {
 	_jsii_.Set(
 		j,
 		"skipModelValidation",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SagemakerModelPackage)SetSourceUri(val *string) {
+	if err := j.validateSetSourceUriParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"sourceUri",
 		val,
 	)
 }
@@ -1410,6 +1506,19 @@ func (s *jsiiProxy_SagemakerModelPackage) GetStringMapAttribute(terraformAttribu
 	return returns
 }
 
+func (s *jsiiProxy_SagemakerModelPackage) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (s *jsiiProxy_SagemakerModelPackage) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := s.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1437,6 +1546,17 @@ func (s *jsiiProxy_SagemakerModelPackage) InterpolationForAttribute(terraformAtt
 	return returns
 }
 
+func (s *jsiiProxy_SagemakerModelPackage) MoveFromId(id *string) {
+	if err := s.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (s *jsiiProxy_SagemakerModelPackage) MoveTo(moveTarget *string, index interface{}) {
 	if err := s.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1445,6 +1565,17 @@ func (s *jsiiProxy_SagemakerModelPackage) MoveTo(moveTarget *string, index inter
 		s,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackage) MoveToId(id *string) {
+	if err := s.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1514,6 +1645,17 @@ func (s *jsiiProxy_SagemakerModelPackage) PutMetadataProperties(value *Sagemaker
 	)
 }
 
+func (s *jsiiProxy_SagemakerModelPackage) PutModelCard(value *SagemakerModelPackageModelCard) {
+	if err := s.validatePutModelCardParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putModelCard",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_SagemakerModelPackage) PutModelMetrics(value *SagemakerModelPackageModelMetrics) {
 	if err := s.validatePutModelMetricsParameters(value); err != nil {
 		panic(err)
@@ -1532,6 +1674,17 @@ func (s *jsiiProxy_SagemakerModelPackage) PutModelPackageStatusDetails(value *Sa
 	_jsii_.InvokeVoid(
 		s,
 		"putModelPackageStatusDetails",
+		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackage) PutSecurityConfig(value *SagemakerModelPackageSecurityConfig) {
+	if err := s.validatePutSecurityConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putSecurityConfig",
 		[]interface{}{value},
 	)
 }
@@ -1665,6 +1818,14 @@ func (s *jsiiProxy_SagemakerModelPackage) ResetModelApprovalStatus() {
 	)
 }
 
+func (s *jsiiProxy_SagemakerModelPackage) ResetModelCard() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetModelCard",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerModelPackage) ResetModelMetrics() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1729,6 +1890,14 @@ func (s *jsiiProxy_SagemakerModelPackage) ResetSamplePayloadUrl() {
 	)
 }
 
+func (s *jsiiProxy_SagemakerModelPackage) ResetSecurityConfig() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSecurityConfig",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SagemakerModelPackage) ResetSkipModelValidation() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1741,6 +1910,14 @@ func (s *jsiiProxy_SagemakerModelPackage) ResetSourceAlgorithmSpecification() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetSourceAlgorithmSpecification",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackage) ResetSourceUri() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSourceUri",
 		nil, // no parameters
 	)
 }
@@ -1775,6 +1952,32 @@ func (s *jsiiProxy_SagemakerModelPackage) SynthesizeAttributes() *map[string]int
 	_jsii_.Invoke(
 		s,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SagemakerModelPackage) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		s,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SagemakerModelPackage) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

@@ -67,6 +67,8 @@ type EvidentlyProjectAppConfigResourceOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetApplicationId()
+	ResetEnvironmentId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -481,6 +483,22 @@ func (e *jsiiProxy_EvidentlyProjectAppConfigResourceOutputReference) Interpolati
 	)
 
 	return returns
+}
+
+func (e *jsiiProxy_EvidentlyProjectAppConfigResourceOutputReference) ResetApplicationId() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetApplicationId",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EvidentlyProjectAppConfigResourceOutputReference) ResetEnvironmentId() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetEnvironmentId",
+		nil, // no parameters
+	)
 }
 
 func (e *jsiiProxy_EvidentlyProjectAppConfigResourceOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

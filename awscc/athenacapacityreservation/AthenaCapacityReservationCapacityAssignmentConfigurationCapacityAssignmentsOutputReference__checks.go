@@ -163,9 +163,25 @@ func (j *jsiiProxy_AthenaCapacityReservationCapacityAssignmentConfigurationCapac
 	return nil
 }
 
-func (j *jsiiProxy_AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignmentsOutputReference) validateSetInternalValueParameters(val *AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignments) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignmentsOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignments:
+		val := val.(*AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignments)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignments:
+		val_ := val.(AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignments)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *AthenaCapacityReservationCapacityAssignmentConfigurationCapacityAssignments; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

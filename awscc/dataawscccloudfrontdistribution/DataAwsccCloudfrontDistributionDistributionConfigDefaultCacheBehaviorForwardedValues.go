@@ -1,6 +1,0 @@
-package dataawscccloudfrontdistribution
-
-
-type DataAwsccCloudfrontDistributionDistributionConfigDefaultCacheBehaviorForwardedValues struct {
-}
-

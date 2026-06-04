@@ -43,6 +43,8 @@ type ImagebuilderDistributionConfigurationDistributionsOutputReference interface
 	Region() *string
 	SetRegion(val *string)
 	RegionInput() *string
+	SsmParameterConfigurations() ImagebuilderDistributionConfigurationDistributionsSsmParameterConfigurationsList
+	SsmParameterConfigurationsInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -79,11 +81,13 @@ type ImagebuilderDistributionConfigurationDistributionsOutputReference interface
 	PutContainerDistributionConfiguration(value *ImagebuilderDistributionConfigurationDistributionsContainerDistributionConfiguration)
 	PutFastLaunchConfigurations(value interface{})
 	PutLaunchTemplateConfigurations(value interface{})
+	PutSsmParameterConfigurations(value interface{})
 	ResetAmiDistributionConfiguration()
 	ResetContainerDistributionConfiguration()
 	ResetFastLaunchConfigurations()
 	ResetLaunchTemplateConfigurations()
 	ResetLicenseConfigurationArns()
+	ResetSsmParameterConfigurations()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -264,6 +268,26 @@ func (j *jsiiProxy_ImagebuilderDistributionConfigurationDistributionsOutputRefer
 	_jsii_.Get(
 		j,
 		"regionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ImagebuilderDistributionConfigurationDistributionsOutputReference) SsmParameterConfigurations() ImagebuilderDistributionConfigurationDistributionsSsmParameterConfigurationsList {
+	var returns ImagebuilderDistributionConfigurationDistributionsSsmParameterConfigurationsList
+	_jsii_.Get(
+		j,
+		"ssmParameterConfigurations",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ImagebuilderDistributionConfigurationDistributionsOutputReference) SsmParameterConfigurationsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"ssmParameterConfigurationsInput",
 		&returns,
 	)
 	return returns
@@ -624,6 +648,17 @@ func (i *jsiiProxy_ImagebuilderDistributionConfigurationDistributionsOutputRefer
 	)
 }
 
+func (i *jsiiProxy_ImagebuilderDistributionConfigurationDistributionsOutputReference) PutSsmParameterConfigurations(value interface{}) {
+	if err := i.validatePutSsmParameterConfigurationsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putSsmParameterConfigurations",
+		[]interface{}{value},
+	)
+}
+
 func (i *jsiiProxy_ImagebuilderDistributionConfigurationDistributionsOutputReference) ResetAmiDistributionConfiguration() {
 	_jsii_.InvokeVoid(
 		i,
@@ -660,6 +695,14 @@ func (i *jsiiProxy_ImagebuilderDistributionConfigurationDistributionsOutputRefer
 	_jsii_.InvokeVoid(
 		i,
 		"resetLicenseConfigurationArns",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_ImagebuilderDistributionConfigurationDistributionsOutputReference) ResetSsmParameterConfigurations() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetSsmParameterConfigurations",
 		nil, // no parameters
 	)
 }

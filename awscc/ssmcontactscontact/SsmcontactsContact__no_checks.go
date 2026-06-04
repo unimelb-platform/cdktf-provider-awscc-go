@@ -56,7 +56,15 @@ func (s *jsiiProxy_SsmcontactsContact) validateInterpolationForAttributeParamete
 	return nil
 }
 
+func (s *jsiiProxy_SsmcontactsContact) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_SsmcontactsContact) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (s *jsiiProxy_SsmcontactsContact) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -65,6 +73,10 @@ func (s *jsiiProxy_SsmcontactsContact) validateOverrideLogicalIdParameters(newLo
 }
 
 func (s *jsiiProxy_SsmcontactsContact) validatePutPlanParameters(value interface{}) error {
+	return nil
+}
+
+func (s *jsiiProxy_SsmcontactsContact) validatePutTagsParameters(value interface{}) error {
 	return nil
 }
 

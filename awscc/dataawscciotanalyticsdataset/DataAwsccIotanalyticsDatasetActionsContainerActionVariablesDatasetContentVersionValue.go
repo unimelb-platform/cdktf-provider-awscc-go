@@ -1,0 +1,6 @@
+package dataawscciotanalyticsdataset
+
+
+type DataAwsccIotanalyticsDatasetActionsContainerActionVariablesDatasetContentVersionValue struct {
+}
+

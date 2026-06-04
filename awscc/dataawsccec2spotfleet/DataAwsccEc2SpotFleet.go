@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccec2spotfleet/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_spot_fleet awscc_ec2_spot_fleet}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_spot_fleet awscc_ec2_spot_fleet}.
 type DataAwsccEc2SpotFleet interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -47,6 +47,7 @@ type DataAwsccEc2SpotFleet interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	SpotFleetId() *string
 	SpotFleetRequestConfigData() DataAwsccEc2SpotFleetSpotFleetRequestConfigDataOutputReference
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -83,6 +84,10 @@ type DataAwsccEc2SpotFleet interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -227,6 +232,16 @@ func (j *jsiiProxy_DataAwsccEc2SpotFleet) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataAwsccEc2SpotFleet) SpotFleetId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"spotFleetId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataAwsccEc2SpotFleet) SpotFleetRequestConfigData() DataAwsccEc2SpotFleetSpotFleetRequestConfigDataOutputReference {
 	var returns DataAwsccEc2SpotFleetSpotFleetRequestConfigDataOutputReference
 	_jsii_.Get(
@@ -268,7 +283,7 @@ func (j *jsiiProxy_DataAwsccEc2SpotFleet) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_spot_fleet awscc_ec2_spot_fleet} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_spot_fleet awscc_ec2_spot_fleet} Data Source.
 func NewDataAwsccEc2SpotFleet(scope constructs.Construct, id *string, config *DataAwsccEc2SpotFleetConfig) DataAwsccEc2SpotFleet {
 	_init_.Initialize()
 
@@ -286,7 +301,7 @@ func NewDataAwsccEc2SpotFleet(scope constructs.Construct, id *string, config *Da
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/ec2_spot_fleet awscc_ec2_spot_fleet} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/ec2_spot_fleet awscc_ec2_spot_fleet} Data Source.
 func NewDataAwsccEc2SpotFleet_Override(d DataAwsccEc2SpotFleet, scope constructs.Construct, id *string, config *DataAwsccEc2SpotFleetConfig) {
 	_init_.Initialize()
 
@@ -653,6 +668,32 @@ func (d *jsiiProxy_DataAwsccEc2SpotFleet) SynthesizeAttributes() *map[string]int
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2SpotFleet) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccEc2SpotFleet) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

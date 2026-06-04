@@ -64,6 +64,7 @@ type S3BucketReplicationConfigurationRulesDestinationMetricsEventThresholdOutput
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetMinutes()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (s *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationMetricsEventT
 	)
 
 	return returns
+}
+
+func (s *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationMetricsEventThresholdOutputReference) ResetMinutes() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetMinutes",
+		nil, // no parameters
+	)
 }
 
 func (s *jsiiProxy_S3BucketReplicationConfigurationRulesDestinationMetricsEventThresholdOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

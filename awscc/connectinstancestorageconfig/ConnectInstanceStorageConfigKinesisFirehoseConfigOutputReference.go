@@ -64,6 +64,7 @@ type ConnectInstanceStorageConfigKinesisFirehoseConfigOutputReference interface 
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetFirehoseArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (c *jsiiProxy_ConnectInstanceStorageConfigKinesisFirehoseConfigOutputRefere
 	)
 
 	return returns
+}
+
+func (c *jsiiProxy_ConnectInstanceStorageConfigKinesisFirehoseConfigOutputReference) ResetFirehoseArn() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetFirehoseArn",
+		nil, // no parameters
+	)
 }
 
 func (c *jsiiProxy_ConnectInstanceStorageConfigKinesisFirehoseConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

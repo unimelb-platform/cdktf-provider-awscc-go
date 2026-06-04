@@ -9,7 +9,7 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/dataawsccconnecthoursofoperation/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/connect_hours_of_operation awscc_connect_hours_of_operation}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/connect_hours_of_operation awscc_connect_hours_of_operation}.
 type DataAwsccConnectHoursOfOperation interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -35,6 +35,7 @@ type DataAwsccConnectHoursOfOperation interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	HoursOfOperationArn() *string
+	HoursOfOperationOverrides() DataAwsccConnectHoursOfOperationHoursOfOperationOverridesList
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -89,6 +90,10 @@ type DataAwsccConnectHoursOfOperation interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -198,6 +203,16 @@ func (j *jsiiProxy_DataAwsccConnectHoursOfOperation) HoursOfOperationArn() *stri
 	_jsii_.Get(
 		j,
 		"hoursOfOperationArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataAwsccConnectHoursOfOperation) HoursOfOperationOverrides() DataAwsccConnectHoursOfOperationHoursOfOperationOverridesList {
+	var returns DataAwsccConnectHoursOfOperationHoursOfOperationOverridesList
+	_jsii_.Get(
+		j,
+		"hoursOfOperationOverrides",
 		&returns,
 	)
 	return returns
@@ -334,7 +349,7 @@ func (j *jsiiProxy_DataAwsccConnectHoursOfOperation) TimeZone() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/connect_hours_of_operation awscc_connect_hours_of_operation} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/connect_hours_of_operation awscc_connect_hours_of_operation} Data Source.
 func NewDataAwsccConnectHoursOfOperation(scope constructs.Construct, id *string, config *DataAwsccConnectHoursOfOperationConfig) DataAwsccConnectHoursOfOperation {
 	_init_.Initialize()
 
@@ -352,7 +367,7 @@ func NewDataAwsccConnectHoursOfOperation(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/data-sources/connect_hours_of_operation awscc_connect_hours_of_operation} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/data-sources/connect_hours_of_operation awscc_connect_hours_of_operation} Data Source.
 func NewDataAwsccConnectHoursOfOperation_Override(d DataAwsccConnectHoursOfOperation, scope constructs.Construct, id *string, config *DataAwsccConnectHoursOfOperationConfig) {
 	_init_.Initialize()
 
@@ -719,6 +734,32 @@ func (d *jsiiProxy_DataAwsccConnectHoursOfOperation) SynthesizeAttributes() *map
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccConnectHoursOfOperation) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DataAwsccConnectHoursOfOperation) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

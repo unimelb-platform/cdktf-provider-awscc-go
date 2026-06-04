@@ -64,6 +64,7 @@ type KinesisfirehoseDeliveryStreamAmazonOpenSearchServerlessDestinationConfigura
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAwskmsKeyArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -447,6 +448,14 @@ func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonOpenSearchServerlessDestin
 	)
 
 	return returns
+}
+
+func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonOpenSearchServerlessDestinationConfigurationS3ConfigurationEncryptionConfigurationKmsEncryptionConfigOutputReference) ResetAwskmsKeyArn() {
+	_jsii_.InvokeVoid(
+		k,
+		"resetAwskmsKeyArn",
+		nil, // no parameters
+	)
 }
 
 func (k *jsiiProxy_KinesisfirehoseDeliveryStreamAmazonOpenSearchServerlessDestinationConfigurationS3ConfigurationEncryptionConfigurationKmsEncryptionConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {

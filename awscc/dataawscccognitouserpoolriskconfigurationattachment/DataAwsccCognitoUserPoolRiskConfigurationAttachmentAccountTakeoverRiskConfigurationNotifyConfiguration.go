@@ -1,0 +1,6 @@
+package dataawscccognitouserpoolriskconfigurationattachment
+
+
+type DataAwsccCognitoUserPoolRiskConfigurationAttachmentAccountTakeoverRiskConfigurationNotifyConfiguration struct {
+}
+

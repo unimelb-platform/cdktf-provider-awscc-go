@@ -33,8 +33,8 @@ type SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobD
 	EnvironmentInput() *map[string]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinition
-	SetInternalValue(val *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinition)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	MaxConcurrentTransforms() *float64
 	SetMaxConcurrentTransforms(val *float64)
 	MaxConcurrentTransformsInput() *float64
@@ -50,11 +50,11 @@ type SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobD
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
 	TransformInput() SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputOutputReference
-	TransformInputInput() *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInput
+	TransformInputInput() interface{}
 	TransformOutput() SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformOutputOutputReference
-	TransformOutputInput() *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformOutput
+	TransformOutputInput() interface{}
 	TransformResources() SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformResourcesOutputReference
-	TransformResourcesInput() *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformResources
+	TransformResourcesInput() interface{}
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -86,6 +86,9 @@ type SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobD
 	ResetEnvironment()
 	ResetMaxConcurrentTransforms()
 	ResetMaxPayloadInMb()
+	ResetTransformInput()
+	ResetTransformOutput()
+	ResetTransformResources()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -181,8 +184,8 @@ func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionOutputReference) InternalValue() *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinition {
-	var returns *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinition
+func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -261,8 +264,8 @@ func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionOutputReference) TransformInputInput() *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInput {
-	var returns *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformInput
+func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionOutputReference) TransformInputInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"transformInputInput",
@@ -281,8 +284,8 @@ func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionOutputReference) TransformOutputInput() *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformOutput {
-	var returns *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformOutput
+func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionOutputReference) TransformOutputInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"transformOutputInput",
@@ -301,8 +304,8 @@ func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 	return returns
 }
 
-func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionOutputReference) TransformResourcesInput() *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformResources {
-	var returns *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionTransformResources
+func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionOutputReference) TransformResourcesInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"transformResourcesInput",
@@ -383,7 +386,7 @@ func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 	)
 }
 
-func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionOutputReference)SetInternalValue(val *SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinition) {
+func (j *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -685,6 +688,30 @@ func (s *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfile
 	_jsii_.InvokeVoid(
 		s,
 		"resetMaxPayloadInMb",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionOutputReference) ResetTransformInput() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTransformInput",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionOutputReference) ResetTransformOutput() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTransformOutput",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SagemakerModelPackageValidationSpecificationValidationProfilesTransformJobDefinitionOutputReference) ResetTransformResources() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTransformResources",
 		nil, // no parameters
 	)
 }

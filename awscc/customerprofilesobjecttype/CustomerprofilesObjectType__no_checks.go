@@ -56,7 +56,15 @@ func (c *jsiiProxy_CustomerprofilesObjectType) validateInterpolationForAttribute
 	return nil
 }
 
+func (c *jsiiProxy_CustomerprofilesObjectType) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_CustomerprofilesObjectType) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_CustomerprofilesObjectType) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -121,6 +129,10 @@ func (j *jsiiProxy_CustomerprofilesObjectType) validateSetExpirationDaysParamete
 }
 
 func (j *jsiiProxy_CustomerprofilesObjectType) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
+	return nil
+}
+
+func (j *jsiiProxy_CustomerprofilesObjectType) validateSetMaxProfileObjectCountParameters(val *float64) error {
 	return nil
 }
 

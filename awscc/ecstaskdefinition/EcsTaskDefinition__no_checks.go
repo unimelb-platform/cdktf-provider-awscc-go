@@ -56,7 +56,15 @@ func (e *jsiiProxy_EcsTaskDefinition) validateInterpolationForAttributeParameter
 	return nil
 }
 
+func (e *jsiiProxy_EcsTaskDefinition) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_EcsTaskDefinition) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_EcsTaskDefinition) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -121,6 +129,10 @@ func (j *jsiiProxy_EcsTaskDefinition) validateSetCountParameters(val interface{}
 }
 
 func (j *jsiiProxy_EcsTaskDefinition) validateSetCpuParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_EcsTaskDefinition) validateSetEnableFaultInjectionParameters(val interface{}) error {
 	return nil
 }
 

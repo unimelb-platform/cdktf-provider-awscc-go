@@ -30,6 +30,8 @@ type CognitoLogDeliveryConfigurationLogConfigurationsOutputReference interface {
 	EventSource() *string
 	SetEventSource(val *string)
 	EventSourceInput() *string
+	FirehoseConfiguration() CognitoLogDeliveryConfigurationLogConfigurationsFirehoseConfigurationOutputReference
+	FirehoseConfigurationInput() interface{}
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -37,6 +39,8 @@ type CognitoLogDeliveryConfigurationLogConfigurationsOutputReference interface {
 	LogLevel() *string
 	SetLogLevel(val *string)
 	LogLevelInput() *string
+	S3Configuration() CognitoLogDeliveryConfigurationLogConfigurationsS3ConfigurationOutputReference
+	S3ConfigurationInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -70,9 +74,13 @@ type CognitoLogDeliveryConfigurationLogConfigurationsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutCloudwatchLogsConfiguration(value *CognitoLogDeliveryConfigurationLogConfigurationsCloudwatchLogsConfiguration)
+	PutFirehoseConfiguration(value *CognitoLogDeliveryConfigurationLogConfigurationsFirehoseConfiguration)
+	PutS3Configuration(value *CognitoLogDeliveryConfigurationLogConfigurationsS3Configuration)
 	ResetCloudwatchLogsConfiguration()
 	ResetEventSource()
+	ResetFirehoseConfiguration()
 	ResetLogLevel()
+	ResetS3Configuration()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -158,6 +166,26 @@ func (j *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReferen
 	return returns
 }
 
+func (j *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReference) FirehoseConfiguration() CognitoLogDeliveryConfigurationLogConfigurationsFirehoseConfigurationOutputReference {
+	var returns CognitoLogDeliveryConfigurationLogConfigurationsFirehoseConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"firehoseConfiguration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReference) FirehoseConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"firehoseConfigurationInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -193,6 +221,26 @@ func (j *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReferen
 	_jsii_.Get(
 		j,
 		"logLevelInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReference) S3Configuration() CognitoLogDeliveryConfigurationLogConfigurationsS3ConfigurationOutputReference {
+	var returns CognitoLogDeliveryConfigurationLogConfigurationsS3ConfigurationOutputReference
+	_jsii_.Get(
+		j,
+		"s3Configuration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReference) S3ConfigurationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"s3ConfigurationInput",
 		&returns,
 	)
 	return returns
@@ -520,6 +568,28 @@ func (c *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReferen
 	)
 }
 
+func (c *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReference) PutFirehoseConfiguration(value *CognitoLogDeliveryConfigurationLogConfigurationsFirehoseConfiguration) {
+	if err := c.validatePutFirehoseConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putFirehoseConfiguration",
+		[]interface{}{value},
+	)
+}
+
+func (c *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReference) PutS3Configuration(value *CognitoLogDeliveryConfigurationLogConfigurationsS3Configuration) {
+	if err := c.validatePutS3ConfigurationParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putS3Configuration",
+		[]interface{}{value},
+	)
+}
+
 func (c *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReference) ResetCloudwatchLogsConfiguration() {
 	_jsii_.InvokeVoid(
 		c,
@@ -536,10 +606,26 @@ func (c *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReferen
 	)
 }
 
+func (c *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReference) ResetFirehoseConfiguration() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetFirehoseConfiguration",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReference) ResetLogLevel() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetLogLevel",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CognitoLogDeliveryConfigurationLogConfigurationsOutputReference) ResetS3Configuration() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetS3Configuration",
 		nil, // no parameters
 	)
 }

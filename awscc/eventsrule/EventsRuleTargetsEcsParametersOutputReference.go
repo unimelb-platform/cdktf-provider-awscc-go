@@ -116,6 +116,7 @@ type EventsRuleTargetsEcsParametersOutputReference interface {
 	ResetReferenceId()
 	ResetTagList()
 	ResetTaskCount()
+	ResetTaskDefinitionArn()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -1004,6 +1005,14 @@ func (e *jsiiProxy_EventsRuleTargetsEcsParametersOutputReference) ResetTaskCount
 	_jsii_.InvokeVoid(
 		e,
 		"resetTaskCount",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EventsRuleTargetsEcsParametersOutputReference) ResetTaskDefinitionArn() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetTaskDefinitionArn",
 		nil, // no parameters
 	)
 }

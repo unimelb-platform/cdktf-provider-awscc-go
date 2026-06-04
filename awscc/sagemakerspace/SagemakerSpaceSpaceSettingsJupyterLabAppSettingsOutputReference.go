@@ -10,6 +10,8 @@ import (
 
 type SagemakerSpaceSpaceSettingsJupyterLabAppSettingsOutputReference interface {
 	cdktf.ComplexObject
+	AppLifecycleManagement() SagemakerSpaceSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementOutputReference
+	AppLifecycleManagementInput() interface{}
 	CodeRepositories() SagemakerSpaceSpaceSettingsJupyterLabAppSettingsCodeRepositoriesList
 	CodeRepositoriesInput() interface{}
 	// the index of the complex object in a list.
@@ -65,8 +67,10 @@ type SagemakerSpaceSpaceSettingsJupyterLabAppSettingsOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	PutAppLifecycleManagement(value *SagemakerSpaceSpaceSettingsJupyterLabAppSettingsAppLifecycleManagement)
 	PutCodeRepositories(value interface{})
 	PutDefaultResourceSpec(value *SagemakerSpaceSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec)
+	ResetAppLifecycleManagement()
 	ResetCodeRepositories()
 	ResetDefaultResourceSpec()
 	// Produce the Token's value at resolution time.
@@ -82,6 +86,26 @@ type SagemakerSpaceSpaceSettingsJupyterLabAppSettingsOutputReference interface {
 // The jsii proxy struct for SagemakerSpaceSpaceSettingsJupyterLabAppSettingsOutputReference
 type jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsOutputReference) AppLifecycleManagement() SagemakerSpaceSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementOutputReference {
+	var returns SagemakerSpaceSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementOutputReference
+	_jsii_.Get(
+		j,
+		"appLifecycleManagement",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsOutputReference) AppLifecycleManagementInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"appLifecycleManagementInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsOutputReference) CodeRepositories() SagemakerSpaceSpaceSettingsJupyterLabAppSettingsCodeRepositoriesList {
@@ -463,6 +487,17 @@ func (s *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsOutputReferen
 	return returns
 }
 
+func (s *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsOutputReference) PutAppLifecycleManagement(value *SagemakerSpaceSpaceSettingsJupyterLabAppSettingsAppLifecycleManagement) {
+	if err := s.validatePutAppLifecycleManagementParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putAppLifecycleManagement",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsOutputReference) PutCodeRepositories(value interface{}) {
 	if err := s.validatePutCodeRepositoriesParameters(value); err != nil {
 		panic(err)
@@ -482,6 +517,14 @@ func (s *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsOutputReferen
 		s,
 		"putDefaultResourceSpec",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_SagemakerSpaceSpaceSettingsJupyterLabAppSettingsOutputReference) ResetAppLifecycleManagement() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetAppLifecycleManagement",
+		nil, // no parameters
 	)
 }
 

@@ -1,0 +1,6 @@
+package dataawsccwisdomaiprompt
+
+
+type DataAwsccWisdomAiPromptTemplateConfigurationTextFullAiPromptEditTemplateConfiguration struct {
+}
+

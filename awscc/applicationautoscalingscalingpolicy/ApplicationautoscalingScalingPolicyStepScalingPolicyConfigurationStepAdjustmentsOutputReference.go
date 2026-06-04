@@ -72,6 +72,7 @@ type ApplicationautoscalingScalingPolicyStepScalingPolicyConfigurationStepAdjust
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetMetricIntervalLowerBound()
 	ResetMetricIntervalUpperBound()
+	ResetScalingAdjustment()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -531,6 +532,14 @@ func (a *jsiiProxy_ApplicationautoscalingScalingPolicyStepScalingPolicyConfigura
 	_jsii_.InvokeVoid(
 		a,
 		"resetMetricIntervalUpperBound",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApplicationautoscalingScalingPolicyStepScalingPolicyConfigurationStepAdjustmentsOutputReference) ResetScalingAdjustment() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetScalingAdjustment",
 		nil, // no parameters
 	)
 }

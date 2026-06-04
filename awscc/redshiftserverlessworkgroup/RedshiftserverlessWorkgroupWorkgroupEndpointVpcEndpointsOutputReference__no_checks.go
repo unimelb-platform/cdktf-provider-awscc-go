@@ -44,6 +44,10 @@ func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutpu
 	return nil
 }
 
+func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference) validatePutNetworkInterfacesParameters(value interface{}) error {
+	return nil
+}
+
 func (r *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }
@@ -56,7 +60,7 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutpu
 	return nil
 }
 
-func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference) validateSetInternalValueParameters(val *RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpoints) error {
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 
@@ -65,6 +69,14 @@ func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutpu
 }
 
 func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference) validateSetVpcEndpointIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_RedshiftserverlessWorkgroupWorkgroupEndpointVpcEndpointsOutputReference) validateSetVpcIdParameters(val *string) error {
 	return nil
 }
 

@@ -1,0 +1,6 @@
+package dataawscccognitoidentitypoolroleattachment
+
+
+type DataAwsccCognitoIdentityPoolRoleAttachmentRoleMappingsRulesConfiguration struct {
+}
+

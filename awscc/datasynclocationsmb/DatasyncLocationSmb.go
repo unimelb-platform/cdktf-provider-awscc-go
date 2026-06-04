@@ -9,12 +9,15 @@ import (
 	"github.com/unimelb-platform/cdktf-provider-awscc-go/awscc/datasynclocationsmb/internal"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datasync_location_smb awscc_datasync_location_smb}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datasync_location_smb awscc_datasync_location_smb}.
 type DatasyncLocationSmb interface {
 	cdktf.TerraformResource
 	AgentArns() *[]*string
 	SetAgentArns(val *[]*string)
 	AgentArnsInput() *[]*string
+	AuthenticationType() *string
+	SetAuthenticationType(val *string)
+	AuthenticationTypeInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -31,6 +34,9 @@ type DatasyncLocationSmb interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DnsIpAddresses() *[]*string
+	SetDnsIpAddresses(val *[]*string)
+	DnsIpAddressesInput() *[]*string
 	Domain() *string
 	SetDomain(val *string)
 	DomainInput() *string
@@ -43,6 +49,15 @@ type DatasyncLocationSmb interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
+	KerberosKeytab() *string
+	SetKerberosKeytab(val *string)
+	KerberosKeytabInput() *string
+	KerberosKrb5Conf() *string
+	SetKerberosKrb5Conf(val *string)
+	KerberosKrb5ConfInput() *string
+	KerberosPrincipal() *string
+	SetKerberosPrincipal(val *string)
+	KerberosPrincipalInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -107,18 +122,33 @@ type DatasyncLocationSmb interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutMountOptions(value *DatasyncLocationSmbMountOptions)
 	PutTags(value interface{})
+	ResetAuthenticationType()
+	ResetDnsIpAddresses()
 	ResetDomain()
+	ResetKerberosKeytab()
+	ResetKerberosKrb5Conf()
+	ResetKerberosPrincipal()
 	ResetMountOptions()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -127,7 +157,11 @@ type DatasyncLocationSmb interface {
 	ResetServerHostname()
 	ResetSubdirectory()
 	ResetTags()
+	ResetUser()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -157,6 +191,26 @@ func (j *jsiiProxy_DatasyncLocationSmb) AgentArnsInput() *[]*string {
 	_jsii_.Get(
 		j,
 		"agentArnsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatasyncLocationSmb) AuthenticationType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"authenticationType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatasyncLocationSmb) AuthenticationTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"authenticationTypeInput",
 		&returns,
 	)
 	return returns
@@ -207,6 +261,26 @@ func (j *jsiiProxy_DatasyncLocationSmb) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatasyncLocationSmb) DnsIpAddresses() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"dnsIpAddresses",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatasyncLocationSmb) DnsIpAddressesInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"dnsIpAddressesInput",
 		&returns,
 	)
 	return returns
@@ -267,6 +341,66 @@ func (j *jsiiProxy_DatasyncLocationSmb) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatasyncLocationSmb) KerberosKeytab() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kerberosKeytab",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatasyncLocationSmb) KerberosKeytabInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kerberosKeytabInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatasyncLocationSmb) KerberosKrb5Conf() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kerberosKrb5Conf",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatasyncLocationSmb) KerberosKrb5ConfInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kerberosKrb5ConfInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatasyncLocationSmb) KerberosPrincipal() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kerberosPrincipal",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DatasyncLocationSmb) KerberosPrincipalInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kerberosPrincipalInput",
 		&returns,
 	)
 	return returns
@@ -493,7 +627,7 @@ func (j *jsiiProxy_DatasyncLocationSmb) UserInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datasync_location_smb awscc_datasync_location_smb} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datasync_location_smb awscc_datasync_location_smb} Resource.
 func NewDatasyncLocationSmb(scope constructs.Construct, id *string, config *DatasyncLocationSmbConfig) DatasyncLocationSmb {
 	_init_.Initialize()
 
@@ -511,7 +645,7 @@ func NewDatasyncLocationSmb(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/datasync_location_smb awscc_datasync_location_smb} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/datasync_location_smb awscc_datasync_location_smb} Resource.
 func NewDatasyncLocationSmb_Override(d DatasyncLocationSmb, scope constructs.Construct, id *string, config *DatasyncLocationSmbConfig) {
 	_init_.Initialize()
 
@@ -529,6 +663,17 @@ func (j *jsiiProxy_DatasyncLocationSmb)SetAgentArns(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"agentArns",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DatasyncLocationSmb)SetAuthenticationType(val *string) {
+	if err := j.validateSetAuthenticationTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"authenticationType",
 		val,
 	)
 }
@@ -563,6 +708,17 @@ func (j *jsiiProxy_DatasyncLocationSmb)SetDependsOn(val *[]*string) {
 	)
 }
 
+func (j *jsiiProxy_DatasyncLocationSmb)SetDnsIpAddresses(val *[]*string) {
+	if err := j.validateSetDnsIpAddressesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"dnsIpAddresses",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DatasyncLocationSmb)SetDomain(val *string) {
 	if err := j.validateSetDomainParameters(val); err != nil {
 		panic(err)
@@ -578,6 +734,39 @@ func (j *jsiiProxy_DatasyncLocationSmb)SetForEach(val cdktf.ITerraformIterator) 
 	_jsii_.Set(
 		j,
 		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DatasyncLocationSmb)SetKerberosKeytab(val *string) {
+	if err := j.validateSetKerberosKeytabParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"kerberosKeytab",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DatasyncLocationSmb)SetKerberosKrb5Conf(val *string) {
+	if err := j.validateSetKerberosKrb5ConfParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"kerberosKrb5Conf",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DatasyncLocationSmb)SetKerberosPrincipal(val *string) {
+	if err := j.validateSetKerberosPrincipalParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"kerberosPrincipal",
 		val,
 	)
 }
@@ -925,6 +1114,19 @@ func (d *jsiiProxy_DatasyncLocationSmb) GetStringMapAttribute(terraformAttribute
 	return returns
 }
 
+func (d *jsiiProxy_DatasyncLocationSmb) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (d *jsiiProxy_DatasyncLocationSmb) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := d.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -952,6 +1154,17 @@ func (d *jsiiProxy_DatasyncLocationSmb) InterpolationForAttribute(terraformAttri
 	return returns
 }
 
+func (d *jsiiProxy_DatasyncLocationSmb) MoveFromId(id *string) {
+	if err := d.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (d *jsiiProxy_DatasyncLocationSmb) MoveTo(moveTarget *string, index interface{}) {
 	if err := d.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -960,6 +1173,17 @@ func (d *jsiiProxy_DatasyncLocationSmb) MoveTo(moveTarget *string, index interfa
 		d,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (d *jsiiProxy_DatasyncLocationSmb) MoveToId(id *string) {
+	if err := d.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -996,10 +1220,50 @@ func (d *jsiiProxy_DatasyncLocationSmb) PutTags(value interface{}) {
 	)
 }
 
+func (d *jsiiProxy_DatasyncLocationSmb) ResetAuthenticationType() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetAuthenticationType",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatasyncLocationSmb) ResetDnsIpAddresses() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetDnsIpAddresses",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DatasyncLocationSmb) ResetDomain() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetDomain",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatasyncLocationSmb) ResetKerberosKeytab() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetKerberosKeytab",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatasyncLocationSmb) ResetKerberosKrb5Conf() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetKerberosKrb5Conf",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatasyncLocationSmb) ResetKerberosPrincipal() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetKerberosPrincipal",
 		nil, // no parameters
 	)
 }
@@ -1052,12 +1316,46 @@ func (d *jsiiProxy_DatasyncLocationSmb) ResetTags() {
 	)
 }
 
+func (d *jsiiProxy_DatasyncLocationSmb) ResetUser() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetUser",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DatasyncLocationSmb) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
 		d,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DatasyncLocationSmb) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		d,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (d *jsiiProxy_DatasyncLocationSmb) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

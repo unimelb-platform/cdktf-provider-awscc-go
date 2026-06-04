@@ -30,7 +30,7 @@ type LexBotBotLocalesSlotTypesSlotTypeValuesOutputReference interface {
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
 	SampleValue() LexBotBotLocalesSlotTypesSlotTypeValuesSampleValueOutputReference
-	SampleValueInput() *LexBotBotLocalesSlotTypesSlotTypeValuesSampleValue
+	SampleValueInput() interface{}
 	Synonyms() LexBotBotLocalesSlotTypesSlotTypeValuesSynonymsList
 	SynonymsInput() interface{}
 	// Experimental.
@@ -67,6 +67,7 @@ type LexBotBotLocalesSlotTypesSlotTypeValuesOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutSampleValue(value *LexBotBotLocalesSlotTypesSlotTypeValuesSampleValue)
 	PutSynonyms(value interface{})
+	ResetSampleValue()
 	ResetSynonyms()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -143,8 +144,8 @@ func (j *jsiiProxy_LexBotBotLocalesSlotTypesSlotTypeValuesOutputReference) Sampl
 	return returns
 }
 
-func (j *jsiiProxy_LexBotBotLocalesSlotTypesSlotTypeValuesOutputReference) SampleValueInput() *LexBotBotLocalesSlotTypesSlotTypeValuesSampleValue {
-	var returns *LexBotBotLocalesSlotTypesSlotTypeValuesSampleValue
+func (j *jsiiProxy_LexBotBotLocalesSlotTypesSlotTypeValuesOutputReference) SampleValueInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"sampleValueInput",
@@ -481,6 +482,14 @@ func (l *jsiiProxy_LexBotBotLocalesSlotTypesSlotTypeValuesOutputReference) PutSy
 		l,
 		"putSynonyms",
 		[]interface{}{value},
+	)
+}
+
+func (l *jsiiProxy_LexBotBotLocalesSlotTypesSlotTypeValuesOutputReference) ResetSampleValue() {
+	_jsii_.InvokeVoid(
+		l,
+		"resetSampleValue",
+		nil, // no parameters
 	)
 }
 

@@ -70,7 +70,9 @@ type QuicksightDataSetLogicalTableMapDataTransformsCastColumnTypeOperationOutput
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetColumnName()
 	ResetFormat()
+	ResetNewColumnType()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -518,10 +520,26 @@ func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCastColumnTypeO
 	return returns
 }
 
+func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCastColumnTypeOperationOutputReference) ResetColumnName() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetColumnName",
+		nil, // no parameters
+	)
+}
+
 func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCastColumnTypeOperationOutputReference) ResetFormat() {
 	_jsii_.InvokeVoid(
 		q,
 		"resetFormat",
+		nil, // no parameters
+	)
+}
+
+func (q *jsiiProxy_QuicksightDataSetLogicalTableMapDataTransformsCastColumnTypeOperationOutputReference) ResetNewColumnType() {
+	_jsii_.InvokeVoid(
+		q,
+		"resetNewColumnType",
 		nil, // no parameters
 	)
 }

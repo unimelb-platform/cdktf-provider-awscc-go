@@ -70,6 +70,7 @@ type DatabrewDatasetPathOptionsFilesLimitOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetMaxFiles()
 	ResetOrder()
 	ResetOrderedBy()
 	// Produce the Token's value at resolution time.
@@ -517,6 +518,14 @@ func (d *jsiiProxy_DatabrewDatasetPathOptionsFilesLimitOutputReference) Interpol
 	)
 
 	return returns
+}
+
+func (d *jsiiProxy_DatabrewDatasetPathOptionsFilesLimitOutputReference) ResetMaxFiles() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetMaxFiles",
+		nil, // no parameters
+	)
 }
 
 func (d *jsiiProxy_DatabrewDatasetPathOptionsFilesLimitOutputReference) ResetOrder() {

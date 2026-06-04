@@ -44,11 +44,11 @@ func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) validateInt
 	return nil
 }
 
-func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) validatePutGreengrassParameters(value *IotsitewiseGatewayGatewayPlatformGreengrass) error {
+func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) validatePutGreengrassV2Parameters(value *IotsitewiseGatewayGatewayPlatformGreengrassV2) error {
 	return nil
 }
 
-func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) validatePutGreengrassV2Parameters(value *IotsitewiseGatewayGatewayPlatformGreengrassV2) error {
+func (i *jsiiProxy_IotsitewiseGatewayGatewayPlatformOutputReference) validatePutSiemensIeParameters(value *IotsitewiseGatewayGatewayPlatformSiemensIe) error {
 	return nil
 }
 

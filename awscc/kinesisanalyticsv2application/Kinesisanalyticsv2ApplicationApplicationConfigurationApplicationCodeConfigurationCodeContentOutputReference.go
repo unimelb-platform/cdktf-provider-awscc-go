@@ -27,8 +27,8 @@ type Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigu
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent
-	SetInternalValue(val *Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	S3ContentLocation() Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationOutputReference
 	S3ContentLocationInput() interface{}
 	// Experimental.
@@ -128,8 +128,8 @@ func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationApplicat
 	return returns
 }
 
-func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentOutputReference) InternalValue() *Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent {
-	var returns *Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent
+func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -268,7 +268,7 @@ func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationApplicat
 	)
 }
 
-func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentOutputReference)SetInternalValue(val *Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent) {
+func (j *jsiiProxy_Kinesisanalyticsv2ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

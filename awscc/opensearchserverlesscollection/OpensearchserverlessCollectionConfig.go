@@ -28,23 +28,23 @@ type OpensearchserverlessCollectionConfig struct {
 	// Contains between 3 and 32 characters
 	//
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/opensearchserverless_collection#name OpensearchserverlessCollection#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/opensearchserverless_collection#name OpensearchserverlessCollection#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// The description of the collection.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/opensearchserverless_collection#description OpensearchserverlessCollection#description}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/opensearchserverless_collection#description OpensearchserverlessCollection#description}
 	Description *string `field:"optional" json:"description" yaml:"description"`
 	// The possible standby replicas for the collection.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/opensearchserverless_collection#standby_replicas OpensearchserverlessCollection#standby_replicas}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/opensearchserverless_collection#standby_replicas OpensearchserverlessCollection#standby_replicas}
 	StandbyReplicas *string `field:"optional" json:"standbyReplicas" yaml:"standbyReplicas"`
 	// List of tags to be added to the resource.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/opensearchserverless_collection#tags OpensearchserverlessCollection#tags}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/opensearchserverless_collection#tags OpensearchserverlessCollection#tags}
 	Tags interface{} `field:"optional" json:"tags" yaml:"tags"`
 	// The possible types for the collection.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/0.70.0/docs/resources/opensearchserverless_collection#type OpensearchserverlessCollection#type}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/awscc/1.49.0/docs/resources/opensearchserverless_collection#type OpensearchserverlessCollection#type}
 	Type *string `field:"optional" json:"type" yaml:"type"`
 }
 

@@ -12,6 +12,12 @@ type Inspectorv2FilterFilterCriteriaOutputReference interface {
 	cdktf.ComplexObject
 	AwsAccountId() Inspectorv2FilterFilterCriteriaAwsAccountIdList
 	AwsAccountIdInput() interface{}
+	CodeVulnerabilityDetectorName() Inspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorNameList
+	CodeVulnerabilityDetectorNameInput() interface{}
+	CodeVulnerabilityDetectorTags() Inspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorTagsList
+	CodeVulnerabilityDetectorTagsInput() interface{}
+	CodeVulnerabilityFilePath() Inspectorv2FilterFilterCriteriaCodeVulnerabilityFilePathList
+	CodeVulnerabilityFilePathInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -49,6 +55,10 @@ type Inspectorv2FilterFilterCriteriaOutputReference interface {
 	EcrImageRepositoryNameInput() interface{}
 	EcrImageTags() Inspectorv2FilterFilterCriteriaEcrImageTagsList
 	EcrImageTagsInput() interface{}
+	EpssScore() Inspectorv2FilterFilterCriteriaEpssScoreList
+	EpssScoreInput() interface{}
+	ExploitAvailable() Inspectorv2FilterFilterCriteriaExploitAvailableList
+	ExploitAvailableInput() interface{}
 	FindingArn() Inspectorv2FilterFilterCriteriaFindingArnList
 	FindingArnInput() interface{}
 	FindingStatus() Inspectorv2FilterFilterCriteriaFindingStatusList
@@ -57,12 +67,24 @@ type Inspectorv2FilterFilterCriteriaOutputReference interface {
 	FindingTypeInput() interface{}
 	FirstObservedAt() Inspectorv2FilterFilterCriteriaFirstObservedAtList
 	FirstObservedAtInput() interface{}
+	FixAvailable() Inspectorv2FilterFilterCriteriaFixAvailableList
+	FixAvailableInput() interface{}
 	// Experimental.
 	Fqn() *string
 	InspectorScore() Inspectorv2FilterFilterCriteriaInspectorScoreList
 	InspectorScoreInput() interface{}
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	LambdaFunctionExecutionRoleArn() Inspectorv2FilterFilterCriteriaLambdaFunctionExecutionRoleArnList
+	LambdaFunctionExecutionRoleArnInput() interface{}
+	LambdaFunctionLastModifiedAt() Inspectorv2FilterFilterCriteriaLambdaFunctionLastModifiedAtList
+	LambdaFunctionLastModifiedAtInput() interface{}
+	LambdaFunctionLayers() Inspectorv2FilterFilterCriteriaLambdaFunctionLayersList
+	LambdaFunctionLayersInput() interface{}
+	LambdaFunctionName() Inspectorv2FilterFilterCriteriaLambdaFunctionNameList
+	LambdaFunctionNameInput() interface{}
+	LambdaFunctionRuntime() Inspectorv2FilterFilterCriteriaLambdaFunctionRuntimeList
+	LambdaFunctionRuntimeInput() interface{}
 	LastObservedAt() Inspectorv2FilterFilterCriteriaLastObservedAtList
 	LastObservedAtInput() interface{}
 	NetworkProtocol() Inspectorv2FilterFilterCriteriaNetworkProtocolList
@@ -124,6 +146,9 @@ type Inspectorv2FilterFilterCriteriaOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAwsAccountId(value interface{})
+	PutCodeVulnerabilityDetectorName(value interface{})
+	PutCodeVulnerabilityDetectorTags(value interface{})
+	PutCodeVulnerabilityFilePath(value interface{})
 	PutComponentId(value interface{})
 	PutComponentType(value interface{})
 	PutEc2InstanceImageId(value interface{})
@@ -135,11 +160,19 @@ type Inspectorv2FilterFilterCriteriaOutputReference interface {
 	PutEcrImageRegistry(value interface{})
 	PutEcrImageRepositoryName(value interface{})
 	PutEcrImageTags(value interface{})
+	PutEpssScore(value interface{})
+	PutExploitAvailable(value interface{})
 	PutFindingArn(value interface{})
 	PutFindingStatus(value interface{})
 	PutFindingType(value interface{})
 	PutFirstObservedAt(value interface{})
+	PutFixAvailable(value interface{})
 	PutInspectorScore(value interface{})
+	PutLambdaFunctionExecutionRoleArn(value interface{})
+	PutLambdaFunctionLastModifiedAt(value interface{})
+	PutLambdaFunctionLayers(value interface{})
+	PutLambdaFunctionName(value interface{})
+	PutLambdaFunctionRuntime(value interface{})
 	PutLastObservedAt(value interface{})
 	PutNetworkProtocol(value interface{})
 	PutPortRange(value interface{})
@@ -155,6 +188,9 @@ type Inspectorv2FilterFilterCriteriaOutputReference interface {
 	PutVulnerabilitySource(value interface{})
 	PutVulnerablePackages(value interface{})
 	ResetAwsAccountId()
+	ResetCodeVulnerabilityDetectorName()
+	ResetCodeVulnerabilityDetectorTags()
+	ResetCodeVulnerabilityFilePath()
 	ResetComponentId()
 	ResetComponentType()
 	ResetEc2InstanceImageId()
@@ -166,11 +202,19 @@ type Inspectorv2FilterFilterCriteriaOutputReference interface {
 	ResetEcrImageRegistry()
 	ResetEcrImageRepositoryName()
 	ResetEcrImageTags()
+	ResetEpssScore()
+	ResetExploitAvailable()
 	ResetFindingArn()
 	ResetFindingStatus()
 	ResetFindingType()
 	ResetFirstObservedAt()
+	ResetFixAvailable()
 	ResetInspectorScore()
+	ResetLambdaFunctionExecutionRoleArn()
+	ResetLambdaFunctionLastModifiedAt()
+	ResetLambdaFunctionLayers()
+	ResetLambdaFunctionName()
+	ResetLambdaFunctionRuntime()
 	ResetLastObservedAt()
 	ResetNetworkProtocol()
 	ResetPortRange()
@@ -215,6 +259,66 @@ func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) AwsAccountIdI
 	_jsii_.Get(
 		j,
 		"awsAccountIdInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) CodeVulnerabilityDetectorName() Inspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorNameList {
+	var returns Inspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorNameList
+	_jsii_.Get(
+		j,
+		"codeVulnerabilityDetectorName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) CodeVulnerabilityDetectorNameInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"codeVulnerabilityDetectorNameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) CodeVulnerabilityDetectorTags() Inspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorTagsList {
+	var returns Inspectorv2FilterFilterCriteriaCodeVulnerabilityDetectorTagsList
+	_jsii_.Get(
+		j,
+		"codeVulnerabilityDetectorTags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) CodeVulnerabilityDetectorTagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"codeVulnerabilityDetectorTagsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) CodeVulnerabilityFilePath() Inspectorv2FilterFilterCriteriaCodeVulnerabilityFilePathList {
+	var returns Inspectorv2FilterFilterCriteriaCodeVulnerabilityFilePathList
+	_jsii_.Get(
+		j,
+		"codeVulnerabilityFilePath",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) CodeVulnerabilityFilePathInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"codeVulnerabilityFilePathInput",
 		&returns,
 	)
 	return returns
@@ -470,6 +574,46 @@ func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) EcrImageTagsI
 	return returns
 }
 
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) EpssScore() Inspectorv2FilterFilterCriteriaEpssScoreList {
+	var returns Inspectorv2FilterFilterCriteriaEpssScoreList
+	_jsii_.Get(
+		j,
+		"epssScore",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) EpssScoreInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"epssScoreInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ExploitAvailable() Inspectorv2FilterFilterCriteriaExploitAvailableList {
+	var returns Inspectorv2FilterFilterCriteriaExploitAvailableList
+	_jsii_.Get(
+		j,
+		"exploitAvailable",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ExploitAvailableInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"exploitAvailableInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) FindingArn() Inspectorv2FilterFilterCriteriaFindingArnList {
 	var returns Inspectorv2FilterFilterCriteriaFindingArnList
 	_jsii_.Get(
@@ -550,6 +694,26 @@ func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) FirstObserved
 	return returns
 }
 
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) FixAvailable() Inspectorv2FilterFilterCriteriaFixAvailableList {
+	var returns Inspectorv2FilterFilterCriteriaFixAvailableList
+	_jsii_.Get(
+		j,
+		"fixAvailable",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) FixAvailableInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"fixAvailableInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -585,6 +749,106 @@ func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) InternalValue
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) LambdaFunctionExecutionRoleArn() Inspectorv2FilterFilterCriteriaLambdaFunctionExecutionRoleArnList {
+	var returns Inspectorv2FilterFilterCriteriaLambdaFunctionExecutionRoleArnList
+	_jsii_.Get(
+		j,
+		"lambdaFunctionExecutionRoleArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) LambdaFunctionExecutionRoleArnInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"lambdaFunctionExecutionRoleArnInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) LambdaFunctionLastModifiedAt() Inspectorv2FilterFilterCriteriaLambdaFunctionLastModifiedAtList {
+	var returns Inspectorv2FilterFilterCriteriaLambdaFunctionLastModifiedAtList
+	_jsii_.Get(
+		j,
+		"lambdaFunctionLastModifiedAt",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) LambdaFunctionLastModifiedAtInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"lambdaFunctionLastModifiedAtInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) LambdaFunctionLayers() Inspectorv2FilterFilterCriteriaLambdaFunctionLayersList {
+	var returns Inspectorv2FilterFilterCriteriaLambdaFunctionLayersList
+	_jsii_.Get(
+		j,
+		"lambdaFunctionLayers",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) LambdaFunctionLayersInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"lambdaFunctionLayersInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) LambdaFunctionName() Inspectorv2FilterFilterCriteriaLambdaFunctionNameList {
+	var returns Inspectorv2FilterFilterCriteriaLambdaFunctionNameList
+	_jsii_.Get(
+		j,
+		"lambdaFunctionName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) LambdaFunctionNameInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"lambdaFunctionNameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) LambdaFunctionRuntime() Inspectorv2FilterFilterCriteriaLambdaFunctionRuntimeList {
+	var returns Inspectorv2FilterFilterCriteriaLambdaFunctionRuntimeList
+	_jsii_.Get(
+		j,
+		"lambdaFunctionRuntime",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) LambdaFunctionRuntimeInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"lambdaFunctionRuntimeInput",
 		&returns,
 	)
 	return returns
@@ -1170,6 +1434,39 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) PutAwsAccount
 	)
 }
 
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) PutCodeVulnerabilityDetectorName(value interface{}) {
+	if err := i.validatePutCodeVulnerabilityDetectorNameParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putCodeVulnerabilityDetectorName",
+		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) PutCodeVulnerabilityDetectorTags(value interface{}) {
+	if err := i.validatePutCodeVulnerabilityDetectorTagsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putCodeVulnerabilityDetectorTags",
+		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) PutCodeVulnerabilityFilePath(value interface{}) {
+	if err := i.validatePutCodeVulnerabilityFilePathParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putCodeVulnerabilityFilePath",
+		[]interface{}{value},
+	)
+}
+
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) PutComponentId(value interface{}) {
 	if err := i.validatePutComponentIdParameters(value); err != nil {
 		panic(err)
@@ -1291,6 +1588,28 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) PutEcrImageTa
 	)
 }
 
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) PutEpssScore(value interface{}) {
+	if err := i.validatePutEpssScoreParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putEpssScore",
+		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) PutExploitAvailable(value interface{}) {
+	if err := i.validatePutExploitAvailableParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putExploitAvailable",
+		[]interface{}{value},
+	)
+}
+
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) PutFindingArn(value interface{}) {
 	if err := i.validatePutFindingArnParameters(value); err != nil {
 		panic(err)
@@ -1335,6 +1654,17 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) PutFirstObser
 	)
 }
 
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) PutFixAvailable(value interface{}) {
+	if err := i.validatePutFixAvailableParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putFixAvailable",
+		[]interface{}{value},
+	)
+}
+
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) PutInspectorScore(value interface{}) {
 	if err := i.validatePutInspectorScoreParameters(value); err != nil {
 		panic(err)
@@ -1342,6 +1672,61 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) PutInspectorS
 	_jsii_.InvokeVoid(
 		i,
 		"putInspectorScore",
+		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) PutLambdaFunctionExecutionRoleArn(value interface{}) {
+	if err := i.validatePutLambdaFunctionExecutionRoleArnParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putLambdaFunctionExecutionRoleArn",
+		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) PutLambdaFunctionLastModifiedAt(value interface{}) {
+	if err := i.validatePutLambdaFunctionLastModifiedAtParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putLambdaFunctionLastModifiedAt",
+		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) PutLambdaFunctionLayers(value interface{}) {
+	if err := i.validatePutLambdaFunctionLayersParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putLambdaFunctionLayers",
+		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) PutLambdaFunctionName(value interface{}) {
+	if err := i.validatePutLambdaFunctionNameParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putLambdaFunctionName",
+		[]interface{}{value},
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) PutLambdaFunctionRuntime(value interface{}) {
+	if err := i.validatePutLambdaFunctionRuntimeParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putLambdaFunctionRuntime",
 		[]interface{}{value},
 	)
 }
@@ -1508,6 +1893,30 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ResetAwsAccou
 	)
 }
 
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ResetCodeVulnerabilityDetectorName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetCodeVulnerabilityDetectorName",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ResetCodeVulnerabilityDetectorTags() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetCodeVulnerabilityDetectorTags",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ResetCodeVulnerabilityFilePath() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetCodeVulnerabilityFilePath",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ResetComponentId() {
 	_jsii_.InvokeVoid(
 		i,
@@ -1596,6 +2005,22 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ResetEcrImage
 	)
 }
 
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ResetEpssScore() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetEpssScore",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ResetExploitAvailable() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetExploitAvailable",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ResetFindingArn() {
 	_jsii_.InvokeVoid(
 		i,
@@ -1628,10 +2053,58 @@ func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ResetFirstObs
 	)
 }
 
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ResetFixAvailable() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetFixAvailable",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ResetInspectorScore() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetInspectorScore",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ResetLambdaFunctionExecutionRoleArn() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetLambdaFunctionExecutionRoleArn",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ResetLambdaFunctionLastModifiedAt() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetLambdaFunctionLastModifiedAt",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ResetLambdaFunctionLayers() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetLambdaFunctionLayers",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ResetLambdaFunctionName() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetLambdaFunctionName",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_Inspectorv2FilterFilterCriteriaOutputReference) ResetLambdaFunctionRuntime() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetLambdaFunctionRuntime",
 		nil, // no parameters
 	)
 }

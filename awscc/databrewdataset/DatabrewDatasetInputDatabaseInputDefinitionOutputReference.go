@@ -74,6 +74,7 @@ type DatabrewDatasetInputDatabaseInputDefinitionOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutTempDirectory(value *DatabrewDatasetInputDatabaseInputDefinitionTempDirectory)
 	ResetDatabaseTableName()
+	ResetGlueConnectionName()
 	ResetQueryString()
 	ResetTempDirectory()
 	// Produce the Token's value at resolution time.
@@ -558,6 +559,14 @@ func (d *jsiiProxy_DatabrewDatasetInputDatabaseInputDefinitionOutputReference) R
 	_jsii_.InvokeVoid(
 		d,
 		"resetDatabaseTableName",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatabrewDatasetInputDatabaseInputDefinitionOutputReference) ResetGlueConnectionName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetGlueConnectionName",
 		nil, // no parameters
 	)
 }
