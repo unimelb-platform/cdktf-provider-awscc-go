@@ -1,8 +1,8 @@
-github.com/Masterminds/semver/v3 v3.3.1 h1:QtNSWtVZ3nBfk8mAOu/B6v7FMJ+NHTIgUPi7rj+4nv4=
-github.com/Masterminds/semver/v3 v3.3.1/go.mod h1:4V+yj/TJE1HU9XfppCwVMZq3I84lprf4nC11bSS5beM=
-github.com/aws/constructs-go/constructs/v10 v10.4.2 h1:+hDLTsFGLJmKIn0Dg20vWpKBrVnFrEWYgTEY5UiTEG8=
-github.com/aws/constructs-go/constructs/v10 v10.4.2/go.mod h1:cXsNCKDV+9eR9zYYfwy6QuE4uPFp6jsq6TtH1MwBx9w=
-github.com/aws/jsii-runtime-go v1.112.0 h1:7jusWZUgSTuSPLa2ZRv+siGuyoFSzFNk/TaHqlcFe6Y=
-github.com/aws/jsii-runtime-go v1.112.0/go.mod h1:jiAbLN2Hz+7At3C59LsQyv8gK3HvfNYF2YFPkWLHll8=
+github.com/Masterminds/semver/v3 v3.4.0 h1:Zog+i5UMtVoCU8oKka5P7i9q9HgrJeGzI9SA1Xbatp0=
+github.com/Masterminds/semver/v3 v3.4.0/go.mod h1:4V+yj/TJE1HU9XfppCwVMZq3I84lprf4nC11bSS5beM=
+github.com/aws/constructs-go/constructs/v10 v10.5.1 h1:GYyCMb2QmJl/o4EMbS3LVqh/kRlLLBVsxzmV40jxOKY=
+github.com/aws/constructs-go/constructs/v10 v10.5.1/go.mod h1:ZvLfkgiTKlbQhPYkZhWk+hPkevdX55ZeXQ2XqfC3xTw=
+github.com/aws/jsii-runtime-go v1.126.0 h1:cT+yo8OMyWjgzXm7Pvy5Hq36irSIZ7bL/ds33YVDrEk=
+github.com/aws/jsii-runtime-go v1.126.0/go.mod h1:67f+oydH0cMr//tkmNNj9QpKk02hNEEVu4CByxkpGB0=
 github.com/hashicorp/terraform-cdk-go/cdktf v0.21.0 h1:HNzpS58v5ef4fsOHNi51nbVW426fNv0IAKljXV4fQIQ=
 github.com/hashicorp/terraform-cdk-go/cdktf v0.21.0/go.mod h1:Y65Iz3rzGb0MX+C4yCPT3rx+zoo1X3XTvcoTwC0k1OA=
